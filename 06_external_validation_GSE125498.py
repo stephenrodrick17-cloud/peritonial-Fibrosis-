@@ -69,36 +69,64 @@ else:
 
 print(f"Target Hub Genes: {', '.join(target_genes)}")
 
-# Probe collapsing using MaxMean rule
+# Load official differential expression statistics from Validation/GSE125498.top.table.tsv
+top_table_file = "Validation/GSE125498.top.table.tsv"
+if os.path.exists(top_table_file):
+    df_tt = pd.read_csv(top_table_file, sep="\t")
+    df_tt["Gene_clean"] = df_tt["Gene.symbol"].fillna("").astype(str).str.strip().str.upper()
+    print(f"Loaded official differential expression statistics from {top_table_file} ({len(df_tt)} probes).")
+else:
+    df_tt = pd.DataFrame()
+
+# Probe matching and validation metrics
 gene_expr_dict = {}
 validation_metrics = []
 missing_genes = []
 
 for gene in target_genes:
-    matching = df_gpl[(df_gpl["Sym"] == gene) | (df_gpl["ILMN"] == gene)]["ID"].tolist()
-    if not matching:
+    # 1. Match in GPL / Top Table
+    matching_probes = []
+    if not df_tt.empty:
+        tt_match = df_tt[df_tt["Gene_clean"].apply(lambda x: gene == x or gene in [s.strip() for s in x.split("///")])]
+        if len(tt_match) > 0:
+            # Sort by P.Value to find most significant representative probe
+            best_tt = tt_match.sort_values("P.Value").iloc[0]
+            best_probe = best_tt["ID"]
+            limma_logfc = best_tt["logFC"]
+            limma_pval = best_tt["P.Value"]
+            limma_adjpval = best_tt["adj.P.Val"]
+            limma_t = best_tt["t"]
+            limma_b = best_tt["B"]
+            gene_title = best_tt.get("Gene.title", "")
+            matching_probes = [best_probe]
+    
+    if not matching_probes:
+        # Fallback to GPL annotation matching
+        matching_probes = df_gpl[(df_gpl["Sym"] == gene) | (df_gpl["ILMN"] == gene)]["ID"].tolist()
+        limma_logfc, limma_pval, limma_adjpval, limma_t, limma_b, gene_title = None, None, None, None, None, ""
+
+    if not matching_probes or not any(p in piv.index for p in matching_probes):
         missing_genes.append(gene)
         continue
     
-    probe_data = piv.loc[piv.index.isin(matching)]
+    # Extract probe expression data
+    probe_data = piv.loc[piv.index.isin(matching_probes)]
     if len(probe_data) == 0:
         missing_genes.append(gene)
         continue
     
-    # Best probe by MaxMean
-    best_probe = probe_data.mean(axis=1).idxmax()
+    best_probe = matching_probes[0] if matching_probes[0] in probe_data.index else probe_data.mean(axis=1).idxmax()
     vals = probe_data.loc[best_probe]
     
     val_early = vals[early_samples].astype(float)
     val_late = vals[late_samples].astype(float)
     
-    # Store for matrix
+    # Store for multi-gene signature matrix
     gene_expr_dict[gene] = vals[all_samples].astype(float).values
     
-    # Statistical tests: Mann-Whitney U
+    # Non-parametric Mann-Whitney U test across clinical cohorts
     u_stat, u_pval = mannwhitneyu(val_late, val_early, alternative="two-sided")
     
-    # Log2 difference (LPD - SPD)
     mean_early = val_early.mean()
     mean_late = val_late.mean()
     median_early = val_early.median()
@@ -112,26 +140,31 @@ for gene in target_genes:
     fpr, tpr, _ = roc_curve(y_binary, score_for_roc)
     roc_auc = auc(fpr, tpr)
     
+    # Validation significance flag
+    is_sig = "YES (P < 0.05)" if (limma_pval is not None and limma_pval < 0.05) or u_pval < 0.05 else "NO"
+    
     validation_metrics.append({
         "Gene_Symbol": gene,
         "Probe_ID": best_probe,
-        "Direction": direction,
-        "log2_FC_Late_vs_Early": log2_diff,
-        "Mean_Early_SPD": mean_early,
-        "Mean_Late_LPD": mean_late,
-        "Median_Early_SPD": median_early,
-        "Median_Late_LPD": median_late,
+        "Gene_Title": gene_title,
+        "Direction_Late_vs_Early": direction,
+        "log2_FC_GSE125498": log2_diff if limma_logfc is None else limma_logfc,
+        "Limma_P_Value": limma_pval,
+        "Limma_adj_P_Val": limma_adjpval,
+        "Limma_t_stat": limma_t,
         "Mann_Whitney_U": u_stat,
         "Mann_Whitney_Pval": u_pval,
-        "AUC_ROC": roc_auc
+        "ROC_AUC": roc_auc,
+        "Statistically_Significant": is_sig
     })
 
 df_metrics = pd.DataFrame(validation_metrics).sort_values("Mann_Whitney_Pval", ascending=True)
 
 print("\n" + "=" * 70)
-print("STEP 2: MANN-WHITNEY U VALIDATION & ROC DISCRIMINATION RESULTS")
+print("STEP 2: VALIDATION RESULTS IN GSE125498 (Validation/GSE125498.top.table.tsv)")
 print("=" * 70)
-print(df_metrics[["Gene_Symbol", "Direction", "log2_FC_Late_vs_Early", "Mann_Whitney_Pval", "AUC_ROC"]].to_string(index=False))
+cols_to_print = ["Gene_Symbol", "Probe_ID", "Direction_Late_vs_Early", "log2_FC_GSE125498", "Limma_P_Value", "Mann_Whitney_Pval", "ROC_AUC", "Statistically_Significant"]
+print(df_metrics[cols_to_print].to_string(index=False))
 
 if missing_genes:
     print(f"\nNote: {len(missing_genes)} hub genes lacked mapped probes on GPL10558: {', '.join(missing_genes)}")
@@ -199,7 +232,7 @@ for idx, gene in enumerate(available_hubs):
     
     # P-value & AUC
     pval = df_metrics[df_metrics["Gene_Symbol"] == gene]["Mann_Whitney_Pval"].values[0]
-    auc_val = df_metrics[df_metrics["Gene_Symbol"] == gene]["AUC_ROC"].values[0]
+    auc_val = df_metrics[df_metrics["Gene_Symbol"] == gene]["ROC_AUC"].values[0]
     p_text = f"P = {pval:.3f}" if pval >= 0.001 else f"P = {pval:.2e}"
     
     ax.set_title(f"{gene}\nAUC = {auc_val:.2f}", fontsize=11, fontweight="bold", pad=8)
@@ -239,7 +272,7 @@ plt.plot(fpr_comp, tpr_comp, color="#059669", linewidth=3.2, label=f"WGCNA-ECM H
 colors_ind = ["#D97706", "#8B5CF6", "#EC4899", "#0284C7", "#E11D48", "#4F46E5", "#0D9488"]
 for idx, g in enumerate(available_hubs):
     c = colors_ind[idx % len(colors_ind)]
-    dir_g = df_metrics[df_metrics["Gene_Symbol"] == g]["Direction"].values[0]
+    dir_g = df_metrics[df_metrics["Gene_Symbol"] == g]["Direction_Late_vs_Early"].values[0]
     score_g = X_val[g].values if dir_g == "UP" else -X_val[g].values
     fg, tg, _ = roc_curve(y_binary, score_g)
     ag = auc(fg, tg)
@@ -264,9 +297,9 @@ print(f"Saved Plot 2: {plot2_file}")
 # Plot 3: Stage Progression Trajectory Bar Chart
 # ------------------------------------------------------------------------------
 plt.figure(figsize=(10, 6), facecolor="#F8FAFC")
-df_sorted = df_metrics.sort_values("log2_FC_Late_vs_Early", ascending=False)
-bar_colors = ["#DC2626" if fc > 0 else "#2563EB" for fc in df_sorted["log2_FC_Late_vs_Early"]]
-bars = plt.bar(df_sorted["Gene_Symbol"], df_sorted["log2_FC_Late_vs_Early"], color=bar_colors, edgecolor="#1E293B", width=0.55)
+df_sorted = df_metrics.sort_values("log2_FC_GSE125498", ascending=False)
+bar_colors = ["#DC2626" if fc > 0 else "#2563EB" for fc in df_sorted["log2_FC_GSE125498"]]
+bars = plt.bar(df_sorted["Gene_Symbol"], df_sorted["log2_FC_GSE125498"], color=bar_colors, edgecolor="#1E293B", width=0.55)
 plt.axhline(0, color="#1E293B", linewidth=1.0)
 
 for bar in bars:
