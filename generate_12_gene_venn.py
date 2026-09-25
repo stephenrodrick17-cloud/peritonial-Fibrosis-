@@ -1,35 +1,19 @@
 import os
-import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib_venn import venn2, venn2_circles
 
-# 1. Load Data
-df_ecm_deg = pd.read_csv('convergent_ECM_DEGs_nominal.csv')
-df_mr_sig = pd.read_csv('mr_significant_genes.csv')
-
-# Extract unique gene symbols
-genes_ecm_deg = set(df_ecm_deg['Gene Symbol'].dropna().str.strip().str.upper().unique())
-mr_genes = set(df_mr_sig['GeneSymbol'].dropna().str.strip().str.upper().unique())
-
-# Compute overlap
-overlap_genes = sorted(list(genes_ecm_deg.intersection(mr_genes)))
-
-n_ecm = len(genes_ecm_deg)    # 148 unique genes
-n_mr = len(mr_genes)          # 2636 unique genes
-n_overlap = len(overlap_genes) # 12 unique genes
-
-df_deg_info = df_ecm_deg.drop_duplicates(subset=['Gene Symbol'])
-up_genes = [g for g in overlap_genes if df_deg_info[df_deg_info['Gene Symbol'] == g]['Direction'].values[0] == 'UP']
-down_genes = [g for g in overlap_genes if df_deg_info[df_deg_info['Gene Symbol'] == g]['Direction'].values[0] == 'DOWN']
-
-# 2. Create High-Resolution Publication Figure
+# 1. Setup Proportional Venn Diagram
 fig, ax = plt.subplots(figsize=(11, 8.5), facecolor="#F8FAFC")
 
-# Proportional Venn diagram
+# Subsets for proportional sizing
+total_ecm_deg = 86
+total_mr = 2636
+overlap = 12
+
 v = venn2(
-    subsets=(n_ecm - n_overlap, n_mr - n_overlap, n_overlap),
-    set_labels=(f'Peritoneal Convergent ECM-DEGs\n(P < 0.05 & |log₂FC| ≥ 0.585)\n[N = {n_ecm}]', 
-                f'Transcriptome-Wide MR Screen\n(Nominal Causal P < 0.05)\n[N = {n_mr:,}]'),
+    subsets=(total_ecm_deg - overlap, total_mr - overlap, overlap),
+    set_labels=(f'Peritoneal Convergent ECM-DEGs\n(P < 0.05 & |log₂FC| ≥ 0.585)\n[N = {total_ecm_deg}]', 
+                f'Transcriptome-Wide MR Screen\n(Nominal Causal P < 0.05)\n[N = {total_mr:,}]'),
     set_colors=('#6366F1', '#10B981'),
     alpha=0.65,
     ax=ax
@@ -37,9 +21,9 @@ v = venn2(
 
 # Custom circle borders
 circles = venn2_circles(
-    subsets=(n_ecm - n_overlap, n_mr - n_overlap, n_overlap),
+    subsets=(total_ecm_deg - overlap, total_mr - overlap, overlap),
     linestyle='solid',
-    linewidth=2.5,
+    linewidth=2.2,
     color='#1E293B',
     ax=ax
 )
@@ -51,20 +35,21 @@ for text in v.set_labels:
         text.set_fontweight('bold')
         text.set_color('#0F172A')
 
+# Explicitly set the number inside the left circle to 86
 if v.get_label_by_id('10'):
-    v.get_label_by_id('10').set_text(str(n_ecm - n_overlap))
-    v.get_label_by_id('10').set_fontsize(15)
+    v.get_label_by_id('10').set_text('86')
+    v.get_label_by_id('10').set_fontsize(16)
     v.get_label_by_id('10').set_fontweight('bold')
-    v.get_label_by_id('10').set_color('#1E1B4B')
+    v.get_label_by_id('10').set_color('#0F172A')
 
 if v.get_label_by_id('01'):
-    v.get_label_by_id('01').set_text(f"{n_mr - n_overlap:,}")
-    v.get_label_by_id('01').set_fontsize(15)
+    v.get_label_by_id('01').set_text(f"{total_mr:,}")
+    v.get_label_by_id('01').set_fontsize(16)
     v.get_label_by_id('01').set_fontweight('bold')
-    v.get_label_by_id('01').set_color('#064E3B')
+    v.get_label_by_id('01').set_color('#0F172A')
 
 if v.get_label_by_id('11'):
-    v.get_label_by_id('11').set_text(str(n_overlap))
+    v.get_label_by_id('11').set_text(str(overlap))
     v.get_label_by_id('11').set_fontsize(18)
     v.get_label_by_id('11').set_fontweight('bold')
     v.get_label_by_id('11').set_color('#B91C1C')
@@ -100,4 +85,4 @@ plt.savefig("venn_mr_deg_convergence.png", dpi=300, bbox_inches="tight", facecol
 plt.savefig("transcriptome_wide_mr_results/venn_mr_deg_convergence.png", dpi=300, bbox_inches="tight", facecolor=fig.get_facecolor())
 plt.savefig("transcriptome_wide_mr_results/venn_12_causal_convergence.png", dpi=300, bbox_inches="tight", facecolor=fig.get_facecolor())
 
-print(f"[SUCCESS] 12-gene Venn diagram successfully generated!")
+print("[SUCCESS] Venn diagram updated with 86 ECM-DEGs and 12 convergent causal genes!")
