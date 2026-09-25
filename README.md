@@ -95,46 +95,70 @@ Two distinct biomarker panels were generated using a rigorous **4-algorithm cons
 
 ---
 
-## 📊 External Validation: Early- vs Late-Stage Detection (GSE125498)
+## 📊 External Cohort Validation: Early- vs Late-Stage Detection (GSE125498)
 
-To evaluate clinical utility for detecting peritoneal membrane injury early (before irreversible encapsulating fibrosis), both panels were validated on independent cohort **GSE125498**:
-* **Platform**: Illumina HumanHT-12 V4.0 (`GPL10558`, 19,164 probes).
+To evaluate exploratory diagnostic utility for discriminating early peritoneal dialysis exposure from progressive membrane fibrosis, prioritized biomarkers were tested in the independent human effluent cohort **GSE125498**:
+* **Platform**: Illumina HumanHT-12 V4.0 (`GPL10558`, 19,164 probes present in dataset).
 * **Sample Stratification**:
-  * **Early Stage (SPD, 0–24 Months)**: $n = 20$ patients (preserved membrane transport, short dialysis exposure).
-  * **Late Stage (LPD, $\ge 25$ Months)**: $n = 13$ patients (progressive membrane injury, high solute transport, established fibrosis).
+  * **Early Stage (Short-Term PD, SPD: 0–24 Months)**: $n = 20$ patients (preserved membrane transport).
+  * **Late Stage (Long-Term PD, LPD: $\ge 25$ Months)**: $n = 13$ patients (progressive membrane injury, high solute transport, established fibrotic remodeling).
 
-### Summary Validation Metrics
+### Complete Validation Metrics (All 19 Evaluated Candidates)
 
-| Biomarker | Panel Classification | $\log_2\text{FC}$ (Late vs Early) | Trend | Mann-Whitney $U$ | Mann-Whitney $P$-value | Individual AUC-ROC |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **ADAM28** | Causal ECM | +0.55 | **Upregulated in Late** | 180.0 | **0.068** | **0.692** |
-| **LTBP4** | Causal ECM | +0.65 | **Upregulated in Late** | 174.5 | **0.105** | **0.671** |
-| **IGFBP3** | Causal ECM | +0.51 | **Upregulated in Late** | 169.0 | 0.156 | **0.650** |
-| **TGM2** | 12-Hub Matrisome | +0.40 | **Upregulated in Late** | 168.0 | 0.167 | **0.646** |
-| **FGL2** | Causal ECM | -0.18 | **Downregulated in Late** | 99.0 | 0.261 | **0.619** |
-| **MXRA5** | 12-Hub Matrisome | +0.35 | **Upregulated in Late** | 157.0 | 0.329 | **0.604** |
-| **COL4A2** | Causal ECM | +0.22 | **Upregulated in Late** | 156.5 | 0.338 | **0.602** |
-| **COL5A2** | 12-Hub Matrisome | +0.40 | **Upregulated in Late** | 156.0 | 0.347 | **0.600** |
-| **BMP6** | Causal ECM | +0.34 | **Upregulated in Late** | 156.0 | 0.347 | **0.600** |
-| **THBS3** | 12-Hub Matrisome | -0.20 | **Downregulated in Late** | 105.0 | 0.367 | 0.596 |
-| **ADAMTS1** | 4-Hub Causal | -0.16 | **Downregulated in Late** | 112.0 | 0.519 | 0.569 |
-| **P4HA2** | 4-Hub Causal | +0.17 | **Upregulated in Late** | 145.0 | 0.593 | 0.558 |
-| **COL3A1** | 12-Hub Matrisome | +0.19 | **Upregulated in Late** | 139.0 | 0.754 | 0.535 |
-| **POSTN** | 12-Hub Matrisome | +0.12 | **Upregulated in Late** | 141.0 | 0.699 | 0.542 |
+Every hub and causal candidate profiled in GSE125498 is reported below, sorted by discrimination AUC-ROC. No candidates with non-significant or null results are omitted:
 
-### Multi-Gene Composite Diagnostic Performance
-* **12-Hub Matrisome Composite Signature**:
-  $$\mathbf{AUC = 0.731} \quad (95\%\ \text{CI: } 0.54 - 0.89)$$
-  *Superior multi-protein diagnostic sensitivity capturing overall structural matrix remodeling, collagen accumulation (`COL3A1`, `COL5A2`), and cross-linking (`TGM2`, `MXRA5`).*
-* **4-Hub Causal Composite Signature**:
-  $$\mathbf{AUC = 0.642} \quad (95\%\ \text{CI: } 0.45 - 0.82)$$
-  *Genetically anchored causal specificity reflecting upstream matrix modification (`P4HA2`, `ADAMTS1`, `TNC`).*
+| Biomarker | Panel Classification | $\log_2\text{FC}$ (Late vs Early) | Expression Trend | Mann-Whitney $U$ | Mann-Whitney $P$-value | Individual AUC-ROC | Validation Outcome |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ADAM28** | Causal ECM | +0.55 | Upregulated in Late | 180.0 | 0.068 | 0.692 | Trend toward significance |
+| **LTBP4** | Causal ECM | +0.65 | Upregulated in Late | 174.5 | 0.105 | 0.671 | Trend toward significance |
+| **IGFBP3** | Causal ECM | +0.51 | Upregulated in Late | 169.0 | 0.156 | 0.650 | Non-significant |
+| **TGM2** | 12-Hub Matrisome | +0.40 | Upregulated in Late | 168.0 | 0.167 | 0.646 | Non-significant (Top 12-Hub) |
+| **FGL2** | Causal ECM | -0.18 | Downregulated in Late | 99.0 | 0.261 | 0.619 | Non-significant |
+| **MXRA5** | 12-Hub Matrisome | +0.35 | Upregulated in Late | 157.0 | 0.329 | 0.604 | Non-significant |
+| **COL4A2** | Causal ECM | +0.22 | Upregulated in Late | 156.5 | 0.338 | 0.602 | Non-significant |
+| **COL5A2** | 12-Hub Matrisome | +0.40 | Upregulated in Late | 156.0 | 0.347 | 0.600 | Non-significant |
+| **BMP6** | Causal ECM | +0.34 | Upregulated in Late | 156.0 | 0.347 | 0.600 | Non-significant |
+| **THBS3** | 12-Hub Matrisome | -0.20 | Downregulated in Late | 105.0 | 0.367 | 0.596 | Non-significant |
+| **ADAMTS1** | 4-Hub Causal | -0.16 | Downregulated in Late | 112.0 | 0.519 | 0.569 | Non-significant |
+| **P4HA2** | 4-Hub Causal | +0.17 | Upregulated in Late | 145.0 | 0.593 | 0.558 | Non-significant |
+| **FBLN5** | Causal ECM | +0.02 | Stable | 144.0 | 0.619 | 0.554 | Non-significant |
+| **POSTN** | 12-Hub Matrisome | +0.12 | Upregulated in Late | 141.0 | 0.699 | 0.542 | Non-significant |
+| **COL3A1** | 12-Hub Matrisome | +0.19 | Upregulated in Late | 139.0 | 0.754 | 0.535 | Non-significant |
+| **ISM1** | 12-Hub Matrisome | +0.03 | Stable | 137.0 | 0.811 | 0.527 | Non-significant |
+| **LOX** | 12-Hub Matrisome | +0.02 | Stable | 129.0 | 0.985 | 0.496 | Non-significant |
+| **CRISPLD2** | Causal ECM | -0.07 | Stable | 130.0 | 1.000 | 0.500 | Null discrimination |
+| **TNC** | 4-Hub Causal | +0.04 | Stable | 130.0 | 1.000 | 0.500 | **Validation Failure** |
+
+### Individual vs Multi-Gene Composite Performance
+
+* **Individual-Gene Analysis (Lack of Stand-Alone Significance)**:  
+  **No single gene achieved nominal statistical significance ($p < 0.05$)** in the two-sided Mann-Whitney U tests. The strongest individual discriminator in the 12-Hub panel was `TGM2` ($p = 0.167$, $\text{AUC} = 0.646$), while `ADAM28` ($p = 0.068$, $\text{AUC} = 0.692$) and `LTBP4` ($p = 0.105$, $\text{AUC} = 0.671$) in the causal ECM candidate set showed marginal non-significant trends. Stand-alone individual genes therefore lack sufficient diagnostic power in this effluent cohort.
+* **TNC Validation Failure**:  
+  Tenascin-C (`TNC`), a core member of the 4-Hub Causal Panel and canonical fibrotic matricellular protein in discovery tissue biopsies, showed virtually no differential signal in effluent cells ($\log_2\text{FC} = +0.04$, Mann-Whitney $U = 130.0$, $p = 1.000$, $\text{AUC} = 0.500$). This indicates an explicit **validation failure for TNC** in this cellular effluent dataset, possibly due to detachment-induced dilution or non-shedding of matrix-anchored tenascin into peritoneal effluent.
+* **Multi-Gene Composite Signatures (Exploratory Discrimination)**:  
+  While individual genes were non-significant, combining them into multi-gene classifiers provided exploratory separation between early and late stages:
+  * **12-Hub Matrisome Composite Signature (8 profiled genes)**:  
+    $$\mathbf{AUC = 0.731} \quad (95\%\ \text{CI: } 0.54 - 0.89)$$  
+    Captures combined matrix remodeling across collagen expansion (`COL3A1`, `COL5A2`) and cross-linking (`TGM2`, `MXRA5`).
+  * **4-Hub Causal Composite Signature (3 profiled genes)**:  
+    $$\mathbf{AUC = 0.642} \quad (95\%\ \text{CI: } 0.45 - 0.82)$$  
+    Anchored by genetically prioritized causal drivers (`P4HA2`, `ADAMTS1`, `TNC`).
+
+### ⚠️ Validation Limitations
+
+1. **Small Sample Size & Limited Power**: The GSE125498 cohort comprises only 33 total patients ($n = 20$ SPD vs $n = 13$ LPD). This small sample size severely restricts statistical power, making these validation results exploratory.
+2. **Lack of Individual-Gene Significance**: None of the 19 candidates tested reached $p < 0.05$ individually; diagnostic separation was only detectable when evaluating multi-gene composite models.
+3. **Platform & Dataset Coverage Gaps**:
+   * **4-Hub Causal Panel**: Only 3 of the 4 genes (`P4HA2`, `ADAMTS1`, `TNC`) could be evaluated. `WNT11` was excluded from validation because no probe exists in the uploaded GSE125498 expression matrix (19,164 probes).
+   * **12-Hub Matrisome Panel**: Only 8 of 12 genes (`ISM1`, `TGM2`, `MXRA5`, `COL3A1`, `COL5A2`, `POSTN`, `LOX`, `THBS3`) were profiled; `COL11A1`, `EDIL3`, `INHBA`, and `COMP` lacked probes in the uploaded matrix.
+4. **Discordance for Specific Hub Drivers**: As noted above, `TNC` showed complete lack of discrimination ($p = 1.000, \text{AUC} = 0.500$), demonstrating that not all tissue-derived causal targets translate directly into cellular effluent biomarkers.
+5. **Requirement for External Confirmation**: These findings are preliminary and hypothesis-generating. They require rigorous prospective confirmation in larger, multi-center cohorts with matched peritoneal biopsy histology and longitudinal ultrafiltration tracking before considering any clinical or diagnostic application.
 
 ### Associated Validation Visualizations & Graphs:
 * **Mann-Whitney U Boxplots**: [results/figures/Validation_01_hub_genes_mann_whitney_boxplots.png](file:///d:/Peritoneal%20Project/results/figures/Validation_01_hub_genes_mann_whitney_boxplots.png) — Distribution boxplots comparing Early-Stage (SPD) vs Late-Stage (LPD) expression levels with exact non-parametric $p$-values.
-* **ROC Curves (Early vs Late Detection)**: [results/figures/Validation_02_roc_curves_early_vs_late.png](file:///d:/Peritoneal%20Project/results/figures/Validation_02_roc_curves_early_vs_late.png) — Sensitivity vs 1-Specificity curves for individual genes and multi-gene composite models ($\text{AUC} = 0.731$).
+* **ROC Curves (Early vs Late Detection)**: [results/figures/Validation_02_roc_curves_early_vs_late.png](file:///d:/Peritoneal%20Project/results/figures/Validation_02_roc_curves_early_vs_late.png) — Sensitivity vs 1-Specificity curves for individual genes and multi-gene composite models ($\text{AUC} = 0.731$ for 12-Hub, $\text{AUC} = 0.642$ for 4-Hub).
 * **Stage Progression Trajectories**: [results/figures/Validation_03_stage_progression_trajectories.png](file:///d:/Peritoneal%20Project/results/figures/Validation_03_stage_progression_trajectories.png) — Line charts illustrating continuous biomarker shifts from short-term to long-term dialysis.
-* **Clustered Patient Cohort Heatmap**: [results/figures/Validation_04_patient_cohort_heatmap.png](file:///d:/Peritoneal%20Project/results/figures/Validation_04_patient_cohort_heatmap.png) — Unsupervised hierarchical clustering of all 33 patients annotated by clinical stage.
+* **Clustered Patient Cohort Heatmap**: [results/figures/Validation_04_patient_cohort_heatmap.png](file:///d:/Peritoneal%20Project/results/figures/Validation_04_patient_cohort_heatmap.png) — Unsupervised hierarchical clustering of all 33 patients annotated by clinical stage (top spacing adjusted to prevent title/annotation overlap).
 * **Validation Metrics Table**: [results/tables/GSE125498_hub_genes_validation_metrics.csv](file:///d:/Peritoneal%20Project/results/tables/GSE125498_hub_genes_validation_metrics.csv)
 
 ---

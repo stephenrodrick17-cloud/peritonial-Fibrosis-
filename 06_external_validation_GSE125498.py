@@ -299,8 +299,9 @@ cg = sns.clustermap(
     cbar_kws={"label": "Expression Z-Score"},
     linewidths=0.3, linecolor="#CBD5E1"
 )
-cg.ax_heatmap.set_title("Cross-Cohort Patient Heatmap: Consensus Hub Genes Across 33 Clinical Samples\n(Blue = Early-Stage SPD, Red = Late-Stage LPD)",
-                        fontsize=12, fontweight="bold", pad=20)
+cg.figure.subplots_adjust(top=0.88)
+cg.figure.suptitle("Cross-Cohort Patient Heatmap: Consensus Hub Genes Across 33 Clinical Samples\n(Blue = Early-Stage SPD, Red = Late-Stage LPD)",
+                  fontsize=12, fontweight="bold", y=0.96)
 plt.savefig("results/figures/Validation_04_patient_cohort_heatmap.png", dpi=300)
 plt.close()
 print("Saved Plot 4: results/figures/Validation_04_patient_cohort_heatmap.png")
