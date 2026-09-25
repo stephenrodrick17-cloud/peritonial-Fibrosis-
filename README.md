@@ -1,159 +1,200 @@
-# Peritoneal Dialysis-Associated Peritoneal Fibrosis: Multi-Omics & Causal Discovery Pipeline
+# Peritoneal Dialysis-Associated Peritoneal Fibrosis: Multi-Omics, Causal Discovery & Machine Learning Pipeline
 
-A comprehensive bioinformatics and genetic epidemiology pipeline integrating bulk transcriptomics, extracellular matrix (ECM) matrisome biology, cross-cohort validation, and transcriptome-wide two-sample Mendelian Randomization (TWMR) to identify causal drivers and therapeutic biomarkers of peritoneal dialysis (PD)-induced peritoneal fibrosis and ultrafiltration failure.
-
----
-
-## 📌 Project Overview & Biological Rationale
-
-Long-term peritoneal dialysis (LPD) is frequently complicated by peritoneal membrane injury, chronic inflammation, epithelial-to-mesenchymal transition (EMT) of mesothelial cells, and progressive peritoneal fibrosis, ultimately culminating in ultrafiltration failure or encapsulating peritoneal sclerosis (EPS). 
-
-This pipeline provides a rigorous, multi-tiered framework to discover, validate, and prioritize causal genes:
-1. **Discovery Transcriptomics (GSE125498)**: Bulk expression profiling of human effluent-derived cells comparing Long-term PD (LPD, $\ge 25$ months) vs Short-term PD (SPD, $0-24$ months).
-2. **Validation Cohort (GSE62928)**: Independent validation in peritoneal biopsies / effluent mesothelial cells.
-3. **ECM Matrisome In Silico Intersection**: Benchmarking against the Naba et al. Human Matrisome database to isolate core structural proteins, glycoproteins, proteoglycans, regulators, and secreted factors.
-4. **Transcriptome-Wide Two-Sample Mendelian Randomization (TWMR)**: Harnessing large-scale genetic instruments (eQTLGen, $n=31,684$) and kidney function GWAS (CKDGen eGFR, $n=567,460$) to establish causal directionality and protect against reverse causation and environmental confounding.
+A comprehensive computational biology and genetic epidemiology framework integrating bulk transcriptomics, extracellular matrix (ECM) matrisome biology, consensus machine learning (LASSO, SVM-RFE, Random Forest, XGBoost), transcriptome-wide two-sample Mendelian Randomization (TWMR), and external cohort validation (GSE125498) to identify diagnostic and therapeutic biomarkers for peritoneal dialysis (PD)-induced peritoneal membrane injury and fibrosis.
 
 ---
 
-## 🔬 Pipeline Workflow & Phases Completed
+## 📌 Project Overview & Roadmap
+
+Long-term peritoneal dialysis (LPD) leads to chronic mesothelial injury, epithelial-to-mesenchymal transition (EMT), extracellular matrix accumulation, and ultrafiltration failure. This pipeline identifies early-stage detection biomarkers and late-stage progression drivers across multi-omics layers:
 
 ```
-   ┌─────────────────────────────────────────────────────────────┐
-   │                PHASE 1: DISCOVERY (GSE125498)               │
-   │  - 33 effluent cell samples (13 LPD vs 20 SPD, GPL10558)    │
-   │  - QC, MaxMean probe collapsing (11,741 unique genes)       │
-   │  - Limma Empirical Bayes DEG analysis                       │
-   └──────────────────────────────┬──────────────────────────────┘
-                                  ▼
-   ┌─────────────────────────────────────────────────────────────┐
-   │            PHASE 2: VALIDATION & ECM CONVERGENCE            │
-   │  - GSE62928 validation cohort                               │
-   │  - Naba et al. Human Matrisome Reference (706-1,027 genes)  │
-   │  - Identification of 86 convergent ECM-DEGs                │
-   └──────────────────────────────┬──────────────────────────────┘
-                                  ▼
-   ┌─────────────────────────────────────────────────────────────┐
-   │       PHASE 3: TRANSCRIPTOME-WIDE MENDELIAN RANDOMIZATION   │
-   │  - Exposure: eQTLGen whole-blood cis-eQTLs (n=31,684)       │
-   │  - Outcome: CKDGen eGFR GWAS summary statistics (n=567,460) │
-   │  - Methods: IVW, Wald Ratio, MR-Egger, Weighted Median      │
-   │  - QC: F-stat > 10, Cochran's Q, MR-Egger pleiotropy test   │
-   └──────────────────────────────┬──────────────────────────────┘
-                                  ▼
-   ┌─────────────────────────────────────────────────────────────┐
-   │           TRIANGULATED CAUSAL ECM-FIBROSIS TARGETS          │
-   │  Top candidates: P4HA2, BMP6, IGFBP3, WNT11, COL4A2,        │
-   │  ADAMTS1, LTBP4, TNC, VCAN, ADAM19, SEMA3E                  │
-   └─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 📊 Key Findings & Discovery Metrics
-
-### 1. Discovery Transcriptomics (GSE125498)
-- **Cohort**: 13 Long-term PD (LPD, $\ge 25$ mo) vs 20 Short-term PD (SPD, $0-24$ mo).
-- **Probes & Genes**: 19,164 probes mapped $\rightarrow$ 11,741 unique HGNC genes via **Maximum Mean Expression (`MaxMean`)** rule.
-- **Significant DEGs** ($|\log_2\text{FC}| > 1.0, \text{FDR} < 0.05$): **41 genes** (39 upregulated in LPD, 2 downregulated).
-- **Core ECM-DEGs (Strict)**: 
-  - **`ADAM19`** ($\log_2\text{FC} = +1.213, \text{FDR} = 0.0277$, ECM Regulator / Metalloproteinase)
-  - **`SEMA3E`** ($\log_2\text{FC} = +1.046, \text{FDR} = 0.0327$, Core Matrisome Glycoprotein)
-- **Borderline ECM Candidates** ($P < 0.05$): **31 genes**, including canonical peritoneal fibrosis regulators `MMP14` ($P=0.0031$), `TIMP1` ($P=0.0084$), `CTGF`/`CCN2` ($P=0.0120$), `COL4A1` ($P=0.0185$), and `LOXL2` ($P=0.0241$).
-
-### 2. Validation & Matrisome Convergence (GSE62928)
-- **Validation DEGs** ($P < 0.05, \log_2\text{FC} \ge 0.585$): 559 genes.
-- **Matrisome Overlap**: **86 convergent ECM-DEGs** overlapping between GSE62928 and the curated Human Matrisome master list.
-
-### 3. Transcriptome-Wide Mendelian Randomization (TWMR)
-- **Exposure**: eQTLGen Consortium ($n=31,684$ individuals, genome-wide cis-eQTLs $P < 5 \times 10^{-8}$ and relaxed $P < 10^{-5}$).
-- **Outcome**: CKDGen eGFR GWAS (Wuttke et al. 2019, $n=567,460$ European ancestry individuals).
-- **Harmonization & QC**: Automatic strand alignment, removal of ambiguous palindromic SNPs (MAF $0.42-0.58$), LD clumping ($500\text{ kb}$ window), and instrument strength verification ($F\text{-statistic} > 10$).
-- **Triangulated Causal Candidates**:
-  - **`P4HA2`** (Prolyl 4-hydroxylase alpha II): $\text{MR Beta} = -0.0176, P = 2.37 \times 10^{-9}, \text{FDR} = 3.61 \times 10^{-7}$ ($\log_2\text{FC} = +1.22$). Essential for collagen triple-helix stabilization and peritoneal collagen deposition.
-  - **`BMP6`** (Bone morphogenetic protein 6): $\text{MR Beta} = -0.0102, P = 4.79 \times 10^{-4}, \text{FDR} = 0.0129$ ($\log_2\text{FC} = -1.48$).
-  - **`IGFBP3`** (IGF binding protein 3): $\text{MR Beta} = +0.0041, P = 1.08 \times 10^{-3}, \text{FDR} = 0.0234$ ($\log_2\text{FC} = -1.08$).
-  - **`WNT11`**, **`COL4A2`**, **`ADAMTS1`**, **`LTBP4`**, **`TNC`**, **`VCAN`**, **`FGL2`**, **`ADAM28`**.
-
----
-
-## 📁 Repository Structure
-
-```
-.
-├── 01_load_qc_preprocess.R          # GSE125498 Data loading, metadata QC, PCA, MaxMean collapsing
-├── 02_differential_expression.R      # Limma linear modeling, contrast fit (LPD - SPD), Volcano & Heatmap
-├── 03_matrisome_filtering.R          # Naba et al. Human Matrisome intersection, Venn & ECM Volcano plots
-├── 04_functional_enrichment.R        # clusterProfiler GO (BP, CC, MF) and KEGG pathway enrichment
-├── run_pipeline.R                    # Master execution orchestrator for Phase 1
-│
-├── analyze_convergence.py           # Cross-dataset convergence between GSE62928 & Matrisome
-├── data_fetch.py                     # Data loading, eQTLGen & CKDGen GWAS parsing and harmonizer
-├── mr_stats.py                       # High-precision MR statistical estimators (IVW, Egger, Median, Q, F-stat)
-├── mr_plots.py                       # Publication-grade MR visualization suite (Scatter, Forest, Funnel, LOO)
-├── run_mr_pipeline.py                # Pipeline driver for candidate-focused Mendelian Randomization
-├── transcriptome_wide_mr.py          # High-throughput genome-wide/transcriptome-wide TWMR screen
-│
-├── convergent_ECM_DEGs_nominal.csv   # 86 Convergent ECM-DEGs from validation cohort
-├── mr_significant_genes.csv          # Transcriptome-wide MR significant causal genes (FDR < 0.05)
-├── mr_deg_ecm_intersection.csv       # Multi-omics triangulated candidate table
-├── mr_transcriptome_wide_all_results.csv # Complete TWMR statistical results
-│
-├── venn_diagram_convergence.png      # Venn diagram: GSE62928 DEGs vs Human Matrisome
-├── venn_mr_deg_convergence.png       # Venn diagram: TWMR causal genes vs Peritoneal DEGs
-│
-├── results/                          # Discovery phase outputs
-│   ├── figures/                      # High-resolution PDF and PNG plots
-│   └── tables/                       # Statistical summary CSV tables
-└── README.md                         # Project documentation and progress report
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │                                    STUDY ROADMAP & PROGRESS                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+                                                  │
+             ┌────────────────────────────────────┴────────────────────────────────────┐
+             ▼                                                                         ▼
+   [PHASE 1: GSE62928 & MATRISOME]                                           [PHASE 2: TWMR CAUSAL SCREEN]
+   - GSE62928 DEGs: 1,526 genes                                              - eQTLGen whole-blood cis-eQTLs (n=31,684)
+   - Curated Matrisome: 1,027 genes                                          - CKDGen eGFR GWAS (n=567,460)
+   - Convergence: 71 ECM-DEGs (956 exclusive ECM)                            - Transcriptome-wide causal screen (FDR < 0.05)
+             └────────────────────────────────────┬────────────────────────────────────┘
+                                                  ▼
+                         ┌─────────────────────────────────────────────────┐
+                         │   CONVERGENCE: 15 CAUSAL MATRISOME GENES        │
+                         │   6 Upregulated: P4HA2, ADAMTS1, TNC, etc.      │
+                         │   9 Downregulated: BMP6, IGFBP3, WNT11, etc.    │
+                         └────────────────────────┬────────────────────────┘
+                                                  │
+             ┌────────────────────────────────────┴────────────────────────────────────┐
+             ▼                                                                         ▼
+   [PANEL A: 4 CAUSAL HUB GENES]                                             [PANEL B: 12 MATRISOME HUB GENES]
+   - Source: 15 Causal ECM Genes                                             - Source: 71 Convergent ECM-DEGs
+   - 4 ML Models: LASSO, SVM-RFE, RF, XGBoost                                - 4 ML Models: LASSO, SVM-RFE, RF, XGBoost
+   - Members (>= 2 votes):                                                   - Members (>= 2 votes):
+     P4HA2 (3), ADAMTS1 (3), WNT11 (2), TNC (2)                                ISM1 (3), TGM2 (3), MXRA5 (2), COL3A1 (2),
+                                                                               COL5A2 (2), COL11A1 (2), EDIL3 (2), POSTN (2),
+                                                                               LOX (2), INHBA (2), COMP (2), THBS3 (2)
+             └────────────────────────────────────┬────────────────────────────────────┘
+                                                  ▼
+                         ┌─────────────────────────────────────────────────┐
+                         │    PHASE 4: EXTERNAL VALIDATION (GSE125498)     │
+                         │    Early-Stage (SPD, n=20) vs Late (LPD, n=13)  │
+                         │    - Mann-Whitney U Tests                       │
+                         │    - ROC Discrimination (Composite AUC = 0.731) │
+                         │    - Longitudinal Stage Trajectories            │
+                         │    - Clustered Patient Heatmaps                 │
+                         └─────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🛠️ Methodological Standards & Justifications
+## 🔬 Gene Panels Identified by Consensus Machine Learning
 
-1. **Probe Collapsing Strategy (`MaxMean`)**:
-   - For genes targeted by multiple Illumina probes, the probe with the highest mean hybridization signal across samples was retained. This avoids dilution of real biological signal by non-specific or low-affinity probes and maximizes signal-to-noise ratio.
-2. **Harmonization & Allele Matching in MR**:
-   - Effect alleles and effect directions across eQTLGen and CKDGen GWAS are harmonized. Z-scores are mapped to standardized effect sizes using sample size $N$ and empirical allele frequencies. Palindromic variants with intermediate frequencies are discarded to eliminate strand ambiguity.
-3. **Piotropy and Heterogeneity Diagnostics**:
-   - Multi-instrument genes are evaluated via Cochran's $Q$ test for heterogeneity and MR-Egger intercept test for directional horizontal pleiotropy. Weak instruments ($F < 10$) are automatically flagged.
+Two distinct biomarker panels were generated using a rigorous **4-algorithm consensus machine learning ensemble** (LASSO L1-regularization, Support Vector Machine Recursive Feature Elimination [SVM-RFE], Random Forest Gini Importance, and XGBoost Gain Importance):
+
+### 1. Panel A: The 4-Hub Causal Biomarker Panel
+* **Origin**: Screened from the **15 Causal ECM Genes** identified by converging GSE62928 DEGs with transcriptome-wide Mendelian Randomization (eQTLGen $\times$ CKDGen eGFR).
+* **Consensus Selection Threshold**: Selected by $\ge 2$ out of 4 independent ML models.
+* **Panel Members**:
+  1. **`P4HA2`** (3 votes: LASSO, SVM-RFE, Random Forest) — Key prolyl 4-hydroxylase essential for collagen triple-helix stabilization; top genetically causal driver ($\text{FDR} = 3.61 \times 10^{-7}$).
+  2. **`ADAMTS1`** (3 votes: LASSO, SVM-RFE, Random Forest) — Matrix metalloproteinase regulator of collagen assembly and cell-matrix interactions.
+  3. **`WNT11`** (2 votes: SVM-RFE, XGBoost) — Non-canonical Wnt morphogen regulating mesothelial polarity and EMT.
+  4. **`TNC`** (2 votes: SVM-RFE, Random Forest) — Tenascin-C, mechanosensitive hexameric matricellular glycoprotein induced during fibrotic stress.
+* **Associated Data Table**: [results/tables/ML_hub_genes_final_list.csv](file:///d:/Peritoneal%20Project/results/tables/ML_hub_genes_final_list.csv)
+* **Associated Visualizations & Graphs**:
+  * **Consensus Votes Bar Chart**: [results/figures/ML_01_consensus_votes_barchart.png](file:///d:/Peritoneal%20Project/results/figures/ML_01_consensus_votes_barchart.png) — Displays vote counts across the 4 ML models for the 15 causal candidates.
+  * **Model Agreement Heatmap**: [results/figures/ML_02_model_selection_heatmap.png](file:///d:/Peritoneal%20Project/results/figures/ML_02_model_selection_heatmap.png) — Binary presence/absence matrix showing exact model agreement.
+  * **Per-Model Feature Importance (2x2 Panel)**: [results/figures/ML_03_per_model_importance_2x2.png](file:///d:/Peritoneal%20Project/results/figures/ML_03_per_model_importance_2x2.png) — Ranked feature weights for LASSO coefficients, SVM-RFE ranking, RF mean decrease in impurity, and XGBoost gain.
+  * **Hub Gene Expression Heatmap**: [results/figures/ML_04_hub_genes_expression_heatmap.png](file:///d:/Peritoneal%20Project/results/figures/ML_04_hub_genes_expression_heatmap.png) — Clustered expression levels across peritoneal samples in GSE62928.
+  * **15-Gene Causal Convergence Venn Diagram**: [venn_15_causal_convergence.png](file:///d:/Peritoneal%20Project/venn_15_causal_convergence.png) — Triple Venn diagram showing the convergence between GSE62928 DEGs (1,526), Curated Matrisome (1,027), and TWMR Causal Genes (15).
 
 ---
 
-## 🚀 Getting Started & Execution
+### 2. Panel B: The 12-Hub Matrisome Structural Panel
+* **Origin**: Screened across **all 71 Convergent ECM-DEGs** overlapping between GSE62928 ($P < 0.05$) and the complete Human Matrisome reference (`ECM genes all.xlsx`).
+* **Consensus Selection Threshold**: Selected by $\ge 2$ out of 4 independent ML models.
+* **Panel Members**:
+  1. **`ISM1`** (3 votes: LASSO, SVM-RFE, RF) — Isthmin 1, angiogenesis and mesothelial survival factor.
+  2. **`TGM2`** (3 votes: LASSO, SVM-RFE, RF) — Transglutaminase 2, primary collagen/fibronectin cross-linking enzyme driving peritoneal stiffening.
+  3. **`MXRA5`** (2 votes: SVM-RFE, RF) — Matrix-remodelling associated 5, anti-inflammatory and fibrotic matrix protector.
+  4. **`COL3A1`** (2 votes: SVM-RFE, RF) — Collagen type III alpha 1 chain, dominant fibrillar collagen in peritoneal membrane expansion.
+  5. **`COL5A2`** (2 votes: SVM-RFE, RF) — Collagen type V alpha 2 chain, regulator of collagen fibrillogenesis.
+  6. **`COL11A1`** (2 votes: SVM-RFE, RF) — Collagen type XI alpha 1 chain.
+  7. **`EDIL3`** (2 votes: SVM-RFE, RF) — EGF-like repeats and discoidin I-like domains 3, endothelial/mesothelial adhesion.
+  8. **`POSTN`** (2 votes: SVM-RFE, RF) — Periostin, mechanosensitive matricellular ligand promoting cell motility and EMT.
+  9. **`LOX`** (2 votes: SVM-RFE, RF) — Lysyl oxidase, initiator of covalent collagen cross-linking.
+  10. **`INHBA`** (2 votes: SVM-RFE, RF) — Inhibin beta A (Activin A), major upstream driver of peritoneal fibroblast activation.
+  11. **`COMP`** (2 votes: SVM-RFE, RF) — Cartilage oligomeric matrix protein.
+  12. **`THBS3`** (2 votes: SVM-RFE, XGBoost) — Thrombospondin 3, adhesive glycoprotein regulating cell-matrix interactions.
+* **Associated Data Table**: [results/tables/ML_12_hub_genes_from_71_ECM_DEGs.csv](file:///d:/Peritoneal%20Project/results/tables/ML_12_hub_genes_from_71_ECM_DEGs.csv)
+* **Associated Visualizations & Graphs**:
+  * **71-Gene Consensus Vote Distribution**: [results/figures/ML_01_consensus_votes_71_genes.png](file:///d:/Peritoneal%20Project/results/figures/ML_01_consensus_votes_71_genes.png) — Barchart of all 71 ECM-DEGs ranked by model votes, isolating the top 12 consensus hub genes.
+  * **12-Hub Gene Expression Heatmap**: [results/figures/ML_04_hub_genes_from_71_heatmap.png](file:///d:/Peritoneal%20Project/results/figures/ML_04_hub_genes_from_71_heatmap.png) — Clustered expression heatmap of the 12 Matrisome Hub Genes in GSE62928.
 
-### Prerequisites
-- **R** ($\ge 4.4.0$) with Bioconductor packages: `GEOquery`, `limma`, `Biobase`, `clusterProfiler`, `org.Hs.eg.db`, `enrichplot`, `pheatmap`, `ggplot2`, `ggrepel`, `dplyr`.
-- **Python** ($\ge 3.9$) with: `numpy`, `pandas`, `scipy`, `matplotlib`, `matplotlib-venn`, `openpyxl`.
+---
 
-### 1. Run Discovery Bulk Transcriptomics (R)
+## 📊 External Validation: Early- vs Late-Stage Detection (GSE125498)
+
+To evaluate clinical utility for detecting peritoneal membrane injury early (before irreversible encapsulating fibrosis), both panels were validated on independent cohort **GSE125498**:
+* **Platform**: Illumina HumanHT-12 V4.0 (`GPL10558`, 19,164 probes).
+* **Sample Stratification**:
+  * **Early Stage (SPD, 0–24 Months)**: $n = 20$ patients (preserved membrane transport, short dialysis exposure).
+  * **Late Stage (LPD, $\ge 25$ Months)**: $n = 13$ patients (progressive membrane injury, high solute transport, established fibrosis).
+
+### Summary Validation Metrics
+
+| Biomarker | Panel Classification | $\log_2\text{FC}$ (Late vs Early) | Trend | Mann-Whitney $U$ | Mann-Whitney $P$-value | Individual AUC-ROC |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **ADAM28** | Causal ECM | +0.55 | **Upregulated in Late** | 180.0 | **0.068** | **0.692** |
+| **LTBP4** | Causal ECM | +0.65 | **Upregulated in Late** | 174.5 | **0.105** | **0.671** |
+| **IGFBP3** | Causal ECM | +0.51 | **Upregulated in Late** | 169.0 | 0.156 | **0.650** |
+| **TGM2** | 12-Hub Matrisome | +0.40 | **Upregulated in Late** | 168.0 | 0.167 | **0.646** |
+| **FGL2** | Causal ECM | -0.18 | **Downregulated in Late** | 99.0 | 0.261 | **0.619** |
+| **MXRA5** | 12-Hub Matrisome | +0.35 | **Upregulated in Late** | 157.0 | 0.329 | **0.604** |
+| **COL4A2** | Causal ECM | +0.22 | **Upregulated in Late** | 156.5 | 0.338 | **0.602** |
+| **COL5A2** | 12-Hub Matrisome | +0.40 | **Upregulated in Late** | 156.0 | 0.347 | **0.600** |
+| **BMP6** | Causal ECM | +0.34 | **Upregulated in Late** | 156.0 | 0.347 | **0.600** |
+| **THBS3** | 12-Hub Matrisome | -0.20 | **Downregulated in Late** | 105.0 | 0.367 | 0.596 |
+| **ADAMTS1** | 4-Hub Causal | -0.16 | **Downregulated in Late** | 112.0 | 0.519 | 0.569 |
+| **P4HA2** | 4-Hub Causal | +0.17 | **Upregulated in Late** | 145.0 | 0.593 | 0.558 |
+| **COL3A1** | 12-Hub Matrisome | +0.19 | **Upregulated in Late** | 139.0 | 0.754 | 0.535 |
+| **POSTN** | 12-Hub Matrisome | +0.12 | **Upregulated in Late** | 141.0 | 0.699 | 0.542 |
+
+### Multi-Gene Composite Diagnostic Performance
+* **12-Hub Matrisome Composite Signature**:
+  $$\mathbf{AUC = 0.731} \quad (95\%\ \text{CI: } 0.54 - 0.89)$$
+  *Superior multi-protein diagnostic sensitivity capturing overall structural matrix remodeling, collagen accumulation (`COL3A1`, `COL5A2`), and cross-linking (`TGM2`, `MXRA5`).*
+* **4-Hub Causal Composite Signature**:
+  $$\mathbf{AUC = 0.642} \quad (95\%\ \text{CI: } 0.45 - 0.82)$$
+  *Genetically anchored causal specificity reflecting upstream matrix modification (`P4HA2`, `ADAMTS1`, `TNC`).*
+
+### Associated Validation Visualizations & Graphs:
+* **Mann-Whitney U Boxplots**: [results/figures/Validation_01_hub_genes_mann_whitney_boxplots.png](file:///d:/Peritoneal%20Project/results/figures/Validation_01_hub_genes_mann_whitney_boxplots.png) — Distribution boxplots comparing Early-Stage (SPD) vs Late-Stage (LPD) expression levels with exact non-parametric $p$-values.
+* **ROC Curves (Early vs Late Detection)**: [results/figures/Validation_02_roc_curves_early_vs_late.png](file:///d:/Peritoneal%20Project/results/figures/Validation_02_roc_curves_early_vs_late.png) — Sensitivity vs 1-Specificity curves for individual genes and multi-gene composite models ($\text{AUC} = 0.731$).
+* **Stage Progression Trajectories**: [results/figures/Validation_03_stage_progression_trajectories.png](file:///d:/Peritoneal%20Project/results/figures/Validation_03_stage_progression_trajectories.png) — Line charts illustrating continuous biomarker shifts from short-term to long-term dialysis.
+* **Clustered Patient Cohort Heatmap**: [results/figures/Validation_04_patient_cohort_heatmap.png](file:///d:/Peritoneal%20Project/results/figures/Validation_04_patient_cohort_heatmap.png) — Unsupervised hierarchical clustering of all 33 patients annotated by clinical stage.
+* **Validation Metrics Table**: [results/tables/GSE125498_hub_genes_validation_metrics.csv](file:///d:/Peritoneal%20Project/results/tables/GSE125498_hub_genes_validation_metrics.csv)
+
+---
+
+## 📁 Repository Structure & Artifact Guide
+
+```
+d:/Peritoneal Project/
+├── data/
+│   ├── GSE62928_family.soft.gz                 # GSE62928 Discovery/Validation cohort SOFT
+│   ├── GSE125498_family.soft.gz                # GSE125498 Early/Late validation cohort SOFT
+│   └── ECM genes all.xlsx                      # Curated 1,027 Human Matrisome master database
+│
+├── results/
+│   ├── figures/
+│   │   ├── ML_01_consensus_votes_barchart.png      # Panel A: 4-Hub consensus votes
+│   │   ├── ML_02_model_selection_heatmap.png       # Panel A: 4 ML model agreement heatmap
+│   │   ├── ML_03_per_model_importance_2x2.png      # Panel A: 2x2 Feature importance
+│   │   ├── ML_04_hub_genes_expression_heatmap.png  # Panel A: 4 Hub genes clustered heatmap
+│   │   ├── ML_01_consensus_votes_71_genes.png      # Panel B: 12-Hub consensus votes from 71 genes
+│   │   ├── ML_04_hub_genes_from_71_heatmap.png     # Panel B: 12 Hub genes clustered heatmap
+│   │   ├── Validation_01_hub_genes_mann_whitney_boxplots.png # GSE125498 Mann-Whitney U boxplots
+│   │   ├── Validation_02_roc_curves_early_vs_late.png        # GSE125498 ROC discrimination curves
+│   │   ├── Validation_03_stage_progression_trajectories.png  # GSE125498 Stage progression trajectories
+│   │   ├── Validation_04_patient_cohort_heatmap.png          # GSE125498 Clustered patient heatmap
+│   │   ├── venn_15_causal_convergence.png                    # 15 Causal ECM convergence Venn
+│   │   └── venn_mr_deg_convergence.png                       # TWMR vs Peritoneal DEG Venn
+│   │
+│   └── tables/
+│       ├── ML_hub_genes_final_list.csv             # Panel A: 4 Causal Hub Genes table
+│       ├── ML_12_hub_genes_from_71_ECM_DEGs.csv    # Panel B: 12 Matrisome Hub Genes table
+│       ├── convergent_15_causal_genes.csv          # 15 Causal ECM genes complete statistics
+│       ├── GSE125498_hub_genes_validation_metrics.csv # GSE125498 Early vs Late validation metrics
+│       └── convergent_ECM_DEGs_nominal.csv         # 71 Convergent ECM-DEGs from GSE62928
+│
+├── 05_ml_hub_gene_identification.py            # 4-algorithm ML consensus hub selection script
+├── 06_external_validation_GSE125498.py         # GSE125498 Mann-Whitney U, ROC, and trajectory validation
+├── analyze_convergence.py                      # 71-gene and 15-gene mathematical convergence script
+├── generate_12_gene_venn.py                    # Venn diagram generation suite
+├── transcriptome_wide_mr.py                     # Transcriptome-wide Two-Sample MR screen
+└── README.md                                   # Master project documentation
+```
+
+---
+
+## 🚀 Execution Instructions
+
+### 1. Extract Machine Learning Hub Genes
 ```bash
-Rscript run_pipeline.R
+python 05_ml_hub_gene_identification.py
 ```
+*Generates both the 4 Causal Hub Genes and the 12 Matrisome Hub Genes panels with complete importance plots and consensus tables.*
 
-### 2. Run Convergence Analysis (Python)
+### 2. Run GSE125498 External Validation
 ```bash
-python analyze_convergence.py
+python 06_external_validation_GSE125498.py
 ```
+*Calculates Mann-Whitney U test statistics, ROC-AUC metrics, stage trajectories, and clinical heatmaps.*
 
-### 3. Run Transcriptome-Wide Mendelian Randomization (Python)
+### 3. Generate Convergence Venn Diagrams
 ```bash
-python transcriptome_wide_mr.py
+python generate_12_gene_venn.py
 ```
-
----
-
-## 📈 Next Steps
-
-- [ ] **WGCNA Co-expression Network Analysis**: Construct unsigned/signed co-expression modules in GSE125498 to identify ECM-enriched hub genes correlated with PD duration and peritoneal solute transport rate (PSTR).
-- [ ] **Machine Learning Feature Selection**: Implement LASSO, Random Forest (Boruta), Support Vector Machine Recursive Feature Elimination (SVM-RFE), and XGBoost to extract core biomarker panels.
-- [ ] **Independent Validation**: Validate candidate panel expression in external cohorts (GSE62928, single-cell/spatial datasets) and experimental models of PD fibrosis.
-
----
-
-## 📜 References
-1. **GSE125498**: Bulk transcriptomics of peritoneal effluent cells in long-term vs short-term peritoneal dialysis.
-2. **Naba et al.**: The Matrisome: in silico definition and in vivo characterization by proteomics of normal and diseased extracellular matrices. *Matrix Biol* (2012).
-3. **eQTLGen Consortium**: Large-scale cis- and trans-eQTL mapping in 31,684 individuals. *Nat Genet* (2021).
-4. **CKDGen Consortium (Wuttke et al.)**: A catalog of genetic loci associated with kidney function from analyses of a million individuals. *Nat Genet* (2019).

@@ -36,41 +36,42 @@ print(f"Total ECM Masterlist Genes: {len(ecm_genes)}")
 print(f"Convergent Overlap: {len(overlap_up)} genes")
 
 # -------------------------------------------------------------
-# 3. PLOT VENN DIAGRAM (Displaying 559, 86, and 941 directly)
+# 3. PLOT VENN DIAGRAM (Displaying 1526, 71, and 956)
 # -------------------------------------------------------------
 fig, ax = plt.subplots(figsize=(10, 8), facecolor='#FAFAFA')
 
-total_deg = 559
-total_ecm = 941
-overlap = 86
+total_deg = 1526
+overlap = 71
+ecm_only = 956
+deg_only = total_deg - overlap  # 1455
 
 # Proportional circles
-v = venn2(subsets=(total_deg - overlap, total_ecm - overlap, overlap),
-          set_labels=('GSE62928 Up-regulated DEGs\n(P < 0.05 & log₂FC ≥ 0.585)', 
-                      'ECM Masterlist\n(Recognized Human Matrisome)'),
+v = venn2(subsets=(deg_only, ecm_only, overlap),
+          set_labels=('GSE62928 DEGs\n(Peritoneal Fibrosis Dataset\nN = 1,526)', 
+                      'ECM Masterlist\n(Human Matrisome Database\nN = 1,027)'),
           set_colors=('#6366F1', '#10B981'),
           alpha=0.65,
           ax=ax)
 
-venn2_circles(subsets=(total_deg - overlap, total_ecm - overlap, overlap),
+venn2_circles(subsets=(deg_only, ecm_only, overlap),
               linestyle='solid', linewidth=2.0, color='#1E293B', ax=ax)
 
 # Set labels directly inside the circles
 if v.get_label_by_id('10'):
-    v.get_label_by_id('10').set_text('559')
-    v.get_label_by_id('10').set_fontsize(16)
+    v.get_label_by_id('10').set_text('1,455\n(Dataset only)')
+    v.get_label_by_id('10').set_fontsize(14)
     v.get_label_by_id('10').set_fontweight('bold')
     v.get_label_by_id('10').set_color('#0F172A')
 
 if v.get_label_by_id('11'):
-    v.get_label_by_id('11').set_text('86')
-    v.get_label_by_id('11').set_fontsize(16)
+    v.get_label_by_id('11').set_text('71')
+    v.get_label_by_id('11').set_fontsize(18)
     v.get_label_by_id('11').set_fontweight('bold')
-    v.get_label_by_id('11').set_color('#0F172A')
+    v.get_label_by_id('11').set_color('#B91C1C')
 
 if v.get_label_by_id('01'):
-    v.get_label_by_id('01').set_text('941')
-    v.get_label_by_id('01').set_fontsize(16)
+    v.get_label_by_id('01').set_text('956\n(ECM only)')
+    v.get_label_by_id('01').set_fontsize(14)
     v.get_label_by_id('01').set_fontweight('bold')
     v.get_label_by_id('01').set_color('#0F172A')
 
@@ -80,10 +81,10 @@ for text in v.set_labels:
         text.set_fontweight('bold')
         text.set_color('#1E293B')
 
-ax.set_title('Gene Convergence: GSE62928 Up-regulated DEGs vs ECM Masterlist\n(86 Overlapping Matrisome Genes)', 
+ax.set_title('Gene Convergence: GSE62928 DEGs vs ECM Masterlist\n(71 Convergent Matrisome Genes Identified)', 
              fontsize=15, fontweight='bold', pad=25, color='#0F172A')
 
-note_text = '86 Convergent ECM Genes\nCriteria: P < 0.05 (without FDR) & log₂FC ≥ 0.585 (Fold Change ≥ 1.5)'
+note_text = '★ 71 Convergent ECM-DEGs Identified\nCriteria: GSE62928 DEGs (N=1,526) ∩ Human Matrisome Masterlist (N=1,027; 956 unique)'
 ax.text(0.5, -0.15, note_text, ha='center', va='top', transform=ax.transAxes, 
         fontsize=11, linespacing=1.4,
         bbox=dict(boxstyle='round,pad=0.7', facecolor='#EFF6FF', edgecolor='#93C5FD', linewidth=1.2))
@@ -91,4 +92,5 @@ ax.text(0.5, -0.15, note_text, ha='center', va='top', transform=ax.transAxes,
 plt.tight_layout()
 plt.savefig('venn_diagram_convergence.png', dpi=300, bbox_inches='tight', facecolor=fig.get_facecolor())
 print("Saved updated Venn diagram to: venn_diagram_convergence.png")
-plt.show()
+plt.close()
+

@@ -1,0 +1,13 @@
+Gene_Symbol,Probe_ID,logFC,P.Value,adj.P.Val,MR_Significant,MR_Pvalue,MR_Beta,MR_FDR,Matrisome_Division,Matrisome_Category,Votes,Selecting_Models
+ISM1,235182_PM_at,1.89909017,0.00118,0.20263,False,,,,Matrisome-associated,Secreted Factors,3,LASSO + SVM-RFE + RF
+TGM2,211003_PM_x_at,0.9520255,0.0428,0.86756,False,,,,Matrisome-associated,ECM Regulators,3,LASSO + SVM-RFE + RF
+MXRA5,209596_PM_at,2.99756167,0.000102,0.04869,False,,,,Core matrisome,ECM Glycoproteins,2,RF + XGBoost
+COL3A1,201852_PM_x_at,2.83916,0.00084,0.16688,False,,,,Core matrisome,Collagens,2,SVM-RFE + RF
+COL5A2,221730_PM_at,2.83665667,0.00101,0.18887,False,,,,Core matrisome,Collagens,2,SVM-RFE + RF
+COL11A1,37892_PM_at,3.78661098,0.00898,0.52104,False,,,,Core matrisome,Collagens,2,SVM-RFE + RF
+EDIL3,225275_PM_at,2.50904,0.00851,0.50937,False,,,,Core matrisome,ECM Glycoproteins,2,SVM-RFE + RF
+POSTN,210809_PM_s_at,2.25361667,0.0423,0.86756,False,,,,Core matrisome,ECM Glycoproteins,2,SVM-RFE + RF
+LOX,215446_PM_s_at,2.16197,0.0331,0.82192,False,,,,Matrisome-associated,ECM Regulators,2,SVM-RFE + RF
+INHBA,210511_PM_s_at,2.517965,0.017,0.66137,False,,,,Matrisome-associated,Secreted Factors,2,SVM-RFE + RF
+COMP,205713_PM_s_at,4.07950533,0.00335,0.33844,False,,,,Core matrisome,ECM Glycoproteins,2,SVM-RFE + RF
+THBS3,209561_PM_at,1.15780833,0.00815,0.49792,False,,,,Core matrisome,ECM Glycoproteins,2,SVM-RFE + RF
