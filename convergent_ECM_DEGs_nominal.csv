@@ -1,0 +1,149 @@
+Gene Symbol,Gene Name,Matrisome Division,Matrisome Category,logFC,Direction,P.Value,adj.P.Val,FDR_Significant (<0.05),Probe ID
+COL1A1,"collagen, type I, alpha 1",Core matrisome,Collagens,2.98466833,UP,8.14e-06,0.01536,YES,1556499_PM_s_at
+TIMP4,TIMP metallopeptidase inhibitor 4,Matrisome-associated,ECM Regulators,-3.7942565,DOWN,3.05e-05,0.02779,YES,206243_PM_at
+LEP,leptin,Matrisome-associated,Secreted Factors,-5.71734833,DOWN,3.9e-05,0.03096,YES,207092_PM_at
+BGN,biglycan,Core matrisome,Proteoglycans,3.55583833,UP,6.19e-05,0.03752,YES,213905_PM_x_at
+CLEC11A,"C-type lectin domain family 11, member A",Matrisome-associated,ECM-affiliated Proteins,3.07216072,UP,7.64e-05,0.04223,YES,211709_PM_s_at
+SERPINE2,"serpin peptidase inhibitor, clade E (nexin, plasminogen activator inhibitor type 1), member 2",Matrisome-associated,ECM Regulators,2.73569667,UP,7.95e-05,0.04308,YES,212190_PM_at
+MXRA5,matrix-remodelling associated 5,Core matrisome,ECM Glycoproteins,2.99756167,UP,0.000102,0.04869,YES,209596_PM_at
+COL1A2,"collagen, type I, alpha 2",Core matrisome,Collagens,3.37799667,UP,0.000121,0.05202,NO,202404_PM_s_at
+CTHRC1,collagen triple helix repeat containing 1,Core matrisome,ECM Glycoproteins,4.24938,UP,0.000151,0.06106,NO,225681_PM_at
+S100B,S100 calcium binding protein B,Matrisome-associated,Secreted Factors,-1.97702167,DOWN,0.000154,0.06141,NO,209686_PM_at
+SULF2,sulfatase 2,Matrisome-associated,ECM Regulators,1.738715,UP,0.000157,0.06216,NO,224724_PM_at
+THSD4,"thrombospondin, type I, domain containing 4",Core matrisome,ECM Glycoproteins,1.51716,UP,0.000182,0.06743,NO,222835_PM_at
+WNT11,"wingless-type MMTV integration site family, member 11",Matrisome-associated,Secreted Factors,-1.99553833,DOWN,0.000199,0.07219,NO,206737_PM_at
+FGF2,fibroblast growth factor 2 (basic),Matrisome-associated,Secreted Factors,-1.63036433,DOWN,0.000239,0.07829,NO,204422_PM_s_at
+LAMA4,"laminin, alpha 4",Core matrisome,ECM Glycoproteins,-2.25678667,DOWN,0.000249,0.07975,NO,216081_PM_at
+ADAMTSL3,ADAMTS-like 3,Matrisome-associated,ECM Regulators,-2.56882083,DOWN,0.000278,0.08489,NO,213974_PM_at
+CRELD1,cysteine-rich with EGF-like domains 1,Core matrisome,ECM Glycoproteins,-1.26197,DOWN,0.000295,0.08869,NO,203368_PM_at
+ITIH5,inter-alpha (globulin) inhibitor H5,Matrisome-associated,ECM Regulators,-2.34209167,DOWN,0.000333,0.09458,NO,219064_PM_at
+THBS2,thrombospondin 2,Core matrisome,ECM Glycoproteins,2.29237667,UP,0.000343,0.09516,NO,203083_PM_at
+ADIPOQ,"adiponectin, C1Q and collagen domain containing",Core matrisome,ECM Glycoproteins,-5.657775,DOWN,0.000413,0.10699,NO,207175_PM_at
+AEBP1,AE binding protein 1,Core matrisome,ECM Glycoproteins,2.48848833,UP,0.000431,0.10875,NO,201792_PM_at
+SNED1,"sushi, nidogen and EGF-like domains 1",Core matrisome,ECM Glycoproteins,1.498445,UP,0.000445,0.10964,NO,1554798_PM_at
+GPC3,glypican 3,Matrisome-associated,ECM-affiliated Proteins,-1.999855,DOWN,0.000497,0.11825,NO,209220_PM_at
+COL12A1,"collagen, type XII, alpha 1",Core matrisome,Collagens,3.50933167,UP,0.00064,0.14125,NO,234951_PM_s_at
+VCAN,versican,Core matrisome,Proteoglycans,2.75288333,UP,0.000701,0.14869,NO,221731_PM_x_at
+COL3A1,"collagen, type III, alpha 1",Core matrisome,Collagens,2.83916,UP,0.00084,0.16688,NO,201852_PM_x_at
+COL5A2,"collagen, type V, alpha 2",Core matrisome,Collagens,2.83665667,UP,0.00101,0.18887,NO,221730_PM_at
+ISM1,isthmin 1 homolog (zebrafish),Matrisome-associated,Secreted Factors,1.89909017,UP,0.00118,0.20263,NO,235182_PM_at
+COL5A1,"collagen, type V, alpha 1",Core matrisome,Collagens,3.44077333,UP,0.0014,0.2175,NO,212488_PM_at
+NTN4,netrin 4,Core matrisome,ECM Glycoproteins,-1.32911283,DOWN,0.00176,0.25042,NO,223315_PM_at
+C17ORF58,chromosome 17 open reading frame 58,Matrisome-associated,ECM Regulators,-1.90235717,DOWN,0.00183,0.25209,NO,226901_PM_at
+SEMA3G,"sema domain, immunoglobulin domain (Ig), short basic domain, secreted, (semaphorin) 3G",Matrisome-associated,ECM-affiliated Proteins,-3.2923,DOWN,0.00192,0.25694,NO,219689_PM_at
+PCSK5,proprotein convertase subtilisin/kexin type 5,Matrisome-associated,ECM Regulators,-1.07710833,DOWN,0.00214,0.26638,NO,205560_PM_at
+PCOLCE2,procollagen C-endopeptidase enhancer 2,Core matrisome,ECM Glycoproteins,-4.62012833,DOWN,0.00229,0.27819,NO,219295_PM_s_at
+FIGF,c-fos induced growth factor (vascular endothelial growth factor D),Matrisome-associated,Secreted Factors,-2.892596,DOWN,0.00261,0.30153,NO,206742_PM_at
+ITLN1,intelectin 1 (galactofuranose binding),Matrisome-associated,ECM-affiliated Proteins,-6.39461483,DOWN,0.00263,0.30203,NO,223597_PM_at
+MUC1,"mucin 1, cell surface associated",Matrisome-associated,ECM-affiliated Proteins,1.56945833,UP,0.00281,0.31076,NO,213693_PM_s_at
+CLEC3B,"C-type lectin domain family 3, member B",Matrisome-associated,ECM-affiliated Proteins,-1.90583267,DOWN,0.00309,0.32706,NO,205200_PM_at
+COMP,cartilage oligomeric matrix protein,Core matrisome,ECM Glycoproteins,4.07950533,UP,0.00335,0.33844,NO,205713_PM_s_at
+CHRDL1,chordin-like 1,Matrisome-associated,Secreted Factors,-3.2143,DOWN,0.00355,0.34135,NO,209763_PM_at
+PAMR1,peptidase domain containing associated with muscle regeneration 1,Matrisome-associated,ECM Regulators,-1.4336215,DOWN,0.00355,0.34135,NO,213661_PM_at
+ECM2,"extracellular matrix protein 2, female organ and adipocyte specific",Core matrisome,ECM Glycoproteins,-1.315845,DOWN,0.00371,0.34902,NO,206101_PM_at
+TNC,tenascin C,Core matrisome,ECM Glycoproteins,3.391885,UP,0.00371,0.34902,NO,201645_PM_at
+ANXA3,annexin A3,Matrisome-associated,ECM-affiliated Proteins,-1.807643,DOWN,0.00448,0.37414,NO,209369_PM_at
+CRHBP,corticotropin releasing hormone binding protein,Matrisome-associated,Secreted Factors,-1.3207815,DOWN,0.00457,0.37593,NO,205984_PM_at
+MMP28,matrix metallopeptidase 28,Matrisome-associated,ECM Regulators,-1.21676267,DOWN,0.0048,0.39007,NO,239272_PM_at
+COL6A3,"collagen, type VI, alpha 3",Core matrisome,Collagens,1.11747333,UP,0.0049,0.39466,NO,201438_PM_at
+PDGFA,platelet-derived growth factor alpha polypeptide,Matrisome-associated,Secreted Factors,1.43189167,UP,0.00496,0.39812,NO,216867_PM_s_at
+FN1,fibronectin 1,Core matrisome,ECM Glycoproteins,1.93177567,UP,0.00526,0.41042,NO,214702_PM_at
+SFRP2,secreted frizzled-related protein 2,Matrisome-associated,Secreted Factors,2.53317167,UP,0.00584,0.42805,NO,223121_PM_s_at
+P4HA3,"prolyl 4-hydroxylase, alpha polypeptide III",Matrisome-associated,ECM Regulators,2.10161317,UP,0.00637,0.45008,NO,228703_PM_at
+FNDC1,fibronectin type III domain containing 1,Core matrisome,ECM Glycoproteins,2.90672,UP,0.00641,0.45008,NO,226930_PM_at
+CRISPLD2,cysteine-rich secretory protein LCCL domain containing 2,Core matrisome,ECM Glycoproteins,2.78338833,UP,0.00654,0.45545,NO,221541_PM_at
+CTSC,cathepsin C,Matrisome-associated,ECM Regulators,-1.42134233,DOWN,0.00676,0.46191,NO,231234_PM_at
+FGL2,fibrinogen-like 2,Core matrisome,ECM Glycoproteins,-1.46849833,DOWN,0.00684,0.46254,NO,227265_PM_at
+TECTA,tectorin alpha,Core matrisome,ECM Glycoproteins,1.04586667,UP,0.00711,0.46981,NO,236904_PM_x_at
+COL8A1,"collagen, type VIII, alpha 1",Core matrisome,Collagens,2.68166667,UP,0.00742,0.47534,NO,226237_PM_at
+FBLN2,fibulin 2,Core matrisome,ECM Glycoproteins,-1.3728,DOWN,0.00775,0.48363,NO,203886_PM_s_at
+THBS3,thrombospondin 3,Core matrisome,ECM Glycoproteins,1.15780833,UP,0.00815,0.49792,NO,209561_PM_at
+MMRN2,multimerin 2,Core matrisome,ECM Glycoproteins,-1.68784,DOWN,0.00834,0.50451,NO,236262_PM_at
+EDIL3,EGF-like repeats and discoidin I-like domains 3,Core matrisome,ECM Glycoproteins,2.50904,UP,0.00851,0.50937,NO,225275_PM_at
+SFRP4,secreted frizzled-related protein 4,Matrisome-associated,Secreted Factors,2.73631167,UP,0.00867,0.51284,NO,204051_PM_s_at
+CRISPLD1,cysteine-rich secretory protein LCCL domain containing 1,Core matrisome,ECM Glycoproteins,1.7040255,UP,0.00896,0.52084,NO,223475_PM_at
+COL11A1,"collagen, type XI, alpha 1",Core matrisome,Collagens,3.78661098,UP,0.00898,0.52104,NO,37892_PM_at
+ADAMTS5,"ADAM metallopeptidase with thrombospondin type 1 motif, 5",Matrisome-associated,ECM Regulators,-1.52560033,DOWN,0.00935,0.52687,NO,235368_PM_at
+FBLN5,fibulin 5,Core matrisome,ECM Glycoproteins,-1.481305,DOWN,0.00948,0.52984,NO,203088_PM_at
+TGFB3,"transforming growth factor, beta 3",Matrisome-associated,Secreted Factors,1.38042167,UP,0.0102,0.54483,NO,209747_PM_at
+CSTA,cystatin A (stefin A),Matrisome-associated,ECM Regulators,-1.71034833,DOWN,0.0102,0.54509,NO,204971_PM_at
+PARM1,prostate androgen-regulated mucin-like protein 1,Matrisome-associated,ECM-affiliated Proteins,-1.17712167,DOWN,0.0105,0.55263,NO,225809_PM_at
+TNFAIP6,"tumor necrosis factor, alpha-induced protein 6",Core matrisome,ECM Glycoproteins,1.64126833,UP,0.0106,0.55359,NO,206026_PM_s_at
+MMP2,"matrix metallopeptidase 2 (gelatinase A, 72kDa gelatinase, 72kDa type IV collagenase)",Matrisome-associated,ECM Regulators,1.95519833,UP,0.0109,0.56283,NO,201069_PM_at
+COL16A1,"collagen, type XVI, alpha 1",Core matrisome,Collagens,2.12623667,UP,0.0117,0.58118,NO,204345_PM_at
+PCOLCE,procollagen C-endopeptidase enhancer,Core matrisome,ECM Glycoproteins,1.56403167,UP,0.0119,0.58394,NO,202465_PM_at
+SERPINB6,"serpin peptidase inhibitor, clade B (ovalbumin), member 6",Matrisome-associated,ECM Regulators,-3.15377167,DOWN,0.0146,0.6403,NO,231628_PM_s_at
+SVEP1,"sushi, von Willebrand factor type A, EGF and pentraxin domain containing 1",Core matrisome,ECM Glycoproteins,-1.755475,DOWN,0.0146,0.64064,NO,1553129_PM_at
+ADAM22,ADAM metallopeptidase domain 22,Matrisome-associated,ECM Regulators,-0.63180767,DOWN,0.015,0.64738,NO,244194_PM_at
+PLXDC2,plexin domain containing 2,Matrisome-associated,ECM-affiliated Proteins,0.98353833,UP,0.0155,0.655,NO,227995_PM_at
+TNXB,tenascin XB,Core matrisome,ECM Glycoproteins,-1.90377667,DOWN,0.0158,0.6565,NO,216333_PM_x_at
+S100A13,S100 calcium binding protein A13,Matrisome-associated,Secreted Factors,-0.95649667,DOWN,0.0158,0.6565,NO,202598_PM_at
+FRAS1,Fraser syndrome 1,Core matrisome,ECM Glycoproteins,0.673155,UP,0.0159,0.65675,NO,231511_PM_at
+LAMB3,"laminin, beta 3",Core matrisome,ECM Glycoproteins,-0.80779817,DOWN,0.0162,0.65724,NO,209270_PM_at
+CD109,CD109 molecule,Matrisome-associated,ECM Regulators,0.96097667,UP,0.0162,0.65724,NO,229900_PM_at
+THBS1,thrombospondin 1,Core matrisome,ECM Glycoproteins,2.079993,UP,0.0162,0.65724,NO,215775_PM_at
+MEGF6,multiple EGF-like-domains 6,Matrisome-associated,Secreted Factors,1.4137225,UP,0.0165,0.66047,NO,213942_PM_at
+TNFSF10,"tumor necrosis factor (ligand) superfamily, member 10",Matrisome-associated,Secreted Factors,-1.87084333,DOWN,0.0166,0.66137,NO,202687_PM_s_at
+CLCF1,cardiotrophin-like cytokine factor 1,Matrisome-associated,Secreted Factors,0.76089283,UP,0.0166,0.66137,NO,219500_PM_at
+INHBA,"inhibin, beta A",Matrisome-associated,Secreted Factors,2.517965,UP,0.017,0.66137,NO,210511_PM_s_at
+ANGPTL4,angiopoietin-like 4,Matrisome-associated,Secreted Factors,-1.71935883,DOWN,0.0178,0.67053,NO,221009_PM_s_at
+SDC1,syndecan 1,Matrisome-associated,ECM-affiliated Proteins,0.9774825,UP,0.0191,0.69164,NO,201286_PM_at
+FBLN7,fibulin 7,Core matrisome,ECM Glycoproteins,1.11067167,UP,0.0193,0.69322,NO,229247_PM_at
+ANGPT1,angiopoietin 1,Matrisome-associated,Secreted Factors,-1.33952667,DOWN,0.0197,0.70037,NO,205608_PM_s_at
+OGFOD1,2-oxoglutarate and iron-dependent oxygenase domain containing 1,Matrisome-associated,ECM Regulators,-1.35626182,DOWN,0.0197,0.70122,NO,225110_PM_at
+S100A3,S100 calcium binding protein A3,Matrisome-associated,Secreted Factors,0.67998267,UP,0.0199,0.70281,NO,206027_PM_at
+TSKU,tsukushi small leucine rich proteoglycan homolog (Xenopus laevis),Core matrisome,ECM Glycoproteins,-0.76658167,DOWN,0.0207,0.71034,NO,218245_PM_at
+LTBP4,latent transforming growth factor beta binding protein 4,Core matrisome,ECM Glycoproteins,-0.81071,DOWN,0.021,0.71493,NO,227989_PM_at
+ADAMTS2,"ADAM metallopeptidase with thrombospondin type 1 motif, 2",Matrisome-associated,ECM Regulators,2.27016333,UP,0.0224,0.7369,NO,226311_PM_at
+CRIM1,cysteine rich transmembrane BMP regulator 1 (chordin-like),Core matrisome,ECM Glycoproteins,-1.532185,DOWN,0.0225,0.73721,NO,228496_PM_s_at
+FBLN1,fibulin 1,Core matrisome,ECM Glycoproteins,1.36257833,UP,0.0225,0.73721,NO,201787_PM_at
+COCH,"coagulation factor C homolog, cochlin (Limulus polyphemus)",Core matrisome,ECM Glycoproteins,-0.74580983,DOWN,0.023,0.73934,NO,205229_PM_s_at
+ELN,elastin,Core matrisome,ECM Glycoproteins,1.89172033,UP,0.0232,0.73936,NO,212670_PM_at
+CXCL12,chemokine (C-X-C motif) ligand 12 (stromal cell-derived factor 1),Matrisome-associated,Secreted Factors,-1.401515,DOWN,0.0232,0.73936,NO,209687_PM_at
+COL6A1,"collagen, type VI, alpha 1",Core matrisome,Collagens,0.692145,UP,0.024,0.74981,NO,213428_PM_s_at
+ADAM28,ADAM metallopeptidase domain 28,Matrisome-associated,ECM Regulators,0.61917133,UP,0.024,0.74981,NO,208269_PM_s_at
+SPOCK1,"sparc/osteonectin, cwcv and kazal-like domains proteoglycan (testican) 1",Core matrisome,Proteoglycans,1.98131,UP,0.0251,0.76366,NO,202363_PM_at
+CTSK,cathepsin K,Matrisome-associated,ECM Regulators,2.43695333,UP,0.0256,0.76922,NO,202450_PM_s_at
+COL8A2,"collagen, type VIII, alpha 2",Core matrisome,Collagens,1.85791767,UP,0.0258,0.77122,NO,221900_PM_at
+LGALS3,"lectin, galactoside-binding, soluble, 3",Matrisome-associated,ECM-affiliated Proteins,-1.33756,DOWN,0.0264,0.77605,NO,208949_PM_s_at
+IGFBP3,insulin-like growth factor binding protein 3,Core matrisome,ECM Glycoproteins,-1.07637167,DOWN,0.0269,0.77873,NO,210095_PM_s_at
+ANXA6,annexin A6,Matrisome-associated,ECM-affiliated Proteins,-0.93219333,DOWN,0.027,0.77873,NO,200982_PM_s_at
+SLIT2,slit homolog 2 (Drosophila),Core matrisome,ECM Glycoproteins,0.87869167,UP,0.0271,0.77893,NO,209897_PM_s_at
+EMCN,endomucin,Matrisome-associated,ECM-affiliated Proteins,-0.987875,DOWN,0.0271,0.77893,NO,219436_PM_s_at
+MFAP2,microfibrillar-associated protein 2,Core matrisome,ECM Glycoproteins,1.09142667,UP,0.0274,0.78135,NO,203417_PM_at
+PLXNA4,plexin A4,Matrisome-associated,ECM-affiliated Proteins,-0.83897833,DOWN,0.0275,0.78181,NO,232317_PM_at
+EFEMP1,EGF-containing fibulin-like extracellular matrix protein 1,Core matrisome,ECM Glycoproteins,-1.276225,DOWN,0.0283,0.78869,NO,201843_PM_s_at
+COL4A2,"collagen, type IV, alpha 2",Core matrisome,Collagens,-0.90801,DOWN,0.0286,0.78879,NO,211964_PM_at
+IGFBP5,insulin-like growth factor binding protein 5,Core matrisome,ECM Glycoproteins,-2.12923833,DOWN,0.0297,0.79757,NO,203424_PM_s_at
+SPON2,"spondin 2, extracellular matrix protein",Core matrisome,ECM Glycoproteins,1.45533,UP,0.0305,0.80209,NO,218638_PM_s_at
+SERPINA1,"serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 1",Matrisome-associated,ECM Regulators,0.787334,UP,0.0307,0.80269,NO,211428_PM_at
+OGFOD2,2-oxoglutarate and iron-dependent oxygenase domain containing 2,Matrisome-associated,ECM Regulators,0.94807817,UP,0.0319,0.81129,NO,219245_PM_s_at
+MUC20,"mucin 20, cell surface associated",Matrisome-associated,ECM-affiliated Proteins,-1.07581667,DOWN,0.0326,0.81737,NO,1558220_PM_at
+LOX,lysyl oxidase,Matrisome-associated,ECM Regulators,2.16197,UP,0.0331,0.82192,NO,215446_PM_s_at
+MFGE8,milk fat globule-EGF factor 8 protein,Core matrisome,ECM Glycoproteins,1.15391333,UP,0.0332,0.82192,NO,210605_PM_s_at
+FGF14,fibroblast growth factor 14,Matrisome-associated,Secreted Factors,1.49400033,UP,0.0345,0.82784,NO,230231_PM_at
+ELFN1,extracellular leucine-rich repeat and fibronectin type III domain containing 1,Matrisome-associated,ECM-affiliated Proteins,-1.11648167,DOWN,0.0348,0.82859,NO,229581_PM_at
+BMP6,bone morphogenetic protein 6,Matrisome-associated,Secreted Factors,-1.48332,DOWN,0.0352,0.82955,NO,206176_PM_at
+CTSB,cathepsin B,Matrisome-associated,ECM Regulators,0.71833667,UP,0.0363,0.83464,NO,213275_PM_x_at
+FAM20B,"family with sequence similarity 20, member B",Matrisome-associated,ECM Regulators,-1.051875,DOWN,0.0364,0.83472,NO,202916_PM_s_at
+MMP14,matrix metallopeptidase 14 (membrane-inserted),Matrisome-associated,ECM Regulators,2.17859517,UP,0.0365,0.83588,NO,202827_PM_s_at
+TSPEAR,chromosome 21 open reading frame 29,Core matrisome,ECM Glycoproteins,0.89494267,UP,0.0375,0.84253,NO,1555048_PM_a_at
+SMOC2,SPARC related modular calcium binding 2,Core matrisome,ECM Glycoproteins,0.97185,UP,0.0382,0.84656,NO,243946_PM_at
+P4HA2,"prolyl 4-hydroxylase, alpha polypeptide II",Matrisome-associated,ECM Regulators,1.21846333,UP,0.0387,0.8471,NO,202733_PM_at
+COL6A2,"collagen, type VI, alpha 2",Core matrisome,Collagens,0.94531667,UP,0.0389,0.84832,NO,213290_PM_at
+HYAL2,hyaluronoglucosaminidase 2,Matrisome-associated,ECM Regulators,-0.660022,DOWN,0.0404,0.85582,NO,206855_PM_s_at
+SERPINE1,"serpin peptidase inhibitor, clade E (nexin, plasminogen activator inhibitor type 1), member 1",Matrisome-associated,ECM Regulators,3.0182915,UP,0.0412,0.86207,NO,1568765_PM_at
+KITLG,KIT ligand,Matrisome-associated,Secreted Factors,-1.42137183,DOWN,0.0415,0.86361,NO,226534_PM_at
+SERPINA3,"serpin peptidase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 3",Matrisome-associated,ECM Regulators,1.28543333,UP,0.0418,0.86493,NO,202376_PM_at
+POSTN,"periostin, osteoblast specific factor",Core matrisome,ECM Glycoproteins,2.25361667,UP,0.0423,0.86756,NO,210809_PM_s_at
+LGALS12,"lectin, galactoside-binding, soluble, 12",Matrisome-associated,ECM-affiliated Proteins,-0.79102867,DOWN,0.0427,0.86756,NO,223828_PM_s_at
+TGM2,"transglutaminase 2 (C polypeptide, protein-glutamine-gamma-glutamyltransferase)",Matrisome-associated,ECM Regulators,0.9520255,UP,0.0428,0.86756,NO,211003_PM_x_at
+ADAMTS1,"ADAM metallopeptidase with thrombospondin type 1 motif, 1",Matrisome-associated,ECM Regulators,1.67115167,UP,0.0453,0.87677,NO,222486_PM_s_at
+ACAN,aggrecan,Core matrisome,Proteoglycans,0.79720783,UP,0.0455,0.87767,NO,217161_PM_x_at
+INSL3,insulin-like 3 (Leydig cell),Matrisome-associated,Secreted Factors,0.80060833,UP,0.0471,0.88684,NO,1553594_PM_a_at
+AMH,anti-Mullerian hormone,Matrisome-associated,Secreted Factors,-0.602321,DOWN,0.0475,0.88813,NO,206516_PM_at
+BMP1,bone morphogenetic protein 1,Matrisome-associated,ECM Regulators,0.58817083,UP,0.0484,0.89434,NO,1570383_PM_at
+ADAMTS6,"ADAM metallopeptidase with thrombospondin type 1 motif, 6",Matrisome-associated,ECM Regulators,0.79023267,UP,0.0495,0.90075,NO,237411_PM_at
+POMZP3,"POM (POM121 homolog, rat) and ZP3 fusion",Core matrisome,ECM Glycoproteins,-0.95845757,DOWN,0.0498,0.90439,NO,204148_PM_s_at
+ZP3,zona pellucida glycoprotein 3 (sperm receptor),Core matrisome,ECM Glycoproteins,-0.95845757,DOWN,0.0498,0.90439,NO,204148_PM_s_at
+MUC3A,"mucin 3A, cell surface associated",Matrisome-associated,ECM-affiliated Proteins,-1.11806667,DOWN,0.0499,0.90481,NO,217054_PM_at
