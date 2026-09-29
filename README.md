@@ -129,13 +129,13 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 ### Phase 4: Consensus Machine Learning Feature Selection (11 Hub Genes)
 
 Four distinct machine learning algorithms were trained on the 40 convergent candidates across the discovery matrix using a fixed random seed (`seed = 42`):
-1. **LASSO (L1 Regularization):** Solved $\min_{\beta} \left\{ -\ell(\beta) + \alpha \|\beta\|_1 \right\}$ with $\alpha = 0.042$ (10 genes selected).
-2. **SVM-RFE (Recursive Feature Elimination):** Linear support vector machine iteratively eliminating lowest-ranked weight features $w_i^2$ (11 genes selected).
+1. **LASSO (L1 Regularization):** Solved $\min_{\beta} [ -\ell(\beta) + \alpha \|\beta\|_1 ]$ with optimal penalty parameter $\alpha = 0.042$ (10 genes selected).
+2. **SVM-RFE (Recursive Feature Elimination):** Linear support vector machine iteratively ranking and eliminating features by weight criterion $c_j = (w_j)^2$ (11 genes selected).
 3. **Random Forest (Gini Impurity):** 500 decision trees ranking Mean Decrease Gini (top 11 features selected).
 4. **XGBoost (Extreme Gradient Boosting):** Depth-constrained gradient-boosted trees (top 11 features selected).
 
 **Consensus Rule:** Candidates selected by $\ge 2$ algorithms were designated consensus hub genes, isolating **11 Consensus Pro-Fibrotic Hub Genes**:
-$$\mathbf{ISM1, FN1, EDIL3, VCAN, COL3A1, COMP, COL8A1, THBS3, COL11A1, INHBA, LOX}$$
+$$\text{Hub Panel: } \mathbf{ISM1, \; FN1, \; EDIL3, \; VCAN, \; COL3A1, \; COMP, \; COL8A1, \; THBS3, \; COL11A1, \; INHBA, \; LOX}$$
 
 ```
 Consensus ML Vote Distribution:
