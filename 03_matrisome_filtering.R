@@ -78,8 +78,13 @@ ecm_degs_table <- intersection_all %>%
   arrange(P.Value)
 
 cat("ECM-DEGs (|logFC|>=0.585, P<0.05):", nrow(ecm_degs_table), "\n")
-cat("  Upregulated ECM-DEGs:   ", sum(ecm_degs_table$DEG_Status == "Upregulated"), "\n")
-cat("  Downregulated ECM-DEGs: ", sum(ecm_degs_table$DEG_Status == "Downregulated"), "\n")
+cat("  Upregulated ECM-DEGs (|logFC|>=0.585):   ", sum(ecm_degs_table$DEG_Status == "Upregulated"), "\n")
+cat("  Downregulated ECM-DEGs (|logFC|>=0.585): ", sum(ecm_degs_table$DEG_Status == "Downregulated"), "\n")
+
+ecm_71_table <- intersection_all %>%
+  filter(logFC >= 0.80 & P.Value < 0.05) %>%
+  arrange(P.Value)
+cat("ECM-DEGs (Up-regulated, log2FC >= 0.80, P < 0.05):", nrow(ecm_71_table), "genes\n")
 cat("=================================================================\n")
 
 # Borderline ECM genes (present in ECM but not reaching DEG threshold)

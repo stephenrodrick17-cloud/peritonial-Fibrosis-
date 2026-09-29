@@ -1,0 +1,6 @@
+Gene_Symbol,Coefficient_Beta,P_Value,Observed_Min,Observed_Max,Points_At_Min,Points_At_Max,Max_Assigned_Points
+VCAN,-1.8016,0.0279,10.17,13.38,84.5,0.0,84.5
+COL8A1,1.3846,0.0607,4.04,8.98,0.0,100.0,100.0
+FN1,0.5622,0.1863,1.92,5.98,0.0,33.3,33.3
+ISM1,-0.4658,0.5258,2.67,5.18,17.1,0.0,17.1
+COL3A1,-0.8808,0.2103,7.18,11.73,58.6,0.0,58.6

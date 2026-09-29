@@ -1,3 +1,7 @@
+import random
+import numpy as np
+np.random.seed(42)
+random.seed(42)
 """
 ==============================================================================
 SCRIPT: ANALYZE CONVERGENCE (WGCNA TRAIT MODULES ∩ 71 CONVERGENT ECM-DEGS)
@@ -89,30 +93,54 @@ print("\n" + "=" * 70)
 print("STEP 3: GENERATING 3-WAY CONVERGENCE VENN DIAGRAM")
 print("=" * 70)
 
-# Set sizes based on mathematically established counts:
-# A: GSE62928 DEGs (1,526)
-# B: Human Matrisome (1,027)
-# C: WGCNA Trait-Significant Module (604)
-# Overlaps:
-# A ∩ B = 71
-# A ∩ B ∩ C = n_convergent (40)
-# A ∩ B only = 71 - 40 = 31
-# A ∩ C only = 155 - 40 = 115
-# B ∩ C only = 89 - 40 = 49
-# A only = 1526 - 31 - 115 - 40 = 1340
-# B only = 1027 - 31 - 49 - 40 = 907
-# C only = 604 - 115 - 49 - 40 = 400
+# Compute dynamic 3-way Venn subsets from actual gene sets:
+# Set A: GSE62928 Pro-Fibrotic DEGs (log2FC >= 0.80, P < 0.05, N = 367)
+# Set B: Human Matrisome (N = 1,027)
+# Set C: WGCNA Trait-Significant Module (Salmon, N = 604)
 
-subsets = (1340, 907, 31, 400, 115, 49, n_convergent)
+# Load full pro-fibrotic DEGs (N = 367)
+df_tt = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
+df_clean = df_tt.dropna(subset=["Gene.symbol"]).copy()
+df_clean = df_clean[~df_clean["Gene.symbol"].isin(["", "---"])]
+rows = []
+for _, r in df_clean.iterrows():
+    for s in str(r["Gene.symbol"]).split("///"):
+        sc = s.strip().upper()
+        if sc:
+            rc = r.to_dict()
+            rc["Gene"] = sc
+            rows.append(rc)
+df_exp = pd.DataFrame(rows)
+df_gene = df_exp.sort_values("P.Value").drop_duplicates("Gene")
+set_degs = set(df_gene[(df_gene["P.Value"] < 0.05) & (df_gene["logFC"] >= 0.80)]["Gene"])
+
+# Load matrisome
+df_ecm_ref = pd.read_excel("ECM genes all.xlsx", skiprows=1)
+sym_col_ref = [c for c in df_ecm_ref.columns if "symbol" in c.lower() or "gene" in c.lower()][0]
+set_matrisome = set(df_ecm_ref[sym_col_ref].dropna().astype(str).str.strip().str.upper())
+set_matrisome = {g for g in set_matrisome if g and g not in ["GENE SYMBOL", "NA", "NAN"]}
+
+# Set of Salmon module genes
+set_wgcna = set(df_wgcna["gene_clean"])
+
+s_100 = len(set_degs - set_matrisome - set_wgcna)
+s_010 = len(set_matrisome - set_degs - set_wgcna)
+s_110 = len((set_degs & set_matrisome) - set_wgcna)
+s_001 = len(set_wgcna - set_degs - set_matrisome)
+s_101 = len((set_degs & set_wgcna) - set_matrisome)
+s_011 = len((set_matrisome & set_wgcna) - set_degs)
+s_111 = len(set_degs & set_matrisome & set_wgcna)
+
+subsets = (s_100, s_010, s_110, s_001, s_101, s_011, s_111)
 
 fig, ax = plt.subplots(figsize=(11, 9), facecolor="#F8FAFC")
 
 v = venn3(
     subsets=subsets,
     set_labels=(
-        "GSE62928 DEGs\n(Peritoneal Fibrosis)\n[N = 1,526]",
-        "Human Matrisome\n(Master Database)\n[N = 1,027]",
-        f"WGCNA Trait Module\n(Salmon: r = 0.81, p = 0.016)\n[N = 604]"
+        f"GSE62928 Pro-Fibrotic DEGs\n(Peritoneal Fibrosis)\n[N = {len(set_degs)}]",
+        f"Human Matrisome\n(Master Database)\n[N = {len(set_matrisome)}]",
+        f"WGCNA Trait Module\n(Salmon: r = 0.81, p = 0.016)\n[N = {len(set_wgcna)}]"
     ),
     set_colors=("#6366F1", "#10B981", "#F59E0B"),
     alpha=0.65,

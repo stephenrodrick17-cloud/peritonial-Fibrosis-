@@ -1,0 +1,27 @@
+Cohort,Model_Type,Feature_or_Panel,Platform_Status,N,Cases,Controls,AUC,CI_95_Low,CI_95_High,Sensitivity,Specificity,Optimal_Cutoff
+Discovery (GSE62928),Single Gene,FN1,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,8.6236
+Discovery (GSE62928),Single Gene,COL3A1,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,10.2606
+Discovery (GSE62928),Single Gene,COL11A1,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,3.8874
+Discovery (GSE62928),Single Gene,COL8A1,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,3.2504
+Discovery (GSE62928),Single Gene,VCAN,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,7.0284
+Discovery (GSE62928),Single Gene,COMP,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,4.3256
+Discovery (GSE62928),Single Gene,THBS3,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,3.321
+Discovery (GSE62928),Single Gene,EDIL3,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,3.069
+Discovery (GSE62928),Single Gene,LOX,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,4.776
+Discovery (GSE62928),Single Gene,INHBA,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,4.0313
+Discovery (GSE62928),Single Gene,ISM1,Profiled (Affymetrix HG-U133_Plus_2),8,4,4,1.0,1.0,1.0,1.0,1.0,2.8546
+External Validation (GSE125498),Single Gene,FN1,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.6115,0.3999,0.8218,0.6154,0.75,3.3958
+External Validation (GSE125498),Single Gene,COL3A1,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.5346,0.33,0.7478,0.5385,0.75,10.0958
+External Validation (GSE125498),Single Gene,COL11A1,Missing Probe on GPL10558,33,13,20,,,,,,
+External Validation (GSE125498),Single Gene,COL8A1,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.6654,0.4609,0.8435,0.3077,1.0,7.7598
+External Validation (GSE125498),Single Gene,VCAN,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.2769,0.1077,0.4706,0.0,1.0,inf
+External Validation (GSE125498),Single Gene,COMP,Missing Probe on GPL10558,33,13,20,,,,,,
+External Validation (GSE125498),Single Gene,THBS3,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.4038,0.2132,0.5889,0.9231,0.2,7.0078
+External Validation (GSE125498),Single Gene,EDIL3,Missing Probe on GPL10558,33,13,20,,,,,,
+External Validation (GSE125498),Single Gene,LOX,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.4962,0.2852,0.6963,0.2308,0.9,6.9543
+External Validation (GSE125498),Single Gene,INHBA,Missing Probe on GPL10558,33,13,20,,,,,,
+External Validation (GSE125498),Single Gene,ISM1,Profiled (Illumina HumanHT-12 V4.0),33,13,20,0.5269,0.3055,0.7315,0.7692,0.4,3.5021
+External Validation (GSE125498),Primary 7-Gene Model (In-Sample),"FN1, COL3A1, COL8A1, VCAN, THBS3, LOX, ISM1",Profiled,33,13,20,0.8692,0.7103,0.9923,0.7692,0.95,0.536
+External Validation (GSE125498),Primary 7-Gene Model (5-Fold CV),"FN1, COL3A1, COL8A1, VCAN, THBS3, LOX, ISM1",5-Fold Cross-Validated,33,13,20,0.5923,0.3571,0.8095,0.6154,0.7,0.4465
+External Validation (GSE125498),Secondary 5-Gene Nomogram (In-Sample),"VCAN, COL8A1, FN1, ISM1, COL3A1",Profiled,33,13,20,0.8,0.6043,0.9564,0.7692,0.85,0.4045
+External Validation (GSE125498),Secondary 5-Gene Nomogram (5-Fold CV),"VCAN, COL8A1, FN1, ISM1, COL3A1",5-Fold Cross-Validated,33,13,20,0.55,0.3217,0.7593,0.3846,0.85,0.5438

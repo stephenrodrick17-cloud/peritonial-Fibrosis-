@@ -1,3 +1,4 @@
+set.seed(42)
 # ==============================================================================
 # SCRIPT 02b: WGCNA MODULE DETECTION & TRAIT CORRELATION ANALYSIS
 # Project: Peritoneal Dialysis-Associated Peritoneal Fibrosis Transcriptomics
@@ -104,7 +105,7 @@ if (!gsg$allOK) {
 # Select top 5,000 most variable genes across samples, and explicitly include all 71 convergent ECM-DEGs
 gene_vars <- apply(datExpr0, 2, var)
 
-ecm_71_file <- "convergent_ECM_DEGs_nominal.csv"
+ecm_71_file <- "convergent_71_ECM_DEGs.csv"
 ecm_71_genes <- c()
 if (file.exists(ecm_71_file)) {
   df_71 <- read.csv(ecm_71_file, check.names = FALSE, stringsAsFactors = FALSE)
