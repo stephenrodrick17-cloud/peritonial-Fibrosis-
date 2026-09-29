@@ -1,0 +1,28 @@
+R version 4.4.2 (2024-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_India.utf8  LC_CTYPE=English_India.utf8   
+[3] LC_MONETARY=English_India.utf8 LC_NUMERIC=C                  
+[5] LC_TIME=English_India.utf8    
+
+time zone: Asia/Calcutta
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.4.2
+
+--- Python Environment ---
+Python: 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]
+sklearn: 1.6.1
+xgboost: 3.1.3
+pandas: 2.2.3
+numpy: 2.2.6
+scipy: 1.17.0

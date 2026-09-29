@@ -1,0 +1,7 @@
+"ID","adj.P.Val","P.Value","t","B","logFC","Gene.symbol","Gene.title","Gene","DEG_Status","Category","Subcategory"
+"231743_PM_at",0.76366,0.0251,2.67,-3.409677,0.547925,"WNT3","Wnt family member 3","WNT3","Not Significant","Matrisome-associated","Secreted Factors"
+"242444_PM_at",0.79901,0.0299,2.56,-3.575545,0.56035633,"C1QTNF6","C1q and tumor necrosis factor related protein 6","C1QTNF6","Not Significant","Matrisome-associated","ECM-affiliated Proteins"
+"228233_PM_at",0.83651,0.0367,-2.44,-3.763849,-0.50216,"FREM1","FRAS1 related extracellular matrix 1","FREM1","Not Significant","Matrisome-associated","ECM-affiliated Proteins"
+"223537_PM_s_at",0.86617,0.0421,2.36,-3.891294,0.578912,"WNT5B","Wnt family member 5B","WNT5B","Not Significant","Matrisome-associated","Secreted Factors"
+"1553045_PM_at",0.87756,0.0454,2.31,-3.960183,0.57249667,"WNT9A","Wnt family member 9A","WNT9A","Not Significant","Matrisome-associated","Secreted Factors"
+"211263_PM_s_at",0.87871,0.0458,2.31,-3.968607,0.53259217,"PCSK6","proprotein convertase subtilisin/kexin type 6","PCSK6","Not Significant","Matrisome-associated","ECM Regulators"

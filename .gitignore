@@ -1,35 +1,13 @@
-# Python
+# Environment & Scratch directories
+scratch/
+.venv/
+venv/
 __pycache__/
-*.py[cod]
-*$py.class
-*.ipynb_checkpoints
+*.pyc
 
-# R
+# Local system & ide artifacts
+.tempmediaStorage/
+.system_generated/
+repo_audit_report.md
 .Rhistory
 .RData
-.RDataTmp
-.Ruserdata
-
-# Large Raw Datasets (>50MB / >100MB)
-2019-12-11-cis-eQTLsFDR0.05-ProbeLevel-CohortInfoRemoved-BonferroniAdded.txt*
-20171017_MW_eGFR_overall_EA_nstud42.dbgap.txt*
-data/GSE125498_series_matrix.txt.gz
-data/GPL10558.annot.gz
-data/*.RData
-*.tar.gz
-*.gz
-
-# Temporary / Scratch files
-scratch/
-scratch_*.R
-scratch_*.py
-New Microsoft Excel Worksheet.xlsx
-
-# OS
-Thumbs.db
-Desktop.ini
-.DS_Store
-
-~$*
-.vscode/
-
