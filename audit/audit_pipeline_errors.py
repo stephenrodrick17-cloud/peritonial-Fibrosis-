@@ -89,7 +89,7 @@ print("CHECK B: GENE SYMBOL MAPPING CONSISTENCY & 40-GENE INTERSECTION")
 print("=" * 80)
 
 f_mod_genes = "results/tables/wgcna_trait_significant_module_genes.csv"
-f_ecm = "convergent_ECM_DEGs_nominal.csv"
+f_ecm = "convergent_71_ECM_DEGs.csv"
 f_conv = "results/tables/convergent_WGCNA_ECM_genes.csv"
 if not os.path.exists(f_conv):
     f_conv = "convergent_WGCNA_ECM_genes.csv"

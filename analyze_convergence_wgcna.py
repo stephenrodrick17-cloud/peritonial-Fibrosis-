@@ -32,10 +32,10 @@ df_wgcna = pd.read_csv(wgcna_file)
 df_wgcna["gene_clean"] = df_wgcna["gene_symbol"].astype(str).str.strip().str.upper()
 print(f"Loaded {len(df_wgcna)} trait-significant WGCNA module genes ({df_wgcna['module_color'].iloc[0]} module).")
 
-# 2. Load convergent ECM-DEGs
+# 2. Load convergent ECM-DEGs (71 pro-fibrotic ECM genes)
 ecm_file = "convergent_71_ECM_DEGs.csv"
 if not os.path.exists(ecm_file):
-    ecm_file = "convergent_ECM_DEGs_nominal.csv"
+    ecm_file = "results/tables/GSE62928_ECM_intersection.csv"
 
 df_ecm = pd.read_csv(ecm_file)
 sym_col = [c for c in df_ecm.columns if "Symbol" in c][0]
