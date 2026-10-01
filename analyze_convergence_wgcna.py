@@ -167,13 +167,13 @@ for subset_id in ["100", "010", "110", "001", "101", "011"]:
 # Highlight central convergence
 lbl_111 = v.get_label_by_id("111")
 if lbl_111:
-    lbl_111.set_text(f"{n_convergent}\n(Core Hubs)")
-    lbl_111.set_fontsize(16)
+    lbl_111.set_text(f"{n_convergent}\n(convergent candidates)")
+    lbl_111.set_fontsize(14)
     lbl_111.set_fontweight("bold")
     lbl_111.set_color("#B91C1C")
 
-plt.title("Tri-Omics Convergence: GSE62928 DEGs ∩ Human Matrisome ∩ WGCNA Trait Module\n"
-          "(Replacing TWMR Causal Inference with Co-Expression Network Analysis)",
+plt.title("Tripartite Convergence: GSE62928 DEGs ∩ Human Matrisome ∩ WGCNA Trait Module\n"
+          "(Co-Expression Network Analysis & Curated Extracellular Matrix Integration)",
           fontsize=12.5, fontweight="bold", pad=20, color="#0F172A")
 
 plt.tight_layout()
