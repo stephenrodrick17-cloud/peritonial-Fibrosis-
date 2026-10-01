@@ -147,12 +147,12 @@ Consensus ML Feature Selection Distribution:
 • 4/4 Models: None (0 genes)
 • 3/4 Models (3 genes): ISM1, FN1 (LASSO + SVM-RFE + RF), EDIL3 (SVM-RFE + RF + XGBoost)
 • 2/4 Models (8 genes, all selected exclusively by SVM-RFE + RF): VCAN, COL3A1, COMP, COL8A1, THBS3, COL11A1, INHBA, LOX
-• 1/4 Models (16 genes): Selected by only one model
-• 0/4 Models (13 genes): Not selected by any model
+• 1/4 Models (9 genes): Selected by only one model
+• 0/4 Models (20 genes): Not selected by any model
 ```
 
 ![ML Consensus Barchart](results/figures/WGCNA_ML_01_consensus_votes_barchart.png)
-* **Figure 5: Machine Learning Consensus Votes.** Feature selection tallies across LASSO (2), SVM-RFE (14), Random Forest (17), and XGBoost (1) identifying the 11 hub genes.
+* **Figure 5: Machine Learning Consensus Votes.** Feature selection tallies across LASSO (2), SVM-RFE (14), Random Forest (17), and XGBoost (1) isolating the 11 hub genes ($\ge 2$ votes; 3 votes: 3, 2 votes: 8, 1 vote: 9, 0 votes: 20).
 
 ![Hub Gene Heatmap](results/figures/WGCNA_ML_04_hub_genes_expression_heatmap.png)
 * **Figure 6: Discovery Expression Profiles.** Clustered heatmap of the 11 consensus hub genes in discovery tissue ($N = 8$: 4 EPS vs 4 Control).
@@ -298,7 +298,8 @@ Prior transcriptomic analyses of GSE62928 (e.g., Wang et al., 2024; *not indepen
 4. **Tissue vs. Effluent Compartment Duality:** Only `COL8A1` is nominally upregulated in both compartments (tissue $\log_2\text{FC} = +2.68$, effluent $\log_2\text{FC} = +0.75, P = 0.049$). `FN1`, `COL3A1`, and `ISM1` show concordant upregulation trends but are non-significant in effluent cells; `LOX` is flat ($\log_2\text{FC} = +0.02, P = 0.976$); and `VCAN` ($\log_2\text{FC} = -0.52, P = 0.024$) and `THBS3` ($\log_2\text{FC} = -0.20, P = 0.418$) exhibit lower cellular expression in late PD effluent.
 5. **Permutation & GSEA Distinctions:** The empirical 1/70 sample label permutation test evaluates phenotype assignment boundaries, whereas `gseapy.prerank` FDR values reflect gene-set permutation distributions.
 6. **Cross-Validation Partition Sensitivity:** In external validation, out-of-fold generalization estimates vary across partitioning schemes: single 5-fold split $\text{AUC} = 0.592$, LOOCV $\text{AUC} = 0.658$, primary 50-repeat 5-fold pipeline-scaled $\text{AUC} = 0.678$ (per-repeat range $0.512 - 0.773$; per-fold mean $0.701$), and unscaled 50-repeat 5-fold $\text{AUC} = 0.684$. This demonstrates an optimism penalty relative to the in-sample fit ($\text{AUC} = 0.869$, $\Delta \text{AUC} = 0.191$).
-7. **Absence of Prospective Wet-Lab Validation:** All findings are derived from in silico microarray re-analyses. Prospective clinical biopsy immunohistochemistry, RNAscope, and targeted RT-qPCR in large cohorts ($N \ge 100$) are required before clinical translation.
+7. **Control Group & Dialysis Vintage Confounding:** Two of the four GSE62928 discovery controls were non-dialysis uremic patients undergoing primary catheter insertion, whereas EPS cases had extensive long-term dialysis vintage; consequently, severe EPS fibrotic pathology is biologically and clinically confounded with cumulative peritoneal dialysis exposure in the discovery cohort.
+8. **Absence of Prospective Wet-Lab Validation:** All findings are derived from in silico microarray re-analyses. Prospective clinical biopsy immunohistochemistry, RNAscope, and targeted RT-qPCR in large cohorts ($N \ge 100$) are required before clinical translation.
 
 ---
 
@@ -318,7 +319,7 @@ In accordance with strict scientific integrity standards:
   2. **LASSO Regularization Parameter:** Corrected legacy alpha 0.042 claim to the exact `LogisticRegressionCV` selected $C = 4.2813$ ($\alpha = 1/C = 0.2336$).
   3. **GSEA Hypoxia Mislabeling:** Corrected row where Apoptosis statistics ($\text{NES} = +1.349, \text{FDR} = 0.0975$) were inadvertently attributed to Hypoxia (true `HALLMARK_HYPOXIA`: $\text{NES} = -1.210, \text{FDR} = 0.2026$).
   4. **Machine Learning Feature Counts:** Corrected legacy claims of 10/11/11/11 to exact algorithm selections (LASSO: 2, SVM-RFE: 14, Random Forest: 17, XGBoost: 1).
-  5. **Consensus Vote Tiers:** Corrected vote tiers from legacy claims to exact counts (4/4 models: 0, 3/4 models: 3, 2/4 models: 8, 1/4 models: 16, 0/4 models: 13).
+  5. **Consensus Vote Tiers:** Corrected vote tiers from legacy claims to exact counts (4/4 models: 0, 3/4 models: 3, 2/4 models: 8, 1/4 models: 9, 0/4 models: 20).
   6. **Cross-Validation Interval Labels:** Replaced old interval label [0.640, 0.752] with the true range of per-repeat pooled AUCs across 50 repeats [0.512, 0.773] for the primary pipeline-scaled model.
   7. **STRING Database Provenance:** Replaced offline hardcoded fallback cache with live STRING v12.5 API queries and documented that `ISM1` has degree 0 among hub genes.
   8. **Co-Expression Enrichment Multipliers:** Replaced legacy 45.5x/46.6x claims with exact comparisons against all-genes noise baseline (1.68%), DEG baseline (5.47%), and Salmon-module baseline (9.27%).

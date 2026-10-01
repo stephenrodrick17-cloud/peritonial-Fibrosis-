@@ -121,7 +121,7 @@ This document transcribes visible text, metrics, labels, and statistical values 
 
 ## Figure 9: Nomogram, Calibration & Decision Curve (`results/figures/Hub_02_clinical_nomogram_dca_calibration.png`)
 * **Visible Text / Labels**:
-  - Nomogram Points scale: *COL8A1* (0-100 pts), *VCAN* (0-70 pts), *LOX* (0-55 pts).
+  - Nomogram Points scale (5-gene model): *COL8A1* (0–100 pts), *VCAN* (0–84.5 pts), *COL3A1* (0–58.6 pts), *FN1* (0–33.3 pts), *ISM1* (0–17.1 pts).
   - Total Points $\to$ Risk of Long-Term Peritoneal Dialysis / Fibrosis Progression.
   - Apparent C-index $= 0.819$, Brier score $= 0.1542$, Hosmer-Lemeshow $P = 0.2437$.
   - DCA Net Benefit curve positive across threshold probabilities 10% to 70%.

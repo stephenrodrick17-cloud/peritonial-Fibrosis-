@@ -1,29 +1,101 @@
 #!/usr/bin/env python3
 """
 scripts/check_readme_against_numbers.py
-Validates README.md against results/manuscript_numbers.json and screens for any stale strings or incorrect gene universe associations.
+Validates README.md against:
+1. results/manuscript_numbers.json
+2. Direct CSV recomputations:
+   - results/tables/ML_hub_genes_from_WGCNA_ECM_all_results.csv (vote tiers, model selections)
+   - results/tables/gsea_preranked_hallmark_results.csv (GSEA NES, p-values, FDRs)
+3. Screens for any stale strings or incorrect gene universe associations.
+
 Fails loudly with non-zero exit code if any error or mismatch is found.
 """
 
 import sys
 import json
 import re
+import pandas as pd
 
 print("================================================================================")
-print("RUNNING README CONSISTENCY AUDIT AGAINST MASTER MANUSCRIPT NUMBERS")
+print("RUNNING DIRECT CSV AND JSON CONSISTENCY AUDIT ON README.md")
 print("================================================================================")
 
-with open("results/manuscript_numbers.json", "r", encoding="utf-8") as f:
-    master = json.load(f)
+errors = []
+warnings = []
 
 with open("README.md", "r", encoding="utf-8") as f:
     readme_text = f.read()
     readme_lines = readme_text.splitlines()
 
-errors = []
-warnings = []
+# ============================================================================
+# 1. Direct CSV Recomputations: ML Votes & Model Selections
+# ============================================================================
+df_ml = pd.read_csv("results/tables/ML_hub_genes_from_WGCNA_ECM_all_results.csv")
+v4 = int((df_ml["Votes"] == 4).sum())
+v3 = int((df_ml["Votes"] == 3).sum())
+v2 = int((df_ml["Votes"] == 2).sum())
+v1 = int((df_ml["Votes"] == 1).sum())
+v0 = int((df_ml["Votes"] == 0).sum())
 
-# 1. Screen for forbidden / stale strings
+n_lasso = int(df_ml["LASSO_Selected"].sum())
+n_svmrfe = int(df_ml["SVMRFE_Selected"].sum())
+n_rf = int(df_ml["RandomForest_Selected"].sum())
+n_xgb = int(df_ml["XGBoost_Selected"].sum())
+
+# Verify ML selections in README
+if f"LASSO: {n_lasso}" not in readme_text and f"LASSO ({n_lasso})" not in readme_text:
+    errors.append(f"ML SELECTION MISMATCH: LASSO selection ({n_lasso}) not found in README")
+if f"SVM-RFE: {n_svmrfe}" not in readme_text and f"SVM-RFE ({n_svmrfe})" not in readme_text:
+    errors.append(f"ML SELECTION MISMATCH: SVM-RFE selection ({n_svmrfe}) not found in README")
+if f"RF: {n_rf}" not in readme_text and f"Random Forest ({n_rf})" not in readme_text:
+    errors.append(f"ML SELECTION MISMATCH: RF selection ({n_rf}) not found in README")
+if f"XGBoost: {n_xgb}" not in readme_text and f"XGBoost ({n_xgb})" not in readme_text:
+    errors.append(f"ML SELECTION MISMATCH: XGBoost selection ({n_xgb}) not found in README")
+
+# Verify vote tiers in README
+if f"• 4/4 Models: None ({v4} genes)" not in readme_text:
+    errors.append(f"VOTE TIER MISMATCH: 4/4 votes ({v4} genes) not found in README")
+if f"• 3/4 Models ({v3} genes)" not in readme_text:
+    errors.append(f"VOTE TIER MISMATCH: 3/4 votes ({v3} genes) not found in README")
+if f"• 2/4 Models ({v2} genes" not in readme_text:
+    errors.append(f"VOTE TIER MISMATCH: 2/4 votes ({v2} genes) not found in README")
+if f"• 1/4 Models ({v1} genes)" not in readme_text:
+    errors.append(f"VOTE TIER MISMATCH: 1/4 votes ({v1} genes) not found in README")
+if f"• 0/4 Models ({v0} genes)" not in readme_text:
+    errors.append(f"VOTE TIER MISMATCH: 0/4 votes ({v0} genes) not found in README")
+
+# ============================================================================
+# 2. Direct CSV Recomputations: GSEA Pathways
+# ============================================================================
+df_gsea = pd.read_csv("results/tables/gsea_preranked_hallmark_results.csv")
+gsea_lookup = {r["Term_Clean"]: r for _, r in df_gsea.iterrows()}
+
+gsea_checks = [
+    ("HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION", "3.203", "EMT NES"),
+    ("HALLMARK_TNF_ALPHA_SIGNALING_VIA_NF_KB", "2.082", "TNF-alpha NES"),
+    ("HALLMARK_INFLAMMATORY_RESPONSE", "1.587", "Inflammatory NES"),
+    ("HALLMARK_ANGIOGENESIS", "1.438", "Angiogenesis NES"),
+    ("HALLMARK_APICAL_JUNCTION", "1.411", "Apical Junction NES"),
+    ("HALLMARK_IL_6/JAK/STAT3_SIGNALING", "1.392", "IL6 NES"),
+    ("HALLMARK_APOPTOSIS", "1.349", "Apoptosis NES"),
+    ("HALLMARK_COAGULATION", "1.333", "Coagulation NES"),
+    ("HALLMARK_HYPOXIA", "-1.210", "Hypoxia NES")
+]
+
+for term, expected_str, desc in gsea_checks:
+    row = gsea_lookup.get(term)
+    if row is None:
+        errors.append(f"GSEA TERM MISSING: Term '{term}' not found in gsea_preranked_hallmark_results.csv")
+        continue
+    actual_nes_str = f"{row['NES']:.3f}"
+    if expected_str != actual_nes_str and abs(float(expected_str) - float(actual_nes_str)) > 0.002:
+        errors.append(f"GSEA NES MISMATCH in CSV: Term '{term}' expected {expected_str}, found {actual_nes_str}")
+    if expected_str not in readme_text:
+        errors.append(f"GSEA VALUE MISSING IN README: Expected {expected_str} ({desc}) not found in README.md")
+
+# ============================================================================
+# 3. Screen for forbidden / stale strings
+# ============================================================================
 stale_patterns = [
     (r"four-way", "Legacy 'four-way' consensus phrasing found"),
     (r"4/4 models", "Legacy '4/4 models' phrasing found"),
@@ -60,10 +132,9 @@ for i, line in enumerate(readme_lines):
         else:
             errors.append(f"STALE STRING: Line {i+1}: 0.696 used outside allowed historical/CI context: {line.strip()}")
 
-# 2. Check Gene Universe Contexts
-# Each 20,940 must sit next to WGCNA/MaxMean/matrix
-# Each 22,049 must sit next to limma/best-probe/probe-level/background
-# Each 21,597 must sit next to GSEA/ranked
+# ============================================================================
+# 4. Check Gene Universe Contexts
+# ============================================================================
 for i, line in enumerate(readme_lines):
     if "20,940" in line:
         if not any(k in line.lower() for k in ["wgcna", "maxmean", "matrix", "expression"]):
@@ -75,7 +146,9 @@ for i, line in enumerate(readme_lines):
         if not any(k in line.lower() for k in ["gsea", "ranked", "symbol", "primary"]):
             errors.append(f"GENE UNIVERSE MISMATCH: Line {i+1}: '21,597' must sit next to GSEA/ranked symbols: {line.strip()}")
 
-# 3. Check Master Numbers Presence
+# ============================================================================
+# 5. Check Master Numbers Presence
+# ============================================================================
 required_values = [
     ("367", "367 pro-fibrotic DEGs"),
     ("71", "71 ECM-DEGs"),
@@ -114,5 +187,5 @@ if errors:
         print(f"  [ERROR] {safe_err}")
     sys.exit(1)
 else:
-    print("\n[PASSED] All consistency checks passed successfully! README.md perfectly matches master numbers.")
+    print("\n[PASSED] All direct CSV and JSON consistency checks passed successfully! README.md is 100% verified.")
     sys.exit(0)
