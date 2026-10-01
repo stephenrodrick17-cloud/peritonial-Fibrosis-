@@ -238,6 +238,7 @@ A 5-gene multivariable diagnostic nomogram was constructed on directional predic
 An integrated molecular interaction network was constructed combining live-queried functional association interactions from **STRING v12.5** (retrieved 2026-10-01) with empirical co-expression in human peritoneal tissue.
 
 * **Live STRING v12.5 Functional Association Network:** **21 verified functional association edges** (interaction score $\ge 0.400$; top 4 edges: `FN1 - LOX` [0.953], `COL3A1 - FN1` [0.911], `COL11A1 - COL3A1` [0.877], `COL3A1 - LOX` [0.802]). Physical interaction query (`network_type=physical`) yields 3 edges (`FN1 - LOX` [0.848], `COL11A1 - COL3A1` [0.720], `COMP - FN1` [0.595]).
+* **Hub Node Connectivity:** 10 of the 11 hub genes form an interconnected functional component; `ISM1` has no edges among the 11 hubs in STRING (degree = 0).
 * **Co-Expression Edges ($N=8$ Discovery):** 42 / 55 (76.36%) hub gene pairs exhibit $|r| \ge 0.85$ (42 edges at $|r| \ge 0.85, \text{FDR} < 0.01$).
 * **Co-Expression Noise Baselines:**
   - **All Genes (Non-hub random pairs):** **$1.68\%$ of random gene pairs exceed $|r| \ge 0.85$ purely by chance** at $N=8$ (1,682 / 99,993 sampled pairs).
@@ -246,7 +247,7 @@ An integrated molecular interaction network was constructed combining live-queri
   - **Methodological Note:** Hub co-expression is partly by construction because hub genes were selected from the co-expressed WGCNA Salmon module.
 
 ![PPI Interaction Network](results/figures/Hub_01_ppi_gene_interaction_network.png)
-* **Figure 10: Integrated STRING PPI & Co-Expression Network.** High-confidence functional association STRING v12.5 interactions (score $\ge 0.400$, 21 edges) and empirical co-expression edges (42 edges) among the 11 consensus hub genes.
+* **Figure 10: Integrated STRING PPI & Co-Expression Network.** High-confidence functional association STRING v12.5 interactions (score $\ge 0.400$, 21 edges; physical network has 3 edges; `ISM1` has 0 edges) and empirical co-expression edges (42 edges) among the 11 consensus hub genes.
 
 ---
 
@@ -257,8 +258,8 @@ Preranked Gene Set Enrichment Analysis was executed using `gseapy` on all 21,597
 * **Primary Enriched Hallmark:** **Epithelial-Mesenchymal Transition (EMT)** ($\text{NES} = +\mathbf{3.203}, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$).
 * **EMT Permutation Test:** Across all 70 sample label permutations, EMT $\text{NES} = +3.203$ ranked **#1 out of 70** (one-sided $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$).
 * **Permutation Framework Distinction:** `gseapy.prerank` evaluates gene-set enrichment by permuting gene labels (1,000 permutations), whereas the 1/70 exact permutation test permutes clinical sample labels.
-* **Other Enriched Upregulated Pathways:** TNF-$\alpha$ Signaling via NF-$\kappa$B ($\text{NES} = +2.082, \text{FDR} = 0.0010$), Inflammatory Response ($\text{NES} = +1.587, \text{FDR} = 0.0303$), Angiogenesis ($\text{NES} = +1.438, \text{FDR} = 0.0855$), Apoptosis ($\text{NES} = +1.349, P_{\text{nom}} = 0.0210, \text{FDR} = 0.0975$).
-* **Downregulated Hallmark Pathways:** Adipogenesis ($\text{NES} = -3.146, \text{FDR} < 0.001$), Oxidative Phosphorylation ($\text{NES} = -3.101, \text{FDR} < 0.001$), Fatty Acid Metabolism ($\text{NES} = -2.766, \text{FDR} < 0.001$), Interferon Alpha Response ($\text{NES} = -2.385, \text{FDR} < 0.001$), Reactive Oxygen Species ($\text{NES} = -2.270, \text{FDR} < 0.001$).
+* **Other Enriched Upregulated Pathways:** TNF-$\alpha$ Signaling via NF-$\kappa$B ($\text{NES} = +2.082, P_{\text{nom}} < 0.001, \text{FDR} = 0.0010$), Inflammatory Response ($\text{NES} = +1.587, P_{\text{nom}} < 0.001, \text{FDR} = 0.0303$), Angiogenesis ($\text{NES} = +1.438, P_{\text{nom}} = 0.0486, \text{FDR} = 0.0855$), Apical Junction ($\text{NES} = +1.411, P_{\text{nom}} = 0.0079, \text{FDR} = 0.0815$), IL-6/JAK/STAT3 Signaling ($\text{NES} = +1.392, P_{\text{nom}} = 0.0326, \text{FDR} = 0.0794$), Apoptosis ($\text{NES} = +1.349, P_{\text{nom}} = 0.0210, \text{FDR} = 0.0975$), Coagulation ($\text{NES} = +1.333, P_{\text{nom}} = 0.0329, \text{FDR} = 0.0986$).
+* **Downregulated Hallmark Pathways:** Adipogenesis ($\text{NES} = -3.146, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$), Oxidative Phosphorylation ($\text{NES} = -3.101, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$), Fatty Acid Metabolism ($\text{NES} = -2.766, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$), Interferon Alpha Response ($\text{NES} = -2.385, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$), Reactive Oxygen Species ($\text{NES} = -2.270, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$).
 * **Hypoxia Status:** `HALLMARK_HYPOXIA` is downregulated and non-significant in discovery tissue ($\text{NES} = -1.210, P_{\text{nom}} = 0.1407, \text{FDR} = 0.2026$). *(Note: previous documentation mistakenly attributed Apoptosis statistics $\text{NES} = +1.349, \text{FDR} = 0.097$ to Hypoxia).*
 
 ![GSEA Pathway Heatmap](results/figures/Hub_03_gsea_pathway_enrichment_heatmap.png)
@@ -296,7 +297,7 @@ Prior transcriptomic analyses of GSE62928 (e.g., Wang et al., 2024) reported a 4
 3. **Multiple Testing Correction:** In external validation ($N=33$), zero of the seven profiled hub genes survive Bonferroni or FDR correction, and the discovery Salmon module fails family-wise error control ($P_{\text{bonf}} = 0.2198$).
 4. **Saturated Model Hazards in Small-$N$ Transcriptomics:** Multi-gene models with $p > n$ (e.g. 11 predictors on 8 samples) achieve mathematical separation ($\text{AUC} = 1.0$) trivially. Reporting in-sample discovery multi-gene AUCs creates a misleading impression of certainty; our study rejects these metrics.
 5. **Tissue vs. Effluent Compartment Duality:** Discovery profiling was performed on fixed parietal peritoneal tissue biopsies, whereas external validation used shed peritoneal effluent cells. Extracellular matrix proteoglycans (`VCAN`) and glycoproteins (`THBS3`) exhibit discordant cellular expression between tissue and effluent fractions.
-6. **Optimism Penalty in Composite Classifiers:** The composite 7-gene model achieves an in-sample $\text{AUC} = 0.869$, but cross-validation reveals a realistic generalization of **$\text{AUC} \approx 0.68 - 0.70$**.
+6. **Optimism Penalty in Composite Classifiers:** The composite 7-gene model achieves an in-sample $\text{AUC} = 0.869$, but cross-validation reveals a realistic generalization of **$\text{AUC} = \mathbf{0.678}$** ($\text{SD } 0.058$ across 50 repeats; $\text{LOOCV } \text{AUC} = 0.658$, single 5-fold split $\text{AUC} = 0.592$), demonstrating an optimism gap ($\Delta \text{AUC}$) of **$0.191$** ($0.869$ in-sample vs $0.678$ cross-validated).
 7. **Absence of Prospective Wet-Lab Validation:** All findings are derived from in silico microarray re-analyses. Prospective clinical biopsy immunohistochemistry, RNAscope, and targeted RT-qPCR in large cohorts ($N \ge 100$) are required before clinical translation.
 
 ---
@@ -360,7 +361,7 @@ python 06_external_validation_GSE125498.py
 
 ### Step 6: Downstream Systems Biology Suite (Python)
 ```bash
-python 07_gene_interaction_network.py        # STRING v12.0 PPI & GSE62928 co-expression
+python 07_gene_interaction_network.py        # STRING v12.5 PPI & GSE62928 co-expression
 python 08b_roc_analysis.py                  # Standardized single & multi-gene ROC curves
 python 08_nomogram_roc_analysis.py           # Clinical diagnostic nomogram & DCA
 python 09_gsea_pathway_enrichment.py         # True preranked GSEA on Hallmark gene sets
@@ -390,7 +391,7 @@ python audit/repo_audit.py
 ├── 04_functional_enrichment.R                    # GO/KEGG functional enrichment
 ├── 05b_ml_hub_gene_identification_wgcna.py       # TASK 3: ML consensus on 40 WGCNA-ECM candidates
 ├── 06_external_validation_GSE125498.py           # TASK 4: External expression check on GSE125498
-├── 07_gene_interaction_network.py                # PPI (STRING v12.0 + co-expression, |r|>=0.85, FDR<0.01)
+├── 07_gene_interaction_network.py                # PPI (STRING v12.5 + co-expression, |r|>=0.85, FDR<0.01)
 ├── 08b_roc_analysis.py                          # Task 1: ROC + bootstrap 95% CI for all 11 genes
 ├── 08_nomogram_roc_analysis.py                   # Task 2: Exact nomogram, DCA (external), calibration B=1000
 ├── 09_gsea_pathway_enrichment.py                 # Task 3: True preranked GSEA + circularity-free ssGSEA

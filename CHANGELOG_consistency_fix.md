@@ -16,7 +16,7 @@
 
 ### B. GSEA Hallmark Pathway Clarification & Hypoxia Correction
 - **Hypoxia Mislabling Corrected:** Rectified historical documentation error where Apoptosis statistics ($\text{NES} = +1.3490, \text{FDR} = 0.0975$) had been erroneously attributed to Hypoxia. `HALLMARK_HYPOXIA` is confirmed in `results/tables/gsea_preranked_hallmark_results.csv` as downregulated and non-significant ($\text{NES} = -1.2097, \text{NOM } P = 0.1407, \text{FDR } q = 0.2026$).
-- **Downregulated Hallmarks Added:** Explicitly listed top suppressed metabolic and immune hallmarks: Adipogenesis ($\text{NES} = -3.1463, \text{FDR} < 10^{-4}$), Oxidative Phosphorylation ($\text{NES} = -3.1010, \text{FDR} < 10^{-4}$), Fatty Acid Metabolism ($\text{NES} = -2.7658, \text{FDR} < 10^{-4}$), Interferon Alpha Response ($\text{NES} = -2.3846, \text{FDR} < 10^{-4}$).
+- **Downregulated Hallmarks Added:** Explicitly listed top suppressed metabolic and immune hallmarks: Adipogenesis ($\text{NES} = -3.1463, \text{FDR} < 0.001$), Oxidative Phosphorylation ($\text{NES} = -3.1010, \text{FDR} < 0.001$), Fatty Acid Metabolism ($\text{NES} = -2.7658, \text{FDR} < 0.001$), Interferon Alpha Response ($\text{NES} = -2.3846, \text{FDR} < 0.001$).
 
 ### C. Permutation Test Sidedness & Minimum Achievable P-Values
 - **ECM Over-representation:** Explicitly designated as one-sided count rank ($P_{\text{perm}} = 1/70 = 0.0143$).
@@ -27,17 +27,17 @@
 ### D. Cross-Validation Harmonization for 7-Gene Panel (GSE125498)
 - **Primary Generalization Metric:** Designated 50-repeat 5-fold stratified CV with `StandardScaler` inside a `Pipeline` as primary: Per-fold $\text{AUC}_{\text{CV}} = 0.701 \pm 0.203$ ($N=250$), Per-repeat pooled $\text{AUC} = 0.678 \pm 0.058$ ($N=50$, range: $0.512 - 0.773$).
 - **Supplementary CV Models Reported:**
-  - 50x5 CV without scaling: Per-fold $\text{AUC}_{\text{CV}} = 0.706 \pm 0.209$, Per-repeat pooled $\text{AUC} = 0.684 \pm 0.063$ ($\text{Mean} \pm 1\text{SD} = [0.640, 0.752]$).
+  - 50x5 CV without scaling: Per-fold $\text{AUC}_{\text{CV}} = 0.706 \pm 0.209$, Per-repeat pooled $\text{AUC} = 0.684 \pm 0.063$ (range: $0.523 - 0.781$).
   - LOOCV with pipeline scaling: Pooled $\text{AUC} = 0.658$.
   - Single seed-42 5-fold CV with pipeline scaling: Per-fold Mean $\text{AUC} = 0.617 \pm 0.061$, Pooled $\text{AUC} = 0.592$.
 - **Figure 8 Caption:** Synchronized Figure 8 caption with primary and single-split metrics.
 
 ### E. Co-Expression Noise Baselines
 - **Empirical Threshold Rates ($|r| \ge 0.85$ in GSE62928, $N=8$):**
-  - All non-hub random pairs ($N=99,993$): $1.64\%$.
-  - Among 367 Pro-Fibrotic DEGs ($N=55,945$ pairs): $5.47\%$.
-  - Among 604 Salmon-Module Genes ($N=182,106$ pairs): $9.27\%$.
-  - Among 11 Consensus Hub Genes ($N=55$ pairs): $76.36\%$ ($42/55$ pairs; $46.6\times$ enrichment vs all genes).
+  - All non-hub random pairs ($N=99,993$): $1.68\%$ (`audit/stage_e_ppi_baseline.py` seed=42).
+  - Among 367 Pro-Fibrotic DEGs ($N=55,945$ pairs): $5.47\%$ ($14.0\times$ enrichment for hubs vs DEG baseline).
+  - Among 604 Salmon-Module Genes ($N=182,106$ pairs): $9.27\%$ ($8.2\times$ enrichment for hubs vs Salmon-module baseline).
+  - Among 11 Consensus Hub Genes ($N=55$ pairs): $76.36\%$ ($42/55$ pairs). High hub co-expression is partly by construction because hubs were prioritized from the co-expressed WGCNA Salmon module.
 
 ### F. Gene Universes & Probe Collapse
 - **Gene Universe Distinction:** Clarified that probe-level Limma DE and Volcano Plot analyze 22,049 genes (best-probe-by-P collapse), whereas WGCNA and full matrix analyze 20,940 genes (MaxMean collapse), and GSEA evaluates 21,597 primary symbols.

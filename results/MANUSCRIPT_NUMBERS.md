@@ -80,6 +80,10 @@
   - `HALLMARK_TNF_ALPHA_SIGNALING_VIA_NF_KB`: $\text{NES} = +2.0820, \text{NOM } P = 0.0000, \text{FDR } q = 0.0010$.
   - `HALLMARK_INFLAMMATORY_RESPONSE`: $\text{NES} = +1.5865, \text{NOM } P = 0.0000, \text{FDR } q = 0.0303$.
   - `HALLMARK_ANGIOGENESIS`: $\text{NES} = +1.4383, \text{NOM } P = 0.0486, \text{FDR } q = 0.0855$.
+  - `HALLMARK_APICAL_JUNCTION`: $\text{NES} = +1.4113, \text{NOM } P = 0.0079, \text{FDR } q = 0.0815$.
+  - `HALLMARK_IL_6/JAK/STAT3_SIGNALING`: $\text{NES} = +1.3917, \text{NOM } P = 0.0326, \text{FDR } q = 0.0794$.
+  - `HALLMARK_APOPTOSIS`: $\text{NES} = +1.3490, \text{NOM } P = 0.0210, \text{FDR } q = 0.0975$.
+  - `HALLMARK_COAGULATION`: $\text{NES} = +1.3326, \text{NOM } P = 0.0329, \text{FDR } q = 0.0986$.
 - **Top Downregulated Pathways:**
   - `HALLMARK_ADIPOGENESIS`: $\text{NES} = -3.1463, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
   - `HALLMARK_OXIDATIVE_PHOSPHORYLATION`: $\text{NES} = -3.1010, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
@@ -87,7 +91,7 @@
   - `HALLMARK_INTERFERON_ALPHA_RESPONSE`: $\text{NES} = -2.3846, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
   - `HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY`: $\text{NES} = -2.2697, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
 - **Hypoxia Pathway Status:** `HALLMARK_HYPOXIA`: $\text{NES} = -1.2097, \text{NOM } P = 0.1407, \text{FDR } q = 0.2026$ (downregulated, non-significant).
-- **Permutation Framework Distinction:** Preranked GSEA (`gseapy.prerank`) assesses gene-set enrichment by permuting gene labels (1,000 permutations), whereas the empirical $1/70$ exact permutation test evaluates sample label permutations ($inom{8}{4} = 70$ splits).
+- **Permutation Framework Distinction:** Preranked GSEA (`gseapy.prerank`) assesses gene-set enrichment by permuting gene labels (1,000 permutations), whereas the empirical $1/70$ exact permutation test evaluates sample label permutations ($\binom{8}{4} = 70$ splits).
 
 ## 9. Microenvironment Immune Deconvolution
 - **Peritoneal Myofibroblasts Expansion:** Mann-Whitney $U = 16.0, P_{\text{raw}} = 0.0286, \text{FDR} = 0.1714$ (exploratory).
