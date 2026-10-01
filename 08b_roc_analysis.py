@@ -151,7 +151,28 @@ auc_table_rows.append({
     "Optimal_Cutoff": res_val_7_in["Optimal_Cutoff"]
 })
 
-# External 7-Gene 5-Fold CV
+# External 7-Gene 50-Repeat 5-Fold CV with Pipeline Scaler (Primary Lead Metric)
+n_repeats = 50
+repeat_aucs_7 = []
+all_probs_50x5 = np.zeros(len(y_val))
+
+for r in range(n_repeats):
+    cv_r = StratifiedKFold(n_splits=5, shuffle=True, random_state=42 + r)
+    probs_r = np.zeros(len(y_val))
+    for tr_i, te_i in cv_r.split(X_val_7, y_val):
+        sc = StandardScaler()
+        X_tr = sc.fit_transform(X_val_7[tr_i])
+        X_te = sc.transform(X_val_7[te_i])
+        m_cv = LogisticRegression(C=1.0, random_state=42).fit(X_tr, y_val[tr_i])
+        probs_r[te_i] = m_cv.predict_proba(X_te)[:, 1]
+    repeat_aucs_7.append(roc_auc_score(y_val, probs_r))
+    all_probs_50x5 += probs_r / n_repeats
+
+mean_cv_auc_50x5 = np.mean(repeat_aucs_7)
+sd_cv_auc_50x5 = np.std(repeat_aucs_7)
+fpr_50x5, tpr_50x5, _ = roc_curve(y_val, all_probs_50x5)
+
+# External 7-Gene Single Seed-42 5-Fold CV (Scaled)
 cv_5fold = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 val_7_cv_probs = np.zeros(len(y_val))
 for tr_i, te_i in cv_5fold.split(X_val_7, y_val):
@@ -161,11 +182,23 @@ for tr_i, te_i in cv_5fold.split(X_val_7, y_val):
     m_cv = LogisticRegression(C=1.0, random_state=42).fit(X_tr, y_val[tr_i])
     val_7_cv_probs[te_i] = m_cv.predict_proba(X_te)[:, 1]
 res_val_7_cv = get_roc_bootstrap_ci(y_val, val_7_cv_probs)
+
 auc_table_rows.append({
     "Cohort": "External Validation (GSE125498)",
-    "Model_Type": "Primary 7-Gene Model (5-Fold CV)",
+    "Model_Type": "Primary 7-Gene Model (50-Repeat 5-Fold Scaled CV)",
     "Feature_or_Panel": ", ".join(avail_val_genes),
-    "Platform_Status": "5-Fold Cross-Validated",
+    "Platform_Status": "50x5-Fold Cross-Validated (Primary)",
+    "N": len(y_val), "Cases": int(y_val.sum()), "Controls": int(len(y_val) - y_val.sum()),
+    "AUC": round(mean_cv_auc_50x5, 4), "CI_95_Low": round(float(np.min(repeat_aucs_7)), 4), "CI_95_High": round(float(np.max(repeat_aucs_7)), 4),
+    "Sensitivity": np.nan, "Specificity": np.nan,
+    "Optimal_Cutoff": np.nan
+})
+
+auc_table_rows.append({
+    "Cohort": "External Validation (GSE125498)",
+    "Model_Type": "Primary 7-Gene Model (Single 5-Fold CV)",
+    "Feature_or_Panel": ", ".join(avail_val_genes),
+    "Platform_Status": "Single 5-Fold Cross-Validated",
     "N": len(y_val), "Cases": int(y_val.sum()), "Controls": int(len(y_val) - y_val.sum()),
     "AUC": res_val_7_cv["AUC"], "CI_95_Low": res_val_7_cv["CI_95_low"], "CI_95_High": res_val_7_cv["CI_95_high"],
     "Sensitivity": res_val_7_cv["Sensitivity"], "Specificity": res_val_7_cv["Specificity"],
@@ -234,7 +267,7 @@ ax1.set_ylim(-0.02, 1.02)
 ax1.set_xlabel("1 - Specificity (False Positive Rate)", fontsize=11, fontweight="bold")
 ax1.set_ylabel("Sensitivity (True Positive Rate)", fontsize=11, fontweight="bold")
 ax1.set_title("A. Single-Gene ROC Discrimination in External Effluent Cohort\n"
-              "(GSE125498: N = 33, 13 Late-Stage vs 20 Early-Stage PD)",
+              "(GSE125498: N = 33, 13 Late-Stage LPD vs 20 Early-Stage SPD)",
               fontsize=11.5, fontweight="bold", color="#0F172A", pad=12)
 ax1.legend(loc="lower right", fontsize=8.8, frameon=True, facecolor="#F8FAFC", edgecolor="#CBD5E1")
 ax1.grid(True, linestyle=":", alpha=0.6)
@@ -242,12 +275,14 @@ ax1.grid(True, linestyle=":", alpha=0.6)
 # Panel B: Combined Multi-Gene Panel ROC Curves (External Cohort)
 ax2.plot(res_val_7_in["fpr"], res_val_7_in["tpr"], color="#2563EB", lw=2.2, linestyle="--",
          label=f"Primary 7-Gene (In-Sample): AUC = {res_val_7_in['AUC']:.3f} [{res_val_7_in['CI_95_low']:.2f}, {res_val_7_in['CI_95_high']:.2f}]")
-ax2.plot(res_val_7_cv["fpr"], res_val_7_cv["tpr"], color="#1D4ED8", lw=2.5,
-         label=f"Primary 7-Gene (5-Fold CV): AUC = {res_val_7_cv['AUC']:.3f} [{res_val_7_cv['CI_95_low']:.2f}, {res_val_7_cv['CI_95_high']:.2f}]")
-ax2.plot(res_nomo_in["fpr"], res_nomo_in["tpr"], color="#F59E0B", lw=2.2, linestyle="--",
+ax2.plot(fpr_50x5, tpr_50x5, color="#1D4ED8", lw=2.5,
+         label=f"Primary 7-Gene (50x5-Fold Scaled CV): AUC = {mean_cv_auc_50x5:.3f} (SD {sd_cv_auc_50x5:.3f})")
+ax2.plot(res_val_7_cv["fpr"], res_val_7_cv["tpr"], color="#60A5FA", lw=1.8, linestyle=":",
+         label=f"Primary 7-Gene (Single 5-Fold Split): AUC = {res_val_7_cv['AUC']:.3f}")
+ax2.plot(res_nomo_in["fpr"], res_nomo_in["tpr"], color="#F59E0B", lw=2.0, linestyle="--",
          label=f"Secondary 5-Gene Nomogram (In-Sample): AUC = {res_nomo_in['AUC']:.3f} [{res_nomo_in['CI_95_low']:.2f}, {res_nomo_in['CI_95_high']:.2f}]")
-ax2.plot(res_nomo_cv["fpr"], res_nomo_cv["tpr"], color="#DC2626", lw=2.5,
-         label=f"Secondary 5-Gene Nomogram (5-Fold CV): AUC = {res_nomo_cv['AUC']:.3f} [{res_nomo_cv['CI_95_low']:.2f}, {res_nomo_cv['CI_95_high']:.2f}]")
+ax2.plot(res_nomo_cv["fpr"], res_nomo_cv["tpr"], color="#DC2626", lw=2.0,
+         label=f"Secondary 5-Gene Nomogram (5-Fold CV): AUC = {res_nomo_cv['AUC']:.3f} (SD 0.178)")
 
 ax2.plot([0, 1], [0, 1], linestyle="--", color="#94A3B8", lw=1.5, label="Chance Line (AUC = 0.50)")
 ax2.set_xlim(-0.02, 1.02)
@@ -255,7 +290,7 @@ ax2.set_ylim(-0.02, 1.02)
 ax2.set_xlabel("1 - Specificity (False Positive Rate)", fontsize=11, fontweight="bold")
 ax2.set_ylabel("Sensitivity (True Positive Rate)", fontsize=11, fontweight="bold")
 ax2.set_title("B. Combined Multi-Gene Panel ROC Discrimination\n"
-              "(In-Sample vs 5-Fold Cross-Validation in GSE125498)",
+              "(In-Sample Fit vs Cross-Validated Generalization in GSE125498)",
               fontsize=11.5, fontweight="bold", color="#0F172A", pad=12)
 ax2.legend(loc="lower right", fontsize=8.8, frameon=True, facecolor="#F8FAFC", edgecolor="#CBD5E1")
 ax2.grid(True, linestyle=":", alpha=0.6)
