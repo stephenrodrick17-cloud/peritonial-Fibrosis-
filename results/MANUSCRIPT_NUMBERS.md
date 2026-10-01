@@ -63,37 +63,38 @@
   - `LOX`: $\text{AUC} = 0.496$, $95\%\text{ CI: } [0.285, 0.696]$, Mann-Whitney $P = 0.9853$, Limma $\log_2\text{FC} = +0.02$.
 - **Composite 7-Gene Panel Performance:**
   - In-sample Logistic Regression: $\text{AUC} = 0.869, 95\%\text{ CI: } [0.710, 0.992]$.
-  - 50x5 Repeated Stratified CV with StandardScaler Pipeline (Primary): Per-fold $\text{AUC}_{\text{CV}} = 0.701 \pm 0.203$ ($N = 250$), Pooled per-repeat $\text{AUC} = 0.678 \pm 0.058$ ($N = 50$, range: $0.512 - 0.773$).
-  - 50x5 Repeated Stratified CV Unscaled: Per-fold $\text{AUC}_{\text{CV}} = 0.706 \pm 0.209$, Pooled per-repeat $\text{AUC} = 0.684 \pm 0.063$ (range: $0.523 - 0.781$).
+  - 50x5 Repeated Stratified CV with StandardScaler Pipeline (Primary): Per-repeat pooled $\text{AUC} = 0.678$ (SD $0.058$ across 50 repeats, range: $0.512 - 0.773$; per-fold Mean $\text{AUC} = 0.701$, SD $0.203$).
   - LOOCV with StandardScaler Pipeline: Pooled $\text{AUC} = 0.658$.
-  - Single Seed-42 5-Fold Stratified CV: Per-fold Mean $\text{AUC} = 0.617 \pm 0.061$, Pooled $\text{AUC} = 0.592$.
+  - Single Seed-42 5-Fold Stratified CV with Scaler: Pooled fold $\text{AUC} = 0.592$ (per-fold Mean $\text{AUC} = 0.617$, SD $0.061$).
+  - Supplementary Unscaled 50x5 CV: Per-repeat pooled $\text{AUC} = 0.684$ (SD $0.063$ across 50 repeats; per-fold Mean $\text{AUC} = 0.706$, SD $0.209$).
 
 ## 7. Clinical Diagnostic Nomogram (5 Core Genes: VCAN, COL8A1, FN1, ISM1, COL3A1)
-- **In-sample Discrimination (Unpenalized Multivariable Logit):** $\text{AUC} = 0.819$.
-- **5-Fold Cross-Validated Discrimination (L2 Regularized Logistic Regression, $C=1.0$):** $\text{AUC}_{\text{CV}} = 0.550 \pm 0.178$.
+- **In-sample Discrimination (Unpenalized Multivariable Logit):** $\text{AUC} = 0.819$ ($95\%\text{ CI: } [0.623, 0.968]$).
+- **5-Fold Cross-Validated Discrimination (L2 Regularized Logistic Regression, $C=1.0$):** $\text{AUC}_{\text{CV}} = 0.550$ (SD $0.178$ across folds).
 - **Likelihood-Ratio Test vs `FN1` Alone:** $\text{LR } \chi^2 = 10.421, \text{df} = 4, P = 0.0339$.
 - **Calibration Metrics:** Brier score = 0.158, Calibration slope = 0.985, Intercept = -0.008, Hosmer-Lemeshow $\chi^2 = 3.91, P = 0.865$.
 
 ## 8. Pathway Enrichment (GSEA Preranked MSigDB Hallmark)
 - **Top Upregulated Pathways:**
-  - `HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION`: $\text{NES} = +3.2033, \text{NOM } P = 0.0000, \text{FDR } q = 0.0000$.
+  - `HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION`: $\text{NES} = +3.2033, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
   - `HALLMARK_TNF_ALPHA_SIGNALING_VIA_NF_KB`: $\text{NES} = +2.0820, \text{NOM } P = 0.0000, \text{FDR } q = 0.0010$.
   - `HALLMARK_INFLAMMATORY_RESPONSE`: $\text{NES} = +1.5865, \text{NOM } P = 0.0000, \text{FDR } q = 0.0303$.
   - `HALLMARK_ANGIOGENESIS`: $\text{NES} = +1.4383, \text{NOM } P = 0.0486, \text{FDR } q = 0.0855$.
 - **Top Downregulated Pathways:**
-  - `HALLMARK_ADIPOGENESIS`: $\text{NES} = -3.1463, \text{NOM } P = 0.0000, \text{FDR } q = 0.0000$.
-  - `HALLMARK_OXIDATIVE_PHOSPHORYLATION`: $\text{NES} = -3.1010, \text{NOM } P = 0.0000, \text{FDR } q = 0.0000$.
-  - `HALLMARK_FATTY_ACID_METABOLISM`: $\text{NES} = -2.7658, \text{NOM } P = 0.0000, \text{FDR } q = 0.0000$.
-  - `HALLMARK_INTERFERON_ALPHA_RESPONSE`: $\text{NES} = -2.3846, \text{NOM } P = 0.0000, \text{FDR } q = 0.0000$.
-  - `HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY`: $\text{NES} = -2.2697, \text{NOM } P = 0.0000, \text{FDR } q = 0.0000$.
+  - `HALLMARK_ADIPOGENESIS`: $\text{NES} = -3.1463, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
+  - `HALLMARK_OXIDATIVE_PHOSPHORYLATION`: $\text{NES} = -3.1010, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
+  - `HALLMARK_FATTY_ACID_METABOLISM`: $\text{NES} = -2.7658, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
+  - `HALLMARK_INTERFERON_ALPHA_RESPONSE`: $\text{NES} = -2.3846, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
+  - `HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY`: $\text{NES} = -2.2697, \text{NOM } P = 0.0000, \text{FDR } q < 0.001$.
 - **Hypoxia Pathway Status:** `HALLMARK_HYPOXIA`: $\text{NES} = -1.2097, \text{NOM } P = 0.1407, \text{FDR } q = 0.2026$ (downregulated, non-significant).
+- **Permutation Framework Distinction:** Preranked GSEA (`gseapy.prerank`) assesses gene-set enrichment by permuting gene labels (1,000 permutations), whereas the empirical $1/70$ exact permutation test evaluates sample label permutations ($inom{8}{4} = 70$ splits).
 
 ## 9. Microenvironment Immune Deconvolution
 - **Peritoneal Myofibroblasts Expansion:** Mann-Whitney $U = 16.0, P_{\text{raw}} = 0.0286, \text{FDR} = 0.1714$ (exploratory).
 - **Combinatorial Permutation P-value (8 choose 4 = 70 splits):** $P_{\text{perm}} = 2/70 = 0.0286$ (two-sided, equals exact Mann-Whitney $P$).
 
 ## 10. Empirical Co-expression Baselines (|r| >= 0.85 in Discovery GSE62928, N=8)
-- **All Genes (Non-hub random pairs, N=99,993):** 1.64% exceeding threshold.
-- **Among 367 Pro-Fibrotic DEGs (N=55,945 pairs):** 5.47% exceeding threshold.
-- **Among 604 Salmon-Module Genes (N=182,106 pairs):** 9.27% exceeding threshold.
-- **Among 11 Consensus Hub Genes (N=55 pairs):** 76.36% (42/55 pairs) exceeding threshold ($46.6\times$ enrichment vs all-genes random baseline).
+- **All Genes (Non-hub random pairs, N=99,993):** 1.68% exceeding threshold.
+- **Among 367 Pro-Fibrotic DEGs (N=55,945 pairs):** 5.47% exceeding threshold ($14.0\times$ enrichment for hubs vs DEG baseline).
+- **Among 604 Salmon-Module Genes (N=182,106 pairs):** 9.27% exceeding threshold ($8.2\times$ enrichment for hubs vs Salmon-module baseline).
+- **Among 11 Consensus Hub Genes (N=55 pairs):** 76.36% (42/55 pairs) exceeding threshold. High hub co-expression is partly by construction because hubs were selected from a tight WGCNA co-expression module.

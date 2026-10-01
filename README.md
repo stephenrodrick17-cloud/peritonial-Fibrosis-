@@ -12,8 +12,8 @@
 
 * **Background:** Encapsulating Peritoneal Sclerosis (EPS) is a rare, life-threatening complication of long-term peritoneal dialysis (PD) characterized by extensive fibrocollagenous thickening, neoangiogenesis, and progressive encapsulation of the peritoneal membrane. Molecular drivers governing early matrisome remodeling and stromal activation remain incompletely understood.
 * **Methods:** We developed a deterministic systems biology and consensus machine learning pipeline. Discovery profiling utilized human parietal peritoneal biopsy transcriptomics (**GSE62928**, $N = 8$: 4 severe EPS cases vs. 4 non-EPS uremic/PD controls; 22,049 probe-level genes, 20,940 MaxMean-collapsed genes) intersected with the curated Human Matrisome Database (1,027 genes). Unsupervised Weighted Gene Co-Expression Network Analysis (WGCNA) identified trait-correlated modules. Candidate convergence was screened through four supervised machine learning algorithms (LASSO, SVM-RFE, Random Forest, XGBoost). External clinical generalizability was evaluated in longitudinal dialysis effluent cells (**GSE125498**, $N = 33$, serving as a clinical proxy for peritoneal membrane injury across dialysis vintage). Exact combinatorial label permutations ($\binom{8}{4} = 70$ splits) and live functional protein association networks (STRING v12.5, retrieved 2026-10-01) established empirical significance and molecular connectivity.
-* **Results:** Microarray differential expression identified 367 pro-fibrotic up-regulated DEGs ($P < 0.05, \log_2\text{FC} \ge 0.80$), exhibiting significant enrichment for extracellular matrix proteins (**71 ECM-DEGs**, $19.35\%$ vs. $4.42\%$ background; exact one-sided label permutation $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$). Unsupervised WGCNA identified the **Salmon module** (604 genes, $r = +0.806, P = 0.0157$; one-sided $P_{\text{perm}} = 0.0143$, two-sided $P_{\text{perm}} = 0.0286$), intersecting with 71 ECM-DEGs to yield **40 convergent candidates**. Consensus machine learning (LASSO: 2, SVM-RFE: 14, RF: 17, XGBoost: 1) identified **11 consensus pro-fibrotic hub genes** (`ISM1`, `FN1`, `EDIL3`, `VCAN`, `COL3A1`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`, `LOX`). In external validation ($N = 33$), the composite 7-gene panel achieved an in-sample $\text{AUC} = \mathbf{0.869}$ ($95\%\text{ CI: } [0.710, 0.992]$) and a 50-repeat 5-fold cross-validated generalization of per-fold $\text{AUC}_{\text{CV}} = \mathbf{0.701} \pm 0.203$ (per-repeat pooled $\text{AUC} = \mathbf{0.678} \pm 0.058$). Preranked GSEA identified Epithelial-Mesenchymal Transition (EMT) as the primary enriched pathway ($\text{NES} = +\mathbf{3.115}, \text{FDR} < 10^{-4}$, one-sided $P_{\text{perm}} = 0.0143$). Immune deconvolution revealed peritoneal myofibroblast expansion (Mann-Whitney $U = 16.0, P = 0.0286$, exact two-sided $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$, $\text{FDR} = 0.1714$).
-* **Conclusions:** High-dimensional matrisome integration coupled with machine learning identifies a core 11-gene extracellular matrix network driving peritoneal membrane fibrogenesis. Cross-validation reveals realistic out-of-fold generalization ($\text{AUC} \approx 0.68 - 0.70$) across independent tissue-effluent cohorts, providing defined molecular targets for early detection and therapeutic intervention in peritoneal dialysis.
+* **Results:** Microarray differential expression identified 367 pro-fibrotic up-regulated DEGs ($P < 0.05, \log_2\text{FC} \ge 0.80$), exhibiting significant enrichment for extracellular matrix proteins (**71 ECM-DEGs**, $19.35\%$ vs. $4.42\%$ background; exact one-sided label permutation $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$). Unsupervised WGCNA identified the **Salmon module** (604 genes, $r = +0.806, P = 0.0157$; one-sided $P_{\text{perm}} = 0.0143$, two-sided $P_{\text{perm}} = 0.0286$), intersecting with 71 ECM-DEGs to yield **40 convergent candidates**. Consensus machine learning (LASSO: 2, SVM-RFE: 14, RF: 17, XGBoost: 1) identified **11 consensus pro-fibrotic hub genes** (`ISM1`, `FN1`, `EDIL3`, `VCAN`, `COL3A1`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`, `LOX`). In external validation ($N = 33$), the composite 7-gene panel achieved an in-sample $\text{AUC} = \mathbf{0.869}$ ($95\%\text{ CI: } [0.710, 0.992]$) and a 50-repeat 5-fold cross-validated generalization of $\text{AUC}_{\text{CV}} = \mathbf{0.678}$ ($\text{SD } 0.058$ across repeats; $\text{LOOCV } \text{AUC} = 0.658$, single 5-fold $\text{AUC} = 0.592$). Preranked GSEA identified Epithelial-Mesenchymal Transition (EMT) as the primary enriched pathway ($\text{NES} = +\mathbf{3.203}, \text{FDR} < 0.001$, one-sided sample label permutation $P_{\text{perm}} = 0.0143$). Immune deconvolution revealed peritoneal myofibroblast expansion (Mann-Whitney $U = 16.0, P = 0.0286$, exact two-sided $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$, $\text{FDR} = 0.1714$).
+* **Conclusions:** High-dimensional matrisome integration coupled with machine learning identifies a core 11-gene extracellular matrix network driving peritoneal membrane fibrogenesis. Cross-validation reveals realistic out-of-fold generalization ($\text{AUC} \approx 0.68$) across independent tissue-effluent cohorts, providing defined molecular targets for early detection and therapeutic intervention in peritoneal dialysis.
 * **Keywords:** Peritoneal Dialysis, Encapsulating Peritoneal Sclerosis, Extracellular Matrix, Matrisome, WGCNA, Consensus Machine Learning, Epithelial-Mesenchymal Transition.
 
 ---
@@ -36,11 +36,11 @@
 | **Tripartite Convergence** | WGCNA $\cap$ ECM-DEG Candidates | **40 genes** | Strict intersection: 604 Salmon $\cap$ 71 ECM-DEGs | Candidate matrix pool capturing structural & regulatory ECM |
 | **Machine Learning Consensus** | Multi-Model Hub Panel | **11 genes** | $\ge 2/4$ Votes (LASSO: 2, SVM-RFE: 14, RF: 17, XGBoost: 1) | Cross-algorithm consensus selecting top fibrogenic drivers |
 | **External Cohort (GSE125498)** | 7-Gene Panel In-Sample AUC | **$\text{AUC} = \mathbf{0.869}$** | Logistic Regression ($95\%\text{ CI: } [0.710, 0.992]$) | Apparent in-sample discrimination in effluent cohort |
-| **External Cohort (GSE125498)** | 7-Gene Panel Cross-Validation | **$\text{AUC}_{\text{CV}} = \mathbf{0.701} \pm 0.203$** (per-fold) / **$\mathbf{0.678} \pm 0.058$** (pooled) | 50-Repeat 5-Fold Stratified CV with Pipeline Scaler | **Lead Generalization Metric:** True out-of-fold performance |
-| **Clinical Diagnostic Nomogram** | 5-Gene Nomogram C-index | **$\text{C-index} = \mathbf{0.819}$** | Statsmodels `Logit` ($95\%\text{ CI: } [0.623, 0.968]$) | Multivariable point-scoring system; 5-fold CV-AUC $= 0.550 \pm 0.178$ |
-| **Preranked GSEA Pathway** | EMT Hallmark Enrichment | **$\text{NES} = +\mathbf{3.115}, \text{FDR} < 10^{-4}$** | Exact One-Sided Permutation: **$P_{\text{perm}} = 1/70 = \mathbf{0.0143}$** | EMT ranked #1 hallmark across all 70 permutations |
+| **External Cohort (GSE125498)** | 7-Gene Panel Cross-Validation | **$\text{AUC}_{\text{CV}} = \mathbf{0.678}$** ($\text{SD } 0.058$ across repeats) | 50-Repeat 5-Fold Stratified CV with Pipeline Scaler (Primary) | **Lead Generalization Metric:** True out-of-fold performance |
+| **Clinical Diagnostic Nomogram** | 5-Gene Nomogram C-index | **$\text{C-index} = \mathbf{0.819}$** | Statsmodels `Logit` ($95\%\text{ CI: } [0.623, 0.968]$) | Multivariable point-scoring system; 5-fold CV-AUC $= 0.550$ ($\text{SD } 0.178$) |
+| **Preranked GSEA Pathway** | EMT Hallmark Enrichment | **$\text{NES} = +\mathbf{3.203}, \text{FDR} < 0.001$** | Exact One-Sided Permutation: **$P_{\text{perm}} = 1/70 = \mathbf{0.0143}$** | EMT ranked #1 hallmark across all 70 permutations |
 | **Microenvironment Infiltration** | Peritoneal Myofibroblasts | **$U = 16.0, P = 0.0286$** | Exact Two-Sided Permutation: **$P_{\text{perm}} = 2/70 = \mathbf{0.0286}$** ($\text{FDR} = 0.1714$) | Stromal myofibroblast expansion confirmed in EPS tissue (exploratory) |
-| **Co-Expression Baseline** | Noise Correlation Rate ($N=8$) | **$1.64\%$** at $|r| \ge 0.85$ | 99,993 non-hub random gene pairs (all genes) | Hub gene pairs show $76.36\%$ correlation ($46.6\times$ enrichment vs all genes) |
+| **Co-Expression Baseline** | Noise Correlation Rate ($N=8$) | **$1.68\%$** at $|r| \ge 0.85$ | 99,993 non-hub random gene pairs (all genes) | Hub co-expression ($76.36\%$) vs DEG ($5.47\%$) & Salmon ($9.27\%$) baselines |
 
 ---
 
@@ -165,10 +165,10 @@ Consensus ML Feature Selection Distribution:
 * **Probe Coverage:** 7 of 11 hub genes were represented on the Illumina array (`FN1`, `COL3A1`, `COL8A1`, `VCAN`, `THBS3`, `LOX`, `ISM1`). Four genes (`COL11A1`, `COMP`, `EDIL3`, `INHBA`) lacked mapped probes.
 * **Primary Composite 7-Gene Classifier:**
   - **In-Sample Fit:** $\text{AUC} = \mathbf{0.869}$ ($95\%\text{ CI: } [0.710, 0.992]$)
-  - **50-Repeat 5-Fold Stratified CV with Pipeline Scaler (Primary):** Per-fold $\text{AUC}_{\text{CV}} = \mathbf{0.701} \pm 0.203$ ($N=250$), Per-repeat pooled $\text{AUC} = \mathbf{0.678} \pm 0.058$ ($N=50$, range: $0.512 - 0.773$).
-  - **50-Repeat 5-Fold Stratified CV Unscaled:** Per-fold $\text{AUC}_{\text{CV}} = \mathbf{0.706} \pm 0.209$, Per-repeat pooled $\text{AUC} = \mathbf{0.684} \pm 0.063$ (range: $0.523 - 0.781$, $\text{Mean} \pm 1\text{SD} = [0.640, 0.752]$).
+  - **50-Repeat 5-Fold Stratified CV with Pipeline Scaler (Primary):** Per-repeat pooled $\text{AUC} = \mathbf{0.678}$ ($\text{SD } 0.058$ across 50 repeats, range: $0.512 - 0.773$; per-fold Mean $\text{AUC} = 0.701$, $\text{SD } 0.203$).
   - **Leave-One-Out Cross-Validation (LOOCV with Scaler):** Pooled $\text{AUC}_{\text{LOOCV}} = \mathbf{0.658}$.
-  - **Single Seed-42 5-Fold Stratified CV:** Per-fold Mean $\text{AUC} = \mathbf{0.617} \pm 0.061$, Pooled $\text{AUC} = \mathbf{0.592}$.
+  - **Single Seed-42 5-Fold Stratified CV with Scaler:** Pooled fold $\text{AUC} = \mathbf{0.592}$ (per-fold Mean $\text{AUC} = 0.617$, $\text{SD } 0.061$).
+  - **Supplementary 50-Repeat 5-Fold CV Unscaled:** Per-repeat pooled $\text{AUC} = 0.684$ ($\text{SD } 0.063$ across 50 repeats, range: $0.523 - 0.781$; per-fold Mean $\text{AUC} = 0.706$, $\text{SD } 0.209$).
 
 ![External Validation Boxplots](results/figures/Validation_01_hub_genes_mann_whitney_boxplots.png)
 * **Figure 7: External Validation Boxplots.** Standardized expression of the 7 profiled hub genes in dialysis effluent cells across Early (SPD) vs Late (LPD) cohorts ($N = 33$).
@@ -187,19 +187,18 @@ Consensus ML Feature Selection Distribution:
 | **GSE125498 (Effluent)** | `ISM1` (Single Gene) | 33 | Empirical ROC | **0.527** ($P=0.811$) | [0.306, 0.732] | Matricellular vascular trend |
 | **GSE125498 (Effluent)** | `LOX` (Single Gene) | 33 | Empirical ROC | **0.496** ($P=0.985$) | [0.285, 0.696] | Inactive crosslinker in shed cellular fraction |
 | **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | 33 | In-Sample Logistic Fit | **0.869** | [0.710, 0.992] | **In-Sample Optimistic Fit (Subject to optimism)** |
-| **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | 33 | 50x 5-Fold Stratified CV (Scaled) | **0.701 $\pm$ 0.203** | [0.512, 0.773]** | **Lead Generalization Metric (Primary Pipeline Scaled)** |
-| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | 50x 5-Fold Stratified CV (Unscaled) | **0.706 $\pm$ 0.209** | [0.640, 0.752]*** | Unscaled model; interval reflects $\text{Mean} \pm 1\text{SD}$ |
+| **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | 33 | 50x 5-Fold Stratified CV (Scaled) | **0.678** ($\text{SD } 0.058$) | [0.512, 0.773]** | **Lead Generalization Metric (Primary Pipeline Scaled)** |
+| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | 50x 5-Fold Stratified CV (Unscaled) | **0.684** ($\text{SD } 0.063$) | [0.523, 0.781]** | Supplementary unscaled model (per-repeat pooled) |
 | **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | Leave-One-Out CV (Scaled) | **0.658** | N/A | Pooled LOOCV discrimination |
-| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | Single Seed-42 5-Fold CV (Scaled) | **0.617 $\pm$ 0.061** | N/A | Pooled fold AUC $= 0.592$ |
+| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | Single Seed-42 5-Fold CV (Scaled) | **0.592** (fold mean $0.617$, $\text{SD } 0.061$) | N/A | Single split generalization |
 | **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | 33 | In-Sample `Logit` | **0.819** | [0.623, 0.968] | **Nomogram C-index (Fitted unpenalized model)** |
-| **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | 33 | 5-Fold Stratified CV (L2 Regularized) | **0.550 $\pm$ 0.178** | [0.322, 0.759] | Out-of-fold generalization drop ($\Delta\text{AUC} = 0.269$) |
+| **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | 33 | 5-Fold Stratified CV (L2 Regularized) | **0.550** ($\text{SD } 0.178$) | [0.322, 0.759] | Out-of-fold generalization drop ($\Delta\text{AUC} = 0.269$) |
 
 *\*Note: 95% CIs for VCAN and THBS3 reflect raw unadjusted score direction before inversion.*  
-*\*\*Range of per-repeat pooled AUCs across 50 repeats ($0.512 - 0.773$).*  
-*\*\*\*Interval reflects $\text{Mean} \pm 1\text{SD}$ of per-repeat pooled AUCs ($0.684 \pm 0.063$). All models use $C=1.0$ and L2 penalty.*
+*\*\*Range of per-repeat pooled AUCs across 50 repeats. All models use $C=1.0$ and L2 penalty.*
 
 ![ROC Analysis Multi-Panel](results/figures/Hub_02b_roc_analysis.png)
-* **Figure 8: External Validation ROC Curves.** (A) Single-gene ROC curves in GSE125498 ($N=33$). (B) Multi-gene composite ROC comparison demonstrating the gap between in-sample fit ($\text{AUC} = 0.869$), primary pipeline-scaled 50-repeat 5-fold cross-validation ($\text{AUC}_{\text{CV}} = 0.701 \pm 0.203$ per-fold / $0.678 \pm 0.058$ pooled), and single 5-fold CV ($\text{AUC} = 0.592$ pooled).
+* **Figure 8: External Validation ROC Curves.** (A) Single-gene ROC curves in GSE125498 ($N=33$). (B) Multi-gene composite ROC comparison demonstrating the gap between in-sample fit ($\text{AUC} = 0.869$), primary pipeline-scaled 50-repeat 5-fold cross-validation ($\text{AUC}_{\text{CV}} = \mathbf{0.678}$, $\text{SD } 0.058$ across repeats; $\text{LOOCV } \text{AUC} = 0.658$), and single 5-fold CV ($\text{AUC} = 0.592$).
 
 ---
 
@@ -225,7 +224,7 @@ A 5-gene multivariable diagnostic nomogram was constructed on directional predic
 
 * **Nomogram Points:** Dynamic ranges mapped to a 0–100 scale ($\text{COL8A1} = 100.0\text{ max pts}, \text{VCAN} = 84.5\text{ pts}, \text{COL3A1} = 58.6\text{ pts}, \text{FN1} = 33.3\text{ pts}, \text{ISM1} = 17.1\text{ pts}$).
 * **In-Sample Discrimination:** Multivariable unpenalized statsmodels `Logit` achieves in-sample $\text{C-index} = \mathbf{0.819}$ ($95\%\text{ CI: } [0.623, 0.968]$).
-* **Cross-Validated Discrimination:** 5-fold cross-validation with an L2 regularized model ($C=1.0$) yields $\text{AUC}_{\text{CV}} = \mathbf{0.550} \pm 0.178$.
+* **Cross-Validated Discrimination:** 5-fold cross-validation with an L2 regularized model ($C=1.0$) yields $\text{AUC}_{\text{CV}} = \mathbf{0.550}$ ($\text{SD } 0.178$ across folds).
 * **Likelihood-Ratio Test vs. `FN1` Alone:** $\text{LR } \chi^2 = 10.421, \text{df} = 4, P = \mathbf{0.0339}$ (significant improvement over single-gene model).
 * **Calibration & Decision Curves:** Lowess-smoothed calibration ($B=1000$ bootstrap, Brier Score $= 0.158$, Hosmer-Lemeshow $\chi^2 = 3.91, P = 0.865$) and Decision Curve Analysis (DCA) demonstrate net clinical benefit across threshold probabilities $P_t = 0.10 - 0.70$.
 
@@ -241,9 +240,10 @@ An integrated molecular interaction network was constructed combining live-queri
 * **Live STRING v12.5 Functional Association Network:** **21 verified functional association edges** (interaction score $\ge 0.400$; top 4 edges: `FN1 - LOX` [0.953], `COL3A1 - FN1` [0.911], `COL11A1 - COL3A1` [0.877], `COL3A1 - LOX` [0.802]). Physical interaction query (`network_type=physical`) yields 3 edges (`FN1 - LOX` [0.848], `COL11A1 - COL3A1` [0.720], `COMP - FN1` [0.595]).
 * **Co-Expression Edges ($N=8$ Discovery):** 42 / 55 (76.36%) hub gene pairs exhibit $|r| \ge 0.85$ (42 edges at $|r| \ge 0.85, \text{FDR} < 0.01$).
 * **Co-Expression Noise Baselines:**
-  - **All Genes (Non-hub random pairs):** **$1.64\%$ of random gene pairs exceed $|r| \ge 0.85$ purely by chance** at $N=8$ (hub genes exhibit $46.6\times$ enrichment vs all genes: $76.36\%$ vs. $1.64\%$).
-  - **Among 367 Pro-Fibrotic DEGs:** **$5.47\%$ of pairs exceed $|r| \ge 0.85$** (3,062 / 55,945 pairs).
-  - **Among 604 Salmon-Module Genes:** **$9.27\%$ of pairs exceed $|r| \ge 0.85$** (16,885 / 182,106 pairs).
+  - **All Genes (Non-hub random pairs):** **$1.68\%$ of random gene pairs exceed $|r| \ge 0.85$ purely by chance** at $N=8$ (1,682 / 99,993 sampled pairs).
+  - **Among 367 Pro-Fibrotic DEGs:** **$5.47\%$ of pairs exceed $|r| \ge 0.85$** (3,062 / 55,945 pairs; $14.0\times$ enrichment for hubs vs DEG baseline).
+  - **Among 604 Salmon-Module Genes:** **$9.27\%$ of pairs exceed $|r| \ge 0.85$** (16,885 / 182,106 pairs; $8.2\times$ enrichment for hubs vs Salmon-module baseline).
+  - **Methodological Note:** Hub co-expression is partly by construction because hub genes were selected from the co-expressed WGCNA Salmon module.
 
 ![PPI Interaction Network](results/figures/Hub_01_ppi_gene_interaction_network.png)
 * **Figure 10: Integrated STRING PPI & Co-Expression Network.** High-confidence functional association STRING v12.5 interactions (score $\ge 0.400$, 21 edges) and empirical co-expression edges (42 edges) among the 11 consensus hub genes.
@@ -254,10 +254,11 @@ An integrated molecular interaction network was constructed combining live-queri
 
 Preranked Gene Set Enrichment Analysis was executed using `gseapy` on all 21,597 primary gene symbols ranked by Limma moderated $t$-statistics across MSigDB Hallmark Gene Sets (v2020, `seed = 42`).
 
-* **Primary Enriched Hallmark:** **Epithelial-Mesenchymal Transition (EMT)** ($\text{NES} = +\mathbf{3.115}, P_{\text{nom}} < 10^{-4}, \text{FDR} < 10^{-4}$).
-* **EMT Permutation Test:** Across all 70 label permutations, EMT $\text{NES} = +3.115$ ranked **#1 out of 70** (one-sided $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$).
+* **Primary Enriched Hallmark:** **Epithelial-Mesenchymal Transition (EMT)** ($\text{NES} = +\mathbf{3.203}, P_{\text{nom}} < 0.001, \text{FDR} < 0.001$).
+* **EMT Permutation Test:** Across all 70 sample label permutations, EMT $\text{NES} = +3.203$ ranked **#1 out of 70** (one-sided $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$).
+* **Permutation Framework Distinction:** `gseapy.prerank` evaluates gene-set enrichment by permuting gene labels (1,000 permutations), whereas the 1/70 exact permutation test permutes clinical sample labels.
 * **Other Enriched Upregulated Pathways:** TNF-$\alpha$ Signaling via NF-$\kappa$B ($\text{NES} = +2.082, \text{FDR} = 0.0010$), Inflammatory Response ($\text{NES} = +1.587, \text{FDR} = 0.0303$), Angiogenesis ($\text{NES} = +1.438, \text{FDR} = 0.0855$), Apoptosis ($\text{NES} = +1.349, P_{\text{nom}} = 0.0210, \text{FDR} = 0.0975$).
-* **Downregulated Hallmark Pathways:** Adipogenesis ($\text{NES} = -3.146, \text{FDR} < 10^{-4}$), Oxidative Phosphorylation ($\text{NES} = -3.101, \text{FDR} < 10^{-4}$), Fatty Acid Metabolism ($\text{NES} = -2.766, \text{FDR} < 10^{-4}$), Interferon Alpha Response ($\text{NES} = -2.385, \text{FDR} < 10^{-4}$), Reactive Oxygen Species ($\text{NES} = -2.270, \text{FDR} < 10^{-4}$).
+* **Downregulated Hallmark Pathways:** Adipogenesis ($\text{NES} = -3.146, \text{FDR} < 0.001$), Oxidative Phosphorylation ($\text{NES} = -3.101, \text{FDR} < 0.001$), Fatty Acid Metabolism ($\text{NES} = -2.766, \text{FDR} < 0.001$), Interferon Alpha Response ($\text{NES} = -2.385, \text{FDR} < 0.001$), Reactive Oxygen Species ($\text{NES} = -2.270, \text{FDR} < 0.001$).
 * **Hypoxia Status:** `HALLMARK_HYPOXIA` is downregulated and non-significant in discovery tissue ($\text{NES} = -1.210, P_{\text{nom}} = 0.1407, \text{FDR} = 0.2026$). *(Note: previous documentation mistakenly attributed Apoptosis statistics $\text{NES} = +1.349, \text{FDR} = 0.097$ to Hypoxia).*
 
 ![GSEA Pathway Heatmap](results/figures/Hub_03_gsea_pathway_enrichment_heatmap.png)
