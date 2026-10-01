@@ -207,7 +207,7 @@ cat_handles = [mlines.Line2D([], [], color=col, marker='o', linestyle='None',
 
 edge_handles = [
     mlines.Line2D([], [], color='#7C3AED', lw=3.5, label='STRING PPI + Co-expression (Dual Validated)'),
-    mlines.Line2D([], [], color='#3B82F6', lw=2.5, label='STRING v12.0 PPI (score >= 0.400)'),
+    mlines.Line2D([], [], color='#3B82F6', lw=2.5, label='STRING v12.5 PPI (score >= 0.400)'),
     mlines.Line2D([], [], color='#059669', lw=2.0, linestyle='dashed', label='Co-expression (|r| >= 0.85, FDR < 0.01)')
 ]
 
@@ -220,7 +220,7 @@ ax.legend(handles=edge_handles, title="Interaction Evidence",
           loc="lower left", bbox_to_anchor=(0.0, 0.0), frameon=True,
           fontsize=9.5, title_fontsize=10.5, facecolor="#F8FAFC", edgecolor="#CBD5E1")
 
-ax.set_title("Protein-Protein Interaction (STRING v12.0) and Co-expression Network\n"
+ax.set_title("Protein-Protein Interaction (STRING v12.5) and Co-expression Network\n"
              "Consensus Hub Biomarkers in Peritoneal Dialysis Fibrosis (GSE62928, N = 8)",
              fontsize=13, fontweight="bold", color="#0F172A", pad=20)
 
