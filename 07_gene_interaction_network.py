@@ -200,7 +200,7 @@ for g, (x, y) in pos.items():
     ax.text(x, y, g, fontsize=label_font_sizes[g], fontweight="bold",
             color="#FFFFFF", ha="center", va="center")
 
-# Legends
+# Legends - Placed outside / to the right side with dedicated margin so no nodes are obscured
 cat_handles = [mlines.Line2D([], [], color=col, marker='o', linestyle='None',
                              markersize=12, markeredgecolor='#0F172A', markeredgewidth=1.5, label=cat)
                for cat, col in category_colors.items()]
@@ -212,13 +212,13 @@ edge_handles = [
 ]
 
 leg1 = ax.legend(handles=cat_handles, title="Matrisome Functional Category",
-                 loc="upper left", bbox_to_anchor=(0.0, 1.0), frameon=True,
-                 fontsize=9.5, title_fontsize=10.5, facecolor="#F8FAFC", edgecolor="#CBD5E1")
+                 loc="upper left", bbox_to_anchor=(1.01, 1.0), frameon=True,
+                 fontsize=10, title_fontsize=11, facecolor="#F8FAFC", edgecolor="#CBD5E1")
 ax.add_artist(leg1)
 
 ax.legend(handles=edge_handles, title="Interaction Evidence",
-          loc="lower left", bbox_to_anchor=(0.0, 0.0), frameon=True,
-          fontsize=9.5, title_fontsize=10.5, facecolor="#F8FAFC", edgecolor="#CBD5E1")
+          loc="lower left", bbox_to_anchor=(1.01, 0.0), frameon=True,
+          fontsize=10, title_fontsize=11, facecolor="#F8FAFC", edgecolor="#CBD5E1")
 
 ax.set_title("Protein-Protein Interaction (STRING v12.5) and Co-expression Network\n"
              "Consensus Hub Biomarkers in Peritoneal Dialysis Fibrosis (GSE62928, N = 8)",
@@ -234,3 +234,4 @@ plt.savefig(out_png, dpi=300, bbox_inches="tight")
 plt.savefig(out_pdf, bbox_inches="tight")
 plt.close()
 print(f"Saved publication figures to {out_png} and {out_pdf}")
+
