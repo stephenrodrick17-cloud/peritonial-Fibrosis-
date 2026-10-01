@@ -1,9 +1,7 @@
 # High-Dimensional Matrisome Convergence & Consensus Machine Learning Identify Extracellular Matrix Drivers of Peritoneal Membrane Fibrogenesis
 
-[![Pipeline Status](https://img.shields.io/badge/Pipeline-Locked%20%26%20Reproducible-success.svg)](#-pipeline-execution-guide)
 [![Discovery Dataset](https://img.shields.io/badge/Discovery-GSE62928_%28N%3D8%29-blue.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE62928)
 [![Validation Dataset](https://img.shields.io/badge/Validation-GSE125498_%28N%3D33%29-indigo.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125498)
-[![Audit Status](https://img.shields.io/badge/Audit-0%20FAILs%20%7C%200%20WARNs-brightgreen.svg)](#-data-and-code-integrity-disclosure)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
@@ -115,7 +113,7 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 
 ### Phase 3: Weighted Gene Co-Expression Network Analysis (WGCNA)
 
-* **Unsupervised Adjacency Construction:** Co-expression networks were constructed across all 20,940 MaxMean genes using a signed hybrid similarity metric with soft-thresholding power $\beta = 12$ ($R^2 = 0.809$, truncated scale-free slope $-0.768$):
+* **Unsupervised Adjacency Construction:** Co-expression networks were constructed across all 20,940 MaxMean genes using a signed hybrid similarity metric with soft-thresholding power $\beta = 12$ (truncated scale-free fit $R^2 = 0.809$, linear scale-free fit $R^2 = 0.820$, slope $-0.768$):
   $$a_{ij} = \left| \frac{1 + \text{cor}(x_i, x_j)}{2} \right|^\beta$$
 * **Topological Overlap Matrix (TOM):** Hierarchical clustering of topological overlap identified 14 distinct co-expression modules (minimum module size $= 30$, merge cut height $= 0.25$).
 * **Module-Trait Association:** Module eigengenes (MEs) were correlated with binary clinical EPS status. The **Salmon Module** (604 genes) demonstrated the highest positive correlation:
@@ -134,7 +132,7 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 ### Phase 4: Consensus Machine Learning Feature Selection (11 Hub Genes)
 
 Four distinct machine learning algorithms were trained on the 40 convergent candidates across the discovery matrix using a fixed random seed (`seed = 42`):
-1. **LASSO (L1 Regularization):** `LogisticRegressionCV(Cs=20, cv=4, penalty='l1', solver='saga')` selected $C = 4.2813$ ($\alpha = 1/C = 0.2336$), isolating **2 features** (`ISM1`, `FN1`). Note that 4-fold cross-validation on $N=8$ samples is highly discrete and unstable.
+1. **LASSO (L1 Regularization):** `LogisticRegressionCV(Cs=20, cv=4, penalty='l1', solver='saga')` selected $C = 4.28$ (scikit-learn inverse regularization), isolating **2 features** (`ISM1`, `FN1`). Note that 4-fold cross-validation on $N=8$ samples is highly discrete and unstable.
 2. **SVM-RFE (Recursive Feature Elimination):** Linear support vector machine iteratively ranking features by weight criterion $c_j = (w_j)^2$, selecting **14 features**.
 3. **Random Forest (Gini Impurity):** 500 decision trees ranking Mean Decrease Gini, selecting **17 features**.
 4. **XGBoost (Extreme Gradient Boosting):** Depth-constrained gradient-boosted trees, selecting **1 feature** (`EDIL3`).
@@ -316,7 +314,7 @@ In accordance with strict scientific integrity standards:
   - **Single Source of Truth Audit:** Executed `scripts/make_manuscript_numbers.py` and `scripts/check_readme_against_numbers.py` ensuring that every quantitative claim in documentation matches programmatic outputs without manual typing.
 * **Plain List of Corrected Errors & Discrepancies:**
   1. **Tissue Fold Changes:** Replaced legacy untraceable fold-change values with exact Limma moderated linear model values from `GSE62928_gene_level_toptable.csv` (`COL8A1 +2.68`, `FN1 +1.93`, `COL3A1 +2.84`, `ISM1 +1.90`, `LOX +2.16`, `VCAN +2.75`, `THBS3 +1.16`, `COMP +4.08`, `COL11A1 +3.79`).
-  2. **LASSO Regularization Parameter:** Corrected legacy alpha 0.042 claim to the exact `LogisticRegressionCV` selected $C = 4.2813$ ($\alpha = 1/C = 0.2336$).
+  2. **LASSO Regularization Parameter:** Corrected legacy alpha 0.042 claim to the exact `LogisticRegressionCV` selected $C = 4.28$ (scikit-learn inverse regularization).
   3. **GSEA Hypoxia Mislabeling:** Corrected row where Apoptosis statistics ($\text{NES} = +1.349, \text{FDR} = 0.0975$) were inadvertently attributed to Hypoxia (true `HALLMARK_HYPOXIA`: $\text{NES} = -1.210, \text{FDR} = 0.2026$).
   4. **Machine Learning Feature Counts:** Corrected legacy claims of 10/11/11/11 to exact algorithm selections (LASSO: 2, SVM-RFE: 14, Random Forest: 17, XGBoost: 1).
   5. **Consensus Vote Tiers:** Corrected vote tiers from legacy claims to exact counts (4/4 models: 0, 3/4 models: 3, 2/4 models: 8, 1/4 models: 9, 0/4 models: 20).

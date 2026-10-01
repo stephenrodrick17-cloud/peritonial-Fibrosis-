@@ -187,5 +187,5 @@ if errors:
         print(f"  [ERROR] {safe_err}")
     sys.exit(1)
 else:
-    print("\n[PASSED] All direct CSV and JSON consistency checks passed successfully! README.md is 100% verified.")
+    print("\n[PASSED] All direct CSV and JSON consistency checks passed successfully! README.md matches numerical outputs.")
     sys.exit(0)

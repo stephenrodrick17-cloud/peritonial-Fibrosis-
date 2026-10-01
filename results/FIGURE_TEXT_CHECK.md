@@ -64,16 +64,17 @@ This document transcribes visible text, metrics, labels, and statistical values 
 
 ## Figure 5: Machine Learning Consensus Votes (`results/figures/WGCNA_ML_01_consensus_votes_barchart.png`)
 * **Visible Text / Labels**:
-  - Title: "Machine Learning Consensus Feature Selection (4 Models: LASSO, SVM-RFE, RF, XGBoost)"
-  - Top genes with 3 votes: *ISM1, FN1, EDIL3*.
-  - Genes with 2 votes: *VCAN, COL3A1, COMP, COL8A1, THBS3, COL11A1, INHBA, LOX*.
-  - Cutoff line: "Consensus threshold $\ge 2$ votes" isolating 11 Hub Genes.
-  - 1-vote candidates ($n=17$) and 0-vote candidates ($n=12$) displayed below threshold.
+  - Title: "WGCNA-ECM Machine Learning Consensus Feature Selection (4 Models)\nHub Biomarkers Identified by >= 2 Algorithms"
+  - Top genes with 3 votes ($n=3$): *ISM1, FN1, EDIL3*.
+  - Genes with 2 votes ($n=8$): *VCAN, COL3A1, COMP, COL8A1, THBS3, COL11A1, INHBA, LOX*.
+  - Cutoff line: "Hub Selection Cutoff (>= 2 Models)" isolating 11 Hub Genes.
+  - 1-vote candidates ($n=9$): *MXRA5, COL1A2, SNED1, COL5A2, COL5A1, PDGFA, TNFAIP6, PCOLCE, POSTN*.
+  - 0-vote candidates ($n=20$): *COL1A1, BGN, CLEC11A, SERPINE2, SULF2, THSD4, THBS2, MUC1, TGFB3, THBS1, SDC1, FBLN7, ADAMTS2, MFAP2, MFGE8, FGF14, MMP14, SERPINE1, SERPINA3, ADAMTS1*.
 * **Cross-Check**:
   - Total candidates evaluated = 40.
-  - Vote distribution: 4 votes = 0, 3 votes = 3, 2 votes = 8 (Total $\ge 2$ votes = 11 hubs), 1 vote = 17, 0 votes = 12. Sum: $0 + 3 + 8 + 17 + 12 = 40$.
-  - Per-model counts: LASSO = 2, SVM-RFE = 14, RF = 17, XGBoost = 1.
-  - Exact match with `results/manuscript_numbers.json`.
+  - Vote distribution: 4 votes = 0, 3 votes = 3, 2 votes = 8 (Total $\ge 2$ votes = 11 hubs), 1 vote = 9, 0 votes = 20. Sum: $0 + 3 + 8 + 9 + 20 = 40$.
+  - Per-model counts: LASSO = 2, SVM-RFE = 14, RF = 17, XGBoost = 1 (Total selections = 34).
+  - Exact match with `results/tables/ML_hub_genes_from_WGCNA_ECM_all_results.csv` and `results/manuscript_numbers.json`.
 
 ---
 

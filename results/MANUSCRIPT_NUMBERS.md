@@ -26,7 +26,7 @@
 ## 4. Multi-Tier Convergence & Machine Learning Consensus
 - **3-Way Convergent Candidates (DEGs $\cap$ Matrisome $\cap$ Salmon Module):** 40 genes.
 - **Machine Learning Feature Selection per Algorithm:**
-  - LASSO: 2 genes (`ISM1`, `FN1`; tuned $C = 4.28$, $\alpha = 0.234$)
+  - LASSO: 2 genes (`ISM1`, `FN1`; tuned $C = 4.28$, scikit-learn inverse regularization)
   - SVM-RFE: 14 genes
   - Random Forest: 17 genes
   - XGBoost: 1 gene (`EDIL3`)

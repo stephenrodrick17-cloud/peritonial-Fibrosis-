@@ -311,7 +311,7 @@ md_lines = [
     "## 4. Multi-Tier Convergence & Machine Learning Consensus",
     f"- **3-Way Convergent Candidates (DEGs $\\cap$ Matrisome $\\cap$ Salmon Module):** {n_conv40} genes.",
     "- **Machine Learning Feature Selection per Algorithm:**",
-    f"  - LASSO: {n_lasso} genes (`ISM1`, `FN1`; tuned $C = 4.28$, $\\alpha = 0.234$)",
+    f"  - LASSO: {n_lasso} genes (`ISM1`, `FN1`; tuned $C = 4.28$, scikit-learn inverse regularization)",
     f"  - SVM-RFE: {n_svmrfe} genes",
     f"  - Random Forest: {n_rf} genes",
     f"  - XGBoost: {n_xgb} gene (`EDIL3`)",
