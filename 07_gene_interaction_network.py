@@ -31,17 +31,32 @@ hub_genes = ["FN1", "COL3A1", "COL11A1", "COL8A1", "VCAN", "COMP", "THBS3", "EDI
 df_hubs = pd.read_csv("results/tables/ML_hub_genes_from_WGCNA_ECM.csv")
 meta_dict = df_hubs.set_index("Gene_Symbol").to_dict(orient="index")
 
-# 2. Fetch STRING v12.0 Interactions (score >= 0.400)
-print("Step 1: Querying STRING v12.0 database API...")
-url = f"https://string-db.org/api/json/network?identifiers={'%0d'.join(hub_genes)}&species=9606&required_score=400"
-req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+# 2. Fetch STRING Interactions (score >= 0.400)
+print("Step 1: Querying live STRING database API...")
+caller_id = "peritoneal_fibrosis_audit"
+url_tsv = f"https://string-db.org/api/tsv/network?identifiers={'%0d'.join(hub_genes)}&species=9606&required_score=400&network_type=functional&caller_identity={caller_id}"
+url_json = f"https://string-db.org/api/json/network?identifiers={'%0d'.join(hub_genes)}&species=9606&required_score=400&network_type=functional&caller_identity={caller_id}"
+
+req_tsv = urllib.request.Request(url_tsv, headers={"User-Agent": "Mozilla/5.0"})
+req_json = urllib.request.Request(url_json, headers={"User-Agent": "Mozilla/5.0"})
+
 try:
-    with urllib.request.urlopen(req, timeout=15) as resp:
+    with urllib.request.urlopen(req_tsv, timeout=20) as resp:
+        tsv_raw = resp.read().decode('utf-8')
+    today_str = "20261001"
+    tsv_out_path = f"results/tables/string_live_edges_{today_str}.tsv"
+    with open(tsv_out_path, "w", encoding="utf-8") as f:
+        f.write(tsv_raw)
+    print(f"Saved raw live STRING response to {tsv_out_path}")
+
+    with urllib.request.urlopen(req_json, timeout=20) as resp:
         string_raw = json.loads(resp.read().decode('utf-8'))
         print(f"STRING API returned {len(string_raw)} raw interaction entries.")
 except Exception as e:
-    print("Warning: STRING API query exception, using verified local STRING v12 cache:", e)
-    string_raw = []
+    raise RuntimeError(f"STRING API query failed: {e}. Fallback cache is strictly disabled.") from e
+
+if not string_raw:
+    raise RuntimeError("STRING API returned empty results. Fallback cache is strictly disabled.")
 
 string_edges = {}
 for item in string_raw:
@@ -53,21 +68,7 @@ for item in string_raw:
         if pair not in string_edges or score > string_edges[pair]:
             string_edges[pair] = score
 
-# Verified fallback cache if network timeout occurred
-if len(string_edges) == 0:
-    fallback_cache = [
-        ("COL11A1", "COL3A1", 0.965), ("COMP", "FN1", 0.958), ("FN1", "LOX", 0.931),
-        ("COL3A1", "FN1", 0.928), ("FN1", "VCAN", 0.866), ("COL3A1", "LOX", 0.843),
-        ("COL3A1", "VCAN", 0.722), ("COMP", "THBS3", 0.660), ("COL3A1", "COL8A1", 0.655),
-        ("COL11A1", "COL8A1", 0.618), ("COL11A1", "COMP", 0.603), ("COL3A1", "INHBA", 0.585),
-        ("COL3A1", "COMP", 0.526), ("COL11A1", "EDIL3", 0.520), ("COL11A1", "FN1", 0.511),
-        ("COL11A1", "VCAN", 0.498), ("COL8A1", "LOX", 0.496), ("COL11A1", "INHBA", 0.478),
-        ("COL11A1", "LOX", 0.450), ("COL8A1", "FN1", 0.448)
-    ]
-    for u, v, s in fallback_cache:
-        string_edges[tuple(sorted([u, v]))] = s
-
-print(f"Loaded {len(string_edges)} verified STRING v12.0 PPI edges (score >= 0.400).")
+print(f"Loaded {len(string_edges)} verified live STRING PPI edges (score >= 0.400).")
 
 # 3. Compute Co-expression Edges in Discovery Tissue (GSE62928, N=8)
 print("Step 2: Computing pairwise Pearson co-expression in GSE62928...")
