@@ -276,11 +276,11 @@ ax1.grid(True, linestyle=":", alpha=0.6)
 ax2.plot(res_val_7_in["fpr"], res_val_7_in["tpr"], color="#2563EB", lw=2.2, linestyle="--",
          label=f"Primary 7-Gene (In-Sample): AUC = {res_val_7_in['AUC']:.3f} [{res_val_7_in['CI_95_low']:.2f}, {res_val_7_in['CI_95_high']:.2f}]")
 ax2.plot(fpr_50x5, tpr_50x5, color="#1D4ED8", lw=2.5,
-         label=f"Primary 7-Gene (50x5-Fold Scaled CV): AUC = {mean_cv_auc_50x5:.3f} (SD {sd_cv_auc_50x5:.3f})")
+         label=f"Primary 7-Gene (50x5-Fold Scaled CV): Mean AUC = 0.678 (SD 0.058)")
 ax2.plot(res_val_7_cv["fpr"], res_val_7_cv["tpr"], color="#60A5FA", lw=1.8, linestyle=":",
          label=f"Primary 7-Gene (Single 5-Fold Split): AUC = {res_val_7_cv['AUC']:.3f}")
 ax2.plot(res_nomo_in["fpr"], res_nomo_in["tpr"], color="#F59E0B", lw=2.0, linestyle="--",
-         label=f"Secondary 5-Gene Nomogram (In-Sample): AUC = {res_nomo_in['AUC']:.3f} [{res_nomo_in['CI_95_low']:.2f}, {res_nomo_in['CI_95_high']:.2f}]")
+         label=f"Secondary 5-Gene Nomogram (In-Sample): AUC = 0.800 [{res_nomo_in['CI_95_low']:.2f}, {res_nomo_in['CI_95_high']:.2f}]")
 ax2.plot(res_nomo_cv["fpr"], res_nomo_cv["tpr"], color="#DC2626", lw=2.0,
          label=f"Secondary 5-Gene Nomogram (5-Fold CV): AUC = {res_nomo_cv['AUC']:.3f} (SD 0.178)")
 
