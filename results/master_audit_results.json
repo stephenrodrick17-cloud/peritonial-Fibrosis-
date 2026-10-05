@@ -1,7 +1,7 @@
 {
   "audit_1_no_hardcoded_numbers": {
     "status": "PASSED",
-    "passed_count": 23,
+    "passed_count": 21,
     "failed_count": 0,
     "failures": []
   },

@@ -90,41 +90,37 @@ report_lines.append("""
 """)
 
 # Table of primary pseudobulk results in stromal compartment
-st_sub = df_pb[(df_pb["Cell_Type"] == "stromal_mesothelial-lineage_unresolved") & 
-               (df_pb["Contrast"] == "LV_UF_vs_LV_NOT_UF")].sort_values(by="log2FC", ascending=False)
+st_sub = df_pb[(df_pb["Cell_Type"] == "stromal / mesothelial-lineage (unresolved)") & 
+               (df_pb["Contrast"] == "LV_UF_vs_LV_NOT_UF")].sort_values(by="log2FC", ascending=True)
 report_lines.append("| Gene | log2 Fold Change | 95% CI Low | 95% CI High | P-Value | BH FDR | Evidence Status |")
 report_lines.append("| :--- | :---: | :---: | :---: | :---: | :---: | :--- |")
 for _, r in st_sub.iterrows():
-    report_lines.append(f"| **{r['Gene']}** | {r['log2FC']:+.4f} | {r['CI_95_low']:+.4f} | {r['CI_95_high']:+.4f} | {r['PValue']:.4e} | {r['BH_FDR']:.4f} | {r['Evidence_Status']} |")
+    fdr_str = f"{r['BH_FDR']:.4f}" if not pd.isna(r['BH_FDR']) else "N/A"
+    report_lines.append(f"| **{r['Gene']}** | {r['log2FC']:+.4f} | {r['CI_95_low']:+.4f} | {r['CI_95_high']:+.4f} | {r['PValue']:.4e} | {fdr_str} | {r['Evidence_Status']} |")
 
 report_lines.append("""
-- **Lineage Specificity:** Marked upregulation ($\log_2\text{FC} > +1.5$) is confined to the stromal/mesothelial lineage for `COL11A1` (+3.87), `COL8A1` (+3.22), `COMP` (+2.98), `VCAN` (+2.21), `EDIL3` (+2.06), `FN1` (+1.89), and `INHBA` (+1.79). In immune compartments (monocytes/macrophages, T cells, NK cells, and cDCs), these genes exhibit low baseline expression or non-significant modulation.
-- **Sensitivity Robustness:** Consistent directionality and effect magnitude were confirmed across 10 sensitivity pipelines:
-  - *sens_b:* Single outlier donor exclusion (LV_UF-3 dropped; stromal $\log_2\text{FC}$ within $0.05$ of primary)
-  - *sens_c:* Doublet inclusion (scDblFinder doublets retained)
-  - *sens_d / e / h:* Stringent gene ($\ge 700$ genes) and cell count ($\ge 50$ cells) filtering
-  - *sens_f:* Non-parametric donor label permutation
-  - *sens_g / i / j:* Artifact ceiling evaluations (ceiling-rescued, unconstrained, and pooled-sample ceilings)
-  - *LODO:* Leave-One-Donor-Out cross-validation across all 16 donors.
+- **Directionality and Significance in Severe UFF:** In the stromal/mesothelial lineage, 8 of 9 testable candidate hub genes show directionally lower expression in severe ultrafiltration failure (negative log2FC: `COMP` -4.04, `FN1` -2.96, `COL8A1` -2.66, `EDIL3` -2.61, `COL3A1` -1.96, `LOX` -1.72, `THBS3` -1.57, `VCAN` -0.65). Only `INHBA` exhibits positive log2FC (+1.08; 95% CI: -0.59 to +2.75, crossing zero). None of the 9 testable genes achieve genome-wide statistical significance after Benjamini-Hochberg FDR correction (all FDR >= 0.131; 0 of 9 with FDR < 0.05). Findings are strictly hypothesis-generating.
+- **Sensitivity and QC-Ceiling Robustness:** Across 9 sensitivity specifications:
+  - `VCAN` is confirmed as ROBUST, maintaining consistent negative directionality across all pipelines (-0.65 to -1.41).
+  - The remaining 8 testable genes are QC-SENSITIVE, showing 58% to 91% attenuation or sign reversal (`INHBA` flips from +1.08 to -0.31) when upper count ceilings are removed, indicating sensitivity to scRNA-seq technical filters and single-donor influence (donor LV_UF-2).
 """)
 
 report_lines.append("---\n")
 report_lines.append("## Stage 5: Multi-Layer Regulatory Architecture")
 report_lines.append("""
 ### A. miRNA Layer (Stage 5F)
-- **multiMiR Database Retrieval:** 2,040 validated interactions (miRTarBase, TarBase, miRWalk); 563 unique miRNAs target the 11 hub genes.
-- **Human Effluent Exosomes (GSE182736, $n=3$ vs. $3$):** 850 expressed miRNAs profiled; 101 validated hub-targeting miRNAs overlap with differentially expressed miRNAs ($|\log_2\text{FC}| > 1.0$). Hypergeometric enrichment $P = 1.000$ (descriptive only at $n=3$ vs. $3$).
-- **Rodent Peritoneal Dialysis Model (GSE130387, $n=3$ vs. $3$):** Affymetrix miRNA-4.0 probes are rat-derived (`rno-*`). Mapped to human homologs by stem homology; all rows explicitly designated **`CROSS-SPECIES`**. 47 validated hub-targeting miRNAs overlap ($|\log_2\text{FC}| > 0.5$, hypergeometric $P = 0.000112$).
+- **multiMiR Database Retrieval:** 2,040 validated interactions (miRTarBase, TarBase, miRWalk); 563 unique miRNAs target the 11 hub genes. Dense functional evidence (Tier A: reporter assays, western blot, qPCR) supports `COL3A1` (10 Tier A miRNAs), `FN1` (7 Tier A miRNAs), and `LOX` (6 Tier A miRNAs).
+- **Human Effluent Exosomes (GSE182736, $n=3$ vs. $3$):** 463 expressed miRNAs in universe; at 1.5-fold differential expression, Tier A overlap is k=6 ($P = 0.9505$) and Tier B overlap is k=186 ($P = 0.9849$). Designated **`DESCRIPTIVE ONLY (human exosome sequencing, n=3 vs 3)`**.
+- **Rodent Peritoneal Dialysis Model (GSE130387, $n=3$ vs. $3$):** Affymetrix miRNA-4.0 probes are rat-derived (`rno-*`). Mapped to human homologs by stem homology; designated **`CROSS-SPECIES (rodent model, n=3 vs 3)`**. Significant cross-species enrichment is observed at 1.5-fold cutoff for Tier A (k=7 observed vs. 1.99 expected, $P = 0.00132$) and Tier B (k=46 observed vs. 34.29 expected, $P = 0.00154$).
 
-### B. lncRNA & ceRNA Network Layer (Stage 5G)
-- **GSE248762 lncRNA Detection (GENCODE v32):** 17,898 annotated lncRNA genes in GENCODE v32 (matching Cell Ranger reference); 16,752 assayed in features. **11,966 unique lncRNAs** are detected ($\text{counts} > 0$) in single-cell tissue (9,443 detected in stromal cells). Top expressed stromal lncRNAs include `MALAT1`, `NEAT1`, `GAS5`, `NORAD`, `SNHG16`, `SNHG7`, `MEG3`, `XIST`, and `H19`.
-- **Live ENCORI Retrieval & Predicted ceRNA Network:** Live queries to ENCORI (starBase v3.0) for 10 hub-targeting miRNAs retrieved 697 interactions. Filtering for lncRNAs detected in GSE248762 and supported by CLIP experiments ($\text{clipExpNum} \ge 2$) produced **1,698 predicted regulatory axes** across **65 unique lncRNA hubs**.
-- *Mandatory Designation:* All rows and figures are explicitly labeled **`PREDICTED regulatory network (not experimentally validated in this system)`**.
-
-### C. In Vitro Mesothelial Cell Response (Stage 5H, GSE121372)
-- Human peritoneal mesothelial cells (HPMCs) stimulated with 1 ng/mL TGF-$\beta$1 for 6h and 24h on Illumina HumanRef-8 v2.0 (GPL6255).
+### B. In Vitro Mesothelial Cell Response (Stage 5H, GSE121372)
+- Human peritoneal mesothelial cells (HPMCs) stimulated with 1 ng/mL TGF-$\\beta$1 for 6h and 24h on Illumina HumanRef-8 v2.0 (GPL6255).
 - *Status:* **`DESCRIPTIVE ONLY; n=1; no statistical testing or P-values possible`**.
-- 10 of 11 hubs assayed (`ISM1` absent from platform). Prominent upregulation at 24h is observed for `COL11A1` (+3.72), `COMP` (+2.16), `INHBA` (+2.03), `EDIL3` (+1.61), `VCAN` (+1.36), `THBS3` (+1.08), `FN1` (+0.87), `LOX` (+0.86), `COL8A1` (+0.79 / +0.49), and `COL3A1` (+0.44), consistent with in vitro mesothelial-to-mesenchymal transition (MMT).
+- 10 of 11 hubs assayed (`ISM1` absent from platform).
+- Strict rule-order analysis accounting for untreated time-in-culture drift ($|\\text{drift}| \\ge 1.0$):
+  - **Confounded by Culture Drift:** `COMP` (drift -2.32), `VCAN` (drift +1.90), `INHBA` (drift -1.47), and `COL11A1` probe ILMN_1644 (drift +1.89).
+  - **Higher in Single TGF-beta1 Sample:** `EDIL3` ($\\log_2\\text{FC}_{24h} = +1.61$, drift +0.93) and `THBS3` ($\\log_2\\text{FC}_{24h} = +1.08$, drift -0.04).
+  - **Unchanged in Single TGF-beta1 Sample ($|\\log_2\\text{FC}| < 1.0$):** `LOX` (+0.86), `FN1` (+0.87), `COL8A1` (+0.49 / +0.79), `COL3A1` (+0.44), and `COL11A1` probe ILMN_3994 (+0.97).
 """)
 
 report_lines.append("---\n")
@@ -135,8 +131,8 @@ for _, clm in df_claims.iterrows():
     report_lines.append(f"- **{clm['Claim_ID']} ({clm['README_Line_Number']}):** {clm['Resolution']}")
 
 report_lines.append("\n---\n")
-report_lines.append("## Programmatic Artifact Index")
-report_lines.append("- Primary Figures: `results/figures/Fig_4A_pseudobulk_celltype_forest.png`, `Fig_4B_stromal_sensitivities_forest.png`, `Fig_5A_mirna_hub_intersection.png`, `Fig_5B_cerna_regulatory_network.png`, `Fig_5C_gse121372_tgfb1_timecourse.png`, `Fig_6_discrepancy_corrected_panels.png`")
+report_lines.append("- Primary Figures: `results/figures/Fig_4A_pseudobulk_celltype_forest.png`, `results/figures/Fig_4B_stromal_sensitivities_forest.png`, `results/figures/Fig_5A_mirna_hub_intersection.png`, `results/figures/Fig_5C_gse121372_tgfb1_timecourse.png`, `results/figures/Fig_6_discrepancy_corrected_panels.png`")
+report_lines.append("- Note on ceRNA: Excluded from primary manuscript figures per audit directive until each lncRNA-miRNA-hub connection is experimentally verified.")
 report_lines.append("- Figure Captions: `results/figures/FIGURE_CAPTIONS.md`")
 report_lines.append("- Paired Source Data: `results/figures/source_data/`")
 report_lines.append("- Audit Manifests: `results/stage4_manifest.json`, `results/stage5_manifest.json`")

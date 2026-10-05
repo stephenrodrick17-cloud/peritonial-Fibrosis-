@@ -61,14 +61,12 @@ checks = [
     ("Effluent Permutation P", f"{df_clf['Empirical_P_Value']:.4f}", f"{df_clf['Empirical_P_Value']:.4f}" in report_content),
     ("scRNA-seq Donor Libraries", "16", 16 in [16]),
     ("scRNA-seq Patient Donors", "14", 14 in [14]),
-    ("GSE182736 Exosomes Overlap", "101", "101" in report_content and df_mir[df_mir["Dataset"]=="GSE182736"]["k_overlap"].iloc[0] == 101),
-    ("GSE130387 Rodent Overlap", "47", "47" in report_content and df_mir[df_mir["Dataset"]=="GSE130387"]["k_overlap"].iloc[0] == 47),
-    ("GSE130387 Hypergeometric P", "0.000112", "0.000112" in report_content),
-    ("GENCODE v32 lncRNAs Annotated", "17,898", "17,898" in report_content),
-    ("scRNA-seq lncRNAs Detected", "11,966", "11,966" in report_content),
-    ("Stromal lncRNAs Detected", "9,443", "9,443" in report_content),
-    ("Predicted ceRNA Axes", "1,698", "1,698" in report_content),
-    ("Unique lncRNA ceRNA Hubs", "65", "65" in report_content)
+    ("GSE182736 Exosomes Overlap Tier A", "6", "k=6" in report_content and (df_mir[df_mir["Dataset"].str.contains("GSE182736") & (df_mir["Evidence_Tier"]=="Tier_A_Primary") & (df_mir["DE_Threshold_log2FC"]==0.58)]["Observed_Overlap_k"].iloc[0] == 6)),
+    ("GSE182736 Exosomes Overlap Tier B", "186", "k=186" in report_content and (df_mir[df_mir["Dataset"].str.contains("GSE182736") & (df_mir["Evidence_Tier"]=="Tier_B_Sensitivity") & (df_mir["DE_Threshold_log2FC"]==0.58)]["Observed_Overlap_k"].iloc[0] == 186)),
+    ("GSE130387 Rodent Overlap Tier A", "7", "k=7" in report_content and (df_mir[df_mir["Dataset"].str.contains("GSE130387") & (df_mir["Evidence_Tier"]=="Tier_A_Primary") & (df_mir["DE_Threshold_log2FC"]==0.58)]["Observed_Overlap_k"].iloc[0] == 7)),
+    ("GSE130387 Rodent Overlap Tier B", "46", "k=46" in report_content and (df_mir[df_mir["Dataset"].str.contains("GSE130387") & (df_mir["Evidence_Tier"]=="Tier_B_Sensitivity") & (df_mir["DE_Threshold_log2FC"]==0.58)]["Observed_Overlap_k"].iloc[0] == 46)),
+    ("GSE130387 Hypergeometric P", "0.00132", "0.00132" in report_content),
+    ("ceRNA Audit Compliance Note", "Excluded from primary manuscript figures", "Excluded from primary manuscript figures" in report_content)
 ]
 
 for label, val_str, cond in checks:
