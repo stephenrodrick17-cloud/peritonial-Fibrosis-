@@ -1,0 +1,14 @@
+cluster,label,N,largest_donor,largest_frac,n_donors_ge5pct,donors_ge5pct,SV/LVnot/LVuf_%,DONOR_DOMINATED(>=0.50)
+0,T cell,27141,LV_NOT_UF-4,0.14,9,"LV_NOT_UF-4:14%, LV_UF-4:14%, LV_NOT_UF-5:13%, LV_NOT_UF-6:10%, SV-5:9%, SV-3:9%, LV_UF-2:7%, LV_NOT_UF-3:6%, SV-4:5%",33/45/22,False
+1,T cell,16308,SV-5,0.142,10,"SV-5:14%, LV_UF-4:13%, LV_UF-2:12%, LV_NOT_UF-4:10%, SV-3:9%, LV_NOT_UF-3:8%, SV-2:7%, LV_NOT_UF-5:6%, LV_NOT_UF-6:6%, SV-4:5%",40/34/25,False
+2,T cell,796,SV-3,0.185,7,"SV-3:18%, LV_NOT_UF-3:12%, SV-2:11%, SV-5:11%, LV_UF-2:9%, LV_NOT_UF-6:8%, LV_UF-4:6%",50/34/16,False
+3,stromal / mesothelial-lineage (unresolved),3670,LV_NOT_UF-1,0.254,7,"LV_NOT_UF-1:25%, SV-2:20%, LV_UF-2:10%, LV_NOT_UF-2:10%, SV-3:9%, LV_UF-3:5%, LV_UF-1:5%",41/38/21,False
+4,Neutrophil,3647,LV_UF-3,0.826,2,"LV_UF-3:83%, LV_UF-1:10%",4/3/93,True
+5,cDC,11331,SV-1,0.174,7,"SV-1:17%, SV-3:16%, LV_NOT_UF-1:12%, SV-4:12%, SV-2:12%, LV_NOT_UF-2:10%, SV-6:6%",68/29/3,False
+6,Monocyte / macrophage,22655,SV-6,0.195,7,"SV-6:19%, SV-1:16%, SV-4:14%, LV_NOT_UF-3:13%, LV_NOT_UF-1:11%, SV-2:6%, SV-3:5%",65/33/2,False
+7,Mixed: pDC / Plasma cell,1237,SV-3,0.158,7,"SV-3:16%, LV_NOT_UF-3:12%, SV-1:10%, LV_NOT_UF-1:10%, LV_UF-1:9%, LV_NOT_UF-5:8%, SV-2:6%",43/41/16,False
+8,cDC,310,SV-3,0.352,3,"SV-3:35%, LV_NOT_UF-2:35%, LV_NOT_UF-1:7%",44/50/6,False
+9,NK cell,4011,LV_NOT_UF-5,0.163,7,"LV_NOT_UF-5:16%, SV-3:14%, LV_NOT_UF-4:12%, LV_NOT_UF-6:10%, SV-5:8%, LV_UF-4:8%, LV_NOT_UF-3:8%",34/50/16,False
+10,B cell,1840,LV_NOT_UF-4,0.241,6,"LV_NOT_UF-4:24%, SV-3:24%, LV_UF-1:20%, LV_NOT_UF-3:10%, SV-4:6%, SV-6:5%",38/40/22,False
+11,cDC,2031,SV-4,0.202,8,"SV-4:20%, LV_NOT_UF-3:15%, SV-3:13%, SV-6:11%, LV_NOT_UF-2:11%, SV-2:8%, LV_NOT_UF-1:7%, SV-5:6%",62/36/1,False
+12,Monocyte / macrophage,270,LV_UF-3,1.0,1,LV_UF-3:100%,0/0/100,True

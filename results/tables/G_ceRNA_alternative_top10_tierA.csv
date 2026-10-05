@@ -1,0 +1,11 @@
+mature_mirna_id,n_tier_a_targets,n_total_hub_targets,tier_a_target_genes
+hsa-miR-29b-3p,2,9,COL3A1;LOX
+hsa-miR-29a-3p,2,7,COL3A1;LOX
+hsa-miR-29c-3p,2,7,COL3A1;LOX
+hsa-miR-767-5p,2,4,COL3A1;LOX
+hsa-miR-200b-3p,2,3,FN1;LOX
+hsa-let-7g-5p,1,10,FN1
+hsa-let-7b-5p,1,9,COL3A1
+hsa-let-7d-5p,1,9,COL3A1
+hsa-miR-1-3p,1,9,FN1
+hsa-miR-101-3p,1,8,FN1

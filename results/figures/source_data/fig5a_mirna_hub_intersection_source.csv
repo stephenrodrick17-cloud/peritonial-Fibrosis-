@@ -1,0 +1,416 @@
+miRNA,Hub_Gene,Source,Dataset,species,species_label,log2FC,DE_threshold,analysis_note
+hsa-miR-1-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,COMP,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1-3p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-1.3121,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1179,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.9443,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1197,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0147,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1226-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.6464,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1228-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.94,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-124-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,2.136,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-124-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,2.136,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-124-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,2.136,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-124-3p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,2.136,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-124-3p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,2.136,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-124-3p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,2.136,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-126-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.8935,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-126-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.9415,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-1277-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2755,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-133a-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.0753,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-133a-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.0753,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-133b,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.4336,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-133b,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.4336,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-133b,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.4336,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-134-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1539,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-134-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1539,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-135a-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-3.4177,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-137-3p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.1669,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-139-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2137,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-139-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.2137,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-139-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.2137,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-139-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2137,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-139-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.2137,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-141-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.3278,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-141-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.3278,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-141-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.3278,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-3p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6535,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-142-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-3.1364,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-144-3p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7144,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,COMP,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146a-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4408,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146b-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.6146,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146b-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.6146,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146b-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.6146,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-146b-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-1.6146,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-147b-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,3.0633,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-153-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.2063,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-154-3p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0179,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-155-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.0396,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-155-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.0396,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-155-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.0396,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-155-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.0396,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-155-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-2.0396,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-182-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.1312,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.3186,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.6849,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.6849,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.6849,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.6849,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.6849,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-183-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.6849,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-187-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.028,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-195-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0714,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-195-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0714,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-195-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0714,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-195-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0714,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-195-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0714,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-196b-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.12,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-196b-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.12,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-196b-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.12,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-196b-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.12,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-196b-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-1.12,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-19b-1-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.8927,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-19b-1-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.8927,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-200c-3p,ISM1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.1784,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-200c-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.1784,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-200c-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.1784,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-200c-3p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-2.1784,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-203a-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,3.1655,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-203a-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,3.1655,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-204-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.4982,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-204-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1831,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-205-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,5.3126,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,COMP,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,THBS3,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-20b-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-3.9992,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-223-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-5.9908,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-2278,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1669,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-2278,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1669,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-2278,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1669,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-24-1-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.0054,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,THBS3,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-27a-3p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.2499,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-301b-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6551,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-301b-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6551,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-3065-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1776,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-3065-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.1776,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1284,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1284,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-3p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1284,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30a-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.4337,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30c-2-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.112,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30c-2-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.112,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30d-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1767,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30d-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.1767,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30d-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1767,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30d-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.1767,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-30d-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.1767,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-323b-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0338,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-331-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2428,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-331-3p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.2428,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,THBS3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-335-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2234,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-338-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4473,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-33b-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7888,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-33b-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7888,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-33b-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7888,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-33b-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7888,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-33b-5p,COL11A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7888,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-33b-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7888,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-34b-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-6.0159,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-34b-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-6.0159,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-34c-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.6034,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-34c-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-3.6034,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-3615,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2264,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-363-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7587,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-363-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7587,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-363-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7587,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-375-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6217,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-375-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6217,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-375-3p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6217,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-376a-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.2229,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-376a-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-3.2229,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-379-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0609,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-379-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0609,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-3909,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.0341,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-4429,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1669,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449a,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-4.9376,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449a,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-4.9376,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449a,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-4.9376,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449b-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-4.5451,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449b-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-4.5451,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449b-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-4.5451,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-449c-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-4.7723,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-451a,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7204,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-455-3p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.5651,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-455-3p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.5651,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-455-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4068,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-455-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.4068,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-4728-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.2447,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-4728-3p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.2447,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-4787-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.4559,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-485-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0593,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-486-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.9172,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-486-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.9172,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-486-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.9172,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-487a-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-2.6707,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-496,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.0584,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-497-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.228,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-497-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.228,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-500a-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0548,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-500a-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0548,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-500a-3p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0548,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-502-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0548,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-505-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,1.1669,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-507,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,3.5817,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-511-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7278,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-511-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7278,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-542-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.3439,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-545-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,2.4631,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-545-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,2.4631,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-548ab,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,2.2564,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-548au-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.1486,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-548b-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.5532,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-548i,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,-1.7877,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-548o-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.1486,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-574-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.0642,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-574-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.0642,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-574-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.0642,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-624-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.6865,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-625-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1974,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-625-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1974,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-625-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1974,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-627-3p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.1305,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-629-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.2814,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-642a-3p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-2.3116,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-6516-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,1.4824,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-6516-5p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,1.4824,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-654-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.4988,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-654-3p,COL8A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.4988,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-660-3p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-2.7842,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-885-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-3.5557,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-885-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-3.5557,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-9-3p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.0603,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-9-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1871,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-9-5p,EDIL3,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1871,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-9-5p,VCAN,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1871,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-9-5p,COL3A1,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1871,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-9-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,-1.1871,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-940,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.854,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-96-5p,FN1,validated_all,GSE182736,Homo sapiens,HUMAN,1.0923,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-96-5p,INHBA,validated_all,GSE182736,Homo sapiens,HUMAN,1.0923,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-miR-96-5p,LOX,validated_all,GSE182736,Homo sapiens,HUMAN,1.0923,|log2FC| > 1.0,DESCRIPTIVE_ONLY_n3vs3
+hsa-let-7b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,COMP,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,THBS3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-let-7b-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.605,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-100-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6635,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-10a-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.2084,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-10a-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.2084,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-10b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1762,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-10b-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1762,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-10b-5p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1762,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-10b-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1762,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-125a-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8277,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-125a-5p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8277,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-125b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5096,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-125b-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5096,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-125b-5p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5096,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-130a-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5751,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-130a-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5751,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-130a-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5751,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-130a-3p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5751,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-135a-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.0766,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-135b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.4823,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-138-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9315,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-138-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9315,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-138-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9315,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-138-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9315,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-138-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9315,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-138-5p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9315,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-143-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.8915,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-143-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.8915,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-143-3p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.8915,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-144-3p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.694,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-145-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5084,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-145-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5084,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-145-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9907,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-152-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6437,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-181a-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5645,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-181a-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5645,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-181a-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5645,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-181a-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5645,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-181a-5p,THBS3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5645,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-181a-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5645,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-183-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6048,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-183-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6048,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-183-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6048,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-183-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6048,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-183-5p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6048,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-183-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6048,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-195-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.783,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-195-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.783,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-195-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.783,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-195-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.783,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-195-5p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.783,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-200a-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1165,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-200a-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1165,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-200a-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.1165,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-203a-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5564,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-203a-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5564,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-21-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.8963,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-21-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.0532,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-21-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.0532,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-21-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.0532,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-21-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.0532,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-21-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.0532,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-22-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6463,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-22-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6463,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,COMP,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,THBS3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23a-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.803,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23b-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.073,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23b-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.073,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23b-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.073,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23b-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.073,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-23b-3p,THBS3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.073,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-24-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6859,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-24-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6859,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-24-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6859,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-24-3p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6859,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-24-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6859,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-24-3p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6859,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26a-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0287,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26a-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0287,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26a-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0287,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26a-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0287,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26a-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0287,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0801,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26b-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0801,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26b-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0801,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26b-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0801,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-26b-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0801,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-27b-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6399,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-27b-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6399,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-27b-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6399,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-27b-3p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6399,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-27b-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6399,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29a-3p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0319,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,THBS3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29b-3p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.9744,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-29c-3p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8846,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30a-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.8877,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0563,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30b-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0563,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30b-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0563,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30c-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0346,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30c-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-1.0346,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30d-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6117,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30d-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6117,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30d-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6117,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30d-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6117,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30d-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6117,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.63,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-3p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.63,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-3p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.63,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-3p,COL11A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.63,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6721,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6721,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-30e-5p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6721,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-331-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,1.2233,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-378a-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6962,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-378a-3p,COL8A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6962,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-378a-3p,INHBA,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6962,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-493-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6019,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-493-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.6019,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-497-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5695,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-497-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.5695,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-503-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.9348,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-503-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.9348,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-503-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.9348,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-503-5p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,0.9348,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-652-3p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.579,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-652-3p,LOX,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.579,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-708-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6531,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-708-5p,EDIL3,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6531,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-708-5p,COL3A1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6531,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-99a-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.6615,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-99b-5p,FN1,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.7338,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3
+hsa-miR-99b-5p,VCAN,validated_all,GSE130387,Rattus norvegicus -> Homo sapiens (hsa candidate),CROSS-SPECIES,-0.7338,|log2FC| > 0.5,DESCRIPTIVE_ONLY_CROSS_SPECIES_n3vs3

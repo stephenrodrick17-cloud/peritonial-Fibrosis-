@@ -1,0 +1,17 @@
+GSM,Sample_Title,Group,Raw_Cells,Scrublet_Threshold,Predicted_Doublets,Predicted_Doublet_Pct,Threshold_Rule
+GSM7919583,LV_UF-1,LV_UF,2559,0.3974,3,0.12,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919584,LV_UF-2,LV_UF,6769,0.6329,0,0.0,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919585,LV_UF-3,LV_UF,5679,0.4219,5,0.09,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919586,LV_UF-4,LV_UF,8559,0.6592,0,0.0,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919587,LV_NOT_UF-1,LV_NOT_UF,7922,0.66,1,0.01,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919588,LV_NOT_UF-2,LV_NOT_UF,5049,0.5896,1,0.02,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919589,LV_NOT_UF-3,LV_NOT_UF,8278,0.6503,0,0.0,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919590,LV_NOT_UF-4,LV_NOT_UF,8224,0.6469,2,0.02,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919591,LV_NOT_UF-5,LV_NOT_UF,7799,0.6411,0,0.0,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919592,LV_NOT_UF-6,LV_NOT_UF,6711,0.6232,1,0.01,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919593,SV-1,SV,8699,0.3098,214,2.46,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919594,SV-2,SV,7061,0.2462,226,3.2,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919595,SV-3,SV,10153,0.6718,1,0.01,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919596,SV-4,SV,8415,0.6564,0,0.0,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919597,SV-5,SV,9006,0.6592,0,0.0,Scanpy scrublet automatic bimodal simulation threshold
+GSM7919598,SV-6,SV,8012,0.6469,0,0.0,Scanpy scrublet automatic bimodal simulation threshold

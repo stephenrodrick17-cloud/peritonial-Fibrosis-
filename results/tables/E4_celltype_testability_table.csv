@@ -1,0 +1,22 @@
+Contrast,Description,Cell_Type,Target_Group,Target_Donors_ge20,Target_Total_Cells,Comparator_Group,Comparator_Donors_ge20,Comparator_Total_Cells,Testability_Status,Is_Testable
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,B Cell,LV_UF,2/4,404,LV_NOT_UF,3/6,748,UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3)),False
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,Dendritic Cell,LV_UF,4/4,639,LV_NOT_UF,6/6,5588,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,Fibroblast Myofibroblast,LV_UF,3/4,716,LV_NOT_UF,4/6,1215,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,Monocyte,LV_UF,3/4,560,LV_NOT_UF,5/6,6774,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,NK Cell,LV_UF,4/4,636,LV_NOT_UF,6/6,2074,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,Neutrophil,LV_UF,2/4,3420,LV_NOT_UF,1/6,43,UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3); Comparator LV_NOT_UF has only 1/6 donors with >=20 cells (need 2)),False
+LV_UF_vs_LV_NOT_UF,Ultrafiltration failure effect in long vintage effluent,T Cell,LV_UF,4/4,10333,LV_NOT_UF,6/6,18086,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_SV,UFF vs Short Vintage effluent,B Cell,LV_UF,2/4,404,SV,4/6,685,UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3)),False
+LV_UF_vs_SV,UFF vs Short Vintage effluent,Dendritic Cell,LV_UF,4/4,639,SV,6/6,10520,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_SV,UFF vs Short Vintage effluent,Fibroblast Myofibroblast,LV_UF,3/4,716,SV,5/6,1080,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_SV,UFF vs Short Vintage effluent,Monocyte,LV_UF,3/4,560,SV,6/6,13740,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_SV,UFF vs Short Vintage effluent,NK Cell,LV_UF,4/4,636,SV,6/6,1358,TESTABLE (Sufficient cell & donor coverage),True
+LV_UF_vs_SV,UFF vs Short Vintage effluent,Neutrophil,LV_UF,2/4,3420,SV,1/6,87,UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3); Comparator SV has only 1/6 donors with >=20 cells (need 2)),False
+LV_UF_vs_SV,UFF vs Short Vintage effluent,T Cell,LV_UF,4/4,10333,SV,6/6,15811,TESTABLE (Sufficient cell & donor coverage),True
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,B Cell,LV_NOT_UF,3/6,748,SV,4/6,685,TESTABLE (Sufficient cell & donor coverage),True
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,Dendritic Cell,LV_NOT_UF,6/6,5588,SV,6/6,10520,TESTABLE (Sufficient cell & donor coverage),True
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,Fibroblast Myofibroblast,LV_NOT_UF,4/6,1215,SV,5/6,1080,TESTABLE (Sufficient cell & donor coverage),True
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,Monocyte,LV_NOT_UF,5/6,6774,SV,6/6,13740,TESTABLE (Sufficient cell & donor coverage),True
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,NK Cell,LV_NOT_UF,6/6,2074,SV,6/6,1358,TESTABLE (Sufficient cell & donor coverage),True
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,Neutrophil,LV_NOT_UF,1/6,43,SV,1/6,87,UNDERPOWERED (Target LV_NOT_UF has only 1/6 donors with >=20 cells (need 3); Comparator SV has only 1/6 donors with >=20 cells (need 2)),False
+LV_NOT_UF_vs_SV,PD duration vintage effect without UFF,T Cell,LV_NOT_UF,6/6,18086,SV,6/6,15811,TESTABLE (Sufficient cell & donor coverage),True

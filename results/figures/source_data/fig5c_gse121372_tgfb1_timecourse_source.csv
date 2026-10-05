@@ -1,0 +1,14 @@
+Gene_Symbol,Probe_ID,Platform,control_6hr,TGFb1_6hr,log2FC_6hr,direction_6hr,control_24hr,TGFb1_24hr,log2FC_24hr,direction_24hr,det_pval_ctrl_6h,det_pval_tgf_6h,det_pval_ctrl_24h,det_pval_tgf_24h,replicate_design,analysis_note
+ISM1,NOT_ON_PLATFORM,GPL6255,,,,NOT_ASSAYED,,,,NOT_ASSAYED,,,,,n=1 per condition,NOT_ASSAYED_ON_PLATFORM; gene absent from Illumina HumanRef-8 v2.0
+FN1,ILMN_4516,GPL6255,224.38,329.3,0.5514,UP,171.24,314.78,0.8744,UP,4e-06,1e-06,1.6e-05,4e-06,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+EDIL3,ILMN_26444,GPL6255,18.69,23.05,0.2881,UNCHANGED,36.48,113.61,1.6125,UP,0.221751,0.162429,0.026836,0.012712,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+VCAN,ILMN_25778,GPL6255,1287.44,1075.59,-0.2592,UNCHANGED,4796.66,12310.9,1.3597,UP,0.0,0.0,0.0,0.0,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+COL3A1,ILMN_26128,GPL6255,19579.5,13722.8,-0.5127,DOWN,16547.0,22458.27,0.4407,UNCHANGED,0.0,0.0,0.0,0.0,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+COMP,ILMN_15049,GPL6255,444.87,1084.36,1.2835,UP,88.0,396.29,2.1583,UP,0.0,0.0,0.008475,0.0,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+COL8A1,ILMN_10408,GPL6255,15141.8,10984.95,-0.463,UNCHANGED,14464.89,20329.41,0.491,UNCHANGED,0.0,0.0,0.0,0.0,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+COL8A1,ILMN_20496,GPL6255,58.56,42.56,-0.4516,UNCHANGED,105.55,183.1,0.7889,UP,0.024011,0.026836,0.004237,0.004237,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+THBS3,ILMN_10000,GPL6255,688.75,568.15,-0.2773,UNCHANGED,670.23,1413.67,1.0756,UP,0.0,0.0,0.0,0.0,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+COL11A1,ILMN_1644,GPL6255,0.32,1.53,0.9424,UP,3.87,63.34,3.7226,UP,0.774011,0.864407,0.427966,0.039548,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+COL11A1,ILMN_3994,GPL6255,40.02,37.2,-0.1028,UNCHANGED,28.17,55.94,0.9651,UP,0.035311,0.038136,0.038136,0.05791,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+INHBA,ILMN_2320,GPL6255,39.68,19.43,-0.9937,DOWN,13.64,58.96,2.0343,UP,0.035311,0.227401,0.124294,0.045198,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible
+LOX,ILMN_11693,GPL6255,10686.63,12173.61,0.1879,UNCHANGED,4970.07,9012.01,0.8585,UP,0.0,0.0,0.0,0.0,n=1 per condition,DESCRIPTIVE_ONLY_n1; no statistical testing or P-values possible

@@ -1,0 +1,52 @@
+{
+  "stage4_ambient_recomputed_true_cp10k.csv": {
+    "path": "d:\\Peritoneal Project\\results\\tables\\stage4_ambient_recomputed_true_cp10k.csv",
+    "mtime_utc": "2026-10-05 09:03:17 UTC",
+    "sha256": "c6bd8bc553da05d891e62e499c0a6d1b2095afe34f0bfdb9da5fdd62df1f823e",
+    "bytes": 6332,
+    "shape": [
+      55,
+      9
+    ]
+  },
+  "stage4_primary_edger_pseudobulk.csv": {
+    "path": "D:\\Peritoneal Project\\results\\tables\\stage4_primary_edger_pseudobulk.csv",
+    "mtime_utc": "2026-10-05 16:08:32 UTC",
+    "sha256": "764caf1e414142a34b26bd5aa0936aafda3c61dce6b9c87bc9376bdd48c7c076",
+    "bytes": 33254,
+    "shape": [
+      165,
+      17
+    ]
+  },
+  "stage4_qc_ceiling_sensitivity_comparison.csv": {
+    "path": "d:\\Peritoneal Project\\results\\tables\\stage4_qc_ceiling_sensitivity_comparison.csv",
+    "mtime_utc": "2026-10-05 15:25:27 UTC",
+    "sha256": "c69fae349c519ae27b66f5a8153cf013fcdb76b077dbcfa7364d1b7b477947d4",
+    "bytes": 710,
+    "shape": [
+      9,
+      9
+    ]
+  },
+  "stage4_sensitivity_edger_pseudobulk.csv": {
+    "path": "d:\\Peritoneal Project\\results\\tables\\stage4_sensitivity_edger_pseudobulk.csv",
+    "mtime_utc": "2026-10-05 09:02:48 UTC",
+    "sha256": "6c92540213ca70cdd27870e245e7f6f24481c003fc83d5ad48c77f0d422c2977",
+    "bytes": 186782,
+    "shape": [
+      792,
+      17
+    ]
+  },
+  "stage4_primary_98_bh_family_sorted.csv": {
+    "path": "D:\\Peritoneal Project\\results\\tables\\stage4_primary_98_bh_family_sorted.csv",
+    "mtime_utc": "2026-10-05 15:25:32 UTC",
+    "sha256": "2b3809cfe8e25fe01c6e36e9811bbaa50dcdecf82aa8c461d1ce0fd4571d3ddd",
+    "bytes": 20758,
+    "shape": [
+      98,
+      17
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+dataset_accession,dataset_role,gsm_accession,sample_title,platform_gpl,organism
+GSE62928,Discovery (tissue),GSM1536406,EPS1,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536409,EPS4,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536408,EPS3,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536411,PD2,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536413,UREMIC2,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536407,EPS2,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536410,PD1,13158,Homo sapiens
+GSE62928,Discovery (tissue),GSM1536412,UREMIC1,13158,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575631,Short-term PD_Peritoneal cells from patient 24,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575637,Short-term PD_Peritoneal cells from patient 30,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575611,Short-term PD_Peritoneal cells from patient 4,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575617,Long-term PD_Peritoneal cells from patient 10,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575614,Long-term PD_Peritoneal cells from patient 7,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575620,Long-term PD_Peritoneal cells from patient 13,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575634,Short-term PD_Peritoneal cells from patient 27,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575640,Short-term PD_Peritoneal cells from patient 33,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575622,Long-term PD_Peritoneal cells from patient 15,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575619,Short-term PD_Peritoneal cells from patient 12,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575623,Long-term PD_Peritoneal cells from patient 16,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575639,Long-term PD_Peritoneal cells from patient 32,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575628,Short-term PD_Peritoneal cells from patient 21,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575616,Short-term PD_Peritoneal cells from patient 9,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575625,Short-term PD_Peritoneal cells from patient 18,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575627,Short-term PD_Peritoneal cells from patient 20,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575630,Short-term PD_Peritoneal cells from patient 23,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575608,Short-term PD_Peritoneal cells from patient 1,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575636,Short-term PD_Peritoneal cells from patient 29,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575633,Short-term PD_Peritoneal cells from patient 26,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575621,Long-term PD_Peritoneal cells from patient 14,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575612,Short-term PD_Peritoneal cells from patient 5,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575609,Long-term PD_Peritoneal cells from patient 2,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575624,Long-term PD_Peritoneal cells from patient 17,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575638,Short-term PD_Peritoneal cells from patient 31,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575613,Long-term PD_Peritoneal cells from patient 6,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575635,Long-term PD_Peritoneal cells from patient 28,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575610,Short-term PD_Peritoneal cells from patient 3,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575629,Long-term PD_Peritoneal cells from patient 22,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575626,Short-term PD_Peritoneal cells from patient 19,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575632,Short-term PD_Peritoneal cells from patient 25,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575618,Short-term PD_Peritoneal cells from patient 11,10558,Homo sapiens
+GSE125498,Bulk validation (effluent cells),GSM3575615,Long-term PD_Peritoneal cells from patient 8,10558,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919594,SV-2,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919597,SV-5,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919591,LV_NOT_UF-5,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919585,LV_UF-3,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919586,LV_UF-4,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919588,LV_NOT_UF-2,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919589,LV_NOT_UF-3,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919592,LV_NOT_UF-6,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919583,LV_UF-1,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919584,LV_UF-2,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919587,LV_NOT_UF-1,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919595,SV-3,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919598,SV-6,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919596,SV-4,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919590,LV_NOT_UF-4,24676,Homo sapiens
+GSE248762,scRNA-seq primary,GSM7919593,SV-1,24676,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755688,Short-term PD rep2,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755697,Long-term PD rep2,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755694,HC rep2,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755691,Short-term PD rep5,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755695,HC rep3,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755698,Long-term PD rep3,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755692,Short-term PD rep6,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755689,Short-term PD rep3,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755687,Short-term PD rep1,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755693,HC rep1,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755690,Short-term PD rep4,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755696,Long-term PD rep1,20301,Homo sapiens
+GSE130888,scRNA-seq secondary,GSM3755699,Long-term PD rep4,20301,Homo sapiens
+GSE130387,miRNA (mouse tissue),GSM3737328,PD_1,17107,synthetic construct; Mus musculus
+GSE130387,miRNA (mouse tissue),GSM3737331,Saline_1,17107,synthetic construct; Mus musculus
+GSE130387,miRNA (mouse tissue),GSM3737329,PD_2,17107,synthetic construct; Mus musculus
+GSE130387,miRNA (mouse tissue),GSM3737332,Saline_2,17107,synthetic construct; Mus musculus
+GSE130387,miRNA (mouse tissue),GSM3737330,PD_3,17107,synthetic construct; Mus musculus
+GSE130387,miRNA (mouse tissue),GSM3737333,Saline_3,17107,synthetic construct; Mus musculus
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240596,ExoC14-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240593,ExoC11-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240590,ExoC8-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240610,ExoT13-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240604,ExoT7-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240607,ExoT10-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240587,ExoC5-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240588,ExoC6-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240584,ExoC2-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240585,ExoC3-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240591,ExoC9-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240605,ExoT8-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240611,ExoT14-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240599,ExoT2-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240608,ExoT11-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240606,ExoT9-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240583,ExoC1-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240602,ExoT5-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240601,ExoT4-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240598,ExoT1-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240603,ExoT6-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240600,ExoT3-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240597,ExoC15-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240612,ExoT15-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240609,ExoT12-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240594,ExoC12-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240595,ExoC13-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240586,ExoC4-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240592,ExoC10-miRNA,16791,Homo sapiens
+GSE142819,Conflicting miRNA accession candidate 1 (PCOS plasma),GSM4240589,ExoC7-miRNA,16791,Homo sapiens
+GSE182736,miRNA (patient effluent exosomes - verified),GSM5535831,control_1,20301,Homo sapiens
+GSE182736,miRNA (patient effluent exosomes - verified),GSM5535833,control_3,20301,Homo sapiens
+GSE182736,miRNA (patient effluent exosomes - verified),GSM5535830,disease_3,20301,Homo sapiens
+GSE182736,miRNA (patient effluent exosomes - verified),GSM5535828,disease_1,20301,Homo sapiens
+GSE182736,miRNA (patient effluent exosomes - verified),GSM5535829,disease_2,20301,Homo sapiens
+GSE182736,miRNA (patient effluent exosomes - verified),GSM5535832,control_2,20301,Homo sapiens
+GSE121372,In vitro mesothelial cells +/- TGF-beta1,GSM3433437,HPMC_TGF-b1_6hr,6255,Homo sapiens
+GSE121372,In vitro mesothelial cells +/- TGF-beta1,GSM3433439,HPMC_TGF-b1_24hr,6255,Homo sapiens
+GSE121372,In vitro mesothelial cells +/- TGF-beta1,GSM3433436,HPMC_control_6hr,6255,Homo sapiens
+GSE121372,In vitro mesothelial cells +/- TGF-beta1,GSM3433438,HPMC_control_24hr,6255,Homo sapiens

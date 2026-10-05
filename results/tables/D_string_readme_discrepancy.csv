@@ -1,0 +1,7 @@
+Item,README_Claim,Executed_Value,Category
+STRING API Version,12.5,12.5,MATCH
+Functional PPI Edges (|E|),21 edges,21 edges,MATCH
+Physical Core Binding Edges,"3 edges (FN1-LOX, COL3A1-COL11A1, COMP-FN1)",3 edges,MATCH
+Isolated Hub Gene,ISM1 (Degree 0),ISM1 (Degree 0),MATCH
+GSE125498 Classifier In-sample AUC,0.869,0.877 (MaxMean) / 0.869 (Lowest-P),DIFFERENT
+GSE125498 Classifier 50x5 CV AUC,0.678,0.658 (MaxMean) / 0.678 (Lowest-P),DIFFERENT

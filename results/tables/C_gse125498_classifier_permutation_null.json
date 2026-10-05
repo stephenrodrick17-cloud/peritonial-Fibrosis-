@@ -1,0 +1,12 @@
+{
+  "Observed_CV_AUC": 0.6584615384615384,
+  "Permutation_Null_Mean": 0.44174115384615376,
+  "Permutation_Null_SD": 0.12405060414132091,
+  "Permutation_Null_95_CI": [
+    0.21393750000000003,
+    0.7081663461538461
+  ],
+  "N_Permutations": 200,
+  "Empirical_P_Value": 0.04975124378109453,
+  "Phenotype_Description": "Discrimination of short-term (SPD, N=20) vs long-term (LPD, N=13) PD effluent cells (PD-duration proxy, NOT EPS)"
+}

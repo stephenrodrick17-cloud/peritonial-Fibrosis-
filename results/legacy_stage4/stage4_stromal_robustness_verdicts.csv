@@ -1,0 +1,12 @@
+Gene,Evidence,Primary_log2FC,Primary_P,Primary_FDR,Sign_Primary,Sign_b_noUF3,Sign_c_noDbl,Sign_d_ge700g,Sign_e_ge50cells,Sign_f_HVG,LODO_Consistent,Verdict
+COL11A1,INSUFFICIENT DATA,-1.0346,0.5661,,-,—,—,—,—,—,—,INSUFFICIENT DATA
+THBS3,PASS,-1.5654,1.5335e-02,2.1032e-01,-,-,-,-,-,-,16/16,not robust
+COL3A1,PASS,-1.9563,8.5657e-02,3.4122e-01,-,-,-,-,-,-,16/16,not robust
+FN1,PASS,-2.9551,3.3633e-02,2.6703e-01,-,-,-,-,-,-,16/16,not robust
+COL8A1,PASS,-2.6583,6.7008e-03,1.2866e-01,-,-,-,-,-,-,16/16,not robust
+VCAN,PASS,-0.6481,5.4962e-01,7.5376e-01,-,-,-,-,-,+,15/16,not robust
+EDIL3,PASS,-2.609,4.2890e-02,2.6836e-01,-,-,-,-,-,-,15/16,not robust
+LOX,PASS,-1.7217,1.0211e-01,3.5768e-01,-,-,-,-,-,-,16/16,not robust
+INHBA,PASS,1.0787,1.9336e-01,4.6436e-01,+,+,+,+,+,+,15/16,not robust
+ISM1,INSUFFICIENT DATA,-1.0913,0.4675,,-,—,—,—,—,—,—,INSUFFICIENT DATA
+COMP,PASS,-4.0442,4.6414e-02,2.6836e-01,-,-,-,-,-,-,15/16,not robust

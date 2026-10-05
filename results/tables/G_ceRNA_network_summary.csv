@@ -1,0 +1,10 @@
+Category,Count
+Total Candidate ceRNA Axes (lncRNA -> miRNA -> Hub),3397
+Unique lncRNAs in Network,71
+Unique miRNAs Queried,10
+Unique Hub Genes Targeted,11
+Donors Evaluated in Co-expression (>= 50 stromal cells),10
+"Robust Axes with Nominal log2-CPM Spearman (rho>0, P<0.05)",75
+"Robust Axes with Nominal Partial Correlation (r>0, P<0.05)",40
+Axes from Low-Credibility Transcripts (MALAT1/NEAT1/SNHG*),916
+Axes from XIST (Excluded for donor sex bias),195

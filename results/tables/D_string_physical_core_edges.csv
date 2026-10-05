@@ -1,0 +1,4 @@
+gene1,gene2,physical_score,evidence
+FN1,LOX,0.848,Experimental binding (escore > 0.8)
+COL3A1,COL11A1,0.72,Experimental co-complex
+COMP,FN1,0.595,Binding interaction

@@ -1,0 +1,3 @@
+Panel,Panel_Role,N_Features,In_Sample_AUC,Statistic_A_PerRepeat_Pooled_Mean,Statistic_A_PerRepeat_Pooled_SD,Statistic_B_PerFold_Mean,Statistic_B_PerFold_SD,Statistic_C_LOOCV_Pooled,Statistic_D_Single_5Fold_Pooled,N_Permutations,Null_Mean_Statistic_A,Null_SD_Statistic_A,Permutations_ge_Observed,Empirical_P_Value,Significance_Label
+"7-gene panel (PRIMARY, pre-specified)",PRIMARY (pre-specified),7,0.8769,0.6585,0.0705,0.6845,0.2011,0.6769,0.5423,1000,0.4883,0.1268,87,0.08791,Not statistically significant (P >= 0.05)
+"5-gene panel (EXPLORATORY, post-hoc excluding FN1 & ISM1)",EXPLORATORY (defined after viewing results; no multiplicity correction),5,0.8538,0.6941,0.0447,0.7242,0.1862,0.7,0.7,1000,0.4829,0.1269,41,0.04196,Nominally significant (P < 0.05)

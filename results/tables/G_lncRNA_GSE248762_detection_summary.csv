@@ -1,0 +1,9 @@
+Metric,Count,Description
+GENCODE_v32_annotated_lncRNAs,17898,All annotated lncRNAs in GENCODE v32 GTF
+Present_in_10x_matrix_Ensembl,16762,LncRNAs matched by version-stripped Ensembl ID in GSE248762
+Expressed_ge1_stromal_cell,9452,"Detected with counts > 0 in >= 1 stromal cell (n=3,670 cells)"
+Passing_primary_filter_Ensembl,2228,Expressed in >= 1.0% cells (>=37 cells) and >= 2 donors
+Features_symbol_equals_Ensembl_ID,12021,Matrix features where Cell Ranger symbol is Ensembl ID
+Features_with_annotated_gene_symbol,4741,Matrix features with HGNC/annotated symbol (differs from Ensembl ID)
+Annotated_symbols_differing_from_GENCODE,623,Symbol in 10x matrix differs from GENCODE v32 gene_name (alias/discrepancy)
+Passing_primary_filter_Symbol_ENCORI,208,Passing primary filter and matching annotated HGNC symbol in ENCORI

@@ -1,0 +1,7 @@
+Column,Group,Dataset,Type
+control_1(norm),non_UF,GSE182736,normalized
+control_2(norm),non_UF,GSE182736,normalized
+control_3(norm),non_UF,GSE182736,normalized
+disease_1(norm),UF_failure,GSE182736,normalized
+disease_2(norm),UF_failure,GSE182736,normalized
+disease_3(norm),UF_failure,GSE182736,normalized
