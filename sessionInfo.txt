@@ -1,0 +1,24 @@
+R version 4.4.2 (2024-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_India.utf8  LC_CTYPE=English_India.utf8   
+[3] LC_MONETARY=English_India.utf8 LC_NUMERIC=C                  
+[5] LC_TIME=English_India.utf8    
+
+time zone: Asia/Calcutta
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] data.table_1.18.2.1 edgeR_4.4.2         limma_3.62.2       
+
+loaded via a namespace (and not attached):
+[1] compiler_4.4.2  grid_4.4.2      locfit_1.5-9.12 lattice_0.22-6 
+[5] statmod_1.5.1  

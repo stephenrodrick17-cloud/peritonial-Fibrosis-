@@ -1,0 +1,80 @@
+{
+  "Accession": "GSE130888",
+  "Title": "Single cell transcriptome of peritoneal cells",
+  "Summary": "To define the transcriptomic landscape of human mesothelial cells in response to PD, we analyzed single cell transcriptomes including cells dissociated from normal peritoneum (hernia surgery, n = 3), and peritoneal cells from effluent of short-term PD patients (PD less than 2 weeks, n = 6) and from long-term PD patients (PD more than 6 years, n = 4) ,we demonstrate that mesothelial cells develop hyperglycolysis, a metabolic alteration that is correlated with the development of peritoneal fibrosis.",
+  "Design": "We studied cells dissociated from normal peritoneum (hernia surgery, n = 3  ), and peritoneal cells from effluent of short-term PD patients (PD less than 2 weeks, n = 6) and from long-term PD patients (PD more than 6 years, n = 4)",
+  "Total_Samples": 13,
+  "Supplementary_Files": [
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/suppl/GSE130888_RAW.tar",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/suppl/GSE130888_barcodes.tsv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/suppl/GSE130888_features.tsv.gz",
+    "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/suppl/GSE130888_matrix.mtx.gz"
+  ],
+  "Samples": [
+    {
+      "GSM": "GSM3755687",
+      "Title": "Short-term PD rep1",
+      "Characteristics": "sample type: Peritoneal cells from effluent of short-term PD patients"
+    },
+    {
+      "GSM": "GSM3755688",
+      "Title": "Short-term PD rep2",
+      "Characteristics": "sample type: Peritoneal cells from effluent of short-term PD patients"
+    },
+    {
+      "GSM": "GSM3755689",
+      "Title": "Short-term PD rep3",
+      "Characteristics": "sample type: Peritoneal cells from effluent of short-term PD patients"
+    },
+    {
+      "GSM": "GSM3755690",
+      "Title": "Short-term PD rep4",
+      "Characteristics": "sample type: Peritoneal cells from effluent of short-term PD patients"
+    },
+    {
+      "GSM": "GSM3755691",
+      "Title": "Short-term PD rep5",
+      "Characteristics": "sample type: Peritoneal cells from effluent of short-term PD patients"
+    },
+    {
+      "GSM": "GSM3755692",
+      "Title": "Short-term PD rep6",
+      "Characteristics": "sample type: Peritoneal cells from effluent of short-term PD patients"
+    },
+    {
+      "GSM": "GSM3755693",
+      "Title": "HC rep1",
+      "Characteristics": "sample type: Cells dissociated from normal peritoneum"
+    },
+    {
+      "GSM": "GSM3755694",
+      "Title": "HC rep2",
+      "Characteristics": "sample type: Cells dissociated from normal peritoneum"
+    },
+    {
+      "GSM": "GSM3755695",
+      "Title": "HC rep3",
+      "Characteristics": "sample type: Cells dissociated from normal peritoneum"
+    },
+    {
+      "GSM": "GSM3755696",
+      "Title": "Long-term PD rep1",
+      "Characteristics": "sample type: Peritoneal cells from effluent of long-term PD patients"
+    },
+    {
+      "GSM": "GSM3755697",
+      "Title": "Long-term PD rep2",
+      "Characteristics": "sample type: Peritoneal cells from effluent of long-term PD patients"
+    },
+    {
+      "GSM": "GSM3755698",
+      "Title": "Long-term PD rep3",
+      "Characteristics": "sample type: Peritoneal cells from effluent of long-term PD patients"
+    },
+    {
+      "GSM": "GSM3755699",
+      "Title": "Long-term PD rep4",
+      "Characteristics": "sample type: Peritoneal cells from effluent of long-term PD patients"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "string_version": "12.5",
+  "species": 9606,
+  "score_threshold": 0.4,
+  "functional_query_url": "https://version-12-5.string-db.org/api/json/network?identifiers=ISM1%0DFN1%0DEDIL3%0DVCAN%0DCOL3A1%0DCOMP%0DCOL8A1%0DTHBS3%0DCOL11A1%0DINHBA%0DLOX&species=9606&required_score=400&network_type=functional&caller_identity=peritoneal_fibrosis_validation",
+  "physical_query_url": "https://version-12-5.string-db.org/api/json/network?identifiers=ISM1%0DFN1%0DEDIL3%0DVCAN%0DCOL3A1%0DCOMP%0DCOL8A1%0DTHBS3%0DCOL11A1%0DINHBA%0DLOX&species=9606&required_score=400&network_type=physical&caller_identity=peritoneal_fibrosis_validation",
+  "functional_unique_undirected_edges": 21,
+  "physical_unique_undirected_edges": 3,
+  "nodes_connected": [
+    "COL11A1",
+    "COL3A1",
+    "COL8A1",
+    "COMP",
+    "EDIL3",
+    "FN1",
+    "INHBA",
+    "LOX",
+    "THBS3",
+    "VCAN"
+  ],
+  "unconnected_nodes": [
+    "ISM1"
+  ]
+}

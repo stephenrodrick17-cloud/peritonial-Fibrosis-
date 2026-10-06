@@ -1,0 +1,29 @@
+{
+  "timestamp_addendum2_frozen_utc": "2026-10-05T06:24:32.019645+00:00",
+  "dataset": "GSE248762 (PD effluent scRNA-seq, 16 donors)",
+  "status": "Pre-registered BEFORE running sensitivity analyses (i) and (j)",
+  "sensitivity_i": {
+    "title": "No upper UMI/gene ceilings",
+    "description": "Re-run stromal pseudobulk without upper adaptive UMI or gene ceilings. Keep low floors (UMI >= 500, genes >= 200, mito <= 15%). Filter doublets using both Scrublet (<= 0.4390) and scDblFinder (singlets only). Includes primary stromal cells and ceiling-excluded stromal/mesothelial lineage cells.",
+    "floor_umi": 500.0,
+    "floor_genes": 200.0,
+    "mito_ceiling_pct": 15.0,
+    "scrublet_cutoff": 0.439,
+    "contrasts": [
+      "LV_UF_vs_LV_NOT_UF",
+      "LV_UF_vs_SV"
+    ],
+    "method": "edgeR quasi-likelihood across all 37,487 genes (filterByExpr + TMM over all genes)"
+  },
+  "sensitivity_j": {
+    "title": "One pooled fixed upper ceiling across all donors",
+    "description": "Re-run stromal pseudobulk applying a single fixed upper ceiling defined by the 99.5th percentile of pooled kept-cell UMI and 99.5th percentile of pooled kept-cell genes. Evaluates whether donor-specific adaptive 3-MAD ceilings introduced compositional bias.",
+    "percentile_ceiling": 99.5,
+    "contrasts": [
+      "LV_UF_vs_LV_NOT_UF",
+      "LV_UF_vs_SV"
+    ],
+    "method": "edgeR quasi-likelihood across all 37,487 genes (filterByExpr + TMM over all genes)"
+  },
+  "pre_set_interpretation_rule": "If for any hub gene |log2FC| shrinks by more than 50% (|log2FC_sens| < 0.5 * |log2FC_primary|) or flips sign in sensitivity (g), (i), or (j), label it QC-SENSITIVE and exclude it from any 'supported' claim."
+}

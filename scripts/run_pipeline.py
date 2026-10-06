@@ -62,6 +62,7 @@ def main():
     print_header("STAGE 4: SINGLE-CELL PSEUDOBULK edgeR & SENSITIVITY SUITE")
     run_cmd([RSCRIPT, os.path.join(SCRIPTS, "50_stage4_final.R")], "Stage 4 edgeR Final")
     run_cmd([sys.executable, os.path.join(SCRIPTS, "51_stage4_tables.py")], "Stage 4 Tables & Manifest")
+    run_cmd([sys.executable, os.path.join(SCRIPTS, "52_stage4_bh_family_sync.py")], "Stage 4 BH Family Sync (m=98)")
 
     # Stage 5: Regulatory Layers
     print_header("STAGE 5: REGULATORY AUDITS & DESCRIPTIVE VALIDATION")

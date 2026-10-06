@@ -11,3 +11,12 @@ __pycache__/
 repo_audit_report.md
 .Rhistory
 .RData
+cookies.txt
+test_ftp_matrix.mtx.gz
+test_matrix_curl.mtx.gz
+
+# Raw and intermediate single-cell binaries (>100MB)
+data/raw/*.tar
+data/processed/*.h5ad
+data/processed/GSE248762_filtered_samples/
+data/processed/GSE248762_blinded_samples/

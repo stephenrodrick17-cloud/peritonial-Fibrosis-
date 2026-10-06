@@ -1,0 +1,13 @@
+{
+  "file": "sealed/hub_counts.h5ad",
+  "current_sha256": "ebae9955d309c23de9a4429ede4935d4f982fc8d24c1918de4dc0609f00b22ae",
+  "size_bytes": 9499812,
+  "mtime_utc": "2026-10-04T18:32:33Z",
+  "original_sealing_sha256": "ebae9955d309c23de9a4429ede4935d4f982fc8d24c1918de4dc0609f00b22ae",
+  "original_hash_source": "The sealing hash came from the script's console output at 2026-10-04T18:32Z and no independent record exists.",
+  "hashes_match": true,
+  "timestamp_preflight_utc": "2026-10-05T05:44:02.988479+00:00",
+  "mtime_utc_from_os_stat": "2026-10-04T18:32:33.057416+00:00",
+  "mtime_local_from_os_stat": "2026-10-05T00:02:33.057416",
+  "sealing_execution_time_correction_note": "The previously typed string '2026-10-05T00:02:45Z' represented local wall-clock time (UTC+05:30) incorrectly labeled with Z. The exact filesystem mtime from os.stat is 2026-10-04T18:32:33.057416+00:00 (2026-10-05T00:02:33.057416 local time)."
+}
