@@ -175,10 +175,11 @@ print(f"Robust ENCORI interactions (clipExpNum >= 2): {len(robust_encori)}")
 st_primary_path = os.path.join(OUTDIR, "stage4_primary_edger_pseudobulk.csv")
 if os.path.exists(st_primary_path):
     st_prim = pd.read_csv(st_primary_path)
-    st_prim_sub = st_prim[(st_prim["Cell_Type"] == "stromal_mesothelial-lineage_unresolved") & 
+    st_prim_sub = st_prim[(st_prim["Cell_Type"] == "stromal / mesothelial-lineage (unresolved)") & 
                           (st_prim["Contrast"] == "LV_UF_vs_LV_NOT_UF")]
     hub_fc_map = st_prim_sub.set_index("Gene")["log2FC"].to_dict()
     hub_fdr_map = st_prim_sub.set_index("Gene")["BH_FDR"].to_dict()
+    print(f"Loaded stromal hub log2FCs for {len(hub_fc_map)} genes: {hub_fc_map}")
 else:
     hub_fc_map = {}
     hub_fdr_map = {}
@@ -241,6 +242,11 @@ df_cerna = df_cerna.sort_values(by=["lncRNA_stromal_counts", "lncRNA_miRNA_clipE
 net_path = os.path.join(OUTDIR, "G_ceRNA_network_predicted.csv")
 df_cerna.to_csv(net_path, index=False)
 print(f"Saved {net_path} ({len(df_cerna)} predicted interactions)")
+
+fig5b_src_path = os.path.join(r"d:\Peritoneal Project", "results", "figures", "source_data", "fig5b_cerna_regulatory_network_source.csv")
+if os.path.exists(os.path.dirname(fig5b_src_path)):
+    df_cerna.head(200).to_csv(fig5b_src_path, index=False)
+    print(f"Saved {fig5b_src_path} ({min(len(df_cerna), 200)} rows)")
 
 # Summary table: top lncRNA ceRNA nodes targeting hub genes
 cerna_summary = df_cerna.groupby("lncRNA_symbol").agg(
