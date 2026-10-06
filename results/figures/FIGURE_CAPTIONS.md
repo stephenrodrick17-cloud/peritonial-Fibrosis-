@@ -60,6 +60,15 @@ Paired source-data CSV files are stored in `results/figures/source_data/`.
 
 ---
 
+## Figure 7: Prior Literature Benchmark, Compartment Discordance, and Covariate Fragility (GSE125498 vs. GSE62928)
+
+**Image File:** [`results/figures/Fig_7_prior_literature_effluent_comparison.png`](Fig_7_prior_literature_effluent_comparison.png)  
+**Source Data CSV:** [`results/figures/source_data/fig7_prior_literature_effluent_comparison_source.csv`](source_data/fig7_prior_literature_effluent_comparison_source.csv)  
+
+**Caption:** Comparative multi-panel evaluation benchmarked against prior effluent literature (Ma et al., *Front Pharmacol* 2025; GSE125498, $N=33$: 20 SPD vs. 13 LPD). (A) Shed effluent leukocyte marker shifts across dialysis vintage. While Ma et al. reported increased monocyte infiltration in long-term PD, empirical transcriptomic profiling shows significantly decreased expression of monocyte marker CD14 ($\log_2\text{FC} = -0.38, P = 0.016$) alongside increased T-cell marker CD3E ($\log_2\text{FC} = +1.46, P = 0.003$) and neutrophil/Fc-receptor marker FCGR3B ($\log_2\text{FC} = +0.81, P = 0.024$). (B) Expression discordance of the 11 hub genes between discovery parietal tissue biopsy (GSE62928, $N=8$, orange) and shed cellular effluent (GSE125498, $N=33$, blue). Whereas VCAN and COL8A1 are strongly up-regulated in fibrotic tissue (+2.75 and +2.68 $\log_2\text{FC}$), VCAN is nominally decreased in late PD effluent (-0.52 $\log_2\text{FC}, P = 0.0244$), and COL8A1 is only nominally elevated on one probe (+0.75, $P = 0.0488$). Four hub genes (`COL11A1`, `COMP`, `EDIL3`, `INHBA`) are completely unassayed on GPL10558. (C) VCAN covariate adjustment fragility and leave-one-out sensitivity under probe Set B. Unadjusted nominal significance (-0.52, $P = 0.0244$) attenuates under CD14 adjustment ($P = 0.1429$) and CD3E adjustment ($P = 0.1955$), and is completely abolished under joint 3-marker adjustment (-0.09, $P = 0.6716$). In leave-one-out testing, dropping CD14 alone retains nominal significance ($P = 0.0395$), whereas dropping FCGR3B alone completely eliminates the effect (+0.02, $P = 0.9276$), proving that attenuation depends on CD14 and FCGR3B together. (D) Biological coupling between VCAN and CD14 across all 33 effluent samples (Pearson $r = +0.658, P = 3.10 \times 10^{-5}$; Spearman $\rho = +0.529, P = 0.0015$). This strong positive coupling indicates that VCAN's apparent down-regulation in late PD effluent reflects decreased shedding of viable monocytes rather than downregulation of the fibrotic matrisome.
+
+---
+
 ## Figure 10A: STRING v12.5 Functional Protein Association Network (Isolated PPI Evidence)
 
 **Image File:** [`results/figures/D_string_ppi_network.png`](D_string_ppi_network.png)  
