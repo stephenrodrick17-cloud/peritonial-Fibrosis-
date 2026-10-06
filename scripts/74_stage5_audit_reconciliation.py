@@ -766,7 +766,7 @@ def main():
     print("  Because LV_UF had only 1 expressing donor for COL11A1 and ISM1, both genes were marked INSUFFICIENT DATA")
     print("  across all contrasts, even for LV_NOT_UF vs SV.")
 
-    print("\nPRE-REGISTERED CONTRAST-SPECIFIC RULE:")
+    print("\nPRE-SPECIFIED (SELF-DOCUMENTED) CONTRAST-SPECIFIC RULE:")
     print("  Evidence status must be evaluated strictly for the two groups involved in each contrast:")
     print("    - LV_UF vs LV_NOT_UF: requires expressing donors in LV_UF >= 2 AND LV_NOT_UF >= 2")
     print("    - LV_UF vs SV:        requires expressing donors in LV_UF >= 2 AND SV >= 2")

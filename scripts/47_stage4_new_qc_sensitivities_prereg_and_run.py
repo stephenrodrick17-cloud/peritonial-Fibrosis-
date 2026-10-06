@@ -24,7 +24,7 @@ from scipy import sparse
 np.random.seed(42)
 
 print("=" * 80)
-print("STAGE 4: PRE-REGISTRATION & EXECUTION OF QC SENSITIVITIES (i) AND (j)")
+print("STAGE 4: PRE-SPECIFIED (SELF-DOCUMENTED) & EXECUTION OF QC SENSITIVITIES (i) AND (j)")
 print("=" * 80)
 
 # Helper function to get file provenance
@@ -41,9 +41,9 @@ def get_file_provenance(fpath):
     }
 
 # ---------------------------------------------------------------------------
-# 1. Pre-Register in provenance/stage4_addendum2.json
+# 1. Pre-Specify in provenance/stage4_addendum2.json
 # ---------------------------------------------------------------------------
-print("\n>>> 1. PRE-REGISTERING SENSITIVITIES (i) & (j) IN provenance/stage4_addendum2.json...")
+print("\n>>> 1. PRE-SPECIFYING (SELF-DOCUMENTED) SENSITIVITIES (i) & (j) IN provenance/stage4_addendum2.json...")
 addendum2_path = "provenance/stage4_addendum2.json"
 
 CUTOFF_SCRUBLET = 0.4390
@@ -54,7 +54,7 @@ MITO_CEILING = 15.0
 addendum2 = {
     "timestamp_addendum2_frozen_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
     "dataset": "GSE248762 (PD effluent scRNA-seq, 16 donors)",
-    "status": "Pre-registered BEFORE running sensitivity analyses (i) and (j)",
+    "status": "pre-specified (self-documented) BEFORE running sensitivity analyses (i) and (j)",
     "sensitivity_i": {
         "title": "No upper UMI/gene ceilings",
         "description": (
@@ -93,7 +93,7 @@ with open(addendum2_path, "w", encoding="utf-8") as f:
     json.dump(addendum2, f, indent=2)
 
 prov_add2 = get_file_provenance(addendum2_path)
-print(f"Pre-registration addendum successfully written to: {prov_add2['Path']}")
+print(f"Pre-specification (self-documented) addendum successfully written to: {prov_add2['Path']}")
 print(f"Filesystem mtime (UTC): {prov_add2['Mtime_UTC']}")
 print(f"SHA256:                 {prov_add2['SHA256']}")
 

@@ -110,8 +110,8 @@ df_test = pd.read_csv("results/tables/E4_celltype_testability_table.csv")
 print("\nE4_celltype_testability_table.csv (Full Minimum Evidence Evaluation):")
 print(df_test.to_string(index=False))
 
-# 7. Cell Types Failing Pre-Registered Evidence Rule
-print("\n--- B7: CELL TYPES FAILING PRE-REGISTERED MINIMUM EVIDENCE RULE ---")
+# 7. Cell Types Failing Pre-Specified Evidence Rule
+print("\n--- B7: CELL TYPES FAILING PRE-SPECIFIED (SELF-DOCUMENTED) MINIMUM EVIDENCE RULE ---")
 failed_rows = df_test[~df_test["Is_Testable"]]
 for idx, r in failed_rows.iterrows():
     print(f"  FAILED: Contrast '{r['Contrast']}' | Cell Type: '{r['Cell_Type']}' -> {r['Testability_Status']}")

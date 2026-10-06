@@ -282,14 +282,14 @@ print(f"\nSaved {OUT_H5AD}: {adata.n_obs} barcodes x {adata.n_vars} genes (hub g
 # ---------------------------------------------------------------------------
 obs = adata.obs.copy()
 order = [s["Sample_Title"] for s in samples]
-before = obs.assign(Status="Before QC (all barcodes)")
+before = obs.assign(Status="Deposited barcodes (>= ~500 UMI)")
 after = obs[obs["keep"]].assign(Status="After QC + doublet removal")
 dfp = pd.concat([before, after])
 dfp["donor_id"] = pd.Categorical(dfp["donor_id"], categories=order, ordered=True)
 thr = obs.groupby("donor_id", observed=True)[["umi_lo", "umi_hi", "genes_lo", "genes_hi"]].first().reindex(order)
 
 fig, axes = plt.subplots(3, 1, figsize=(24, 17))
-pal = {"Before QC (all barcodes)": "#94a3b8", "After QC + doublet removal": "#2563eb"}
+pal = {"Deposited barcodes (>= ~500 UMI)": "#94a3b8", "After QC + doublet removal": "#2563eb"}
 for ax, col, ylab, logy in [(axes[0], "n_counts", "UMI per cell (log10)", True),
                             (axes[1], "n_genes", "Genes per cell (log10)", True),
                             (axes[2], "pct_counts_mt", "Mitochondrial %", False)]:

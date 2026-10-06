@@ -19,13 +19,13 @@ from scipy import sparse
 np.random.seed(42)
 
 print("=" * 80)
-print("STAGE 4: PRE-REGISTRATION & PREPARATION FOR SENSITIVITY (g) & (h)")
+print("STAGE 4: PRE-SPECIFIED (SELF-DOCUMENTED) & PREPARATION FOR SENSITIVITY (g) & (h)")
 print("=" * 80)
 
 # ---------------------------------------------------------------------------
-# 1. Pre-Register Sensitivity (g) and (h) in provenance/stage4_addendum.json
+# 1. Pre-Specify Sensitivity (g) and (h) in provenance/stage4_addendum.json
 # ---------------------------------------------------------------------------
-print("\n>>> 1. PRE-REGISTERING SENSITIVITY (g) & (h) IN provenance/stage4_addendum.json...")
+print("\n>>> 1. PRE-SPECIFYING (SELF-DOCUMENTED) SENSITIVITY (g) & (h) IN provenance/stage4_addendum.json...")
 addendum_path = "provenance/stage4_addendum.json"
 
 CUTOFF_SCRUBLET = 0.4390
@@ -36,7 +36,7 @@ MITO_CEILING = 15.0
 addendum = {
     "timestamp_addendum_frozen_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
     "dataset": "GSE248762 (PD effluent scRNA-seq, 16 donors)",
-    "status": "Pre-registered BEFORE running sensitivity analyses (g) and (h)",
+    "status": "pre-specified (self-documented) BEFORE running sensitivity analyses (g) and (h)",
     "sensitivity_g": {
         "title": "Ceiling-rescued stromal/mesothelial lineage pseudobulk",
         "description": (
@@ -76,7 +76,7 @@ with open(addendum_path, "w", encoding="utf-8") as f:
 
 st_add = os.stat(addendum_path)
 mtime_add_utc = datetime.datetime.fromtimestamp(st_add.st_mtime, tz=datetime.timezone.utc).isoformat()
-print(f"Pre-registration addendum successfully written to: {addendum_path}")
+print(f"Pre-specification (self-documented) addendum successfully written to: {addendum_path}")
 print(f"Filesystem mtime (os.stat UTC): {mtime_add_utc}")
 
 # ---------------------------------------------------------------------------
@@ -277,5 +277,5 @@ def print_lib_sizes(label, counts_df, meta_df):
 print_lib_sizes("Sensitivity (g) Ceiling-Rescued Stromal", df_pb_g, donor_meta_g)
 print_lib_sizes("Sensitivity (h) High-Confidence Donors (>=50 cells & med genes >=1000)", df_pb_h, donor_meta_h)
 
-print("\nPre-registration and preparation of (g) and (h) completed successfully.")
+print("\nPre-specification (self-documented) and preparation of (g) and (h) completed successfully.")
 print("=" * 80)

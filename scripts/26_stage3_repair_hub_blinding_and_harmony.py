@@ -509,7 +509,7 @@ print(df_cluster_donor_div.to_string(index=False))
 # =====================================================================
 # STEP B6: DONOR X CELL TYPE TABLE & MINIMUM EVIDENCE TESTABILITY
 # =====================================================================
-print("\n--- STEP B6: Donor x Cell Type Contingency Table & Pre-Registered Testability ---")
+print("\n--- STEP B6: Donor x Cell Type Contingency Table & Pre-Specified (Self-Documented) Testability ---")
 ct_donor = pd.crosstab(adata.obs["donor_id"], adata.obs["cell_type"])
 ct_donor["Group"] = ct_donor.index.map(adata.obs.groupby("donor_id")["group"].first().to_dict())
 df_donor_ct_final = ct_donor.reset_index()

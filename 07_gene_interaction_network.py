@@ -188,14 +188,14 @@ for u, v in both_edges:
                            edge_color="#7C3AED", width=w, alpha=0.9, ax=ax)
 
 # Draw Nodes scaled to accommodate labels without clipping
-node_sizes = [3400 + deg_centrality[g] * 280 for g in G.nodes()]
+node_sizes = [4200 + deg_centrality[g] * 320 for g in G.nodes()]
 node_colors = [category_colors.get(meta_dict.get(g, {}).get("Matrisome_Category", ""), "#64748B") for g in G.nodes()]
 
 nx.draw_networkx_nodes(G, pos, node_size=node_sizes, node_color=node_colors,
                        edgecolors="#0F172A", linewidths=2.2, alpha=0.95, ax=ax)
 
 # Draw Labels with adjusted font size to prevent any clipping of long symbols (COL11A1, COL8A1)
-label_font_sizes = {g: 9.5 if len(g) >= 7 else 11.0 for g in G.nodes()}
+label_font_sizes = {g: 8.2 if len(g) >= 7 else 10.2 for g in G.nodes()}
 for g, (x, y) in pos.items():
     ax.text(x, y, g, fontsize=label_font_sizes[g], fontweight="bold",
             color="#FFFFFF", ha="center", va="center")

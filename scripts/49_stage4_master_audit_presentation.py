@@ -257,10 +257,10 @@ def main():
     print("=" * 100)
     add2_path = "provenance/stage4_addendum2.json"
     p, mt, h = get_file_info(add2_path)
-    print(f"Pre-Registration Addendum 2:\nPath:   {p}\nmtime:  {mt} (REGISTERED PRIOR TO RUN)\nSHA256: {h}\n")
+    print(f"Pre-Specification (Self-Documented) Addendum 2:\nPath:   {p}\nmtime:  {mt} (pre-specified (self-documented))\nSHA256: {h}\n")
     with open(add2_path, 'r') as f:
         add2_data = json.load(f)
-    print("Pre-registered rule:")
+    print("pre-specified (self-documented) rule:")
     print(f"  {add2_data['pre_set_interpretation_rule']}")
 
     ij_path = "results/tables/stage4_sensitivity_i_j_edger_pseudobulk.csv"
@@ -277,7 +277,7 @@ def main():
 
     qc_sens_genes = df_comp[df_comp["Classification"] == "QC-SENSITIVE"]["Gene"].tolist()
     qc_robust_genes = df_comp[df_comp["Classification"] == "ROBUST"]["Gene"].tolist()
-    print(f"\nSummary of Pre-Registered QC Ceiling Sensitivity Rule:")
+    print(f"\nSummary of pre-specified (self-documented) QC Ceiling Sensitivity Rule:")
     print(f"  QC-SENSITIVE Genes ({len(qc_sens_genes)}): {', '.join(qc_sens_genes)}")
     print(f"  ROBUST Genes ({len(qc_robust_genes)}):       {', '.join(qc_robust_genes)}")
     print("  Outcome: 8 of 9 evaluable hub genes fail the QC sensitivity rule (|log2FC| shrinks >50% or flips sign).")

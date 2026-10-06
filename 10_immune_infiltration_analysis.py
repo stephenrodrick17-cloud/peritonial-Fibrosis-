@@ -4,7 +4,7 @@ TASK 4: PERITONEAL IMMUNE CELL INFILTRATION & MICROENVIRONMENT DECONVOLUTION
 ==============================================================================
 Performs microenvironmental cell-type deconvolution across 12 peritoneal subsets
 using published reference signatures (Charoentong et al., Bindea et al., CIBERSORT,
-and published peritoneal myofibroblast scRNA-seq signatures from Rossi et al. 2021).
+and curated peritoneal myofibroblast literature signatures).
 Directly validates that no consensus hub gene is contained within the cell-type
 signatures (preventing circularity).
 
@@ -46,8 +46,8 @@ print(f"Sample breakdown: {n_cases} EPS Cases vs {n_controls} Controls (Total N 
 
 # 2. Curated Reference Cell-Type Signatures
 # Sources:
-# - Peritoneal Myofibroblasts: Rossi et al., Sci Adv 2021 & Kuppe et al., Nature 2021
-# - Immune subsets: Charoentong et al., Immunity 2017 & Bindea et al., Immunity 2013
+# - Peritoneal Myofibroblasts: Curated literature markers (not verified against Kuppe et al., Nature 2020 [kidney fibrosis])
+# - Immune subsets: Charoentong et al., Cell Reports 2017 & Bindea et al., Immunity 2013
 raw_signatures = {
     "M2 Macrophages": ["CD163", "MRC1", "MSR1", "VSIG4", "TGFB1", "IL10"],
     "Peritoneal Myofibroblasts": ["ACTA2", "TAGLN", "COL1A1", "COL1A2", "POSTN", "FAP"],
