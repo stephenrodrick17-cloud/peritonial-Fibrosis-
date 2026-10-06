@@ -1,0 +1,211 @@
+================================================================================
+FCGR3 PROBE COMPREHENSIVE LOCAL ALIGNMENT AUDIT (STAGE 6)
+================================================================================
+Aligner: Bio.Align.PairwiseAligner (Biopython)
+Scoring Parameters: {'mode': 'local', 'match_score': 1.0, 'mismatch_score': -1.0, 'open_gap_score': -2.0, 'extend_gap_score': -1.0}
+
+--- REFERENCE TRANSCRIPTS LOADED ---
+Accession & Version: NM_000569.8
+Header: >NM_000569.8 Homo sapiens Fc gamma receptor IIIa (FCGR3A), transcript variant 1, mRNA
+Length: 2100 bp
+
+Accession & Version: NM_000570.5
+Header: >NM_000570.5 Homo sapiens Fc gamma receptor IIIb (FCGR3B), transcript variant 2, mRNA
+Length: 2143 bp
+
+--- PROBES READ FROM GPL10558.annot.gz ---
+Probe ID: ILMN_1703679 | GPL10558 Symbol: FCGR3A | Accession: NM_000569
+Sequence: TTCCTTCCTGGTCCTGTTCTATGGTGGGGCTCCCTTGCCAGACTTCAGAC (Length: 50 bp)
+
+Probe ID: ILMN_2112580 | GPL10558 Symbol: FCGR3A | Accession: NM_000569
+Sequence: CAGAATGAGAAAGCCTGAGAAGAAAGAACCAACCACAAGCACACAGGAAG (Length: 50 bp)
+
+Probe ID: ILMN_1728639 | GPL10558 Symbol: FCGR3B | Accession: NM_000570
+Sequence: GAGCCCTCTAATGCTAGGAGTAGCAAATGGTCCTAGGAAGGGGACTGAGG (Length: 50 bp)
+
+Probe ID: ILMN_2134453 | GPL10558 Symbol: FCGR3B | Accession: NM_000570
+Sequence: ACGCTGTGAAACTTTCAAATCCTTCTTCAGTCAGTTCCAATGAGGTGGGG (Length: 50 bp)
+
+================================================================================
+PAIRWISE ALIGNMENT RESULTS ACROSS BOTH STRANDS (+ AND -) AND BOTH TRANSCRIPTS
+================================================================================
+
+################################################################################
+PROBE: ILMN_1703679 (Target: FCGR3A, Annot Acc: NM_000569)
+Sequence (5'->3'): TTCCTTCCTGGTCCTGTTCTATGGTGGGGCTCCCTTGCCAGACTTCAGAC
+################################################################################
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: + (Sense)
+  Alignment Score: 13.0
+  Transcript Coordinates (0-based): 2..35 (1-based: 3..35)
+  Probe Subsequence Aligned: 0..36 of 50 bp
+  Matches: 28 | Mismatches: 3 | Gaps (Indels): 7 (Target gaps: 5, Query gaps: 2)
+  Alignment Diagram:
+    target            2 TTACTTCC---TCCTG-TCTAGTCGGTTTGG-TCCCTT 35
+                      0 ||.|||||---|||||-||||-|-|||..||-|||||| 38
+    query             0 TTCCTTCCTGGTCCTGTTCTA-T-GGTGGGGCTCCCTT 36
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 14.0
+  Transcript Coordinates (0-based): 1459..1492 (1-based: 1460..1492)
+  Probe Subsequence Aligned: 6..42 of 50 bp
+  Matches: 26 | Mismatches: 7 | Gaps (Indels): 3 (Target gaps: 3, Query gaps: 0)
+  Alignment Diagram:
+    target         1459 AGTCTTCCAGGGGA-CTCTATC--AGAACTGGACCA 1492
+                      0 |||||..||.||||-|.|.|.|--|||||.||||||   36
+    query             6 AGTCTGGCAAGGGAGCCCCACCATAGAACAGGACCA   42
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: + (Sense)
+  Alignment Score: 9.0
+  Transcript Coordinates (0-based): 1328..1351 (1-based: 1329..1351)
+  Probe Subsequence Aligned: 21..48 of 50 bp
+  Matches: 19 | Mismatches: 4 | Gaps (Indels): 4 (Target gaps: 4, Query gaps: 0)
+  Alignment Diagram:
+    target         1328 TGCTGGGGAT--CTAG--AGAATTCAG 1351
+                      0 ||.|||||.|--||.|--|||.|||||   27
+    query            21 TGGTGGGGCTCCCTTGCCAGACTTCAG   48
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 15.0
+  Transcript Coordinates (0-based): 1706..1749 (1-based: 1707..1749)
+  Probe Subsequence Aligned: 5..50 of 50 bp
+  Matches: 32 | Mismatches: 10 | Gaps (Indels): 4 (Target gaps: 3, Query gaps: 1)
+  Alignment Diagram:
+    target         1706 AAGCCTGAGAAGAAAGAACCAAC-CAGA--AGCACACAGGAAGGAA 1749
+                      0 |||.|||..|||..||..|||.|-.|||--||.||-||||||||||   46
+    query             5 AAGTCTGGCAAGGGAGCCCCACCATAGAACAGGAC-CAGGAAGGAA   50
+
+################################################################################
+PROBE: ILMN_2112580 (Target: FCGR3A, Annot Acc: NM_000569)
+Sequence (5'->3'): CAGAATGAGAAAGCCTGAGAAGAAAGAACCAACCACAAGCACACAGGAAG
+################################################################################
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: + (Sense)
+  Alignment Score: 50.0
+  Transcript Coordinates (0-based): 1653..1703 (1-based: 1654..1703)
+  Probe Subsequence Aligned: 0..50 of 50 bp
+  Matches: 50 | Mismatches: 0 | Gaps (Indels): 0 (Target gaps: 0, Query gaps: 0)
+  Alignment Diagram:
+    target         1653 CAGAATGAGAAAGCCTGAGAAGAAAGAACCAACCACAAGCACACAGGAAG 1703
+                      0 ||||||||||||||||||||||||||||||||||||||||||||||||||   50
+    query             0 CAGAATGAGAAAGCCTGAGAAGAAAGAACCAACCACAAGCACACAGGAAG   50
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 12.0
+  Transcript Coordinates (0-based): 5..52 (1-based: 6..52)
+  Probe Subsequence Aligned: 0..43 of 50 bp
+  Matches: 33 | Mismatches: 9 | Gaps (Indels): 6 (Target gaps: 1, Query gaps: 5)
+  Alignment Diagram:
+    target            5 CTTCCTCCTGT-CTAGTCGGTTTGGTCCCTTTAGGGCTCCGGATATCT 52
+                      0 ||||||-.|||-||.||-||-|||||-.||||-...|||.||.|.||| 48
+    query             0 CTTCCT-GTGTGCTTGT-GG-TTGGT-TCTTT-CTTCTCAGGCTTTCT 43
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: + (Sense)
+  Alignment Score: 48.0
+  Transcript Coordinates (0-based): 1696..1746 (1-based: 1697..1746)
+  Probe Subsequence Aligned: 0..50 of 50 bp
+  Matches: 49 | Mismatches: 1 | Gaps (Indels): 0 (Target gaps: 0, Query gaps: 0)
+  Alignment Diagram:
+    target         1696 CAGAATGAGAAAGCCTGAGAAGAAAGAACCAACCAGAAGCACACAGGAAG 1746
+                      0 |||||||||||||||||||||||||||||||||||.||||||||||||||   50
+    query             0 CAGAATGAGAAAGCCTGAGAAGAAAGAACCAACCACAAGCACACAGGAAG   50
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 10.0
+  Transcript Coordinates (0-based): 750..772 (1-based: 751..772)
+  Probe Subsequence Aligned: 4..26 of 50 bp
+  Matches: 16 | Mismatches: 6 | Gaps (Indels): 0 (Target gaps: 0, Query gaps: 0)
+  Alignment Diagram:
+    target          750 CTTTCTGCTTGGTGATGGTACT 772
+                      0 ||.|.||||||..|.||||.||  22
+    query             4 CTGTGTGCTTGTGGTTGGTTCT  26
+
+################################################################################
+PROBE: ILMN_1728639 (Target: FCGR3B, Annot Acc: NM_000570)
+Sequence (5'->3'): GAGCCCTCTAATGCTAGGAGTAGCAAATGGTCCTAGGAAGGGGACTGAGG
+################################################################################
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: + (Sense)
+  Alignment Score: 44.0
+  Transcript Coordinates (0-based): 1511..1562 (1-based: 1512..1562)
+  Probe Subsequence Aligned: 0..50 of 50 bp
+  Matches: 48 | Mismatches: 2 | Gaps (Indels): 1 (Target gaps: 0, Query gaps: 1)
+  Alignment Diagram:
+    target         1511 GAGTCCTCTTAATGCTAGGAGTAGAAAATGGTCCTAGGAAGGGGACTGAGG 1562
+                      0 |||.||||-|||||||||||||||.||||||||||||||||||||||||||   51
+    query             0 GAGCCCTC-TAATGCTAGGAGTAGCAAATGGTCCTAGGAAGGGGACTGAGG   50
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 11.0
+  Transcript Coordinates (0-based): 110..133 (1-based: 111..133)
+  Probe Subsequence Aligned: 25..48 of 50 bp
+  Matches: 17 | Mismatches: 6 | Gaps (Indels): 0 (Target gaps: 0, Query gaps: 0)
+  Alignment Diagram:
+    target          110 TGCTACTTCTAGTTTCAGCTGGC 133
+                      0 |||||||.||||..|.||..|||  23
+    query            25 TGCTACTCCTAGCATTAGAGGGC  48
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: + (Sense)
+  Alignment Score: 46.0
+  Transcript Coordinates (0-based): 1554..1604 (1-based: 1555..1604)
+  Probe Subsequence Aligned: 0..50 of 50 bp
+  Matches: 48 | Mismatches: 2 | Gaps (Indels): 0 (Target gaps: 0, Query gaps: 0)
+  Alignment Diagram:
+    target         1554 GAGTCCTCTAATGCTAGGAGTAGAAAATGGTCCTAGGAAGGGGACTGAGG 1604
+                      0 |||.|||||||||||||||||||.||||||||||||||||||||||||||   50
+    query             0 GAGCCCTCTAATGCTAGGAGTAGCAAATGGTCCTAGGAAGGGGACTGAGG   50
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 11.0
+  Transcript Coordinates (0-based): 150..173 (1-based: 151..173)
+  Probe Subsequence Aligned: 25..48 of 50 bp
+  Matches: 17 | Mismatches: 6 | Gaps (Indels): 0 (Target gaps: 0, Query gaps: 0)
+  Alignment Diagram:
+    target          150 TGCTACTTCTAGTTTCAGCTGGC 173
+                      0 |||||||.||||..|.||..|||  23
+    query            25 TGCTACTCCTAGCATTAGAGGGC  48
+
+################################################################################
+PROBE: ILMN_2134453 (Target: FCGR3B, Annot Acc: NM_000570)
+Sequence (5'->3'): ACGCTGTGAAACTTTCAAATCCTTCTTCAGTCAGTTCCAATGAGGTGGGG
+################################################################################
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: + (Sense)
+  Alignment Score: 40.0
+  Transcript Coordinates (0-based): 1890..1935 (1-based: 1891..1935)
+  Probe Subsequence Aligned: 6..50 of 50 bp
+  Matches: 43 | Mismatches: 1 | Gaps (Indels): 1 (Target gaps: 0, Query gaps: 1)
+  Alignment Diagram:
+    target         1890 TGAAACTTTCAAATCCTTCATCATGTCAGTTCCAATGAGGTGGGG 1935
+                      0 |||||||||||||||||||.|||-|||||||||||||||||||||   45
+    query             6 TGAAACTTTCAAATCCTTCTTCA-GTCAGTTCCAATGAGGTGGGG   50
+
+Target: NM_000569.8 (FCGR3A, Length: 2100 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 12.0
+  Transcript Coordinates (0-based): 1067..1087 (1-based: 1068..1087)
+  Probe Subsequence Aligned: 27..48 of 50 bp
+  Matches: 17 | Mismatches: 3 | Gaps (Indels): 1 (Target gaps: 1, Query gaps: 0)
+  Alignment Diagram:
+    target         1067 AGAAATTG-AAGTTTCAGAGC 1087
+                      0 ||.|.|||-||||||||.|||   21
+    query            27 AGGATTTGAAAGTTTCACAGC   48
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: + (Sense)
+  Alignment Score: 48.0
+  Transcript Coordinates (0-based): 1927..1978 (1-based: 1928..1978)
+  Probe Subsequence Aligned: 0..50 of 50 bp
+  Matches: 50 | Mismatches: 0 | Gaps (Indels): 1 (Target gaps: 0, Query gaps: 1)
+  Alignment Diagram:
+    target         1927 ACGCTGTGAAACTTTCAAATCCTTCTTCATGTCAGTTCCAATGAGGTGGGG 1978
+                      0 |||||||||||||||||||||||||||||-|||||||||||||||||||||   51
+    query             0 ACGCTGTGAAACTTTCAAATCCTTCTTCA-GTCAGTTCCAATGAGGTGGGG   50
+
+Target: NM_000570.5 (FCGR3B, Length: 2143 bp) | Strand: - (Reverse Complement)
+  Alignment Score: 12.0
+  Transcript Coordinates (0-based): 1107..1127 (1-based: 1108..1127)
+  Probe Subsequence Aligned: 27..48 of 50 bp
+  Matches: 17 | Mismatches: 3 | Gaps (Indels): 1 (Target gaps: 1, Query gaps: 0)
+  Alignment Diagram:
+    target         1107 AGAAATTG-AAGTTTCAGAGC 1127
+                      0 ||.|.|||-||||||||.|||   21
+    query            27 AGGATTTGAAAGTTTCACAGC   48

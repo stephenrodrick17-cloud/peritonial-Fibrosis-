@@ -22,5 +22,6 @@ Lineage module scoring of these excluded cells showed the following distribution
 | SV-4        |        0 |                    11 |         0 |            1 |             0 |                   147 |        1 |            0 |    14 |
 | SV-5        |        1 |                    70 |        18 |            6 |             2 |                   944 |       92 |            2 |   210 |
 | SV-6        |       15 |                    28 |         1 |            1 |             4 |                   130 |        0 |            0 |     8 |
+## QC Specification Provenance & Limitations
 
-**Key Finding**: As expected for high-RNA metabolic states, stromal/mesothelial cells and activated macrophages are disproportionately represented among cells with high transcript counts. As prespecified, QC thresholds are held strictly frozen to prevent post-hoc bias, and this exclusion is documented as a limitation.
+**Key Finding**: As expected for high-RNA metabolic states, stromal/mesothelial cells and activated macrophages are disproportionately represented among cells with high transcript counts. As per the analysis plan (self-documented; committed after primary results), QC thresholds are held strictly frozen to prevent post-hoc bias, and this exclusion is documented as a limitation.

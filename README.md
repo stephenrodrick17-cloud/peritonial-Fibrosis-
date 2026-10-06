@@ -42,7 +42,7 @@
 | **External Cohort (GSE125498)** | 7-Gene Panel Cross-Validation | **$\text{AUC}_{\text{CV}} = \mathbf{0.678}$** ($\text{SD } 0.058$ across repeats) | 50-Repeat 5-Fold Stratified CV with Pipeline Scaler (Primary) | **Lead Generalization Metric:** True out-of-fold performance |
 | **Clinical Diagnostic Nomogram** | 5-Gene Nomogram C-index | **$\text{C-index} = \mathbf{0.819}$** | Statsmodels `Logit` ($95\%\text{ CI: } [0.623, 0.968]$) | Multivariable point-scoring system; 5-fold CV-AUC $= 0.550$ ($\text{SD } 0.178$) |
 | **Preranked GSEA Pathway** | EMT Hallmark Enrichment | **$\text{NES} = +\mathbf{3.203}, \text{FDR} < 0.001$** | Exact One-Sided Permutation: **$P_{\text{perm}} = 1/70 = \mathbf{0.0143}$** | EMT ranked #1 hallmark across all 70 permutations |
-| **Microenvironment Infiltration** | Peritoneal Myofibroblasts | **$U = 16.0, P = 0.0286$** | Exact Two-Sided Permutation: **$P_{\text{perm}} = 2/70 = \mathbf{0.0286}$** ($\text{FDR} = 0.1714$) | Stromal myofibroblast expansion confirmed in EPS tissue (exploratory) |
+| **Microenvironment Infiltration** | Peritoneal Myofibroblasts | **$U = 16.0, P = 0.0286$** | Exact Two-Sided Permutation: **$P_{\text{perm}} = 2/70 = \mathbf{0.0286}$** ($\text{FDR} = 0.1714$) | Stromal myofibroblast expansion in EPS tissue (exploratory; signature curated from literature: ACTA2, TAGLN, COL1A1, COL1A2, POSTN, FAP; not verified against Kuppe et al. [Nature 2020, DOI: 10.1038/s41586-020-2941-1; human kidney fibrosis] supp tables) |
 | **Co-Expression Baseline** | Noise Correlation Rate ($N=8$) | **$1.68\%$** at $|r| \ge 0.85$ | 99,993 non-hub random gene pairs (all genes) | Hub co-expression ($76.36\%$) vs DEG ($5.47\%$) & Salmon ($9.27\%$) baselines |
 
 ---
@@ -72,7 +72,7 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 
 1. **`FN1` (Fibronectin 1):** Essential master scaffold glycoprotein connecting cell-surface integrins to fibrillar collagen networks; primary biomarker of mesothelial-to-mesenchymal transition (MMT; $\log_2\text{FC} = +1.93, P = 0.0053$ in discovery tissue).
 2. **`COL3A1` (Collagen Type III Alpha 1):** Major structural fibrillar collagen deposited during early granulation tissue formation and progressive interstitial fibrosis ($\log_2\text{FC} = +2.84, P = 0.00084$).
-3. **`COL8A1` (Collagen Type VIII Alpha 1):** Short-chain non-fibrillar collagen expressed in vascular basement membranes; drives neoangiogenesis and submesothelial thickening ($\log_2\text{FC} = +2.68, P = 0.0074$ in tissue, $\log_2\text{FC} = +0.75, P = 0.049$ in effluent).
+3. **`COL8A1` (Collagen Type VIII Alpha 1):** Short-chain non-fibrillar collagen expressed in vascular basement membranes; drives neoangiogenesis and submesothelial thickening ($\log_2\text{FC} = +2.68, P = 0.0074$ in tissue; in effluent, nominal with one of two probes selected by lowest P [`ILMN_2402392`: $\log_2\text{FC} = +0.75, P = 0.0488$, Bonferroni-for-2-probes $P = 0.0976$], while the other probe [`ILMN_1685433`] showed $\log_2\text{FC} = +0.37, P \approx 0.4$ [$P = 0.3920$]).
 4. **`COL11A1` (Collagen Type XI Alpha 1):** Minor fibrillar collagen regulating fibrillogenesis diameter and structural tensile strength in dense fibrotic lesions ($\log_2\text{FC} = +3.79, P = 0.00078$).
 5. **`VCAN` (Versican):** Large chondroitin sulfate proteoglycan that binds hyaluronan and chemokines, regulating inflammatory leukocyte infiltration and stromal expansion ($\log_2\text{FC} = +2.75, P = 0.0030$).
 6. **`COMP` (Cartilage Oligomeric Matrix Protein):** Pentameric extracellular matrix glycoprotein promoting collagen fibril assembly and stabilization ($\log_2\text{FC} = +4.08, P = 0.00062$).
@@ -88,7 +88,7 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 
 ### Phase 1: Microarray Preprocessing, Quality Control & Discovery Differential Expression
 
-* **Cohort Design:** Discovery transcriptomics utilized human parietal peritoneal biopsy samples from **GSE62928** (Affymetrix Human Genome U133 Plus 2.0 Array, $N = 8$: 4 patients with severe Encapsulating Peritoneal Sclerosis undergoing surgical enterolysis vs. 4 non-EPS uremic/peritoneal dialysis controls).
+* **Cohort Design:** Discovery transcriptomics utilized human parietal peritoneal biopsy samples from **GSE62928** (Affymetrix Human Genome U133 Plus 2.0 Array, $N = 8$: 4 patients with severe Encapsulating Peritoneal Sclerosis undergoing surgical enterolysis vs. 4 non-EPS controls, comprising 2 patients undergoing first implantation of a peritoneal dialysis catheter [`PD1`, `PD2`] and 2 uremic patients without history of PD undergoing abdominal surgery for non-peritoneal problems [`UREMIC1`, `UREMIC2`]).
 * **Probe-to-Gene Mapping & Gene Universes:**
   - Probe-level differential expression evaluated 22,049 unique genes (best-probe-by-P-value collapse).
   - WGCNA and co-expression modeling used the `MaxMean` collapsed matrix across 20,940 unique gene symbols.
@@ -179,26 +179,25 @@ Consensus ML Feature Selection Distribution:
 ---
 
 ### Master Reconciliation Table of All Discrimination Metrics
+ 
+| Cohort / Model | Feature(s) / Predictor | Probe ID Used | $N$ | Validation Method | AUC / C-index | 95% CI / range of 50-repeat pooled AUCs | Methodological Assessment |
+| :--- | :--- | :--- | :---: | :--- | :---: | :---: | :--- |
+| **GSE125498 (Effluent)** | `VCAN` (Single Gene) | `ILMN_1687301` | 33 | Empirical ROC | **0.723** ($P=0.034$) | [0.529, 0.892] | Inverted CI; lower in late PD effluent cells (unadjusted limma moderated $P=0.0244$; VCAN's decrease in long-term PD effluent cells is fragile and depends on probe set and adjustment method: attenuated or abolished under CD14/CD3E/FCGR3B marker adjustment, preserved under 5-lineage-score adjustment) |
+| **GSE125498 (Effluent)** | `COL8A1` (Single Gene, Lowest-P) | `ILMN_2402392` | 33 | Empirical ROC | **0.665** ($P=0.117$) | [0.461, 0.844] | Nominal with one of two probes (selected by lowest P; limma $P=0.0488$, Bonferroni-for-2-probes $P=0.0976$); the other probe showed log2FC +0.37, P ≈ 0.4 (highest-mean probe `ILMN_1685433`: $\text{AUC}=0.581$, limma $P=0.3920$) |
+| **GSE125498 (Effluent)** | `FN1` (Single Gene, Lowest-P) | `ILMN_1778237` | 33 | Empirical ROC | **0.612** ($P=0.294$) | [0.400, 0.822] | Modest upregulation trend in late effluent cells (limma $P=0.269$; highest-mean probe `ILMN_2366463`: $\text{AUC}=0.625$, limma $P=0.319$) |
+| **GSE125498 (Effluent)** | `THBS3` (Single Gene) | `ILMN_1804663` | 33 | Empirical ROC | **0.596** ($P=0.367$) | [0.411, 0.787] | Inverted CI; lower in late PD effluent cells (limma $P=0.418$) |
+| **GSE125498 (Effluent)** | `COL3A1` (Single Gene) | `ILMN_1773079` | 33 | Empirical ROC | **0.535** ($P=0.754$) | [0.330, 0.748] | Fibrillar matrix trend in late dialysis |
+| **GSE125498 (Effluent)** | `ISM1` (Single Gene) | `ILMN_3239288` | 33 | Empirical ROC | **0.527** ($P=0.811$) | [0.306, 0.732] | Matricellular vascular trend |
+| **GSE125498 (Effluent)** | `LOX` (Single Gene) | `ILMN_1695880` | 33 | Empirical ROC | **0.496** ($P=0.985$) | [0.285, 0.696] | Inactive crosslinker in shed cellular fraction |
+| **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | Multi-probe | 33 | In-Sample Logistic Fit | **0.869** | [0.710, 0.992] | **In-Sample Optimistic Fit (Subject to optimism)** |
+| **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | Multi-probe | 33 | 50x 5-Fold Stratified CV (Scaled) | **0.678** ($\text{SD } 0.058$) | [0.512, 0.773]* | **Lead Generalization Metric (Primary Pipeline Scaled)** |
+| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | Multi-probe | 33 | 50x 5-Fold Stratified CV (Unscaled) | **0.684** ($\text{SD } 0.063$) | [0.523, 0.781]* | Supplementary unscaled model (per-repeat pooled) |
+| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | Multi-probe | 33 | Leave-One-Out CV (Scaled) | **0.658** | N/A | Pooled LOOCV discrimination |
+| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | Multi-probe | 33 | Single Seed-42 5-Fold CV (Scaled) | **0.592** (fold mean $0.617$, $\text{SD } 0.061$) | N/A | Single split generalization |
+| **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | Multi-probe | 33 | In-Sample `Logit` | **0.819** | [0.623, 0.968] | **Nomogram C-index (Fitted unpenalized model)** |
+| **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | Multi-probe | 33 | 5-Fold Stratified CV (L2 Regularized) | **0.550** ($\text{SD } 0.178$) | [0.322, 0.759] | Out-of-fold generalization drop ($\Delta\text{AUC} = 0.269$) |
 
-| Cohort / Model | Feature(s) / Predictor | $N$ | Validation Method | AUC / C-index | 95% Confidence Interval | Methodological Assessment |
-| :--- | :--- | :---: | :--- | :---: | :---: | :--- |
-| **GSE125498 (Effluent)** | `VCAN` (Single Gene) | 33 | Empirical ROC | **0.723** ($P=0.034$) | [0.108, 0.471]* | Direction-adjusted (lower in late PD effluent cells) |
-| **GSE125498 (Effluent)** | `COL8A1` (Single Gene) | 33 | Empirical ROC | **0.665** ($P=0.117$) | [0.461, 0.844] | Limma $P=0.049$; concordant upregulation in late PD |
-| **GSE125498 (Effluent)** | `FN1` (Single Gene) | 33 | Empirical ROC | **0.612** ($P=0.294$) | [0.400, 0.822] | Upregulated in effluent myofibroblasts |
-| **GSE125498 (Effluent)** | `THBS3` (Single Gene) | 33 | Empirical ROC | **0.596** ($P=0.367$) | [0.213, 0.589]* | Direction-adjusted (lower in late PD effluent cells) |
-| **GSE125498 (Effluent)** | `COL3A1` (Single Gene) | 33 | Empirical ROC | **0.535** ($P=0.754$) | [0.330, 0.748] | Fibrillar matrix trend in late dialysis |
-| **GSE125498 (Effluent)** | `ISM1` (Single Gene) | 33 | Empirical ROC | **0.527** ($P=0.811$) | [0.306, 0.732] | Matricellular vascular trend |
-| **GSE125498 (Effluent)** | `LOX` (Single Gene) | 33 | Empirical ROC | **0.496** ($P=0.985$) | [0.285, 0.696] | Inactive crosslinker in shed cellular fraction |
-| **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | 33 | In-Sample Logistic Fit | **0.869** | [0.710, 0.992] | **In-Sample Optimistic Fit (Subject to optimism)** |
-| **GSE125498 (Primary 7-Gene Panel)** | 7 Profiled Hub Genes | 33 | 50x 5-Fold Stratified CV (Scaled) | **0.678** ($\text{SD } 0.058$) | [0.512, 0.773]** | **Lead Generalization Metric (Primary Pipeline Scaled)** |
-| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | 50x 5-Fold Stratified CV (Unscaled) | **0.684** ($\text{SD } 0.063$) | [0.523, 0.781]** | Supplementary unscaled model (per-repeat pooled) |
-| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | Leave-One-Out CV (Scaled) | **0.658** | N/A | Pooled LOOCV discrimination |
-| **GSE125498 (Supplementary 7-Gene)** | 7 Profiled Hub Genes | 33 | Single Seed-42 5-Fold CV (Scaled) | **0.592** (fold mean $0.617$, $\text{SD } 0.061$) | N/A | Single split generalization |
-| **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | 33 | In-Sample `Logit` | **0.819** | [0.623, 0.968] | **Nomogram C-index (Fitted unpenalized model)** |
-| **GSE125498 (Secondary 5-Gene Nomogram)** | `VCAN, COL8A1, FN1, ISM1, COL3A1` | 33 | 5-Fold Stratified CV (L2 Regularized) | **0.550** ($\text{SD } 0.178$) | [0.322, 0.759] | Out-of-fold generalization drop ($\Delta\text{AUC} = 0.269$) |
-
-*\*Note: 95% CIs for VCAN and THBS3 reflect raw unadjusted score direction before inversion.*  
-*\*\*Range of per-repeat pooled AUCs across 50 repeats. All models use $C=1.0$ and L2 penalty.*
+*\*Range of per-repeat pooled AUCs across 50 repeats. All models use $C=1.0$ and L2 penalty. Note: AUC direction for VCAN/THBS3 was set after observing the data; estimates are optimistic.*
 
 ![ROC Analysis Multi-Panel](results/figures/Hub_02b_roc_analysis.png)
 * **Figure 8: External Validation ROC Curves.** (A) Single-gene ROC curves in GSE125498 ($N=33$). (B) Multi-gene composite ROC comparison demonstrating the gap between in-sample fit ($\text{AUC} = 0.869$), primary pipeline-scaled 50-repeat 5-fold cross-validation ($\text{AUC}_{\text{CV}} = \mathbf{0.678}$, $\text{SD } 0.058$ across repeats; $\text{LOOCV } \text{AUC} = 0.658$), and single 5-fold CV ($\text{AUC} = 0.592$).
@@ -207,17 +206,17 @@ Consensus ML Feature Selection Distribution:
 
 ### Tissue vs. Effluent Expression Discordance Analysis
 
-| Gene Symbol | Discovery Biopsy (GSE62928, $N=8$) | Effluent Cells (GSE125498, $N=33$) | Directional Concordance | Biological & Compartmental Rationale |
-| :--- | :--- | :--- | :--- | :--- |
-| **`COL8A1`** | $\log_2\text{FC} = +2.68, P = 0.0074$ | $\log_2\text{FC} = +0.75, P = 0.049$ | **Concordant (UP)** | Robust vascular and submesothelial matrix marker across both tissue and effluent. |
-| **`FN1`** | $\log_2\text{FC} = +1.93, P = 0.0053$ | $\log_2\text{FC} = +0.41, P = 0.269$ | **Concordant (UP)** | Preserved upregulation trend in effluent myofibroblasts. |
-| **`COL3A1`** | $\log_2\text{FC} = +2.84, P = 0.00084$ | $\log_2\text{FC} = +0.19, P = 0.616$ | **Concordant (UP)** | Fibrillar collagen upregulated in late dialysis effluent. |
-| **`ISM1`** | $\log_2\text{FC} = +1.90, P = 0.0012$ | $\log_2\text{FC} = +0.03, P = 0.904$ | **Concordant (UP)** | Modest concordant trend in microvascular endothelial transcripts. |
-| **`LOX`** | $\log_2\text{FC} = +2.16, P = 0.0033$ | $\log_2\text{FC} = +0.02, P = 0.976$ | **Flat / Neutral** | Secreted crosslinking enzyme; cellular transcript unchanged in shed effluent cells. |
-| **`VCAN`** | $\log_2\text{FC} = +2.75, P = 0.0030$ | $\log_2\text{FC} = -0.52, P = 0.024$ | **Discordant (DOWN)** | **Compartmental Duality:** Proteoglycan matrix expands in fixed parietal tissue but is shed/depleted in cellular effluent fraction. |
-| **`THBS3`** | $\log_2\text{FC} = +1.16, P = 0.019$ | $\log_2\text{FC} = -0.20, P = 0.418$ | **Discordant (DOWN)** | Glycoprotein anchored to ECM scaffold; reduced transcript in free effluent leukocytes. |
-| **`COMP`** | $\log_2\text{FC} = +4.08, P = 0.00062$ | *Unmapped on GPL10558* | **Tissue-Only** | Pentameric matrix protein highly elevated in severe fibrotic tissue. |
-| **`COL11A1`** | $\log_2\text{FC} = +3.79, P = 0.00078$ | *Unmapped on GPL10558* | **Tissue-Only** | Fibrillar matrix organizer elevated in surgical EPS tissue. |
+| Gene Symbol | Probe ID Used | Discovery Biopsy (GSE62928, $N=8$) | Effluent Cells (GSE125498, $N=33$) | Directional Concordance | Biological & Compartmental Rationale |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **`COL8A1`** | `ILMN_2402392` (Lowest-P) / `ILMN_1685433` (MaxMean) | $\log_2\text{FC} = +2.68, P = 0.0074$ | $\log_2\text{FC} = +0.75, P = 0.049$ (Lowest-P) / $+0.37, P = 0.392$ (MaxMean) | **Nominal (Probe-Dependent)** | Nominal with one of two probes (selected by lowest P; Bonferroni $P = 0.0976$); the other probe showed log2FC +0.37, P ≈ 0.4. |
+| **`FN1`** | `ILMN_1778237` (Lowest-P) / `ILMN_2366463` (MaxMean) | $\log_2\text{FC} = +1.93, P = 0.0053$ | $\log_2\text{FC} = +0.41, P = 0.269$ (Lowest-P) / $+0.32, P = 0.319$ (MaxMean) | **Concordant (UP)** | Preserved upregulation trend in late effluent cells; non-significant after multiple testing. |
+| **`COL3A1`** | `ILMN_1773079` | $\log_2\text{FC} = +2.84, P = 0.00084$ | $\log_2\text{FC} = +0.19, P = 0.616$ | **Concordant (UP)** | Fibrillar collagen upregulated in late dialysis effluent. |
+| **`ISM1`** | `ILMN_3239288` | $\log_2\text{FC} = +1.90, P = 0.0012$ | $\log_2\text{FC} = +0.03, P = 0.904$ | **Concordant (UP)** | Modest concordant trend in microvascular endothelial transcripts. |
+| **`LOX`** | `ILMN_1695880` | $\log_2\text{FC} = +2.16, P = 0.0033$ | $\log_2\text{FC} = +0.02, P = 0.976$ | **Flat / Neutral** | Secreted crosslinking enzyme; cellular transcript unchanged in shed effluent cells. |
+| **`VCAN`** | `ILMN_1687301` | $\log_2\text{FC} = +2.75, P = 0.0030$ | $\log_2\text{FC} = -0.52, P = 0.024$ | **Discordant (DOWN)** | VCAN's decrease in long-term PD effluent cells is fragile and depends on probe set and adjustment method: attenuated or abolished under CD14/CD3E/FCGR3B marker adjustment, preserved under 5-lineage-score adjustment. |
+| **`THBS3`** | `ILMN_1804663` | $\log_2\text{FC} = +1.16, P = 0.019$ | $\log_2\text{FC} = -0.20, P = 0.418$ | **Discordant (DOWN)** | Glycoprotein anchored to ECM scaffold; reduced transcript in free effluent cells. |
+| **`COMP`** | *Unmapped* | $\log_2\text{FC} = +4.08, P = 0.00062$ | *Unmapped on GPL10558* | **Tissue-Only** | Pentameric matrix protein highly elevated in severe fibrotic tissue. |
+| **`COL11A1`** | *Unmapped* | $\log_2\text{FC} = +3.79, P = 0.00078$ | *Unmapped on GPL10558* | **Tissue-Only** | Fibrillar matrix organizer elevated in surgical EPS tissue. |
 
 ---
 
@@ -245,12 +244,12 @@ An integrated molecular interaction network was constructed combining live-queri
 * **Co-Expression Edges ($N=8$ Discovery):** 42 / 55 (76.36%) hub gene pairs exhibit $|r| \ge 0.85$ (42 edges at $|r| \ge 0.85, \text{FDR} < 0.01$).
 * **Co-Expression Noise Baselines:**
   - **All Genes (Non-hub random pairs):** **$1.68\%$ of random gene pairs exceed $|r| \ge 0.85$ purely by chance** at $N=8$ (1,682 / 99,993 sampled pairs).
-  - **Among 367 Pro-Fibrotic DEGs:** **$5.47\%$ of pairs exceed $|r| \ge 0.85$** (3,062 / 55,945 pairs; $14.0\times$ enrichment for hubs vs DEG baseline).
+  - **Among 367 Pro-Fibrotic DEGs:** **$5.47\%$ of pairs exceed $|r| \ge 0.85$** (3,062 / 55,945 pairs; $14.0\times$ enrichment for hubs vs DEG baseline; $55,945 = \binom{335}{2}$ pairs from the 335 pro-fibrotic DEGs present in the GSE62928 MaxMean expression matrix).
   - **Among 604 Salmon-Module Genes:** **$9.27\%$ of pairs exceed $|r| \ge 0.85$** (16,885 / 182,106 pairs; $8.2\times$ enrichment for hubs vs Salmon-module baseline).
   - **Methodological Note:** Hub co-expression is partly by construction because hub genes were selected from the co-expressed WGCNA Salmon module.
 
 ![PPI Interaction Network](results/figures/Hub_01_ppi_gene_interaction_network.png)
-* **Figure 10: Integrated STRING PPI & Co-Expression Network.** High-confidence functional association STRING v12.5 interactions (score $\ge 0.400$, 21 edges; physical network has 3 edges; `ISM1` has 0 edges) and empirical co-expression edges (42 edges) among the 11 consensus hub genes.
+* **Figure 10: Integrated STRING PPI & Co-Expression Network.** Dual-evidence interaction network combining live STRING v12.5 functional protein associations (score $\ge 0.400$, 21 edges; solid lines) with empirical tissue co-expression edges (42 edges at $|r| \ge 0.85, \text{FDR} < 0.01$; dashed green lines) among the 11 consensus hub genes (`ISM1` has degree = 0 in STRING). Where STRING interactions are evaluated in isolation without empirical tissue co-expression, [`results/figures/D_string_ppi_network.png`](results/figures/D_string_ppi_network.png) illustrates the 21 functional associations alone.
 
 ---
 
@@ -272,7 +271,7 @@ Preranked Gene Set Enrichment Analysis was executed using `gseapy` on all 21,597
 
 ### Phase 9: Microenvironmental Immune Deconvolution & Correlation
 
-Peritoneal cell-type deconvolution was performed across 12 immune and stromal populations using curated published reference signatures (Charoentong et al., Bindea et al., Rossi et al.). All signatures were screened to ensure no hub gene is present within any cell marker list.
+Peritoneal cell-type deconvolution was performed across 12 immune and stromal populations using curated published reference signatures (Charoentong et al., Bindea et al.). The 6-gene Peritoneal Myofibroblast panel (`ACTA2`, `TAGLN`, `COL1A1`, `COL1A2`, `POSTN`, `FAP`) is a signature curated from literature; not verified against Kuppe et al. (Nature 2020, published online 2020, DOI: [10.1038/s41586-020-2941-1](https://doi.org/10.1038/s41586-020-2941-1); human kidney fibrosis) supplementary tables. All signatures were screened to ensure no hub gene is present within any cell marker list.
 
 * **Focal Cell Type Expansion:** **Peritoneal Myofibroblasts** (Mann-Whitney $U = 16.0, P_{\text{raw}} = 0.0286, \text{FDR} = 0.1714$, Exact Two-Sided Permutation $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$, which equals the exact two-sided Mann-Whitney $P = 0.028571$).
 * **Borderline Cell Types:** M2 Macrophages ($P = 0.0571, \text{FDR} = 0.1714$), Neutrophils ($P = 0.0571, \text{FDR} = 0.1714$), Activated Dendritic Cells ($P = 0.0571, \text{FDR} = 0.1714$).
@@ -285,23 +284,46 @@ Peritoneal cell-type deconvolution was performed across 12 immune and stromal po
 
 ### Phase 10: Single-Cell RNA-Seq Dissection & Donor-Level Pseudobulk edgeR (GSE248762, N = 16)
 
-To resolve the cellular origin and cell-type-specific regulation of candidate matrisome hub genes at single-cell resolution, we analyzed **GSE248762** (10x Genomics Chromium, $N = 16$ human peritoneal dialysis donors; ~54,000 cells).
+To resolve the cellular origin and cell-type-specific regulation of candidate matrisome hub genes at single-cell resolution, we analyzed **GSE248762** (10x Genomics Chromium, $N = 16$ human peritoneal dialysis effluent donors; 118,895 deposited barcodes $\to$ 95,507 QC-pass cells $\to$ 95,247 cells after doublet filtering).
 
-* **Clinical Cohort & Donors:**
-  - **4 Low-Volume Ultrafiltration Failure (`LV_UF`):** Severe ultrafiltration failure with low peritoneal transport volume.
-  - **6 Non-Failing Dialyzed Controls (`LV_NOT_UF`):** Stable long-term PD patients with preserved ultrafiltration.
-  - **6 Normal Surgical Controls (`SV`):** Normal baseline parietal peritoneum without uremia or dialysis exposure.
-* **Doublet Benchmarking & Quality Control:**
-  - Benchmarked heuristic fixed-threshold doublet prediction (Scrublet: 454 doublet calls) against simulation-based cluster-aware doublet detection (`scDblFinder`: 977 doublet calls).
-  - Harmony donor-level batch integration followed by Leiden graph clustering resolved 5 primary lineages: Mesothelial cells, Fibroblasts/Stromal cells (`stromal / mesothelial-lineage unresolved`), Macrophages/Myeloid cells, Endothelial cells, and T/NK cells.
-* **Pseudobulk edgeR Differential Expression:**
-  - Evaluated donor-aggregated count sums via negative-binomial GLMs in edgeR across three contrasts: `LV_UF vs LV_NOT_UF`, `LV_UF vs SV`, and `LV_NOT_UF vs SV`.
-  - Comprehensive sensitivity suite (Analyses a to l): evaluated minimum cell thresholds ($\ge 50$ cells), doublet exclusion filters (with and without `scDblFinder`), upper QC ceiling exclusions, pooled ceilings, and leave-one-donor-out cross-validations.
-* **Ambient RNA Profile & Library Size Normalization:**
-  - Recomputed true ambient RNA contamination against the complete transcriptome library size ($37,487$ genes), establishing that expression of primary collagens (`COL1A1`, `COL3A1`, `COL11A1`) in stromal cells exceeds ambient noise floors by $>100$-fold.
-* **$m=98$ Benjamini-Hochberg Family-Wise Synchronization:**
-  - Unified tested gene-contrast family across all testable lineages and contrasts into an audited $m=98$ family (`results/tables/stage4_primary_98_bh_family_sorted.csv`).
-  - **Statistical Honesty & Power Caveat:** With 4 `LV_UF` vs 6 `LV_NOT_UF` donors, nominal $P$-values in pseudobulk do not attain genome-wide or family-wise FDR $< 0.05$ after multiple testing penalty. Findings in single-cell stromal pseudobulk are transparently characterized as candidate matrisome trends rather than claimed significance.
+* **Clinical Cohort & Donors (Peritoneal Dialysis Effluent):**
+  - **4 Low-Volume Ultrafiltration Failure (`LV_UF`):** Long-vintage PD effluent ($>90$ months; median 132 months) with ultrafiltration failure ($\text{UF} < 400\text{ mL}$).
+  - **6 Non-Failing Dialyzed Donors (`LV_NOT_UF`):** Long-vintage PD effluent ($>90$ months; median 137 months) with preserved ultrafiltration ($\text{UF} > 400\text{ mL}$).
+  - **6 Short-Vintage Dialyzed Donors (`SV`):** Short-vintage PD effluent ($<6$ months; median 5 months).
+  - **Contrast Design Caveat:** Comparisons against SV (`LV_UF vs SV` and `LV_NOT_UF vs SV`) represent dialysis vintage contrasts; only `LV_UF vs LV_NOT_UF` specifically contrasts ultrafiltration failure at matched vintage.
+* **Cell Types & Quality Control:**
+  - Barcodes below ~500 UMI were absent in deposited matrices.
+  - Harmony donor-level batch integration followed by Leiden clustering resolved **8 distinct cell types** across 95,247 kept cells:
+    - T cell ($n = 44,245$, $46.45\%$)
+    - Monocyte / macrophage ($n = 22,925$, $24.07\%$)
+    - Conventional dendritic cell (cDC; $n = 13,672$, $14.35\%$)
+    - NK cell ($n = 4,011$, $4.21\%$)
+    - Stromal / mesothelial-lineage (unresolved; $n = 3,670$, $3.85\%$)
+    - Neutrophil ($n = 3,647$, $3.83\%$)
+    - B cell ($n = 1,840$, $1.93\%$)
+    - Mixed: pDC / Plasma cell ($n = 1,237$, $1.30\%$)
+  - No cluster expressing endothelial or mast markers was identified in effluent. Mesothelial and fibroblast lineages are transcriptionally unresolved within the stromal cluster; score-based subsetting showed no detectable difference; underpowered (4 vs 6 donors); not evidence of equivalence. Per-donor mesothelial proportions were 62.78% ± 26.10% in LV_UF ($N=4$) vs 63.36% ± 14.91% in LV_NOT_UF ($N=6$, Mann-Whitney $U = 8.0, P = 0.4762$; SV $N=6$: 78.96% ± 9.94%), alongside per-donor mean UMI of 6,389.6 ± 3,069.4 in LV_UF vs 14,149.2 ± 14,280.6 in LV_NOT_UF ($U = 9.0, P = 0.6095$; SV: 17,006.9 ± 10,397.9). This lack of detectable difference is underpowered, does not indicate equivalence, and is not used to justify pooling.
+* **Doublet Benchmarking & Filtering:**
+  - The pooled simulated-doublet score distribution exhibits one dominant mode (~0.10) with low-amplitude ripples above 0.3 and no valley.
+  - Scrublet with a fixed global cutoff of 0.439 removed 320 doublets overall (260 among QC-pass cells; $0.27\%$), yielding the final 95,247-cell object.
+  - Cluster-aware `scDblFinder` flagged 10,057 total barcodes ($8.46\%$) and 8,112 QC-pass cells ($8.52\%$). Exactly 8,112 scDblFinder calls remain in the 95,247-cell object; an scDblFinder-removed sensitivity model (`sens_c_no_scDblFinder`) confirmed that scDblFinder-removed estimates were similar.
+  
+| Method | Cutoff / Threshold | Flagged (All 118,895 Barcodes) | Flagged (QC-Pass Cells) | Used in Final Object |
+| :--- | :--- | :---: | :---: | :---: |
+| **Scrublet (Fixed rule)** | Cutoff = 0.439 | 320 ($0.27\%$) | 260 ($0.27\%$) | **YES** (produced 95,247 cells) |
+| **scDblFinder** | Cluster-aware dynamic | 10,057 ($8.46\%$) | 8,112 ($8.52\%$) | **NO** (evaluated in sensitivity `sens_c`)* |
+| **Legacy Heuristic (Script 14)** | Count/gene percentiles | 4,672 ($3.93\%$) | 977 ($1.02\%$) | **NO** (superseded heuristic) |
+
+*\*Footnote: Per-sample automatic Scrublet (`scripts/26_scrna_doublet_investigation.py`) flagged 586 barcodes total and 454 among QC-pass cells. 8,112 scDblFinder calls remain in the 95,247-cell object.*
+
+* **Pseudobulk edgeR Differential Expression & Testability Rules:**
+  - In the pseudobulk pipeline (`scripts/37a_prepare_pseudobulk_matrices.py`), exactly 5 lineages were explicitly selected for aggregation and testing in `TEST_CTS`: Stromal/mesothelial ($n=3,670$), Monocyte/macrophage ($n=22,925$), cDC ($n=13,672$), T cell ($n=44,245$), and NK cell ($n=4,011$). Cluster 4 (Neutrophils) was explicitly excluded from aggregation as donor-dominated. B cells and mixed pDC/plasma cells were omitted by pipeline definition (`TEST_CTS`), rather than excluded by a donor threshold; in fact, under the manuscript's retrospective testability criterion ($\ge 20$ cells/donor, $\ge 3$ donors/group), pDC/plasma cells met the representation threshold (having $\ge 20$ cells in 3 of 4 LV_UF donors: `LV_UF-1` 109, `LV_UF-2` 22, `LV_UF-3` 45), whereas B cells and Neutrophils had $<3$ donors with $\ge 20$ cells in LV_UF.
+  - The criterion "$\ge 20$ cells/donor, $\ge 3$ donors/group" is therefore a manuscript-level testability criterion applied after the fact to describe donor sufficiency across lineages, not the operational filter used in script 37a.
+  - In primary stromal pseudobulk, no minimum cell floor per donor was imposed; all 4 LV_UF and 6 LV_NOT_UF donors were included. In sensitivity analysis `sens_e` ($\ge 50$ cells per donor), only 3 LV_UF donors and 2 LV_NOT_UF donors met the threshold; it is designated "3 vs 2 donors; direction only" with P-value interpretation omitted.
+* **$m=98$ Benjamini-Hochberg Family-Wise Synchronization (Internal Frozen Analysis Plan):**
+  - Unified tested gene-contrast family across all testable lineages and contrasts into an audited $m=98$ family (`results/tables/stage4_primary_98_bh_family_sorted.csv`). This family was finalized after seeing primary results.
+  - In the primary stromal contrast (`LV_UF vs LV_NOT_UF`), 8 of 9 testable candidate hub genes exhibit negative $\log_2(\text{FC})$ point estimates (`COMP -4.04`, `FN1 -2.96`, `COL8A1 -2.66`, `EDIL3 -2.61`, `COL3A1 -1.96`, `LOX -1.72`, `THBS3 -1.57`, `VCAN -0.65`; only `INHBA` is positive `+1.08`), opposite in direction to the biopsy contrast (different compartment and groups; not directly comparable).
+  - "PASS" denotes descriptive testability ($\ge 2$ expressing donors per group), not statistical significance. None of the 9 testable genes achieve family-wise FDR $< 0.05$ (all stromal FDR $\ge 0.131$). Findings are exploratory.
 
 ---
 
@@ -312,16 +334,20 @@ To resolve the cellular origin and cell-type-specific regulation of candidate ma
   - Mapped rodent microRNAs to human miRBase counterparts to evaluate cross-species evolutionary conservation of candidate miRNA fold changes.
 * **Human Effluent Biofluid miRNA Profiling (GSE182736):**
   - Profiled cell-free and exosomal miRNAs in human peritoneal dialysis effluent across dialysis vintage, assessing non-invasive biofluid tracking of peritoneal membrane injury.
-* **In Vitro EMT / MMT Mesothelial Perturbation (GSE121372):**
-  - Audited cultured human peritoneal mesothelial cells (HPMCs) stimulated with recombinant TGF-$\beta$1 to induce mesothelial-to-mesenchymal transition (MMT/EMT) and treated with BMP-7 rescue.
-  - Confirmed that candidate matrisome genes (`COL3A1`, `FN1`, `LOX`, `VCAN`) exhibit robust upregulation under TGF-$\beta$1 stimulation that is counteracted by BMP-7.
+* **In Vitro HPMC Perturbation (GSE121372):**
+  - Audited cultured human peritoneal mesothelial cells (HPMCs) exposed to recombinant TGF-$\beta$1 (4 samples: Control 6h, TGF-$\beta$1 6h, Control 24h, TGF-$\beta$1 24h; $n=1$ per arm).
+  - Descriptive only; unreplicated single samples, no hypothesis testing, no P-values, no BMP-7 rescue claims. Baseline culture drift confounds apparent 24h induction for `VCAN`, `COMP`, and `INHBA`.
 * **Tripartite ceRNA Regulatory Networks:**
   - Intersected miRTarBase, multiMiR, and ENCORI databases to reconstruct candidate mRNA–miRNA–lncRNA competitive endogenous RNA networks connecting hub matrisome transcripts to regulatory non-coding RNAs.
-* **LncRNA Universe Reconciliation:**
-  - Audited and reconciled the non-coding RNA universe: of 16,762 GENCODE v32 lncRNAs, exactly 12,021 lack standard HGNC symbols (`symbol == ensembl_id`). Across the complete 37,476 scRNA-seq feature matrix, 12,720 features start with `ENSG`, with the 699-feature delta representing non-lncRNA pseudogenes and uncharacterized transcripts.
+* **Feature Universe & 699 ENSG Features:**
+  - Deposited feature matrices contain 37,487 raw features; the analysis object contains 37,476 features because 11 hub genes were blinded.
+  - Of 16,762 GENCODE v32 lncRNAs, exactly 12,021 lack HGNC symbols (`symbol == ensembl_id`) in 10x features.
+  - 12,021 is a proper subset of the 12,720 ENSG-prefixed features in the dataset.
+  - The remaining 699 features represent ENSG-prefixed features not in the GENCODE v32 lncRNA set.
+  - Biotype lookup via the current Ensembl release resolves them as: 578 protein-coding, 77 lncRNA, 7 pseudogenes (3 processed, 3 IG_V, 1 transcribed processed), 5 artifacts, 2 IG_V genes, and 30 unresolved/unknown. These biotypes reflect the current Ensembl release rather than GENCODE v32.
 * **10x Cell Ranger Reference Genome Count Audit:**
   - Verified that all 16 deposited GSE248762 `features.tsv.gz` files contain exactly 37,487 features.
-  - Compared against standard 10x Genomics GRCh38 references (`refdata-gex-GRCh38-2020-A`: 36,601 features, difference $+886$; `refdata-cellranger-GRCh38-3.0.0`: 33,538 features, difference $+3,949$). Formal clarification was submitted to corresponding author Prof. Xiao Yang (Sun Yat-sen University), with the Methods text calibrated accordingly.
+  - Compared against standard 10x Genomics GRCh38 references (`refdata-gex-GRCh38-2020-A`: 36,601 features, difference $+886$; `refdata-cellranger-GRCh38-3.0.0`: 33,538 features, difference $+3,949$), with the Methods text calibrated accordingly.
 
 ---
 
@@ -337,11 +363,19 @@ To resolve the cellular origin and cell-type-specific regulation of candidate ma
 
 ## 🔬 Relationship to Prior Literature
 
-Prior transcriptomic analyses of GSE62928 (e.g., Wang et al., 2024; *not independently verified*) reported a 4-gene diagnostic panel (`SOCS1`, `PIM2`, `HSH2D`, `MYO3B`).
+Prior transcriptomic analysis of GSE125498 by Ma et al., *Front Pharmacol* 2025 (DOI: [10.3389/fphar.2025.1646948](https://doi.org/10.3389/fphar.2025.1646948); abstract checked; main text not verified) evaluated shed peritoneal effluent cells across dialysis vintage.
 
-* **Zero Gene Overlap ($0 / 4$):** None of the Wang et al. genes are Matrisome structural proteins; they represent immune-signaling and intracellular kinase genes.
-* **Distinct Biological Focus:** Our pipeline focuses explicitly on the **extracellular matrix architecture and stromal fibrogenesis machinery** (`FN1`, `COL3A1`, `COL8A1`, `COL11A1`, `VCAN`, `COMP`, `THBS3`, `EDIL3`, `LOX`, `INHBA`, `ISM1`).
-* **Cross-Validation Rigor:** The Wang et al. panel was reported with uncorrected in-sample AUCs *(not independently verified)*. Our analysis provides exact label permutations, out-of-fold cross-validation, and negative-control baselines.
+* **Effluent Validation Comparison:** Ma et al. characterized effluent cell transcriptomic shifts across short-term vs long-term PD. Our study specifically interrogates whether tissue-derived Matrisome hub genes are detectable and discriminatory in this cellular effluent compartment.
+* **Effluent Marker-Gene Changes vs. Fibrosis Signatures:** Late-PD effluent displays higher T-cell and Fc-receptor markers (`CD3E`, `FCGR3B`) and lower myeloid and matricellular markers (`CD14`, `VCAN`). Ma et al. reported in their abstract that "Monocyte infiltration increased significantly in long-term PD cohorts", which differs in direction from the effluent cell `CD14` decrease observed here ($\log_2\text{FC} = -0.2435$ for `ILMN_2396444`, $-0.3791$ for `ILMN_1740015`).
+* **Covariate Sensitivity Analysis (Post Hoc, Exploratory):** We evaluated linear models adjusting for leukocyte marker probes across two candidate sets (verified from GPL10558):
+  - **Set A (Top-Table Probes):** `CD3E` (`ILMN_1739794`), `CD14` (`ILMN_2396444`), `FCGR3B` (`ILMN_2134453`).
+  - **Set B (Alternate Probes):** `CD3E` (`ILMN_1739794`), `CD14` (`ILMN_1740015`), `FCGR3B` (`ILMN_1728639`).
+  - In single-covariate adjustment for `FCGR3B` alone, `VCAN` remains significant in both sets (Set A: $\log_2\text{FC} = -0.6728, P = 0.0067$; Set B: $\log_2\text{FC} = -0.7043, P = 0.0026$).
+  - In single-covariate adjustment for `CD14` alone, `VCAN` is attenuated (Set A: $\log_2\text{FC} = -0.2971, P = 0.1937$; Set B: $\log_2\text{FC} = -0.2845, P = 0.1429$).
+  - In single-covariate adjustment for `CD3E` alone (`ILMN_1739794`), `VCAN` is attenuated to limma moderated $P = 0.1955$ (OLS $P = 0.2060$, $\log_2\text{FC} = -0.3241, t = -1.3201$).
+  - Under joint adjustment for all three markers, `VCAN` is attenuated to limma moderated $P = 0.1944$ (OLS $P = 0.1994$, $\log_2\text{FC} = -0.3009$, Set A) and limma moderated $P = 0.6716$ (OLS $P = 0.6662$, $\log_2\text{FC} = -0.0902$, Set B). VCAN's decrease in long-term PD effluent cells is fragile and depends on probe set and adjustment method: attenuated or abolished under CD14/CD3E/FCGR3B marker adjustment, preserved under 5-lineage-score adjustment. A composition effect is one hypothesis for this fragility.
+  - **Probe Cross-Reactivity Note:** GPL10558 annotation cannot resolve cross-reactivity between FCGR3A and FCGR3B; the two paralogs share ~97% nucleotide identity. Pairwise local alignment (generated by `scripts/audit_checks/run_fcgr3_probe_alignment.py` and saved in `results/audit/fcgr3_alignment_raw.txt`) reveals that FCGR3A probe `ILMN_2112580` is the clearest cross-reactive probe, having 0 mismatches to FCGR3A (`NM_000569.8`) and only 1 mismatch against off-target FCGR3B (`NM_000570.5`) over 50 bp (score 50 vs 48). Set A's FCGR3B probe `ILMN_2134453` fits FCGR3B (`NM_000570.5` at coordinates 1928–1978) with 1 gap (0 mismatches across 50 bp), but also aligns to FCGR3A at 43/45 bp with 1 mismatch and 1 gap (score 40 vs 48), so it cannot be assumed gene-specific. FCGR3B probe `ILMN_1728639` has 2 mismatches to FCGR3B and 2 mismatches + 1 gap to FCGR3A. For `ILMN_1703679`, no valid alignment found (score $\le 15.0$); excluded from cross-reactivity claims. Set B's CD14 probe (`ILMN_1740015`) has wider dynamic range and stronger correlation with VCAN ($r = 0.66$ vs $0.51$ for `ILMN_2396444`). In the leave-one-out covariate analysis for Set B, the attenuation is not driven by CD14 alone but depends on CD14 and FCGR3B together: dropping CD14 alone restores nominal significance ($\log_2\text{FC} = -0.4930, \text{OLS } P = 0.0429, \text{Limma } P = 0.0395$), whereas dropping FCGR3B alone completely eliminates the effect ($\log_2\text{FC} = +0.0178, \text{OLS } P = 0.9263 / \text{Limma } P = 0.9276$) and dropping CD3E yields $\text{OLS } P = 0.0745 / \text{Limma } P = 0.0736$. VCAN remains fragile across covariate adjustments.
+  - **Over-Adjustment Caveat:** Because shed effluent leukocyte subsets covary with clinical dialysis duration, adjusting for multiple cell markers in an $N=33$ cohort carries risk of collinearity and potential over-adjustment.
 
 ---
 
@@ -350,7 +384,7 @@ Prior transcriptomic analyses of GSE62928 (e.g., Wang et al., 2024; *not indepen
 1. **Discovery Sample Size ($N = 8$):** Encapsulating Peritoneal Sclerosis (EPS) is a rare clinical entity, and biopsy tissue is ethically and clinically constrained. Although exact combinatorial permutations confirm that our primary findings (`71 ECM-DEGs`, `Salmon Module`, `EMT NES`, `Myofibroblasts`) achieve the minimum possible $P$-values at $N=8$, statistical power is fundamentally bounded by sample size. All $N=8$ selection procedures operate without held-out discovery data.
 2. **Hub Selection by Construction & Multiple Testing:** Candidate hub genes were selected from DEGs filtered at nominal $P < 0.05$ and $\log_2\text{FC} \ge 0.80$, so their nominal significance is partly by construction. In discovery profiling, individual hub genes do not pass stringent FDR $< 0.05$ thresholds. Multi-model consensus was primarily driven by SVM-RFE ($n=14$) and Random Forest ($n=17$), with LASSO ($n=2$) and XGBoost ($n=1$) selecting very small subsets.
 3. **Clinical Cohort & Phenotype Proxy:** Discovery profiling utilized surgical biopsy tissue from severe EPS, whereas external validation (**GSE125498**, $N=33$) evaluated shed peritoneal effluent cells from short-term vs long-term PD patients as a clinical proxy for cumulative dialysis membrane injury, not biopsy-confirmed EPS. Furthermore, only 7 of 11 hub genes had mapped probes on GPL10558 (`COL11A1`, `COMP`, `EDIL3`, `INHBA` were not assessable in effluent), and `ISM1` lacks known STRING interaction edges among the hub panel.
-4. **Tissue vs. Effluent Compartment Duality:** Only `COL8A1` is nominally upregulated in both compartments (tissue $\log_2\text{FC} = +2.68$, effluent $\log_2\text{FC} = +0.75, P = 0.049$). `FN1`, `COL3A1`, and `ISM1` show concordant upregulation trends but are non-significant in effluent cells; `LOX` is flat ($\log_2\text{FC} = +0.02, P = 0.976$); and `VCAN` ($\log_2\text{FC} = -0.52, P = 0.024$) and `THBS3` ($\log_2\text{FC} = -0.20, P = 0.418$) exhibit lower cellular expression in late PD effluent.
+4. **Tissue vs. Effluent Compartment Discordance:** Late-PD effluent shows higher T-cell and Fc-receptor markers and lower CD14 and VCAN; none pass FDR (adjusted $P \ge 0.117$). In GSE125498, unadjusted `VCAN` is lower in late effluent ($\log_2\text{FC} = -0.52$, limma $P = 0.0244$), but VCAN's decrease in long-term PD effluent cells is fragile and depends on probe set and adjustment method: attenuated or abolished under CD14/CD3E/FCGR3B marker adjustment, preserved under 5-lineage-score adjustment (with a composition effect being one hypothesis). An over-adjustment caveat applies. In single-cell effluent pseudobulk (GSE248762), 8 of 9 testable candidate hubs exhibit negative $\log_2(\text{FC})$ point estimates in stromal cells, opposite in direction to the biopsy contrast (different compartment and groups; not directly comparable). Direction is mostly retained in small subsets (3 vs 4 and 3 vs 2 donors); INHBA, ISM1, FN1, VCAN and COL11A1 flip sign in at least one run (5 of 11). Exploratory, no FDR.
 5. **Permutation & GSEA Distinctions:** The empirical 1/70 sample label permutation test evaluates phenotype assignment boundaries, whereas `gseapy.prerank` FDR values reflect gene-set permutation distributions.
 6. **Cross-Validation Partition Sensitivity:** In external validation, out-of-fold generalization estimates vary across partitioning schemes: single 5-fold split $\text{AUC} = 0.592$, LOOCV $\text{AUC} = 0.658$, primary 50-repeat 5-fold pipeline-scaled $\text{AUC} = 0.678$ (per-repeat range $0.512 - 0.773$; per-fold mean $0.701$), and unscaled 50-repeat 5-fold $\text{AUC} = 0.684$. This demonstrates an optimism penalty relative to the in-sample fit ($\text{AUC} = 0.869$, $\Delta \text{AUC} = 0.191$).
 7. **Control Group & Dialysis Vintage Confounding:** Two of the four GSE62928 discovery controls were non-dialysis uremic patients undergoing primary catheter insertion, whereas EPS cases had extensive long-term dialysis vintage; consequently, severe EPS fibrotic pathology is biologically and clinically confounded with cumulative peritoneal dialysis exposure in the discovery cohort.
@@ -360,10 +394,11 @@ Prior transcriptomic analyses of GSE62928 (e.g., Wang et al., 2024; *not indepen
 
 ## 🛡️ Data and Code Integrity Disclosure
 
-During a comprehensive internal quality control and reproducibility audit conducted in September–October 2026, two downstream exploratory scripts (`11_drug_repurposing_dgidb.py` and `12_ihc_protein_validation.py`) were identified as containing AI-generated synthetic identifiers (hallucinated antibody catalog numbers and mismatched drug-gene citation PMIDs) that do not correspond to real external database records.
+During a comprehensive internal quality control and reproducibility audit conducted in September–October 2026, two downstream exploratory scripts (`11_drug_repurposing_dgidb.py` / `11_candidate_drug_repurposing.py` and `12_ihc_protein_validation.py`) were identified as containing AI-generated synthetic identifiers (fabricated antibody catalogue numbers and PMIDs) that do not correspond to authentic database entries or physical reagents.
 
 In accordance with strict scientific integrity standards:
-* **Complete Removal & History Scrubbing:** Both scripts and their generated outputs (`results/tables/candidate_drugs_*.csv`, `results/tables/hub_genes_ihc_*.csv`, `results/figures/Hub_05_*`, `results/figures/Hub_06_*`) were completely excised and scrubbed from the repository and Git commit history. The active commit history reflects only verified, reproducible transcriptomics, STRING v12.5 PPI networks, and permutation tests.
+* **Excision of Synthetic Identifiers:** Both downstream exploratory scripts—`11_candidate_drug_repurposing.py` (which replaced earlier `11_drug_repurposing_dgidb.py`) and `12_ihc_protein_validation.py`—were excised from the active working tree via `git rm`. However, both files remain present in the public commit history on `origin/main` (and in the local backup branch `backup-main-before-scrub`). A permanent purge from repository history would require a git history rewrite (e.g., `git-filter-repo` or BFG) and forced pushing remote branches and tags (`manuscript-v1`), which has not been performed; history is retained and we rely on this written disclosure. Their generated outputs (`candidate_drugs_*.csv`, `hub_genes_ihc_*.csv`, `Hub_05_*`, `Hub_06_*`) are superseded and excluded from verified study findings.
+* **Internal Frozen Analysis Plan:** Pseudobulk single-cell analyses adhere to the frozen analysis plan (`provenance/stage4_plan.json`). The $m=98$ Benjamini-Hochberg family was finalized after seeing primary results to ensure consistent contrast-level evaluation.
 * **Verification Scope Executed in this Session:**
   - **Live STRING v12.5 API Retrieval:** Queried the live STRING v12.5 API (species 9606, score $\ge 0.400$), exporting raw response `results/tables/string_live_edges_20261001.tsv` (21 functional edges, 3 physical edges, `ISM1` degree = 0) and regenerated `results/tables/hub_genes_ppi_centrality_metrics.csv` and `results/figures/Hub_01_ppi_gene_interaction_network.png/.pdf`.
   - **Permutation Test Suite Execution:** Re-executed `audit/permutation_test_ecm.py`, `audit/stage_c_permutations.py`, and `audit/stage_e_ppi_baseline.py` across all $\binom{8}{4} = 70$ exact combinatorial label permutations, verifying: ECM over-representation (rank 1/70, $P_{\text{perm}} = 0.0143$), WGCNA Salmon module correlation (rank 1/70 one-sided $P_{\text{perm}} = 0.0143$, rank 2/70 two-sided $P_{\text{perm}} = 0.0286$), GSEA EMT hallmark NES (rank 1/70, $P_{\text{perm}} = 0.0143$), and Peritoneal Myofibroblasts (rank 2/70, $P_{\text{perm}} = 0.0286$).
@@ -484,11 +519,11 @@ This automated master pipeline runs Stages 4 and 5 end-to-end:
 ├── requirements.lock                             # Pinned deterministic Python dependencies (462 packages)
 ├── sessionInfo.txt                               # R sessionInfo() execution environment
 ├── docs/
-│   ├── bh_family.md                              # Pre-registration documentation for m=98 BH family
+│   ├── bh_family.md                              # Analysis plan (self-documented; committed after primary results)
 │   └── sessionInfo.txt                           # Environment session capture
 ├── provenance/
 │   ├── seeds.json                                # Complete deterministic seed inventory (Scrublet, scDblFinder, Leiden, ML)
-│   └── stage4_plan.json                          # Pre-registered Stage 4 analysis plan
+│   └── stage4_plan.json                          # Analysis plan (self-documented; committed after primary results)
 ├── scripts/
 │   ├── run_pipeline.py                           # Master reproducible pipeline runner (Stages 4-5)
 │   ├── 50_stage4_final.R                         # Pseudobulk edgeR GLMs & sensitivity suite
@@ -538,4 +573,4 @@ This automated master pipeline runs Stages 4 and 5 end-to-end:
 This project is released under the **MIT License**. For academic usage or reproduction, please cite the underlying data repositories:
 * **GSE62928:** Human peritoneal membrane transcriptomics in Encapsulating Peritoneal Sclerosis (Affymetrix HG-U133_Plus_2).
 * **GSE125498:** Longitudinal human peritoneal dialysis effluent cell transcriptomics (Illumina HumanHT-12 v4.0).
-* **Matrisome Project:** Naba et al., *Matrix Biology*, 2012 / 2016.
+* **Matrisome Project:** Naba et al., *Mol Cell Proteomics* 2012 (DOI: [10.1074/mcp.M111.014647](https://doi.org/10.1074/mcp.M111.014647)); Naba et al., *Matrix Biol* 2016 (DOI: [10.1016/j.matbio.2015.06.003](https://doi.org/10.1016/j.matbio.2015.06.003)).

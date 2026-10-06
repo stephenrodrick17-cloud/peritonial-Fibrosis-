@@ -44,16 +44,16 @@ The two tests added to the family are:
 
 Neither test achieves statistical significance under FDR control ($\text{FDR} < 0.05$ or $\text{FDR} < 0.10$).
 
-## 3. Pre-Registration Status of the Family Definition
-- In `provenance/stage4_plan.json` (frozen prior to unsealing hub results in `scripts/35_stage4_preflight.py`), the multiple testing procedure was pre-specified as:
+## 3. Internal Frozen Analysis Plan Status of the Family Definition
+- In `provenance/stage4_plan.json` — frozen prior to unsealing hub results in `scripts/35_stage4_preflight.py` — the multiple testing procedure was documented as an analysis plan (self-documented; committed after primary results):
   `"Benjamini-Hochberg FDR across all gene x cell type x contrast tests that pass evidence rule"`.
-- The exact integer family size ($m$) was not pre-registered as a fixed number, because the number of passing tests depended on data-driven filter criteria (donor-level expression).
-- The transition from the 3-group global filter ($m = 96$) to the contrast-specific filter ($m = 98$) was an audit correction: evaluating expression in `LV_UF` for a contrast that compares only `LV_NOT_UF` and `SV` was recognized as an illogical coupling.
+- The exact integer family size ($m$) was not part of an external registry; rather, it was defined within an internal frozen analysis plan, because the number of passing tests depended on data-driven filter criteria (donor-level expression).
+- The transition from the 3-group global filter ($m = 96$) to the contrast-specific filter ($m = 98$) was an audit correction finalized after seeing primary results: evaluating expression in `LV_UF` for a contrast comparing only `LV_NOT_UF` and `SV` was recognized as an illogical coupling.
 
 ## 4. Whether Sensitivity Models Use the Same Family
 - **No.** The sensitivity models (analyses `(b)` through `(j)` and the 16 Leave-One-Donor-Out runs, comprising 792 total rows in `stage4_sensitivity_edger_pseudobulk.csv`) do not use this $m = 98$ BH family, nor do they define a pooled 792-test family.
 - All 792 sensitivity rows have `BH_FDR = NaN`.
-- Per the pre-registered robustness rule in `provenance/stage4_plan.json`:
+- Per the robustness rule in the internal frozen analysis plan (`provenance/stage4_plan.json`):
   - Criterion 1 assesses primary significance ($\text{Primary FDR} < 0.05$).
   - Criteria 2 and 3 assess sign concordance ($\text{sign}(\log_2\text{FC})$ unchanged across sensitivity models and LODO iterations).
   Sensitivity analyses are thus evaluated on effect-direction robustness and nominal P-values, not on a secondary or joint FDR-adjusted family.

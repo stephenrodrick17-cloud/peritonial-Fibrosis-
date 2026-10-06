@@ -31,3 +31,10 @@ data/processed/scrublet_scores/
 data/processed/GSE248762_filtered_samples/
 data/processed/GSE248762_blinded_samples/
 sealed/
+
+# Temporary audit diff logs & intermediate audit pseudobulk files
+results/full_diff.txt
+results/readme_diff_full.txt
+results/audit_grep_full.txt
+results/figures/superseded/
+data/processed/pseudobulk/pb_audit_*
