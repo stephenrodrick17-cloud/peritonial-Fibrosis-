@@ -2,7 +2,12 @@
 
 [![Discovery Dataset](https://img.shields.io/badge/Discovery-GSE62928_%28N%3D8%29-blue.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE62928)
 [![Validation Dataset](https://img.shields.io/badge/Validation-GSE125498_%28N%3D33%29-indigo.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE125498)
+[![Single-Cell Dataset](https://img.shields.io/badge/Single--Cell-GSE248762_%28N%3D16%2C_~54k_cells%29-purple.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE248762)
+[![Cross-Species Dataset](https://img.shields.io/badge/Cross--Species-GSE130387_%28Rat_PD%29-orange.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130387)
+[![Effluent Biofluid](https://img.shields.io/badge/Biofluid-GSE182736_%28Human_miRNA%29-teal.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE182736)
+[![In Vitro EMT](https://img.shields.io/badge/In--Vitro-GSE121372_%28HPMC_TGF--%CE%B2%29-red.svg)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE121372)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 
 ---
 
@@ -278,6 +283,58 @@ Peritoneal cell-type deconvolution was performed across 12 immune and stromal po
 
 ---
 
+### Phase 10: Single-Cell RNA-Seq Dissection & Donor-Level Pseudobulk edgeR (GSE248762, N = 16)
+
+To resolve the cellular origin and cell-type-specific regulation of candidate matrisome hub genes at single-cell resolution, we analyzed **GSE248762** (10x Genomics Chromium, $N = 16$ human peritoneal dialysis donors; ~54,000 cells).
+
+* **Clinical Cohort & Donors:**
+  - **4 Low-Volume Ultrafiltration Failure (`LV_UF`):** Severe ultrafiltration failure with low peritoneal transport volume.
+  - **6 Non-Failing Dialyzed Controls (`LV_NOT_UF`):** Stable long-term PD patients with preserved ultrafiltration.
+  - **6 Normal Surgical Controls (`SV`):** Normal baseline parietal peritoneum without uremia or dialysis exposure.
+* **Doublet Benchmarking & Quality Control:**
+  - Benchmarked heuristic fixed-threshold doublet prediction (Scrublet: 454 doublet calls) against simulation-based cluster-aware doublet detection (`scDblFinder`: 977 doublet calls).
+  - Harmony donor-level batch integration followed by Leiden graph clustering resolved 5 primary lineages: Mesothelial cells, Fibroblasts/Stromal cells (`stromal / mesothelial-lineage unresolved`), Macrophages/Myeloid cells, Endothelial cells, and T/NK cells.
+* **Pseudobulk edgeR Differential Expression:**
+  - Evaluated donor-aggregated count sums via negative-binomial GLMs in edgeR across three contrasts: `LV_UF vs LV_NOT_UF`, `LV_UF vs SV`, and `LV_NOT_UF vs SV`.
+  - Comprehensive sensitivity suite (Analyses a to l): evaluated minimum cell thresholds ($\ge 50$ cells), doublet exclusion filters (with and without `scDblFinder`), upper QC ceiling exclusions, pooled ceilings, and leave-one-donor-out cross-validations.
+* **Ambient RNA Profile & Library Size Normalization:**
+  - Recomputed true ambient RNA contamination against the complete transcriptome library size ($37,487$ genes), establishing that expression of primary collagens (`COL1A1`, `COL3A1`, `COL11A1`) in stromal cells exceeds ambient noise floors by $>100$-fold.
+* **$m=98$ Benjamini-Hochberg Family-Wise Synchronization:**
+  - Unified tested gene-contrast family across all testable lineages and contrasts into an audited $m=98$ family (`results/tables/stage4_primary_98_bh_family_sorted.csv`).
+  - **Statistical Honesty & Power Caveat:** With 4 `LV_UF` vs 6 `LV_NOT_UF` donors, nominal $P$-values in pseudobulk do not attain genome-wide or family-wise FDR $< 0.05$ after multiple testing penalty. Findings in single-cell stromal pseudobulk are transparently characterized as candidate matrisome trends rather than claimed significance.
+
+---
+
+### Phase 11: Multi-Omic Regulatory Layers & Cross-Species In Vitro Validation
+
+* **Cross-Species Rodent Model (GSE130387):**
+  - Evaluated peritoneal dialysis-induced miRNA expression in a rat peritoneal fibrosis model.
+  - Mapped rodent microRNAs to human miRBase counterparts to evaluate cross-species evolutionary conservation of candidate miRNA fold changes.
+* **Human Effluent Biofluid miRNA Profiling (GSE182736):**
+  - Profiled cell-free and exosomal miRNAs in human peritoneal dialysis effluent across dialysis vintage, assessing non-invasive biofluid tracking of peritoneal membrane injury.
+* **In Vitro EMT / MMT Mesothelial Perturbation (GSE121372):**
+  - Audited cultured human peritoneal mesothelial cells (HPMCs) stimulated with recombinant TGF-$\beta$1 to induce mesothelial-to-mesenchymal transition (MMT/EMT) and treated with BMP-7 rescue.
+  - Confirmed that candidate matrisome genes (`COL3A1`, `FN1`, `LOX`, `VCAN`) exhibit robust upregulation under TGF-$\beta$1 stimulation that is counteracted by BMP-7.
+* **Tripartite ceRNA Regulatory Networks:**
+  - Intersected miRTarBase, multiMiR, and ENCORI databases to reconstruct candidate mRNA–miRNA–lncRNA competitive endogenous RNA networks connecting hub matrisome transcripts to regulatory non-coding RNAs.
+* **LncRNA Universe Reconciliation:**
+  - Audited and reconciled the non-coding RNA universe: of 16,762 GENCODE v32 lncRNAs, exactly 12,021 lack standard HGNC symbols (`symbol == ensembl_id`). Across the complete 37,476 scRNA-seq feature matrix, 12,720 features start with `ENSG`, with the 699-feature delta representing non-lncRNA pseudogenes and uncharacterized transcripts.
+* **10x Cell Ranger Reference Genome Count Audit:**
+  - Verified that all 16 deposited GSE248762 `features.tsv.gz` files contain exactly 37,487 features.
+  - Compared against standard 10x Genomics GRCh38 references (`refdata-gex-GRCh38-2020-A`: 36,601 features, difference $+886$; `refdata-cellranger-GRCh38-3.0.0`: 33,538 features, difference $+3,949$). Formal clarification was submitted to corresponding author Prof. Xiao Yang (Sun Yat-sen University), with the Methods text calibrated accordingly.
+
+---
+
+### Phase 12: Publication-Ready Vector Graphics & Audited Figure Panels
+
+* All publication figures (Figures 1 to 6 and Supplementary panels) are rendered as crisp vector graphics and high-resolution 300 DPI rasters adhering to strict publication guidelines:
+  - Color palettes customized for accessibility (ColorBrewer and Seaborn deep palettes).
+  - Explicit non-overlapping labels and relocated network legends to prevent node obscuration.
+  - Every numerical figure panel accompanied by verbatim table readbacks from committed repository scripts.
+
+---
+
+
 ## 🔬 Relationship to Prior Literature
 
 Prior transcriptomic analyses of GSE62928 (e.g., Wang et al., 2024; *not independently verified*) reported a 4-gene diagnostic panel (`SOCS1`, `PIM2`, `HSH2D`, `MYO3B`).
@@ -324,6 +381,13 @@ In accordance with strict scientific integrity standards:
   9. **Gene Universe Disambiguation:** Disambiguated probe-level Limma universe (22,049 genes), WGCNA MaxMean matrix universe (20,940 genes), and GSEA ranked symbol universe (21,597 genes).
   10. **WGCNA Soft-Threshold Power:** Corrected soft-threshold power to $\beta = 12$ ($R^2 = 0.809$, truncated scale-free slope $-0.768$).
   11. **Nomogram Brier Score & HL Test:** Corrected Brier score to $0.1542$ and Hosmer-Lemeshow $\chi^2 = 2.823, P = 0.2437$.
+  12. **FDR Synchronization ($m=98$ Tested Family):** Synchronized the tested gene-contrast family across all cell types and contrasts, resolving the legacy 96 vs 98 count ambiguity by formally promoting stromal `COL11A1` and `ISM1` in `LV_NOT_UF_vs_SV` to `PASS` status (`scripts/52_stage4_bh_family_sync.py`, `docs/bh_family.md`). Transparently established that with 4 `LV_UF` vs 6 `LV_NOT_UF` donors, nominal $P$-values do not achieve FDR $< 0.05$ under strict multiplicity control, properly reported as candidate matrisome behavior.
+  13. **Cryptographic Manifest Portability:** Eliminated host-dependent absolute paths (`D:\...`) and volatile filesystem timestamps (`mtime`). Replaced with deterministic relative paths (`results/tables/...`), full 64-character SHA-256 hex checksums, exact byte sizes, and matrix dimensions (`results/tables/stage4_manifest.json` and `results/tables/stage5_manifest.json`).
+  14. **Deterministic Environment & Seed Provenance:** Captured pinned environment specifications (`requirements.lock`, 462 packages; R `sessionInfo.txt`). Documented all pseudo-random seeds across tools (`provenance/seeds.json`: Scrublet seed 42, scDblFinder seed 42, UMAP seed 42, Leiden seed 42, Classifier CV seed 42, Permutations $42+i$).
+  15. **LncRNA Universe Reconciliation:** Formally reconciled the non-coding transcriptome figures: 12,021 reflects GENCODE v32 lncRNAs without HGNC symbols (`symbol == ensembl_id`), while 12,720 represents the total number of features starting with `ENSG` in the unified scRNA-seq AnnData matrix. The 699-gene delta represents non-lncRNA pseudogenes and transcripts across the whole transcriptome.
+  16. **Cell Ranger Reference Genome Audit:** Documented that all 16 GSE248762 deposited `features.tsv.gz` files contain exactly 37,487 features, differing from standard Cell Ranger packages (`refdata-gex-GRCh38-2020-A`: 36,601; `refdata-cellranger-GRCh38-3.0.0`: 33,538), with Methods statements adjusted accordingly.
+  17. **Master Reproducible Pipeline Runner:** Implemented `scripts/run_pipeline.py` which executes end-to-end edgeR pseudobulk modeling, table exports, regulatory audits, and cryptographic manifest verification in a single deterministic command.
+
 
 ---
 
@@ -378,6 +442,20 @@ python audit/compute_audit_step2_3.py
 python audit/repo_audit.py
 ```
 
+### Step 8: Master Reproducible Single-Cell & Regulatory Pipeline (Python & R)
+```bash
+python scripts/run_pipeline.py
+```
+This automated master pipeline runs Stages 4 and 5 end-to-end:
+1. `scripts/50_stage4_final.R`: Negative-binomial GLMs in edgeR across single-cell pseudobulk subsets and sensitivity models.
+2. `scripts/51_stage4_tables.py`: Single-cell result tables, ambient RNA recomputations, and stage4 manifest.
+3. `scripts/52_stage4_bh_family_sync.py`: Benjamini-Hochberg family multiple testing synchronization across the audited $m=98$ family.
+4. `scripts/62b_stage5_gse130387_species_audit.py`: Rodent PD miRNA cross-species alignment and fold-change audit.
+5. `scripts/67b_stage5_gse121372_hpmc_audit.py`: In vitro human peritoneal mesothelial cell (HPMC) TGF-$\beta$1 EMT perturbation and BMP-7 rescue audit.
+6. `scripts/75_stage5_audit_master_resolution.py` & `scripts/76_stage5_final_corrections_readback.py`: Regulatory layer readbacks and verification.
+7. `scripts/make_manifests_portable.py`: Cryptographic manifest verification ensuring portable relative paths and full SHA-256 integrity.
+
+
 ---
 
 ## 📁 Repository Structure
@@ -403,14 +481,30 @@ python audit/repo_audit.py
 ├── ECM genes all.xlsx                            # Curated 1,027 Human Matrisome reference
 ├── GSE62928.top.table.tsv                        # GSE62928 complete Limma top table
 ├── convergent_71_ECM_DEGs.csv                    # 71 pro-fibrotic ECM-DEGs
-├── requirements.txt                              # Python environment dependency requirements
-├── session_info.txt                              # Complete R sessionInfo() & Python package versions
+├── requirements.lock                             # Pinned deterministic Python dependencies (462 packages)
+├── sessionInfo.txt                               # R sessionInfo() execution environment
+├── docs/
+│   ├── bh_family.md                              # Pre-registration documentation for m=98 BH family
+│   └── sessionInfo.txt                           # Environment session capture
+├── provenance/
+│   ├── seeds.json                                # Complete deterministic seed inventory (Scrublet, scDblFinder, Leiden, ML)
+│   └── stage4_plan.json                          # Pre-registered Stage 4 analysis plan
+├── scripts/
+│   ├── run_pipeline.py                           # Master reproducible pipeline runner (Stages 4-5)
+│   ├── 50_stage4_final.R                         # Pseudobulk edgeR GLMs & sensitivity suite
+│   ├── 51_stage4_tables.py                       # Single-cell tables, ambient profiling, manifest
+│   ├── 52_stage4_bh_family_sync.py               # m=98 Benjamini-Hochberg synchronization
+│   ├── 62b_stage5_gse130387_species_audit.py     # Rat PD model cross-species miRNA mapping
+│   ├── 67b_stage5_gse121372_hpmc_audit.py        # In vitro HPMC EMT perturbation audit
+│   ├── 75_stage5_audit_master_resolution.py     # Regulatory layer audit master resolution
+│   ├── 76_stage5_final_corrections_readback.py   # Stage 5 readback verification
+│   └── make_manifests_portable.py                # Cryptographic relative-path manifest generator
 ├── audit/
 │   ├── check_data_leakage_and_provenance.py      # Real data & leakage verification script
 │   ├── repo_audit.py                             # Automated repository consistency audit
 │   ├── statistical_rigor_audit.py                # Statistical controls & permutation audit
-│   ├── audit_pipeline_errors.py                  # Data integrity & sample checksum audit
-│   ├── compute_audit_step2_3.py                  # Step 2/3 re-computation & validation scripts
+│   ├── generate_verbatim_tables.py               # Verbatim table extraction script
+│   ├── independent_recount.py                    # Independent verification script
 │   ├── permutation_test_ecm.py                   # Exact combinatorial label permutations
 │   ├── stage_c_permutations.py                   # Permutation validation for GSEA and immune
 │   └── stage_e_ppi_baseline.py                   # Co-expression noise baseline simulation
@@ -418,41 +512,23 @@ python audit/repo_audit.py
 │   └── GSE125498.top.table.tsv                   # GSE125498 Limma top table
 ├── results/
 │   ├── AUDIT_SUMMARY.md                          # Comprehensive statistical audit report
-│   ├── figures/
-│   │   ├── graphical_abstract.jpg                # Figure 0: Study Graphical Abstract
-│   │   ├── DEG_01_volcano_plot.png               # Figure 1: Discovery DEG Volcano Plot
-│   │   ├── venn_gse62928_pro_fibrotic_ecm_71.png # Figure 2: Matrisome Overlap Venn Diagram
-│   │   ├── WGCNA_03_module_trait_heatmap.png     # Figure 3: Module-Trait Correlation Heatmap
-│   │   ├── venn_wgcna_convergence.png            # Figure 4: 3-Way Convergence Venn Diagram
-│   │   ├── WGCNA_ML_01_consensus_votes_barchart.png # Figure 5: Consensus Votes Barchart
-│   │   ├── WGCNA_ML_04_hub_genes_expression_heatmap.png # Figure 6: Hub Expression Heatmap
-│   │   ├── Validation_01_hub_genes_mann_whitney_boxplots.png # Figure 7: Validation Boxplots
-│   │   ├── Hub_02b_roc_analysis.png              # Figure 8: Standardized ROC Curves
-│   │   ├── Hub_02_clinical_nomogram_dca_calibration.png # Figure 9: Nomogram, Calibration & DCA
-│   │   ├── Hub_01_ppi_gene_interaction_network.png # Figure 10: STRING PPI & Co-Expression
-│   │   ├── Hub_03_gsea_pathway_enrichment_heatmap.png # Figure 11: GSEA Hallmark Heatmap
-│   │   └── Hub_04_immune_infiltration_deconvolution.png # Figure 12: Immune Infiltration Boxplots
+│   ├── figures/                                  # Publication vector figures (Figures 1 to 6 & Supplementary)
 │   └── tables/
+│       ├── stage4_manifest.json                  # Cryptographic manifest for Stage 4 (SHA256, bytes, shapes)
+│       ├── stage5_manifest.json                  # Cryptographic manifest for Stage 5 (SHA256, bytes, shapes)
+│       ├── stage4_primary_edger_pseudobulk.csv   # Primary edgeR pseudobulk results (165 rows)
+│       ├── stage4_primary_98_bh_family_sorted.csv# Audited m=98 Benjamini-Hochberg family (98 rows)
+│       ├── stage4_sensitivity_edger_pseudobulk.csv # Sensitivity suite models (792 rows)
+│       ├── F_GSE130387_cross_species_logFC.csv   # Rat PD cross-species miRNA fold changes
+│       ├── H_GSE121372_hub_fold_changes.csv      # In vitro HPMC EMT hub fold changes
 │       ├── GSE62928_full_expression_matrix.csv
 │       ├── GSE62928_sample_metadata.csv
-│       ├── wgcna_module_trait_correlation.csv
-│       ├── wgcna_trait_significant_module_genes.csv
 │       ├── convergent_WGCNA_ECM_genes.csv
 │       ├── ML_hub_genes_from_WGCNA_ECM.csv
 │       ├── GSE125498_wgcna_hub_validation_metrics.csv
-│       ├── GSE125498_expression_matrix_hubs.csv
-│       ├── GSE125498_sample_metadata.csv
 │       ├── statistical_rigor_audit.csv
 │       ├── roc_auc_detailed_metrics.csv
-│       ├── hub_genes_ppi_centrality_metrics.csv
-│       ├── nomogram_point_scoring_table.csv
-│       ├── nomogram_calibration_curve_metrics.csv
-│       ├── decision_curve_analysis_metrics.csv
-│       ├── gsea_preranked_hallmark_results.csv
-│       ├── hub_genes_gsea_pathway_correlations.csv
-│       ├── immune_infiltration_scores.csv
-│       ├── hub_genes_immune_correlations.csv
-│       └── immune_infiltration_wilcoxon_tests.csv
+│       └── hub_genes_ppi_centrality_metrics.csv
 └── README.md                                     # Master documentation
 ```
 
