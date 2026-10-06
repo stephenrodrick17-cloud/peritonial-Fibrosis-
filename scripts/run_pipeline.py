@@ -70,6 +70,8 @@ def main():
     run_cmd([sys.executable, os.path.join(SCRIPTS, "67b_stage5_gse121372_hpmc_audit.py")], "GSE121372 HPMC In Vitro Audit")
     run_cmd([sys.executable, os.path.join(SCRIPTS, "75_stage5_audit_master_resolution.py")], "Stage 5 Audit Master Resolution")
     run_cmd([sys.executable, os.path.join(SCRIPTS, "76_stage5_final_corrections_readback.py")], "Stage 5 Final Readbacks")
+    run_cmd([sys.executable, os.path.join(SCRIPTS, "make_manifests_portable.py")], "Regenerate Portable Manifests")
+
 
     # Assertions & Verification
     print_header("FINAL CRYPTOGRAPHIC INTEGRITY VERIFICATION")

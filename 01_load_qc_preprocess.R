@@ -1,7 +1,7 @@
 # ==============================================================================
 # SCRIPT 01: DATA LOADING, QC, PREPROCESSING & PROBE COLLAPSING
 # Project: Peritoneal Dialysis-Associated Peritoneal Fibrosis Transcriptomics
-# Dataset: GSE62928 (Platform: GPL10558 Illumina HumanHT-12 V4.0)
+# Dataset: GSE62928 (Platform: GPL13158 Affymetrix HT HG-U133 Plus PM)
 # Comparison: Peritoneal fibrosis (PF) vs Control
 # ==============================================================================
 

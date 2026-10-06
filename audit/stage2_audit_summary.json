@@ -1,0 +1,26 @@
+{
+  "status": "ALL_CHECKS_PASSED",
+  "module_c": {
+    "dataset": "GSE125498 (Human peritoneal effluent cells, N=33)",
+    "short_term_pd_n": 20,
+    "long_term_pd_n": 13,
+    "mapped_hubs_count": 7,
+    "unmapped_hubs_count": 4,
+    "concordance_breakdown": {
+      "Not mapped (No probe on array)": 4,
+      "Concordant (UP in Long-term PD & UP in EPS)": 3,
+      "Flat (|log2FC| < 0.1)": 2,
+      "Discordant": 2
+    },
+    "classifier_check": "Verified with StandardScaler inside fold"
+  },
+  "module_d": {
+    "database": "STRING v12.5 (Live Query)",
+    "functional_edges": 21,
+    "physical_edges": 21,
+    "isolated_hubs": [
+      "ISM1"
+    ],
+    "top_edge": "FN1-LOX (score=0.953)"
+  }
+}

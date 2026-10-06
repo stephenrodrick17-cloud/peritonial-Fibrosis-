@@ -1,0 +1,32 @@
+{
+  "gse62928_hash_check": {
+    "fresh_path": "data/raw/GSE62928_series_matrix_fresh.txt.gz",
+    "local_path": "data/raw/GSE62928_series_matrix.txt.gz",
+    "sha256_fresh": "37f2378e37d06126f4c3f63ed300e90231f38f66ccba2e1412d1a9d837db7aa5",
+    "sha256_local": "37f2378e37d06126f4c3f63ed300e90231f38f66ccba2e1412d1a9d837db7aa5",
+    "status": "PERFECT_MATCH"
+  },
+  "positive_control_check": {
+    "status": "PASSED",
+    "n_total_checks": 28,
+    "n_passed": 26,
+    "n_descriptive": 2,
+    "failed_count": 0
+  },
+  "sensitivity_table_check": {
+    "status": "VALID",
+    "n_rows": 44,
+    "genes_count": 11,
+    "contrasts": [
+      "EPS_vs_PD",
+      "EPS_vs_Uremic",
+      "PD_vs_Uremic",
+      "EPS_vs_PooledControl"
+    ]
+  },
+  "permutation_math_verified": {
+    "4_vs_2": "15 splits, min 1-sided P = 1/15 = 0.0667, min 2-sided P = 2/15 = 0.1333",
+    "2_vs_2": "6 splits, min 1-sided P = 1/6 = 0.1667, min 2-sided P = 2/6 = 0.3333",
+    "4_vs_4": "70 splits, min 1-sided P = 1/70 = 0.0143, min 2-sided P = 2/70 = 0.0286"
+  }
+}

@@ -4,6 +4,8 @@ scratch/
 venv/
 __pycache__/
 *.pyc
+fresh_clone/
+.vscode/
 
 # Local system & ide artifacts
 .tempmediaStorage/
@@ -11,12 +13,21 @@ __pycache__/
 repo_audit_report.md
 .Rhistory
 .RData
+*.RData
 cookies.txt
 test_ftp_matrix.mtx.gz
 test_matrix_curl.mtx.gz
+audit/*.log
 
-# Raw and intermediate single-cell binaries (>100MB)
-data/raw/*.tar
+# Large GEO raw dumps and soft archives (>20MB)
+data/*.soft.gz
+data/*.txt.gz
+data/*.xlsx
+data/raw/
+!data/raw/GSE248762_extracted/GSM7919583_LV_UF-1.features.tsv.gz
+!data/raw/gencode.v32.long_noncoding_RNAs.gtf.gz
 data/processed/*.h5ad
+data/processed/scrublet_scores/
 data/processed/GSE248762_filtered_samples/
 data/processed/GSE248762_blinded_samples/
+sealed/

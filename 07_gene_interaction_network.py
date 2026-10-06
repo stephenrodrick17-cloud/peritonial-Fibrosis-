@@ -2,7 +2,7 @@
 ==============================================================================
 TASK 7: PROTEIN-PROTEIN INTERACTION (PPI) & CO-EXPRESSION NETWORK (11 HUB GENES)
 ==============================================================================
-Constructs an integrated network from STRING v12.0 functional/physical interactions
+Constructs an integrated network from STRING v12.5 functional/physical interactions
 (score >= 0.400) and empirical co-expression correlation (|r| >= 0.70, FDR < 0.05)
 in human peritoneal tissue (GSE62928). Computes topological centrality metrics
 (Degree, Betweenness, Closeness) and exports publication-ready vector PDF & 300 DPI PNG.
