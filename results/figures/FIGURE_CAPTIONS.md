@@ -51,3 +51,21 @@ Paired source-data CSV files are stored in `results/figures/source_data/`.
 
 ---
 
+## Figure 10A: STRING v12.5 Functional Protein Association Network (Isolated PPI Evidence)
+
+**Image File:** [`results/figures/D_string_ppi_network.png`](D_string_ppi_network.png)  
+**Source Data CSV:** [`results/tables/D_string_edges_functional.csv`](../tables/D_string_edges_functional.csv)  
+
+**Caption:** Direct network representation of live STRING v12.5 functional protein association interactions among the 11 consensus hub genes (minimum interaction confidence score >= 0.400). Displays 21 functional association edges with edge thickness proportional to STRING confidence score (top interaction: LOX–FN1, score = 0.953; physical interaction network contains 3 edges). Co-expression edges are NOT computed or drawn in this figure. ISM1 has degree = 0 (no known STRING functional interactions among the 11 hub genes).
+
+---
+
+## Figure 10B: Dual-Evidence Protein-Protein Interaction & Co-Expression Network
+
+**Image File:** [`results/figures/Hub_01_ppi_gene_interaction_network.png`](Hub_01_ppi_gene_interaction_network.png)  
+**Source Data CSV:** [`results/tables/hub_genes_ppi_centrality_metrics.csv`](../tables/hub_genes_ppi_centrality_metrics.csv)  
+
+**Caption:** Integrated dual-evidence molecular interaction network combining live STRING v12.5 functional associations (score >= 0.400, 21 edges; solid lines) with empirical tissue co-expression correlations in the discovery cohort (GSE62928, N=8; 42 edges meeting |r| >= 0.85, FDR < 0.01; dashed green lines). Violet solid lines represent dual-validated edges supported by both STRING PPI and empirical tissue co-expression. Node size reflects network degree centrality, and node colors denote Matrisome functional categories. Long node labels (COL11A1, COL8A1) are rendered with adjusted font sizes and scaled node diameters to prevent label overflow or clipping.
+
+
+
