@@ -201,7 +201,19 @@ Direction is mostly retained in small subsets (3 vs 4 and 3 vs 2 donors); INHBA,
 | **IG_V_gene** | 2 | 0.29% | Immunoglobulin variable segment genes |
 | **Total** | **699** | **100.0%** | Biotypes derived from the current Ensembl release, not GENCODE v32 |
 
-## 10. External Reference DOI Resolution Audit
+## 10. ceRNA Regulatory Layer & Non-Coding RNA Architecture (Predicted, Hypothesis-Generating)
+**Source Files:** `results/tables/G_ceRNA_network_predicted.csv`, `results/tables/G_ceRNA_network_summary.csv`, `results/tables/F_hub_to_mirna_tiered.csv`, `results/tables/G_lncRNA_threshold_sensitivity.csv`
+
+- **Inference Constraints:** All ceRNA networks and axes are **predicted, hypothesis-generating** models without prospective wet-lab validation in this system.
+- **Network Dimensions:** The predicted network comprises **3,397 candidate tripartite axes** spanning **71 unique lncRNAs**, **10 intermediate miRNAs**, and **11 candidate hub targets**.
+- **Literature Selection of miRNAs:** The initial network construction queried **10 literature-selected miRNAs** (`let-7a-5p`, `miR-29a-3p`, `miR-29b-3p`, `miR-29c-3p`, `miR-30a-5p`, `miR-21-5p`, `let-7b-5p`, `miR-34a-5p`, `miR-17-5p`, `miR-93-5p`), selected based on published fibrosis and EMT literature. An objective ranking based strictly on Tier A functional targets is cataloged in `G_ceRNA_alternative_top10_tierA.csv`.
+- **Target Evidence Multiplicity:** In multiMiR experimental records, **only 4 of the 11 hub genes have Tier A functional evidence** (reporter assay, western blot, qPCR: `COL3A1` [10 miRNAs], `FN1` [7], `LOX` [6], `VCAN` [1]). The remaining 7 hubs (`ISM1`, `EDIL3`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`) possess **0 Tier A functional miRNAs** (Tier B high-throughput CLIP/sequencing or bioinformatic predictions only).
+- **Statistical Rigor & Lack of FDR Support:** In single-cell stromal pseudobulk differential expression across donors, none of the hub genes achieve FDR significance (all stromal hub DE FDR $\ge 0.131$). At the axis level, donor co-expression is nominal-only without FDR support (among robust candidates: 75 axes with nominal log2-CPM Spearman $\rho > 0, P < 0.05$; 40 axes with nominal partial correlation $r > 0, P < 0.05$ controlling for donor cell counts and library depth).
+- **Evidence Classification Breakdown:** Across the 3,397 predicted axes, 2,143 are classified as `NOMINAL_COEXPRESSION_AND_MIRNA_DETECTED`, 916 as `LOW_CREDIBILITY_PROMISCUOUS_OR_HOUSEKEEPING` (ubiquitous nuclear transcripts like MALAT1, NEAT1, SNHG*), 195 as `EXCLUDED_DONOR_SEX_BIAS` (XIST), and 143 as `PREDICTED_ONLY` (no co-expression or miRNA detection support).
+- **lncRNA Credibility Groups:** 57 unique lncRNAs (2,286 axes) are classified as `ROBUST_CANDIDATE`, 13 unique lncRNAs (916 axes) as `LOW_CREDIBILITY_CANDIDATE`, and 1 unique lncRNA (195 axes) as `EXCLUDED_FROM_INTERPRETATION_DONOR_SEX` (XIST).
+- **lncRNA Reference Reconciliation:** Reference GENCODE v32 contains **17,944 annotated lncRNA genes**, of which **16,762** are assayed in the 10x Genomics Cell Ranger GRCh38 feature catalog for GSE248762 (1,182-feature difference not investigated). In single-cell stromal profiling, **867 lncRNAs** pass the primary detection filter (>= 1.0% stromal cells and >= 2 donors: 834 robust candidates, 32 low-credibility transcripts like MALAT1/NEAT1/SNHG*, and 1 XIST excluded for donor sex bias).
+
+## 11. External Reference DOI Resolution Audit
 **Source File:** `scripts/audit_checks/verify_dois.py`
 **Command:** `python scripts/audit_checks/verify_dois.py`
 
@@ -214,7 +226,7 @@ Direction is mostly retained in small subsets (3 vs 4 and 3 vs 2 donors); INHBA,
 | **Ma 2025** | `10.3389/fphar.2025.1646948` | Ma, Xin | Frontiers in Pharmacology | 2025 | Role of biomarker SOCS1 in peritoneal dialysis-associated peritoneal fibrosis and immune infiltration based on machine learning screening | **SUCCESS (HTTP 200)** |
 | **Kuppe 2020** | `10.1038/s41586-020-2941-1` | Kuppe, Christoph | Nature | 2020 | Decoding myofibroblast origins in human kidney fibrosis | **SUCCESS (HTTP 200)** |
 
-## 11. Figure File Routing Specification
+## 12. Figure File Routing Specification
 | Figure / Context | Target Image File | Caption / Description Rule |
 | :--- | :--- | :--- |
 | **STRING PPI Network Only** | [`results/figures/D_string_ppi_network.png`](results/figures/D_string_ppi_network.png) | Dedicated STRING-only functional protein association network (21 edges) |
@@ -222,7 +234,7 @@ Direction is mostly retained in small subsets (3 vs 4 and 3 vs 2 donors); INHBA,
 | **QC Violins (Per-Sample)** | [`results/figures/E2_qc_violins_per_sample.png`](results/figures/E2_qc_violins_per_sample.png) | Legend: 'Deposited barcodes (>= ~500 UMI)' |
 | **QC Violins (Before/After)** | [`results/figures/E2_qc_violins_before_after.png`](results/figures/E2_qc_violins_before_after.png) | Legend: 'Deposited barcodes (>= ~500 UMI)' |
 
-## 12. Synthetic Identifier Excision Disclosure
+## 13. Synthetic Identifier Excision Disclosure
 During an internal quality control audit in September–October 2026, two downstream exploratory scripts (`11_drug_repurposing_dgidb.py` / `11_candidate_drug_repurposing.py` and `12_ihc_protein_validation.py`) were identified as containing AI-generated synthetic identifiers (fabricated antibody catalogue numbers and PMIDs) that do not correspond to authentic database entries or physical reagents.
 In accordance with strict scientific integrity standards:
 1. Both downstream exploratory scripts—`11_candidate_drug_repurposing.py` (which replaced earlier `11_drug_repurposing_dgidb.py`) and `12_ihc_protein_validation.py`—were excised from the active working tree via `git rm`. However, both files remain present in the public commit history on `origin/main` (and in the local backup branch `backup-main-before-scrub`). A permanent purge from repository history would require a git history rewrite (e.g. `git-filter-repo` or BFG) and forced pushing remote branches and tags (`manuscript-v1`), which has not been performed; history is retained and we rely on this written disclosure.

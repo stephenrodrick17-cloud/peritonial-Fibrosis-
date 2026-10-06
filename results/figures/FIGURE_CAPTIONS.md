@@ -33,6 +33,15 @@ Paired source-data CSV files are stored in `results/figures/source_data/`.
 
 ---
 
+## Figure 5B: Predicted Tripartite ceRNA Regulatory Network (lncRNA–miRNA–Hub mRNA)
+
+**Image File:** [`results/figures/Fig_5B_cerna_regulatory_network.png`](Fig_5B_cerna_regulatory_network.png)  
+**Source Data CSV:** [`results/figures/source_data/fig5b_cerna_regulatory_network_source.csv`](source_data/fig5b_cerna_regulatory_network_source.csv)  
+
+**Caption:** Tripartite network visualization illustrating bioinformatically predicted competitive endogenous RNA (ceRNA) axes connecting stromal lncRNAs to candidate matrisome hub targets via intermediate microRNAs. **PREDICTED ONLY (NOT PROSPECTIVELY VALIDATED IN THIS SYSTEM).** Left column (Blue, 7 nodes): Detected stromal lncRNAs (`H19`, `MEG3`, `SNHG16`, `NORAD`, `GAS5`, `NEAT1`, `MALAT1`). Middle column (Teal, 9 nodes): Intermediate microRNAs selected from published fibrosis/EMT literature supported by ENCORI CLIP-Seq experimental evidence (`let-7a-5p`, `let-7b-5p`, `miR-17-5p`, `miR-29a-3p`, `miR-29b-3p`, `miR-29c-3p`, `miR-30a-5p`, `miR-34a-5p`, `miR-93-5p`). Right column (Orange, 11 nodes): 11 candidate matrisome hub gene targets supported by multiMiR experimental records (`VCAN`, `THBS3`, `LOX`, `ISM1`, `INHBA`, `FN1`, `EDIL3`, `COMP`, `COL8A1`, `COL3A1`, `COL11A1`). **Important Evidentiary Caveats:** (1) The 7 lncRNAs displayed in this visualization represent ubiquitous, highly expressed housekeeping or nuclear architectural transcripts (`MALAT1`, `NEAT1`, `GAS5`, `NORAD`, `SNHG16`, `MEG3`, `H19`) that were formally categorized as `LOW_CREDIBILITY_CANDIDATE` during audit due to non-specific promiscuous binding. (2) Among the 11 hub genes, only 4 possess Tier A functional validation (`COL3A1`, `FN1`, `LOX`, `VCAN`); the remaining 7 hubs have 0 Tier A functional miRNAs. (3) In single-cell stromal pseudobulk testing across human peritoneal donors, candidate axes exhibit nominal-only correlation without FDR support, and none of the hub genes achieve FDR < 0.05 differential expression (all stromal hub DE FDR >= 0.131). This panel is purely hypothesis-generating.
+
+---
+
 ## Figure 5C: In Vitro Mesothelial Cell Response to TGF-beta1 and Gating Against Untreated Culture Drift (GSE121372)
 
 **Image File:** [`results/figures/Fig_5C_gse121372_tgfb1_timecourse.png`](Fig_5C_gse121372_tgfb1_timecourse.png)  

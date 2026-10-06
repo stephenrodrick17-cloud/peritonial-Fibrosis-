@@ -337,11 +337,25 @@ To resolve the cellular origin and cell-type-specific regulation of candidate ma
 * **In Vitro HPMC Perturbation (GSE121372):**
   - Audited cultured human peritoneal mesothelial cells (HPMCs) exposed to recombinant TGF-$\beta$1 (4 samples: Control 6h, TGF-$\beta$1 6h, Control 24h, TGF-$\beta$1 24h; $n=1$ per arm).
   - Descriptive only; unreplicated single samples, no hypothesis testing, no P-values, no BMP-7 rescue claims. Baseline culture drift confounds apparent 24h induction for `VCAN`, `COMP`, and `INHBA`.
-* **Tripartite ceRNA Regulatory Networks:**
-  - Intersected miRTarBase, multiMiR, and ENCORI databases to reconstruct candidate mRNA–miRNA–lncRNA competitive endogenous RNA networks connecting hub matrisome transcripts to regulatory non-coding RNAs.
-* **Feature Universe & 699 ENSG Features:**
-  - Deposited feature matrices contain 37,487 raw features; the analysis object contains 37,476 features because 11 hub genes were blinded.
-  - Of 16,762 GENCODE v32 lncRNAs, exactly 12,021 lack HGNC symbols (`symbol == ensembl_id`) in 10x features.
+* **Tripartite ceRNA Regulatory Networks (Predicted, Hypothesis-Generating):**
+  - Intersected miRTarBase, multiMiR (v1.22.0), and ENCORI (starBase v3.0) databases to reconstruct candidate mRNA–miRNA–lncRNA competitive endogenous RNA networks connecting hub matrisome transcripts to regulatory non-coding RNAs.
+  - **Inference Constraints:** All network axes represent **predicted, hypothesis-generating** models without prospective wet-lab validation in this system.
+  - **Network Dimensions & Coverage:** The master predicted ceRNA network ([`results/tables/G_ceRNA_network_predicted.csv`](results/tables/G_ceRNA_network_predicted.csv), summary in [`results/tables/G_ceRNA_network_summary.csv`](results/tables/G_ceRNA_network_summary.csv)) captures **3,397 candidate tripartite axes** spanning **71 unique lncRNAs**, **10 intermediate miRNAs**, and **11 candidate hub targets**.
+  - **Integrated Stromal Pseudobulk Statistics:** To benchmark candidate axes against single-cell differential expression, primary stromal pseudobulk statistics (`Hub_log2FC_stromal_UF_vs_nonUF` and `Hub_FDR_stromal` from `stage4_primary_edger_pseudobulk.csv`) are joined directly onto the network table by `Hub_Gene`.
+  - **Literature Selection of miRNAs:** The initial network construction queried **10 literature-selected miRNAs** (`let-7a-5p`, `miR-29a-3p`, `miR-29b-3p`, `miR-29c-3p`, `miR-30a-5p`, `miR-21-5p`, `let-7b-5p`, `miR-34a-5p`, `miR-17-5p`, `miR-93-5p`), selected based on published fibrosis and EMT literature. Because manual curation introduces potential confirmation bias, an automated alternative ranked strictly by Tier A functional targets is cataloged in [`results/tables/G_ceRNA_alternative_top10_tierA.csv`](results/tables/G_ceRNA_alternative_top10_tierA.csv).
+  - **Target Evidence Tiers & Multiplicity:** In multiMiR experimental records, **only 4 of 11 hub genes have Tier A functional evidence** (luciferase reporter, western blot, qPCR: `COL3A1` [10 miRNAs], `FN1` [7], `LOX` [6], `VCAN` [1]), whereas the remaining 7 hubs (`ISM1`, `EDIL3`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`) possess **0 Tier A functional miRNAs** (supported only by Tier B high-throughput CLIP/sequencing or bioinformatic predictions).
+  - **Statistical Rigor & Lack of FDR Support:** In single-cell stromal pseudobulk differential expression across donors, none of the hub genes achieve FDR significance (all stromal hub DE FDR $\ge 0.131$). At the axis level, donor co-expression is nominal-only without FDR support (among robust candidates: 75 axes with nominal log2-CPM Spearman $\rho > 0, P < 0.05$; 40 axes with nominal partial correlation $r > 0, P < 0.05$ controlling for donor cell counts and library depth).
+  - **Evidence Classification Breakdown:** Across the 3,397 predicted axes:
+    - `NOMINAL_COEXPRESSION_AND_MIRNA_DETECTED`: **2,143 axes** (descriptive co-expression, not prospectively validated)
+    - `LOW_CREDIBILITY_PROMISCUOUS_OR_HOUSEKEEPING`: **916 axes** (ubiquitous nuclear architectural transcripts: `MALAT1`, `NEAT1`, `SNHG*`)
+    - `EXCLUDED_DONOR_SEX_BIAS`: **195 axes** (`XIST`, restricted to female donors)
+    - `PREDICTED_ONLY`: **143 axes** (no single-cell co-expression or miRNA detection support)
+  - **lncRNA Credibility Groups:** 57 unique lncRNAs (2,286 axes) are classified as `ROBUST_CANDIDATE`, 13 unique lncRNAs (916 axes) as `LOW_CREDIBILITY_CANDIDATE`, and 1 unique lncRNA (195 axes) as `EXCLUDED_FROM_INTERPRETATION_DONOR_SEX` (`XIST`).
+* **lncRNA Reference & Feature Catalog Reconciliation:**
+  - The reference GENCODE v32 catalog (`gencode.v32.long_noncoding_RNAs.gtf.gz`) contains **17,944 annotated lncRNA genes**.
+  - The 10x Genomics Cell Ranger GRCh38 reference (`refdata-gex-GRCh38-2020-A`) feature matrix for GSE248762 (37,487 features total) assays **16,762 of these lncRNAs** (1,182-feature difference not investigated).
+  - Across the 16 GSE248762 single-cell samples, **4,120 unique lncRNAs** have non-zero expression in at least one cell type. Under the primary stromal detection filter ($\ge 1.0\%$ expressing stromal cells [$\ge 37$ cells] and $\ge 2$ donors), **867 lncRNAs** pass (834 robust candidates, 32 low-credibility transcripts like `MALAT1`, `NEAT1`, `SNHG*`, and 1 `XIST` excluded for donor sex bias).
+  - Of the 16,762 assayed lncRNAs, exactly 12,021 lack HGNC symbols (`symbol == ensembl_id`) in 10x features.
   - 12,021 is a proper subset of the 12,720 ENSG-prefixed features in the dataset.
   - The remaining 699 features represent ENSG-prefixed features not in the GENCODE v32 lncRNA set.
   - Biotype lookup via the current Ensembl release resolves them as: 578 protein-coding, 77 lncRNA, 7 pseudogenes (3 processed, 3 IG_V, 1 transcribed processed), 5 artifacts, 2 IG_V genes, and 30 unresolved/unknown. These biotypes reflect the current Ensembl release rather than GENCODE v32.
@@ -351,12 +365,22 @@ To resolve the cellular origin and cell-type-specific regulation of candidate ma
 
 ---
 
-### Phase 12: Publication-Ready Vector Graphics & Audited Figure Panels
+### Phase 12: Publication-Ready Vector Graphics & Audited Figure Catalog
 
-* All publication figures (Figures 1 to 6 and Supplementary panels) are rendered as crisp vector graphics and high-resolution 300 DPI rasters adhering to strict publication guidelines:
-  - Color palettes customized for accessibility (ColorBrewer and Seaborn deep palettes).
-  - Explicit non-overlapping labels and relocated network legends to prevent node obscuration.
-  - Every numerical figure panel accompanied by verbatim table readbacks from committed repository scripts.
+All publication figures are rendered as crisp vector graphics (PDF) and 300 DPI publication rasters (PNG) adhering to strict accessibility guidelines (ColorBrewer and Seaborn deep palettes, non-overlapping labels, scaled node text). Every panel is accompanied by a dedicated source-data CSV in [`results/figures/source_data/`](results/figures/source_data/) and verified against underlying analysis tables:
+
+| Figure Panel | Graphic File | Verified Source Data CSV | Description & Key Statistical Finding |
+| :--- | :--- | :--- | :--- |
+| **Figure 4A** | [`results/figures/Fig_4A_pseudobulk_celltype_forest.png`](results/figures/Fig_4A_pseudobulk_celltype_forest.png) | [`results/figures/source_data/fig4a_pseudobulk_celltype_forest_source.csv`](results/figures/source_data/fig4a_pseudobulk_celltype_forest_source.csv) | Forest plot of edgeR pseudobulk $\log_2\text{FC}$ across 5 cell lineages; 8 of 9 testable stromal hubs show negative point estimates; all stromal hub DE FDR $\ge 0.131$. |
+| **Figure 4B** | [`results/figures/Fig_4B_stromal_sensitivities_forest.png`](results/figures/Fig_4B_stromal_sensitivities_forest.png) | [`results/figures/source_data/fig4b_stromal_sensitivities_forest_source.csv`](results/figures/source_data/fig4b_stromal_sensitivities_forest_source.csv) | Stromal sensitivity evaluation across 9 QC models; `VCAN` maintains consistent direction; 8 hubs attenuate 58%–91% upon ceiling removal. |
+| **Figure 5A** | [`results/figures/Fig_5A_mirna_hub_intersection.png`](results/figures/Fig_5A_mirna_hub_intersection.png) | [`results/figures/source_data/fig5a_mirna_hub_intersection_source.csv`](results/figures/source_data/fig5a_mirna_hub_intersection_source.csv) | Evidence-tiered miRNA-target counts (Tier A vs Tier B) and cross-species overlap testing in rodent (GSE130387) and human exosome (GSE182736) models. |
+| **Figure 5B** | [`results/figures/Fig_5B_cerna_regulatory_network.png`](results/figures/Fig_5B_cerna_regulatory_network.png) | [`results/figures/source_data/fig5b_cerna_regulatory_network_source.csv`](results/figures/source_data/fig5b_cerna_regulatory_network_source.csv) | **PREDICTED ONLY (Hypothesis-Generating).** Tripartite graph linking 7 stromal lncRNAs, 9 intermediate miRNAs, and 11 hubs. Note: The 7 lncRNAs shown (`MALAT1`, `NEAT1`, `GAS5`, `NORAD`, `SNHG16`, `MEG3`, `H19`) are ubiquitous housekeeping transcripts flagged as low-credibility candidates. |
+| **Figure 5C** | [`results/figures/Fig_5C_gse121372_tgfb1_timecourse.png`](results/figures/Fig_5C_gse121372_tgfb1_timecourse.png) | [`results/figures/source_data/fig5c_gse121372_tgfb1_timecourse_source.csv`](results/figures/source_data/fig5c_gse121372_tgfb1_timecourse_source.csv) | In vitro HPMC TGF-$\beta$1 timecourse; unreplicated $n=1$; culture drift ($|\text{drift}| \ge 1.0$) confounds apparent 24h induction for `VCAN`, `COMP`, `INHBA`. |
+| **Figure 6** | [`results/figures/Fig_6_discrepancy_corrected_panels.png`](results/figures/Fig_6_discrepancy_corrected_panels.png) | [`results/figures/source_data/fig6_discrepancy_corrected_panels_source.csv`](results/figures/source_data/fig6_discrepancy_corrected_panels_source.csv) | Machine learning consensus votes (0/11 unanimous) and external ROC curves in GSE125498 showing the optimism gap (apparent AUC 0.869 vs 50-repeat 5-fold CV AUC 0.678). |
+| **Figure 10A** | [`results/figures/D_string_ppi_network.png`](results/figures/D_string_ppi_network.png) | [`results/tables/D_string_edges_functional.csv`](results/tables/D_string_edges_functional.csv) | Live STRING v12.5 functional protein association network (score $\ge 0.400$, 21 functional edges, `ISM1` degree = 0). |
+| **Figure 10B** | [`results/figures/Hub_01_ppi_gene_interaction_network.png`](results/figures/Hub_01_ppi_gene_interaction_network.png) | [`results/tables/hub_genes_ppi_centrality_metrics.csv`](results/tables/hub_genes_ppi_centrality_metrics.csv) | Dual-evidence molecular network combining live STRING functional edges with empirical GSE62928 tissue co-expression ($|r| \ge 0.85$, FDR $< 0.01$). |
+
+Detailed figure captions and methodological explanations are archived in [`results/figures/FIGURE_CAPTIONS.md`](results/figures/FIGURE_CAPTIONS.md).
 
 ---
 
@@ -533,7 +557,13 @@ This automated master pipeline runs Stages 4 and 5 end-to-end:
 │   ├── 67b_stage5_gse121372_hpmc_audit.py        # In vitro HPMC EMT perturbation audit
 │   ├── 75_stage5_audit_master_resolution.py     # Regulatory layer audit master resolution
 │   ├── 76_stage5_final_corrections_readback.py   # Stage 5 readback verification
-│   └── make_manifests_portable.py                # Cryptographic relative-path manifest generator
+│   ├── make_manifests_portable.py                # Cryptographic relative-path manifest generator
+│   └── audit_checks/                             # Standalone programmatic verification suite
+│       ├── audit_cerna_regulatory_layer.py       # Full ceRNA regulatory layer verification
+│       ├── generate_manuscript_numbers.py        # Programmatic manuscript truth-table generator
+│       ├── verify_dois.py                        # Automated DOI HTTP resolution checker
+│       ├── check_fcgr3_probes.py                 # Effluent probe alignment & cross-reactivity
+│       └── run_stromal_composition_tests.py      # Single-cell stromal cell composition testing
 ├── audit/
 │   ├── check_data_leakage_and_provenance.py      # Real data & leakage verification script
 │   ├── repo_audit.py                             # Automated repository consistency audit
@@ -548,12 +578,18 @@ This automated master pipeline runs Stages 4 and 5 end-to-end:
 ├── results/
 │   ├── AUDIT_SUMMARY.md                          # Comprehensive statistical audit report
 │   ├── figures/                                  # Publication vector figures (Figures 1 to 6 & Supplementary)
+│   │   ├── FIGURE_CAPTIONS.md                    # Detailed programmatic figure captions & caveats
+│   │   └── source_data/                          # Per-panel verified source CSV files
 │   └── tables/
+│       ├── MANUSCRIPT_NUMBERS.md                 # Single source of truth for all audited figures
 │       ├── stage4_manifest.json                  # Cryptographic manifest for Stage 4 (SHA256, bytes, shapes)
 │       ├── stage5_manifest.json                  # Cryptographic manifest for Stage 5 (SHA256, bytes, shapes)
 │       ├── stage4_primary_edger_pseudobulk.csv   # Primary edgeR pseudobulk results (165 rows)
 │       ├── stage4_primary_98_bh_family_sorted.csv# Audited m=98 Benjamini-Hochberg family (98 rows)
 │       ├── stage4_sensitivity_edger_pseudobulk.csv # Sensitivity suite models (792 rows)
+│       ├── G_ceRNA_network_predicted.csv         # Predicted 3,397-axis ceRNA network (with stromal stats)
+│       ├── G_ceRNA_network_summary.csv           # Summary metrics of candidate ceRNA network
+│       ├── G_ceRNA_provenance.csv                # Cryptographic provenance & execution timestamp
 │       ├── F_GSE130387_cross_species_logFC.csv   # Rat PD cross-species miRNA fold changes
 │       ├── H_GSE121372_hub_fold_changes.csv      # In vitro HPMC EMT hub fold changes
 │       ├── GSE62928_full_expression_matrix.csv
