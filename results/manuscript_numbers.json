@@ -1,18 +1,18 @@
 {
   "gene_universes": {
-    "probe_level_limma": 21914,
+    "probe_level_limma": 22049,
     "maxmean_wgcna": 20940,
     "gsea_ranked_symbols": 21597
   },
   "differential_expression": {
-    "upregulated_degs_p005_logfc08": 502,
+    "upregulated_degs_p005_logfc08": 367,
     "matrisome_reference_total": 1027,
-    "matrisome_in_probe_universe": 950,
-    "matrisome_background_percent": 4.34,
+    "matrisome_in_probe_universe": 974,
+    "matrisome_background_percent": 4.42,
     "convergent_ecm_degs": 71,
-    "ecm_deg_percent": 14.14,
-    "fold_enrichment": 3.26,
-    "hypergeometric_p": 1.0826448183124207e-18
+    "ecm_deg_percent": 19.35,
+    "fold_enrichment": 4.38,
+    "hypergeometric_p": 2.4377590752018966e-26
   },
   "wgcna": {
     "soft_threshold_power_beta": 12,

@@ -26,31 +26,43 @@ cat("Loaded", nrow(all_genes), "unique genes from GSE62928\n")
 cat("Available columns:", paste(colnames(all_genes), collapse = ", "), "\n")
 
 # ------------------------------------------------------------------------------
-# 1. DEG Classification using Significance Thresholds
-# Thresholds: |log2FC| >= 0.585 (1.5-fold) and P.Value < 0.05 (nominal)
+# 1. DEG Classification using Primary Significance Thresholds
+# Primary Manuscript Thresholds: |log2FC| >= 0.80 and P.Value < 0.05 (nominal)
+# Alternative / Historical Thresholds: |log2FC| >= 0.585 (1.5-fold) and P.Value < 0.05
 # ------------------------------------------------------------------------------
-logfc_cutoff  <- 0.585
+logfc_cutoff  <- 0.80
 pval_cutoff   <- 0.05
 adjp_cutoff   <- 0.05
 
 all_results <- all_genes %>%
   mutate(Gene = Gene.symbol)
 
+# Primary classification (|log2FC| >= 0.80, P < 0.05)
 all_results$DEG_Status <- "Not Significant"
-all_results$DEG_Status[all_results$logFC >  logfc_cutoff & all_results$P.Value < pval_cutoff] <- "Upregulated"
-all_results$DEG_Status[all_results$logFC < -logfc_cutoff & all_results$P.Value < pval_cutoff] <- "Downregulated"
+all_results$DEG_Status[all_results$logFC >=  logfc_cutoff & all_results$P.Value < pval_cutoff] <- "Upregulated"
+all_results$DEG_Status[all_results$logFC <= -logfc_cutoff & all_results$P.Value < pval_cutoff] <- "Downregulated"
 all_results$DEG_Status <- factor(all_results$DEG_Status,
                                  levels = c("Upregulated", "Downregulated", "Not Significant"))
 
 deg_table <- all_results %>% filter(DEG_Status != "Not Significant")
 
+# Historical / Alternative classification (|log2FC| >= 0.585, P < 0.05) for comparison
+alt_logfc_cutoff <- 0.585
+n_alt_up   <- sum(all_results$logFC >=  alt_logfc_cutoff & all_results$P.Value < pval_cutoff)
+n_alt_down <- sum(all_results$logFC <= -alt_logfc_cutoff & all_results$P.Value < pval_cutoff)
+
 cat("\n=================================================================\n")
-cat("DEG FILTERING RESULTS (|log2FC| >=", logfc_cutoff, ", P.Value <", pval_cutoff, "):\n")
-cat("Total genes tested:    ", nrow(all_results), "\n")
-cat("Total DEGs identified: ", nrow(deg_table), "\n")
-cat("  Upregulated:         ", sum(all_results$DEG_Status == "Upregulated"), "\n")
-cat("  Downregulated:       ", sum(all_results$DEG_Status == "Downregulated"), "\n")
-cat("Genes with FDR < 0.05:", sum(all_results$adj.P.Val < adjp_cutoff, na.rm = TRUE), "\n")
+cat("PRIMARY DEG FILTERING RESULTS (|log2FC| >=", logfc_cutoff, ", P.Value <", pval_cutoff, "):\n")
+cat("Total genes tested:                 ", nrow(all_results), "\n")
+cat("Total DEGs identified:              ", nrow(deg_table), "\n")
+cat("  Upregulated (Pro-fibrotic DEGs):  ", sum(all_results$DEG_Status == "Upregulated"), "\n")
+cat("  Downregulated:                    ", sum(all_results$DEG_Status == "Downregulated"), "\n")
+cat("Genes with FDR < 0.05:              ", sum(all_results$adj.P.Val < adjp_cutoff, na.rm = TRUE), "\n")
+cat("Upregulated genes with FDR < 0.05:  ", sum(all_results$DEG_Status == "Upregulated" & all_results$adj.P.Val < adjp_cutoff, na.rm = TRUE), "\n")
+cat("\nALTERNATIVE / HISTORICAL THRESHOLD COMPARISON (|log2FC| >= 0.585, P < 0.05):\n")
+cat("  Upregulated (0.585 cutoff):       ", n_alt_up, "\n")
+cat("  Downregulated (0.585 cutoff):     ", n_alt_down, "\n")
+cat("  Total (0.585 cutoff):             ", n_alt_up + n_alt_down, "\n")
 cat("=================================================================\n")
 
 write.csv(all_results, "results/tables/GSE62928_all_results.csv", row.names = FALSE)

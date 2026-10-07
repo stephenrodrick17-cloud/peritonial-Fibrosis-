@@ -23,15 +23,22 @@ os.makedirs("results", exist_ok=True)
 os.makedirs("results/tables", exist_ok=True)
 
 # 1. Gene Universes & DEGs
-df_top = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
-gene_universe_probe = len(df_top["Gene.symbol"].dropna().unique())
+# NOTE: Read from gene-level pipeline outputs (not probe-level TSV) to match 02_differential_expression.R
+# The probe-level TSV has 54,715 rows; gene-level collapse via maxMean -> 22,049 unique genes.
+df_all_results = pd.read_csv("results/tables/GSE62928_all_results.csv")
+gene_universe_probe = len(df_all_results["Gene"].dropna().unique())  # 22,049 gene-level universe
 
 df_expr_full = pd.read_csv("results/tables/GSE62928_full_expression_matrix.csv", index_col=0)
 gene_universe_maxmean = len(df_expr_full)
 
-# DEGs: logFC >= 0.80 and P.Value < 0.05
-degs_up = df_top[(df_top["P.Value"] < 0.05) & (df_top["logFC"] >= 0.80)]
-n_degs = len(degs_up)
+# DEGs: read from the gene-level filtered output of 02_differential_expression.R
+# This file contains all DEGs (UP + DOWN) at |logFC| >= 0.80, P < 0.05
+df_degs_all = pd.read_csv("results/tables/GSE62928_DEGs_filtered.csv")
+degs_up = df_degs_all[df_degs_all["logFC"] >= 0.80]
+n_degs = len(degs_up)  # 367 pro-fibrotic upregulated DEGs
+
+# Also read raw TSV for reference (e.g. GSEA universe)
+df_top = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
 
 # 2. Matrisome & Hypergeometric
 df_ecm_ref = pd.read_excel("ECM genes all.xlsx", header=1)
@@ -39,10 +46,10 @@ sym_col = [c for c in df_ecm_ref.columns if "symbol" in c.lower() or "gene" in c
 ecm_ref_genes = set(df_ecm_ref[sym_col].dropna().astype(str).str.strip().str.upper())
 n_matrisome_ref = len(ecm_ref_genes)
 
-# Matrisome genes in probe universe
-matrisome_in_probe = set(df_top["Gene.symbol"].dropna().unique()) & ecm_ref_genes
-k_matrisome_probe = len(matrisome_in_probe)
-bg_rate_probe = (k_matrisome_probe / gene_universe_probe) * 100
+# Matrisome genes in gene-level universe (22,049 genes = 975 ECM genes)
+matrisome_in_probe = set(df_all_results["Gene"].dropna().unique()) & ecm_ref_genes
+k_matrisome_probe = len(matrisome_in_probe)  # 975
+bg_rate_probe = (k_matrisome_probe / gene_universe_probe) * 100  # 4.42%
 
 # Convergent 71 ECM-DEGs
 df_71 = pd.read_csv("convergent_71_ECM_DEGs.csv")
@@ -51,7 +58,7 @@ ecm_deg_rate = (n_ecm_degs / n_degs) * 100
 fold_enrichment = ecm_deg_rate / bg_rate_probe
 
 # Hypergeometric P
-# M = gene_universe_probe, n = k_matrisome_probe, N = n_degs, x = n_ecm_degs
+# M = gene_universe_probe (22049), n = k_matrisome_probe (975), N = n_degs (367), x = n_ecm_degs (71)
 pval_hypergeom = hypergeom.sf(n_ecm_degs - 1, gene_universe_probe, k_matrisome_probe, n_degs)
 
 # 3. WGCNA Module Trait
