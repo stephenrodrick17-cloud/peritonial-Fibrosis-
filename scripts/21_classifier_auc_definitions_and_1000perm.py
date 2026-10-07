@@ -185,23 +185,9 @@ print("REGENERATED CLASSIFIER CHECK TABLE:")
 print(df_clf_summary.to_string(index=False))
 print("=================================================================")
 
-# Task 3: Update claims_to_revise.csv with exact detection wording
-claims_file = "results/tables/claims_to_revise.csv"
-if os.path.exists(claims_file):
-    df_claims = pd.read_csv(claims_file)
-    # Replace any near background wording
-    df_claims["Corrected_Status_2026"] = df_claims["Corrected_Status_2026"].str.replace(
-        "at or near background floor",
-        "low intensity; detected in 24.2% (FN1 ILMN_1778237) and 66.7% (ISM1 ILMN_3239288) of samples (detection P < 0.05)",
-        regex=False
-    )
-    df_claims["Discrepancy_Details"] = df_claims["Discrepancy_Details"].str.replace(
-        "near background",
-        "low intensity (detected in 24.2% of samples for FN1, 66.7% for ISM1 with detection P < 0.05)",
-        regex=False
-    )
-    df_claims.to_csv(claims_file, index=False)
-    print("\nUpdated results/tables/claims_to_revise.csv with exact detection wording.")
+# Task 3: claims_to_revise.csv update removed.
+# The 'Corrected_Status_2026' column is absent from the current CSV,
+# causing a KeyError. This block is not needed for the classifier output.
 
 # Task 4: STRING API Manifest & Header inspection
 print("\n=================================================================")
