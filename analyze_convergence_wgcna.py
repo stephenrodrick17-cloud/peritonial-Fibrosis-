@@ -4,9 +4,9 @@ np.random.seed(42)
 random.seed(42)
 """
 ==============================================================================
-SCRIPT: ANALYZE CONVERGENCE (WGCNA TRAIT MODULES ∩ 71 CONVERGENT ECM-DEGS)
+SCRIPT: ANALYZE CONVERGENCE (WGCNA TRAIT MODULES ∩ 81 CONVERGENT ECM-DEGS)
 Project: Peritoneal Dialysis-Associated Peritoneal Fibrosis Transcriptomics
-Purpose: Intersect WGCNA trait-correlated module genes with 71 ECM-DEGs
+Purpose: Intersect WGCNA trait-correlated module genes with 81 ECM-DEGs
          and generate a 3-way Venn diagram (DEGs ∩ Matrisome ∩ WGCNA)
 ==============================================================================
 """
@@ -20,7 +20,7 @@ os.makedirs("results/tables", exist_ok=True)
 os.makedirs("results/figures", exist_ok=True)
 
 print("=" * 70)
-print("STEP 1: LOADING WGCNA MODULE GENES & 71 CONVERGENT ECM-DEGS")
+print("STEP 1: LOADING WGCNA MODULE GENES & 81 CONVERGENT ECM-DEGS")
 print("=" * 70)
 
 # 1. Load WGCNA trait-significant module genes
@@ -32,8 +32,8 @@ df_wgcna = pd.read_csv(wgcna_file)
 df_wgcna["gene_clean"] = df_wgcna["gene_symbol"].astype(str).str.strip().str.upper()
 print(f"Loaded {len(df_wgcna)} trait-significant WGCNA module genes ({df_wgcna['module_color'].iloc[0]} module).")
 
-# 2. Load convergent ECM-DEGs (71 pro-fibrotic ECM genes)
-ecm_file = "convergent_71_ECM_DEGs.csv"
+# 2. Load convergent ECM-DEGs (81 pro-fibrotic ECM genes at log2FC >= 0.585 [1.5-fold], P < 0.05)
+ecm_file = "convergent_81_ECM_DEGs.csv"
 if not os.path.exists(ecm_file):
     ecm_file = "results/tables/GSE62928_ECM_intersection.csv"
 
@@ -94,25 +94,17 @@ print("STEP 3: GENERATING 3-WAY CONVERGENCE VENN DIAGRAM")
 print("=" * 70)
 
 # Compute dynamic 3-way Venn subsets from actual gene sets:
-# Set A: GSE62928 Pro-Fibrotic DEGs (log2FC >= 0.80, P < 0.05, N = 367)
+# Set A: GSE62928 Pro-Fibrotic DEGs (log2FC >= 0.585 [1.5-fold], P < 0.05, N = 534)
 # Set B: Human Matrisome (N = 1,027)
 # Set C: WGCNA Trait-Significant Module (Salmon, N = 604)
 
-# Load full pro-fibrotic DEGs (N = 367)
-df_tt = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
-df_clean = df_tt.dropna(subset=["Gene.symbol"]).copy()
-df_clean = df_clean[~df_clean["Gene.symbol"].isin(["", "---"])]
-rows = []
-for _, r in df_clean.iterrows():
-    for s in str(r["Gene.symbol"]).split("///"):
-        sc = s.strip().upper()
-        if sc:
-            rc = r.to_dict()
-            rc["Gene"] = sc
-            rows.append(rc)
-df_exp = pd.DataFrame(rows)
-df_gene = df_exp.sort_values("P.Value").drop_duplicates("Gene")
-set_degs = set(df_gene[(df_gene["P.Value"] < 0.05) & (df_gene["logFC"] >= 0.80)]["Gene"])
+# Load full pro-fibrotic DEGs (N = 534) via canonical gene-level pipeline output
+df_deg = pd.read_csv("results/tables/GSE62928_all_results.csv")
+df_deg_clean = df_deg.dropna(subset=["Gene"]).copy()
+df_deg_clean = df_deg_clean[~df_deg_clean["Gene"].isin(["", "---"])]
+df_deg_clean["Gene"] = df_deg_clean["Gene"].astype(str).str.strip().str.upper()
+df_gene = df_deg_clean.sort_values("P.Value").drop_duplicates("Gene")
+set_degs = set(df_gene[(df_gene["P.Value"] < 0.05) & (df_gene["logFC"] >= 0.585)]["Gene"])
 
 # Load matrisome
 df_ecm_ref = pd.read_excel("ECM genes all.xlsx", skiprows=1)

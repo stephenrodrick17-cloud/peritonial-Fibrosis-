@@ -6,7 +6,7 @@ The current raster image `results/figures/graphical_abstract.jpg` was created ou
 
 ## 1. Panel 2 (Systems Biology & WGCNA)
 * **Venn Diagram Labeling Error:**
-  - **Current text:** Right circle of the 40 convergent genes Venn diagram is mislabeled as `"FN1"`.
+  - **Current text:** Right circle of the 44 convergent genes Venn diagram is mislabeled as `"FN1"`.
   - **Correction:** Redraw label as `"WGCNA Salmon Module (604 genes)"`.
 
 ---

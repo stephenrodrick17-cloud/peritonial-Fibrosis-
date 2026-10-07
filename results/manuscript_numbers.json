@@ -5,14 +5,14 @@
     "gsea_ranked_symbols": 21597
   },
   "differential_expression": {
-    "upregulated_degs_p005_logfc08": 367,
+    "upregulated_degs_p005_logfc0585": 534,
     "matrisome_reference_total": 1027,
     "matrisome_in_probe_universe": 974,
     "matrisome_background_percent": 4.42,
-    "convergent_ecm_degs": 71,
-    "ecm_deg_percent": 19.35,
-    "fold_enrichment": 4.38,
-    "hypergeometric_p": 2.4377590752018966e-26
+    "convergent_ecm_degs": 81,
+    "ecm_deg_percent": 15.17,
+    "fold_enrichment": 3.43,
+    "hypergeometric_p": 1.2370012444682938e-22
   },
   "wgcna": {
     "soft_threshold_power_beta": 12,
@@ -25,7 +25,7 @@
     "salmon_bonferroni_p": 0.2198
   },
   "candidate_convergence": {
-    "convergent_wgcna_ecm_candidates": 40
+    "convergent_wgcna_ecm_candidates": 44
   },
   "machine_learning_consensus": {
     "lasso_selected": 2,

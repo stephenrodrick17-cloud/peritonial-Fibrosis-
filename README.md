@@ -15,7 +15,7 @@
 
 * **Background:** Encapsulating Peritoneal Sclerosis (EPS) is a rare, life-threatening complication of long-term peritoneal dialysis (PD) characterized by extensive fibrocollagenous thickening, neoangiogenesis, and progressive encapsulation of the peritoneal membrane. Molecular drivers governing early matrisome remodeling and stromal activation remain incompletely understood.
 * **Methods:** We developed a deterministic systems biology and consensus machine learning pipeline. Discovery profiling utilized human parietal peritoneal biopsy transcriptomics (**GSE62928**, $N = 8$: 4 severe EPS cases vs. 4 non-EPS uremic/PD controls; 22,049 probe-level genes, 20,940 MaxMean-collapsed genes) intersected with the curated Human Matrisome Database (1,027 genes). Unsupervised Weighted Gene Co-Expression Network Analysis (WGCNA) identified trait-correlated modules. Candidate convergence was screened through four supervised machine learning algorithms (LASSO, SVM-RFE, Random Forest, XGBoost). External clinical generalizability was evaluated in longitudinal dialysis effluent cells (**GSE125498**, $N = 33$, serving as a clinical proxy for peritoneal membrane injury across dialysis vintage). Exact combinatorial label permutations ($\binom{8}{4} = 70$ splits) and live functional protein association networks (STRING v12.5, retrieved 2026-10-01) established empirical significance and molecular connectivity.
-* **Results:** Microarray differential expression identified 367 pro-fibrotic up-regulated DEGs ($P < 0.05, \log_2\text{FC} \ge 0.80$), exhibiting significant enrichment for extracellular matrix proteins (**71 ECM-DEGs**, $19.35\%$ vs. $4.42\%$ background; exact one-sided label permutation $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$). Unsupervised WGCNA identified the **Salmon module** (604 genes, $r = +0.806, P = 0.0157$; one-sided $P_{\text{perm}} = 0.0143$, two-sided $P_{\text{perm}} = 0.0286$), intersecting with 71 ECM-DEGs to yield **40 convergent candidates**. Consensus machine learning (LASSO: 2, SVM-RFE: 14, RF: 17, XGBoost: 1) identified **11 consensus pro-fibrotic hub genes** (`ISM1`, `FN1`, `EDIL3`, `VCAN`, `COL3A1`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`, `LOX`). In external validation ($N = 33$), the composite 7-gene panel achieved an in-sample $\text{AUC} = \mathbf{0.869}$ ($95\%\text{ CI: } [0.710, 0.992]$) and a 50-repeat 5-fold cross-validated generalization of $\text{AUC}_{\text{CV}} = \mathbf{0.678}$ ($\text{SD } 0.058$ across repeats; $\text{LOOCV } \text{AUC} = 0.658$, single 5-fold $\text{AUC} = 0.592$). Preranked GSEA identified Epithelial-Mesenchymal Transition (EMT) as the primary enriched pathway ($\text{NES} = +\mathbf{3.203}, \text{FDR} < 0.001$, one-sided sample label permutation $P_{\text{perm}} = 0.0143$). Immune deconvolution revealed peritoneal myofibroblast expansion (Mann-Whitney $U = 16.0, P = 0.0286$, exact two-sided $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$, $\text{FDR} = 0.1714$).
+* **Results:** Microarray differential expression identified 534 pro-fibrotic up-regulated DEGs ($P < 0.05, \log_2\text{FC} \ge 0.585$ [1.5-fold]), exhibiting significant enrichment for extracellular matrix proteins (**81 ECM-DEGs**, $15.17\%$ of DEGs vs. $4.422\%$ matrisome background; 3.430× fold enrichment, hypergeometric $P = 1.321 \times 10^{-22}$; exact one-sided label permutation $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$). Unsupervised WGCNA identified the **Salmon module** (604 genes, $r = +0.806, P = 0.0157$; one-sided $P_{\text{perm}} = 0.0143$, two-sided $P_{\text{perm}} = 0.0286$), intersecting with 81 ECM-DEGs to yield **44 convergent candidates**. Consensus machine learning (LASSO: 2, SVM-RFE: 14, RF: 17, XGBoost: 1) identified **11 consensus pro-fibrotic hub genes** (`ISM1`, `FN1`, `EDIL3`, `VCAN`, `COL3A1`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`, `LOX`). In external validation ($N = 33$), the composite 7-gene panel achieved an in-sample $\text{AUC} = \mathbf{0.869}$ ($95\%\text{ CI: } [0.710, 0.992]$) and a 50-repeat 5-fold cross-validated generalization of $\text{AUC}_{\text{CV}} = \mathbf{0.678}$ ($\text{SD } 0.058$ across repeats; $\text{LOOCV } \text{AUC} = 0.658$, single 5-fold $\text{AUC} = 0.592$). Preranked GSEA identified Epithelial-Mesenchymal Transition (EMT) as the primary enriched pathway ($\text{NES} = +\mathbf{3.203}, \text{FDR} < 0.001$, one-sided sample label permutation $P_{\text{perm}} = 0.0143$). Immune deconvolution revealed peritoneal myofibroblast expansion (Mann-Whitney $U = 16.0, P = 0.0286$, exact two-sided $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$, $\text{FDR} = 0.1714$).
 * **Conclusions:** High-dimensional matrisome integration coupled with machine learning identifies candidate matrisome genes associated with peritoneal membrane fibrogenesis. Cross-validation reveals modest, partition-dependent discrimination ($\text{AUC } 0.59 - 0.70$) across independent tissue-effluent cohorts, providing exploratory molecular candidates for future prospective investigation in peritoneal dialysis.
 * **Keywords:** Peritoneal Dialysis, Encapsulating Peritoneal Sclerosis, Extracellular Matrix, Matrisome, WGCNA, Consensus Machine Learning, Epithelial-Mesenchymal Transition.
 
@@ -33,10 +33,10 @@
 | Analytical Stage | Parameter / Metric | Exact Value / Formula | Statistical & Permutation Controls | Scientific Interpretation |
 | :--- | :--- | :---: | :--- | :--- |
 | **Discovery Transcriptomics** | Total Unique Probed Genes | **22,049** (probe-level) / **20,940** (MaxMean) | Affymetrix HG-U133_Plus_2 mapped matrix | Genome-wide transcriptome representation |
-| **Differential Expression** | Pro-Fibrotic Up-Regulated DEGs | **367** | Limma $P < 0.05, \log_2\text{FC} \ge 0.80$ | Focal up-regulated fibrotic response in EPS tissue |
-| **Matrisome Overlap** | Pro-Fibrotic ECM-DEGs | **71** ($19.35\%$) | Exact One-Sided Permutation: **$P_{\text{perm}} = 1/70 = \mathbf{0.0143}$** | True clinical split achieves rank 1/70 (minimum attainable $P$ at $N=8$) |
+| **Differential Expression** | Pro-Fibrotic Up-Regulated DEGs | **534** | Limma $P < 0.05, |\log_2\text{FC}| \ge 0.585$ (1.5-fold) | Focal up-regulated fibrotic response in EPS tissue; 1,510 down-regulated DEGs (2,044 total DEGs) |
+| **Matrisome Overlap** | Pro-Fibrotic ECM-DEGs (Up) | **81** ($15.17\%$ of 534 up DEGs) | Hypergeom: $3.430\times, P = 1.321 \times 10^{-22}$; Exact 1-sided Perm: **$P_{\text{perm}} = 1/70 = \mathbf{0.0143}$** | True clinical split rank 1/70; 975 measured matrisome genes / 1,027 reference; 67 down ECM-DEGs = 148 total ECM-DEGs |
 | **WGCNA Module Trait** | Salmon Module Correlation | **$r = +0.806, P = 0.0157$** | Permutation: One-Sided $P_{\text{perm}} = \mathbf{0.0143}$, Two-Sided $P_{\text{perm}} = \mathbf{0.0286}$; FWER $P_{\text{bonf}} = \mathbf{0.2198}$ | Top module across all permutations; multiple testing caveat noted |
-| **Tripartite Convergence** | WGCNA $\cap$ ECM-DEG Candidates | **40 genes** | Strict intersection: 604 Salmon $\cap$ 71 ECM-DEGs | Candidate matrix pool capturing structural & regulatory ECM |
+| **Tripartite Convergence** | Up-DEGs $\cap$ Measured Matrisome $\cap$ Salmon | **44 genes** | Strict 3-way intersection: 534 Up DEGs $\cap$ 975 Measured Matrisome $\cap$ 604 Salmon | Candidate matrix pool; all 11 ML hubs confirmed in BOTH 44 (0.585) and 40 (0.80) pools |
 | **Machine Learning Consensus** | Multi-Model Hub Panel | **11 genes** | $\ge 2/4$ Votes (LASSO: 2, SVM-RFE: 14, RF: 17, XGBoost: 1) | Cross-algorithm consensus selecting top fibrogenic drivers |
 | **External Cohort (GSE125498)** | 7-Gene Panel In-Sample AUC | **$\text{AUC} = \mathbf{0.869}$** | Logistic Regression ($95\%\text{ CI: } [0.710, 0.992]$) | Apparent in-sample discrimination in effluent cohort |
 | **External Cohort (GSE125498)** | 7-Gene Panel Cross-Validation | **$\text{AUC}_{\text{CV}} = \mathbf{0.678}$** ($\text{SD } 0.058$ across repeats) | 50-Repeat 5-Fold Stratified CV with Pipeline Scaler (Primary) | **Lead Generalization Metric:** True out-of-fold performance |
@@ -95,48 +95,48 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
   - GSEA preranked analysis evaluated 21,597 unique primary symbols.
 * **Limma Linear Modeling:** Differential expression was evaluated using an empirical Bayes moderated $t$-statistic:
   $$\tilde{t}_{g} = \frac{\hat{\beta}_{g}}{s_{g}\sqrt{v_{g}}}, \quad s_{g}^2 = \frac{d_0 s_0^2 + d_g s_g^2}{d_0 + d_g}$$
-* **Threshold Criteria:** Pro-fibrotic DEGs were defined strictly as nominal $P < 0.05$ and $\log_2\text{FC} \ge 0.80$ (up-regulated in EPS), isolating **367 pro-fibrotic DEGs**.
-* **Methodological Note on Probe Collapse:** The DEG list depends on probe-collapse method (367 up-regulated genes with best-probe-by-P in 22,049 genes vs 462 with MaxMean in 20,940 genes); ECM over-representation ranked 1/70 under both. Hub genes were chosen from DEGs filtered at nominal $P < 0.05$, so their significance is by construction.
+* **Threshold Criteria:** Pro-fibrotic DEGs were defined strictly as nominal $P < 0.05$ and $|\log_2\text{FC}| \ge 0.585$ (1.5-fold raw change, up-regulated in EPS), isolating **534 pro-fibrotic up-regulated DEGs** and 1,510 downregulated DEGs (2,044 total DEGs). Genome-wide FDR < 0.05 survivors: 78 genes total (8 up / 70 down). **Historical / Stringent Comparison (for reference):** log₂FC ≥ 0.80 yields 367 up / 1,263 down = 1,630 total DEGs.
+* **Methodological Note on Probe Collapse:** The DEG list depends on probe-collapse method (534 up-regulated genes with best-probe-by-P in 22,049 genes vs 462 with MaxMean in 20,940 genes); ECM over-representation ranked 1/70 under both. Hub genes were chosen from DEGs filtered at nominal $P < 0.05$, so their significance is by construction.
 
 ![Discovery Volcano Plot](results/figures/DEG_01_volcano_plot.png)
-* **Figure 1: Discovery Differential Expression Landscape.** Volcano plot of 22,049 probed genes in GSE62928 highlighting the 367 pro-fibrotic DEGs ($P < 0.05, \log_2\text{FC} \ge 0.80$, red).
+* **Figure 1: Discovery Differential Expression Landscape.** Volcano plot of 22,049 probed genes in GSE62928 highlighting the 534 pro-fibrotic DEGs ($P < 0.05, \log_2\text{FC} \ge 0.585$, red).
 
 ---
 
 ### Phase 2: Curated Human Matrisome Filtering & Exact Permutation Control
 
-* **Matrisome Reference:** The 367 pro-fibrotic DEGs were mapped against the Human Matrisome Project catalog (Naba et al., 1,027 curated ECM genes encompassing Core Matrisome collagens, glycoproteins, proteoglycans, and Matrisome-Associated regulators; 975 present in the 22,049 probe universe, 966 in the 20,940 matrix).
-* **Intersection:** Isolated **71 Pro-Fibrotic ECM-DEGs** ($19.35\%$ of DEGs vs. $4.42\%$ background rate; 4.38-fold enrichment; Hypergeometric $P = 2.59 \times 10^{-26}$).
+* **Matrisome Reference:** The 534 pro-fibrotic DEGs were mapped against the Human Matrisome Project catalog (Naba et al., 1,027 curated ECM genes encompassing Core Matrisome collagens, glycoproteins, proteoglycans, and Matrisome-Associated regulators; 975 present in the 22,049 probe universe, 966 in the 20,940 matrix).
+* **Intersection:** Isolated **81 Pro-Fibrotic ECM-DEGs** ($15.17\%$ of 534 up DEGs vs. $4.422\%$ matrisome background rate; 3.430× fold enrichment; Hypergeometric $P = 1.321 \times 10^{-22}$). Additionally 67 downregulated ECM-DEGs were identified (148 total ECM-DEGs both directions).
 * **Exact Combinatorial Label Permutation Framework:** Because $N = 8$ yields exactly $\binom{8}{4} = 70$ possible 4-case vs. 4-control label assignments, empirical significance was computed across all 70 partitions using a one-sided count rank:
   $$P_{\text{perm}} = \frac{1}{70} \sum_{k=1}^{70} \mathbb{I}\left( N_{\text{ECM}}^{(k)} \ge N_{\text{ECM}}^{(\text{true})} \right) = \frac{1}{70} = \mathbf{0.0143}$$
   The true EPS phenotype ranks **#1 out of 70**, achieving the exact mathematical minimum achievable one-sided $p$-value at $N = 8$.
 
-![Matrisome Venn Diagram](results/figures/venn_gse62928_pro_fibrotic_ecm_71.png)
-* **Figure 2: Matrisome Intersect.** 2-way Venn diagram demonstrating the intersection between 367 pro-fibrotic DEGs and the 1,027-gene curated Human Matrisome, isolating 71 ECM-DEGs.
+![Matrisome Venn Diagram](results/figures/venn_gse62928_pro_fibrotic_ecm_81.png)
+* **Figure 2: Matrisome Intersect.** 2-way Venn diagram demonstrating the intersection between 534 pro-fibrotic DEGs (|log₂FC| ≥ 0.585) and the 1,027-gene curated Human Matrisome (975 measured in Limma universe), isolating 81 up-regulated pro-fibrotic ECM-DEGs (intersection = 81; DEGs only = 453; Matrisome only = 946). Historical 0.80-stringent comparison produced _71.png with 71 intersections.
 
 ---
 
 ### Phase 3: Weighted Gene Co-Expression Network Analysis (WGCNA)
 
-* **Unsupervised Adjacency Construction:** Co-expression networks were constructed from the top 5,000 most variable genes unioned with the 71 convergent ECM-DEGs (5,038 total features) derived from the 20,940 MaxMean-collapsed matrix using a signed hybrid similarity metric with soft-thresholding power $\beta = 12$ (truncated scale-free fit $R^2 = 0.809$, linear scale-free fit $R^2 = 0.820$, slope $-0.768$):
+* **Unsupervised Adjacency Construction:** Co-expression networks were constructed from the top 5,000 most variable genes unioned with the 81 convergent ECM-DEGs (5,038 total features) derived from the 20,940 MaxMean-collapsed matrix using a signed hybrid similarity metric with soft-thresholding power $\beta = 12$ (truncated scale-free fit $R^2 = 0.809$, linear scale-free fit $R^2 = 0.820$, slope $-0.768$):
   $$a_{ij} = \left| \frac{1 + \text{cor}(x_i, x_j)}{2} \right|^\beta$$
 * **Topological Overlap Matrix (TOM):** Hierarchical clustering of topological overlap identified 14 distinct co-expression modules (minimum module size $= 30$, merge cut height $= 0.25$).
 * **Module-Trait Association:** Module eigengenes (MEs) were correlated with binary clinical EPS status. The **Salmon Module** (604 genes) demonstrated the highest positive correlation:
   $$r = +0.806, \quad \text{Student's } P = \mathbf{0.0157}, \quad \text{One-Sided } P_{\text{perm}} = 1/70 = \mathbf{0.0143}, \quad \text{Two-Sided } P_{\text{perm}} = 2/70 = \mathbf{0.0286}$$
   Minimum achievable two-sided $P$-value at $N=8$ is $2/70 = 0.0286$. Because discovery $N = 8$ is below standard WGCNA recommendations ($N \ge 15-20$), network partitioning is treated as exploratory and hypothesis-generating rather than a definitive or validated module structure.
-* **Tripartite Convergence:** Intersecting the 604 Salmon module genes with the 71 ECM-DEGs identified **40 Convergent WGCNA-ECM Candidates**.
+* **Tripartite Convergence:** Intersecting the 534 up-regulated DEGs × 975 measured matrisome × 604 Salmon module genes identified **44 Convergent WGCNA-ECM Candidates** at the primary 0.585 threshold. **Historical / Stringent 0.80 comparison (for reference):** 367 DEGs × 975 × 604 = 40 candidates (this was the original pool used for ML vote-count computation; all 11 consensus hubs are confirmed in BOTH 44-gene and 40-gene pools).
 
 ![WGCNA Heatmap](results/figures/WGCNA_03_module_trait_heatmap.png)
 * **Figure 3: Module-Trait Association Heatmap.** Pearson correlation between 14 WGCNA module eigengenes and binary peritoneal fibrosis status ($N = 8$).
 
 ![WGCNA Convergence Venn](results/figures/venn_wgcna_convergence.png)
-* **Figure 4: 3-Way Convergence Venn Diagram.** Tripartite intersection among GSE62928 DEGs ($n=367$), Curated Matrisome ($n=1,027$), and WGCNA Salmon Module ($n=604$), defining the 40 convergent candidate genes.
+* **Figure 4: 3-Way Convergence Venn Diagram.** Tripartite intersection among GSE62928 Pro-Fibrotic Up-DEGs ($n=534$, |log₂FC| ≥ 0.585), Curated Human Matrisome ($n=1,027$ reference; 975 measured), and WGCNA Salmon Module ($n=604$), defining the **44 primary convergent candidate genes**. Historical 0.80-stringent cutoff yields $n=40$ convergent candidates.
 
 ---
 
 ### Phase 4: Consensus Machine Learning Feature Selection (11 Hub Genes)
 
-Four distinct machine learning algorithms were trained on the 40 convergent candidates across the discovery matrix using a fixed random seed (`seed = 42`):
+Four distinct machine learning algorithms were trained on the 44 convergent candidates across the discovery matrix using a fixed random seed (`seed = 42`):
 1. **LASSO (L1 Regularization):** `LogisticRegressionCV(Cs=20, cv=4, penalty='l1', solver='liblinear')` selected $C = 4.28$ (scikit-learn inverse regularization), isolating **2 features** (`ISM1`, `FN1`). Note that 4-fold cross-validation on $N=8$ samples is highly discrete and unstable.
 2. **SVM-RFE (Recursive Feature Elimination):** Linear support vector machine iteratively ranking features by weight criterion $c_j = (w_j)^2$, selecting **14 features**.
 3. **Random Forest (Gini Impurity):** 500 decision trees ranking Mean Decrease Gini, selecting **17 features**.
@@ -244,7 +244,7 @@ An integrated molecular interaction network was constructed combining live-queri
 * **Co-Expression Edges ($N=8$ Discovery):** 42 / 55 (76.36%) hub gene pairs exhibit $|r| \ge 0.85$ (42 edges at $|r| \ge 0.85, \text{FDR} < 0.01$).
 * **Co-Expression Noise Baselines:**
   - **All Genes (Non-hub random pairs):** **$1.68\%$ of random gene pairs exceed $|r| \ge 0.85$ purely by chance** at $N=8$ (1,682 / 99,993 sampled pairs).
-  - **Among 367 Pro-Fibrotic DEGs:** **$5.47\%$ of pairs exceed $|r| \ge 0.85$** (3,062 / 55,945 pairs; $14.0\times$ enrichment for hubs vs DEG baseline; $55,945 = \binom{335}{2}$ pairs from the 335 pro-fibrotic DEGs present in the GSE62928 MaxMean expression matrix).
+  - **Among 534 Pro-Fibrotic DEGs:** **$5.47\%$ of pairs exceed $|r| \ge 0.85$** (3,062 / 55,945 pairs; $14.0\times$ enrichment for hubs vs DEG baseline; $55,945 = \binom{335}{2}$ pairs from the 335 pro-fibrotic DEGs present in the GSE62928 MaxMean expression matrix).
   - **Among 604 Salmon-Module Genes:** **$9.27\%$ of pairs exceed $|r| \ge 0.85$** (16,885 / 182,106 pairs; $8.2\times$ enrichment for hubs vs Salmon-module baseline).
   - **Methodological Note:** Hub co-expression is partly by construction because hub genes were selected from the co-expressed WGCNA Salmon module.
 
@@ -409,8 +409,8 @@ Prior transcriptomic analysis of GSE125498 by Ma et al., *Front Pharmacol* 2025 
 
 ## ⚠️ Comprehensive Study Limitations
 
-1. **Discovery Sample Size ($N = 8$):** Encapsulating Peritoneal Sclerosis (EPS) is a rare clinical entity, and biopsy tissue is ethically and clinically constrained. Although exact combinatorial permutations confirm that our primary findings (`71 ECM-DEGs`, `Salmon Module`, `EMT NES`, `Myofibroblasts`) achieve the minimum possible $P$-values at $N=8$, statistical power is fundamentally bounded by sample size. All $N=8$ selection procedures operate without held-out discovery data.
-2. **Hub Selection by Construction & Multiple Testing:** Candidate hub genes were selected from DEGs filtered at nominal $P < 0.05$ and $\log_2\text{FC} \ge 0.80$, so their nominal significance is partly by construction. In discovery profiling, individual hub genes do not pass stringent FDR $< 0.05$ thresholds. Multi-model consensus was primarily driven by SVM-RFE ($n=14$) and Random Forest ($n=17$), with LASSO ($n=2$) and XGBoost ($n=1$) selecting very small subsets.
+1. **Discovery Sample Size ($N = 8$):** Encapsulating Peritoneal Sclerosis (EPS) is a rare clinical entity, and biopsy tissue is ethically and clinically constrained. Although exact combinatorial permutations confirm that our primary findings (`81 ECM-DEGs`, `Salmon Module`, `EMT NES`, `Myofibroblasts`) achieve the minimum possible $P$-values at $N=8$, statistical power is fundamentally bounded by sample size. All $N=8$ selection procedures operate without held-out discovery data.
+2. **Hub Selection by Construction & Multiple Testing:** Candidate hub genes were selected from DEGs filtered at nominal $P < 0.05$ and $|\log_2\text{FC}| \ge 0.585$ (1.5-fold), so their nominal significance is partly by construction. In discovery profiling, individual hub genes do not pass stringent FDR $< 0.05$ thresholds. Multi-model consensus was primarily driven by SVM-RFE ($n=14$) and Random Forest ($n=17$), with LASSO ($n=2$) and XGBoost ($n=1$) selecting very small subsets.
 3. **Clinical Cohort & Phenotype Proxy:** Discovery profiling utilized surgical biopsy tissue from severe EPS, whereas external validation (**GSE125498**, $N=33$) evaluated shed peritoneal effluent cells from short-term vs long-term PD patients as a clinical proxy for cumulative dialysis membrane injury, not biopsy-confirmed EPS. Furthermore, only 7 of 11 hub genes had mapped probes on GPL10558 (`COL11A1`, `COMP`, `EDIL3`, `INHBA` were not assessable in effluent), and `ISM1` lacks known STRING interaction edges among the hub panel.
 4. **Tissue vs. Effluent Compartment Discordance:** Late-PD effluent shows higher T-cell and Fc-receptor markers and lower CD14 and VCAN; none pass FDR (adjusted $P \ge 0.117$). In GSE125498, unadjusted `VCAN` is lower in late effluent ($\log_2\text{FC} = -0.52$, limma $P = 0.0244$), but VCAN's decrease in long-term PD effluent cells is fragile and depends on probe set and adjustment method: attenuated or abolished under CD14/CD3E/FCGR3B marker adjustment, preserved under 5-lineage-score adjustment (with a composition effect being one hypothesis). An over-adjustment caveat applies. In single-cell effluent pseudobulk (GSE248762), 8 of 9 testable candidate hubs exhibit negative $\log_2(\text{FC})$ point estimates in stromal cells, opposite in direction to the biopsy contrast (different compartment and groups; not directly comparable). Direction is mostly retained in small subsets (3 vs 4 and 3 vs 2 donors); INHBA, ISM1, FN1, VCAN and COL11A1 flip sign in at least one run (5 of 11). Exploratory, no FDR.
 5. **Permutation & GSEA Distinctions:** The empirical 1/70 sample label permutation test evaluates phenotype assignment boundaries, whereas `gseapy.prerank` FDR values reflect gene-set permutation distributions.
@@ -531,7 +531,7 @@ This automated master pipeline runs Stages 4 and 5 end-to-end:
 ├── 02b_wgcna_analysis.R                          # TASK 1: WGCNA network & trait correlation
 ├── 03_matrisome_filtering.R                      # Matrisome masterlist intersection
 ├── 04_functional_enrichment.R                    # GO/KEGG functional enrichment
-├── 05b_ml_hub_gene_identification_wgcna.py       # TASK 3: ML consensus on 40 WGCNA-ECM candidates
+├── 05b_ml_hub_gene_identification_wgcna.py       # TASK 3: ML consensus on 44 WGCNA-ECM candidates
 ├── 06_external_validation_GSE125498.py           # TASK 4: External expression check on GSE125498
 ├── 07_gene_interaction_network.py                # PPI (STRING v12.5 + co-expression, |r|>=0.85, FDR<0.01)
 ├── 08b_roc_analysis.py                          # Task 1: ROC + bootstrap 95% CI for all 11 genes
@@ -543,7 +543,7 @@ This automated master pipeline runs Stages 4 and 5 end-to-end:
 ├── run_pipeline.R                                # Pipeline master execution wrapper
 ├── ECM genes all.xlsx                            # Curated 1,027 Human Matrisome reference
 ├── GSE62928.top.table.tsv                        # GSE62928 complete Limma top table
-├── convergent_71_ECM_DEGs.csv                    # 71 pro-fibrotic ECM-DEGs
+├── convergent_71_ECM_DEGs.csv                    # 81 pro-fibrotic ECM-DEGs
 ├── requirements.lock                             # Pinned deterministic Python dependencies (462 packages)
 ├── sessionInfo.txt                               # R sessionInfo() execution environment
 ├── docs/

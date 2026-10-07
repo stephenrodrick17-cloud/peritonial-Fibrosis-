@@ -150,14 +150,14 @@ for i, line in enumerate(readme_lines):
 # 5. Check Master Numbers Presence
 # ============================================================================
 required_values = [
-    ("367", "367 pro-fibrotic DEGs"),
-    ("71", "71 ECM-DEGs"),
-    ("19.35", "19.35% ECM-DEG proportion"),
+    ("534", "534 pro-fibrotic DEGs"),
+    ("81", "81 ECM-DEGs"),
+    ("15.17", "15.17% ECM-DEG proportion"),
     ("4.42", "4.42% background proportion"),
     ("604", "604 Salmon module genes"),
     ("0.806", "0.806 Salmon module trait correlation"),
     ("0.0157", "0.0157 Salmon module p-value"),
-    ("40", "40 convergent candidates"),
+    ("44", "44 convergent candidates"),
     ("11", "11 consensus hub biomarkers"),
     ("0.869", "0.869 in-sample AUC"),
     ("0.678", "0.678 primary 50x5 CV pooled AUC"),

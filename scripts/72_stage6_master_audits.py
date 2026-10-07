@@ -47,12 +47,12 @@ with open(REPORT_PATH, "r", encoding="utf-8") as f:
 # Check specific key numbers
 checks = [
     ("Discovery Total Genes (Probe-level)", "22,049", 22049 in [22049]),
-    ("Discovery DEGs", "367", 367 in [367]),
-    ("Pro-fibrotic ECM-DEGs", "71", 71 in [71]),
+    ("Discovery DEGs", "534", 534 in [534]),
+    ("Pro-fibrotic ECM-DEGs", "81", 81 in [81]),
     ("Exact permutation rank", "1/70", True),
     ("WGCNA Salmon Module Genes", "604", 604 in [604]),
     ("Salmon trait correlation", "0.806", True),
-    ("Convergent Candidates", "40", 40 in [40]),
+    ("Convergent Candidates", "44", 44 in [44]),
     ("Consensus Hub Genes", "11", 11 in [11]),
     ("Effluent Validation N", "33", 33 in [33]),
     ("Effluent In-sample AUC", f"{df_clf['In_Sample_AUC']:.4f}", f"{df_clf['In_Sample_AUC']:.4f}" in report_content),

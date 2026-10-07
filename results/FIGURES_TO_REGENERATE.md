@@ -21,9 +21,9 @@ This document lists existing visual figures in the repository that contain histo
 - **Current Content:** 3-way Venn diagram showing DEGs (367), Curated Matrisome (1,027), and Salmon Module (604).
 - **Identified Discrepancies:**
   - Central 3-way intersection is labeled `"40 (Core Hubs)"`.
-  - These 40 genes are **convergent candidate genes** (WGCNA Salmon module $\cap$ 71 ECM-DEGs), from which machine learning consensus filtering prioritized the **11 consensus hub biomarkers**.
+  - These 40 genes are **convergent candidate genes** (WGCNA Salmon module $\cap$ 81 ECM-DEGs), from which machine learning consensus filtering prioritized the **11 consensus hub biomarkers**.
   - Diagram should annotate the probe-level collapse universe (22,049 genes) vs. the MaxMean matrix universe (20,940 genes).
-- **Required Action:** Replace `"40 (Core Hubs)"` with `"40 Convergent Candidates"` and clarify the probe universe context.
+- **Required Action:** Replace `"40 (Core Hubs)"` with `"44 Convergent Candidates"` and clarify the probe universe context.
 
 ---
 

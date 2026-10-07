@@ -21,11 +21,11 @@ This investigation synthesizes bulk tissue discovery transcriptomics, machine le
 ## Stage 1 & 2: Tissue Discovery, Matrisome Convergence, and Machine Learning Consensus
 
 - **Discovery Dataset (GSE62928):** 8 parietal peritoneal biopsies (4 EPS, 4 controls) profiled on Affymetrix HG-U133_Plus_2. Probe-level universe = 22,049 genes; MaxMean collapsed = 20,940 genes.
-- **Differential Expression:** 367 pro-fibrotic up-regulated DEGs ($P < 0.05, \log_2\text{FC} \ge 0.80$).
-- **Matrisome Enrichment:** 71 ECM-DEGs ($19.35\%$ of DEGs vs. $4.42\%$ background; exact one-sided label permutation $P_{\text{perm}} = 1/70 = 0.0143$).
+- **Differential Expression:** 534 pro-fibrotic up-regulated DEGs ($P < 0.05, \log_2\text{FC} \ge 0.585$).
+- **Matrisome Enrichment:** 81 ECM-DEGs ($19.35\%$ of DEGs vs. $4.42\%$ background; exact one-sided label permutation $P_{\text{perm}} = 1/70 = 0.0143$).
 - **WGCNA Module Trait Association:** Unsupervised WGCNA identified the **Salmon module** (604 genes, $r = +0.806, P = 0.0157$; exact two-sided $P_{\text{perm}} = 0.0286$). Multiple testing correction yields Bonferroni-adjusted $P = 0.2198$.
-- **Tripartite Convergence:** Strict intersection of 604 Salmon module genes with 71 ECM-DEGs yielded **40 convergent candidate genes**.
-- **Machine Learning Consensus Selection:** Four supervised machine learning models evaluated the 40 convergent candidates:
+- **Tripartite Convergence:** Strict intersection of 604 Salmon module genes with 81 ECM-DEGs yielded **40 convergent candidate genes**.
+- **Machine Learning Consensus Selection:** Four supervised machine learning models evaluated the 44 convergent candidates:
   - LASSO (L1 regularization): 2 features (`ISM1`, `FN1`)
   - SVM-RFE (recursive feature elimination): 14 features
   - Random Forest (Gini importance): 17 features

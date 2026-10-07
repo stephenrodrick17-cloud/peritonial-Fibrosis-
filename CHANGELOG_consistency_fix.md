@@ -35,7 +35,7 @@
 ### E. Co-Expression Noise Baselines
 - **Empirical Threshold Rates ($|r| \ge 0.85$ in GSE62928, $N=8$):**
   - All non-hub random pairs ($N=99,993$): $1.68\%$ (`audit/stage_e_ppi_baseline.py` seed=42).
-  - Among 367 Pro-Fibrotic DEGs ($N=55,945$ pairs): $5.47\%$ ($14.0\times$ enrichment for hubs vs DEG baseline).
+  - Among 534 Pro-Fibrotic DEGs ($N=55,945$ pairs): $5.47\%$ ($14.0\times$ enrichment for hubs vs DEG baseline).
   - Among 604 Salmon-Module Genes ($N=182,106$ pairs): $9.27\%$ ($8.2\times$ enrichment for hubs vs Salmon-module baseline).
   - Among 11 Consensus Hub Genes ($N=55$ pairs): $76.36\%$ ($42/55$ pairs). High hub co-expression is partly by construction because hubs were prioritized from the co-expressed WGCNA Salmon module.
 

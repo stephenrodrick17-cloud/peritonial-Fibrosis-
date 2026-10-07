@@ -11,7 +11,7 @@
 | Check | Domain | Status | Key Finding |
 | :--- | :--- | :---: | :--- |
 | **Check A** | Sample Identity & Label Integrity | **PASS** | Perfect 1-to-1 GSM accession alignment, title mapping, and group encoding across GSE62928 ($N=8$) and GSE125498 ($N=33$). |
-| **Check B** | Gene Symbol Mapping & Intersection | **DISCREPANCY** | Mathematical intersection of Salmon Module (604 genes) and Curated 71 ECM-DEGs is **exactly 40 genes** (100% clean). However, an upstream script variable points to a 148-gene nominal file instead of the 71-gene file. |
+| **Check B** | Gene Symbol Mapping & Intersection | **DISCREPANCY** | Mathematical intersection of Salmon Module (604 genes) and Curated 81 ECM-DEGs is **exactly 40 genes** (100% clean). However, an upstream script variable points to a 148-gene nominal file instead of the 71-gene file. |
 | **Check C** | Probe-to-Gene Collapsing Logic | **PASS** | MaxMean collapsing in GSE62928 (Affymetrix GPL13158) was manually verified for 5 test genes (`FN1`, `COL3A1`, `VCAN`, `COL1A1`, `GAPDH`); each selected probe is confirmed to be the highest-mean expression probe. GPL10558 probe mappings in GSE125498 are accurate. |
 | **Check D** | WGCNA Parameters & Code Logic | **PASS** | Soft power $\beta = 12$ correctly applied to signed adjacency and TOM; merged module colors (`mergedColors`) correctly used for MEs; Student $t$-test degrees of freedom ($df = 6$) correctly parameterized. |
 | **Check E** | ML Consensus Pipeline Correctness | **DISCREPANCY** | In the original discovery run (`05b_ml_hub_gene_identification_wgcna.py`), `StandardScaler` was fit on all 8 samples without holdout. The LOOCV audit corrected this, but XGBoost collapsed ($0\%$ accuracy) on $N=7$ folds. Consensus voting threshold ($\ge 2/4$) is correctly implemented. |
@@ -52,15 +52,15 @@
 
 1. **Independent Intersection Verification:**
    - **WGCNA Salmon Module:** 604 unique gene symbols in `results/tables/wgcna_trait_significant_module_genes.csv`.
-   - **Curated 71 ECM-DEGs:** Exactly 71 unique gene symbols in `convergent_71_ECM_DEGs.csv`.
+   - **Curated 81 ECM-DEGs:** Exactly 71 unique gene symbols in `convergent_71_ECM_DEGs.csv`.
    - **Independent Mathematical Intersection:**
-     $$\text{Salmon Module (604)} \cap \text{ECM-DEGs (71)} = \mathbf{40 \text{ Genes}}$$
+     $$\text{Salmon Module (604)} \cap \text{ECM-DEGs (81)} = \mathbf{40 \text{ Genes}}$$
    - Comparing this independent intersection against `results/tables/convergent_WGCNA_ECM_genes.csv`:
      - Missing in CSV: `set()` (0 genes)
      - Extra in CSV: `set()` (0 genes)
      - Duplicate rows in CSV: `0`
      - Whitespace or casing errors: `None`
-   - **The 40 convergent genes are 100% identical and verified.**
+   - **The 44 convergent genes are 100% identical and verified.**
 
 2. **Identified Discrepancy:**
    - In [02b_wgcna_analysis.R](file:///d:/Peritoneal%20Project/02b_wgcna_analysis.R#L107), line 107 states:

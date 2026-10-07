@@ -4,7 +4,7 @@ print("=== 1. Total Probed Genes (20,940) ===")
 df_expr = pd.read_csv("results/tables/GSE62928_full_expression_matrix.csv", index_col=0)
 print(f"File: results/tables/GSE62928_full_expression_matrix.csv | Index length = {len(df_expr)}")
 
-print("\n=== 2. Pro-Fibrotic Up-Regulated DEGs (367) ===")
+print("\n=== 2. Pro-Fibrotic Up-Regulated DEGs (534) ===")
 df_tt = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
 df_clean = df_tt.dropna(subset=["Gene.symbol"]).copy()
 df_clean = df_clean[~df_clean["Gene.symbol"].isin(["", "---"])]
@@ -18,8 +18,8 @@ for idx, r in df_clean.iterrows():
             rows.append(rc)
 df_exp = pd.DataFrame(rows)
 df_best_p = df_exp.sort_values("P.Value").drop_duplicates("Gene_clean")
-degs_367 = df_best_p[(df_best_p["P.Value"] < 0.05) & (df_best_p["logFC"] >= 0.80)]
-print(f"File: GSE62928.top.table.tsv | Unique Gene.symbol with P.Value < 0.05 and logFC >= 0.80 = {len(degs_367)}")
+degs_534 = df_best_p[(df_best_p["P.Value"] < 0.05) & (df_best_p["logFC"] >= 0.585)]
+print(f"File: GSE62928.top.table.tsv | Unique Gene.symbol with P.Value < 0.05 and logFC >= 0.585 [1.5-fold] = {len(degs_534)}")
 
 print("\n=== 3. Curated Matrisome Reference (1,027) ===")
 df_mat = pd.read_excel("ECM genes all.xlsx", skiprows=1)
@@ -27,15 +27,15 @@ sym_col = [c for c in df_mat.columns if "symbol" in c.lower() or "gene" in c.low
 mat_genes = set(df_mat[sym_col].dropna().astype(str).str.strip().str.upper()) - {"GENE SYMBOL", "NA", "NAN"}
 print(f"File: ECM genes all.xlsx | Unique genes in col '{sym_col}' = {len(mat_genes)}")
 
-print("\n=== 4. ECM-DEGs (71) ===")
-df_71 = pd.read_csv("convergent_71_ECM_DEGs.csv")
-print(f"File: convergent_71_ECM_DEGs.csv | Rows = {len(df_71)} | Columns = {list(df_71.columns)}")
+print("\n=== 4. ECM-DEGs (81) ===")
+df_71 = pd.read_csv("convergent_81_ECM_DEGs.csv")
+print(f"File: convergent_81_ECM_DEGs.csv | Rows = {len(df_71)} | Columns = {list(df_71.columns)}")
 
 print("\n=== 5. WGCNA Salmon Module Genes (604) ===")
 df_wgcna = pd.read_csv("results/tables/wgcna_trait_significant_module_genes.csv")
 print(f"File: results/tables/wgcna_trait_significant_module_genes.csv | Rows = {len(df_wgcna)} | Columns = {list(df_wgcna.columns)}")
 
-print("\n=== 6. Convergent WGCNA-ECM Candidates (40) ===")
+print("\n=== 6. Convergent WGCNA-ECM Candidates (44) ===")
 df_conv = pd.read_csv("results/tables/convergent_WGCNA_ECM_genes.csv")
 print(f"File: results/tables/convergent_WGCNA_ECM_genes.csv | Rows = {len(df_conv)} | Columns = {list(df_conv.columns)}")
 

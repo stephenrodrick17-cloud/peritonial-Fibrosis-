@@ -1,8 +1,8 @@
 # ==============================================================================
 # PERMUTATION TEST: ECM ENRICHMENT AMONG UP-REGULATED DEGs (LIMMA EBAYES)
 # Dataset: GSE62928 (4 EPS Cases vs 4 Controls -> Exact 70 Permutations)
-# Primary Cutoff: Nominal P < 0.05 and log2FC >= 0.80
-# Sensitivity Cutoff: Nominal P < 0.05 and log2FC >= 0.585
+# Primary Manuscript Cutoff: Nominal P < 0.05 and |log2FC| >= 0.585 (1.5-fold)
+# Historical / Stringent Comparison Cutoff: Nominal P < 0.05 and log2FC >= 0.80
 # ==============================================================================
 
 suppressPackageStartupMessages({
@@ -94,10 +94,10 @@ cat("\n=================================================================\n")
 cat("OBSERVED REAL TEST (GSE62928, N = 8, 4 EPS vs 4 Control):\n")
 cat("=================================================================\n")
 cat(sprintf("Total Unique Genes Collapsed: %d\n", obs_res_80$n_total_genes))
-cat(sprintf("Primary Cutoff (log2FC >= 0.80, P < 0.05):\n"))
-cat(sprintf("  - Total Up-Regulated DEGs: %d (Reproduces locked 367)\n", obs_res_80$n_up_degs))
-cat(sprintf("  - Observed Up-Regulated ECM-DEGs: %d (Reproduces locked 71)\n", obs_res_80$n_ecm_degs))
-cat(sprintf("Sensitivity Cutoff (log2FC >= 0.585, P < 0.05):\n"))
+cat(sprintf("Historical / Stringent Comparison Cutoff (log2FC >= 0.80, P < 0.05):\n"))
+cat(sprintf("  - Total Up-Regulated DEGs: %d\n", obs_res_80$n_up_degs))
+cat(sprintf("  - Observed Up-Regulated ECM-DEGs: %d\n", obs_res_80$n_ecm_degs))
+cat(sprintf("Primary Manuscript Cutoff (log2FC >= 0.585 [1.5-fold], P < 0.05):\n"))
 cat(sprintf("  - Total Up-Regulated DEGs: %d\n", obs_res_585$n_up_degs))
 cat(sprintf("  - Observed Up-Regulated ECM-DEGs: %d\n", obs_res_585$n_ecm_degs))
 cat("=================================================================\n")
@@ -123,13 +123,13 @@ for (i in seq_len(n_perms)) {
   perm_up_585[i] <- res585$n_up_degs
 }
 
-# Statistics for Primary Cutoff (log2FC >= 0.80)
+# Statistics for Historical / Stringent Comparison Cutoff (log2FC >= 0.80)
 obs_count_80 <- obs_res_80$n_ecm_degs
 rank_80 <- sum(perm_counts_80 > obs_count_80) + 1
 p_perm_80 <- mean(perm_counts_80 >= obs_count_80)
 
 cat("\n=================================================================\n")
-cat("STEP 2(c): PERMUTATION TEST RESULTS (PRIMARY: log2FC >= 0.80, P < 0.05)\n")
+cat("STEP 2(c): PERMUTATION TEST RESULTS (HISTORICAL COMPARISON: log2FC >= 0.80, P < 0.05)\n")
 cat("=================================================================\n")
 cat(sprintf("Observed ECM-DEG Count: %d\n", obs_count_80))
 cat(sprintf("Rank within 70 Permutations: %d / 70\n", rank_80))
@@ -166,14 +166,14 @@ cat(sprintf("Expected ECM by Chance:      %.2f genes\n", n_draw_80 * (K_ecm / N_
 cat(sprintf("Fold Enrichment:             %.2fx\n", (k_succ_80 / n_draw_80) / (K_ecm / N_pop)))
 cat(sprintf("Hypergeometric Exact P-Value: %s\n", format(p_hypergeom_80, scientific = TRUE, digits = 5)))
 
-# Step 2(e): Sensitivity Check (log2FC >= 0.585)
+# Step 2(e): Primary Manuscript Cutoff Check (log2FC >= 0.585 [1.5-fold])
 obs_count_585 <- obs_res_585$n_ecm_degs
 rank_585 <- sum(perm_counts_585 > obs_count_585) + 1
 p_perm_585 <- mean(perm_counts_585 >= obs_count_585)
 p_hypergeom_585 <- phyper(obs_count_585 - 1, K_ecm, N_pop - K_ecm, obs_res_585$n_up_degs, lower.tail = FALSE)
 
 cat("\n=================================================================\n")
-cat("STEP 2(e): SENSITIVITY CHECK (LESS STRICT CUTOFF: log2FC >= 0.585, P < 0.05)\n")
+cat("STEP 2(e): PRIMARY MANUSCRIPT CUTOFF (1.5-FOLD: log2FC >= 0.585, P < 0.05)\n")
 cat("=================================================================\n")
 cat(sprintf("Total Up-Regulated DEGs: %d\n", obs_res_585$n_up_degs))
 cat(sprintf("Observed ECM-DEG Count:  %d\n", obs_count_585))

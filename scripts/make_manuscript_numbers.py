@@ -32,10 +32,10 @@ df_expr_full = pd.read_csv("results/tables/GSE62928_full_expression_matrix.csv",
 gene_universe_maxmean = len(df_expr_full)
 
 # DEGs: read from the gene-level filtered output of 02_differential_expression.R
-# This file contains all DEGs (UP + DOWN) at |logFC| >= 0.80, P < 0.05
+# This file contains all DEGs (UP + DOWN) at |logFC| >= 0.585 [1.5-fold], P < 0.05
 df_degs_all = pd.read_csv("results/tables/GSE62928_DEGs_filtered.csv")
-degs_up = df_degs_all[df_degs_all["logFC"] >= 0.80]
-n_degs = len(degs_up)  # 367 pro-fibrotic upregulated DEGs
+degs_up = df_degs_all[df_degs_all["logFC"] >= 0.585]
+n_degs = len(degs_up)  # 534 pro-fibrotic upregulated DEGs
 
 # Also read raw TSV for reference (e.g. GSEA universe)
 df_top = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
@@ -51,14 +51,14 @@ matrisome_in_probe = set(df_all_results["Gene"].dropna().unique()) & ecm_ref_gen
 k_matrisome_probe = len(matrisome_in_probe)  # 975
 bg_rate_probe = (k_matrisome_probe / gene_universe_probe) * 100  # 4.42%
 
-# Convergent 71 ECM-DEGs
-df_71 = pd.read_csv("convergent_71_ECM_DEGs.csv")
+# Convergent 81 ECM-DEGs
+df_71 = pd.read_csv("convergent_81_ECM_DEGs.csv")
 n_ecm_degs = len(df_71)
 ecm_deg_rate = (n_ecm_degs / n_degs) * 100
 fold_enrichment = ecm_deg_rate / bg_rate_probe
 
 # Hypergeometric P
-# M = gene_universe_probe (22049), n = k_matrisome_probe (975), N = n_degs (367), x = n_ecm_degs (71)
+# M = gene_universe_probe (22049), n = k_matrisome_probe (975), N = n_degs (534), x = n_ecm_degs (81)
 pval_hypergeom = hypergeom.sf(n_ecm_degs - 1, gene_universe_probe, k_matrisome_probe, n_degs)
 
 # 3. WGCNA Module Trait
@@ -68,7 +68,7 @@ n_salmon_genes = 604
 salmon_r = 0.805997
 salmon_p = 0.015701
 
-# 4. 40 Convergent Candidates
+# 4. 44 Convergent Candidates (tripartite)
 df_conv40 = pd.read_csv("results/tables/convergent_WGCNA_ECM_genes.csv")
 n_conv40 = len(df_conv40)
 
@@ -198,7 +198,7 @@ numbers = {
         "gsea_ranked_symbols": 21597
     },
     "differential_expression": {
-        "upregulated_degs_p005_logfc08": n_degs,
+        "upregulated_degs_p005_logfc0585": n_degs,
         "matrisome_reference_total": n_matrisome_ref,
         "matrisome_in_probe_universe": k_matrisome_probe,
         "matrisome_background_percent": round(bg_rate_probe, 2),
@@ -300,7 +300,7 @@ md_lines = [
     "- **GSEA Ranked Universe:** 21,597 unique primary gene symbols.",
     "",
     "## 2. Differential Expression & Matrisome Over-representation",
-    f"- **Pro-Fibrotic DEGs ($P < 0.05, \\log_2\\text{{FC}} \\ge 0.80$):** {n_degs} genes.",
+    f"- **Pro-Fibrotic DEGs ($P < 0.05, \\log_2\\text{{FC}} \\ge 0.585$ [1.5-fold]):** {n_degs} genes.",
     f"- **Curated Human Matrisome Reference:** {n_matrisome_ref} genes ({k_matrisome_probe} in probe universe).",
     f"- **Matrisome Background Proportion:** {k_matrisome_probe} / {gene_universe_probe} = {bg_rate_probe:.2f}%.",
     f"- **Isolated Pro-Fibrotic ECM-DEGs:** {n_ecm_degs} genes ({ecm_deg_rate:.2f}% of DEGs).",
@@ -379,7 +379,7 @@ md_lines = [
     "",
     "## 10. Empirical Co-expression Baselines (|r| >= 0.85 in Discovery GSE62928, N=8)",
     f"- **All Genes (Non-hub random pairs, N=99,993):** {baseline_all_genes:.2f}% exceeding threshold.",
-    f"- **Among 367 Pro-Fibrotic DEGs (N=55,945 pairs):** {baseline_degs:.2f}% exceeding threshold ({baseline_hubs/baseline_degs:.1f}$\\times$ enrichment for hubs vs DEG baseline).",
+    f"- **Among 534 Pro-Fibrotic DEGs (N={n_degs*(n_degs-1)//2} pairs):** {baseline_degs:.2f}% exceeding threshold ({baseline_hubs/baseline_degs:.1f}$\\times$ enrichment for hubs vs DEG baseline).",
     f"- **Among 604 Salmon-Module Genes (N=182,106 pairs):** {baseline_salmon:.2f}% exceeding threshold ({baseline_hubs/baseline_salmon:.1f}$\\times$ enrichment for hubs vs Salmon-module baseline).",
     f"- **Among 11 Consensus Hub Genes (N=55 pairs):** {baseline_hubs:.2f}% (42/55 pairs) exceeding threshold. High hub co-expression is partly by construction because hubs were selected from a tight WGCNA co-expression module.",
     ""

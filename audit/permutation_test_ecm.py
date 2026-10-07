@@ -59,7 +59,7 @@ def run_m1(logfc_cut=0.80):
         
     return np.array(counts_up), np.array(counts_ecm)
 
-# Primary Cutoff (log2FC >= 0.80)
+# Historical / Stringent Comparison Cutoff (log2FC >= 0.80)
 up_80_m1, ecm_80_m1 = run_m1(logfc_cut=0.80)
 obs_up_80_m1 = up_80_m1[0]
 obs_ecm_80_m1 = ecm_80_m1[0]
@@ -70,7 +70,7 @@ N_pop_m1 = len(genes_m1) # 20,940
 K_ecm_m1 = np.sum(is_ecm_m1)
 p_hyper_80_m1 = hypergeom.sf(obs_ecm_80_m1 - 1, N_pop_m1, K_ecm_m1, obs_up_80_m1)
 
-print(f'Primary Cutoff (log2FC >= 0.80, P < 0.05):')
+print(f'Historical / Stringent Comparison Cutoff (log2FC >= 0.80, P < 0.05):')
 print(f'  - Observed Up-Regulated DEGs: {obs_up_80_m1}')
 print(f'  - Observed ECM-DEGs: {obs_ecm_80_m1}')
 print(f'  - Rank within 70 Permutations: {rank_80_m1} / 70')
@@ -81,7 +81,7 @@ print('  - Full Frequency Table:')
 for val, count in pd.Series(ecm_80_m1).value_counts().sort_index().items():
     print(f'      Count {val:2d}: {count:2d} permutations')
 
-# Sensitivity Cutoff (log2FC >= 0.585)
+# Primary Manuscript Cutoff (log2FC >= 0.585 [1.5-fold])
 up_585_m1, ecm_585_m1 = run_m1(logfc_cut=0.585)
 obs_up_585_m1 = up_585_m1[0]
 obs_ecm_585_m1 = ecm_585_m1[0]
@@ -89,7 +89,7 @@ rank_585_m1 = np.sum(ecm_585_m1 > obs_ecm_585_m1) + 1
 p_perm_585_m1 = np.mean(ecm_585_m1 >= obs_ecm_585_m1)
 p_hyper_585_m1 = hypergeom.sf(obs_ecm_585_m1 - 1, N_pop_m1, K_ecm_m1, obs_up_585_m1)
 
-print(f'\nSensitivity Cutoff (log2FC >= 0.585, P < 0.05):')
+print(f'\nPrimary Manuscript Cutoff (log2FC >= 0.585 [1.5-fold], P < 0.05):')
 print(f'  - Observed Up-Regulated DEGs: {obs_up_585_m1}')
 print(f'  - Observed ECM-DEGs: {obs_ecm_585_m1}')
 print(f'  - Rank within 70 Permutations: {rank_585_m1} / 70')
@@ -180,7 +180,7 @@ N_pop_m2 = 22049
 K_ecm_m2 = 975
 p_hyper_80_m2 = hypergeom.sf(obs_ecm_80_m2 - 1, N_pop_m2, K_ecm_m2, obs_up_80_m2)
 
-print(f'Primary Cutoff (log2FC >= 0.80, P < 0.05):')
+print(f'Historical / Stringent Comparison Cutoff (log2FC >= 0.80, P < 0.05):')
 print(f'  - Observed Up-Regulated DEGs: {obs_up_80_m2}')
 print(f'  - Observed ECM-DEGs: {obs_ecm_80_m2}')
 print(f'  - Rank within 70 Permutations: {rank_80_m2} / 70')
@@ -191,7 +191,7 @@ print('  - Full Frequency Table:')
 for val, count in pd.Series(ecm_80_m2).value_counts().sort_index().items():
     print(f'      Count {val:2d}: {count:2d} permutations')
 
-# Sensitivity Cutoff (log2FC >= 0.585)
+# Primary Manuscript Cutoff (log2FC >= 0.585 [1.5-fold])
 up_585_m2, ecm_585_m2 = run_m2(logfc_cut=0.585)
 obs_up_585_m2 = up_585_m2[0]
 obs_ecm_585_m2 = ecm_585_m2[0]
@@ -199,7 +199,7 @@ rank_585_m2 = np.sum(ecm_585_m2 > obs_ecm_585_m2) + 1
 p_perm_585_m2 = np.mean(ecm_585_m2 >= obs_ecm_585_m2)
 p_hyper_585_m2 = hypergeom.sf(obs_ecm_585_m2 - 1, N_pop_m2, K_ecm_m2, obs_up_585_m2)
 
-print(f'\nSensitivity Cutoff (log2FC >= 0.585, P < 0.05):')
+print(f'\nPrimary Manuscript Cutoff (log2FC >= 0.585 [1.5-fold], P < 0.05):')
 print(f'  - Observed Up-Regulated DEGs: {obs_up_585_m2}')
 print(f'  - Observed ECM-DEGs: {obs_ecm_585_m2}')
 print(f'  - Rank within 70 Permutations: {rank_585_m2} / 70')

@@ -50,8 +50,8 @@ for idx, case_split in enumerate(all_splits):
     # Two-sample t-test per gene
     t_stat, p_vals = stats.ttest_ind(expr_case, expr_ctrl, axis=1, equal_var=False)
     
-    # Pro-fibrotic DEGs: logFC >= 0.80 and P < 0.05
-    sig_mask = (logfc >= 0.80) & (p_vals < 0.05)
+    # Pro-fibrotic DEGs: logFC >= 0.585 (1.5-fold) and P < 0.05
+    sig_mask = (logfc >= 0.585) & (p_vals < 0.05)
     sig_genes = df_expr.index[sig_mask]
     n_ecm = sum(g.upper() in mat_genes for g in sig_genes)
     

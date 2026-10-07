@@ -72,19 +72,21 @@ cat("GSE62928 total genes tested:    ", nrow(all_results), "\n")
 cat("ECM masterlist genes:           ", length(ecm_ref_genes), "\n")
 cat("Intersection (all):             ", nrow(intersection_all), "\n")
 
-# Primary DEG intersection (|logFC| >= 0.80 & P < 0.05)
+# Primary DEG intersection (|logFC| >= 0.585 [1.5-fold] & P < 0.05)
 ecm_degs_table <- intersection_all %>%
   filter(DEG_Status != "Not Significant") %>%
   arrange(P.Value)
 
-cat("Primary ECM-DEGs (|logFC| >= 0.80, P < 0.05):", nrow(ecm_degs_table), "\n")
+cat("Primary ECM-DEGs (|logFC| >= 0.585 [1.5-fold], P < 0.05):", nrow(ecm_degs_table), "\n")
 cat("  Upregulated ECM-DEGs (Pro-fibrotic):        ", sum(ecm_degs_table$DEG_Status == "Upregulated"), "\n")
 cat("  Downregulated ECM-DEGs:                     ", sum(ecm_degs_table$DEG_Status == "Downregulated"), "\n")
 
-ecm_71_table <- intersection_all %>%
-  filter(logFC >= 0.80 & P.Value < 0.05) %>%
+ecm_profibrotic_table <- intersection_all %>%
+  filter(logFC >= 0.585 & P.Value < 0.05) %>%
   arrange(P.Value)
-cat("Verified Pro-Fibrotic ECM-DEGs (log2FC >= 0.80, P < 0.05):", nrow(ecm_71_table), "genes\n")
+cat("Verified Pro-Fibrotic ECM-DEGs (log2FC >= 0.585 [1.5-fold], P < 0.05):", nrow(ecm_profibrotic_table), "genes\n")
+# Legacy name retained for downstream scripts that read "ecm_71_table" semantics
+ecm_71_table <- ecm_profibrotic_table
 cat("=================================================================\n")
 
 # Borderline ECM genes (present in ECM but not reaching DEG threshold)
@@ -130,7 +132,7 @@ p_ecm_volcano <- ggplot(all_results, aes(x = logFC, y = -log10(P.Value))) +
              color = "#4575b4", alpha = 0.55, size = 1.8) +
   geom_point(data = all_results %>% filter(ECM_Highlight == "ECM-DEG"),
              color = "#d73027", alpha = 0.9, size = 3.2) +
-  geom_vline(xintercept = c(-0.80, 0.80), linetype = "dashed",
+  geom_vline(xintercept = c(-0.585, 0.585), linetype = "dashed",
              color = "black", linewidth = 0.5) +
   geom_hline(yintercept = -log10(0.05), linetype = "dashed",
              color = "black", linewidth = 0.5) +

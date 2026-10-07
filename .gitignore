@@ -8,6 +8,7 @@ fresh_clone/
 .vscode/
 
 # Local system & ide artifacts
+.trae/
 scratch_full_prompt.txt
 .tempmediaStorage/
 .system_generated/

@@ -21,7 +21,7 @@ ecm_genes = {g for g in ecm_genes if g and g not in ["GENE SYMBOL", "NA", "NAN"]
 n_ecm = len(ecm_genes)
 print(f"Total Unique Curated Matrisome / ECM Genes: {n_ecm}")
 
-# 2. Load GSE62928 Pro-Fibrotic Up-Regulated DEGs (P < 0.05, log2FC >= 0.80)
+# 2. Load GSE62928 Pro-Fibrotic Up-Regulated DEGs (P < 0.05, log2FC >= 0.585 [1.5-fold])
 df_tt = pd.read_csv("GSE62928.top.table.tsv", sep="\t")
 df_clean = df_tt.dropna(subset=["Gene.symbol"]).copy()
 df_clean = df_clean[~df_clean["Gene.symbol"].isin(["", "---"])]
@@ -37,29 +37,29 @@ for idx, r in df_clean.iterrows():
 df_exp = pd.DataFrame(rows)
 df_best_p = df_exp.sort_values("P.Value").drop_duplicates("Gene_clean")
 
-degs_profibrotic = set(df_best_p[(df_best_p["P.Value"] < 0.05) & (df_best_p["logFC"] >= 0.80)]["Gene_clean"])
+degs_profibrotic = set(df_best_p[(df_best_p["P.Value"] < 0.05) & (df_best_p["logFC"] >= 0.585)]["Gene_clean"])
 n_degs = len(degs_profibrotic)
 
-# Filtered Pro-Fibrotic Upregulated ECM-DEGs (71 Genes)
-df_71 = pd.read_csv("convergent_71_ECM_DEGs.csv")
-genes_71 = set(df_71["Gene_Symbol"].astype(str).str.strip().str.upper())
-overlap_71 = len(genes_71)
+# Filtered Pro-Fibrotic Upregulated ECM-DEGs (81 Genes)
+df_81 = pd.read_csv("convergent_81_ECM_DEGs.csv")
+genes_81 = set(df_81["Gene_Symbol"].astype(str).str.strip().str.upper())
+overlap_81 = len(genes_81)
 
 print(f"\nCurated Pro-Fibrotic ECM-DEG Cohort (Primary Pipeline Filter):")
-print(f"   - GSE62928 Pro-Fibrotic DEGs (log2FC >= 0.80, P < 0.05): {n_degs}")
+print(f"   - GSE62928 Pro-Fibrotic DEGs (log2FC >= 0.585 [1.5-fold], P < 0.05): {n_degs}")
 print(f"   - Human Matrisome Genes: {n_ecm}")
-print(f"   - Overlap: {overlap_71} ECM-DEGs")
+print(f"   - Overlap: {overlap_81} ECM-DEGs")
 
 # ==============================================================================
-# 2-WAY VENN DIAGRAM: 367 PRO-FIBROTIC DEGs ∩ 1,027 MATRISOME GENES
+# 2-WAY VENN DIAGRAM: 534 PRO-FIBROTIC DEGs ∩ 1,027 MATRISOME GENES
 # ==============================================================================
 fig, ax = plt.subplots(figsize=(9, 7), facecolor="#F8FAFC")
 
-only_deg_71 = n_degs - overlap_71  # 367 - 71 = 296
-only_ecm_71 = n_ecm - overlap_71   # 1027 - 71 = 956
+only_deg_81 = n_degs - overlap_81  # 534 - 81 = 453
+only_ecm_81 = n_ecm - overlap_81   # 1027 - 81 = 946
 
 v2 = venn2(
-    subsets=(only_deg_71, only_ecm_71, overlap_71),
+    subsets=(only_deg_81, only_ecm_81, overlap_81),
     set_labels=(f"GSE62928 Pro-Fibrotic DEGs\n(Peritoneal Fibrosis, n={n_degs})", f"Human In Silico Matrisome\n(Curated ECM, n={n_ecm})"),
     set_colors=("#E11D48", "#0284C7"),
     alpha=0.65,
@@ -77,13 +77,13 @@ for text in v2.subset_labels:
         text.set_fontweight("bold")
         text.set_color("#0F172A")
 
-venn2_circles(subsets=(only_deg_71, only_ecm_71, overlap_71), linestyle="solid", linewidth=2.0, color="#0F172A", ax=ax)
+venn2_circles(subsets=(only_deg_81, only_ecm_81, overlap_81), linestyle="solid", linewidth=2.0, color="#0F172A", ax=ax)
 
-plt.title("Discovery Intersection: GSE62928 Pro-Fibrotic DEGs ∩ Human Matrisome\nIsolation of 71 Up-Regulated ECM-DEGs",
+plt.title("Discovery Intersection: GSE62928 Pro-Fibrotic DEGs ∩ Human Matrisome\nIsolation of 81 Up-Regulated ECM-DEGs",
           fontsize=13, fontweight="bold", pad=20, color="#0F172A")
 
 plt.annotate(
-    "71 Verified Pro-Fibrotic ECM-DEGs\n(Prioritized for WGCNA Convergence)",
+    "81 Verified Pro-Fibrotic ECM-DEGs\n(Prioritized for WGCNA Convergence)",
     xy=(0, 0), xytext=(0, -0.45),
     arrowprops=dict(facecolor="#B91C1C", shrink=0.08, width=2, headwidth=8),
     ha="center", fontsize=11, fontweight="bold", color="#B91C1C",
@@ -91,7 +91,7 @@ plt.annotate(
 )
 
 plt.tight_layout()
-venn_file2 = "results/figures/venn_gse62928_pro_fibrotic_ecm_71.png"
+venn_file2 = "results/figures/venn_gse62928_pro_fibrotic_ecm_81.png"
 plt.savefig(venn_file2, dpi=300)
 plt.close()
 print(f"Saved 2-Way Venn: {venn_file2}")
