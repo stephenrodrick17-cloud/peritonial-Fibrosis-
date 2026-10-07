@@ -118,12 +118,12 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 
 ### Phase 3: Weighted Gene Co-Expression Network Analysis (WGCNA)
 
-* **Unsupervised Adjacency Construction:** Co-expression networks were constructed across all 20,940 MaxMean genes using a signed hybrid similarity metric with soft-thresholding power $\beta = 12$ (truncated scale-free fit $R^2 = 0.809$, linear scale-free fit $R^2 = 0.820$, slope $-0.768$):
+* **Unsupervised Adjacency Construction:** Co-expression networks were constructed from the top 5,000 most variable genes unioned with the 71 convergent ECM-DEGs (5,038 total features) derived from the 20,940 MaxMean-collapsed matrix using a signed hybrid similarity metric with soft-thresholding power $\beta = 12$ (truncated scale-free fit $R^2 = 0.809$, linear scale-free fit $R^2 = 0.820$, slope $-0.768$):
   $$a_{ij} = \left| \frac{1 + \text{cor}(x_i, x_j)}{2} \right|^\beta$$
 * **Topological Overlap Matrix (TOM):** Hierarchical clustering of topological overlap identified 14 distinct co-expression modules (minimum module size $= 30$, merge cut height $= 0.25$).
 * **Module-Trait Association:** Module eigengenes (MEs) were correlated with binary clinical EPS status. The **Salmon Module** (604 genes) demonstrated the highest positive correlation:
   $$r = +0.806, \quad \text{Student's } P = \mathbf{0.0157}, \quad \text{One-Sided } P_{\text{perm}} = 1/70 = \mathbf{0.0143}, \quad \text{Two-Sided } P_{\text{perm}} = 2/70 = \mathbf{0.0286}$$
-  Minimum achievable two-sided $P$-value at $N=8$ is $2/70 = 0.0286$.
+  Minimum achievable two-sided $P$-value at $N=8$ is $2/70 = 0.0286$. Because discovery $N = 8$ is below standard WGCNA recommendations ($N \ge 15-20$), network partitioning is treated as exploratory and hypothesis-generating rather than a definitive or validated module structure.
 * **Tripartite Convergence:** Intersecting the 604 Salmon module genes with the 71 ECM-DEGs identified **40 Convergent WGCNA-ECM Candidates**.
 
 ![WGCNA Heatmap](results/figures/WGCNA_03_module_trait_heatmap.png)
@@ -137,7 +137,7 @@ The 11 consensus hub genes encode key structural collagens, adhesive glycoprotei
 ### Phase 4: Consensus Machine Learning Feature Selection (11 Hub Genes)
 
 Four distinct machine learning algorithms were trained on the 40 convergent candidates across the discovery matrix using a fixed random seed (`seed = 42`):
-1. **LASSO (L1 Regularization):** `LogisticRegressionCV(Cs=20, cv=4, penalty='l1', solver='saga')` selected $C = 4.28$ (scikit-learn inverse regularization), isolating **2 features** (`ISM1`, `FN1`). Note that 4-fold cross-validation on $N=8$ samples is highly discrete and unstable.
+1. **LASSO (L1 Regularization):** `LogisticRegressionCV(Cs=20, cv=4, penalty='l1', solver='liblinear')` selected $C = 4.28$ (scikit-learn inverse regularization), isolating **2 features** (`ISM1`, `FN1`). Note that 4-fold cross-validation on $N=8$ samples is highly discrete and unstable.
 2. **SVM-RFE (Recursive Feature Elimination):** Linear support vector machine iteratively ranking features by weight criterion $c_j = (w_j)^2$, selecting **14 features**.
 3. **Random Forest (Gini Impurity):** 500 decision trees ranking Mean Decrease Gini, selecting **17 features**.
 4. **XGBoost (Extreme Gradient Boosting):** Depth-constrained gradient-boosted trees, selecting **1 feature** (`EDIL3`).
