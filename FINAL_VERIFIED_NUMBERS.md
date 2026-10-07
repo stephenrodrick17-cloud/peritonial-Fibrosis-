@@ -95,7 +95,7 @@
 
 ## 6. Multi-Tier Convergence
 
-- **3-Way Tripartite Candidates:** **40 genes** (Strict intersection: 367 DEGs $\cap$ 1,027 Matrisome $\cap$ 604 Salmon Module).
+- **3-Way Tripartite Candidates:** **40 genes** (Strict intersection: 367 upregulated DEGs $\cap$ 975 measured Matrisome genes [in expression universe] $\cap$ 604 Salmon Module).
 
 ---
 

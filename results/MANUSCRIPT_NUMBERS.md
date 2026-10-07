@@ -9,8 +9,8 @@
 
 ## 2. Differential Expression & Matrisome Over-representation
 - **Pro-Fibrotic DEGs ($P < 0.05, \log_2\text{FC} \ge 0.80$):** 367 genes.
-- **Curated Human Matrisome Reference:** 1027 genes (974 in probe universe).
-- **Matrisome Background Proportion:** 974 / 22049 = 4.42%.
+- **Curated Human Matrisome Reference:** 1027 genes (975 in probe universe).
+- **Matrisome Background Proportion:** 975 / 22049 = 4.42%.
 - **Isolated Pro-Fibrotic ECM-DEGs:** 71 genes (19.35% of DEGs).
 - **Fold Enrichment:** 4.38-fold.
 - **Hypergeometric Enrichment P-value:** $P = 2.4378e-26$.

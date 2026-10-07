@@ -130,7 +130,7 @@ p_ecm_volcano <- ggplot(all_results, aes(x = logFC, y = -log10(P.Value))) +
              color = "#4575b4", alpha = 0.55, size = 1.8) +
   geom_point(data = all_results %>% filter(ECM_Highlight == "ECM-DEG"),
              color = "#d73027", alpha = 0.9, size = 3.2) +
-  geom_vline(xintercept = c(-0.585, 0.585), linetype = "dashed",
+  geom_vline(xintercept = c(-0.80, 0.80), linetype = "dashed",
              color = "black", linewidth = 0.5) +
   geom_hline(yintercept = -log10(0.05), linetype = "dashed",
              color = "black", linewidth = 0.5) +
