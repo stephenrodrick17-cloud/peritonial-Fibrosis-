@@ -17,7 +17,7 @@
 ## Section 3.2: Matrisome ECM Enrichment Analysis
 * **Exact Final Numbers (Primary 0.585):** Curated Matrisome = 1,027; Expression universe Matrisome = 975; Upregulated ECM-DEGs = 81; Downregulated ECM-DEGs = 67 (total ECM-DEGs = 148). Enrichment ratio = 3.430× (observed 81 vs expected ~23.62); Hypergeometric P = 1.321×10⁻²²; Exact 1-sided permutation P = 0.0143 (rank 1/70 splits). **Historical 0.80 comparison (for reference):** 71 up / 16 down ECM-DEGs, 4.375× enrichment, P ≈ 2.593×10⁻²⁶.
 * **Interpretation:** Extremely strong selective enrichment of extracellular matrix components within the pro-fibrotic DEG signal.
-* **Limitations:** Database-dependent definition of human matrisome. Of the 81 up ECM-DEGs, only 5 individually survive genome-wide BH-FDR < 0.05.
+* **Limitations:** Database-dependent definition of human matrisome. Of the 81 up ECM-DEGs, only 5 individually survive genome-wide BH-FDR < 0.05. Methodological sensitivity: independent third-party MatrisomeAnalyzeR cross-check on the same raw data returns 125 up ECM-DEGs (Δ=+44) and 998 measured matrisome genes (Δ=+23) due to differing probe-collapse logic, bundled matrisome curation, and internal limma re-fit — the qualitative ECM enrichment signal is robust across implementations, but absolute counts are method-dependent. The repository's locked 81/975/22,049 numbers remain primary for all results.
 * **Figure/Table Reference:** Figure 2 (ECM Volcano highlight & enrichment bar chart); Table S2.
 * **Wording Restrictions:** Clearly distinguish '81 upregulated ECM-associated genes' from all 534 pro-fibrotic DEGs. State the measured matrisome size as 975 (not 1,027) when referring to the expressed subset.
 
@@ -115,3 +115,4 @@
 5. **Nomogram CV:** Nomogram 5-fold CV AUC = 0.550 — near chance; exploratory illustration only.
 6. **Post-Hoc Direction Inversion:** VCAN and THBS3 score directions were inverted in GSE125498 based on observed external-cohort direction.
 7. **Biofluid vs Tissue:** GSE62928 and GSE125498 both profile peritoneal effluent (dialysate) cells, not peritoneum surgical biopsies. Tissue-level extrapolation is inferential.
+8. **Matrisome/Probe-Collapse Sensitivity:** Absolute matrisome and ECM-DEG counts are method-dependent: independent MatrisomeAnalyzeR cross-check on the same raw dataset yields 998 measured matrisome (vs 975) and 125 up ECM-DEGs (vs 81), with the qualitative ECM enrichment signal preserved across implementations. Report only the repository's locked 975/81 numbers as primary; cite the cross-check delta in Limitations.

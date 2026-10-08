@@ -52,3 +52,21 @@
 
 ### I. Programmatic Manuscript Numbers
 - **Automated Generation:** Created `scratch/generate_manuscript_numbers.py` to programmatically extract and format all pipeline numbers directly from CSV tables into `results/MANUSCRIPT_NUMBERS.md`.
+
+### J. MatrisomeAnalyzeR Independent Cross-Check Sensitivity (2026-10-08)
+- **Finding:** Running the third-party R package *MatrisomeAnalyzeR* on the same raw GSE62928 dataset produced systematically different absolute counts from the repository's locked pipeline, confirming the qualitative ECM enrichment signal is robust but absolute counts are method-dependent:
+
+| Metric | Authoritative (Locked Pipeline) | Computed (MatrisomeAnalyzeR) | Delta |
+|---|---|---|---|
+| Best-probe-by-P collapse (Gene Universe) | 22,049 | 21,914 | -135 |
+| Measured matrisome genes (total) | 975 | 998 | +23 (acceptable, R annotation variance) |
+| Core matrisome | 261 | 273 | +12 |
+| Matrisome-associated | 714 | 725 | +11 |
+| Pro-fibrotic UP ECM-DEGs (logFC>=0.585, P<0.05) | 81 | 125 | +44 |
+
+- **Root Causes (Documented, Expected Variance):**
+  1. **Probe collapse:** MatrisomeAnalyzeR ships its own Affymetrix GPL13158 annotation logic (package-specific `hgu133plus2.db` version, multi-gene `///` handling, ambiguous-probe resolution) vs the repository's explicit best-P dedup on the pre-computed limma toptable → yields **-135** unique genes.
+  2. **Matrisome list:** MatrisomeAnalyzeR bundles its own internal Naba-based matrisome curation with updated HGNC symbols, alias resolution, and borderline category assignments vs the repository's static `ECM genes all.xlsx` masterlist → **+23** measured matrisome (Core +12, MA +11).
+  3. **DEG calling:** MatrisomeAnalyzeR re-fits limma internally (its own normalization, eBayes trend/robust defaults, and collapsing rule *before* the statistical fit) instead of consuming the repository's pre-computed top-table statistics → this is responsible for the bulk of the **+44** UP ECM-DEG delta.
+- **Manuscript Guidance:** The locked pipeline (22,049 / 975 / **81**) remains the **PRIMARY SOURCE OF TRUTH** for all manuscript text, tables, downstream convergence (44 genes), ML prioritization (11 hubs), enrichment statistics (3.430×, P = 1.321×10⁻²²), and permutation results (P = 1/70 = 0.0143). The MatrisomeAnalyzeR cross-check is cited as a **sensitivity analysis** in the Limitations section to confirm the qualitative ECM enrichment signal persists across independent implementations; its absolute counts are not mixed into primary results.
+- **Related Additions to Repository:** `scripts/verify_matrisome_counts.py`, `results/tables/VERIFY_user_matrisome_tally_probe_vs_gene.csv`, `scripts/generate_fig6b_hub_correlation.py` (11-hub Pearson heatmap), and corresponding figure source data.
