@@ -1,0 +1,7 @@
+cell_type,LV_UF_vs_LV_NOT_UF,LV_UF_vs_SV,LV_NOT_UF_vs_SV
+B cell,fail (2/4 vs 3/6),fail (2/4 vs 4/6),PASS (3/6 vs 4/6)
+Monocyte / macrophage,PASS (3/4 vs 6/6),PASS (3/4 vs 6/6),PASS (6/6 vs 6/6)
+NK cell,PASS (4/4 vs 6/6),PASS (4/4 vs 6/6),PASS (6/6 vs 6/6)
+T cell,PASS (4/4 vs 6/6),PASS (4/4 vs 6/6),PASS (6/6 vs 6/6)
+cDC,PASS (3/4 vs 6/6),PASS (3/4 vs 6/6),PASS (6/6 vs 6/6)
+stromal / mesothelial-lineage (unresolved),PASS (4/4 vs 5/6),PASS (4/4 vs 5/6),PASS (5/6 vs 5/6)

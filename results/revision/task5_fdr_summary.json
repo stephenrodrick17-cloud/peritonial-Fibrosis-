@@ -1,0 +1,105 @@
+{
+  "fdr_breakdown": [
+    {
+      "Gene_Set": "All Primary DEGs (N=813)",
+      "Total_Genes": 813,
+      "Surviving_FDR_0_05": 135,
+      "Pct_Surviving_FDR_0_05": 16.61,
+      "Surviving_FDR_0_10": 263,
+      "Pct_Surviving_FDR_0_10": 32.35,
+      "FDR_Non_Significant_p10": 550,
+      "Pct_Non_Significant_p10": 67.65
+    },
+    {
+      "Gene_Set": "DEG-Matrisomal Genes (N=44)",
+      "Total_Genes": 44,
+      "Surviving_FDR_0_05": 6,
+      "Pct_Surviving_FDR_0_05": 13.64,
+      "Surviving_FDR_0_10": 10,
+      "Pct_Surviving_FDR_0_10": 22.73,
+      "FDR_Non_Significant_p10": 34,
+      "Pct_Non_Significant_p10": 77.27
+    },
+    {
+      "Gene_Set": "Consensus Hub Genes (N=7)",
+      "Total_Genes": 7,
+      "Surviving_FDR_0_05": 4,
+      "Pct_Surviving_FDR_0_05": 57.14,
+      "Surviving_FDR_0_10": 5,
+      "Pct_Surviving_FDR_0_10": 71.43,
+      "FDR_Non_Significant_p10": 2,
+      "Pct_Non_Significant_p10": 28.57
+    }
+  ],
+  "hubs_fdr": [
+    {
+      "Gene": "FLT3LG",
+      "log2FC": 1.4377,
+      "Nominal_P": 2.35e-05,
+      "BH_adj_P_FDR": 0.01324,
+      "Survives_FDR_0_05": "Yes",
+      "Survives_FDR_0_10": "Yes"
+    },
+    {
+      "Gene": "TNFSF15",
+      "log2FC": 0.9743,
+      "Nominal_P": 2.73e-05,
+      "BH_adj_P_FDR": 0.01352,
+      "Survives_FDR_0_05": "Yes",
+      "Survives_FDR_0_10": "Yes"
+    },
+    {
+      "Gene": "LTB",
+      "log2FC": 1.6747,
+      "Nominal_P": 3.33e-06,
+      "BH_adj_P_FDR": 0.00709,
+      "Survives_FDR_0_05": "Yes",
+      "Survives_FDR_0_10": "Yes"
+    },
+    {
+      "Gene": "ADAM19",
+      "log2FC": 1.2131,
+      "Nominal_P": 0.000133,
+      "BH_adj_P_FDR": 0.02544,
+      "Survives_FDR_0_05": "Yes",
+      "Survives_FDR_0_10": "Yes"
+    },
+    {
+      "Gene": "SERPINA10",
+      "log2FC": 1.1659,
+      "Nominal_P": 0.000653,
+      "BH_adj_P_FDR": 0.05433,
+      "Survives_FDR_0_05": "No",
+      "Survives_FDR_0_10": "Yes"
+    },
+    {
+      "Gene": "EBI3",
+      "log2FC": 0.8034,
+      "Nominal_P": 0.00244,
+      "BH_adj_P_FDR": 0.10282,
+      "Survives_FDR_0_05": "No",
+      "Survives_FDR_0_10": "No"
+    },
+    {
+      "Gene": "CXCL14",
+      "log2FC": 0.6377,
+      "Nominal_P": 0.00503,
+      "BH_adj_P_FDR": 0.1522,
+      "Survives_FDR_0_05": "No",
+      "Survives_FDR_0_10": "No"
+    }
+  ],
+  "metadata_covariate_audit": {
+    "geo_accession": "GSE125498",
+    "metadata_lines_inspected": 5,
+    "sample_characteristics_found": [
+      "patient id (1 to 33)",
+      "time (peritoneal dialysis): short-term vs long-term",
+      "cell type: peritoneal cells"
+    ],
+    "age_available": false,
+    "sex_available": false,
+    "batch_id_available": false,
+    "statement": "The public GEO deposit for GSE125498 contains only 'patient id', 'time (peritoneal dialysis): short-term / long-term', and 'cell type: peritoneal cells'. Clinical covariates including patient age, sex, race, diabetes status, residual renal function, and technical microarray processing batch dates are not provided in the GEO series matrix. Consequently, multivariable adjustment in limma for age, sex, or batch cannot be performed. This absence is explicitly documented as a potential source of unmeasured confounding in the study limitations."
+  }
+}

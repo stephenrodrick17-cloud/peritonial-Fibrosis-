@@ -1,0 +1,406 @@
+{
+  "raw_tar_sha256": "bc7fba2d268f3013d90938bdaeab1ffa5db6cb760c1811e6d58db0cdfb8550e5",
+  "total_raw_cells": 118895,
+  "samples": [
+    {
+      "GSM": "GSM7919583",
+      "Sample_Title": "LV_UF-1",
+      "Group": "LV_UF (Long Vintage with UFF)",
+      "N_Cells_Raw": 2559,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919583_LV_UF-1.barcodes.tsv.gz",
+          "size_bytes": 14145,
+          "sha256": "224d21ce5ed7e32a4344a8794467f6dd07754b162e2dd62b584840dc4fb2b119"
+        },
+        "features": {
+          "filename": "GSM7919583_LV_UF-1.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "92b0178e42d61d3ed8c8b429a7912490a15d66f77c18c20235e18a4423ea9d4e"
+        },
+        "matrix": {
+          "filename": "GSM7919583_LV_UF-1.matrix.mtx.gz",
+          "size_bytes": 20437024,
+          "sha256": "a06e8991c4dbf0accec688e610e80e6feef78e835625fcda8b42517382324f09"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919584",
+      "Sample_Title": "LV_UF-2",
+      "Group": "LV_UF (Long Vintage with UFF)",
+      "N_Cells_Raw": 6769,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919584_LV_UF-2.barcodes.tsv.gz",
+          "size_bytes": 35222,
+          "sha256": "70c4ad607d613c9c4d29d39785290ad9e3f49a129d3bae2f67deb7380885097c"
+        },
+        "features": {
+          "filename": "GSM7919584_LV_UF-2.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "d5d64fe11fe21925604f27cae9524cddc322da902318d395fb14538ad56f1df0"
+        },
+        "matrix": {
+          "filename": "GSM7919584_LV_UF-2.matrix.mtx.gz",
+          "size_bytes": 50388905,
+          "sha256": "3e943cf72792ef5d658c454e0b15547ab7579905068b5b1bfef6028de4da5d87"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919585",
+      "Sample_Title": "LV_UF-3",
+      "Group": "LV_UF (Long Vintage with UFF)",
+      "N_Cells_Raw": 5679,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919585_LV_UF-3.barcodes.tsv.gz",
+          "size_bytes": 29932,
+          "sha256": "2035fe3adff583db66bf2d9a5a6110e531e69902bd8fffd7bbf5eb501e696dc1"
+        },
+        "features": {
+          "filename": "GSM7919585_LV_UF-3.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "caf90784e1d0e92cd4a0abae7ac9db13ea97686f9383ec2b1a63f63dc03e8922"
+        },
+        "matrix": {
+          "filename": "GSM7919585_LV_UF-3.matrix.mtx.gz",
+          "size_bytes": 28644207,
+          "sha256": "b7498fc165e89389007ab7fc39e0b146fd501562e591cd4cfb23c6ce0d7aa2eb"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919586",
+      "Sample_Title": "LV_UF-4",
+      "Group": "LV_UF (Long Vintage with UFF)",
+      "N_Cells_Raw": 8559,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919586_LV_UF-4.barcodes.tsv.gz",
+          "size_bytes": 43954,
+          "sha256": "60a985b80c211cef9588443a33acc683c615b653c69278a25992a98f78a6cf09"
+        },
+        "features": {
+          "filename": "GSM7919586_LV_UF-4.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "76a4b30a1b326b325c233e924d494260e88e73de37c6a6afa8f242f429a6c47d"
+        },
+        "matrix": {
+          "filename": "GSM7919586_LV_UF-4.matrix.mtx.gz",
+          "size_bytes": 58710224,
+          "sha256": "65e0b9cc36d995ebfb4699918715a592df5ff6cb6e2617a0e0262549a25ee5f6"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919587",
+      "Sample_Title": "LV_NOT_UF-1",
+      "Group": "LV_NOT_UF (Long Vintage without UFF)",
+      "N_Cells_Raw": 7922,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919587_LV_NOT_UF-1.barcodes.tsv.gz",
+          "size_bytes": 40884,
+          "sha256": "6ab84839bbd37e7fd68b1ff53383dc7e4ea6a3763a8763830376552686ba8c19"
+        },
+        "features": {
+          "filename": "GSM7919587_LV_NOT_UF-1.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "b26afe4d565046fd931c82653b03533a5b37b57c247dcdeeac7dd81f3e52e4bc"
+        },
+        "matrix": {
+          "filename": "GSM7919587_LV_NOT_UF-1.matrix.mtx.gz",
+          "size_bytes": 89606386,
+          "sha256": "6f12ff8ee8e274fc5dd5d068f4798961f0b07d07b5c2dfc23bdabad11c1b599b"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919588",
+      "Sample_Title": "LV_NOT_UF-2",
+      "Group": "LV_NOT_UF (Long Vintage without UFF)",
+      "N_Cells_Raw": 5049,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919588_LV_NOT_UF-2.barcodes.tsv.gz",
+          "size_bytes": 26830,
+          "sha256": "c26d4675cc951f725e36f4179ab5b78ef3c3d22be4bd1cd342c0df255ea18bc4"
+        },
+        "features": {
+          "filename": "GSM7919588_LV_NOT_UF-2.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "b9d00f94aeaaab45852396719e253e44fd0d45e505411f9cb4d5c65265026a0f"
+        },
+        "matrix": {
+          "filename": "GSM7919588_LV_NOT_UF-2.matrix.mtx.gz",
+          "size_bytes": 53810899,
+          "sha256": "7211f592a18a89283f8209e4bf3771f2b9431d4aed5c9553fdbe2d8e586c4f6b"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919589",
+      "Sample_Title": "LV_NOT_UF-3",
+      "Group": "LV_NOT_UF (Long Vintage without UFF)",
+      "N_Cells_Raw": 8278,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919589_LV_NOT_UF-3.barcodes.tsv.gz",
+          "size_bytes": 42582,
+          "sha256": "10eb6259bd40ec0da174c3e2bb5aa2fff11c9832f247e104194ccea9fc9c260c"
+        },
+        "features": {
+          "filename": "GSM7919589_LV_NOT_UF-3.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "86cadba86f408ba672d1c4510bb40fc1c828e375d3170765d836a8f571e99ed9"
+        },
+        "matrix": {
+          "filename": "GSM7919589_LV_NOT_UF-3.matrix.mtx.gz",
+          "size_bytes": 72486191,
+          "sha256": "7d24d68834f39cbf9b827037807ca5c32be45d1f8a5b329826a5e80dfcb1c384"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919590",
+      "Sample_Title": "LV_NOT_UF-4",
+      "Group": "LV_NOT_UF (Long Vintage without UFF)",
+      "N_Cells_Raw": 8224,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919590_LV_NOT_UF-4.barcodes.tsv.gz",
+          "size_bytes": 42252,
+          "sha256": "7162b1c6ba8829cf8450830b3908e619f3256bcccb9c766a6c5747a74b89d0d1"
+        },
+        "features": {
+          "filename": "GSM7919590_LV_NOT_UF-4.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "22c2b65035a9096cb150cb37c204f989cc82c028845a275a28fe771c37d8d607"
+        },
+        "matrix": {
+          "filename": "GSM7919590_LV_NOT_UF-4.matrix.mtx.gz",
+          "size_bytes": 59598328,
+          "sha256": "99925e03050d9aa5e3cae062265e433fe09553900f22b2cc1947b2c39b831b66"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919591",
+      "Sample_Title": "LV_NOT_UF-5",
+      "Group": "LV_NOT_UF (Long Vintage without UFF)",
+      "N_Cells_Raw": 7799,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919591_LV_NOT_UF-5.barcodes.tsv.gz",
+          "size_bytes": 40331,
+          "sha256": "3c6bf32587c6c00eb2671fd96d510477864184529c9ad5419243468b18400297"
+        },
+        "features": {
+          "filename": "GSM7919591_LV_NOT_UF-5.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "934c7dcc63ba6d3e825c9ce389fe84818933a047747f92a73689df91173f7585"
+        },
+        "matrix": {
+          "filename": "GSM7919591_LV_NOT_UF-5.matrix.mtx.gz",
+          "size_bytes": 63458825,
+          "sha256": "72a18dafbb05e24799f056076248c1b55c58d435b55e188e58a103531e827a93"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919592",
+      "Sample_Title": "LV_NOT_UF-6",
+      "Group": "LV_NOT_UF (Long Vintage without UFF)",
+      "N_Cells_Raw": 6711,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919592_LV_NOT_UF-6.barcodes.tsv.gz",
+          "size_bytes": 34976,
+          "sha256": "cbec6ea599af27f2806189e5d0904b8fbb0496fc9f72dc00cb07046db4805307"
+        },
+        "features": {
+          "filename": "GSM7919592_LV_NOT_UF-6.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "720b0d5a3848ac35f79e8eca4c31f52750d7d86e292f91e76b9f72d93983e99a"
+        },
+        "matrix": {
+          "filename": "GSM7919592_LV_NOT_UF-6.matrix.mtx.gz",
+          "size_bytes": 57885592,
+          "sha256": "149a56d0f61b1bafa4c9880b9fd77af9e30bab5184d1059756ff261c887a88be"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919593",
+      "Sample_Title": "SV-1",
+      "Group": "SV (Short Vintage, <1yr)",
+      "N_Cells_Raw": 8699,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919593_SV-1.barcodes.tsv.gz",
+          "size_bytes": 44547,
+          "sha256": "f6f79554bd6ce11185a14db8f56686d17cec5bafb65ac11b95269533f752fb22"
+        },
+        "features": {
+          "filename": "GSM7919593_SV-1.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "a8fb725683fb4e0527301e79454e4cc943d030619171fdb8f96f05be3d8e7a7f"
+        },
+        "matrix": {
+          "filename": "GSM7919593_SV-1.matrix.mtx.gz",
+          "size_bytes": 80637242,
+          "sha256": "8ebb45a06424cabc24b4af7613edb16880326a098cf0d543feeb4f0361c520cc"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919594",
+      "Sample_Title": "SV-2",
+      "Group": "SV (Short Vintage, <1yr)",
+      "N_Cells_Raw": 7061,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919594_SV-2.barcodes.tsv.gz",
+          "size_bytes": 36632,
+          "sha256": "5e65304a133513cf0d0ebb0d9b2b417da449b9efcb0e3b6a160ddb0538babdf3"
+        },
+        "features": {
+          "filename": "GSM7919594_SV-2.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "94633ebd5987d7e98d9e6e491b5e44063292ada9cc3c9fdda8fb91769d8d3cff"
+        },
+        "matrix": {
+          "filename": "GSM7919594_SV-2.matrix.mtx.gz",
+          "size_bytes": 71388340,
+          "sha256": "3b1d8006de98cc4746baad1300437623fdf8d6e161dff40338743907ffc497b3"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919595",
+      "Sample_Title": "SV-3",
+      "Group": "SV (Short Vintage, <1yr)",
+      "N_Cells_Raw": 10153,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919595_SV-3.barcodes.tsv.gz",
+          "size_bytes": 51591,
+          "sha256": "8f3f0b11f8d6fdffdb1ad85e483e58972a69e45c99bd4ce56178d7e2a50dd0a7"
+        },
+        "features": {
+          "filename": "GSM7919595_SV-3.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "c1afa10890ea18687a07fd89f447e55f3fa0aee8a91d48e5e8e3129070b3c5f6"
+        },
+        "matrix": {
+          "filename": "GSM7919595_SV-3.matrix.mtx.gz",
+          "size_bytes": 72997436,
+          "sha256": "1bb8b4b40598ac2cbb9a6d12020e38b239bc1fa339ad12373781670750d47d77"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919596",
+      "Sample_Title": "SV-4",
+      "Group": "SV (Short Vintage, <1yr)",
+      "N_Cells_Raw": 8415,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919596_SV-4.barcodes.tsv.gz",
+          "size_bytes": 43238,
+          "sha256": "32bbba782cea719c6f161f3d6b3f999b751ded708f0d16085f22db2f6f953fd0"
+        },
+        "features": {
+          "filename": "GSM7919596_SV-4.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "b737fa142278467f5884cea72f442d2ecaf9d7a25d8f009bf5a144076db3b86c"
+        },
+        "matrix": {
+          "filename": "GSM7919596_SV-4.matrix.mtx.gz",
+          "size_bytes": 74144666,
+          "sha256": "61f3bc0ba8f8142beea80a03e4a0548925a625b79527c4dce8f5b1b5417299c3"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919597",
+      "Sample_Title": "SV-5",
+      "Group": "SV (Short Vintage, <1yr)",
+      "N_Cells_Raw": 9006,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919597_SV-5.barcodes.tsv.gz",
+          "size_bytes": 46035,
+          "sha256": "7159c17f70e849c32fa3707c8d2bb9933a7b51d226e934b96e6efe1154e50e93"
+        },
+        "features": {
+          "filename": "GSM7919597_SV-5.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "1366f087600fea11c6e48fa3f155f4829440ae85a52f17359c5f6de90edfe0d1"
+        },
+        "matrix": {
+          "filename": "GSM7919597_SV-5.matrix.mtx.gz",
+          "size_bytes": 79451354,
+          "sha256": "36344737725e0e0f1fa6eff7273fc4b847c86c93d845616af51ac3839825c1f0"
+        }
+      }
+    },
+    {
+      "GSM": "GSM7919598",
+      "Sample_Title": "SV-6",
+      "Group": "SV (Short Vintage, <1yr)",
+      "N_Cells_Raw": 8012,
+      "N_Genes_Raw": 37487,
+      "Features_Columns": 3,
+      "Files": {
+        "barcodes": {
+          "filename": "GSM7919598_SV-6.barcodes.tsv.gz",
+          "size_bytes": 41379,
+          "sha256": "ce5c090041941317867810c2fbc79c11d1e600fa22b49cbf619e5d1de38ff6d7"
+        },
+        "features": {
+          "filename": "GSM7919598_SV-6.features.tsv.gz",
+          "size_bytes": 337956,
+          "sha256": "fa54383491475821f16a15560d5266cefc782807b95d9f04aae39b8065825cdf"
+        },
+        "matrix": {
+          "filename": "GSM7919598_SV-6.matrix.mtx.gz",
+          "size_bytes": 73085040,
+          "sha256": "3363c8acd9056a5d359f611f66942a3104506e8a2627a3c2ed8d5618ad0be566"
+        }
+      }
+    }
+  ]
+}

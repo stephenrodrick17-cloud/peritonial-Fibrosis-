@@ -1,0 +1,319 @@
+{
+  "GSE62928": {
+    "accession": "GSE62928",
+    "role": "Discovery (tissue)",
+    "title": "Expression data from peritoneal biopsies of patients with encapsulating peritoneal sclerosis, patients undergoing first implantation of a peritoneal dialysis catheter, and patients undergoing abdominal surgery for non-peritoneal conditions",
+    "summary": "Expression data from peritoneal biopsies of patients with encapsulating peritoneal sclerosis (EPS), patients undergoing first implantation of a peritoneal dialysis catheter (PD), and patients undergoing abdominal surgery for non-peritoneal conditions (controls) We used microarrays to determine the transcriptional profiles of peritoneal membrane in patients with encapsulating peritoneal sclerosis (EPS), patients undergoing first insertion of a peritoneal dialysis cathetier (PD), and uremic patients without history of PD or EPS, undergoing abdominal surgery for non-peritoneal problems (CON) Encapsulating peritoneal sclerosis (EPS) is a devastating complication of peritoneal dialysis (PD), characterized by marked inflammation and severe fibrosis of the peritoneum, and associated with high morbidity and mortality.  EPS can occur years after termination of PD and, in severe cases, leads to intestinal obstruction and ileus requiring surgical intervention. Despite ongoing research, the pathogenesis of EPS remains unclear. We performed a global transcriptome analysis of peritoneal tissue specimens from EPS patients, PD patients without EPS, and uremic patients without history of PD or EPS (Uremic). Unsupervised and supervised bioinformatics analysis revealed distinct transcriptional patterns that discriminated these three clinical groups. The analysis identified a signature of 219 genes expressed differentially in EPS as compared to PD and Uremic groups.  Canonical pathway analysis of differentially expressed genes showed enrichment in several pathways, including antigen presentation, dendritic cell maturation, B cell development, chemokine signaling and humoral and cellular immunity (P value <0.05). Further interactive network analysis depicted effects of EPS-associated genes on networks linked to inflammation, immunological response, and cell proliferation. Gene expression changes were confirmed by qRT-PCR for a subset of the differentially expressed genes. EPS patient tissues exhibited elevated expression of genes encoding sulfatase1, thrombospondin 1, fibronectin 1 and alpha smooth muscle actin, among many others, while in EPS and PD tissues mRNAs encoding leptin and retinol-binding protein 4 were markedly down-regulated, compared to Uremic group patients. Immunolocalization of Collagen 1 alpha 1 revealed that Col1a1 protein was predominantly expressed in the submesothelial compact zone of EPS patient peritoneal samples, whereas PD patient peritoneal samples exhibited homogenous Col1a1 staining throughout the tissue samples.  The results are compatible with the hypothesis that encapsulating peritoneal sclerosis is a distinct pathological process from the simple peritoneal fibrosis that accompanies all PD treatment.",
+    "organism": "Homo sapiens",
+    "platform_gpl": "13158",
+    "gdstype": "Expression profiling by array",
+    "n_samples": 8,
+    "submission_date": "2014/11/04",
+    "pubmed_ids": [],
+    "bioproject": "PRJNA266119",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE62nnn/GSE62928/",
+    "suppfile": "CEL, CHP",
+    "sample_accessions": [
+      "GSM1536406",
+      "GSM1536409",
+      "GSM1536408",
+      "GSM1536411",
+      "GSM1536413",
+      "GSM1536407",
+      "GSM1536410",
+      "GSM1536412"
+    ],
+    "raw_files": [
+      {
+        "file": "data/raw\\GSE62928_series_matrix.txt.gz",
+        "sha256": "37f2378e37d06126f4c3f63ed300e90231f38f66ccba2e1412d1a9d837db7aa5",
+        "size_bytes": 1794513
+      },
+      {
+        "file": "data/raw\\GSE62928_family.soft.gz",
+        "sha256": "dba35670b432e3f1830c3092d911c80d0d547db61e9b294f8fa025c056477bec",
+        "size_bytes": 11331498
+      }
+    ],
+    "platform_title": "Affymetrix HT HG-U133 Plus PM Array Plate (GPL13158)"
+  },
+  "GSE125498": {
+    "accession": "GSE125498",
+    "role": "Bulk validation (effluent cells)",
+    "title": "Peritoneal Dialysis Induces Alterations In The Transcriptome Of Peritoneal Cells Before Detectible Peritoneal Functional Changes",
+    "summary": "Long-term peritoneal dialysis (PD) is associated with functional and structural alterations of the peritoneal membrane. Inflammation may be the key moment and consequently fibrosis, the end result of chronic inflammatory reaction. The objective of the study was to identify genes involved in peritoneal alterations during PD by comparing transcriptome of peritoneal cells in short- and long-term PD patients. Peritoneal effluent of the long-dwell of stable PD patients was centrifuged to obtain peritoneal cells. Gene expression profiling of peritoneal cells using microarray between short- and long-term PD patients was compared. Based on microarray analysis 31 genes for RT-qPCR validation were chosen. A 4-hour peritoneal equilibration test (PET) was performed on the day after the long dwell. Transport parameters and proteins appearance rates were assessed. Genes involved in the immune system process, immune response, cell activation, leuko- and lymphocyte activation were found to be substantially up-regulated in the long-term group. RT-qPCR validation showed higher expression of CD24 (CD24 molecule), LY9 (lymphocyte antigen 9 ), TNFRSF4 (tumor necrosis factor receptor superfamily, member 4), CD79A (CD79a molecule, immunoglobulin-associated alpha), CCR7 (chemokine (C-C motif) receptor 7), CEACAM1 (carcinoembryonic antigen-related cell adhesion molecule 1) and IL2RA (interleukin 2 receptor, alpha)  in long-term PD patients, CD24 having the best discrimination ability between short- and long-term treatment. A relationship between CD24 expression and genes for collagen and matrix formation was shown. Activation of CD24 provoked by pseudohypoxia due to extremely high glucose concentrations in dialysis solutions might play the key role in the development of peritoneal membrane alterations.",
+    "organism": "Homo sapiens",
+    "platform_gpl": "10558",
+    "gdstype": "Expression profiling by array",
+    "n_samples": 33,
+    "submission_date": "2019/01/24",
+    "pubmed_ids": [
+      "31424258"
+    ],
+    "bioproject": "PRJNA516633",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE125nnn/GSE125498/",
+    "suppfile": "TXT",
+    "sample_accessions": [
+      "GSM3575631",
+      "GSM3575637",
+      "GSM3575611",
+      "GSM3575617",
+      "GSM3575614",
+      "GSM3575620",
+      "GSM3575634",
+      "GSM3575640",
+      "GSM3575622",
+      "GSM3575619",
+      "GSM3575623",
+      "GSM3575639",
+      "GSM3575628",
+      "GSM3575616",
+      "GSM3575625",
+      "GSM3575627",
+      "GSM3575630",
+      "GSM3575608",
+      "GSM3575636",
+      "GSM3575633",
+      "GSM3575621",
+      "GSM3575612",
+      "GSM3575609",
+      "GSM3575624",
+      "GSM3575638",
+      "GSM3575613",
+      "GSM3575635",
+      "GSM3575610",
+      "GSM3575629",
+      "GSM3575626",
+      "GSM3575632",
+      "GSM3575618",
+      "GSM3575615"
+    ],
+    "raw_files": [
+      {
+        "file": "data/raw\\GSE125498_family.soft.gz",
+        "sha256": "ea973d963427c662f22f998934559606b40029a28e593cd88900f7504862c5b1",
+        "size_bytes": 22173751
+      }
+    ]
+  },
+  "GSE248762": {
+    "accession": "GSE248762",
+    "role": "scRNA-seq primary",
+    "title": "Single-cell transcriptomics uncovers the roles of mesothelial cells and microenvironmental changes in the ultrafiltration failure after long-term peritoneal dialysis",
+    "summary": "Chronic exposure to biological incompatibility of peritoneal dialysis solution is one of the principal causes of ultrafiltration failure (UF). However, the changes of peritoneal cell composition and molecular mechanism of peritoneal microenvironment after long-term PD are unclear. Single-cell RNA sequencing was performed to profile cell composition and transcriptome characteristics in effluent obtained from patients undergoing PD with short vintage (SV), long vintage without ultrafiltration failure (LV_NOT_UF), and long vintage with ultrafiltration failure (LV_UF).  A total of 6 SV patients, 6 LV_NOT_UF patients, and 4 LV_UF patients were enrolled. The median PD duration of the three groups were 5 months (range:1.0\u20136.0 months), 137 months (range: 92\u2013189 months) and 132 months (range: 120\u2013161 months), with no significant differences in age (38.3 \u00b1 21.5 years, 45.7 \u00b1 10.6 years and 41.0 \u00b1 16.7 years, P>0.05) and gender (male%: 33.3%, 50.0% and 25.0%, P>0.05). scRNA-seq data annotated 8 main cell types including epithelial-like mesothelial cells (E-MCs), mesenchymal-like mesothelial cells (M-MCs), fibroblast, plasma B cells, conventional dendritic cells, plasmacytoid dendritic cells, natural killer T cells, and myeloid cells. LV_UF patients showed higher proportion of E-MCs, which exhibited activated autophagy and had properties of both anti-inflammatory and pro-inflammatory, and neutrophil- and autophagy-related DEGs of E-MCs were upregulated in the LV_UF group. In contrast, the M-MCs and the AQP1 expression in the peritoneal mesenchyme were reduced in the LV_UF group compared to the other groups. The neutrophils in PD effluent were elevated in the LV_UF group, while the M2-like MRC1-macrophages gradually decreased from the SV, LV_NOT_UF to LV_UF group. Compared with the LV_NOT_UF group, the upregulated DEGs of monocytes/macrophages in the LV_UF group not only involved in pro-inflammatory response, but also promoted EMT progress. Additionally, neutrophils and monocytes/macrophages both interacted with MCs. Our study uncovers peritoneal different individual cell populations and cellular functions in different stages of PD which indicates the dynamic changes of microenvironments of peritoneal membrane. These findings provide new insights into the novel roles of mesothelial cells and inflammatory cells in UF.",
+    "organism": "Homo sapiens",
+    "platform_gpl": "24676",
+    "gdstype": "Expression profiling by high throughput sequencing",
+    "n_samples": 16,
+    "submission_date": "2023/11/27",
+    "pubmed_ids": [
+      "39687014"
+    ],
+    "bioproject": "PRJNA1045728",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE248nnn/GSE248762/",
+    "suppfile": "MTX, TSV",
+    "sample_accessions": [
+      "GSM7919594",
+      "GSM7919597",
+      "GSM7919591",
+      "GSM7919585",
+      "GSM7919586",
+      "GSM7919588",
+      "GSM7919589",
+      "GSM7919592",
+      "GSM7919583",
+      "GSM7919584",
+      "GSM7919587",
+      "GSM7919595",
+      "GSM7919598",
+      "GSM7919596",
+      "GSM7919590",
+      "GSM7919593"
+    ]
+  },
+  "GSE130888": {
+    "accession": "GSE130888",
+    "role": "scRNA-seq secondary",
+    "title": "Single cell transcriptome of peritoneal cells",
+    "summary": "To define the transcriptomic landscape of human mesothelial cells in response to PD, we analyzed single cell transcriptomes including cells dissociated from normal peritoneum (hernia surgery, n = 3), and peritoneal cells from effluent of short-term PD patients (PD less than 2 weeks, n = 6) and from long-term PD patients (PD more than 6 years, n = 4) ,we demonstrate that mesothelial cells develop hyperglycolysis, a metabolic alteration that is correlated with the development of peritoneal fibrosis.",
+    "organism": "Homo sapiens",
+    "platform_gpl": "20301",
+    "gdstype": "Expression profiling by high throughput sequencing",
+    "n_samples": 13,
+    "submission_date": "2019/06/09",
+    "pubmed_ids": [
+      "31167927"
+    ],
+    "bioproject": "PRJNA541920",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/",
+    "suppfile": "MTX, TSV",
+    "sample_accessions": [
+      "GSM3755688",
+      "GSM3755697",
+      "GSM3755694",
+      "GSM3755691",
+      "GSM3755695",
+      "GSM3755698",
+      "GSM3755692",
+      "GSM3755689",
+      "GSM3755687",
+      "GSM3755693",
+      "GSM3755690",
+      "GSM3755696",
+      "GSM3755699"
+    ]
+  },
+  "GSE130387": {
+    "accession": "GSE130387",
+    "role": "miRNA (mouse tissue)",
+    "title": "microRNA in mouse peritoneal tissue",
+    "summary": "Analysis of microRNAs in peritoneal tissues from mice treated with peritoneal dialysis fluid and saline",
+    "organism": "synthetic construct; Mus musculus",
+    "platform_gpl": "17107",
+    "gdstype": "Non-coding RNA profiling by array",
+    "n_samples": 6,
+    "submission_date": "2019/05/03",
+    "pubmed_ids": [
+      "31167927"
+    ],
+    "bioproject": "PRJNA539965",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130387/",
+    "suppfile": "GPR, XLSX",
+    "sample_accessions": [
+      "GSM3737328",
+      "GSM3737331",
+      "GSM3737329",
+      "GSM3737332",
+      "GSM3737330",
+      "GSM3737333"
+    ],
+    "biological_species": "Mus musculus",
+    "species_explanation": "Per-sample GSM metadata confirms biological source is 100% Mus musculus (C57BL/6 mouse peritoneal tissue: 3 PDF-induced fibrosis vs 3 saline controls). The NCBI taxon annotation lists 'synthetic construct; Mus musculus' because the Affymetrix GeneChip miRNA 4.0 Array (GPL17107) includes synthetic oligonucleotide spike-in and normalization probes alongside biological miRNA probes.",
+    "curation_status": "VERIFIED MOUSE PERITONEAL TISSUE (Cross-Species Mapping Required)"
+  },
+  "GSE142819": {
+    "accession": "GSE142819",
+    "role": "Conflicting miRNA accession candidate 1 (PCOS plasma)",
+    "title": "Expression profile of plasma exosomal microRNAs in women with polycystic ovary syndrome and control women",
+    "summary": "Polycystic ovary syndrome (PCOS) is a highly prevalent endocrine-metabolic disorder. Epigenetic etiology is suggested to play an important role in PCOS pathogenesis, since it is hard to elucidate completely by genetic variations.   Exosomal microRNAs (miRNAs) have recently been identified as a novel mechanism of intercellular communication, and a more stable regulator of gene expression compared with free miRNAs. The aim of this study is to detect the different expression profile of plasma exosomal miRNAs between PCOS patients and healthy controls.",
+    "organism": "Homo sapiens",
+    "platform_gpl": "16791",
+    "gdstype": "Non-coding RNA profiling by high throughput sequencing",
+    "n_samples": 30,
+    "submission_date": "2021/07/01",
+    "pubmed_ids": [],
+    "bioproject": "PRJNA598459",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE142nnn/GSE142819/",
+    "suppfile": "XLSX",
+    "sample_accessions": [
+      "GSM4240596",
+      "GSM4240593",
+      "GSM4240590",
+      "GSM4240610",
+      "GSM4240604",
+      "GSM4240607",
+      "GSM4240587",
+      "GSM4240588",
+      "GSM4240584",
+      "GSM4240585",
+      "GSM4240591",
+      "GSM4240605",
+      "GSM4240611",
+      "GSM4240599",
+      "GSM4240608",
+      "GSM4240606",
+      "GSM4240583",
+      "GSM4240602",
+      "GSM4240601",
+      "GSM4240598",
+      "GSM4240603",
+      "GSM4240600",
+      "GSM4240597",
+      "GSM4240612",
+      "GSM4240609",
+      "GSM4240594",
+      "GSM4240595",
+      "GSM4240586",
+      "GSM4240592",
+      "GSM4240589"
+    ]
+  },
+  "GSE182736": {
+    "accession": "GSE182736",
+    "role": "miRNA (patient effluent exosomes - verified)",
+    "title": "MiRNA sequencing revealed differentially expressed exosomes miRNAs in PDE of patients with peritoneal ultrafiltration failure",
+    "summary": "There are differential expressions of exosomal miRNAs in PDE of patients with peritoneal ultrafiltration failure. It may be related to the occurrence of peritoneal ultrafiltration failure by regulating the process of peritoneal fibrosis such as inflammation, angiogenesis, and EMT.",
+    "organism": "Homo sapiens",
+    "platform_gpl": "20301",
+    "gdstype": "Non-coding RNA profiling by high throughput sequencing",
+    "n_samples": 6,
+    "submission_date": "2021/08/27",
+    "pubmed_ids": [],
+    "bioproject": "PRJNA757643",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE182nnn/GSE182736/",
+    "suppfile": "XLSX",
+    "sample_accessions": [
+      "GSM5535831",
+      "GSM5535833",
+      "GSM5535830",
+      "GSM5535828",
+      "GSM5535829",
+      "GSM5535832"
+    ]
+  },
+  "GSE121372": {
+    "accession": "GSE121372",
+    "role": "In vitro mesothelial cells +/- TGF-beta1",
+    "title": "Gene expression profile of human peritoneal mesothelial cells (HPMC) treated with TGF-b1",
+    "summary": "Long-term peritoneal dialysis is associated with progressive fibrosis of the peritoneum. Epithelial-mesenchymal transition (EMT) of mesothelial cells is an important mechanism involved in peritoneal fibrosis, and TGF-b1 is considered central in this process. We conducted network-based integrated analysis of transcriptomic data to systemically characterize the molecular signature of TGF-b1-stimulated human peritoneal mesothelial cells (HPMCs).",
+    "organism": "Homo sapiens",
+    "platform_gpl": "6255",
+    "gdstype": "Expression profiling by array",
+    "n_samples": 4,
+    "submission_date": "2018/10/18",
+    "pubmed_ids": [
+      "30728376"
+    ],
+    "bioproject": "PRJNA497194",
+    "ftplink": "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE121nnn/GSE121372/",
+    "suppfile": "TXT",
+    "sample_accessions": [
+      "GSM3433437",
+      "GSM3433439",
+      "GSM3433436",
+      "GSM3433438"
+    ],
+    "replicate_structure": "n=1 per condition per timepoint (No biological replicates)",
+    "statistical_designation": "DESCRIPTIVE ONLY: Fold changes, no P-values reported as inference",
+    "sample_details": [
+      {
+        "gsm": "GSM3433436",
+        "title": "HPMC_control_6hr",
+        "condition": "Control",
+        "timepoint": "6h",
+        "n": 1
+      },
+      {
+        "gsm": "GSM3433437",
+        "title": "HPMC_TGF-b1_6hr",
+        "condition": "TGF-beta1",
+        "timepoint": "6h",
+        "n": 1
+      },
+      {
+        "gsm": "GSM3433438",
+        "title": "HPMC_control_24hr",
+        "condition": "Control",
+        "timepoint": "24h",
+        "n": 1
+      },
+      {
+        "gsm": "GSM3433439",
+        "title": "HPMC_TGF-b1_24hr",
+        "condition": "TGF-beta1",
+        "timepoint": "24h",
+        "n": 1
+      }
+    ]
+  }
+}

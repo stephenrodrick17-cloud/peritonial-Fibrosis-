@@ -1,0 +1,47 @@
+{
+  "stage4_ambient_recomputed_true_cp10k.csv": {
+    "path": "results/tables/stage4_ambient_recomputed_true_cp10k.csv",
+    "sha256": "c6bd8bc553da05d891e62e499c0a6d1b2095afe34f0bfdb9da5fdd62df1f823e",
+    "bytes": 6332,
+    "shape": [
+      55,
+      9
+    ]
+  },
+  "stage4_primary_edger_pseudobulk.csv": {
+    "path": "results/tables/stage4_primary_edger_pseudobulk.csv",
+    "sha256": "806a5035b8010ebc158d7c2514cd933569a17f39f6cabb3dee24fdd90a9bf937",
+    "bytes": 33288,
+    "shape": [
+      165,
+      17
+    ]
+  },
+  "stage4_primary_98_bh_family_sorted.csv": {
+    "path": "results/tables/stage4_primary_98_bh_family_sorted.csv",
+    "sha256": "2b3809cfe8e25fe01c6e36e9811bbaa50dcdecf82aa8c461d1ce0fd4571d3ddd",
+    "bytes": 20758,
+    "shape": [
+      98,
+      17
+    ]
+  },
+  "stage4_qc_ceiling_sensitivity_comparison.csv": {
+    "path": "results/tables/stage4_qc_ceiling_sensitivity_comparison.csv",
+    "sha256": "24b6d33d1ace4acc4887dae903c28e34eba804d13acb2386f4d5e02f761a84c1",
+    "bytes": 564,
+    "shape": [
+      9,
+      7
+    ]
+  },
+  "stage4_sensitivity_edger_pseudobulk.csv": {
+    "path": "results/tables/stage4_sensitivity_edger_pseudobulk.csv",
+    "sha256": "6c92540213ca70cdd27870e245e7f6f24481c003fc83d5ad48c77f0d422c2977",
+    "bytes": 186782,
+    "shape": [
+      792,
+      17
+    ]
+  }
+}

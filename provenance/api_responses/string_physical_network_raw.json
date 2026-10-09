@@ -1,0 +1,47 @@
+[
+  {
+    "stringId_A": "9606.ENSP00000222271",
+    "stringId_B": "9606.ENSP00000346839",
+    "preferredName_A": "COMP",
+    "preferredName_B": "FN1",
+    "ncbiTaxonId": "9606",
+    "score": 0.595,
+    "nscore": 0,
+    "fscore": 0,
+    "pscore": 0,
+    "ascore": 0,
+    "escore": 0,
+    "dscore": 0,
+    "tscore": 0.595
+  },
+  {
+    "stringId_A": "9606.ENSP00000231004",
+    "stringId_B": "9606.ENSP00000346839",
+    "preferredName_A": "LOX",
+    "preferredName_B": "FN1",
+    "ncbiTaxonId": "9606",
+    "score": 0.848,
+    "nscore": 0,
+    "fscore": 0,
+    "pscore": 0,
+    "ascore": 0,
+    "escore": 0.837,
+    "dscore": 0,
+    "tscore": 0.107
+  },
+  {
+    "stringId_A": "9606.ENSP00000304408",
+    "stringId_B": "9606.ENSP00000359114",
+    "preferredName_A": "COL3A1",
+    "preferredName_B": "COL11A1",
+    "ncbiTaxonId": "9606",
+    "score": 0.72,
+    "nscore": 0,
+    "fscore": 0,
+    "pscore": 0,
+    "ascore": 0,
+    "escore": 0,
+    "dscore": 0.72,
+    "tscore": 0
+  }
+]

@@ -1,0 +1,658 @@
+gene,tissue,cell_type,level,reliability
+VCAN,adrenal gland,glandular cells,Not detected,Supported
+VCAN,appendix,endocrine cells,Not detected,Supported
+VCAN,appendix,enterocytes,Not detected,Supported
+VCAN,appendix,enterocytes - Microvilli,High,Supported
+VCAN,appendix,germinal center cells,Not detected,Supported
+VCAN,appendix,goblet cells,Not detected,Supported
+VCAN,appendix,non-germinal center cells,Not detected,Supported
+VCAN,bone marrow,hematopoietic cells,Medium,Supported
+VCAN,breast,adipocytes,Not detected,Supported
+VCAN,breast,glandular cells,Not detected,Supported
+VCAN,breast,myoepithelial cells,Not detected,Supported
+VCAN,bronchus,respiratory epithelial cells,Not detected,Supported
+VCAN,caudate,glial cells,Not detected,Supported
+VCAN,caudate,neuronal cells,Not detected,Supported
+VCAN,caudate,neuronal projections,Not detected,Supported
+VCAN,caudate,synapses,Not detected,Supported
+VCAN,cerebellum,cells in dentate nucleus,High,Supported
+VCAN,cerebellum,cells in granular layer,Low,Supported
+VCAN,cerebellum,cells in molecular layer,Not detected,Supported
+VCAN,cerebellum,glial cells,Not detected,Supported
+VCAN,cerebellum,neuronal projections,Not detected,Supported
+VCAN,cerebellum,Purkinje cells,Low,Supported
+VCAN,cerebellum,synapses,Low,Supported
+VCAN,cerebral cortex,endothelial cells,Not detected,Supported
+VCAN,cerebral cortex,glial cells,Not detected,Supported
+VCAN,cerebral cortex,neuronal cells,Not detected,Supported
+VCAN,cerebral cortex,neuropil,Not detected,Supported
+VCAN,cervix,glandular cells,Not detected,Supported
+VCAN,cervix,squamous epithelial cells,Low,Supported
+VCAN,colon,endocrine cells,Not detected,Supported
+VCAN,colon,endothelial cells,Medium,Supported
+VCAN,colon,enterocytes,Not detected,Supported
+VCAN,colon,enterocytes - Microvilli,Not detected,Supported
+VCAN,colon,fibroblasts,Not detected,Supported
+VCAN,colon,goblet cells,Not detected,Supported
+VCAN,colon,mucosal lymphoid cells,Not detected,Supported
+VCAN,colon,peripheral nerve/ganglion,Not detected,Supported
+VCAN,duodenum,endocrine cells,Not detected,Supported
+VCAN,duodenum,enterocytes,Not detected,Supported
+VCAN,duodenum,enterocytes - Microvilli,Not detected,Supported
+VCAN,duodenum,goblet cells,Not detected,Supported
+VCAN,duodenum,paneth cells,Not detected,Supported
+VCAN,endometrium,ciliated epithelial cells,Not detected,Supported
+VCAN,endometrium,endothelial cells,Not detected,Supported
+VCAN,endometrium,lymphocytes,Not detected,Supported
+VCAN,endometrium,macrophages,Not detected,Supported
+VCAN,endometrium,nonciliated glandular epithelial cells,Low,Supported
+VCAN,endometrium,nonciliated luminal epithelial cells,Not detected,Supported
+VCAN,endometrium,smooth muscle cells,Medium,Supported
+VCAN,endometrium,stromal fibroblasts,High,Supported
+VCAN,endometrium 1,cells in endometrial stroma,Not detected,Supported
+VCAN,endometrium 1,glandular cells,Low,Supported
+VCAN,endometrium 2,cells in endometrial stroma,Not detected,Supported
+VCAN,endometrium 2,glandular cells,Low,Supported
+VCAN,epididymis,glandular cells,Not detected,Supported
+VCAN,esophagus,squamous epithelial cells,Not detected,Supported
+VCAN,fallopian tube,glandular cells,Not detected,Supported
+VCAN,gallbladder,glandular cells,Low,Supported
+VCAN,heart muscle,cardiomyocytes,Low,Supported
+VCAN,hippocampus,glial cells,Not detected,Supported
+VCAN,hippocampus,neuronal cells,Not detected,Supported
+VCAN,hippocampus,neuronal projections,Not detected,Supported
+VCAN,hippocampus,synapses,Not detected,Supported
+VCAN,kidney,cells in glomeruli,Not detected,Supported
+VCAN,kidney,cells in tubules,Not detected,Supported
+VCAN,liver,cholangiocytes,Not detected,Supported
+VCAN,liver,hepatocytes,Not detected,Supported
+VCAN,lung,alveolar cells,Medium,Supported
+VCAN,lung,macrophages,Low,Supported
+VCAN,lymph node,germinal center cells,Not detected,Supported
+VCAN,lymph node,non-germinal center cells,Medium,Supported
+VCAN,nasopharynx,respiratory epithelial cells,Not detected,Supported
+VCAN,oral mucosa,squamous epithelial cells,Not detected,Supported
+VCAN,ovary,follicle cells,Not detected,Supported
+VCAN,ovary,ovarian stroma cells,Not detected,Supported
+VCAN,pancreas,exocrine glandular cells,Not detected,Supported
+VCAN,pancreas,pancreatic endocrine cells,Not detected,Supported
+VCAN,parathyroid gland,glandular cells,Not detected,Supported
+VCAN,placenta,decidual cells,Not detected,Supported
+VCAN,placenta,trophoblastic cells,Not detected,Supported
+VCAN,prostate,glandular cells,Not detected,Supported
+VCAN,rectum,endocrine cells,Not detected,Supported
+VCAN,rectum,endothelial cells,Medium,Supported
+VCAN,rectum,enterocytes,Not detected,Supported
+VCAN,rectum,enterocytes - Microvilli,Not detected,Supported
+VCAN,rectum,fibroblasts,Not detected,Supported
+VCAN,rectum,goblet cells,Not detected,Supported
+VCAN,rectum,mucosal lymphoid cells,Medium,Supported
+VCAN,salivary gland,glandular cells,Not detected,Supported
+VCAN,seminal vesicle,glandular cells,Not detected,Supported
+VCAN,skeletal muscle,myocytes,Not detected,Supported
+VCAN,skin 1,fibroblasts,Not detected,Supported
+VCAN,skin 1,keratinocytes,Not detected,Supported
+VCAN,skin 1,Langerhans,Not detected,Supported
+VCAN,skin 1,melanocytes,Not detected,Supported
+VCAN,skin 2,epidermal cells,Not detected,Supported
+VCAN,small intestine,endocrine cells,Not detected,Supported
+VCAN,small intestine,enterocytes,Not detected,Supported
+VCAN,small intestine,enterocytes - Microvilli,Not detected,Supported
+VCAN,small intestine,goblet cells,Not detected,Supported
+VCAN,small intestine,paneth cells,Not detected,Supported
+VCAN,smooth muscle,smooth muscle cells,Medium,Supported
+VCAN,soft tissue 1,fibroblasts,Not detected,Supported
+VCAN,soft tissue 2,fibroblasts,Not detected,Supported
+VCAN,soft tissue 2,peripheral nerve,Not detected,Supported
+VCAN,spleen,cells in red pulp,Medium,Supported
+VCAN,spleen,cells in white pulp,Not detected,Supported
+VCAN,stomach 1,glandular cells,Not detected,Supported
+VCAN,stomach 2,glandular cells,Not detected,Supported
+VCAN,testis,cells in seminiferous ducts,Not detected,Supported
+VCAN,testis,Leydig cells,Not detected,Supported
+VCAN,thyroid gland,glandular cells,Not detected,Supported
+VCAN,tonsil,germinal center cells,Not detected,Supported
+VCAN,tonsil,non-germinal center cells,Medium,Supported
+VCAN,tonsil,squamous epithelial cells,Not detected,Supported
+VCAN,urinary bladder,urothelial cells,Not detected,Supported
+VCAN,vagina,squamous epithelial cells,Low,Supported
+FN1,adipose tissue,adipocytes,Medium,Enhanced
+FN1,adrenal gland,glandular cells,Medium,Enhanced
+FN1,appendix,glandular cells,Low,Enhanced
+FN1,appendix,lymphoid tissue,Not detected,Enhanced
+FN1,bone marrow,hematopoietic cells,Low,Enhanced
+FN1,breast,adipocytes,Low,Enhanced
+FN1,breast,glandular cells,Low,Enhanced
+FN1,breast,myoepithelial cells,Not detected,Enhanced
+FN1,bronchus,respiratory epithelial cells,Low,Enhanced
+FN1,caudate,glial cells,Low,Enhanced
+FN1,caudate,neuronal cells,Not detected,Enhanced
+FN1,cerebellum,cells in granular layer,Medium,Enhanced
+FN1,cerebellum,cells in molecular layer,Low,Enhanced
+FN1,cerebellum,Purkinje cells,Not detected,Enhanced
+FN1,cerebral cortex,endothelial cells,Medium,Enhanced
+FN1,cerebral cortex,glial cells,Not detected,Enhanced
+FN1,cerebral cortex,neuronal cells,Not detected,Enhanced
+FN1,cerebral cortex,neuropil,Not detected,Enhanced
+FN1,cervix,glandular cells,Not detected,Enhanced
+FN1,cervix,squamous epithelial cells,Not detected,Enhanced
+FN1,colon,endothelial cells,Medium,Enhanced
+FN1,colon,glandular cells,Medium,Enhanced
+FN1,colon,peripheral nerve/ganglion,Medium,Enhanced
+FN1,duodenum,glandular cells,Medium,Enhanced
+FN1,endometrium,ciliated epithelial cells,Not detected,Enhanced
+FN1,endometrium,endothelial cells,High,Enhanced
+FN1,endometrium,lymphocytes,Not detected,Enhanced
+FN1,endometrium,macrophages,High,Enhanced
+FN1,endometrium,nonciliated glandular epithelial cells,Not detected,Enhanced
+FN1,endometrium,nonciliated luminal epithelial cells,Not detected,Enhanced
+FN1,endometrium,smooth muscle cells,Medium,Enhanced
+FN1,endometrium,stromal fibroblasts,High,Enhanced
+FN1,endometrium 1,cells in endometrial stroma,Medium,Enhanced
+FN1,endometrium 1,glandular cells,Not detected,Enhanced
+FN1,endometrium 2,cells in endometrial stroma,Low,Enhanced
+FN1,endometrium 2,glandular cells,Not detected,Enhanced
+FN1,epididymis,glandular cells,Low,Enhanced
+FN1,esophagus,squamous epithelial cells,Low,Enhanced
+FN1,fallopian tube,glandular cells,Not detected,Enhanced
+FN1,gallbladder,glandular cells,Medium,Enhanced
+FN1,heart muscle,cardiomyocytes,Medium,Enhanced
+FN1,hippocampus,glial cells,Not detected,Enhanced
+FN1,hippocampus,neuronal cells,Low,Enhanced
+FN1,kidney,bowman's capsule,Not detected,Enhanced
+FN1,kidney,cells in glomeruli,High,Enhanced
+FN1,kidney,collecting ducts,Medium,Enhanced
+FN1,kidney,distal tubules,High,Enhanced
+FN1,kidney,proximal tubules (cell body),High,Enhanced
+FN1,kidney,proximal tubules (microvilli),Not detected,Enhanced
+FN1,liver,cholangiocytes,Not detected,Enhanced
+FN1,liver,hepatocytes,Low,Enhanced
+FN1,lung,alveolar cells type I,Not detected,Enhanced
+FN1,lung,alveolar cells type II,Medium,Enhanced
+FN1,lung,endothelial cells,Not detected,Enhanced
+FN1,lung,macrophages,Medium,Enhanced
+FN1,lymph node,germinal center cells,Not detected,Enhanced
+FN1,lymph node,non-germinal center cells,Not detected,Enhanced
+FN1,nasopharynx,respiratory epithelial cells,Low,Enhanced
+FN1,oral mucosa,squamous epithelial cells,Low,Enhanced
+FN1,ovary,ovarian stroma cells,Not detected,Enhanced
+FN1,pancreas,exocrine glandular cells,Not detected,Enhanced
+FN1,pancreas,pancreatic endocrine cells,Not detected,Enhanced
+FN1,parathyroid gland,glandular cells,Not detected,Enhanced
+FN1,placenta,cytotrophoblasts,Low,Enhanced
+FN1,placenta,decidual cells,High,Enhanced
+FN1,placenta,endothelial cells,High,Enhanced
+FN1,placenta,hofbauer cells,Not detected,Enhanced
+FN1,placenta,syncytiotrophoblasts - cell body,Medium,Enhanced
+FN1,placenta,syncytiotrophoblasts - microvilli,Medium,Enhanced
+FN1,prostate,glandular cells,Not detected,Enhanced
+FN1,rectum,glandular cells,Low,Enhanced
+FN1,salivary gland,glandular cells,Low,Enhanced
+FN1,seminal vesicle,glandular cells,Low,Enhanced
+FN1,skeletal muscle,myocytes,Not detected,Enhanced
+FN1,skin 1,cells in basal layer,Not detected,Enhanced
+FN1,skin 1,cells in corneal layer,Not detected,Enhanced
+FN1,skin 1,cells in granular layer,Not detected,Enhanced
+FN1,skin 1,cells in spinous layer,Not detected,Enhanced
+FN1,skin 1,endothelial cells,Medium,Enhanced
+FN1,skin 1,extracellular matrix,Medium,Enhanced
+FN1,skin 1,fibrohistiocytic cells,Medium,Enhanced
+FN1,skin 1,langerhans cells,Not detected,Enhanced
+FN1,skin 1,lymphocytes,Not detected,Enhanced
+FN1,skin 1,melanocytes,Not detected,Enhanced
+FN1,skin 1,vascular mural cells,Not detected,Enhanced
+FN1,skin 2,cells in basal layer,Not detected,Enhanced
+FN1,skin 2,cells in corneal layer,Not detected,Enhanced
+FN1,skin 2,cells in granular layer,Not detected,Enhanced
+FN1,skin 2,cells in spinous layer,Not detected,Enhanced
+FN1,skin 2,endothelial cells,High,Enhanced
+FN1,skin 2,extracellular matrix,High,Enhanced
+FN1,skin 2,fibrohistiocytic cells,High,Enhanced
+FN1,skin 2,hair follicles,Not detected,Enhanced
+FN1,skin 2,langerhans cells,Not detected,Enhanced
+FN1,skin 2,lymphocytes,Not detected,Enhanced
+FN1,skin 2,melanocytes,Not detected,Enhanced
+FN1,skin 2,vascular mural cells,Not detected,Enhanced
+FN1,small intestine,glandular cells,Low,Enhanced
+FN1,smooth muscle,smooth muscle cells,Medium,Enhanced
+FN1,soft tissue 1,chondrocytes,Not detected,Enhanced
+FN1,soft tissue 1,fibroblasts,Medium,Enhanced
+FN1,soft tissue 1,peripheral nerve,Low,Enhanced
+FN1,soft tissue 2,fibroblasts,Medium,Enhanced
+FN1,soft tissue 2,peripheral nerve,Not detected,Enhanced
+FN1,spleen,cells in red pulp,Low,Enhanced
+FN1,spleen,cells in white pulp,Low,Enhanced
+FN1,stomach 1,glandular cells,Low,Enhanced
+FN1,stomach 2,glandular cells,Not detected,Enhanced
+FN1,testis,elongated or late spermatids,Medium,Enhanced
+FN1,testis,Leydig cells,Medium,Enhanced
+FN1,testis,pachytene spermatocytes,Not detected,Enhanced
+FN1,testis,peritubular cells,Low,Enhanced
+FN1,testis,preleptotene spermatocytes,Not detected,Enhanced
+FN1,testis,round or early spermatids,Not detected,Enhanced
+FN1,testis,sertoli cells,Not detected,Enhanced
+FN1,testis,spermatogonia cells,Not detected,Enhanced
+FN1,thyroid gland,glandular cells,Low,Enhanced
+FN1,tonsil,germinal center cells,Not detected,Enhanced
+FN1,tonsil,non-germinal center cells,Not detected,Enhanced
+FN1,tonsil,squamous epithelial cells,Not detected,Enhanced
+FN1,urinary bladder,urothelial cells,Low,Enhanced
+FN1,vagina,squamous epithelial cells,Not detected,Enhanced
+COL8A1,adipose tissue,adipocytes,Not detected,Enhanced
+COL8A1,adrenal gland,glandular cells,Not detected,Enhanced
+COL8A1,appendix,endocrine cells,Not detected,Enhanced
+COL8A1,appendix,enterocytes,Not detected,Enhanced
+COL8A1,appendix,enterocytes - Microvilli,Medium,Enhanced
+COL8A1,appendix,germinal center cells,Not detected,Enhanced
+COL8A1,appendix,goblet cells,Not detected,Enhanced
+COL8A1,appendix,non-germinal center cells,Not detected,Enhanced
+COL8A1,bone marrow,hematopoietic cells,Not detected,Enhanced
+COL8A1,breast,adipocytes,Not detected,Enhanced
+COL8A1,breast,glandular cells,Not detected,Enhanced
+COL8A1,breast,myoepithelial cells,Not detected,Enhanced
+COL8A1,bronchus,basal cells,Not detected,Enhanced
+COL8A1,bronchus,ciliated cells (cell body),Medium,Enhanced
+COL8A1,bronchus,ciliated cells (cilia axoneme),Not detected,Enhanced
+COL8A1,bronchus,ciliated cells (ciliary rootlets),Medium,Enhanced
+COL8A1,bronchus,ciliated cells (tip of cilia),Medium,Enhanced
+COL8A1,bronchus,goblet cells,Not detected,Enhanced
+COL8A1,caudate,glial cells,Not detected,Enhanced
+COL8A1,caudate,neuronal cells,Not detected,Enhanced
+COL8A1,cerebellum,cells in granular layer,Not detected,Enhanced
+COL8A1,cerebellum,cells in molecular layer,Not detected,Enhanced
+COL8A1,cerebellum,Purkinje cells,Not detected,Enhanced
+COL8A1,cerebral cortex,endothelial cells,Medium,Enhanced
+COL8A1,cerebral cortex,glial cells,Not detected,Enhanced
+COL8A1,cerebral cortex,neuronal cells,Not detected,Enhanced
+COL8A1,cerebral cortex,neuropil,Not detected,Enhanced
+COL8A1,cervix,glandular cells,Not detected,Enhanced
+COL8A1,cervix,squamous epithelial cells,Not detected,Enhanced
+COL8A1,colon,endocrine cells,Medium,Enhanced
+COL8A1,colon,endothelial cells,Not detected,Enhanced
+COL8A1,colon,enterocytes,Medium,Enhanced
+COL8A1,colon,enterocytes - Microvilli,Medium,Enhanced
+COL8A1,colon,fibroblasts,Not detected,Enhanced
+COL8A1,colon,goblet cells,Medium,Enhanced
+COL8A1,colon,mucosal lymphoid cells,Medium,Enhanced
+COL8A1,colon,peripheral nerve/ganglion,Low,Enhanced
+COL8A1,duodenum,endocrine cells,High,Enhanced
+COL8A1,duodenum,enterocytes,Low,Enhanced
+COL8A1,duodenum,enterocytes - Microvilli,Not detected,Enhanced
+COL8A1,duodenum,goblet cells,Not detected,Enhanced
+COL8A1,duodenum,paneth cells,Not detected,Enhanced
+COL8A1,endometrium 1,cells in endometrial stroma,Low,Enhanced
+COL8A1,endometrium 1,glandular cells,Not detected,Enhanced
+COL8A1,endometrium 2,cells in endometrial stroma,Not detected,Enhanced
+COL8A1,endometrium 2,glandular cells,Not detected,Enhanced
+COL8A1,epididymis,glandular cells,Not detected,Enhanced
+COL8A1,esophagus,squamous epithelial cells,Not detected,Enhanced
+COL8A1,fallopian tube,ciliated cells (cell body),Not detected,Enhanced
+COL8A1,fallopian tube,ciliated cells (cilia axoneme),Not detected,Enhanced
+COL8A1,fallopian tube,ciliated cells (ciliary rootlets),Medium,Enhanced
+COL8A1,fallopian tube,ciliated cells (tip of cilia),Medium,Enhanced
+COL8A1,fallopian tube,non-ciliated cells,Not detected,Enhanced
+COL8A1,gallbladder,glandular cells,Not detected,Enhanced
+COL8A1,heart muscle,cardiomyocytes,Not detected,Enhanced
+COL8A1,hippocampus,glial cells,Not detected,Enhanced
+COL8A1,hippocampus,neuronal cells,Not detected,Enhanced
+COL8A1,kidney,bowman's capsule,Not detected,Enhanced
+COL8A1,kidney,cells in glomeruli,Not detected,Enhanced
+COL8A1,kidney,collecting ducts,Not detected,Enhanced
+COL8A1,kidney,distal tubules,Low,Enhanced
+COL8A1,kidney,proximal tubules (cell body),Not detected,Enhanced
+COL8A1,kidney,proximal tubules (microvilli),Not detected,Enhanced
+COL8A1,liver,cholangiocytes,Not detected,Enhanced
+COL8A1,liver,hepatocytes,Not detected,Enhanced
+COL8A1,lung,alveolar cells,Not detected,Enhanced
+COL8A1,lung,macrophages,Not detected,Enhanced
+COL8A1,lymph node,germinal center cells,Not detected,Enhanced
+COL8A1,lymph node,non-germinal center cells,Not detected,Enhanced
+COL8A1,nasopharynx,basal cells,Not detected,Enhanced
+COL8A1,nasopharynx,ciliated cells (cell body),Medium,Enhanced
+COL8A1,nasopharynx,ciliated cells (cilia axoneme),Not detected,Enhanced
+COL8A1,nasopharynx,ciliated cells (ciliary rootlets),Not detected,Enhanced
+COL8A1,nasopharynx,ciliated cells (tip of cilia),Not detected,Enhanced
+COL8A1,nasopharynx,goblet cells,Medium,Enhanced
+COL8A1,oral mucosa,squamous epithelial cells,Not detected,Enhanced
+COL8A1,ovary,follicle cells,Not detected,Enhanced
+COL8A1,ovary,ovarian stroma cells,Not detected,Enhanced
+COL8A1,pancreas,exocrine glandular cells,Not detected,Enhanced
+COL8A1,pancreas,pancreatic endocrine cells,Not detected,Enhanced
+COL8A1,parathyroid gland,glandular cells,Not detected,Enhanced
+COL8A1,placenta,decidual cells,Not detected,Enhanced
+COL8A1,placenta,trophoblastic cells,Not detected,Enhanced
+COL8A1,prostate,glandular cells,Not detected,Enhanced
+COL8A1,rectum,endocrine cells,Not detected,Enhanced
+COL8A1,rectum,endothelial cells,Not detected,Enhanced
+COL8A1,rectum,enterocytes,Medium,Enhanced
+COL8A1,rectum,enterocytes - Microvilli,Not detected,Enhanced
+COL8A1,rectum,fibroblasts,Not detected,Enhanced
+COL8A1,rectum,goblet cells,Medium,Enhanced
+COL8A1,rectum,mucosal lymphoid cells,Medium,Enhanced
+COL8A1,rectum,peripheral nerve/ganglion,Not detected,Enhanced
+COL8A1,salivary gland,glandular cells,Not detected,Enhanced
+COL8A1,seminal vesicle,glandular cells,Not detected,Enhanced
+COL8A1,skeletal muscle,myocytes,Not detected,Enhanced
+COL8A1,skin 1,cells in basal layer,Not detected,Enhanced
+COL8A1,skin 1,cells in corneal layer,Not detected,Enhanced
+COL8A1,skin 1,cells in granular layer,Not detected,Enhanced
+COL8A1,skin 1,cells in spinous layer,Not detected,Enhanced
+COL8A1,skin 1,endothelial cells,Not detected,Enhanced
+COL8A1,skin 1,extracellular matrix,High,Enhanced
+COL8A1,skin 1,fibrohistiocytic cells,Medium,Enhanced
+COL8A1,skin 1,langerhans cells,High,Enhanced
+COL8A1,skin 1,lymphocytes,Not detected,Enhanced
+COL8A1,skin 1,melanocytes,Not detected,Enhanced
+COL8A1,skin 1,vascular mural cells,High,Enhanced
+COL8A1,skin 2,arrector pili muscle cells,Low,Enhanced
+COL8A1,skin 2,cells in basal layer,Not detected,Enhanced
+COL8A1,skin 2,cells in corneal layer,Not detected,Enhanced
+COL8A1,skin 2,cells in granular layer,Not detected,Enhanced
+COL8A1,skin 2,cells in spinous layer,Not detected,Enhanced
+COL8A1,skin 2,endothelial cells,Not detected,Enhanced
+COL8A1,skin 2,extracellular matrix,High,Enhanced
+COL8A1,skin 2,fibrohistiocytic cells,High,Enhanced
+COL8A1,skin 2,langerhans cells,High,Enhanced
+COL8A1,skin 2,lymphocytes,Not detected,Enhanced
+COL8A1,skin 2,melanocytes,Not detected,Enhanced
+COL8A1,skin 2,vascular mural cells,High,Enhanced
+COL8A1,small intestine,endocrine cells,Not detected,Enhanced
+COL8A1,small intestine,enterocytes,Not detected,Enhanced
+COL8A1,small intestine,enterocytes - Microvilli,Medium,Enhanced
+COL8A1,small intestine,goblet cells,Not detected,Enhanced
+COL8A1,small intestine,paneth cells,Not detected,Enhanced
+COL8A1,smooth muscle,smooth muscle cells,Not detected,Enhanced
+COL8A1,soft tissue 1,chondrocytes,Not detected,Enhanced
+COL8A1,soft tissue 1,fibroblasts,Not detected,Enhanced
+COL8A1,soft tissue 2,fibroblasts,Not detected,Enhanced
+COL8A1,soft tissue 2,peripheral nerve,Not detected,Enhanced
+COL8A1,spleen,cells in red pulp,Not detected,Enhanced
+COL8A1,spleen,cells in white pulp,Not detected,Enhanced
+COL8A1,stomach 1,glandular cells,Not detected,Enhanced
+COL8A1,stomach 2,glandular cells,Not detected,Enhanced
+COL8A1,testis,cells in seminiferous ducts,Not detected,Enhanced
+COL8A1,testis,Leydig cells,Not detected,Enhanced
+COL8A1,thyroid gland,glandular cells,Not detected,Enhanced
+COL8A1,tonsil,germinal center cells,Not detected,Enhanced
+COL8A1,tonsil,non-germinal center cells,Not detected,Enhanced
+COL8A1,tonsil,squamous epithelial cells,Not detected,Enhanced
+COL8A1,urinary bladder,urothelial cells,Not detected,Enhanced
+COL8A1,vagina,squamous epithelial cells,Not detected,Enhanced
+EDIL3,adipose tissue,adipocytes,Medium,Approved
+EDIL3,adrenal gland,glandular cells,High,Approved
+EDIL3,appendix,glandular cells,Medium,Approved
+EDIL3,appendix,lymphoid tissue,Medium,Approved
+EDIL3,bone marrow,hematopoietic cells,Low,Approved
+EDIL3,breast,adipocytes,Low,Approved
+EDIL3,breast,glandular cells,Medium,Approved
+EDIL3,breast,myoepithelial cells,Medium,Approved
+EDIL3,bronchus,respiratory epithelial cells,Medium,Approved
+EDIL3,caudate,glial cells,High,Approved
+EDIL3,caudate,neuronal cells,Medium,Approved
+EDIL3,cerebellum,cells in granular layer,Medium,Approved
+EDIL3,cerebellum,cells in molecular layer,High,Approved
+EDIL3,cerebellum,Purkinje cells,Medium,Approved
+EDIL3,cerebral cortex,endothelial cells,Not detected,Approved
+EDIL3,cerebral cortex,glial cells,High,Approved
+EDIL3,cerebral cortex,neuronal cells,High,Approved
+EDIL3,cerebral cortex,neuropil,Medium,Approved
+EDIL3,cervix,glandular cells,Low,Approved
+EDIL3,cervix,squamous epithelial cells,Medium,Approved
+EDIL3,colon,endothelial cells,Low,Approved
+EDIL3,colon,glandular cells,Medium,Approved
+EDIL3,colon,peripheral nerve/ganglion,High,Approved
+EDIL3,duodenum,glandular cells,Medium,Approved
+EDIL3,endometrium 1,cells in endometrial stroma,Medium,Approved
+EDIL3,endometrium 1,glandular cells,Medium,Approved
+EDIL3,endometrium 2,cells in endometrial stroma,Medium,Approved
+EDIL3,endometrium 2,glandular cells,Low,Approved
+EDIL3,epididymis,glandular cells,High,Approved
+EDIL3,esophagus,squamous epithelial cells,Medium,Approved
+EDIL3,fallopian tube,glandular cells,Medium,Approved
+EDIL3,gallbladder,glandular cells,Medium,Approved
+EDIL3,heart muscle,cardiomyocytes,Medium,Approved
+EDIL3,hippocampus,glial cells,High,Approved
+EDIL3,hippocampus,neuronal cells,High,Approved
+EDIL3,kidney,cells in glomeruli,Medium,Approved
+EDIL3,kidney,cells in tubules,High,Approved
+EDIL3,liver,cholangiocytes,Not detected,Approved
+EDIL3,liver,hepatocytes,Medium,Approved
+EDIL3,lung,alveolar cells,Not detected,Approved
+EDIL3,lung,macrophages,Medium,Approved
+EDIL3,lymph node,germinal center cells,Medium,Approved
+EDIL3,lymph node,non-germinal center cells,Medium,Approved
+EDIL3,nasopharynx,respiratory epithelial cells,High,Approved
+EDIL3,oral mucosa,squamous epithelial cells,Low,Approved
+EDIL3,ovary,follicle cells,Medium,Approved
+EDIL3,ovary,ovarian stroma cells,Low,Approved
+EDIL3,pancreas,exocrine glandular cells,Medium,Approved
+EDIL3,pancreas,pancreatic endocrine cells,Medium,Approved
+EDIL3,parathyroid gland,glandular cells,Medium,Approved
+EDIL3,placenta,decidual cells,Medium,Approved
+EDIL3,placenta,trophoblastic cells,Medium,Approved
+EDIL3,prostate,glandular cells,Medium,Approved
+EDIL3,rectum,glandular cells,Medium,Approved
+EDIL3,salivary gland,glandular cells,Low,Approved
+EDIL3,seminal vesicle,glandular cells,High,Approved
+EDIL3,skeletal muscle,myocytes,Not detected,Approved
+EDIL3,skin 1,fibroblasts,Medium,Approved
+EDIL3,skin 1,keratinocytes,Medium,Approved
+EDIL3,skin 1,Langerhans,Medium,Approved
+EDIL3,skin 1,melanocytes,Medium,Approved
+EDIL3,skin 2,epidermal cells,Medium,Approved
+EDIL3,small intestine,glandular cells,Medium,Approved
+EDIL3,smooth muscle,smooth muscle cells,Medium,Approved
+EDIL3,soft tissue 1,fibroblasts,Medium,Approved
+EDIL3,soft tissue 2,fibroblasts,Medium,Approved
+EDIL3,spleen,cells in red pulp,Low,Approved
+EDIL3,spleen,cells in white pulp,Medium,Approved
+EDIL3,stomach 1,glandular cells,Medium,Approved
+EDIL3,stomach 2,glandular cells,Medium,Approved
+EDIL3,testis,cells in seminiferous ducts,Medium,Approved
+EDIL3,testis,Leydig cells,Medium,Approved
+EDIL3,thyroid gland,glandular cells,Medium,Approved
+EDIL3,tonsil,germinal center cells,Medium,Approved
+EDIL3,tonsil,non-germinal center cells,Medium,Approved
+EDIL3,tonsil,squamous epithelial cells,Medium,Approved
+EDIL3,urinary bladder,urothelial cells,Medium,Approved
+EDIL3,vagina,squamous epithelial cells,Low,Approved
+COL3A1,adipose tissue,adipocytes,Not detected,Approved
+COL3A1,adrenal gland,glandular cells,Not detected,Approved
+COL3A1,appendix,glandular cells,Not detected,Approved
+COL3A1,appendix,lymphoid tissue,Not detected,Approved
+COL3A1,bone marrow,hematopoietic cells,Not detected,Approved
+COL3A1,breast,adipocytes,Not detected,Approved
+COL3A1,breast,glandular cells,Not detected,Approved
+COL3A1,breast,myoepithelial cells,Not detected,Approved
+COL3A1,bronchus,basal cells,Not detected,Approved
+COL3A1,bronchus,ciliated cells (cell body),Not detected,Approved
+COL3A1,bronchus,ciliated cells (cilia axoneme),Not detected,Approved
+COL3A1,bronchus,ciliated cells (ciliary rootlets),Not detected,Approved
+COL3A1,bronchus,ciliated cells (tip of cilia),Not detected,Approved
+COL3A1,bronchus,goblet cells,Not detected,Approved
+COL3A1,caudate,glial cells,Not detected,Approved
+COL3A1,caudate,neuronal cells,Not detected,Approved
+COL3A1,cerebellum,cells in granular layer,Not detected,Approved
+COL3A1,cerebellum,cells in molecular layer,Not detected,Approved
+COL3A1,cerebellum,Purkinje cells,Not detected,Approved
+COL3A1,cerebral cortex,endothelial cells,Not detected,Approved
+COL3A1,cerebral cortex,glial cells,Not detected,Approved
+COL3A1,cerebral cortex,neuronal cells,Not detected,Approved
+COL3A1,cerebral cortex,neuropil,Not detected,Approved
+COL3A1,cervix,glandular cells,Not detected,Approved
+COL3A1,cervix,squamous epithelial cells,Not detected,Approved
+COL3A1,colon,endothelial cells,Not detected,Approved
+COL3A1,colon,glandular cells,Not detected,Approved
+COL3A1,colon,peripheral nerve/ganglion,Not detected,Approved
+COL3A1,duodenum,glandular cells,Not detected,Approved
+COL3A1,endometrium 1,cells in endometrial stroma,Not detected,Approved
+COL3A1,endometrium 1,glandular cells,Not detected,Approved
+COL3A1,endometrium 2,cells in endometrial stroma,Not detected,Approved
+COL3A1,endometrium 2,glandular cells,Not detected,Approved
+COL3A1,epididymis,glandular cells,Not detected,Approved
+COL3A1,esophagus,squamous epithelial cells,Not detected,Approved
+COL3A1,fallopian tube,ciliated cells (cell body),Not detected,Approved
+COL3A1,fallopian tube,ciliated cells (cilia axoneme),Not detected,Approved
+COL3A1,fallopian tube,ciliated cells (ciliary rootlets),Low,Approved
+COL3A1,fallopian tube,ciliated cells (tip of cilia),Not detected,Approved
+COL3A1,fallopian tube,non-ciliated cells,Not detected,Approved
+COL3A1,gallbladder,glandular cells,Not detected,Approved
+COL3A1,heart muscle,cardiomyocytes,Not detected,Approved
+COL3A1,hippocampus,glial cells,Not detected,Approved
+COL3A1,hippocampus,neuronal cells,Not detected,Approved
+COL3A1,kidney,cells in glomeruli,Not detected,Approved
+COL3A1,kidney,cells in tubules,Not detected,Approved
+COL3A1,liver,cholangiocytes,Not detected,Approved
+COL3A1,liver,hepatocytes,Not detected,Approved
+COL3A1,lung,alveolar cells,Not detected,Approved
+COL3A1,lung,macrophages,Not detected,Approved
+COL3A1,lymph node,germinal center cells,Not detected,Approved
+COL3A1,lymph node,non-germinal center cells,Not detected,Approved
+COL3A1,nasopharynx,basal cells,Not detected,Approved
+COL3A1,nasopharynx,ciliated cells (cell body),Not detected,Approved
+COL3A1,nasopharynx,ciliated cells (cilia axoneme),Not detected,Approved
+COL3A1,nasopharynx,ciliated cells (ciliary rootlets),Not detected,Approved
+COL3A1,nasopharynx,ciliated cells (tip of cilia),Not detected,Approved
+COL3A1,nasopharynx,goblet cells,Not detected,Approved
+COL3A1,oral mucosa,squamous epithelial cells,Not detected,Approved
+COL3A1,ovary,follicle cells,Not detected,Approved
+COL3A1,ovary,ovarian stroma cells,Not detected,Approved
+COL3A1,pancreas,exocrine glandular cells,Not detected,Approved
+COL3A1,pancreas,pancreatic endocrine cells,Not detected,Approved
+COL3A1,parathyroid gland,glandular cells,Not detected,Approved
+COL3A1,placenta,decidual cells,Not detected,Approved
+COL3A1,placenta,trophoblastic cells,Not detected,Approved
+COL3A1,prostate,glandular cells,Not detected,Approved
+COL3A1,rectum,glandular cells,Not detected,Approved
+COL3A1,salivary gland,glandular cells,Not detected,Approved
+COL3A1,seminal vesicle,glandular cells,Not detected,Approved
+COL3A1,skeletal muscle,myocytes,Not detected,Approved
+COL3A1,skin 1,fibroblasts,Not detected,Approved
+COL3A1,skin 1,keratinocytes,Not detected,Approved
+COL3A1,skin 1,Langerhans,Not detected,Approved
+COL3A1,skin 1,melanocytes,Not detected,Approved
+COL3A1,skin 2,epidermal cells,Not detected,Approved
+COL3A1,small intestine,glandular cells,Not detected,Approved
+COL3A1,smooth muscle,smooth muscle cells,Not detected,Approved
+COL3A1,soft tissue 1,chondrocytes,Not detected,Approved
+COL3A1,soft tissue 1,fibroblasts,Not detected,Approved
+COL3A1,soft tissue 1,peripheral nerve,Not detected,Approved
+COL3A1,soft tissue 2,fibroblasts,Not detected,Approved
+COL3A1,soft tissue 2,peripheral nerve,Not detected,Approved
+COL3A1,spleen,cells in red pulp,Not detected,Approved
+COL3A1,spleen,cells in white pulp,Not detected,Approved
+COL3A1,stomach 1,glandular cells,Not detected,Approved
+COL3A1,stomach 2,glandular cells,Not detected,Approved
+COL3A1,testis,elongated or late spermatids,Low,Approved
+COL3A1,testis,Leydig cells,Medium,Approved
+COL3A1,testis,pachytene spermatocytes,Not detected,Approved
+COL3A1,testis,peritubular cells,Not detected,Approved
+COL3A1,testis,preleptotene spermatocytes,Not detected,Approved
+COL3A1,testis,round or early spermatids,Not detected,Approved
+COL3A1,testis,sertoli cells,Not detected,Approved
+COL3A1,testis,spermatogonia cells,Medium,Approved
+COL3A1,thyroid gland,glandular cells,Not detected,Approved
+COL3A1,tonsil,germinal center cells,Not detected,Approved
+COL3A1,tonsil,non-germinal center cells,Not detected,Approved
+COL3A1,tonsil,squamous epithelial cells,Not detected,Approved
+COL3A1,urinary bladder,urothelial cells,Not detected,Approved
+COL3A1,vagina,squamous epithelial cells,Not detected,Approved
+THBS3,adipose tissue,adipocytes,Low,Approved
+THBS3,adrenal gland,glandular cells,Medium,Approved
+THBS3,appendix,glandular cells,Not detected,Approved
+THBS3,appendix,lymphoid tissue,Not detected,Approved
+THBS3,bone marrow,hematopoietic cells,Not detected,Approved
+THBS3,breast,adipocytes,Not detected,Approved
+THBS3,breast,glandular cells,Not detected,Approved
+THBS3,breast,myoepithelial cells,Not detected,Approved
+THBS3,bronchus,basal cells,Not detected,Approved
+THBS3,bronchus,ciliated cells (cell body),Not detected,Approved
+THBS3,bronchus,ciliated cells (cilia axoneme),Not detected,Approved
+THBS3,bronchus,ciliated cells (ciliary rootlets),Not detected,Approved
+THBS3,bronchus,ciliated cells (tip of cilia),Medium,Approved
+THBS3,bronchus,goblet cells,Not detected,Approved
+THBS3,caudate,glial cells,Low,Approved
+THBS3,caudate,neuronal cells,High,Approved
+THBS3,cerebellum,cells in granular layer,Not detected,Approved
+THBS3,cerebellum,cells in molecular layer,Not detected,Approved
+THBS3,cerebellum,Purkinje cells,Medium,Approved
+THBS3,cerebral cortex,endothelial cells,Medium,Approved
+THBS3,cerebral cortex,glial cells,Low,Approved
+THBS3,cerebral cortex,neuronal cells,High,Approved
+THBS3,cerebral cortex,neuropil,Low,Approved
+THBS3,cervix,glandular cells,Not detected,Approved
+THBS3,cervix,squamous epithelial cells,Not detected,Approved
+THBS3,colon,endothelial cells,Low,Approved
+THBS3,colon,glandular cells,Low,Approved
+THBS3,colon,peripheral nerve/ganglion,Low,Approved
+THBS3,duodenum,glandular cells,Medium,Approved
+THBS3,endometrium 1,cells in endometrial stroma,Not detected,Approved
+THBS3,endometrium 1,glandular cells,Not detected,Approved
+THBS3,endometrium 2,cells in endometrial stroma,Not detected,Approved
+THBS3,endometrium 2,glandular cells,Not detected,Approved
+THBS3,epididymis,glandular cells,Medium,Approved
+THBS3,esophagus,squamous epithelial cells,Not detected,Approved
+THBS3,fallopian tube,ciliated cells (cell body),Not detected,Approved
+THBS3,fallopian tube,ciliated cells (cilia axoneme),Not detected,Approved
+THBS3,fallopian tube,ciliated cells (ciliary rootlets),Low,Approved
+THBS3,fallopian tube,ciliated cells (tip of cilia),Medium,Approved
+THBS3,fallopian tube,non-ciliated cells,Not detected,Approved
+THBS3,gallbladder,glandular cells,Medium,Approved
+THBS3,heart muscle,cardiomyocytes,Medium,Approved
+THBS3,hippocampus,glial cells,Low,Approved
+THBS3,hippocampus,neuronal cells,High,Approved
+THBS3,kidney,cells in glomeruli,Not detected,Approved
+THBS3,kidney,cells in tubules,Medium,Approved
+THBS3,liver,cholangiocytes,Not detected,Approved
+THBS3,liver,hepatocytes,High,Approved
+THBS3,lung,alveolar cells,Not detected,Approved
+THBS3,lung,macrophages,Medium,Approved
+THBS3,lymph node,germinal center cells,Not detected,Approved
+THBS3,lymph node,non-germinal center cells,Not detected,Approved
+THBS3,nasopharynx,basal cells,Not detected,Approved
+THBS3,nasopharynx,ciliated cells (cell body),Not detected,Approved
+THBS3,nasopharynx,ciliated cells (cilia axoneme),Not detected,Approved
+THBS3,nasopharynx,ciliated cells (ciliary rootlets),Not detected,Approved
+THBS3,nasopharynx,ciliated cells (tip of cilia),Not detected,Approved
+THBS3,nasopharynx,goblet cells,Not detected,Approved
+THBS3,oral mucosa,squamous epithelial cells,Not detected,Approved
+THBS3,ovary,ovarian stroma cells,Not detected,Approved
+THBS3,pancreas,exocrine glandular cells,Not detected,Approved
+THBS3,pancreas,pancreatic endocrine cells,Medium,Approved
+THBS3,parathyroid gland,glandular cells,Not detected,Approved
+THBS3,placenta,trophoblastic cells,Medium,Approved
+THBS3,prostate,glandular cells,Low,Approved
+THBS3,rectum,glandular cells,Not detected,Approved
+THBS3,salivary gland,glandular cells,Low,Approved
+THBS3,seminal vesicle,glandular cells,Medium,Approved
+THBS3,skeletal muscle,myocytes,Medium,Approved
+THBS3,skin 1,fibroblasts,Medium,Approved
+THBS3,skin 1,keratinocytes,Low,Approved
+THBS3,skin 1,Langerhans,Low,Approved
+THBS3,skin 1,melanocytes,Medium,Approved
+THBS3,skin 2,epidermal cells,Not detected,Approved
+THBS3,small intestine,glandular cells,Medium,Approved
+THBS3,smooth muscle,smooth muscle cells,Not detected,Approved
+THBS3,soft tissue 1,chondrocytes,Low,Approved
+THBS3,soft tissue 1,fibroblasts,Low,Approved
+THBS3,soft tissue 2,chondrocytes,Medium,Approved
+THBS3,soft tissue 2,fibroblasts,Low,Approved
+THBS3,soft tissue 2,peripheral nerve,Medium,Approved
+THBS3,spleen,cells in red pulp,Not detected,Approved
+THBS3,spleen,cells in white pulp,Not detected,Approved
+THBS3,stomach 1,glandular cells,Medium,Approved
+THBS3,stomach 2,glandular cells,Low,Approved
+THBS3,testis,elongated or late spermatids,Not detected,Approved
+THBS3,testis,Leydig cells,Medium,Approved
+THBS3,testis,pachytene spermatocytes,Not detected,Approved
+THBS3,testis,peritubular cells,Not detected,Approved
+THBS3,testis,preleptotene spermatocytes,Not detected,Approved
+THBS3,testis,round or early spermatids,Not detected,Approved
+THBS3,testis,sertoli cells,Medium,Approved
+THBS3,testis,spermatogonia cells,Not detected,Approved
+THBS3,thyroid gland,glandular cells,Medium,Approved
+THBS3,tonsil,germinal center cells,Not detected,Approved
+THBS3,tonsil,non-germinal center cells,Not detected,Approved
+THBS3,tonsil,squamous epithelial cells,Not detected,Approved
+THBS3,urinary bladder,urothelial cells,Low,Approved
+THBS3,vagina,squamous epithelial cells,Not detected,Approved

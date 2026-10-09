@@ -1,0 +1,122 @@
+{
+  "description": "Registry of random seeds used across analysis pipeline steps and audit of stochastic operations",
+  "primary_seed": 42,
+  "seeded_steps": [
+    {
+      "step": "Scrublet doublet simulation (Stage 3 Repair)",
+      "script": "scripts/26_stage3_repair_hub_blinding_and_harmony.py",
+      "line": 136,
+      "call": "sc.pp.scrublet(adata_blind, expected_doublet_rate=0.06, random_state=42)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "scDblFinder doublet simulation (R Bioconductor)",
+      "script": "scripts/run_scdblfinder_all.R",
+      "line": 21,
+      "call": "set.seed(42)",
+      "seed": 42,
+      "is_fixed": true,
+      "notes": "set.seed(42) called once before the 16-donor loop; random state advances deterministically across sorted sample list."
+    },
+    {
+      "step": "Neighborhood graph construction",
+      "script": "scripts/26_stage3_repair_hub_blinding_and_harmony.py",
+      "line": 320,
+      "call": "sc.pp.neighbors(adata, n_neighbors=15, n_pcs=30, use_rep='X_pca_harmony', random_state=42)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "UMAP dimensionality reduction",
+      "script": "scripts/26_stage3_repair_hub_blinding_and_harmony.py",
+      "line": 321,
+      "call": "sc.tl.umap(adata, random_state=42)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "Leiden clustering resolution search",
+      "script": "scripts/26_stage3_repair_hub_blinding_and_harmony.py",
+      "line": 340,
+      "call": "sc.tl.leiden(adata, resolution=r, key_added=key, random_state=42, flavor='igraph', n_iterations=2, directed=False)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "Silhouette subsampling (5,000 cells)",
+      "script": "scripts/26_stage3_repair_hub_blinding_and_harmony.py",
+      "line": 332,
+      "call": "eval_idx = np.random.RandomState(42).choice(adata.n_obs, min(5000, adata.n_obs), replace=False)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "Harmony batch integration",
+      "script": "scripts/15_scrna_e3_integration_and_annotation.py",
+      "line": 68,
+      "call": "hm.run_harmony(adata.obsm['X_pca'], adata.obs, 'donor_id', max_iter_harmony=10, random_state=42)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "Classifier cross-validation (RepeatedStratifiedKFold)",
+      "script": "scripts/21_classifier_auc_definitions_and_1000perm.py",
+      "line": 64,
+      "call": "RepeatedStratifiedKFold(n_splits=5, n_repeats=50, random_state=42)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "Logistic regression optimization",
+      "script": "scripts/21_classifier_auc_definitions_and_1000perm.py",
+      "lines": [59, 84, 115, 148],
+      "call": "LogisticRegression(random_state=42, penalty='l2', C=1.0)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "1,000-Permutation null distribution for classifier AUC",
+      "script": "scripts/21_classifier_auc_definitions_and_1000perm.py",
+      "lines": [127, 132],
+      "call": "np.random.seed(42); cv_perm = RepeatedStratifiedKFold(n_splits=5, n_repeats=5, random_state=perm_i)",
+      "seed": "42 (global) + perm_i (0 to 999 per permutation iteration)",
+      "is_fixed": true
+    },
+    {
+      "step": "Network graph layout (spring layout)",
+      "script": "scripts/31_replot_string_with_legend.py",
+      "line": 31,
+      "call": "pos = nx.spring_layout(G, seed=42, k=0.95)",
+      "seed": 42,
+      "is_fixed": true
+    },
+    {
+      "step": "Stage 4 edgeR master runner",
+      "script": "scripts/50_stage4_final.R",
+      "line": 14,
+      "call": "set.seed(42)",
+      "seed": 42,
+      "is_fixed": true,
+      "notes": "edgeR quasi-likelihood GLM calculations are deterministic; seed ensures environment consistency."
+    }
+  ],
+  "unseeded_or_unfixed_steps": [
+    {
+      "step": "Heuristic doublet pair sampling in script 14 (superseded by script 26)",
+      "script": "scripts/14_scrna_e2_qc_and_filtering.py",
+      "lines": [138, 139],
+      "call": "idx1 = np.random.choice(init_cells, n_sim); idx2 = np.random.choice(init_cells, n_sim)",
+      "issue": "np.random.seed(42) set once globally outside the loop (line 63). Because donor files are loaded iteratively without per-donor re-seeding, the simulated pair indices depend on the discovery order of files returned by os.listdir(). Script 14 was superseded by script 26.",
+      "severity": "Low (superseded by scanpy.pp.scrublet and scDblFinder in script 26 and run_scdblfinder_all.R)"
+    },
+    {
+      "step": "scDblFinder inter-sample RNG chain in run_scdblfinder_all.R",
+      "script": "scripts/run_scdblfinder_all.R",
+      "line": 21,
+      "call": "set.seed(42) called once before sample iteration loop",
+      "issue": "Because set.seed(42) is not reset at the beginning of each sample's execution, individual sample doublet calls depend on processing all samples in exact alphabetical order of barcodes.tsv.gz files.",
+      "severity": "Low (files are sorted explicitly with sort(grep(...)) so execution order is fully deterministic)"
+    }
+  ]
+}

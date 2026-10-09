@@ -1,0 +1,521 @@
+{
+  "stage": "Stage 3 (Module E, Steps E0-E5)",
+  "hub_gene_blind_policy_enforced": true,
+  "guard_checks_count": 50,
+  "guard_violations_count": 0,
+  "all_required_files_generated": true,
+  "files": {
+    "provenance/analysis_plan_scRNA.json": {
+      "exists": true,
+      "size_bytes": 2085
+    },
+    "provenance/marker_panel.json": {
+      "exists": true,
+      "size_bytes": 1001
+    },
+    "provenance/GSE248762_acquisition_summary.json": {
+      "exists": true,
+      "size_bytes": 14372
+    },
+    "provenance/GSE130888_suppl_file_manifest.json": {
+      "exists": true,
+      "size_bytes": 3558
+    },
+    "results/tables/E1_gse248762_sample_summary.csv": {
+      "exists": true,
+      "size_bytes": 1055
+    },
+    "results/tables/E2_filtering_summary.csv": {
+      "exists": true,
+      "size_bytes": 1707
+    },
+    "results/tables/E3_cell_type_composition.csv": {
+      "exists": true,
+      "size_bytes": 1169
+    },
+    "results/tables/E3_batch_mixing_metrics.csv": {
+      "exists": true,
+      "size_bytes": 318
+    },
+    "results/tables/E4_celltype_testability_table.csv": {
+      "exists": true,
+      "size_bytes": 3650
+    },
+    "results/tables/E4_donor_cell_counts_by_type.csv": {
+      "exists": true,
+      "size_bytes": 766
+    },
+    "results/tables/E5_gse130888_metadata_listing.csv": {
+      "exists": true,
+      "size_bytes": 1251
+    },
+    "results/figures/E2_qc_violins_before_after.png": {
+      "exists": true,
+      "size_bytes": 408250
+    },
+    "results/figures/E3_umap_by_celltype_and_group.png": {
+      "exists": true,
+      "size_bytes": 4341117
+    },
+    "results/figures/E3_marker_dotplot.png": {
+      "exists": true,
+      "size_bytes": 319503
+    }
+  },
+  "summary": {
+    "E2_QC": {
+      "Total_Initial_Cells": 118895,
+      "Total_Post_QC_Cells": 94517,
+      "Overall_Retained_Pct": 79.5,
+      "Total_Doublets_Removed": 977
+    },
+    "E3_Cell_Types": [
+      {
+        "Cluster": 0,
+        "N_Cells": 26703,
+        "Cell_Type": "T Cell",
+        "Top_Lineage": "T_Cell",
+        "Top_Score": 1.1631,
+        "Second_Lineage": "Dendritic_Cell",
+        "Second_Score": 0.2152
+      },
+      {
+        "Cluster": 1,
+        "N_Cells": 16850,
+        "Cell_Type": "T Cell",
+        "Top_Lineage": "T_Cell",
+        "Top_Score": 1.4128,
+        "Second_Lineage": "NK_Cell",
+        "Second_Score": 0.9566
+      },
+      {
+        "Cluster": 2,
+        "N_Cells": 2038,
+        "Cell_Type": "Dendritic Cell",
+        "Top_Lineage": "Dendritic_Cell",
+        "Top_Score": 1.2425,
+        "Second_Lineage": "Monocyte",
+        "Second_Score": 1.1032
+      },
+      {
+        "Cluster": 3,
+        "N_Cells": 3430,
+        "Cell_Type": "Dendritic Cell",
+        "Top_Lineage": "Dendritic_Cell",
+        "Top_Score": 1.8712,
+        "Second_Lineage": "Macrophage",
+        "Second_Score": 0.3699
+      },
+      {
+        "Cluster": 4,
+        "N_Cells": 667,
+        "Cell_Type": "T Cell",
+        "Top_Lineage": "T_Cell",
+        "Top_Score": 1.3016,
+        "Second_Lineage": "NK_Cell",
+        "Second_Score": 0.5099
+      },
+      {
+        "Cluster": 5,
+        "N_Cells": 10396,
+        "Cell_Type": "Dendritic Cell",
+        "Top_Lineage": "Dendritic_Cell",
+        "Top_Score": 1.6754,
+        "Second_Lineage": "Monocyte",
+        "Second_Score": 0.514
+      },
+      {
+        "Cluster": 6,
+        "N_Cells": 8042,
+        "Cell_Type": "Monocyte",
+        "Top_Lineage": "Monocyte",
+        "Top_Score": 1.9455,
+        "Second_Lineage": "Neutrophil",
+        "Second_Score": 1.3077
+      },
+      {
+        "Cluster": 7,
+        "N_Cells": 10,
+        "Cell_Type": "T Cell",
+        "Top_Lineage": "T_Cell",
+        "Top_Score": 1.3938,
+        "Second_Lineage": "Dendritic_Cell",
+        "Second_Score": 0.7636
+      },
+      {
+        "Cluster": 8,
+        "N_Cells": 3550,
+        "Cell_Type": "Neutrophil",
+        "Top_Lineage": "Neutrophil",
+        "Top_Score": 3.3449,
+        "Second_Lineage": "Monocyte",
+        "Second_Score": 2.2222
+      },
+      {
+        "Cluster": 9,
+        "N_Cells": 2988,
+        "Cell_Type": "Fibroblast Myofibroblast",
+        "Top_Lineage": "Fibroblast_Myofibroblast",
+        "Top_Score": 0.8084,
+        "Second_Lineage": "Mesothelial",
+        "Second_Score": 0.7896
+      },
+      {
+        "Cluster": 10,
+        "N_Cells": 9,
+        "Cell_Type": "Dendritic Cell",
+        "Top_Lineage": "Dendritic_Cell",
+        "Top_Score": 1.3321,
+        "Second_Lineage": "Mesothelial",
+        "Second_Score": 1.1971
+      },
+      {
+        "Cluster": 11,
+        "N_Cells": 613,
+        "Cell_Type": "Dendritic Cell",
+        "Top_Lineage": "Dendritic_Cell",
+        "Top_Score": 1.1979,
+        "Second_Lineage": "Monocyte",
+        "Second_Score": 0.7379
+      },
+      {
+        "Cluster": 12,
+        "N_Cells": 4160,
+        "Cell_Type": "Monocyte",
+        "Top_Lineage": "Monocyte",
+        "Top_Score": 2.2237,
+        "Second_Lineage": "Neutrophil",
+        "Second_Score": 1.4472
+      },
+      {
+        "Cluster": 13,
+        "N_Cells": 8554,
+        "Cell_Type": "Monocyte",
+        "Top_Lineage": "Monocyte",
+        "Top_Score": 1.7998,
+        "Second_Lineage": "Neutrophil",
+        "Second_Score": 1.1444
+      },
+      {
+        "Cluster": 14,
+        "N_Cells": 4068,
+        "Cell_Type": "NK Cell",
+        "Top_Lineage": "NK_Cell",
+        "Top_Score": 2.1284,
+        "Second_Lineage": "Dendritic_Cell",
+        "Second_Score": 0.2479
+      },
+      {
+        "Cluster": 15,
+        "N_Cells": 1837,
+        "Cell_Type": "B Cell",
+        "Top_Lineage": "B_Cell",
+        "Top_Score": 1.6028,
+        "Second_Lineage": "Dendritic_Cell",
+        "Second_Score": 0.982
+      },
+      {
+        "Cluster": 16,
+        "N_Cells": 261,
+        "Cell_Type": "Dendritic Cell",
+        "Top_Lineage": "Dendritic_Cell",
+        "Top_Score": 1.3382,
+        "Second_Lineage": "Plasma_Cell",
+        "Second_Score": 0.3315
+      },
+      {
+        "Cluster": 17,
+        "N_Cells": 318,
+        "Cell_Type": "Monocyte",
+        "Top_Lineage": "Monocyte",
+        "Top_Score": 2.1478,
+        "Second_Lineage": "Neutrophil",
+        "Second_Score": 1.5954
+      },
+      {
+        "Cluster": 18,
+        "N_Cells": 23,
+        "Cell_Type": "Fibroblast Myofibroblast",
+        "Top_Lineage": "Fibroblast_Myofibroblast",
+        "Top_Score": 1.4857,
+        "Second_Lineage": "Mesothelial",
+        "Second_Score": 1.4751
+      }
+    ],
+    "E4_Testability": [
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "B Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "2/4",
+        "Target_Total_Cells": 404,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "3/6",
+        "Comparator_Total_Cells": 748,
+        "Testability_Status": "UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3))",
+        "Is_Testable": false
+      },
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "Dendritic Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "4/4",
+        "Target_Total_Cells": 639,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 5588,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "Fibroblast Myofibroblast",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "3/4",
+        "Target_Total_Cells": 716,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "4/6",
+        "Comparator_Total_Cells": 1215,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "Monocyte",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "3/4",
+        "Target_Total_Cells": 560,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "5/6",
+        "Comparator_Total_Cells": 6774,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "NK Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "4/4",
+        "Target_Total_Cells": 636,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 2074,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "Neutrophil",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "2/4",
+        "Target_Total_Cells": 3420,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "1/6",
+        "Comparator_Total_Cells": 43,
+        "Testability_Status": "UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3); Comparator LV_NOT_UF has only 1/6 donors with >=20 cells (need 2))",
+        "Is_Testable": false
+      },
+      {
+        "Contrast": "LV_UF_vs_LV_NOT_UF",
+        "Description": "Ultrafiltration failure effect in long vintage effluent",
+        "Cell_Type": "T Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "4/4",
+        "Target_Total_Cells": 10333,
+        "Comparator_Group": "LV_NOT_UF",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 18086,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "B Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "2/4",
+        "Target_Total_Cells": 404,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "4/6",
+        "Comparator_Total_Cells": 685,
+        "Testability_Status": "UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3))",
+        "Is_Testable": false
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "Dendritic Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "4/4",
+        "Target_Total_Cells": 639,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 10520,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "Fibroblast Myofibroblast",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "3/4",
+        "Target_Total_Cells": 716,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "5/6",
+        "Comparator_Total_Cells": 1080,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "Monocyte",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "3/4",
+        "Target_Total_Cells": 560,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 13740,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "NK Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "4/4",
+        "Target_Total_Cells": 636,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 1358,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "Neutrophil",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "2/4",
+        "Target_Total_Cells": 3420,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "1/6",
+        "Comparator_Total_Cells": 87,
+        "Testability_Status": "UNDERPOWERED (Target LV_UF has only 2/4 donors with >=20 cells (need 3); Comparator SV has only 1/6 donors with >=20 cells (need 2))",
+        "Is_Testable": false
+      },
+      {
+        "Contrast": "LV_UF_vs_SV",
+        "Description": "UFF vs Short Vintage effluent",
+        "Cell_Type": "T Cell",
+        "Target_Group": "LV_UF",
+        "Target_Donors_ge20": "4/4",
+        "Target_Total_Cells": 10333,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 15811,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "B Cell",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "3/6",
+        "Target_Total_Cells": 748,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "4/6",
+        "Comparator_Total_Cells": 685,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "Dendritic Cell",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "6/6",
+        "Target_Total_Cells": 5588,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 10520,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "Fibroblast Myofibroblast",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "4/6",
+        "Target_Total_Cells": 1215,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "5/6",
+        "Comparator_Total_Cells": 1080,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "Monocyte",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "5/6",
+        "Target_Total_Cells": 6774,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 13740,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "NK Cell",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "6/6",
+        "Target_Total_Cells": 2074,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 1358,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "Neutrophil",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "1/6",
+        "Target_Total_Cells": 43,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "1/6",
+        "Comparator_Total_Cells": 87,
+        "Testability_Status": "UNDERPOWERED (Target LV_NOT_UF has only 1/6 donors with >=20 cells (need 3); Comparator SV has only 1/6 donors with >=20 cells (need 2))",
+        "Is_Testable": false
+      },
+      {
+        "Contrast": "LV_NOT_UF_vs_SV",
+        "Description": "PD duration vintage effect without UFF",
+        "Cell_Type": "T Cell",
+        "Target_Group": "LV_NOT_UF",
+        "Target_Donors_ge20": "6/6",
+        "Target_Total_Cells": 18086,
+        "Comparator_Group": "SV",
+        "Comparator_Donors_ge20": "6/6",
+        "Comparator_Total_Cells": 15811,
+        "Testability_Status": "TESTABLE (Sufficient cell & donor coverage)",
+        "Is_Testable": true
+      }
+    ]
+  }
+}

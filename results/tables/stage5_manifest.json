@@ -1,0 +1,236 @@
+{
+  "F_GSE130387_cross_species_logFC.csv": {
+    "path": "results/tables/F_GSE130387_cross_species_logFC.csv",
+    "sha256": "cac1901127d74fe9fc8d6ae0ada8e1b01ae6df7f84ecf5e85119e81395f724f8",
+    "bytes": 174716,
+    "shape": [
+      479,
+      20
+    ]
+  },
+  "F_GSE130387_mirbase_mapping_note.csv": {
+    "path": "results/tables/F_GSE130387_mirbase_mapping_note.csv",
+    "sha256": "2347933027dbdbaea38291ba6589532c5bbde5eb93c909ded5b74e9aa7e49acd",
+    "bytes": 505,
+    "shape": [
+      1,
+      10
+    ]
+  },
+  "F_GSE130387_provenance.csv": {
+    "path": "results/tables/F_GSE130387_provenance.csv",
+    "sha256": "a0b5591065f1352af3a9602f67a2614570dd93bd9ed3ca80242efbcfffc97f37",
+    "bytes": 291,
+    "shape": [
+      1,
+      9
+    ]
+  },
+  "F_GSE130387_sample_metadata.csv": {
+    "path": "results/tables/F_GSE130387_sample_metadata.csv",
+    "sha256": "73b393d17ea44f431fdbf49382aae56e087c485d10532d2efa319a1855d69c45",
+    "bytes": 383,
+    "shape": [
+      6,
+      5
+    ]
+  },
+  "F_GSE182736_descriptive_logFC.csv": {
+    "path": "results/tables/F_GSE182736_descriptive_logFC.csv",
+    "sha256": "59568ecb1b26c777be93c2f349acf2fdbe44f2ab9e4c65c7b362c7bf4fbfa7b7",
+    "bytes": 93496,
+    "shape": [
+      507,
+      11
+    ]
+  },
+  "F_GSE182736_provenance.csv": {
+    "path": "results/tables/F_GSE182736_provenance.csv",
+    "sha256": "a459967afcb58a3d2c2005055685a07cc92be6203932ad6449e769e9ca2fc6a5",
+    "bytes": 387,
+    "shape": [
+      1,
+      12
+    ]
+  },
+  "F_GSE182736_sample_metadata.csv": {
+    "path": "results/tables/F_GSE182736_sample_metadata.csv",
+    "sha256": "33b908a48891cd84c76006f31e1f1b83e8dc9eeb4419e330ac2a2f7649699e2e",
+    "bytes": 309,
+    "shape": [
+      6,
+      4
+    ]
+  },
+  "F_hub_to_mirna_tier_counts.csv": {
+    "path": "results/tables/F_hub_to_mirna_tier_counts.csv",
+    "sha256": "5e3ca31c90cbab16699a467268cd79c2fe8acd5f13fa02f8dcee7091a3e5d625",
+    "bytes": 256,
+    "shape": [
+      11,
+      4
+    ]
+  },
+  "F_hub_to_mirna_tiered.csv": {
+    "path": "results/tables/F_hub_to_mirna_tiered.csv",
+    "sha256": "80ef1568361e00cf7356be61a3089e5e0abdfe15b026a317812bff0409ca489b",
+    "bytes": 376291,
+    "shape": [
+      4858,
+      6
+    ]
+  },
+  "F_mirna_hub_intersection.csv": {
+    "path": "results/tables/F_mirna_hub_intersection.csv",
+    "sha256": "2ffde4fddb02026d777386c11d9fa5af02b5ba27765f1773b463826b3d233314",
+    "bytes": 7022,
+    "shape": [
+      18,
+      12
+    ]
+  },
+  "F_mirna_intersection_summary.csv": {
+    "path": "results/tables/F_mirna_intersection_summary.csv",
+    "sha256": "4209b0ee120c200d34ff5f5de1c0a0d5653a22de1259d24999f08091ad985ed2",
+    "bytes": 9063,
+    "shape": [
+      12,
+      15
+    ]
+  },
+  "F_multimir_predicted_raw.csv": {
+    "path": "results/tables/F_multimir_predicted_raw.csv",
+    "sha256": "451f8798e7ebab5de3b2526a48b7e9c18be49785b0c96b59b623d240d98de9ac",
+    "bytes": 548843,
+    "shape": [
+      5598,
+      8
+    ]
+  },
+  "F_multimir_provenance.csv": {
+    "path": "results/tables/F_multimir_provenance.csv",
+    "sha256": "e4add3106fe7864e3a48d5ba4fe83bef9f8b51e7359649fc87e5ea0bb79ac87d",
+    "bytes": 337,
+    "shape": [
+      1,
+      9
+    ]
+  },
+  "F_multimir_validated_raw.csv": {
+    "path": "results/tables/F_multimir_validated_raw.csv",
+    "sha256": "52037aab1233c9557711e5e36f9ee90c956dba2fd90ced3523d90730144872b3",
+    "bytes": 290650,
+    "shape": [
+      2040,
+      10
+    ]
+  },
+  "G_ceRNA_alternative_top10_tierA.csv": {
+    "path": "results/tables/G_ceRNA_alternative_top10_tierA.csv",
+    "sha256": "a8c1376d06a34924a65810d42aade04ffe25da4ee0498494c653133a324c639c",
+    "bytes": 349,
+    "shape": [
+      10,
+      4
+    ]
+  },
+  "G_ceRNA_network_predicted.csv": {
+    "path": "results/tables/G_ceRNA_network_predicted.csv",
+    "sha256": "247b2ec8356b5bbb286c9e408f1af4628e4f2d8f70b73528f0b0054cc15728b8",
+    "bytes": 1052261,
+    "shape": [
+      3397,
+      21
+    ]
+  },
+  "G_ceRNA_network_summary.csv": {
+    "path": "results/tables/G_ceRNA_network_summary.csv",
+    "sha256": "8a191b8d02188e9cabcecbd5b3afb688bdc7d4aeb146b24f152963acc9bfca7f",
+    "bytes": 464,
+    "shape": [
+      9,
+      2
+    ]
+  },
+  "G_ceRNA_provenance.csv": {
+    "path": "results/tables/G_ceRNA_provenance.csv",
+    "sha256": "91ae62815123eda6b1045bc7d8e0b599e686ae7a059b858c8854f53ba44c7898",
+    "bytes": 224,
+    "shape": [
+      1,
+      6
+    ]
+  },
+  "G_encori_mirna_lncrna_raw.csv": {
+    "path": "results/tables/G_encori_mirna_lncrna_raw.csv",
+    "sha256": "1f7cce4a4231822c8a3feb15c14ccd8981896b1092ec6308879e0d4bc49a01a4",
+    "bytes": 149300,
+    "shape": [
+      697,
+      21
+    ]
+  },
+  "G_lncRNA_GSE248762_detection_summary.csv": {
+    "path": "results/tables/G_lncRNA_GSE248762_detection_summary.csv",
+    "sha256": "b1d29fc62d64624e49a798d53b5c77d3b7ac838def2b14cf4e7a849cd6da4d10",
+    "bytes": 830,
+    "shape": [
+      8,
+      3
+    ]
+  },
+  "G_lncRNA_detected_list.csv": {
+    "path": "results/tables/G_lncRNA_detected_list.csv",
+    "sha256": "0b9c5625a82e6e205a4cb8ff7d6048cfb9eac78cbf41b2e239e60ade14733a1d",
+    "bytes": 559291,
+    "shape": [
+      4120,
+      11
+    ]
+  },
+  "G_lncRNA_provenance.csv": {
+    "path": "results/tables/G_lncRNA_provenance.csv",
+    "sha256": "aecd436d887d6770f4a67f247374762d334da8b1c49aaa61d40e73924b21183d",
+    "bytes": 340,
+    "shape": [
+      1,
+      9
+    ]
+  },
+  "G_lncRNA_threshold_sensitivity.csv": {
+    "path": "results/tables/G_lncRNA_threshold_sensitivity.csv",
+    "sha256": "4943e2d7cf899bb59c9f89a342cff5a4b97f8bf469d87f32b3a407e955d9a917",
+    "bytes": 488,
+    "shape": [
+      18,
+      5
+    ]
+  },
+  "H_GSE121372_hub_fold_changes.csv": {
+    "path": "results/tables/H_GSE121372_hub_fold_changes.csv",
+    "sha256": "96fd303b1af38084411229f6a3672384e1c371399f9af5ef784d2545159b8998",
+    "bytes": 4691,
+    "shape": [
+      13,
+      19
+    ]
+  },
+  "H_GSE121372_provenance.csv": {
+    "path": "results/tables/H_GSE121372_provenance.csv",
+    "sha256": "b54a552c10e18d774dd7750c47a8ff6e36e0dad5b409cc79a277a03ee7d895d4",
+    "bytes": 434,
+    "shape": [
+      1,
+      10
+    ]
+  },
+  "H_GSE121372_sample_metadata.csv": {
+    "path": "results/tables/H_GSE121372_sample_metadata.csv",
+    "sha256": "c40ba9bb672fd7034ff158e296f71621e9b32b898bee51effed903ed56a2c6e0",
+    "bytes": 299,
+    "shape": [
+      4,
+      5
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "analysis": "Marker-score covariate sensitivity with consensus hubs excluded",
+  "marker_score_method": "Mean of per-gene z-scores across samples; expression-signature proxy, not cell-fraction deconvolution",
+  "hub_genes": [
+    "FLT3LG",
+    "TNFSF15",
+    "LTB",
+    "ADAM19",
+    "SERPINA10",
+    "EBI3",
+    "CXCL14"
+  ],
+  "present_total_leukocyte_markers": [
+    "PTPRC",
+    "CD3D",
+    "CD3E",
+    "CD3G",
+    "CD4",
+    "CD8A",
+    "CD8B",
+    "CD19",
+    "MS4A1",
+    "CD79A",
+    "CD79B",
+    "NCAM1",
+    "KLRD1",
+    "CD14",
+    "CD68",
+    "ITGAM",
+    "FCGR3A"
+  ],
+  "present_lymphocyte_markers": [
+    "CD3D",
+    "CD3E",
+    "CD3G",
+    "CD4",
+    "CD8A",
+    "CD8B",
+    "CD19",
+    "MS4A1",
+    "CD79A",
+    "CD79B",
+    "NCAM1",
+    "KLRD1"
+  ],
+  "hub_overlap_total_leukocyte": [],
+  "hub_overlap_lymphocyte": [],
+  "total_leukocyte_score_unchanged_after_exclusion": true,
+  "lymphocyte_score_unchanged_after_exclusion": true,
+  "output_table": "leukocyte_hub_overlap_sensitivity.csv"
+}

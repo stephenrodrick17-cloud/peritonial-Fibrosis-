@@ -1,0 +1,2 @@
+dataset,reference_annotation,gtf_file,stromal_cells_assayed,stromal_donors_assayed,primary_filter_rule,passing_lncrnas,robust_candidates,timestamp
+GSE248762,"GENCODE v32 (GRCh38.p13, Ensembl 98)",gencode.v32.long_noncoding_RNAs.gtf.gz,3670,16,>= 1.0% of stromal cells (>=37 cells) AND >= 2 donors,867,834,2026-10-05T10:18:26.759522+00:00

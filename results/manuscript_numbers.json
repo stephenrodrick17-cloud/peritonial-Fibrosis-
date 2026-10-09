@@ -1,0 +1,386 @@
+{
+  "gene_universes": {
+    "probe_level_limma": 22049,
+    "maxmean_wgcna": 20940,
+    "gsea_ranked_symbols": 21597
+  },
+  "differential_expression": {
+    "upregulated_degs_p005_logfc0585": 534,
+    "matrisome_reference_total": 1027,
+    "matrisome_in_probe_universe": 974,
+    "matrisome_background_percent": 4.42,
+    "convergent_ecm_degs": 81,
+    "ecm_deg_percent": 15.17,
+    "fold_enrichment": 3.43,
+    "hypergeometric_p": 1.2370012444682938e-22
+  },
+  "wgcna": {
+    "soft_threshold_power_beta": 12,
+    "scale_free_r2": 0.809,
+    "salmon_module_size": 604,
+    "salmon_correlation_r": 0.806,
+    "salmon_p_value": 0.015701,
+    "salmon_exact_permutation_p_onesided": 0.0143,
+    "salmon_exact_permutation_p_twosided": 0.0286,
+    "salmon_bonferroni_p": 0.2198
+  },
+  "candidate_convergence": {
+    "convergent_wgcna_ecm_candidates": 44
+  },
+  "machine_learning_consensus": {
+    "lasso_selected": 2,
+    "svmrfe_selected": 14,
+    "random_forest_selected": 17,
+    "xgboost_selected": 1,
+    "vote_tiers": {
+      "votes_4": 0,
+      "votes_3": 3,
+      "votes_2": 8,
+      "votes_1": 9,
+      "votes_0": 20
+    },
+    "consensus_hubs_total": 11,
+    "hub_symbols": [
+      "ISM1",
+      "FN1",
+      "EDIL3",
+      "VCAN",
+      "COL3A1",
+      "COMP",
+      "COL8A1",
+      "THBS3",
+      "COL11A1",
+      "INHBA",
+      "LOX"
+    ]
+  },
+  "string_network": {
+    "version": "12.5",
+    "retrieval_date": "2026-10-01",
+    "network_type": "functional",
+    "functional_edges_count": 21,
+    "physical_edges_count": 3,
+    "top_functional_edges": [
+      {
+        "gene1": "LOX",
+        "gene2": "FN1",
+        "score": 0.953
+      },
+      {
+        "gene1": "COL3A1",
+        "gene2": "FN1",
+        "score": 0.911
+      },
+      {
+        "gene1": "COL3A1",
+        "gene2": "COL11A1",
+        "score": 0.877
+      },
+      {
+        "gene1": "LOX",
+        "gene2": "COL3A1",
+        "score": 0.802
+      }
+    ],
+    "isolated_hub": "ISM1"
+  },
+  "external_validation": {
+    "dataset": "GSE125498",
+    "n_total": 33,
+    "n_early_spd": 20,
+    "n_late_lpd": 13,
+    "profiled_hubs_count": 7,
+    "unmapped_hubs_count": 4,
+    "unmapped_hubs": [
+      "COL11A1",
+      "COMP",
+      "EDIL3",
+      "INHBA"
+    ],
+    "composite_7gene_insample_auc": 0.869,
+    "composite_7gene_50x5_cv_pooled_mean": 0.678,
+    "composite_7gene_50x5_cv_pooled_sd": 0.058,
+    "composite_7gene_50x5_cv_fold_mean": 0.701,
+    "composite_7gene_50x5_cv_fold_sd": 0.203,
+    "composite_7gene_loocv_auc": 0.658,
+    "composite_7gene_single_5fold_auc": 0.592,
+    "optimism_gap_delta_auc": 0.191
+  },
+  "nomogram": {
+    "genes_count": 5,
+    "genes": [
+      "VCAN",
+      "COL8A1",
+      "FN1",
+      "ISM1",
+      "COL3A1"
+    ],
+    "insample_c_index": 0.819,
+    "brier_score": 0.1542
+  },
+  "coexpression_noise_baselines": {
+    "all_genes_random_pairs_percent": 1.68,
+    "deg_pairs_percent": 5.47,
+    "salmon_pairs_percent": 9.27,
+    "hub_pairs_percent": 76.36,
+    "enrichment_vs_deg": 14.0,
+    "enrichment_vs_salmon": 8.2
+  },
+  "gsea_hallmarks": {
+    "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION": {
+      "NES": 3.2032552353952903,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_TNF_ALPHA_SIGNALING_VIA_NF_KB": {
+      "NES": 2.082026724926742,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0009887169943003
+    },
+    "HALLMARK_INFLAMMATORY_RESPONSE": {
+      "NES": 1.586541719575105,
+      "NOM_p": 0.0,
+      "FDR_q": 0.030320654491877
+    },
+    "HALLMARK_ANGIOGENESIS": {
+      "NES": 1.4382899035540049,
+      "NOM_p": 0.0486322188449848,
+      "FDR_q": 0.0855240200069791
+    },
+    "HALLMARK_APICAL_JUNCTION": {
+      "NES": 1.411269825193988,
+      "NOM_p": 0.0079365079365079,
+      "FDR_q": 0.0814702803303478
+    },
+    "HALLMARK_IL_6/JAK/STAT3_SIGNALING": {
+      "NES": 1.3917081166512255,
+      "NOM_p": 0.0325581395348837,
+      "FDR_q": 0.0794269318754604
+    },
+    "HALLMARK_APOPTOSIS": {
+      "NES": 1.3489890876738484,
+      "NOM_p": 0.0209790209790209,
+      "FDR_q": 0.0974592465810332
+    },
+    "HALLMARK_COAGULATION": {
+      "NES": 1.3326099048652715,
+      "NOM_p": 0.0328947368421052,
+      "FDR_q": 0.0986245201814586
+    },
+    "HALLMARK_ALLOGRAFT_REJECTION": {
+      "NES": 1.2340507557258966,
+      "NOM_p": 0.0594059405940594,
+      "FDR_q": 0.1821436418388843
+    },
+    "HALLMARK_UV_RESPONSE_UP": {
+      "NES": 1.2091939249708643,
+      "NOM_p": 0.0975609756097561,
+      "FDR_q": 0.1979411422589275
+    },
+    "HALLMARK_HEDGEHOG_SIGNALING": {
+      "NES": 1.188173088015758,
+      "NOM_p": 0.1967741935483871,
+      "FDR_q": 0.2114056700540357
+    },
+    "HALLMARK_APICAL_SURFACE": {
+      "NES": 1.1653026775031237,
+      "NOM_p": 0.2210526315789473,
+      "FDR_q": 0.2255922608661936
+    },
+    "HALLMARK_G2_M_CHECKPOINT": {
+      "NES": 1.0946854398239096,
+      "NOM_p": 0.2076923076923077,
+      "FDR_q": 0.3314483585508361
+    },
+    "HALLMARK_KRAS_SIGNALING_DN": {
+      "NES": 0.9850681871283608,
+      "NOM_p": 0.5079365079365079,
+      "FDR_q": 0.6049535552269064
+    },
+    "HALLMARK_SPERMATOGENESIS": {
+      "NES": 0.9795453823033412,
+      "NOM_p": 0.5067567567567568,
+      "FDR_q": 0.5778062114691171
+    },
+    "HALLMARK_UNFOLDED_PROTEIN_RESPONSE": {
+      "NES": 0.9773301233136714,
+      "NOM_p": 0.5380710659898477,
+      "FDR_q": 0.5463897289752239
+    },
+    "HALLMARK_PANCREAS_BETA_CELLS": {
+      "NES": 0.9272539149728588,
+      "NOM_p": 0.6055363321799307,
+      "FDR_q": 0.6496452250785157
+    },
+    "HALLMARK_MITOTIC_SPINDLE": {
+      "NES": -1.025717983595696,
+      "NOM_p": 0.4341957255343082,
+      "FDR_q": 0.4221433229476125
+    },
+    "HALLMARK_KRAS_SIGNALING_UP": {
+      "NES": -1.0534658273410853,
+      "NOM_p": 0.3516609392898053,
+      "FDR_q": 0.3825560647779146
+    },
+    "HALLMARK_MYC_TARGETS_V2": {
+      "NES": -1.074382283469113,
+      "NOM_p": 0.3666666666666666,
+      "FDR_q": 0.3566899079309353
+    },
+    "HALLMARK_COMPLEMENT": {
+      "NES": -1.094375604098072,
+      "NOM_p": 0.2832957110609481,
+      "FDR_q": 0.3336690577977441
+    },
+    "HALLMARK_ESTROGEN_RESPONSE_EARLY": {
+      "NES": -1.1033539902877827,
+      "NOM_p": 0.2824339839265212,
+      "FDR_q": 0.3303883526680975
+    },
+    "HALLMARK_P53_PATHWAY": {
+      "NES": -1.108866081893398,
+      "NOM_p": 0.268018018018018,
+      "FDR_q": 0.3325095489974846
+    },
+    "HALLMARK_PI3K/AKT/MTOR__SIGNALING": {
+      "NES": -1.1525918338611858,
+      "NOM_p": 0.2295081967213114,
+      "FDR_q": 0.2692826875132504
+    },
+    "HALLMARK_IL_2/STAT5_SIGNALING": {
+      "NES": -1.1785543062443269,
+      "NOM_p": 0.188787185354691,
+      "FDR_q": 0.238929174586011
+    },
+    "HALLMARK_HYPOXIA": {
+      "NES": -1.209678025849239,
+      "NOM_p": 0.1407322654462242,
+      "FDR_q": 0.2026403883776538
+    },
+    "HALLMARK_E2F_TARGETS": {
+      "NES": -1.2435390629774772,
+      "NOM_p": 0.0923423423423423,
+      "FDR_q": 0.1680101683452889
+    },
+    "HALLMARK_WNT_BETA_CATENIN_SIGNALING": {
+      "NES": -1.3074448681294553,
+      "NOM_p": 0.1390070921985815,
+      "FDR_q": 0.1108237273291475
+    },
+    "HALLMARK_GLYCOLYSIS": {
+      "NES": -1.3763079998770995,
+      "NOM_p": 0.0194508009153318,
+      "FDR_q": 0.0660459387000942
+    },
+    "HALLMARK_TGF_BETA_SIGNALING": {
+      "NES": -1.4148517949810242,
+      "NOM_p": 0.0622406639004149,
+      "FDR_q": 0.0496064812418699
+    },
+    "HALLMARK_DNA_REPAIR": {
+      "NES": -1.4808014937271032,
+      "NOM_p": 0.0186480186480186,
+      "FDR_q": 0.029251503514238
+    },
+    "HALLMARK_INTERFERON_GAMMA_RESPONSE": {
+      "NES": -1.4939556864127042,
+      "NOM_p": 0.0112485939257592,
+      "FDR_q": 0.0273092338846536
+    },
+    "HALLMARK_HEME_METABOLISM": {
+      "NES": -1.4948513428605306,
+      "NOM_p": 0.0091638029782359,
+      "FDR_q": 0.0287378531346359
+    },
+    "HALLMARK_NOTCH_SIGNALING": {
+      "NES": -1.5078847457558369,
+      "NOM_p": 0.0488826815642458,
+      "FDR_q": 0.0270057156983509
+    },
+    "HALLMARK_MYOGENESIS": {
+      "NES": -1.592957622847164,
+      "NOM_p": 0.0022573363431151,
+      "FDR_q": 0.0120552858488515
+    },
+    "HALLMARK_UV_RESPONSE_DN": {
+      "NES": -1.5941914820576115,
+      "NOM_p": 0.0059241706161137,
+      "FDR_q": 0.0128058353259425
+    },
+    "HALLMARK_ESTROGEN_RESPONSE_LATE": {
+      "NES": -1.595049634211675,
+      "NOM_p": 0.0022701475595913,
+      "FDR_q": 0.0136066744645833
+    },
+    "HALLMARK_ANDROGEN_RESPONSE": {
+      "NES": -1.62650330075884,
+      "NOM_p": 0.0025125628140703,
+      "FDR_q": 0.0105455011621231
+    },
+    "HALLMARK_MTORC1_SIGNALING": {
+      "NES": -1.7184280563031662,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0051143636934521
+    },
+    "HALLMARK_PPEROXISOME": {
+      "NES": -1.874458588252086,
+      "NOM_p": 0.0012594458438287,
+      "FDR_q": 0.0010144192449822
+    },
+    "HALLMARK_CHOLESTEROL_HOMEOSTASIS": {
+      "NES": -1.879837037107412,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0010361568002318
+    },
+    "HALLMARK_MYC_TARGETS_V1": {
+      "NES": -1.956164054360761,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0003542416411049
+    },
+    "HALLMARK_PROTEIN_SECRETION": {
+      "NES": -2.0973647977555654,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_BILE_ACID_METABOLISM": {
+      "NES": -2.1006397473988865,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_XENOBIOTIC_METABOLISM": {
+      "NES": -2.191260820113205,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY": {
+      "NES": -2.2697263626734285,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_INTERFERON_ALPHA_RESPONSE": {
+      "NES": -2.384594423880856,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_FATTY_ACID_METABOLISM": {
+      "NES": -2.765821664166092,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_OXIDATIVE_PHOSPHORYLATION": {
+      "NES": -3.1009772229112427,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    },
+    "HALLMARK_ADIPOGENESIS": {
+      "NES": -3.146338207815455,
+      "NOM_p": 0.0,
+      "FDR_q": 0.0
+    }
+  },
+  "immune_deconvolution": {
+    "myofibroblasts_raw_p": 0.0286,
+    "myofibroblasts_fdr": 0.1714,
+    "myofibroblasts_exact_perm_p": 0.0286
+  }
+}

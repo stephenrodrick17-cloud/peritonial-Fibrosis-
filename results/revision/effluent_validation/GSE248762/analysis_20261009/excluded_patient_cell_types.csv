@@ -1,0 +1,14 @@
+sample_id,patient_id_proxy,original_group,cell_type,n_qc_cells,reason
+GSM7919584,GSM7919584,LV_UF,fibroblast,5,fewer than 20 cells
+GSM7919585,GSM7919585,LV_UF,other,13,fewer than 20 cells
+GSM7919586,GSM7919586,LV_UF,fibroblast,3,fewer than 20 cells
+GSM7919587,GSM7919587,LV_NOT_UF,other,9,fewer than 20 cells
+GSM7919589,GSM7919589,LV_NOT_UF,fibroblast,6,fewer than 20 cells
+GSM7919589,GSM7919589,LV_NOT_UF,other,11,fewer than 20 cells
+GSM7919590,GSM7919590,LV_NOT_UF,fibroblast,1,fewer than 20 cells
+GSM7919591,GSM7919591,LV_NOT_UF,fibroblast,4,fewer than 20 cells
+GSM7919592,GSM7919592,LV_NOT_UF,fibroblast,19,fewer than 20 cells
+GSM7919594,GSM7919594,SV,other,17,fewer than 20 cells
+GSM7919596,GSM7919596,SV,other,9,fewer than 20 cells
+GSM7919598,GSM7919598,SV,fibroblast,3,fewer than 20 cells
+GSM7919598,GSM7919598,SV,other,15,fewer than 20 cells

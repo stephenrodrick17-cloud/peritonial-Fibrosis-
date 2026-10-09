@@ -1,0 +1,4 @@
+Metric,Value,Interpretation
+Silhouette Score (Cell Type Separation),0.24369999766349792,Higher is better (distinct cell lineages)
+Silhouette Score (Donor Separation / Batch Effect),-0.10670000314712524,Lower is better (well-mixed donors)
+Optimal Leiden Resolution,0.3,"Tested range [0.3, 0.4, 0.5, 0.6, 0.7, 0.8]"

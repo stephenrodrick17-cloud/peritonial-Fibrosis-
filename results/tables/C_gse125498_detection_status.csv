@@ -1,0 +1,10 @@
+Gene,Probe_ID,N_Samples_Det_lt_05,Total_Samples,Fraction_Det_lt_05,Mean_Raw_Intensity,Passes_20pct_Rule,Detection_Status
+ISM1,ILMN_3239288,22,33,0.6667,75.96,True,Detected (>=20% samples P < 0.05)
+FN1,ILMN_1778237,8,33,0.2424,68.09,True,Detected (>=20% samples P < 0.05)
+FN1,ILMN_2366463,19,33,0.5758,75.9,True,Detected (>=20% samples P < 0.05)
+VCAN,ILMN_1687301,33,33,1.0,5412.05,True,Detected (>=20% samples P < 0.05)
+COL3A1,ILMN_1773079,33,33,1.0,1186.89,True,Detected (>=20% samples P < 0.05)
+COL8A1,ILMN_1685433,33,33,1.0,414.48,True,Detected (>=20% samples P < 0.05)
+COL8A1,ILMN_2402392,32,33,0.9697,170.31,True,Detected (>=20% samples P < 0.05)
+THBS3,ILMN_1804663,33,33,1.0,263.18,True,Detected (>=20% samples P < 0.05)
+LOX,ILMN_1695880,27,33,0.8182,114.14,True,Detected (>=20% samples P < 0.05)

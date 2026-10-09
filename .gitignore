@@ -1,0 +1,47 @@
+# Environment & Scratch directories
+scratch/
+.venv/
+venv/
+__pycache__/
+*.pyc
+fresh_clone/
+.vscode/
+
+# Local system & ide artifacts
+.trae/
+scratch_full_prompt.txt
+.tempmediaStorage/
+.system_generated/
+repo_audit_report.md
+.Rhistory
+.RData
+*.RData
+cookies.txt
+test_ftp_matrix.mtx.gz
+test_matrix_curl.mtx.gz
+audit/*.log
+
+# Large GEO raw dumps and soft archives (>20MB)
+data/*.soft.gz
+data/*.txt.gz
+data/*.xlsx
+data/raw/
+!data/raw/GSE248762_extracted/GSM7919583_LV_UF-1.features.tsv.gz
+!data/raw/gencode.v32.long_noncoding_RNAs.gtf.gz
+data/processed/*.h5ad
+data/processed/scrublet_scores/
+data/processed/GSE248762_filtered_samples/
+data/processed/GSE248762_blinded_samples/
+sealed/
+
+# Temporary audit diff logs & intermediate audit pseudobulk files
+results/full_diff.txt
+results/readme_diff_full.txt
+results/audit_grep_full.txt
+results/figures/superseded/
+data/processed/pseudobulk/pb_audit_*
+
+# GEO effluent-validation raw single-cell archives and extracted count files
+results/revision/effluent_validation/**/*_RAW.tar
+results/revision/effluent_validation/**/*.features.tsv.gz
+results/revision/effluent_validation/**/*.matrix.mtx.gz

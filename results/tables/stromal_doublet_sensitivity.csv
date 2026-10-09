@@ -1,0 +1,5 @@
+Method,Doublets_in_Stromal,Total_Stromal,Fraction_%
+Scrublet (fixed threshold 0.4390),0,3670,0.0
+scDblFinder (R independent check),212,3670,5.78
+Both flagged (Scrublet & scDblFinder),0,3670,0.0
+Either flagged (Scrublet OR scDblFinder),212,3670,5.78

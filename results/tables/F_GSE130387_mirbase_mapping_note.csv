@@ -1,0 +1,2 @@
+dataset,biological_specimen,array_platform,probes_used,mmu_probes_in_file,rno_probes_in_file,hsa_probes_in_file,mapping_rationale,status,timestamp
+GSE130387,C57BL/6 male mice peritoneal tissue (Mus musculus),"GPL17107 (Exiqon miRCURY LNA microRNA Array - hsa, mmu & rno)",rno- (Rattus norvegicus),0,692,0,Deposited file contains exclusively rno- probe subset; mature stem sequences conserved across rodent species; mapped to human by miRBase stem homology,CROSS-SPECIES,2026-10-05T16:09:42.069727+00:00

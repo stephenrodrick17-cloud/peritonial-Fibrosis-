@@ -1,0 +1,188 @@
+{
+  "item1_permutation_p_audit": {
+    "n_combinations": 70,
+    "n_extreme_permutations": 70,
+    "apparent_auc_per_permutation_mean": 1.0,
+    "reported_perm_p": 1.0,
+    "verdict": "MODEL OVERFITTING / WRONG STATISTIC BUG",
+    "explanation": "In run_pipeline.py (lines 770-785), the exact permutation test fits an unpenalized logistic regression (penalty=None) with 11 features on only N=8 samples. Because the number of parameters exceeds the sample size (p=11 > n=8), the unconstrained linear model has complete separation on all C(8,4)=70 binary label combinations. Consequently, every single permutation achieves an apparent in-sample AUC of exactly 1.0 (mean AUC across permutations = 1.000). Since the apparent test statistic on the true labels was also 1.0, the condition (a >= auc_apparent) evaluates to True for all 70 permutations, yielding n_extreme_perm = 70 / 70 = 1.0000. This is a severe model-overparameterization artifact: an unpenalized model evaluated in-sample on permuted labels cannot detect a true signal. The test must be relabeled and corrected using cross-validated permutation or non-parametric rank tests on a fixed composite score."
+  },
+  "item2_hub_derivation_audit": {
+    "three_model_feature_rows_n": 25,
+    "primary_strict_3of3_hubs": [
+      "FLT3LG",
+      "TNFSF15"
+    ],
+    "primary_majority_2of3_hubs": [
+      "FLT3LG",
+      "TNFSF15",
+      "LTB",
+      "ADAM19",
+      "SERPINA10",
+      "EBI3",
+      "CXCL14"
+    ],
+    "alternate_up_ecm_pool_n": 31,
+    "alternate_strict_3of3_hubs": [
+      "TNFSF15",
+      "EBI3"
+    ],
+    "alternate_majority_2of3_hubs": [
+      "TNFSF15",
+      "EBI3",
+      "PI3",
+      "FLT3LG",
+      "ADAM19",
+      "CLEC4F",
+      "TGM3",
+      "CXCL14"
+    ],
+    "primary_hub_convergence_flags": [
+      {
+        "Gene": "ADAM19",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      },
+      {
+        "Gene": "CXCL14",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      },
+      {
+        "Gene": "EBI3",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      },
+      {
+        "Gene": "FLT3LG",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      },
+      {
+        "Gene": "LTB",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      },
+      {
+        "Gene": "SERPINA10",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      },
+      {
+        "Gene": "TNFSF15",
+        "in_Top_WGCNA_Module": 0,
+        "Convergent": 0
+      }
+    ],
+    "primary_hubs_in_convergent_pool": [],
+    "difference_commentary": "The three-model feature table contains 25 rows and marks 7 genes as majority hubs. However, the separate convergent_WGCNA_ECM_genes.csv table marks all seven as in_Top_WGCNA_Module=0 and Convergent=0. Therefore, the available files do not verify that these hubs were selected from a 25-gene WGCNA-convergent pool. The alternate 31-gene Up-ECM analysis is a distinct analysis and yields 8 majority hubs (TNFSF15, EBI3, FLT3LG, ADAM19, CLEC4F, CXCL14, PI3, TGM3)."
+  },
+  "item3_module_justification": {
+    "MEmagenta": {
+      "correlation_with_stage": 0.4803996711115402,
+      "p_value": 0.0046606434858424,
+      "total_genes": 37,
+      "up_ecm_genes_contained": 0,
+      "ecm_gene_list": []
+    },
+    "MEblack": {
+      "correlation_with_stage": 0.0285156323391533,
+      "p_value": 0.8748307768956167,
+      "total_genes": 2398,
+      "up_ecm_genes_contained": 25,
+      "ecm_gene_list": [
+        "ADAM19",
+        "ANGPTL4",
+        "C1QA",
+        "C1QB",
+        "CCBE1",
+        "CCL5",
+        "CLEC4F",
+        "COL8A1",
+        "COL9A2",
+        "CST7",
+        "CXCL14",
+        "EBI3",
+        "ECM1",
+        "FLT3LG",
+        "LTA",
+        "LTB",
+        "PIK3IP1",
+        "PLXNA3",
+        "SEMA3E",
+        "SEMA4F",
+        "SERPINA10",
+        "SFRP4",
+        "SPOCK2",
+        "TNFSF15",
+        "TNFSF4"
+      ]
+    },
+    "hub_module_membership_and_gene_significance": [
+      {
+        "Gene": "FLT3LG",
+        "Assigned_Module": "black",
+        "kME_black": -0.09566123728133322,
+        "kME_black_p": 0.5964170349592937,
+        "GS_stage": 0.6423420113998906,
+        "GS_stage_p": 5.575622008909475e-05
+      },
+      {
+        "Gene": "TNFSF15",
+        "Assigned_Module": "black",
+        "kME_black": 0.03925798597957168,
+        "kME_black_p": 0.8282802680285499,
+        "GS_stage": 0.6501730528498293,
+        "GS_stage_p": 4.213754602118023e-05
+      },
+      {
+        "Gene": "LTB",
+        "Assigned_Module": "black",
+        "kME_black": -0.2995733404145707,
+        "kME_black_p": 0.0903202542301328,
+        "GS_stage": 0.461593479803146,
+        "GS_stage_p": 0.006851085380799971
+      },
+      {
+        "Gene": "ADAM19",
+        "Assigned_Module": "black",
+        "kME_black": -0.02477620506587473,
+        "kME_black_p": 0.891140415879762,
+        "GS_stage": 0.5948722706804452,
+        "GS_stage_p": 0.0002610722561349229
+      },
+      {
+        "Gene": "SERPINA10",
+        "Assigned_Module": "black",
+        "kME_black": -0.221473534231041,
+        "kME_black_p": 0.21546989151009127,
+        "GS_stage": 0.540447459855187,
+        "GS_stage_p": 0.0011669443554372804
+      },
+      {
+        "Gene": "EBI3",
+        "Assigned_Module": "black",
+        "kME_black": -0.07725033619922927,
+        "kME_black_p": 0.6691623511992395,
+        "GS_stage": 0.4945169219235568,
+        "GS_stage_p": 0.003440506610643313
+      },
+      {
+        "Gene": "CXCL14",
+        "Assigned_Module": "black",
+        "kME_black": -0.02131875854250087,
+        "kME_black_p": 0.9062593965721192,
+        "GS_stage": 0.46723948103321117,
+        "GS_stage_p": 0.006116354312786457
+      }
+    ],
+    "scientific_justification": "MEmagenta is the strongest module-level stage association (r = +0.4804, P = 0.00466; 37 genes) and contains zero upregulated ECM DEGs. MEblack contains 2,398 genes and 25 upregulated ECM DEGs, but its eigengene is not associated with stage (r = +0.0285, P = 0.8748). All seven majority hubs are assigned to black, yet their calculated kME_black correlations are weak and nonsignificant while their individual stage gene-significance correlations are positive. Thus, neither module is fully supported as a unified immune-matrisome hub cluster: the current files support a distinct MEmagenta module-trait association and individual hub-stage associations, but do not establish black-module co-expression or the claimed WGCNA-convergent provenance."
+  },
+  "item4_illumina_normalization": {
+    "software": "Illumina BeadStudio v3",
+    "package": "R lumi",
+    "algorithm": "Quantile normalization",
+    "filtering_rule": "Detectable signal intensity in >= 5 samples",
+    "documentation": "According to the official GEO series matrix header (!Sample_data_processing) for GSE125498, bead-level raw data were summarized using Illumina BeadStudio Software v3, imported into R, and normalized using the quantile normalization method via the Lumi package (Du et al., Bioinformatics 2008). Probes were filtered to retain only those with detectable signal intensity in at least five samples."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "dataset": "GSE248762 (Human peritoneal dialysis effluent scRNA-seq, 10x Genomics)",
+  "cohort_size": "16 donors (6 Short Vintage, 6 Long Vintage No-UFF, 4 Long Vintage UFF)",
+  "timestamp_plan_frozen_utc": "2026-10-04T14:28:40.294694+00:00",
+  "hub_gene_blind_policy": "Strict code-level guard enforced during QC, normalization, clustering, and annotation",
+  "qc_parameters": {
+    "per_sample_adaptive_mad": "3 MAD from median on log1p(total_counts), log1p(n_genes_by_counts), and pct_counts_mt",
+    "hard_floor_min_genes": 200,
+    "hard_floor_min_umis": 500,
+    "percent_mito_ceiling": 15.0,
+    "min_cells_per_gene": 3
+  },
+  "doublet_detection": "Scrublet (scanpy.pp.scrublet or custom Scrublet simulation) per sample, expected doublet rate 0.06",
+  "ambient_rna_policy": "Filtered matrices used; ambient RNA deconvolution not possible without raw droplet calls. Flagged that secreted ECM transcripts in effluent may reflect ambient RNA.",
+  "normalization_and_hvg": {
+    "target_sum": 10000,
+    "transformation": "log1p",
+    "n_top_genes": 2000,
+    "flavor": "seurat / cell_ranger"
+  },
+  "dimensionality_reduction_and_integration": {
+    "pca_components": 30,
+    "batch_key": "donor_id / sample_id",
+    "integration_algorithm": "Harmony / Scanorama across 16 donors"
+  },
+  "clustering_selection_rule": {
+    "algorithm": "Leiden",
+    "resolution_range": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ],
+    "selection_criterion": "Maximum average silhouette score across tested resolutions; ties broken by lower resolution"
+  },
+  "annotation_rules": {
+    "marker_panel_file": "provenance/marker_panel.json",
+    "unassigned_rule": "Any cluster with ambiguous lineage enrichment labeled as 'Unassigned' without forced mapping"
+  },
+  "minimum_evidence_testability_rule": {
+    "min_cells_per_donor": 20,
+    "min_donors_in_target_group": 3,
+    "min_donors_in_comparator_group": 2,
+    "contrasts": [
+      "LV_UF_vs_LV_NOT_UF",
+      "LV_UF_vs_SV",
+      "LV_NOT_UF_vs_SV"
+    ]
+  },
+  "harmonypy_substitution_note": {
+    "timestamp": "2026-10-04T17:42:29.945237+00:00",
+    "reason": "harmonypy C-binding not present; standard PCA embedding with donor batch balancing was used."
+  },
+  "expanded_marker_modules_evaluation": {
+    "timestamp_utc": "2026-10-04T18:04:41Z",
+    "modules_tested": {
+      "Mesothelial": [
+        "WT1",
+        "MSLN",
+        "CALB2",
+        "UPK3B",
+        "KRT19",
+        "UPK1B"
+      ],
+      "Fibroblast": [
+        "DCN",
+        "LUM",
+        "PDGFRA",
+        "COL1A2"
+      ],
+      "Macrophage": [
+        "CD68",
+        "CSF1R",
+        "MARCO",
+        "C1QA"
+      ],
+      "Plasma": [
+        "JCHAIN",
+        "MZB1"
+      ],
+      "Endothelial": [
+        "PECAM1",
+        "VWF"
+      ],
+      "T_Cell": [
+        "CD3D",
+        "CD3E",
+        "CD4",
+        "CD8A",
+        "TRAC"
+      ],
+      "NK_Cell": [
+        "NCAM1",
+        "NKG7",
+        "GNLY",
+        "KLRD1"
+      ],
+      "B_Cell": [
+        "CD19",
+        "MS4A1",
+        "CD79A"
+      ],
+      "Neutrophil": [
+        "FCGR3B",
+        "S100A8",
+        "S100A9",
+        "CSF3R",
+        "CXCR2"
+      ],
+      "Dendritic_Cell": [
+        "HLA-DRA",
+        "HLA-DRB1",
+        "CD1C",
+        "CLEC9A",
+        "IL3RA"
+      ]
+    },
+    "mesothelial_conclusion": "Mesothelial markers (WT1, MSLN, CALB2, UPK3B, KRT19, UPK1B) show negligible distinct expression in effluent cells and do not form an independent cluster from Fibroblasts/Myofibroblasts (Cluster 5). Mesothelial cells are marked UNTESTABLE per protocol."
+  }
+}

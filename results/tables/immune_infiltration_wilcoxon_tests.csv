@@ -1,0 +1,2 @@
+Signature,Genes_Evaluated,LPD_Cases_n,SPD_Controls_n,LPD_Mean_Score,SPD_Mean_Score,Mean_Score_Difference,Mann_Whitney_U,Mann_Whitney_P,Permutation_P_1000
+Myofibroblast_6Gene,ACTA2;TAGLN;COL1A1;COL1A2;POSTN;FN1,13,20,0.0386,-0.0251,0.0637,140.0,0.36316,0.38462

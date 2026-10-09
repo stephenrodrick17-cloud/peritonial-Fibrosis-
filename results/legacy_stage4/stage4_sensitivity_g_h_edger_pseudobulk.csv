@@ -1,0 +1,67 @@
+Analysis,Cell_Type,Contrast,Gene,log2FC,SE,CI_95_low,CI_95_high,PValue,Donors_LV_UF,Donors_LV_NOT_UF,Donors_SV,Cells_total,BH_FDR,Status
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COL11A1,-6.8894,2.5384,-11.8646,-1.9141,0.016689701164248,4,6,6,6000,0.061195570935576,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,THBS3,-0.5657,0.2807,-1.1158,-0.0156,0.0604221161193459,4,6,6,6000,0.166160819328201,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COL3A1,-0.8234,0.6494,-2.0962,0.4493,0.222381965497572,4,6,6,6000,0.349457374353327,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,FN1,-0.272,0.9951,-2.2224,1.6783,0.787972677068624,4,6,6,6000,0.812596823227018,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COL8A1,-0.824,0.3546,-1.519,-0.1289,0.0332084387291432,4,6,6,6000,0.109587847806173,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,VCAN,-1.4106,1.0906,-3.5481,0.7269,0.213662340728539,4,6,6,6000,0.349457374353327,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,EDIL3,-0.7344,0.954,-2.6042,1.1354,0.452299958941661,4,6,6,6000,0.600243501031917,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,LOX,-0.1673,0.5832,-1.3103,0.9758,0.777820666303208,4,6,6,6000,0.812596823227018,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,INHBA,-0.3117,0.4621,-1.2173,0.594,0.509297516027081,4,6,6,6000,0.600243501031917,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,ISM1,-1.5435,0.9327,-3.3716,0.2845,0.113695648188542,4,6,6,6000,0.234497274388867,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COMP,-1.1448,1.6957,-4.4683,2.1786,0.508985373918675,4,6,6,6000,0.600243501031917,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COL11A1,-7.3179,2.3278,-11.8803,-2.7555,0.0071190871318361,4,6,6,6000,0.0335614107643702,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,THBS3,0.3513,0.2744,-0.1866,0.8891,0.218199373981546,4,6,6,6000,0.349457374353327,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COL3A1,0.4245,0.6285,-0.8073,1.6562,0.508775259975454,4,6,6,6000,0.600243501031917,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,FN1,1.4987,0.9766,-0.4154,3.4129,0.143815976740129,4,6,6,6000,0.26366262402357,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COL8A1,0.5471,0.3429,-0.1249,1.2191,0.129496472430752,4,6,6,6000,0.251375505306755,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,VCAN,0.1824,1.0446,-1.8651,2.2299,0.863512065948777,4,6,6,6000,0.863512065948777,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,EDIL3,2.9261,0.9991,0.9679,4.8844,0.0096127307952624,4,6,6,6000,0.0396525145304576,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,LOX,0.4231,0.5759,-0.7056,1.5518,0.472846716342869,4,6,6,6000,0.600243501031917,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,INHBA,1.6215,0.4544,0.7309,2.5121,0.0024609250655435,4,6,6,6000,0.0162421054325876,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,ISM1,0.5238,1.0714,-1.5761,2.6238,0.630271792660353,4,6,6,6000,0.693298971926388,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COMP,1.2467,1.7287,-2.1415,4.6349,0.480952321516955,4,6,6,6000,0.600243501031917,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COL11A1,-0.4285,0.6984,-1.7974,0.9403,0.549251181978999,4,6,6,6000,0.62500996570024,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,THBS3,0.917,0.2457,0.4355,1.3985,0.0017305319428696,4,6,6,6000,0.0142768885286746,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COL3A1,1.2479,0.5748,0.1212,2.3745,0.0448402535674644,4,6,6,6000,0.134520760702393,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,FN1,1.7708,0.91,-0.0129,3.5544,0.0689141077894998,4,6,6,6000,0.174935812081038,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COL8A1,1.3711,0.3141,0.7555,1.9868,0.0004495803204988,4,6,6,6000,0.0074180752882305,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,VCAN,1.593,0.9406,-0.2507,3.4367,0.109147210995322,4,6,6,6000,0.234497274388867,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,EDIL3,3.6605,0.9387,1.8207,5.5004,0.0012156103813984,4,6,6,6000,0.0133717141953834,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,LOX,0.5904,0.5198,-0.4284,1.6091,0.272245902754224,4,6,6,6000,0.408368854131336,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,INHBA,1.9332,0.4213,1.1075,2.7588,0.0002805935846927,4,6,6,6000,0.0074180752882305,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,ISM1,2.0674,0.6739,0.7465,3.3882,0.0061203725755233,4,6,6,6000,0.0335614107643702,
+sens_g_ceiling_rescued,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COMP,2.3915,1.4126,-0.3772,5.1602,0.109370753059867,4,6,6,6000,0.234497274388867,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COL11A1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,THBS3,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COL3A1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,FN1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COL8A1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,VCAN,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,EDIL3,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,LOX,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,INHBA,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,ISM1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_LV_NOT_UF,COMP,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COL11A1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,THBS3,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COL3A1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,FN1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COL8A1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,VCAN,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,EDIL3,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,LOX,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,INHBA,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,ISM1,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_UF_vs_SV,COMP,,,,,,1,2,5,3110,,NOT ESTIMABLE (n=1 in LV_UF)
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COL11A1,-2.0182,0.7418,-3.4721,-0.5642,0.021960166003348,1,2,5,3110,0.0381413409531834,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,THBS3,0.7469,0.379,0.0041,1.4898,0.0796765974794005,1,2,5,3110,0.105173108672809,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COL3A1,2.4206,0.6271,1.1914,3.6497,0.0044976839224478,1,2,5,3110,0.0123686307867316,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,FN1,3.114,0.7823,1.5808,4.6473,0.0040751390822572,1,2,5,3110,0.0122254172467716,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COL8A1,1.5105,0.4421,0.6441,2.377,0.0074588487888112,1,2,5,3110,0.0164094673353848,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,VCAN,2.8022,0.807,1.2206,4.3838,0.0084418247999759,1,2,5,3110,0.0174112636499505,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,EDIL3,5.4496,1.2734,2.9538,7.9455,0.0016147573117836,1,2,5,3110,0.0066608739111074,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,LOX,1.5305,0.5932,0.3679,2.6931,0.0316891774034795,1,2,5,3110,0.0522871427157412,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,INHBA,2.4956,0.5407,1.4359,3.5553,0.0012221674446999,1,2,5,3110,0.0066608739111074,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,ISM1,2.5669,1.2315,0.1532,4.9807,0.0573103593435756,1,2,5,3110,0.0822279068842606,
+sens_h_ge50cells_med1000genes,stromal / mesothelial-lineage (unresolved),LV_NOT_UF_vs_SV,COMP,3.2387,2.0118,-0.7044,7.1817,0.145155926396111,1,2,5,3110,0.18423636811814,

@@ -1,0 +1,2 @@
+dataset,platform,platform_id,file,design,hub_genes_assayed,hub_genes_absent,threshold_rule,wording_constraint,timestamp
+GSE121372,Illumina HumanRef-8 v2.0 Expression BeadChip,GPL6255,GSE121372_normalized.txt.gz,Unreplicated n=1 per condition (4 samples total),12,1,|log2FC| >= 1.0 for higher/lower; < 1.0 treated as unchanged,Strictly descriptive; no P-values or FDR; 'all 10 induced' claim removed,2026-10-05T16:09:43.517124+00:00

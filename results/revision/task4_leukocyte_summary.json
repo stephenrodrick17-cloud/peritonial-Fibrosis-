@@ -1,0 +1,28 @@
+{
+  "total_leukocyte_score_comparison": {
+    "lpd_mean": 0.3011,
+    "spd_mean": -0.1957,
+    "t_statistic": 3.6315,
+    "p_value": 0.0010052198167322102
+  },
+  "lymphocyte_score_comparison": {
+    "lpd_mean": 0.4154,
+    "spd_mean": -0.27,
+    "p_value": 0.0004745130991514143
+  },
+  "hubs_remaining_significant_p05": [
+    "FLT3LG",
+    "TNFSF15",
+    "ADAM19",
+    "CXCL14"
+  ],
+  "hubs_borderline_p10": [
+    "EBI3"
+  ],
+  "hubs_attenuated_non_significant": [
+    "LTB",
+    "SERPINA10"
+  ],
+  "method": "Marker-based signature scores are the mean of per-gene z-scores across samples; this is not xCell, CIBERSORT, MCP-counter, or a validated cell deconvolution estimate.",
+  "interpretation": "The marker-based total-leukocyte score is higher in LPD dialysate effluent (P = 0.0010); this is an expression-signature association, not a direct cell-count or validated deconvolution estimate. After adjusting for leukocyte score as a covariate: TNFSF15 (P = 0.0036), CXCL14 (P = 0.0130), FLT3LG (P = 0.0167), and ADAM19 (P = 0.0400) retain nominal stage associations in these small-sample OLS models; this does not prove cell-intrinsic expression or causality. In contrast, EBI3 (P = 0.0532) becomes borderline, while SERPINA10 (P = 0.216) and LTB (P = 0.337) attenuate substantially, indicating that their associations are sensitive to adjustment for the marker-based score."
+}

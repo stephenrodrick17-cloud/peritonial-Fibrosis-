@@ -1,0 +1,5 @@
+Sample,Timepoint,Treatment,Condition,Replicates
+HPMC_control_6hr,6h,Control (untreated),In vitro culture,n=1
+HPMC_TGF-b1_6hr,6h,TGF-beta1 (1 ng/mL),In vitro culture,n=1
+HPMC_control_24hr,24h,Control (untreated),In vitro culture,n=1
+HPMC_TGF-b1_24hr,24h,TGF-beta1 (1 ng/mL),In vitro culture,n=1

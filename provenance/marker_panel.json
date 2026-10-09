@@ -1,0 +1,77 @@
+{
+  "Mesothelial": [
+    "WT1",
+    "MSLN",
+    "CALB2",
+    "UPK3B",
+    "KRT19"
+  ],
+  "Fibroblast_Myofibroblast": [
+    "DCN",
+    "LUM",
+    "PDGFRA",
+    "COL1A1",
+    "COL1A2",
+    "ACTA2",
+    "TAGLN"
+  ],
+  "Macrophage": [
+    "CD68",
+    "CD163",
+    "MRC1",
+    "MARCO"
+  ],
+  "Monocyte": [
+    "CD14",
+    "FCGR3A",
+    "S100A8",
+    "S100A9"
+  ],
+  "Neutrophil": [
+    "S100A8",
+    "S100A9",
+    "FCGR3B",
+    "CSF3R"
+  ],
+  "T_Cell": [
+    "CD3D",
+    "CD3E",
+    "CD3G",
+    "CD4",
+    "CD8A",
+    "TRAC"
+  ],
+  "NK_Cell": [
+    "NCAM1",
+    "NKG7",
+    "GNLY",
+    "KLRD1"
+  ],
+  "B_Cell": [
+    "CD19",
+    "MS4A1",
+    "CD79A"
+  ],
+  "Plasma_Cell": [
+    "SDC1",
+    "MZB1",
+    "TNFRSF17",
+    "IGHG1"
+  ],
+  "Dendritic_Cell": [
+    "HLA-DRA",
+    "CD1C",
+    "CLEC9A",
+    "LILRA4"
+  ],
+  "Mast_Cell": [
+    "TPSAB1",
+    "CPA3",
+    "KIT"
+  ],
+  "Endothelial": [
+    "PECAM1",
+    "VWF",
+    "CDH5"
+  ]
+}

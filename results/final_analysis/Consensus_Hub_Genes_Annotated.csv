@@ -1,0 +1,12 @@
+Gene,logFC,P_Value,adj_P_Val,DEG_Status,Matrisome_Division,Matrisome_Category,WGCNA_Module,ML_Total_Votes,LASSO_Vote,SVM_RFE_Vote,RF_Vote,XGB_Vote,Degree_Centrality,Functional_Annotation
+FLT3LG,1.4377,2.35e-05,0.01324,Upregulated,Matrisome-associated,Secreted Factors,black,4,1,1,1,1,0,Fms-related tyrosine kinase 3 ligand; stimulates dendritic cell mobilization and fibro-inflammatory crosstalk.
+TNFSF15,0.9743,2.73e-05,0.01352,Upregulated,Matrisome-associated,Secreted Factors,black,4,1,1,1,1,1,TNF superfamily member 15 (TL1A); pro-inflammatory cytokine driving mucosal and peritoneal fibrogenesis.
+ADAM19,1.2131,0.000133,0.02544,Upregulated,Matrisome-associated,ECM Regulators,black,3,1,0,1,1,0,Disintegrin and metalloproteinase domain 19; ECM sheddase regulating shedding of cytokines and matrix degradation.
+SERPINA10,1.1659,0.000653,0.05433,Upregulated,Matrisome-associated,ECM Regulators,black,3,1,0,1,1,0,Serpin family A member 10 (ZPI); serine protease inhibitor regulating coagulation and tissue remodeling.
+LTB,1.6747,3.33e-06,0.00709,Upregulated,Matrisome-associated,Secreted Factors,black,2,1,0,1,0,2,"Lymphotoxin beta; membrane anchor for LT-alpha, promoting tertiary lymphoid structure formation in peritoneal tissue."
+CLEC4F,1.1014,0.0143,0.24507,Upregulated,Matrisome-associated,ECM-affiliated Proteins,black,2,1,0,0,1,0,C-type lectin domain family 4 member F; macrophage surface lectin mediating cellular adhesion and immune clearance.
+SEMA3E,1.0456,0.000281,0.03472,Upregulated,Matrisome-associated,ECM-affiliated Proteins,black,2,0,0,1,1,0,Semaphorin 3E; axon guidance factor modulating vascular patterning and endothelial-mesenchymal transition.
+SEMA4F,0.9251,0.00147,0.08126,Upregulated,Matrisome-associated,ECM-affiliated Proteins,black,2,1,0,0,1,0,Semaphorin 4F; neural and mesenchymal guidance factor implicated in cellular migration and fibrotic architecture.
+EBI3,0.8034,0.00244,0.10282,Upregulated,Matrisome-associated,Secreted Factors,black,2,1,0,1,0,0,Epstein-Barr virus induced 3; IL-27 / IL-35 cytokine subunit regulating chronic peritoneal inflammatory signaling.
+LTA,0.6419,0.0146,0.24639,Upregulated,Matrisome-associated,Secreted Factors,black,2,0,0,1,1,1,Lymphotoxin alpha (TNF-beta); pro-inflammatory cytokine activating NF-kB pathway and collagen synthesis.
+CXCL14,0.6377,0.00503,0.1522,Upregulated,Matrisome-associated,Secreted Factors,black,2,1,1,0,0,0,C-X-C motif chemokine ligand 14 (BRAK); chemoattractant promoting myofibroblast migration and ECM deposition.

@@ -1,0 +1,181 @@
+import random
+import numpy as np
+np.random.seed(42)
+random.seed(42)
+"""
+==============================================================================
+SCRIPT: ANALYZE CONVERGENCE (WGCNA TRAIT MODULES ∩ 81 CONVERGENT ECM-DEGS)
+Project: Peritoneal Dialysis-Associated Peritoneal Fibrosis Transcriptomics
+Purpose: Intersect WGCNA trait-correlated module genes with 81 ECM-DEGs
+         and generate a 3-way Venn diagram (DEGs ∩ Matrisome ∩ WGCNA)
+==============================================================================
+"""
+
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib_venn import venn3, venn3_circles
+
+os.makedirs("results/tables", exist_ok=True)
+os.makedirs("results/figures", exist_ok=True)
+
+print("=" * 70)
+print("STEP 1: LOADING WGCNA MODULE GENES & 81 CONVERGENT ECM-DEGS")
+print("=" * 70)
+
+# 1. Load WGCNA trait-significant module genes
+wgcna_file = "results/tables/wgcna_trait_significant_module_genes.csv"
+if not os.path.exists(wgcna_file):
+    raise FileNotFoundError(f"Missing {wgcna_file}! Please run 02b_wgcna_analysis.R first.")
+
+df_wgcna = pd.read_csv(wgcna_file)
+df_wgcna["gene_clean"] = df_wgcna["gene_symbol"].astype(str).str.strip().str.upper()
+print(f"Loaded {len(df_wgcna)} trait-significant WGCNA module genes ({df_wgcna['module_color'].iloc[0]} module).")
+
+# 2. Load convergent ECM-DEGs (81 pro-fibrotic ECM genes at log2FC >= 0.585 [1.5-fold], P < 0.05)
+ecm_file = "convergent_81_ECM_DEGs.csv"
+if not os.path.exists(ecm_file):
+    ecm_file = "results/tables/GSE62928_ECM_intersection.csv"
+
+df_ecm = pd.read_csv(ecm_file)
+sym_col = [c for c in df_ecm.columns if "Symbol" in c][0]
+df_ecm["gene_clean"] = df_ecm[sym_col].astype(str).str.strip().str.upper()
+print(f"Loaded {len(df_ecm)} convergent ECM-DEGs from {ecm_file}.")
+
+# 3. Intersect gene symbols
+convergent_genes = sorted(list(set(df_ecm["gene_clean"]).intersection(set(df_wgcna["gene_clean"]))))
+n_convergent = len(convergent_genes)
+
+print("\n" + "=" * 70)
+print(f"STEP 2: CONVERGENCE RESULTS ({n_convergent} WGCNA AND ECM-DEGs IDENTIFIED)")
+print("=" * 70)
+print(f"Total Convergent Genes: {n_convergent}")
+print("Gene List:")
+print(", ".join(convergent_genes))
+
+# 4. Merge WGCNA network metrics with DEG statistics
+merged_rows = []
+for gene in convergent_genes:
+    row_wgcna = df_wgcna[df_wgcna["gene_clean"] == gene].iloc[0]
+    row_ecm = df_ecm[df_ecm["gene_clean"] == gene].iloc[0]
+    
+    merged_rows.append({
+        "gene_symbol": gene,
+        "module_color": row_wgcna["module_color"],
+        "MM": row_wgcna["MM"],
+        "MM_pvalue": row_wgcna["MM_pvalue"],
+        "GS": row_wgcna["GS"],
+        "GS_pvalue": row_wgcna["GS_pvalue"],
+        "logFC": row_ecm.get("logFC", None),
+        "Direction": row_ecm.get("Direction", "UP" if row_ecm.get("logFC", 0) > 0 else "DOWN"),
+        "P.Value": row_ecm.get("P.Value", None),
+        "adj.P.Val": row_ecm.get("adj.P.Val", None),
+        "Matrisome_Division": row_ecm.get("Matrisome Division", row_ecm.get("Matrisome_Division", "N/A")),
+        "Matrisome_Category": row_ecm.get("Matrisome Category", row_ecm.get("Matrisome_Category", "N/A")),
+        "Probe_ID": row_ecm.get("Probe ID", row_ecm.get("Probe_ID", "N/A"))
+    })
+
+df_merged = pd.DataFrame(merged_rows)
+df_merged = df_merged.sort_values(by=["MM", "GS"], ascending=[False, False])
+
+# Export merged convergence table
+out_csv_root = "convergent_WGCNA_ECM_genes.csv"
+out_csv_tables = "results/tables/convergent_WGCNA_ECM_genes.csv"
+df_merged.to_csv(out_csv_root, index=False)
+df_merged.to_csv(out_csv_tables, index=False)
+
+print(f"\nSaved merged convergence table to:\n  - {out_csv_root}\n  - {out_csv_tables}")
+
+# ==============================================================================
+# STEP 3: GENERATE 3-WAY VENN DIAGRAM (DEGs ∩ Matrisome ∩ WGCNA Module)
+# ==============================================================================
+print("\n" + "=" * 70)
+print("STEP 3: GENERATING 3-WAY CONVERGENCE VENN DIAGRAM")
+print("=" * 70)
+
+# Compute dynamic 3-way Venn subsets from actual gene sets:
+# Set A: GSE62928 Pro-Fibrotic DEGs (log2FC >= 0.585 [1.5-fold], P < 0.05, N = 534)
+# Set B: Human Matrisome (N = 1,027)
+# Set C: WGCNA Trait-Significant Module (Salmon, N = 604)
+
+# Load full pro-fibrotic DEGs (N = 534) via canonical gene-level pipeline output
+df_deg = pd.read_csv("results/tables/GSE62928_all_results.csv")
+df_deg_clean = df_deg.dropna(subset=["Gene"]).copy()
+df_deg_clean = df_deg_clean[~df_deg_clean["Gene"].isin(["", "---"])]
+df_deg_clean["Gene"] = df_deg_clean["Gene"].astype(str).str.strip().str.upper()
+df_gene = df_deg_clean.sort_values("P.Value").drop_duplicates("Gene")
+set_degs = set(df_gene[(df_gene["P.Value"] < 0.05) & (df_gene["logFC"] >= 0.585)]["Gene"])
+
+# Load matrisome
+df_ecm_ref = pd.read_excel("ECM genes all.xlsx", skiprows=1)
+sym_col_ref = [c for c in df_ecm_ref.columns if "symbol" in c.lower() or "gene" in c.lower()][0]
+set_matrisome = set(df_ecm_ref[sym_col_ref].dropna().astype(str).str.strip().str.upper())
+set_matrisome = {g for g in set_matrisome if g and g not in ["GENE SYMBOL", "NA", "NAN"]}
+
+# Set of Salmon module genes
+set_wgcna = set(df_wgcna["gene_clean"])
+
+s_100 = len(set_degs - set_matrisome - set_wgcna)
+s_010 = len(set_matrisome - set_degs - set_wgcna)
+s_110 = len((set_degs & set_matrisome) - set_wgcna)
+s_001 = len(set_wgcna - set_degs - set_matrisome)
+s_101 = len((set_degs & set_wgcna) - set_matrisome)
+s_011 = len((set_matrisome & set_wgcna) - set_degs)
+s_111 = len(set_degs & set_matrisome & set_wgcna)
+
+subsets = (s_100, s_010, s_110, s_001, s_101, s_011, s_111)
+
+fig, ax = plt.subplots(figsize=(11, 9), facecolor="#F8FAFC")
+
+v = venn3(
+    subsets=subsets,
+    set_labels=(
+        f"GSE62928 Pro-Fibrotic DEGs\n(Peritoneal Fibrosis)\n[N = {len(set_degs)}]",
+        f"Human Matrisome\n(Master Database)\n[N = {len(set_matrisome)}]",
+        f"WGCNA Trait Module\n(Salmon: r = 0.81, p = 0.016)\n[N = {len(set_wgcna)}]"
+    ),
+    set_colors=("#6366F1", "#10B981", "#F59E0B"),
+    alpha=0.65,
+    ax=ax
+)
+
+# Custom borders
+c = venn3_circles(subsets=subsets, linestyle="solid", linewidth=2.0, color="#1E293B", ax=ax)
+
+# Style labels
+for text in v.set_labels:
+    if text:
+        text.set_fontsize(11.5)
+        text.set_fontweight("bold")
+        text.set_color("#0F172A")
+
+for subset_id in ["100", "010", "110", "001", "101", "011"]:
+    lbl = v.get_label_by_id(subset_id)
+    if lbl:
+        lbl.set_fontsize(12)
+        lbl.set_fontweight("bold")
+        lbl.set_color("#1E293B")
+
+# Highlight central convergence
+lbl_111 = v.get_label_by_id("111")
+if lbl_111:
+    lbl_111.set_text(f"{n_convergent}\n(convergent candidates)")
+    lbl_111.set_fontsize(14)
+    lbl_111.set_fontweight("bold")
+    lbl_111.set_color("#B91C1C")
+
+plt.title("Tripartite Convergence: GSE62928 DEGs ∩ Human Matrisome ∩ WGCNA Trait Module\n"
+          "(Co-Expression Network Analysis & Curated Extracellular Matrix Integration)",
+          fontsize=12.5, fontweight="bold", pad=20, color="#0F172A")
+
+plt.tight_layout()
+venn_out_root = "venn_wgcna_convergence.png"
+venn_out_fig = "results/figures/venn_wgcna_convergence.png"
+plt.savefig(venn_out_root, dpi=300)
+plt.savefig(venn_out_fig, dpi=300)
+plt.close()
+
+print(f"Saved 3-way Venn diagram to:\n  - {venn_out_root}\n  - {venn_out_fig}")
+print("\n" + "=" * 70)
+print("TASK 2 COMPLETED SUCCESSFULLY!")
+print("=" * 70)

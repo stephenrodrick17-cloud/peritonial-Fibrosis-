@@ -1,0 +1,34 @@
+{
+  "timestamp_addendum_frozen_utc": "2026-10-05T06:08:08.589020+00:00",
+  "dataset": "GSE248762 (PD effluent scRNA-seq, 16 donors)",
+  "status": "Pre-registered BEFORE running sensitivity analyses (g) and (h)",
+  "sensitivity_g": {
+    "title": "Ceiling-rescued stromal/mesothelial lineage pseudobulk",
+    "description": "Re-run stromal pseudobulk for all 3 contrasts including cells excluded by upper UMI/gene ceilings that are assigned to the stromal / mesothelial lineage by hub-blind module scoring (WT1, MSLN, CALB2, DCN, LUM, PDGFRA; strictly 0 hub genes). Doublet filtering: remove any cell flagged by Scrublet (> 0.4390) OR scDblFinder ('doublet'). Mitochondrial ceiling: <= 15%.",
+    "scrublet_cutoff": 0.439,
+    "mito_ceiling_pct": 15.0,
+    "contrasts": [
+      "LV_UF_vs_LV_NOT_UF",
+      "LV_UF_vs_SV",
+      "LV_NOT_UF_vs_SV"
+    ],
+    "method": "edgeR quasi-likelihood across all 37,487 genes (filterByExpr + TMM over all genes)"
+  },
+  "sensitivity_h": {
+    "title": "High-confidence donors only (>=50 stromal cells and median genes >=1000)",
+    "description": "Re-run stromal pseudobulk restricting to donors with >= 50 stromal cells AND median genes per cell >= 1000 in the primary stromal population. Evaluates whether low-yield or low-complexity donor libraries drive the primary result.",
+    "min_cells": 50,
+    "min_median_genes": 1000,
+    "contrasts": [
+      "LV_UF_vs_LV_NOT_UF",
+      "LV_UF_vs_SV",
+      "LV_NOT_UF_vs_SV"
+    ],
+    "method": "edgeR quasi-likelihood across all 37,487 genes (filterByExpr + TMM over all genes)"
+  },
+  "protocol_constraints": {
+    "primary_status": "Primary analysis results remain strictly unchanged and are labeled PRIMARY",
+    "sensitivity_status": "Analyses (g) and (h) are exploratory sensitivity analyses and are labeled SENSITIVITY",
+    "causal_language": "No causal language allowed; strictly associative phrasing"
+  }
+}

@@ -1,0 +1,2 @@
+"full_log2FC","most_influential_patient","patient_group","leave_one_out_log2FC","absolute_change","all_leave_one_out_log2FC_positive","minimum_leave_one_out_log2FC","maximum_leave_one_out_log2FC"
+5.88930516269336,"GSM7919584","LV_UF",5.01518340549267,0.874121757200687,TRUE,5.01518340549267,6.09930954888028

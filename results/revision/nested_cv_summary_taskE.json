@@ -1,0 +1,47 @@
+{
+  "cv_protocol": "Repeated Stratified 5-Fold CV (10 repeats, 50 total splits)",
+  "seed": 42,
+  "fold_feature_selection": "Unmoderated two-sample t filter with Welch variance estimate, Naba Matrisome intersection, LASSO, SVM-RFE, RF",
+  "wgcna_recomputed_within_folds": false,
+  "ci_method": "Percentile bootstrap over 10 repeat-level out-of-fold AUC estimates; repeats are the bootstrap units",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 42,
+  "non_nested_apparent_auc": 1.0,
+  "non_nested_cv_c_index": 0.8731,
+  "nested_cv_auc_mean": 0.77,
+  "nested_cv_auc_sd": 0.0453,
+  "nested_cv_auc_ci95": [
+    0.7408,
+    0.7946
+  ],
+  "nested_cv_c_index_mean": 0.77,
+  "nested_cv_c_index_sd": 0.0453,
+  "nested_cv_c_index_ci95": [
+    0.7415,
+    0.7942
+  ],
+  "repeat_aucs": [
+    0.7192,
+    0.7615,
+    0.7654,
+    0.8038,
+    0.8038,
+    0.7577,
+    0.8077,
+    0.6731,
+    0.7923,
+    0.8154
+  ],
+  "repeat_c_indices": [
+    0.7192,
+    0.7615,
+    0.7654,
+    0.8038,
+    0.8038,
+    0.7577,
+    0.8077,
+    0.6731,
+    0.7923,
+    0.8154
+  ]
+}

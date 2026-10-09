@@ -1,0 +1,25 @@
+{
+  "analysis_label": "post hoc / exploratory",
+  "accession": "GSE248762",
+  "input": "results\\revision\\effluent_validation\\GSE248762\\GSE248762_RAW.tar",
+  "input_bytes": 1014528000,
+  "python_version": "3.13.1",
+  "scanpy_version": "1.12.4",
+  "anndata_version": "0.13.4",
+  "qc_and_annotation": "Unchanged functions and thresholds from the saved primary GSE248762 Scanpy pipeline; all 16 GEO samples retained.",
+  "qc_minimum_detected_genes": 200,
+  "qc_maximum_mitochondrial_percent": 20.0,
+  "celltype_pseudobulk_minimum_cells": 20,
+  "marker_comparison": [
+    "MSLN",
+    "UPK3B",
+    "S100A8",
+    "S100A9",
+    "MPO",
+    "FCGR3B",
+    "LCN2",
+    "CSF3R"
+  ],
+  "seed": 42,
+  "ambient_rna_limitation": "Filtered-cell matrices do not include empty-droplet/background profiles; descriptive localization is not an ambient-RNA test."
+}

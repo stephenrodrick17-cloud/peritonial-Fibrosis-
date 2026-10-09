@@ -1,0 +1,12 @@
+Gene_Symbol,Matrisome_Category,Matrisome_Division,ML_Consensus_Votes,Total_Degree,STRING_Degree,Coexpression_Degree,Betweenness_Centrality,Closeness_Centrality,Eigenvector_Centrality
+COL11A1,Collagens,Core matrisome,2,9,7,9,0.0889,0.9091,0.2934
+COL8A1,Collagens,Core matrisome,2,9,5,9,0.0667,0.9091,0.3242
+VCAN,Proteoglycans,Core matrisome,2,9,4,9,0.0667,0.9091,0.3408
+FN1,ECM Glycoproteins,Core matrisome,3,9,7,9,0.0222,0.9091,0.3156
+COL3A1,Collagens,Core matrisome,2,9,6,9,0.0222,0.9091,0.3492
+INHBA,Secreted Factors,Matrisome-associated,2,9,2,9,0.0222,0.9091,0.3598
+COMP,ECM Glycoproteins,Core matrisome,2,8,5,8,0.0889,0.8333,0.2881
+ISM1,Secreted Factors,Matrisome-associated,3,8,0,8,0.0,0.8333,0.365
+EDIL3,ECM Glycoproteins,Core matrisome,3,5,1,5,0.0,0.6667,0.2309
+LOX,ECM Regulators,Matrisome-associated,2,5,4,5,0.0,0.6667,0.19
+THBS3,ECM Glycoproteins,Core matrisome,2,4,1,4,0.0,0.625,0.1899

@@ -1,0 +1,53 @@
+{
+  "accession": "GSE248762",
+  "primary_contrast": "LV (LV_NOT_UF + LV_UF) vs SV",
+  "n_LV_pseudobulk_patients": 10,
+  "n_SV_pseudobulk_patients": 6,
+  "panel_genes_concordant": 7,
+  "panel_genes_detected": 7,
+  "panel_sign_test_one_sided_P": 0.0078125,
+  "strict_hubs_concordant": 2,
+  "strict_hubs_detected": 2,
+  "strict_hub_sign_test_one_sided_P": 0.25,
+  "panel_composite": {
+    "estimable": false,
+    "n_genes": 7
+  },
+  "panel_null_empirical_P_mean_gene_log2FC": NaN,
+  "panel_null_empirical_P_composite_AUC": NaN,
+  "strict_hub_composite": {
+    "n_genes": 2,
+    "estimable": true,
+    "mean_score_LV": 0.12621258124610643,
+    "mean_score_SV": -0.21035430207684444,
+    "mann_whitney_p": 0.1805694305694306,
+    "auc": 0.7166666666666667,
+    "auc_ci_lower": 0.4166666666666667,
+    "auc_ci_upper": 1.0,
+    "mean_gene_log2FC": 1.21415002538156
+  },
+  "strict_hub_null_empirical_P_mean_gene_log2FC": 0.04695304695304695,
+  "strict_hub_null_empirical_P_composite_AUC": 0.1968031968031968,
+  "matched_null_details": {},
+  "strict_matched_null_details": {
+    "target_deciles": [
+      1,
+      5
+    ],
+    "decile_pool_sizes": {
+      "1": 1781,
+      "5": 1782
+    },
+    "possible_unique_sets": 3173742,
+    "required_unique_sets": 1000,
+    "insufficient_deciles": {},
+    "attempts_to_draw": 1000
+  },
+  "composition_adjustment": {
+    "available": true,
+    "status": "feasible: both groups have at least five patients; design full rank"
+  },
+  "preregistered_verdict": "Not supported",
+  "verdict_rule_note": "The direction criterion is met (7/7 detected genes concordant), but the full-panel composite and its AUC null are not estimable because SERPINA10 is not detected. The exact-five concordance partial tier is not met; the 0.65-0.80 AUC partial tier cannot be evaluated. The literal preregistered fallback is Not supported. This label is not a claim that directional evidence was absent.",
+  "seed": 42
+}

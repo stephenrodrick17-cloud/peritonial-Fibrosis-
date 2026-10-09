@@ -1,0 +1,64 @@
+{
+  "timestamp_plan_frozen_utc": "2026-10-05T05:44:09.256058+00:00",
+  "dataset": "GSE248762 (16 PD effluent donors)",
+  "primary_analysis": {
+    "doublet_rule": "Scrublet fixed threshold 0.4390",
+    "cell_population": "All cells passing count/gene/mito QC and doublet filter (95,247 cells)",
+    "batch_integration_role": "Harmony used strictly for graph construction and cluster identification; differential testing uses pseudobulk counts per donor",
+    "clusters_excluded": [
+      "4",
+      "12"
+    ],
+    "clusters_excluded_rationale": "Donor-dominated clusters contributing >80% and 100% from single donor LV_UF-3",
+    "cell_types_tested": [
+      "stromal / mesothelial-lineage (unresolved)",
+      "Monocyte / macrophage",
+      "cDC",
+      "T cell",
+      "NK cell"
+    ],
+    "cell_types_insufficient_data": [
+      "B cell",
+      "Neutrophil"
+    ],
+    "contrasts": [
+      {
+        "name": "LV_UF_vs_LV_NOT_UF",
+        "role": "primary",
+        "numerator": "LV_UF",
+        "denominator": "LV_NOT_UF"
+      },
+      {
+        "name": "LV_UF_vs_SV",
+        "role": "secondary",
+        "numerator": "LV_UF",
+        "denominator": "SV"
+      },
+      {
+        "name": "LV_NOT_UF_vs_SV",
+        "role": "secondary",
+        "numerator": "LV_NOT_UF",
+        "denominator": "SV"
+      }
+    ],
+    "differential_method": "edgeR quasi-likelihood (glmQLFit / glmQLFTest) on raw donor-level pseudobulk counts",
+    "normalization": "TMM normalization over all genes passing filterByExpr, not restricted to hub genes",
+    "multiple_testing": "Benjamini-Hochberg FDR across all gene x cell type x contrast tests that pass evidence rule"
+  },
+  "sensitivity_analyses": [
+    "(a) leave-one-donor-out for every donor (16 runs)",
+    "(b) stromal without LV_UF-3",
+    "(c) after removing cells flagged by scDblFinder (using saved calls in results/tables/scDblFinder_per_barcode_calls.csv)",
+    "(d) stromal using only cells with >= 700 genes",
+    "(e) stromal pseudobulk only for donors with >= 50 stromal cells",
+    "(f) pseudobulk using top-N most variable genes for TMM"
+  ],
+  "robustness_rule": {
+    "criterion_1": "Primary FDR < 0.05",
+    "criterion_2": "Sign of log2FC unchanged in sensitivity analyses (b), (c), (d), and (e)",
+    "criterion_3": "Sign of log2FC unchanged in every leave-one-donor-out run (a)",
+    "verdict_pass": "supported",
+    "verdict_fail": "not robust",
+    "rule_constraint": "Primary analysis choices are not modified after viewing results"
+  }
+}
