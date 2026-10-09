@@ -1,0 +1,3 @@
+"Set","Gene_Count","Concordant_Genes","Sign_Test_One_Sided_P","Composite_Mean_Difference_EPS_minus_NonEPS","Composite_Mann_Whitney_Exact_Two_Sided_P","Composite_AUC","Composite_AUC_Bootstrap_CI95_Lower","Composite_AUC_Bootstrap_CI95_Upper","Mean_Gene_log2FC","Null_AUC_Empirical_P","Null_Mean_Gene_log2FC_Empirical_P"
+"Eight-gene panel",8,4,0.63671875,0.469796088370235,0.114285714285714,0.875,0.5,1,0.47584234375,0.014985014985015,0.107892107892108
+"Strict 3/3 genes",2,0,1,-0.411676554190343,0.685714285714286,0.375,0,0.8125,-0.15910325,0.798201798201798,0.737262737262737

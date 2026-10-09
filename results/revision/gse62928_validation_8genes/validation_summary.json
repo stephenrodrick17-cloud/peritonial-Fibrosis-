@@ -1,0 +1,122 @@
+{
+  "qc": {
+    "dataset": "GSE62928",
+    "platform": "GPL13158 Affymetrix HG-U133 Plus 2.0",
+    "sample_count": 8,
+    "sample_groups": {
+      "EPS": 4,
+      "Early PD": 2,
+      "Uremic": 2
+    },
+    "data_processing": "!Sample_data_processing\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"\t\"The data was normalised using Robust Multichip Average (RMA) method that include background adjustment, quantile normalization and final summarization of 11 oligonucleotides per transcript using the median polish algorithm\"",
+    "matrix_logged_rma": true,
+    "normalization_applied_again": false,
+    "probe_sets_in_matrix": 54715,
+    "mapped_unique_gene_symbols": 20940,
+    "primary_probe_detection_cutoff_mean_log2_gt": 5,
+    "primary_panel_genes_detected": 0,
+    "panel_genes_without_probe": [],
+    "pca_variable_probe_count": 1000,
+    "pca_descriptive_outlier_rule": "Flag if absolute PC1 or PC2 score exceeds 2 sample SD; no samples removed.",
+    "pca_flagged_samples": [],
+    "sample_ids_removed": [],
+    "random_seed": 42
+  },
+  "discovery_values_source": "D:/Peritoneal Project/results/tables/GSE125498_all_results.csv",
+  "preregistered_genes": ["TNFSF15", "FLT3LG", "EBI3", "LTB", "ADAM19", "ECM1", "SERPINA10", "CST7"],
+  "strict_3_of_3_genes": ["TNFSF15", "FLT3LG"],
+  "per_gene_concordant_count": 4,
+  "per_gene_total": 8,
+  "gene_set_results": [
+    {
+      "Set": "Eight-gene panel",
+      "Gene_Count": 8,
+      "Concordant_Genes": 4,
+      "Sign_Test_One_Sided_P": 0.6367,
+      "Composite_Mean_Difference_EPS_minus_NonEPS": 0.4698,
+      "Composite_Mann_Whitney_Exact_Two_Sided_P": 0.1143,
+      "Composite_AUC": 0.875,
+      "Composite_AUC_Bootstrap_CI95_Lower": 0.5,
+      "Composite_AUC_Bootstrap_CI95_Upper": 1,
+      "Mean_Gene_log2FC": 0.4758,
+      "Null_AUC_Empirical_P": 0.015,
+      "Null_Mean_Gene_log2FC_Empirical_P": 0.1079
+    },
+    {
+      "Set": "Strict 3/3 genes",
+      "Gene_Count": 2,
+      "Concordant_Genes": 0,
+      "Sign_Test_One_Sided_P": 1,
+      "Composite_Mean_Difference_EPS_minus_NonEPS": -0.4117,
+      "Composite_Mann_Whitney_Exact_Two_Sided_P": 0.6857,
+      "Composite_AUC": 0.375,
+      "Composite_AUC_Bootstrap_CI95_Lower": 0,
+      "Composite_AUC_Bootstrap_CI95_Upper": 0.8125,
+      "Mean_Gene_log2FC": -0.1591,
+      "Null_AUC_Empirical_P": 0.7982,
+      "Null_Mean_Gene_log2FC_Empirical_P": 0.7373
+    }
+  ],
+  "null_results": [
+    {
+      "Set": "Eight-gene panel",
+      "Null_Sets": 1000,
+      "Observed_AUC": 0.875,
+      "Null_AUC_Mean": 0.5262,
+      "Null_AUC_SD": 0.1544,
+      "Null_AUC_Count_Greater_Or_Equal": 14,
+      "Null_AUC_Empirical_P": 0.015,
+      "Observed_Mean_Gene_log2FC": 0.4758,
+      "Null_Mean_Gene_log2FC_Mean": 0.1397,
+      "Null_Mean_Gene_log2FC_SD": 0.2606,
+      "Null_log2FC_Count_Greater_Or_Equal": 107,
+      "Null_log2FC_Empirical_P": 0.1079
+    },
+    {
+      "Set": "Strict 3/3 genes",
+      "Null_Sets": 1000,
+      "Observed_AUC": 0.375,
+      "Null_AUC_Mean": 0.5179,
+      "Null_AUC_SD": 0.1985,
+      "Null_AUC_Count_Greater_Or_Equal": 798,
+      "Null_AUC_Empirical_P": 0.7982,
+      "Observed_Mean_Gene_log2FC": -0.1591,
+      "Null_Mean_Gene_log2FC_Mean": 0.1247,
+      "Null_Mean_Gene_log2FC_SD": 0.52,
+      "Null_log2FC_Count_Greater_Or_Equal": 737,
+      "Null_log2FC_Empirical_P": 0.7373
+    }
+  ],
+  "marker_score": {
+    "label": "Leukocyte marker-score proxy, not cell-fraction deconvolution",
+    "source": "scripts/task4_marker_sets.py: LEUKOCYTE_MARKERS",
+    "genes_requested_after_hub_removal": ["PTPRC", "CD3D", "CD3E", "CD3G", "CD4", "CD8A", "CD8B", "CD19", "MS4A1", "CD79A", "CD79B", "NCAM1", "KLRD1", "CD14", "CD68", "ITGAM", "FCGR3A"],
+    "genes_used": ["PTPRC", "CD3D", "CD3E", "CD3G", "CD4", "CD8A", "CD8B", "CD19", "MS4A1", "CD79A", "CD79B", "NCAM1", "KLRD1", "CD14", "CD68", "ITGAM", "FCGR3A"],
+    "genes_used_n": 17,
+    "eps_mean": 0.2596,
+    "control_mean": -0.2596,
+    "eps_minus_control": 0.5193,
+    "mann_whitney_exact_two_sided_p": 0.0571,
+    "pearson_r_with_8_gene_composite": 0.6863,
+    "pearson_p_with_8_gene_composite": 0.0602
+  },
+  "power": {
+    "model": "Two-sample independent t-test, equal group sizes, two-sided alpha=0.05, 80% power, df=6",
+    "n_per_group": 4,
+    "alpha": 0.05,
+    "target_power": 0.8,
+    "minimum_detectable_cohens_d": 2.3808
+  },
+  "interpretation_rule": {
+    "supportive": "At least 6/8 concordant AND composite AUC >= 0.80 AND empirical matched-null AUC P < 0.05",
+    "partially_supportive": "5/8 concordant OR AUC 0.65-0.80 with empirical matched-null AUC P >= 0.05",
+    "not_supported": "Otherwise"
+  },
+  "software": {
+    "R": "4.4.2",
+    "limma": "3.62.2"
+  },
+  "bootstrap_replicates": 10000,
+  "random_gene_set_replicates": 1000,
+  "random_seed": 42
+}
