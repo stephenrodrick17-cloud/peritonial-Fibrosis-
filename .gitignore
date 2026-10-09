@@ -40,3 +40,8 @@ results/readme_diff_full.txt
 results/audit_grep_full.txt
 results/figures/superseded/
 data/processed/pseudobulk/pb_audit_*
+
+# GEO effluent-validation raw single-cell archives and extracted count files
+results/revision/effluent_validation/**/*_RAW.tar
+results/revision/effluent_validation/**/*.features.tsv.gz
+results/revision/effluent_validation/**/*.matrix.mtx.gz
