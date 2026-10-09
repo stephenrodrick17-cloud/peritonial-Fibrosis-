@@ -1,0 +1,5 @@
+"compartment","n_LV_UF","n_LV_NOT_UF","edgeR_version","R_version","design","filtering","normalization","test"
+"monocyte/macrophage",4,6,"4.4.2","R version 4.4.2 (2024-10-31 ucrt)","~ group; LV_UF relative to LV_NOT_UF","edgeR filterByExpr","TMM","robust quasi-likelihood F-test"
+"T/NK",4,6,"4.4.2","R version 4.4.2 (2024-10-31 ucrt)","~ group; LV_UF relative to LV_NOT_UF","edgeR filterByExpr","TMM","robust quasi-likelihood F-test"
+"fibroblast",2,2,"4.4.2","R version 4.4.2 (2024-10-31 ucrt)","~ group; LV_UF relative to LV_NOT_UF","edgeR filterByExpr","TMM","robust quasi-likelihood F-test"
+"mesothelial",4,6,"4.4.2","R version 4.4.2 (2024-10-31 ucrt)","~ group; LV_UF relative to LV_NOT_UF","edgeR filterByExpr","TMM","robust quasi-likelihood F-test"

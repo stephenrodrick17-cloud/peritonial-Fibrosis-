@@ -1,0 +1,48 @@
+{
+  "cohort": "GSE248762",
+  "seed": 42,
+  "patients": 16,
+  "groups": {
+    "LV_UF": 4,
+    "LV_NOT_UF": 6,
+    "SV": 6
+  },
+  "scanpy": "1.12.4",
+  "anndata": "0.13.4",
+  "numpy": "2.4.6",
+  "pandas": "2.3.3",
+  "liana": "1.10.0",
+  "gseapy": "1.3.1",
+  "runtime_seconds": 928.4,
+  "candidate_genes": [
+    "TNFSF15",
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "ECM1",
+    "SERPINA10",
+    "CST7"
+  ],
+  "fibrosis_markers": [
+    "ACTA2",
+    "COL1A1",
+    "COL1A2",
+    "FN1",
+    "TGFB1",
+    "CCN2",
+    "SERPINE1",
+    "VEGFA"
+  ],
+  "source_analysis_config": "D:\\Peritoneal Project\\results\\revision\\effluent_validation\\GSE248762\\analysis_20261009\\analysis_config.json",
+  "existing_edger_script": "D:\\Peritoneal Project\\results\\revision\\effluent_validation\\GSE248762\\scripts\\gse248762_step2_4_edger.R",
+  "gene_mapping_rows": 37487,
+  "pseudobulk_input_sha256": {
+    "all_cell_pseudobulk_counts.csv": "bfe06782d3d4e95b6913eb6697c225ac9cfccb3aff05eb7677737482b068a397",
+    "all_cell_pseudobulk_metadata.csv": "55132c691f07dab4810c28dcd8d27b9d53e65a6a35aaa4fac2d08ba3cb82f38c",
+    "celltype_pseudobulk_counts.csv": "a9781eabafdbe111d37803ed9f2416dbd667b39b0aa485cffe124ed3742ebd03",
+    "celltype_pseudobulk_metadata.csv": "f44532948b10988008c8a9ccac856409187ec724a37e3bba14e93fd931d77d7b",
+    "patient_celltype_composition.csv": "b94e172e35693df002448963224477bd03e1d1406d7d9d14d414d2e4b9c86301",
+    "gene_id_to_symbol.csv": "fc0458f67a46bf7a18c5d441cf95caed828a56f37c7fb73d32851c0e6c23c821"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "tool": "LIANA",
+  "version": "1.10.0",
+  "resource": "consensus",
+  "resource_interactions_supplied": [
+    {
+      "ligand": "DLL1",
+      "receptor": "NOTCH1"
+    },
+    {
+      "ligand": "DLL1",
+      "receptor": "NOTCH2"
+    },
+    {
+      "ligand": "DLL1",
+      "receptor": "NOTCH4"
+    },
+    {
+      "ligand": "DLL1",
+      "receptor": "NOTCH3"
+    },
+    {
+      "ligand": "TNFSF15",
+      "receptor": "TNFRSF25"
+    },
+    {
+      "ligand": "JAG1",
+      "receptor": "NOTCH1"
+    },
+    {
+      "ligand": "JAG1",
+      "receptor": "NOTCH2"
+    },
+    {
+      "ligand": "JAG1",
+      "receptor": "NOTCH4"
+    },
+    {
+      "ligand": "JAG1",
+      "receptor": "NOTCH3"
+    },
+    {
+      "ligand": "DLL4",
+      "receptor": "NOTCH1"
+    },
+    {
+      "ligand": "DLL4",
+      "receptor": "NOTCH2"
+    },
+    {
+      "ligand": "DLL4",
+      "receptor": "NOTCH4"
+    },
+    {
+      "ligand": "DLL4",
+      "receptor": "NOTCH3"
+    },
+    {
+      "ligand": "DLL3",
+      "receptor": "NOTCH1"
+    },
+    {
+      "ligand": "DLL3",
+      "receptor": "NOTCH2"
+    },
+    {
+      "ligand": "DLL3",
+      "receptor": "NOTCH4"
+    },
+    {
+      "ligand": "DLL3",
+      "receptor": "NOTCH3"
+    },
+    {
+      "ligand": "JAG2",
+      "receptor": "NOTCH1"
+    },
+    {
+      "ligand": "JAG2",
+      "receptor": "NOTCH2"
+    },
+    {
+      "ligand": "JAG2",
+      "receptor": "NOTCH4"
+    },
+    {
+      "ligand": "JAG2",
+      "receptor": "NOTCH3"
+    },
+    {
+      "ligand": "EBI3_IL27",
+      "receptor": "IL27RA_IL6ST"
+    }
+  ],
+  "total_subsampled_cells": 20000,
+  "cell_type_counts": {
+    "T/NK": 8585,
+    "monocyte/macrophage": 5450,
+    "B": 2277,
+    "neutrophil": 2090,
+    "mesothelial": 1269,
+    "fibroblast": 240,
+    "other": 89
+  },
+  "seed": 42,
+  "targeted_immune_stromal_predictions": 352,
+  "TNFSF15_TNFRSF25_resource_pair_available": true,
+  "IL27_EBI3_IL27RA_IL6ST_resource_pair_available": true,
+  "Notch_ligand_receptor_resource_pairs_available": 20,
+  "ADAM19_direct_interaction_resource_pair_available": false,
+  "warning": "All LIANA results are inferred ligand-receptor predictions, not measured signaling. ADAM19 was not a direct interaction in the selected consensus resource; Notch-route predictions do not establish ADAM19-mediated Notch signaling."
+}
