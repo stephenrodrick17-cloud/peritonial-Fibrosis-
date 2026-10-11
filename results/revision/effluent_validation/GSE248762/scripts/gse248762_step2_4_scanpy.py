@@ -58,6 +58,76 @@ MAX_MT_PERCENT = 20.0
 MIN_PSEUDOBULK_CELLS = 20
 MIN_DETECTION_COUNT = 10
 N_BOOTSTRAPS = 10_000
+
+
+def classify_preregistered_verdict(
+    concordant_count: int,
+    detected_count: int,
+    composite_summary: dict,
+    auc_null_p: float,
+    strict_concordant_count: int,
+    undetected_genes: list[str],
+) -> tuple[str, str]:
+    composite_estimable = bool(composite_summary.get("estimable", False))
+    auc = composite_summary.get("auc")
+    if concordant_count == 5:
+        return (
+            "Partially supportive",
+            f"{concordant_count}/{detected_count} detected genes are "
+            "concordant, meeting the exact-five partial-support branch.",
+        )
+
+    if (
+        composite_estimable
+        and concordant_count >= 6
+        and auc >= 0.80
+        and np.isfinite(auc_null_p)
+        and auc_null_p < 0.05
+        and strict_concordant_count == len(STRICT_GENES)
+    ):
+        return (
+            "Supportive",
+            "The detected-gene direction count, full-panel AUC, matched-null "
+            "P-value, and strict-hub direction criteria all meet the "
+            "preregistered supportive tier.",
+        )
+
+    if (
+        composite_estimable
+        and 0.65 <= auc <= 0.80
+        and np.isfinite(auc_null_p)
+        and auc_null_p >= 0.05
+    ):
+        return (
+            "Partially supportive",
+            f"The estimable composite AUC is {auc:.4f} with matched-null "
+            f"P={auc_null_p:.4f}, meeting the partial AUC branch.",
+        )
+
+    if not composite_estimable:
+        direction_component = (
+            "meets" if concordant_count >= 6 else "does not meet"
+        )
+        note = (
+            f"{concordant_count}/{detected_count} detected genes are "
+            f"concordant, which {direction_component} the supportive "
+            "direction-count component (at least six concordant genes). "
+            "The full-panel composite and its AUC null are not estimable"
+        )
+        if undetected_genes:
+            note += f" because these genes were not detected: {', '.join(undetected_genes)}"
+        note += (
+            ". The exact-five partial branch does not apply, and the AUC "
+            "partial branch cannot be evaluated. The literal fallback is "
+            "Not supported; this does not mean directional evidence was absent."
+        )
+    else:
+        note = (
+            f"No tier is met: {concordant_count}/{detected_count} detected "
+            f"genes are concordant, composite AUC={auc:.4f}, and "
+            f"matched-null P={auc_null_p:.4f}."
+        )
+    return "Not supported", note
 N_NULL_SETS = 1_000
 
 
@@ -1414,24 +1484,17 @@ def run_gene_set_analyses(
     plt.close(fig)
 
     score_summary = set_summary
-    if not score_summary.get("estimable", False):
-        verdict = "Not supported"
-    elif (
-        concordant >= 6
-        and score_summary["auc"] >= 0.80
-        and np.isfinite(auc_null_p)
-        and auc_null_p < 0.05
-        and strict_concordant == len(STRICT_GENES)
-    ):
-        verdict = "Supportive"
-    elif concordant == 5 or (
-        0.65 <= score_summary["auc"] <= 0.80
-        and np.isfinite(auc_null_p)
-        and auc_null_p >= 0.05
-    ):
-        verdict = "Partially supportive"
-    else:
-        verdict = "Not supported"
+    undetected_genes = candidate_results.loc[
+        ~candidate_results["detected"], "gene"
+    ].tolist()
+    verdict, verdict_note = classify_preregistered_verdict(
+        concordant_count=concordant,
+        detected_count=detected_count,
+        composite_summary=score_summary,
+        auc_null_p=auc_null_p,
+        strict_concordant_count=strict_concordant,
+        undetected_genes=undetected_genes,
+    )
 
     stats_summary = {
         "accession": "GSE248762",
@@ -1461,10 +1524,7 @@ def run_gene_set_analyses(
             "status": composition_adjustment_status,
         },
         "preregistered_verdict": verdict,
-        "verdict_rule_note": (
-            "The matched-null criterion is applied to the preregistered "
-            "composite-AUC null; mean-log2FC null P is also reported."
-        ),
+        "verdict_rule_note": verdict_note,
         "seed": 42,
     }
     (output_dir / "gene_set_summary.json").write_text(
@@ -1635,6 +1695,9 @@ def run_gene_set_analyses(
             "because one or more of the eight genes were not detected."
         ),
         (
+            f"- Verdict interpretation: {verdict_note}"
+        ),
+        (
             f"- Matched-null empirical P: AUC {auc_null_p:.4f}; mean gene "
             f"log2FC {mean_lfc_null_p:.4f}."
             if np.isfinite(auc_null_p)
@@ -1745,7 +1808,7 @@ def run_gene_set_analyses(
         "The GEO groups were SV n=6, LV_NOT_UF n=6, and LV_UF n=4; all 16 "
         "samples passed the 20-cell patient pseudobulk inclusion rule. A "
         "panel gene was detected only if raw counts were at least 10 in at "
-        "least half of patient pseudobulks in both primary groups. "
+        "least half of patient pseudobulks in each group of the primary contrast. "
         "Raw counts were aggregated by sample/patient; cells were not treated "
         "as independent replicates. Each GEO sample is used as one anonymous "
         "patient pseudobulk because the linked study reports 16 patients and "
