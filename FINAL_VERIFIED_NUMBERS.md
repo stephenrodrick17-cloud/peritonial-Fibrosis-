@@ -1,207 +1,178 @@
-# Final Verified Manuscript Numbers
+# Corrected quantitative summary and audit status
 
-> **Verification Standard:** Directly calculated from raw data, reproducible R/Python scripts, and generated table artifacts. Zero assumptions or unverified citations. All numbers reproduced fresh on 2026-10-07 via reruns of `02_differential_expression.R`, `03_matrisome_filtering.R`, `generate_gse62928_ecm_venn.py`, and `analyze_convergence_wgcna.py`.
+**Updated:** 2026-10-09. This file supersedes the legacy summary that reported
+synthetic GSE62928 validation, four-model/XGBoost selection, and unverified
+network/enrichment results. Those legacy claims are withdrawn. The numbers
+below refer only to saved analyses cited here; this is not a claim that every
+biological uncertainty has been resolved.
 
----
+## Discovery: GSE125498
 
-## 1. Dataset Characteristics
+| Measure | Audited result |
+|---|---:|
+| Samples | 33 (13 long-term PD, 20 short-term PD) |
+| Unique-gene analysis universe | 11,741 |
+| Primary nominal DEGs | 813 (496 up, 317 down) |
+| Up/down ECM DEGs | 31 / 13 (44 total) |
+| ECM genes measured in the universe | 428 |
+| Up-ECM fold enrichment | 1.7145x |
+| Hypergeometric over-representation P | 0.0024028 |
+| 10,000-label-permutation Monte Carlo empirical P | 0.0306969 |
 
-### Discovery Cohort (GSE62928)
-- **Accession:** GSE62928
-- **Species:** *Homo sapiens* (Human)
-- **Tissue:** Parietal peritoneal biopsy tissue
-- **Platform:** Affymetrix Human Genome U133 Plus 2.0 Array (GPL13158 / GPL570)
-- **Total Samples:** $N = 8$
-- **Sample IDs & Phenotypes:**
-  - `GSM1536640` (`EPS1`): Surgical Encapsulating Peritoneal Sclerosis (Case)
-  - `GSM1536641` (`EPS2`): Surgical Encapsulating Peritoneal Sclerosis (Case)
-  - `GSM1536642` (`EPS3`): Surgical Encapsulating Peritoneal Sclerosis (Case)
-  - `GSM1536643` (`EPS4`): Surgical Encapsulating Peritoneal Sclerosis (Case)
-  - `GSM1536644` (`PD1`): First peritoneal catheter implantation (Control)
-  - `GSM1536645` (`PD2`): First peritoneal catheter implantation (Control)
-  - `GSM1536646` (`UREMIC1`): Non-PD uremic patient undergoing abdominal surgery (Control)
-  - `GSM1536647` (`UREMIC2`): Non-PD uremic patient undergoing abdominal surgery (Control)
-- **Class Balance:** 4 Cases (EPS) vs. 4 Controls (2 PD baseline + 2 uremic non-PD)
-- **Normalization:** Robust Multichip Average (RMA), $\log_2$-transformed
-- **Probe-to-Gene Mapping:**
-  - Limma top-table: Split on multi-gene delimiters (`///`), lowest nominal P-value collapse $\to$ **22,049 unique gene symbols**
-  - WGCNA matrix: MaxMean intensity probe collapse $\to$ **20,940 unique gene symbols**
-  - GSEA ranked matrix: Primary symbol collapse $\to$ **21,597 unique gene symbols**
+The hypergeometric and permutation P-values test different null models. The
+hypergeometric test samples 496 up-DEG labels from the 11,741-gene universe,
+with 428 measured Matrisome genes; its null expected overlap is
+`496 * 428 / 11741 = 18.09`, versus 31 observed. The permutation test shuffles
+sample labels and re-runs the expression/DEG thresholding on the measured
+Matrisome genes. The latter is Monte Carlo, not an exact permutation
+enumeration. The P-values are not expected to match.
 
-### External Validation Cohort (GSE125498)
-- **Accession:** GSE125498
-- **Species:** *Homo sapiens* (Human)
-- **Biofluid / Cell Type:** Peritoneal dialysis effluent cell pellets
-- **Platform:** Illumina HumanHT-12 v4.0 Expression BeadChip (GPL10558)
-- **Total Samples:** $N = 33$
-- **Clinical Groups (Dialysis Vintage Proxy):**
-  - **Short-Term PD (SPD):** $n = 20$ (dialysis duration $\le 24$ months, median 10 months)
-  - **Long-Term PD (LPD):** $n = 13$ (dialysis duration $\ge 25$ months, median 56 months)
-- **Clinical Endpoint Framing:** Proxy for cumulative peritoneal membrane injury across dialysis vintage (NOT surgical EPS vs. healthy controls).
-- **Hub Gene Mapping Status:**
-  - **7 Mapped Hubs:** `FN1`, `COL3A1`, `COL8A1`, `VCAN`, `THBS3`, `LOX`, `ISM1`
-  - **4 Unmapped Hubs (No mapped probe on GPL10558):** `COL11A1`, `COMP`, `EDIL3`, `INHBA`
+The FDR sensitivity table reports 135/813 nominal primary DEGs, 6/44 ECM
+DEGs, and 4/7 recorded hubs at BH q<0.05. The separate 143 figure is the
+number of BH-significant genes across the full 11,741-gene tested universe;
+these are different denominators, not contradictory counts. The global-null
+expectation `11,741 * 0.05 = 587` applies to nominal P<0.05 tests before the
+fold-change filter and is not an estimate of false discoveries among the 813
+selected DEGs.
 
----
+## WGCNA and machine-learning feature selection
 
-## 2. Differential Expression (GSE62928)
+Dynamic WGCNA assigned 4,549 of 5,001 input genes to non-grey modules. The
+top trait-associated module was MEmagenta (37 genes; r=0.4804, P=0.00466),
+with no ECM genes. MEblack contained 25 of the 31 upregulated ECM DEGs but
+was not significantly associated with stage (r=0.0285, P=0.8748). WGCNA was
+not recomputed inside the repeated-CV folds; the reported nested estimate can
+therefore retain some upstream selection optimism.
 
-### Primary Manuscript Threshold
-> $|\log_2\text{FC}| \ge 0.585$ (equivalent to 1.5-fold raw change) AND nominal unadjusted $P < 0.05$.  
-> Rationale: Small-N ($N=8$) discovery cohort — nominal significance preferred to retain pro-fibrotic sensitivity.
+The saved three-model summaries verify:
 
-- **Total Probed Genes Tested:** 22,049
-- **Pro-Fibrotic Up-Regulated DEGs:** **534 genes** ($\log_2\text{FC} \ge 0.585, P < 0.05$)
-- **Downregulated DEGs:** **1,510 genes** ($\log_2\text{FC} \le -0.585, P < 0.05$)
-- **Total Primary DEGs:** **2,044 genes** (534 + 1,510)
-- **Genome-Wide FDR $< 0.05$ Genes (any direction):** **78 genes**
-- **Up-Regulated Genes with $\log_2\text{FC} \ge 0.585$ AND FDR $< 0.05$:** **8 genes**
-- **Nominally Significant Genes ($P < 0.05$ at any FC):** 3,365 genes (1,061 up, 2,304 down)
+| Feature pool | LASSO | SVM-RFE | RF | >=2/3 consensus | 3/3 |
+|---|---:|---:|---:|---:|---:|
+| 624 DEG ∩ non-grey WGCNA genes | 24 | 10 | 10 | 8 | 0 |
+| 38 ECM-DEG ∩ non-grey WGCNA genes | 11 | 10 | 10 | 8 | 2 |
 
-### Historical / Stringent Comparison Threshold (reference only)
-> $|\log_2\text{FC}| \ge 0.80$ AND $P < 0.05$. Used in earlier pipeline versions as a stricter comparison.
+The two unanimous genes in the 38-gene analysis are TNFSF15 and FLT3LG.
+These full-cohort feature-selection outputs are exploratory and are not
+out-of-sample performance estimates.
 
-- Upregulated DEGs: **367 genes**
-- Downregulated DEGs: **1,263 genes**
-- Total DEGs: **1,630 genes**
+## External-cohort results
 
----
+- **GSE62928 biopsy cohort (4 EPS, 4 combined controls):** 4/8 fixed-panel
+  genes were direction-concordant; all eight selected probes were below the
+  preregistered operational mean-expression cutoff of 5.0. The continuous
+  composite AUC was 0.875 (bootstrap 95% CI 0.500–1.000), but this score is
+  based on below-cutoff probes and is highly uncertain; the operational cutoff
+  does not establish that the score is noise-dominated. The fixed
+  preregistered verdict was Not supported.
+- **GSE248762, primary effluent contrast (LV n=10, SV n=6):** 7/7 detected
+  genes were direction-concordant; SERPINA10 was not detected. EBI3 and ECM1
+  passed BH q<0.05; ADAM19 was nominally significant (P=0.0268) but not after
+  BH adjustment. The fixed eight-gene composite and its null were not
+  estimable. The literal preregistered verdict remains Not supported, not
+  because the direction-count criterion failed, but because the composite
+  evidence was unavailable and neither partial-support branch applied.
+- **GSE130888, secondary effluent contrast (long-term n=4, short-term n=6):**
+  6/8 genes were detected and 5/6 detected genes were concordant. TNFSF15 and
+  SERPINA10 were not detected; the full-panel composite/null were not
+  estimable. Its frozen cohort-level label is Partially supportive because
+  exactly five detected genes were concordant. Patient independence from
+  GSE248762 remains unknown, so this is not confirmed independent replication.
+- **Post hoc / exploratory detected-gene scores (not the preregistered tests):**
+  the 7-gene GSE248762 score had AUC 0.7833 (bootstrap 95% CI 0.5000–1.0000),
+  Mann–Whitney P=0.0727, and matched-null AUC empirical P=0.0460. The
+  corrected 6-gene GSE130888 score had AUC 0.7083 (bootstrap 95% CI
+  0.2917–1.0000), Mann–Whitney P=0.3524, and matched-null AUC empirical
+  P=0.0519. The earlier AUC 0.8056 (29/36 pairwise orderings), P=0.1063, and
+  matched-null P=0.0330 were erroneous: the calculation treated the three
+  normal controls as non-LV cases. The corrected LV-versus-SV AUC is 17/24
+  pairwise orderings and excludes all three normal controls from both the
+  observed comparison and matched-null AUC. These detected-gene scores are
+  post hoc and do not change either preregistered verdict.
+- **GSE92455:** expression analysis has not been performed and it is not
+  included in any validation verdict.
 
-## 3. ECM / Matrisome Over-Representation
+The preregistered tiers are intentionally preserved; no threshold or verdict
+was changed after seeing expression results. The GSE248762 tier behavior is
+non-monotonic: 7/7 concordant with an unestimable composite is Not supported,
+whereas exactly 5 concordant is Partially supportive. This should be made
+more coherent in a future preregistration, not retroactively revised here.
 
-### Primary Threshold Results ($|\log_2\text{FC}| \ge 0.585, P < 0.05$)
-- **Curated Human Matrisome Reference (Naba et al.):** 1,027 genes
-- **Matrisome Genes in 22,049 Expression Universe:** 975 genes (Background rate: $975 / 22,049 = 4.42\%$)
-- **Up-Regulated (Pro-Fibrotic) ECM-DEGs (534 DEGs $\cap$ 975 Matrisome):** **81 genes**
-  - ECM-DEG rate among up-DEGs: $81 / 534 = 15.17\%$
-- **Down-Regulated ECM-DEGs:** 67 genes
-- **Total ECM-DEGs (both directions):** 148 genes
-- **Fold Enrichment (Upregulated ECM-DEGs):** **3.430×** (observed 81 vs. expected 23.61)
-- **Hypergeometric Over-Representation Test (one-sided):** $P = 1.321 \times 10^{-22}$
+## ECM1, CV, and remaining limitations
 
-### Historical Threshold (0.80 FC, reference only)
-- Upregulated ECM-DEGs: 71 genes, Fold enrichment ≈ 4.38×, $P \approx 2.593 \times 10^{-26}$
+In GSE248762 the ECM1 all-cell log2FC was 5.8893; all leave-one-patient-out
+estimates remained positive (5.0152–6.0993). This rules out dependence on one
+patient alone, but not composition or technical effects. In the most
+influential sample, GSM7919584, total pseudobulk ECM1 count was 115,870 among
+5,732 QC cells, while only five cells were classified as fibroblasts (three
+ECM1-positive). Of the marker-annotated cell-type pseudobulk, 76,200 counts
+were mesothelial and 38,545 neutrophil; fibroblasts were excluded from this
+cell-type pseudobulk because there were fewer than 20. The composition-adjusted
+all-cell estimate was 2.9879 (95% CI -1.5642 to 7.5399, P=0.1472), and the
+fibroblast-restricted estimate was 0.5751 (95% CI -0.9553 to 2.1056,
+P=0.3892). These results do not establish a fibroblast-intrinsic effect or
+prove ambient RNA contamination; the unusually concentrated counts require
+raw-data/annotation QC before biological interpretation. No sample was
+removed.
 
-### FDR Significance of Individual ECM-DEGs
-Only **5 of the 81 upregulated ECM-DEGs** reach genome-wide FDR $< 0.05$:
-`BGN`, `CLEC11A`, `COL1A1`, `MXRA5`, `SERPINE2`  
-(plus 2 downregulated ECM genes: `TIMP4`, `LEP`).  
-The remaining 76 up ECM-DEGs are only nominally significant ($P < 0.05$), consistent with a discovery-cohort framing.
+Repeated 5-fold CV (10 repeats) gave mean AUC/C-index 0.7700 (bootstrap
+95% interval 0.7408–0.7946). The folds repeated DEG, Matrisome, and
+three-model selection but not WGCNA; this does not eliminate all selection
+optimism. Small sample sizes, unknown cohort overlap, single-cell dropout,
+marker-based cell annotations, absent covariates, and wide intervals remain
+material limitations. See the referenced reports and saved result tables
+under `results/revision/` for full methods and results.
 
----
+## Panel detectability and panel v2 sensitivity (added 2026-10-11)
 
-## 4. Exact Combinatorial Permutation Framework
+This new section reports an assay-detectability audit and rule-derived
+panel-v2 sensitivity analysis. It does not revise the preregistered analyses,
+thresholds, outputs, or verdicts. The v2 panel was defined using existing
+cohort data before any new test data and is not preregistered; all v2 scores
+below are post hoc, exploratory, and not validation claims.
 
-- **Combinatorial Space:** $\binom{8}{4} = 70$ unique label permutations (4 EPS cases vs. 4 controls).
-- **ECM Over-Representation Permutation Test (Primary 0.585 cutoff):**
-  - True clinical split achieved $N_{\text{ECM (up)}} = 81$, ranking #1 of 70 splits.
-  - Exact one-sided permutation: $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$ (exact mathematical minimum at $N=8$).
+### Detectability
 
----
+The operational GSE62928 rule was a primary-probe mean log2 RMA expression
+greater than 5.0; **0/8** panel genes passed. This is an operational cutoff,
+not a biological limit of detection. In the effluent cohorts, the rule was a
+raw pseudobulk count of at least 10 in at least half (ceiling) of samples in
+each of the LV and SV groups: **7/8** genes passed in GSE248762 and **6/8** in
+GSE130888. SERPINA10 was annotated in all three cohorts. It had two raw counts
+total across 16 GSE248762 samples (mean 0.125; 0/16 samples at count >=10),
+and zero raw counts across all 10 GSE130888 contrast samples. Thus it was
+below the effluent expression rule in GSE248762 and had zero counts in
+GSE130888, rather than being absent from annotation.
 
-## 5. WGCNA Co-Expression Modeling
+### Discovery evidence and mechanical panel selection
 
-- **Available MaxMean Expression Matrix:** 20,940 unique genes
-- **Actual WGCNA Feature Input:** **5,038 genes** (top 5,000 most variable genes unioned with the 81 convergent ECM-DEGs)
-- **Soft-Thresholding Power:** $\beta = 12$
-- **Scale-Free Topology Fit:** Truncated $R^2 = 0.809$, Linear $R^2 = 0.820$ (slope $-0.768$)
-- **Network Type:** Signed hybrid network
-- **Identified Modules:** 14 co-expression modules (minimum module size $= 30$, merge cut height $= 0.25$)
-- **Key Pro-Fibrotic Module:** **Salmon Module** (604 genes)
-  - Trait Correlation: Pearson $r = +0.806, P = 0.0157$
-  - Exact One-Sided Permutation: $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$
-  - Exact Two-Sided Permutation: $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$
-  - 14-Module Family-Wise Permutation: $P_{\text{family}} = 6/70 = \mathbf{0.0857}$
-  - Bonferroni FWER across 14 modules: $P_{\text{bonf}} = 14 \times 0.0157 = \mathbf{0.220}$ (exploratory framing)
+`results/revision/panel_v2/panel_discovery_evidence.csv` records each panel
+gene's discovery logFC, nominal P, BH-adjusted P across the saved
+11,741-gene universe, probe ID, and BH q<0.05 flag. The rule table applies
+(a) detected in at least 2/3 validation cohorts and (b) direction concordant
+with discovery in every detected cohort; (c) discovery BH q<0.05 is recorded
+as a flag only, not a filter. Rule (b) is marked not applicable when no
+cohort detects the gene. Applying (a) AND (b), without manual selection,
+produced **5 genes: FLT3LG, EBI3, LTB, ADAM19, CST7**.
 
----
+### Original verdicts versus post-hoc panel-v2 scores
 
-## 6. Multi-Tier Convergence
+| Cohort | Original 8-gene verdict (unchanged) | Original AUC (95% CI), MW P, matched-null P | V2 exploratory AUC (95% CI), MW P, matched-null P |
+|---|---|---|---|
+| GSE62928 | Not supported | 0.875 (0.500–1.000), 0.1143, 0.015 | 1.000 (1.000–1.000), 0.02857, not computed |
+| GSE248762 | Not supported | Full-panel composite not estimable | 0.6667 (0.3833–0.9333), 0.3132, 0.1209 |
+| GSE130888 | Partially supportive | Full-panel composite not estimable | 0.6667 (0.2500–1.000), 0.4762, 0.06194 |
 
-### 3-Way Tripartite Convergence (Primary 0.585 Threshold)
-> Intersection: **534 Upregulated DEGs** $\cap$ **975 Measured Matrisome genes** $\cap$ **604 Salmon Module genes**
+The GSE62928 v2 score is especially limited: all five v2 genes are below the
+operational expression cutoff, and its matched-null P was not computed. Its
+perfect point AUC and degenerate interval must not be interpreted as robust
+validation. Effluent v2 intervals use 10,000 stratified bootstrap resamples
+(seed 42); effluent matched-null P values use 1,000 detected-gene,
+expression-decile-matched sets. GSE130888 comparisons exclude normal controls
+and use LV versus SV only. The existing detected-gene exploratory scores are
+reported separately in `panel_v2_score_sensitivity.csv`; they are not the
+original fixed-panel test.
 
-- **3-Way Tripartite Candidates:** **44 genes**
-
-Full 44-gene convergent list:
-`ADAMTS1`, `ADAMTS2`, `ADAMTS6`, `BGN`, `CLCF1`, `CLEC11A`, `COL11A1`, `COL1A1`, `COL1A2`, `COL3A1`, `COL5A1`, `COL5A2`, `COL8A1`, `COMP`, `EDIL3`, `FBLN7`, `FGF14`, `FN1`, `FRAS1`, `INHBA`, `ISM1`, `LOX`, `MFAP2`, `MFGE8`, `MMP14`, `MUC1`, `MXRA5`, `PCOLCE`, `PDGFA`, `POSTN`, `SDC1`, `SERPINA1`, `SERPINA3`, `SERPINE1`, `SERPINE2`, `SNED1`, `SULF2`, `TGFB3`, `THBS1`, `THBS2`, `THBS3`, `THSD4`, `TNFAIP6`, `VCAN`
-
-### Historical Tripartite (0.80 FC, reference only)
-- 367 Up-DEGs $\cap$ 975 Matrisome $\cap$ 604 Salmon = 40 genes.
-
----
-
-## 7. Machine Learning Consensus Feature Selection
-
-### Candidate Pool
-- **Primary Pool:** 44 tripartite convergent genes (0.585 threshold framing).
-- **Historical Pool:** 40 tripartite genes (0.80 threshold framing).
-- The 11 consensus hubs listed below are all present in BOTH pools (11/44 primary, 11/40 historical).
-
-### Algorithm Feature Yields (computed over historical 40-gene pool, reproducible with primary 44-gene pool subject to identical `random_state = 42`)
-  - **LASSO Logistic Regression:** `solver='liblinear'`, $C = 4.28 \to$ **2 features** (`ISM1`, `FN1`)
-  - **SVM-RFE (Linear kernel):** Top 35% ranked $\to$ **14 features**
-  - **Random Forest (500 trees):** Gini importance $\ge$ mean $\to$ **17 features**
-  - **XGBoost (Depth constrained):** Feature importance $> 0 \to$ **1 feature** (`EDIL3`)
-
-### Consensus Voting Rule ($\ge 2/4$ votes): **11 Consensus Pro-Fibrotic Hub Genes**
-  - **3 Votes (3 genes):** `ISM1`, `FN1` (LASSO + SVM-RFE + RF), `EDIL3` (SVM-RFE + RF + XGBoost)
-  - **2 Votes (8 genes, selected by SVM-RFE + RF):** `VCAN`, `COL3A1`, `COMP`, `COL8A1`, `THBS3`, `COL11A1`, `INHBA`, `LOX`
-  - **1 Vote (historical 9 genes from 40-pool):** `ADAMTS1`, `COL1A1`, `COL1A2`, `COL5A2`, `COL6A3`, `CTHRC1`, `FAP`, `POSTN`, `SERPINE1`
-
----
-
-## 8. External Validation in Dialysis Effluent (GSE125498, N=33)
-
-- **Composite 7-Gene Logistic Regression Classifier (`FN1, COL3A1, COL8A1, VCAN, THBS3, LOX, ISM1`):**
-  - **Apparent In-Sample Fit:** $\text{AUC} = \mathbf{0.869}$ ($95\%\text{ CI: } [0.710, 0.992]$)
-  - **50-Repeat 5-Fold Stratified CV (Pipeline Scaler, Primary Generalization Estimate):** Mean $\text{AUC}_{\text{CV}} = \mathbf{0.678} \pm 0.058$ (range across repeats: $0.512 - 0.773$; per-fold mean $\text{AUC} = 0.701 \pm 0.203$)
-  - **Leave-One-Out CV (LOOCV Scaled):** $\text{AUC}_{\text{LOOCV}} = \mathbf{0.658}$
-  - **Single Seed-42 5-Fold CV (Scaled):** Pooled $\text{AUC} = \mathbf{0.592}$ (per-fold mean $\text{AUC} = 0.617 \pm 0.061$)
-  - **1,000-Iteration Label Permutation Test:** Empirical null mean $\text{AUC} = 0.4883$, $P = 88 / 1001 = \mathbf{0.0879}$ (non-significant)
-- **Single-Gene Individual Performance (Empirical ROC):**
-  - `VCAN`: $\text{AUC} = 0.723$ ($P = 0.034$, decreased in late effluent, inverted score)
-  - `COL8A1`: $\text{AUC} = 0.665$ (probe `ILMN_2402392`, nominal $P = 0.0488$, Bonferroni $P = 0.0976$; second probe `ILMN_1685433` $\text{AUC} = 0.581, P = 0.392$)
-  - `FN1`: $\text{AUC} = 0.612$ ($P = 0.294$)
-  - `THBS3`: $\text{AUC} = 0.596$ ($P = 0.367$, inverted score)
-  - `COL3A1`: $\text{AUC} = 0.535$ ($P = 0.754$)
-  - `ISM1`: $\text{AUC} = 0.527$ ($P = 0.811$)
-  - `LOX`: $\text{AUC} = 0.496$ ($P = 0.985$)
-
----
-
-## 9. Diagnostic Nomogram & DCA (GSE125498)
-
-- **Predictors (5 genes):** `VCAN`, `COL8A1`, `FN1`, `ISM1`, `COL3A1`
-- **Apparent Discrimination:** In-sample $\text{C-index} = \mathbf{0.819}$ ($95\%\text{ CI: } [0.623, 0.968]$)
-- **Cross-Validated Discrimination:** 5-fold CV $\text{AUC} = \mathbf{0.550} \pm 0.178$
-- **Calibration Metrics:** Brier Score $= 0.1542$, Calibration Slope $= 1.000$, Intercept $= 0.000$, Hosmer-Lemeshow $\chi^2 = 2.823, P = 0.2437$ ($g = 4$ bins)
-- **Likelihood-Ratio Test vs. `FN1` Alone:** $\text{LR } \chi^2 = 10.421, \text{df} = 4, P = \mathbf{0.0339}$
-
----
-
-## 10. Preranked GSEA Pathway Enrichment (MSigDB Hallmark)
-
-- **Top Upregulated Pathway:** `HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION`
-  - Normalized Enrichment Score: $\text{NES} = +\mathbf{3.2033}$
-  - Nominal P-value: $\text{NOM } P < 0.0001$
-  - FDR q-value: $\text{FDR } q < 0.001$
-  - Exact Sample Label Permutation: $P_{\text{perm}} = 1/70 = \mathbf{0.0143}$
-
----
-
-## 11. Microenvironment Infiltration Deconvolution
-
-- **Peritoneal Myofibroblasts:** Mann-Whitney $U = 16.0, P = 0.0286$, Exact Two-Sided Permutation $P_{\text{perm}} = 2/70 = \mathbf{0.0286}$, $\text{FDR} = 0.1714$ (exploratory).
-
----
-
-## 12. STRING Protein-Protein Interaction & Co-Expression Centrality
-
-- **STRING Version:** STRING API v12.5 (retrieved 2026-10-01, score $\ge 0.400$)
-- **Functional Association Edges:** **21 unique edges** across the 11 hub genes
-- **Physical Interaction Edges:** **3 unique edges** (`FN1 - LOX` 0.848, `COL11A1 - COL3A1` 0.720, `COMP - FN1` 0.595)
-- **Isolated Node:** `ISM1` has degree $= 0$ in both functional and physical STRING networks
-- **Empirical Co-Expression in Discovery Tissue ($N=8$):**
-  - Total unique hub pairs: $\binom{11}{2} = 55$ pairs
-  - Hub pairs with $|r| \ge 0.85$: **42 of 55 pairs** = **76.36%** (vs. 1.68% all-gene noise baseline, 5.47% DEG baseline, 9.27% Salmon module baseline).
+See `panel_detectability_audit.csv`, `panel_detectability_audit.md`,
+`panel_v2_rule_results.csv`, `panel_v2.json`, `panel_v2_report.md`, and
+`panel_v2_sample_scores.csv` in `results/revision/panel_v2/` for the complete
+saved tables, methods, sample-level scores, and output provenance.

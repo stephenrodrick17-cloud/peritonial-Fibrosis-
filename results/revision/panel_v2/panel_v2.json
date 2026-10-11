@@ -1,0 +1,20 @@
+{
+  "panel_name": "panel_v2",
+  "date_defined": "2026-10-11",
+  "status": "defined before any new test data",
+  "defined_before_any_new_test_data": true,
+  "genes_passing_selection_rules": [
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "CST7"
+  ],
+  "rule_text": {
+    "a": "Detected in at least 2 of the 3 validation cohorts (GSE62928, GSE248762, GSE130888).",
+    "b": "Concordant direction with discovery in every cohort where detected.",
+    "c": "Record discovery BH q < 0.05 as a flag only; it is not a hard selection filter."
+  },
+  "selection_logic": "A gene is included only when rules (a) AND (b) pass; rule (c) is recorded but does not filter.",
+  "status_note": "This rule-derived panel is defined on 2026-10-11 using existing saved cohort results. It is not preregistered; all v2 scores on these same existing cohorts are post hoc, exploratory, and not validation claims. The status means the panel is fixed before any future new test data."
+}

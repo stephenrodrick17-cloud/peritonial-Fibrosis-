@@ -1,0 +1,9 @@
+gene,GSE62928_detected,GSE248762_detected,GSE130888_detected,detected_validation_cohorts_n,rule_a_detected_in_at_least_2_of_3,rule_b_detected_cohorts_n,GSE62928_direction_concordant_if_detected,GSE62928_validation_logFC,GSE248762_direction_concordant_if_detected,GSE248762_validation_logFC,GSE130888_direction_concordant_if_detected,GSE130888_validation_logFC,rule_b_concordant_in_every_detected_cohort,discovery_BH_q_lt_0_05_flag,rule_c_status,passes_panel_v2_selection
+TNFSF15,False,True,False,1,FAIL,1,,-0.0518809999999998,True,,,,PASS,True,FLAG ONLY; NOT A HARD FILTER,False
+FLT3LG,False,True,True,2,PASS,2,,-0.2663255,True,,True,,PASS,True,FLAG ONLY; NOT A HARD FILTER,True
+EBI3,False,True,True,2,PASS,2,,-0.0251737500000004,True,,True,,PASS,False,FLAG ONLY; NOT A HARD FILTER,True
+LTB,False,True,True,2,PASS,2,,0.529352500000001,True,,True,,PASS,True,FLAG ONLY; NOT A HARD FILTER,True
+ADAM19,False,True,True,2,PASS,2,,1.0483725,True,,True,,PASS,True,FLAG ONLY; NOT A HARD FILTER,True
+ECM1,False,True,True,2,PASS,2,,1.189195,True,,False,,FAIL,False,FLAG ONLY; NOT A HARD FILTER,False
+SERPINA10,False,False,False,0,FAIL,0,,-0.0455277499999998,,,,,NOT APPLICABLE (no detected cohort),False,FLAG ONLY; NOT A HARD FILTER,False
+CST7,False,True,True,2,PASS,2,,1.42872675,True,,True,,PASS,True,FLAG ONLY; NOT A HARD FILTER,True
