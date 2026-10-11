@@ -1,0 +1,16 @@
+{
+  "analysis_date": "2026-10-11",
+  "panel_freeze_commit": "26da2cfc081b64be841686f8ee2cf4e6e1014a82",
+  "panel_freeze_commit_date": "2026-10-11 11:55:58 +0530",
+  "script": "D:/Peritoneal Project/scripts/task6_gse92455_panel_v2_test.R",
+  "inputs": {
+    "GSE92455-GPL6480_series_matrix.txt.gz": "5a352ee72bf1533d0925341cb845dfbc",
+    "GPL6480.annot.gz": "6d82fbfa933b06871561556c9eb7a2c0",
+    "sample_metadata.csv": "e6e22c4ba944049320378d751acd5bec",
+    "panel_v2.json": "9ab7c2ff82c6b1b332b998a8b4cd84cc"
+  },
+  "R_version": "R version 4.4.2 (2024-10-31 ucrt)",
+  "limma_version": "3.62.2",
+  "jsonlite_version": "2.0.0",
+  "session_info": ["R version 4.4.2 (2024-10-31 ucrt)", "Platform: x86_64-w64-mingw32/x64", "Running under: Windows 11 x64 (build 26200)", "", "Matrix products: default", "", "", "locale:", "[1] LC_COLLATE=English_India.utf8  LC_CTYPE=English_India.utf8   ", "[3] LC_MONETARY=English_India.utf8 LC_NUMERIC=C                  ", "[5] LC_TIME=English_India.utf8    ", "", "time zone: Asia/Calcutta", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] jsonlite_2.0.0 limma_3.62.2  ", "", "loaded via a namespace (and not attached):", "[1] compiler_4.4.2 tools_4.4.2    statmod_1.5.1 "]
+}

@@ -115,3 +115,19 @@ under cohort-specific filters; it does not change or replace any result.
 All preregistered outputs, thresholds, and verdicts remain unchanged. Existing
 cohort score calculations for panel v2 are explicitly labeled post hoc,
 exploratory, and not validation claims.
+
+## 2026-10-11 — First post-freeze GSE92455 panel-v2 test
+
+After commit `26da2cfc081b64be841686f8ee2cf4e6e1014a82` froze the dated
+panel-v2 definition, added `scripts/task6_gse92455_panel_v2_test.R` and
+`results/revision/panel_v2/GSE92455_20261011/`. The additional exploratory
+test uses the supplementary epithelioid-versus-non-epithelioid HPMC phenotype
+contrast, one consistently oriented array per patient, outcome-blind
+highest-mean probe selection, and limma for panel-gene contrasts. The fixed
+panel score is reported separately from the unchanged preregistered,
+per-gene-only GSE92455 analysis; it is not a vintage validation or verdict.
+
+The metadata-only overlap check found zero shared GSM IDs between GSE248762
+and GSE130888 but no patient crosswalk in either cohort, so patient overlap
+and independence remain unknown. No existing preregistered output or verdict
+was changed.

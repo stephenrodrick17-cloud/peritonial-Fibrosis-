@@ -176,3 +176,34 @@ See `panel_detectability_audit.csv`, `panel_detectability_audit.md`,
 `panel_v2_rule_results.csv`, `panel_v2.json`, `panel_v2_report.md`, and
 `panel_v2_sample_scores.csv` in `results/revision/panel_v2/` for the complete
 saved tables, methods, sample-level scores, and output provenance.
+
+### First post-freeze GSE92455 panel-v2 test (added 2026-10-11)
+
+The panel-v2 definition was frozen in commit
+`26da2cfc081b64be841686f8ee2cf4e6e1014a82` before GSE92455 expression was
+analyzed. The supplementary epithelioid-versus-non-epithelioid HPMC contrast
+included 9 versus 8 patient labels. The five-gene panel score was estimable:
+**AUC 0.3056** (10,000-patient-bootstrap 95% CI **0.0833–0.5972**) and exact
+two-sided Mann–Whitney **P=0.1996**, with higher score fixed as epithelioid;
+that direction was not predeclared and the AUC was not flipped. This is not a
+long-vintage versus short-vintage test and does not count as a validation
+verdict. The preregistered GSE92455 analysis remains per-gene only.
+
+On the selected probe per gene, limma results (Epithelioid minus
+Non-epithelioid, submitted GEO value scale; BH across the five panel genes)
+were significant at q<0.05 for EBI3 (estimate -0.3068, q=0.02444) and ADAM19
+(estimate -0.9785, q=0.02444). No matched-gene null was computed for this
+distinct phenotype contrast. One consistently oriented array per patient
+was analyzed; reciprocal technical arrays and pooled-omentum reference
+samples were excluded. See
+`results/revision/panel_v2/GSE92455_20261011/` for the saved report, per-gene
+results, probe selection, sample scores, and analysis manifest.
+
+### GSE248762–GSE130888 patient-overlap check (added 2026-10-11)
+
+The saved GEO metadata contain 16 GSE248762 sample records and 13 GSE130888
+sample records; none of their GSM sample IDs are shared. Neither metadata
+table provides patient identifiers or a cross-cohort donor crosswalk.
+Therefore, zero shared GSM IDs does **not** establish zero patient overlap:
+patient-level independence remains **unknown** and requires a crosswalk or
+author confirmation.

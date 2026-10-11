@@ -1,0 +1,6 @@
+"gene","probe_id","mean_GEO_value","n_annotated_probes","status"
+"FLT3LG","A_23_P78742",-0.00517529411764706,1,"mapped"
+"EBI3","A_23_P119478",-0.0389588235294118,1,"mapped"
+"LTB","A_23_P93348",-0.0430694117647059,1,"mapped"
+"ADAM19","A_23_P374082",0.211135294117647,2,"mapped"
+"CST7","A_23_P68601",0.161696941176471,1,"mapped"
