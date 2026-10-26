@@ -6,6 +6,7 @@
 - Detected genes direction-concordant: 7/7.
 - SERPINA10 was not detected by the frozen raw-count rule; it is neither concordant nor discordant and is excluded from that denominator.
 - Full-panel composite: not estimable under the frozen rule because one or more of the eight genes were not detected.
+- Verdict interpretation: 7/7 detected genes are concordant, so the supportive direction-count component (at least 6) is met. The fixed composite and its null are not estimable because SERPINA10 is not detected. The partial tier's exact-five branch does not apply, and its AUC branch cannot be evaluated. Thus the literal fallback is Not supported; this non-monotonic label does not mean the directional result is weaker than a 5/6 result.
 - Full-panel matched-null empirical P: not estimable because SERPINA10 was not detected; the frozen full-panel composite was not computed.
 - Strict hubs: 2/2 detected genes concordant.
 - Strict-hub composite (secondary): AUC 0.7167 (95% bootstrap CI 0.4167–1.0000); Mann–Whitney P 0.180569; matched-null empirical P for AUC 0.1968 and mean gene log2FC 0.0470.
@@ -90,7 +91,7 @@ SERPINA10's listed top cell type is a relative maximum, not evidence of meaningf
 
 ## QC and analysis notes
 
-Cells were retained using the preregistered group-blind thresholds of at least 200 detected genes and at most 20% mitochondrial counts. The GEO groups were SV n=6, LV_NOT_UF n=6, and LV_UF n=4; all 16 samples passed the 20-cell patient pseudobulk inclusion rule. A panel gene was detected only if raw counts were at least 10 in at least half of patient pseudobulks in both primary groups. Raw counts were aggregated by sample/patient; cells were not treated as independent replicates. Each GEO sample is used as one anonymous patient pseudobulk because the linked study reports 16 patients and one GEO sample per participant; GEO does not expose participant IDs.
+Cells were retained using the preregistered group-blind thresholds of at least 200 detected genes and at most 20% mitochondrial counts. The GEO groups were SV n=6, LV_NOT_UF n=6, and LV_UF n=4; all 16 samples passed the 20-cell patient pseudobulk inclusion rule. A panel gene was detected only if raw counts were at least 10 in at least half of patient pseudobulks in each group of the primary contrast. Raw counts were aggregated by sample/patient; cells were not treated as independent replicates. Each GEO sample is used as one anonymous patient pseudobulk because the linked study reports 16 patients and one GEO sample per participant; GEO does not expose participant IDs.
 
 Cell types use the fixed preregistered marker-score rules because cell-level author annotations were not present in the downloaded 10x archive. All resampling and permutation-style tests use seed 42. The composite-AUC random-gene null is used for the supportive decision rule; the preregistered mean-log2FC null is also reported.
 

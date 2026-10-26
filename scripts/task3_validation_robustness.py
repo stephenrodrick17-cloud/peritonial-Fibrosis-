@@ -4,13 +4,14 @@ import gzip
 import numpy as np
 import pandas as pd
 from scipy import stats
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, roc_curve
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 os.makedirs("results/revision", exist_ok=True)
 os.makedirs("scripts", exist_ok=True)
+OUTPUT_SUFFIX = "_taskA_fig5"
 
 # 1. Parse GPL13158 mapping
 probe_to_gene = {}
@@ -99,7 +100,7 @@ for g in hubs_7:
     })
 
 df_per_gene = pd.DataFrame(per_gene_records)
-df_per_gene.to_csv('results/revision/gse62928_per_gene_concordance.csv', index=False)
+df_per_gene.to_csv(f'results/revision/gse62928_per_gene_concordance{OUTPUT_SUFFIX}.csv', index=False)
 
 # Sign concordance test
 n_concordant = int((df_per_gene['Direction_Concordant'] == 'Yes').sum())
@@ -112,6 +113,18 @@ binom_p = float(binom_res.pvalue)
 hub_mat = expr_gene.loc[hubs_7, all_cols].values # (7, 8)
 hub_z = (hub_mat - hub_mat.mean(axis=1, keepdims=True)) / np.clip(hub_mat.std(axis=1, ddof=1, keepdims=True), 1e-9, None)
 hub_score = hub_z.mean(axis=0)
+hub_score_source = pd.DataFrame({
+    "sample_id": all_cols,
+    "outcome": ["EPS"] * len(eps_cols) + ["Control"] * len(ctrl_cols),
+    "stage_binary": y_true,
+    "fixed_hub_score": hub_score,
+})
+for gene, z_score in zip(hubs_7, hub_z):
+    hub_score_source[f"{gene}_z"] = z_score
+hub_score_source.to_csv(
+    f"results/revision/gse62928_hub_score_by_sample{OUTPUT_SUFFIX}.csv",
+    index=False,
+)
 
 hub_auc = float(roc_auc_score(y_true, hub_score))
 u_stat, mw_p = stats.mannwhitneyu(hub_score[:4], hub_score[4:], alternative='greater')
@@ -126,14 +139,12 @@ for _ in range(1000):
     rand_mat = expr_gene.loc[rand_genes, all_cols].values
     rand_z = (rand_mat - rand_mat.mean(axis=1, keepdims=True)) / np.clip(rand_mat.std(axis=1, ddof=1, keepdims=True), 1e-9, None)
     rand_score = rand_z.mean(axis=0)
-    try:
-        a = roc_auc_score(y_true, rand_score)
-    except Exception:
-        a = 0.5
+    a = roc_auc_score(y_true, rand_score)
     null_aucs.append(float(a))
 
 null_aucs = np.array(null_aucs)
 emp_p = float(np.mean(null_aucs >= hub_auc))
+n_null_at_least_hub_auc = int(np.sum(null_aucs >= hub_auc))
 
 robustness_results = {
     "validation_cohort": "GSE62928 (Affymetrix HG-U133 Plus 2.0 / GPL13158)",
@@ -155,21 +166,24 @@ robustness_results = {
         "mann_whitney_two_sided_p": round(float(mw_two_p), 4)
     },
     "random_gene_set_null_1000": {
+        "n_null_sets_at_least_hub_auc": n_null_at_least_hub_auc,
         "null_auc_mean": round(float(np.mean(null_aucs)), 4),
         "null_auc_sd": round(float(np.std(null_aucs)), 4),
         "null_auc_median": round(float(np.median(null_aucs)), 4),
         "empirical_p_value": round(emp_p, 4)
     },
     "scientific_interpretation": (
-        "In true tissue biopsy data from GSE62928, the 7 consensus hub genes exhibit modest directional concordance (2/7 concordant; LTB and ADAM19 positive; binomial P = 0.4531). "
-        "The composite hub score yields an AUC of 0.4375 (Mann-Whitney P = 0.6571), performing identically to the random-gene-set null (empirical P = 0.6040). "
-        "This divergence highlights a critical biological reality: dialysate effluent cellular fractions (GSE125498) reflect leukocyte-driven immune-matrisome crosstalk, "
-        "whereas surgical biopsies (GSE62928) capture dense, end-stage collagenous fibrotic scar tissue with hypocellularity. "
-        "Previous reports of AUC = 1.0 were driven by in-sample overfitting and artificial simulation."
+        f"In GSE62928 biopsy data, {n_concordant}/{n_total} hub genes have concordant direction "
+        f"(binomial P = {binom_p:.4f}). The fixed composite score has AUC = {hub_auc:.4f} "
+        f"(one-sided Mann-Whitney P = {mw_p:.4f}; two-sided P = {mw_two_p:.4f}); "
+        f"the 1,000 random 7-gene-set null has mean AUC = {np.mean(null_aucs):.4f} "
+        f"and empirical P = {emp_p:.4f}. The discovery effluent and validation biopsy cohorts "
+        "differ in tissue and phenotype, limiting transportability. Historical synthetic "
+        "validation outputs from the legacy pipeline are withdrawn."
     )
 }
 
-with open('results/revision/gse62928_robustness_metrics.json', 'w') as f:
+with open(f'results/revision/gse62928_robustness_metrics{OUTPUT_SUFFIX}.json', 'w') as f:
     json.dump(robustness_results, f, indent=2)
 
 # Generate Plot
@@ -201,8 +215,29 @@ axes[1].legend(loc='upper right', fontsize=9)
 axes[1].grid(linestyle=':', alpha=0.5)
 
 plt.tight_layout()
-plt.savefig('results/revision/Fig_rev_validation_robustness.png', dpi=300)
-plt.savefig('results/revision/Fig_rev_validation_robustness.pdf')
+plt.savefig(f'results/revision/Fig_rev_validation_robustness{OUTPUT_SUFFIX}.png', dpi=300)
+plt.savefig(f'results/revision/Fig_rev_validation_robustness{OUTPUT_SUFFIX}.pdf')
 plt.close()
+
+# Separate ROC output for use by the legacy figure manifest. The score is a
+# fixed, per-gene z-score average; no classifier is fitted to the validation set.
+fpr, tpr, _ = roc_curve(y_true, hub_score)
+fig, ax = plt.subplots(figsize=(7, 6), facecolor='#F8FAFC')
+ax.plot(fpr, tpr, color='#2563EB', linewidth=2.5,
+        label=f'Fixed 7-gene score (AUC = {hub_auc:.4f})')
+ax.plot([0, 1], [0, 1], color='#64748B', linestyle=':', label='Chance reference')
+ax.set(
+    xlim=(0, 1), ylim=(0, 1),
+    xlabel='False positive rate',
+    ylabel='True positive rate',
+    title='GSE62928 Biopsy Cohort: Fixed Hub-Score ROC\n'
+          f'4 EPS cases vs 4 controls; two-sided Mann-Whitney P = {mw_two_p:.4f}'
+)
+ax.legend(loc='lower right')
+ax.grid(linestyle=':', alpha=0.5)
+fig.tight_layout()
+fig.savefig(f'results/revision/Fig_rev_validation_roc{OUTPUT_SUFFIX}.png', dpi=300)
+fig.savefig(f'results/revision/Fig_rev_validation_roc{OUTPUT_SUFFIX}.pdf')
+plt.close(fig)
 
 print("Task 3 Validation Robustness completed and saved successfully!")

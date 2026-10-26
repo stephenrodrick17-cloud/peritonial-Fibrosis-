@@ -1,0 +1,3 @@
+"analysis_label","contrast","gene","n_SV","n_LV","log2FC","ci_lower_95","ci_upper_95","P_value","edgeR_version","R_version"
+"post hoc / exploratory","LV_vs_SV_excluding_GSM7919584","ECM1",6,9,5.01518782904839,1.41656951353716,8.61380614455962,0.00838948370780145,"4.4.2","4.4.2"
+"post hoc / exploratory","mesothelial_only_LV_vs_SV","ECM1",6,10,7.29972542299646,3.19476975680913,11.4046810891838,0.00139083454358002,"4.4.2","4.4.2"

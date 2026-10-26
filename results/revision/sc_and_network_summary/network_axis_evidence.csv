@@ -1,0 +1,2 @@
+axis,lncRNA,miRNA,mRNA_hub,lncRNA_support,miRNA_support,mRNA_support,retained_after_three-part-evidence_filter,reason
+NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,NOT VERIFIED,No source interaction tables or operational evidence criteria found

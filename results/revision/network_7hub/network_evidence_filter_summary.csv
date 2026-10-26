@@ -1,0 +1,5 @@
+filter_or_stage,value,status,definition
+database_candidate_axes,323461,RETRIEVED,Unique lncRNA-miRNA-hub triplets with multiMiR Tier A/B/C mRNA evidence and an ENCORI lncRNA-miRNA target-site record
+lncRNA_edge_clipExpNum_ge_2,2735,RETRIEVED,Candidate axes with at least two ENCORI CLIP experiments on the lncRNA-miRNA edge
+high_confidence_interaction_axes,1260,RETRIEVED,Tier A/B hub-mRNA edge plus lncRNA edge clipExpNum >= 2
+all_layers_with_sample_level_miRNA_detection,NOT VERIFIED,NOT VERIFIED,No sample-level PD effluent miRNA abundance table was available; candidate axes were not filtered on miRNA detection

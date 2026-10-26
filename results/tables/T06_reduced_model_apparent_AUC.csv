@@ -1,0 +1,2 @@
+"Model","AUC","Bootstrap_low","Bootstrap_high","DeLong_low","DeLong_high","n_case","n_control","Genes_used"
+"GSE125498 apparent reduced ridge",0.961538461538462,0.888461538461538,1,0.906903430573584,1,13,20,"TNFSF15;ADAM19;NAT6;FLT3LG;ECM1"

@@ -4,6 +4,12 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 import statsmodels.api as sm
+from task4_marker_sets import (
+    HUB_GENES,
+    LEUKOCYTE_MARKERS,
+    LYMPHOCYTE_MARKERS,
+    MYELOID_MARKERS,
+)
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -18,18 +24,18 @@ sample_cols = [c for c in meta["sample_id"] if c in expr_df.columns]
 y = meta.set_index("sample_id").loc[sample_cols]["stage_binary"].values.astype(float)
 stage_labels = meta.set_index("sample_id").loc[sample_cols]["group"].values
 
-# 2. Define canonical Leukocyte and Lymphocyte Gene Signatures (MCP-counter / CIBERSORT style)
+# 2. Define marker-based leukocyte and lymphocyte scores.
 # Pan-leukocyte markers (CD45 + broad lineage markers)
-leuko_markers = ['PTPRC', 'CD3D', 'CD3E', 'CD3G', 'CD4', 'CD8A', 'CD8B', 'CD19', 'MS4A1', 'CD79A', 'CD79B', 'NCAM1', 'KLRD1', 'CD14', 'CD68', 'ITGAM', 'FCGR3A']
+leuko_markers = list(LEUKOCYTE_MARKERS)
 present_leuko = [g for g in leuko_markers if g in expr_df.index]
 
-lymph_markers = ['CD3D', 'CD3E', 'CD3G', 'CD4', 'CD8A', 'CD8B', 'CD19', 'MS4A1', 'CD79A', 'CD79B', 'NCAM1', 'KLRD1']
+lymph_markers = list(LYMPHOCYTE_MARKERS)
 present_lymph = [g for g in lymph_markers if g in expr_df.index]
 
-myeloid_markers = ['CD14', 'CD68', 'ITGAM', 'FCGR3A']
+myeloid_markers = list(MYELOID_MARKERS)
 present_myeloid = [g for g in myeloid_markers if g in expr_df.index]
 
-# Calculate z-scores across samples
+# This marker-average score is a proxy, not a validated cell deconvolution method.
 def calc_sig_score(gene_list):
     mat = expr_df.loc[gene_list, sample_cols].values.astype(float)
     z = (mat - mat.mean(axis=1, keepdims=True)) / np.clip(mat.std(axis=1, ddof=1, keepdims=True), 1e-9, None)
@@ -56,7 +62,7 @@ scores_df = pd.DataFrame({
 scores_df.to_csv("results/revision/leukocyte_scores_per_sample.csv", index=False)
 
 # 3. Analyze each of the 7 consensus hubs
-hubs_7 = ['FLT3LG', 'TNFSF15', 'LTB', 'ADAM19', 'SERPINA10', 'EBI3', 'CXCL14']
+hubs_7 = list(HUB_GENES)
 hub_results = []
 
 for g in hubs_7:
@@ -115,6 +121,15 @@ for g in hubs_7:
 df_hubs = pd.DataFrame(hub_results)
 df_hubs.to_csv("results/revision/leukocyte_confounding_hub_analysis.csv", index=False)
 
+def format_p(value):
+    return f"{value:.4g}"
+
+
+adjusted_p_by_gene = df_hubs.set_index("Gene")["Leuko_Adjusted_P"].to_dict()
+retained_genes = [g for g in hubs_7 if adjusted_p_by_gene[g] < 0.05]
+borderline_genes = [g for g in hubs_7 if 0.05 <= adjusted_p_by_gene[g] < 0.10]
+attenuated_genes = [g for g in hubs_7 if adjusted_p_by_gene[g] >= 0.10]
+
 summary_json = {
     "total_leukocyte_score_comparison": {
         "lpd_mean": round(float(leuko_score[y == 1].mean()), 4),
@@ -130,12 +145,17 @@ summary_json = {
     "hubs_remaining_significant_p05": df_hubs[df_hubs['Remains_Significant_P05'] == 'Yes']['Gene'].tolist(),
     "hubs_borderline_p10": df_hubs[df_hubs['Remains_Significant_P05'] == 'Borderline']['Gene'].tolist(),
     "hubs_attenuated_non_significant": df_hubs[df_hubs['Remains_Significant_P05'] == 'No']['Gene'].tolist(),
+    "method": (
+        "Marker-based signature scores are the mean of per-gene z-scores across samples; "
+        "this is not xCell, CIBERSORT, MCP-counter, or a validated cell deconvolution estimate."
+    ),
     "interpretation": (
-        "Leukocyte score is significantly elevated in LPD dialysate effluent (P = 0.0010), demonstrating substantial inflammatory cellular influx. "
-        "After adjusting for leukocyte score as a covariate: TNFSF15 (P = 0.0036), CXCL14 (P = 0.0130), FLT3LG (P = 0.0167), and ADAM19 (P = 0.0400) "
-        "remain robustly significant, proving that their pro-fibrotic upregulation is not merely an artifact of leukocyte infiltration. "
-        "In contrast, EBI3 (P = 0.0532) becomes borderline, while SERPINA10 (P = 0.216) and LTB (P = 0.337) attenuate substantially, indicating that "
-        "their apparent elevation in effluent is partially confounded by the leukocyte compartment."
+        f"The marker-based total-leukocyte score is higher in LPD dialysate effluent "
+        f"(P = {format_p(p_leuko)}); this is an expression-signature association, not a direct cell-count "
+        "or validated deconvolution estimate. "
+        f"After adjustment for the score, hubs with nominal stage association are {retained_genes}; "
+        f"borderline hubs are {borderline_genes}; and nonsignificant hubs are {attenuated_genes}. "
+        "These small-sample OLS models do not establish cell-intrinsic expression or causality."
     )
 }
 with open("results/revision/task4_leukocyte_summary.json", "w") as f:
@@ -147,8 +167,8 @@ fig, axes = plt.subplots(1, 2, figsize=(14, 5.8), facecolor='#F8FAFC')
 # Panel A: Correlation with Leukocyte Infiltration
 bars = axes[0].barh(df_hubs['Gene'], df_hubs['r_Leukocyte_Pearson'], color='#3B82F6', edgecolor='#1E293B', height=0.6)
 axes[0].axvline(0, color='#1E293B', linewidth=0.8)
-axes[0].set_xlabel('Pearson Correlation (r) with Total Leukocyte Score', fontsize=10, fontweight='bold')
-axes[0].set_title('A. Hub Gene Correlation with Leukocyte Infiltration\n(Leukocyte Score significantly elevated in LPD, P = 0.0010)',
+axes[0].set_xlabel('Pearson Correlation (r) with Marker-Based Leukocyte Score', fontsize=10, fontweight='bold')
+axes[0].set_title(f'A. Hub Gene Correlation with Marker-Based Score\n(Score higher in LPD, P = {format_p(p_leuko)})',
                   fontsize=11, fontweight='bold')
 axes[0].grid(axis='x', linestyle=':', alpha=0.5)
 for bar in bars:
@@ -165,7 +185,7 @@ axes[1].barh(y_pos + width/2, df_hubs['Leuko_Adjusted_log2FC_beta'], height=widt
 axes[1].set_yticks(y_pos)
 axes[1].set_yticklabels(df_hubs['Gene'], fontsize=10, fontweight='bold')
 axes[1].set_xlabel('Effect Size (Estimated Difference between LPD and SPD)', fontsize=10, fontweight='bold')
-axes[1].set_title('B. Covariate Sensitivity: Unadjusted vs. Leukocyte-Adjusted\n4 of 7 Hubs Maintain Independent Significance (P < 0.05)',
+axes[1].set_title('B. Covariate Sensitivity: Unadjusted vs. Score-Adjusted\n4 of 7 Hubs Retain Nominal Stage Association (P < 0.05)',
                   fontsize=11, fontweight='bold')
 axes[1].axvline(0, color='#1E293B', linewidth=0.8)
 axes[1].legend(loc='lower right', fontsize=9)

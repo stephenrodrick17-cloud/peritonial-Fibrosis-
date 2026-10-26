@@ -1,0 +1,2 @@
+analysis,n_tested,n_nominal_P_lt_0_05,n_BH_q_lt_0_05,interpretation
+cell-level sensitivity,39272,15481,12888,Descriptive only; cells are not independent biological replicates

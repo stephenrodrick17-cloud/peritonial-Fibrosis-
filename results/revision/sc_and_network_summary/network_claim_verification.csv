@@ -1,0 +1,12 @@
+claim,status,actual_value_or_reason,source_file
+historical 11-node set,VERIFIED,11 distinct historical STRING PPI nodes; overlap with validated-seven set = 5; this is a different set and not a regulatory network.,scripts/create_legacy_11_hub_ppi.py; results/revision/legacy_11_hub_ppi/network_nodes.csv
+miRTarBase evidence/version/date/filter,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+multiMiR evidence/version/date/filter,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+ENCORI/starBase evidence/version/date/filter,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+Tier-A definitions and counts,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+putative axes / miRNA / lncRNA totals,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+miRNA detection and low-interaction definitions,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+lncRNA-mRNA coexpression claims,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+recomputed seven-hub regulatory network,NOT VERIFIED,"No corresponding source/result table found in local results/, data/, scripts/.",NOT FOUND
+miRNA expression detection dataset,NOT VERIFIED,"Local workbook contains 1,578 rows by 36 columns of miRNA annotations, not sample-level expression.",data/raw/GSE182736_All_Expressed_miRNA.xlsx
+post-translational wording in saved draft,NOT VERIFIED,No network writeup located; existing figure legend states no panel-v2 regulatory result table was found and no database query was made.,results/revision/figures_final/figure_legends.md

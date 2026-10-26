@@ -1,0 +1,170 @@
+"Cell_type_1","Cell_type_2","Spearman_rho"
+"CD4 T cell","CD4 T cell",1
+"CD8 T cell","CD4 T cell",0.952205882352941
+"NKT cell","CD4 T cell",0.894385026737968
+"NK cell","CD4 T cell",0.933823529411765
+"T cell (other)","CD4 T cell",0.975267379679144
+"B cell","CD4 T cell",0.6600935828877
+"Plasma cell","CD4 T cell",0.573529411764706
+"Monocyte","CD4 T cell",0.0969251336898396
+"Macrophage","CD4 T cell",0.245989304812834
+"Dendritic cell","CD4 T cell",0.488302139037433
+"Neutrophil","CD4 T cell",0.399064171122995
+"Eosinophil","CD4 T cell",0.309157754010695
+"Mast cell","CD4 T cell",-0.120655080213904
+"CD4 T cell","CD8 T cell",0.952205882352941
+"CD8 T cell","CD8 T cell",1
+"NKT cell","CD8 T cell",0.884692513368984
+"NK cell","CD8 T cell",0.943850267379679
+"T cell (other)","CD8 T cell",0.962901069518717
+"B cell","CD8 T cell",0.658088235294118
+"Plasma cell","CD8 T cell",0.564171122994652
+"Monocyte","CD8 T cell",0.111965240641711
+"Macrophage","CD8 T cell",0.294451871657754
+"Dendritic cell","CD8 T cell",0.490307486631016
+"Neutrophil","CD8 T cell",0.393382352941176
+"Eosinophil","CD8 T cell",0.24298128342246
+"Mast cell","CD8 T cell",-0.081216577540107
+"CD4 T cell","NKT cell",0.894385026737968
+"CD8 T cell","NKT cell",0.884692513368984
+"NKT cell","NKT cell",1
+"NK cell","NKT cell",0.956550802139037
+"T cell (other)","NKT cell",0.926136363636364
+"B cell","NKT cell",0.606283422459893
+"Plasma cell","NKT cell",0.522727272727273
+"Monocyte","NKT cell",-0.0518048128342246
+"Macrophage","NKT cell",0.198195187165775
+"Dendritic cell","NKT cell",0.314839572192513
+"Neutrophil","NKT cell",0.205882352941176
+"Eosinophil","NKT cell",0.188168449197861
+"Mast cell","NKT cell",-0.162433155080214
+"CD4 T cell","NK cell",0.933823529411765
+"CD8 T cell","NK cell",0.943850267379679
+"NKT cell","NK cell",0.956550802139037
+"NK cell","NK cell",1
+"T cell (other)","NK cell",0.9649064171123
+"B cell","NK cell",0.678475935828877
+"Plasma cell","NK cell",0.60394385026738
+"Monocyte","NK cell",-0.0233957219251337
+"Macrophage","NK cell",0.185494652406417
+"Dendritic cell","NK cell",0.396724598930481
+"Neutrophil","NK cell",0.248997326203209
+"Eosinophil","NK cell",0.225935828877005
+"Mast cell","NK cell",-0.0635026737967914
+"CD4 T cell","T cell (other)",0.975267379679144
+"CD8 T cell","T cell (other)",0.962901069518717
+"NKT cell","T cell (other)",0.926136363636364
+"NK cell","T cell (other)",0.9649064171123
+"T cell (other)","T cell (other)",1
+"B cell","T cell (other)",0.706550802139037
+"Plasma cell","T cell (other)",0.637032085561497
+"Monocyte","T cell (other)",0.0474598930481283
+"Macrophage","T cell (other)",0.247994652406417
+"Dendritic cell","T cell (other)",0.453877005347594
+"Neutrophil","T cell (other)",0.355614973262032
+"Eosinophil","T cell (other)",0.315173796791444
+"Mast cell","T cell (other)",-0.105614973262032
+"CD4 T cell","B cell",0.6600935828877
+"CD8 T cell","B cell",0.658088235294118
+"NKT cell","B cell",0.606283422459893
+"NK cell","B cell",0.678475935828877
+"T cell (other)","B cell",0.706550802139037
+"B cell","B cell",1
+"Plasma cell","B cell",0.701871657754011
+"Monocyte","B cell",-0.103609625668449
+"Macrophage","B cell",0.0150401069518717
+"Dendritic cell","B cell",0.496657754010695
+"Neutrophil","B cell",0.198863636363636
+"Eosinophil","B cell",0.257687165775401
+"Mast cell","B cell",0.193516042780749
+"CD4 T cell","Plasma cell",0.573529411764706
+"CD8 T cell","Plasma cell",0.564171122994652
+"NKT cell","Plasma cell",0.522727272727273
+"NK cell","Plasma cell",0.60394385026738
+"T cell (other)","Plasma cell",0.637032085561497
+"B cell","Plasma cell",0.701871657754011
+"Plasma cell","Plasma cell",1
+"Monocyte","Plasma cell",-0.052807486631016
+"Macrophage","Plasma cell",0.0197192513368984
+"Dendritic cell","Plasma cell",0.41644385026738
+"Neutrophil","Plasma cell",0.133689839572193
+"Eosinophil","Plasma cell",0.405414438502674
+"Mast cell","Plasma cell",0.160762032085562
+"CD4 T cell","Monocyte",0.0969251336898396
+"CD8 T cell","Monocyte",0.111965240641711
+"NKT cell","Monocyte",-0.0518048128342246
+"NK cell","Monocyte",-0.0233957219251337
+"T cell (other)","Monocyte",0.0474598930481283
+"B cell","Monocyte",-0.103609625668449
+"Plasma cell","Monocyte",-0.052807486631016
+"Monocyte","Monocyte",1
+"Macrophage","Monocyte",0.779745989304813
+"Dendritic cell","Monocyte",0.635360962566845
+"Neutrophil","Monocyte",0.793449197860963
+"Eosinophil","Monocyte",0.288770053475936
+"Mast cell","Monocyte",-0.00434491978609626
+"CD4 T cell","Macrophage",0.245989304812834
+"CD8 T cell","Macrophage",0.294451871657754
+"NKT cell","Macrophage",0.198195187165775
+"NK cell","Macrophage",0.185494652406417
+"T cell (other)","Macrophage",0.247994652406417
+"B cell","Macrophage",0.0150401069518717
+"Plasma cell","Macrophage",0.0197192513368984
+"Monocyte","Macrophage",0.779745989304813
+"Macrophage","Macrophage",1
+"Dendritic cell","Macrophage",0.569852941176471
+"Neutrophil","Macrophage",0.65975935828877
+"Eosinophil","Macrophage",0.315173796791444
+"Mast cell","Macrophage",-0.0274064171122995
+"CD4 T cell","Dendritic cell",0.488302139037433
+"CD8 T cell","Dendritic cell",0.490307486631016
+"NKT cell","Dendritic cell",0.314839572192513
+"NK cell","Dendritic cell",0.396724598930481
+"T cell (other)","Dendritic cell",0.453877005347594
+"B cell","Dendritic cell",0.496657754010695
+"Plasma cell","Dendritic cell",0.41644385026738
+"Monocyte","Dendritic cell",0.635360962566845
+"Macrophage","Dendritic cell",0.569852941176471
+"Dendritic cell","Dendritic cell",1
+"Neutrophil","Dendritic cell",0.659090909090909
+"Eosinophil","Dendritic cell",0.371991978609626
+"Mast cell","Dendritic cell",0.134358288770053
+"CD4 T cell","Neutrophil",0.399064171122995
+"CD8 T cell","Neutrophil",0.393382352941176
+"NKT cell","Neutrophil",0.205882352941176
+"NK cell","Neutrophil",0.248997326203209
+"T cell (other)","Neutrophil",0.355614973262032
+"B cell","Neutrophil",0.198863636363636
+"Plasma cell","Neutrophil",0.133689839572193
+"Monocyte","Neutrophil",0.793449197860963
+"Macrophage","Neutrophil",0.65975935828877
+"Dendritic cell","Neutrophil",0.659090909090909
+"Neutrophil","Neutrophil",1
+"Eosinophil","Neutrophil",0.539104278074866
+"Mast cell","Neutrophil",-0.161764705882353
+"CD4 T cell","Eosinophil",0.309157754010695
+"CD8 T cell","Eosinophil",0.24298128342246
+"NKT cell","Eosinophil",0.188168449197861
+"NK cell","Eosinophil",0.225935828877005
+"T cell (other)","Eosinophil",0.315173796791444
+"B cell","Eosinophil",0.257687165775401
+"Plasma cell","Eosinophil",0.405414438502674
+"Monocyte","Eosinophil",0.288770053475936
+"Macrophage","Eosinophil",0.315173796791444
+"Dendritic cell","Eosinophil",0.371991978609626
+"Neutrophil","Eosinophil",0.539104278074866
+"Eosinophil","Eosinophil",1
+"Mast cell","Eosinophil",-0.160762032085562
+"CD4 T cell","Mast cell",-0.120655080213904
+"CD8 T cell","Mast cell",-0.081216577540107
+"NKT cell","Mast cell",-0.162433155080214
+"NK cell","Mast cell",-0.0635026737967914
+"T cell (other)","Mast cell",-0.105614973262032
+"B cell","Mast cell",0.193516042780749
+"Plasma cell","Mast cell",0.160762032085562
+"Monocyte","Mast cell",-0.00434491978609626
+"Macrophage","Mast cell",-0.0274064171122995
+"Dendritic cell","Mast cell",0.134358288770053
+"Neutrophil","Mast cell",-0.161764705882353
+"Eosinophil","Mast cell",-0.160762032085562
+"Mast cell","Mast cell",1

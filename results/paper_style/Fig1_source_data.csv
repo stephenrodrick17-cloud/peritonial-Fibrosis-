@@ -1,0 +1,10 @@
+Step,Phase,Dataset,Platform,Sample_N,LPD_Cases,SPD_Controls,Gene_Universe,Status,Method,Threshold,Total_DEGs,Up_DEGs,Down_DEGs,FDR_05_DEGs,Reference,Expressed_Matrisome,Matrisome_DEGs,Up_Matrisome_DEGs,WGCNA_Modules,WGCNA_Input,Algorithms,Pool,LASSO_Genes,SVM_RFE_Genes,RF_Genes,Panel_Type,Hub_Genes,Panel_Size,Model,Validation_Tools,Immune_Deconvolution,Network,Perturbation,Pathway,Cohort,Metrics,Cohorts,Verification_Rule
+1,Discovery Cohort,GSE125498,Illumina HumanHT-12 v4,33.0,13.0,20.0,11741.0,Reused,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2,Differential Expression,,,,,,,Reused,limma empirical Bayes,"|log2FC| >= 0.585, P < 0.05",813.0,496.0,317.0,143.0,,,,,,,,,,,,,,,,,,,,,,,,
+3,Matrisome & WGCNA,,,,,,,Reused,,,,,,,"Naba Matrisome (1,027 genes)",428.0,44.0,31.0,14.0,5001.0,,,,,,,,,,,,,,,,,,
+4,Machine Learning Selection,,,,,,,Reused,,,,,,,,,,,,,"LASSO, SVM-RFE, Random Forest",38/39 ECM-DEG non-grey WGCNA genes,11.0,10.0,10.0,,,,,,,,,,,,,
+5,Consensus Biomarkers,,,,,,,Reused,,,,,,,,,,,,,,,,,,Majority Vote (>=2/3),"TNFSF15, ADAM19, FLT3LG, NAT6, ECM1 (+ LTB, EBI3)",5-gene / 7-gene,,,,,,,,,,
+6,Nomogram & Immune Profiling,,,,,,,Reused,,,,,,,,,,,,,,,,,,,,,Five-gene ridge penalized logistic regression,"Calibration quintiles, Decision curve analysis (DCA), Clinical impact",ssGSEA (CellMarker 2024 / LM22) & Spearman gene-immune correlation,,,,,,,
+7,Functional Network & Pharmacology,,,,,,,Reused,,,,,,,,,,,,,,,,,,,,,,,,"GeneMANIA (20 interactors, automatic weighting)",DSigDB candidate drug signatures,Single-gene preranked KEGG GSEA,,,,
+8,Molecular Subtypes,,,,,,,Newly run (exploratory),Consensus clustering (k=2),,,,,,,,,,,,,,,,,,,,,,,,,,LPD discovery samples (n=13),"CDF, Delta area, PAC, PCA separation, Subtype immune infiltration",,
+9,Validation & Audit,,,,,,,Audited,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"GSE248762 (LV vs SV), GSE130888 (Long vs Short), GSE62928 (EPS biopsy)",Direction concordance & detectability audit; no pooling

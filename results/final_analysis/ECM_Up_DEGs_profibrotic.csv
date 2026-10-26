@@ -1,0 +1,32 @@
+ID,Gene,Gene.symbol,Gene.title,logFC,AveExpr,t,P.Value,adj.P.Val,B,DEG_Status,Matrisome Division,Matrisome Category
+ILMN_1713751,ADAM19,ADAM19,ADAM metallopeptidase domain 19,1.2130888,9.424605486347234,4.2847578,0.000133,0.02544,1.04813,Upregulated,Matrisome-associated,ECM Regulators
+ILMN_1707727,ANGPTL4,ANGPTL4,angiopoietin like 4,1.4017457,5.787945259640117,2.8493498,0.00725,0.18065,-2.50136,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1737918,C1QA,C1QA,complement C1q A chain,0.6564472,7.709694606754784,2.4722997,0.0184,0.27341,-3.30167,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_1796409,C1QB,C1QB,complement C1q B chain,0.9225589,10.73354643749624,3.2099684,0.00282,0.11089,-1.67349,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_2122511,CCBE1,CCBE1,collagen and calcium binding EGF domains 1,0.6050057,10.704307157801802,2.9269492,0.00594,0.16381,-2.32796,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1773352,CCL5,CCL5,C-C motif chemokine ligand 5,0.6887753,10.606248104270293,2.1369539,0.0396,0.36842,-3.94682,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_3250023,CLEC2D,CLEC2D,C-type lectin domain family 2 member D,0.709219,3.660806324016492,2.316032,0.0265,0.31607,-3.61073,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_1723115,CLEC4F,CLEC4F,C-type lectin domain family 4 member F,1.1013954,4.698872393737623,2.575474,0.0143,0.24507,-3.09004,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_2402392,COL8A1,COL8A1,collagen type VIII alpha 1 chain,0.7492698,6.354088597178649,2.0407766,0.0488,0.40217,-4.11887,Upregulated,Core matrisome,Collagens
+ILMN_1685122,COL9A2,COL9A2,collagen type IX alpha 2 chain,0.9039562,3.82386478565458,2.255427,0.0304,0.33341,-3.7267,Upregulated,Core matrisome,Collagens
+ILMN_1679826,CST7,CST7,cystatin F,1.012271,7.783018256091199,3.8313715,0.0005,0.0465,-0.13641,Upregulated,Matrisome-associated,ECM Regulators
+ILMN_1748323,CXCL14,CXCL14,C-X-C motif chemokine ligand 14,0.6376862,3.693712476324096,2.9911884,0.00503,0.1522,-2.18237,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1802653,EBI3,EBI3,Epstein-Barr virus induced 3,0.8034234,4.343024724488076,3.2631721,0.00244,0.10282,-1.54688,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_2329735,ECM1,ECM1,extracellular matrix protein 1,1.0340512,7.51191162074395,2.8626685,0.00701,0.17828,-2.47179,Upregulated,Core matrisome,ECM Glycoproteins
+ILMN_2091412,FLT3LG,FLT3LG,fms related tyrosine kinase 3 ligand,1.4377149,6.020111546877898,4.8640669,2.35e-05,0.01324,2.60801,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1654319,HAPLN3,HAPLN3,hyaluronan and proteoglycan link protein 3,0.9817703,3.426816881100091,2.8785924,0.00673,0.17422,-2.43634,Upregulated,Core matrisome,Proteoglycans
+ILMN_1795464,LTA,LTA,lymphotoxin alpha,0.6419332,5.673784891035544,2.5674123,0.0146,0.24639,-3.10679,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_2376204,LTB,LTB,lymphotoxin beta,1.6747234,7.554021231550369,5.5055962,3.33e-06,0.00709,4.36247,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1693192,PI3,PI3,peptidase inhibitor 3,1.7059701,6.0175075960513,2.850673,0.00722,0.18065,-2.49842,Upregulated,Matrisome-associated,ECM Regulators
+ILMN_1719986,PIK3IP1,PIK3IP1,phosphoinositide-3-kinase interacting protein 1,0.9959731,9.33928598031317,3.7700764,0.000595,0.05111,-0.29307,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1719972,PLXNA3,PLXNA3,plexin A3,1.0165542,5.847657435214649,3.6995629,0.000728,0.05659,-0.47208,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_2154322,SEMA3E,SEMA3E,semaphorin 3E,1.0456073,10.077312373422748,4.0307737,0.000281,0.03472,0.3794,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_1805007,SEMA4F,SEMA4F,ssemaphorin 4F,0.9250611,4.488159579582881,3.4482286,0.00147,0.08126,-1.0986,Upregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_1793628,SERPINA10,SERPINA10,serpin family A member 10,1.1658519,4.884725421287965,3.7379255,0.000653,0.05433,-0.37485,Upregulated,Matrisome-associated,ECM Regulators
+ILMN_1810172,SFRP4,SFRP4,secreted frizzled related protein 4,1.4577884,5.984197417982834,2.2120603,0.0335,0.34641,-3.8083,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_1656287,SPOCK2,SPOCK2,"sparc/osteonectin, cwcv and kazal-like domains proteoglycan (testican) 2",0.7654976,10.901300688744954,3.2116119,0.00281,0.11063,-1.66959,Upregulated,Core matrisome,Proteoglycans
+ILMN_2374449,SPP1,SPP1,secreted phosphoprotein 1,0.8497021,10.964519472798017,2.2507995,0.0307,0.33386,-3.73546,Upregulated,Core matrisome,ECM Glycoproteins
+ILMN_1786847,TGM3,TGM3,transglutaminase 3,0.6649874,4.889347313305106,2.3504226,0.0244,0.30568,-3.54394,Upregulated,Matrisome-associated,ECM Regulators
+ILMN_1785732,TNFAIP6,TNFAIP6,TNF alpha induced protein 6,0.800449,6.190991568110184,2.1402852,0.0393,0.36779,-3.94075,Upregulated,Core matrisome,ECM Glycoproteins
+ILMN_2106380,TNFSF15,TNFSF15,tumor necrosis factor superfamily member 15,0.9743104,7.980117793994652,4.8148933,2.73e-05,0.01352,2.47428,Upregulated,Matrisome-associated,Secreted Factors
+ILMN_2089875,TNFSF4,TNFSF4,tumor necrosis factor superfamily member 4,0.7496608,5.964011159044533,3.1220573,0.00356,0.12814,-1.8803,Upregulated,Matrisome-associated,Secreted Factors

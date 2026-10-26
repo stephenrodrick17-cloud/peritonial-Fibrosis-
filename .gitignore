@@ -45,3 +45,8 @@ data/processed/pseudobulk/pb_audit_*
 results/revision/effluent_validation/**/*_RAW.tar
 results/revision/effluent_validation/**/*.features.tsv.gz
 results/revision/effluent_validation/**/*.matrix.mtx.gz
+
+# Large uncompressed network tables (>50MB, compressed .gz provided)
+results/revision/network_7hub/lncRNA_miRNA_evidence.csv
+results/revision/network_7hub/network_axes.csv
+

@@ -1,0 +1,10 @@
+lineage,original_group,n_samples_total,n_samples_eligible,n_samples_excluded_by_20_cell_rule,n_zero_count_eligible,mean_raw_gene_count_eligible,mean_CPM_eligible
+myeloid,LV_UF,4,4,0,0,22828.75,1451.6155504297349
+myeloid,LV_NOT_UF,6,6,0,0,379.8333333333333,14.226302605198404
+myeloid,SV,6,6,0,0,277.1666666666667,8.497860022059944
+mesothelial,LV_UF,4,3,1,0,16573.666666666668,3080.391743445169
+mesothelial,LV_NOT_UF,6,5,1,0,70.8,15.441295864685738
+mesothelial,SV,6,6,0,0,67.0,4.707188096796792
+epithelial,LV_UF,4,4,0,0,11697.25,1232.5816574117491
+epithelial,LV_NOT_UF,6,6,0,0,258.6666666666667,58.33670579947593
+epithelial,SV,6,6,0,0,54.5,6.313418254329311

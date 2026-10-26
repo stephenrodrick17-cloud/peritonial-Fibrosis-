@@ -1,0 +1,10 @@
+bioproject,linked_GEO_or_ArrayExpress,verified_project_description,decision
+PRJNA541920,GSE130888,Human peritoneal effluent scRNA-seq plus normal tissue samples,Analyzed through GEO raw matrices; duplicate SRA/GEO deposit
+PRJNA1045728,GSE248762,Human overnight peritoneal effluent scRNA-seq,Analyzed through GEO raw matrices; duplicate SRA/GEO deposit
+PRJNA1266235,GSE297829,One human patient effluent scRNA-seq sample after 3 years PD,Excluded: n=1
+PRJEB19316,E-MTAB-5462,"Human effluent bulk RNA-seq crossover trial, 6 patients","Not analyzed: BioStudies lists only IDF/SDRF, no processed gene-level matrix; FASTQ quantification not undertaken"
+PRJNA638799,,Small-RNA sequencing of peritoneal biopsies: 7 hyalinizing vasculopathy and 4 non-hyalinizing,Excluded: biopsy tissue and small-RNA data are not mRNA panel expression
+PRJNA672097,GSE160145,Human heart tissue from kidney disease/dialysis study,Excluded: heart tissue; SRA title/search text was a false positive
+PRJNA757643,GSE182736,"Exosomal miRNA in peritoneal dialysis effluent, 3 UF failure and 3 stable",Excluded: miRNA-seq cannot score the protein-coding panel or mRNA signatures
+PRJNA1033066,,Human pediatric blood TCR repertoire in sepsis,Excluded: tissue and study question unrelated to peritoneal effluent
+PRJNA1212711,,Animal experiments on microbiome and PD-associated peritoneal fibrosis,"Excluded: non-human model, despite a broad SRA human-query match"

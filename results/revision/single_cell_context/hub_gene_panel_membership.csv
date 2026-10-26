@@ -1,0 +1,10 @@
+gene,in_project_9_gene_hubs,in_five_gene_model_panel,in_seven_gene_consensus_panel
+TNFSF15,True,True,True
+FLT3LG,True,True,True
+EBI3,True,False,True
+LTB,True,False,True
+ADAM19,True,True,True
+NAT6,True,True,False
+ECM1,True,True,False
+CST7,True,False,False
+CCBE1,True,False,False

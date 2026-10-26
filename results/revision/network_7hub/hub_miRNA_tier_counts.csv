@@ -1,0 +1,36 @@
+hub_gene,evidence_tier,unique_miRNA_count,definition
+TNFSF15,A,0,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+TNFSF15,B,0,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+TNFSF15,C,84,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+TNFSF15,validated_unclassified,70,Positive validated-table record without a qualifying functional assay or Tier B support
+TNFSF15,B_support_including_A,0,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"
+FLT3LG,A,0,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+FLT3LG,B,0,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+FLT3LG,C,31,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+FLT3LG,validated_unclassified,0,Positive validated-table record without a qualifying functional assay or Tier B support
+FLT3LG,B_support_including_A,0,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"
+EBI3,A,0,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+EBI3,B,0,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+EBI3,C,30,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+EBI3,validated_unclassified,17,Positive validated-table record without a qualifying functional assay or Tier B support
+EBI3,B_support_including_A,0,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"
+LTB,A,0,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+LTB,B,0,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+LTB,C,36,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+LTB,validated_unclassified,1,Positive validated-table record without a qualifying functional assay or Tier B support
+LTB,B_support_including_A,0,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"
+ADAM19,A,3,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+ADAM19,B,155,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+ADAM19,C,176,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+ADAM19,validated_unclassified,19,Positive validated-table record without a qualifying functional assay or Tier B support
+ADAM19,B_support_including_A,155,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"
+ECM1,A,2,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+ECM1,B,0,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+ECM1,C,21,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+ECM1,validated_unclassified,0,Positive validated-table record without a qualifying functional assay or Tier B support
+ECM1,B_support_including_A,0,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"
+CST7,A,0,"Positive multiMiR validated record with reporter, luciferase, western-blot, qPCR, or qRT-PCR assay"
+CST7,B,0,"ENCORI hub-mRNA clipExpNum >= 2, excluding Tier A best-class overlaps"
+CST7,C,11,multiMiR predicted interaction only; no positive validated record or Tier A/B support
+CST7,validated_unclassified,0,Positive validated-table record without a qualifying functional assay or Tier B support
+CST7,B_support_including_A,0,"All unique miRNAs with ENCORI hub-mRNA clipExpNum >= 2, including any also classed Tier A"

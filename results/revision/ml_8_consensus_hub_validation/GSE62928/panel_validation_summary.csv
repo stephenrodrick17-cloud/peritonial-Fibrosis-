@@ -1,0 +1,2 @@
+"Gene_Count","Concordant_Genes","Composite_Mean_Difference_EPS_minus_NonEPS","Composite_Mann_Whitney_exact_two_sided_P","Composite_AUC","Composite_AUC_Bootstrap_CI95_Lower","Composite_AUC_Bootstrap_CI95_Upper","Mean_Gene_logFC","Matched_Null_Mean_AUC","Matched_Null_AUC_Empirical_P","Matched_Null_Mean_Gene_logFC_Empirical_P","Detected_Panel_Genes"
+8,2,-0.170342261955309,0.685714285714286,0.375,0,0.75,-0.14999434375,0.5380625,0.887112887112887,0.872127872127872,1

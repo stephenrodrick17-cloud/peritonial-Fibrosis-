@@ -136,6 +136,7 @@ Expression for EPS, early PD, and uremic subgroups is displayed descriptively (n
 - Discovery used dialysate effluent from long- versus short-term PD; validation uses peritoneal biopsy tissue from severe EPS versus early-PD and uremic controls. Tissue, phenotype, and comparator differences limit direct transportability.
 - No age, sex, batch, or other covariate adjustment was possible in this eight-sample analysis.
 - The fixed panel genes are all below the prespecified operational mean-expression threshold of 5.0. The threshold is not a platform negative-control limit, but the low means and bottom-decile-only random-gene matching constrain interpretation.
+- The continuous composite AUC remains calculable from the deposited expression values, but its 0.875 estimate with a 0.500–1.000 bootstrap interval is highly uncertain. Being below the operational cutoff alone neither establishes noise-dominated signal nor provides evidence of reliable discrimination.
 - The eight-gene composite has a broad bootstrap interval, and probe sensitivities show that selecting a different annotated probe can change an individual gene's effect direction.
 - This is an exploratory cohort evaluation, not evidence of a validated diagnostic test or causal mechanism.
 

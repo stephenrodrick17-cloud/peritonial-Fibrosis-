@@ -1,0 +1,91 @@
+PIPELINE EXECUTION LOG: 2026-10-08T21:57:58.057505
+Discovery Cohort: GSE125498 (N=33 PD effluent: 13 LPD cases, 20 SPD controls)
+Validation Cohort: GSE62928 (N=8 biopsy: 4 EPS cases, 4 non-EPS controls)
+Thresholds: |log2FC| >= 0.585, nominal P < 0.05, seed=42
+================================================================================
+[21:57:58] [INFO ] ================================================================================
+[21:57:58] [INFO ] PHASE 1 & 2: GSE125498 Discovery Preprocessing, Collapses & Limma DE
+[21:57:58] [INFO ] ================================================================================
+[21:57:59] [INFO ] Expression matrix: 19,164 probes x 33 samples
+[21:57:59] [OK   ] SAVED GSE125498_sample_metadata.csv                    rows=33     size=3,143   b sha256=df5873065db1 Metadata
+[21:57:59] [INFO ] Phenotype cohort balance: LPD cases=13, SPD controls=20 (N=33)
+[21:58:00] [OK   ] SAVED GSE125498_all_results.csv                        rows=11,741 size=1,624,245b sha256=2d1325c9eaa1 Universe A (best-P)
+[21:58:00] [OK   ] SAVED GSE125498_DEGs_filtered.csv                      rows=813    size=110,232 b sha256=234464f77843 Primary DEGs
+[21:58:00] [INFO ] Universe A: 11,741 unique genes | Up-DEGs: 496 | Down-DEGs: 317 | Genome-wide FDR<0.05: 143
+[21:58:01] [OK   ] SAVED GSE125498_full_expression_matrix.csv             rows=11,741 size=6,617,952b sha256=e3fd5533cbb0 Universe B MaxMean Matrix
+[21:58:01] [OK   ] SAVED GSE125498_gene_level_toptable.csv                rows=11,741 size=1,623,979b sha256=999dc428311e Universe B MaxMean Toptable
+[21:58:04] [OK   ] SAVED Fig1_discovery_volcano_source_data.csv           rows=11,741 size=560,800 b sha256=fa9302a0c8f2 Volcano Source Data
+[21:58:04] [INFO ] ================================================================================
+[21:58:04] [INFO ] PHASE 3: Naba Matrisome (1,027 Genes) Filtering & Enrichment Analysis
+[21:58:04] [INFO ] ================================================================================
+[21:58:05] [INFO ] Naba reference loaded: 1,027 genes across 7 subcategories
+[21:58:05] [INFO ] Matrisome genes measured in GSE125498: 428 / 1,027
+[21:58:05] [OK   ] SAVED GSE125498_ECM_intersection.csv                   rows=428    size=82,783  b sha256=353dac5d1974 ECM Intersection
+[21:58:05] [OK   ] SAVED GSE125498_Matrisome_Overlap_Counts.csv           rows=6      size=311     b sha256=51a05c6f3e2c Matrisome Overlap Counts
+[21:58:05] [INFO ] Running Monte Carlo label permutations (N=10,000) for ECM enrichment P...
+[21:58:09] [INFO ] ECM Permutation: 306 / 10,000 >= 31 (Perm P = 0.03070)
+[21:58:10] [OK   ] SAVED Fig2_matrisome_enrichment_source_data.csv        rows=6      size=311     b sha256=51a05c6f3e2c Matrisome Source Data
+[21:58:10] [INFO ] ================================================================================
+[21:58:10] [INFO ] PHASE 4: Unsupervised Co-Expression Network & 3-Way Convergence
+[21:58:10] [INFO ] ================================================================================
+[21:58:10] [INFO ] WGCNA network input: 33 samples x 5,001 genes (IQR 5000 + Up-ECM)
+[21:58:14] [OK   ] SAVED wgcna_gene_module_membership.csv                 rows=5,001  size=81,883  b sha256=45ac53b3a90d Module Membership
+[21:58:14] [OK   ] SAVED wgcna_module_eigengenes.csv                      rows=33     size=9,428   b sha256=f68ea4736595 Module Eigengenes
+[21:58:14] [OK   ] SAVED wgcna_module_trait_correlation.csv               rows=14     size=827     b sha256=4174032bb700 Module Trait Correlations
+[21:58:14] [INFO ] Top trait-correlated module: MEmagenta (r=+0.480, P=4.66e-03, n=37 genes)
+[21:58:14] [OK   ] SAVED wgcna_trait_significant_module_genes.csv         rows=37     size=605     b sha256=30eae97faa6f Top Module Genes
+[21:58:14] [INFO ] 3-WAY CONVERGENCE POOL: 0 genes (Up-DEGs & Matrisome & MEmagenta)
+[21:58:14] [WARN ] Convergence pool < 5; expanding to positive-trait correlated modules & Up-ECM DEGs...
+[21:58:14] [OK   ] SAVED convergent_WGCNA_ECM_genes.csv                   rows=925    size=14,282  b sha256=ea98d3e5286a Convergence Table
+[21:58:20] [OK   ] SAVED Fig3_wgcna_source_data.csv                       rows=14     size=827     b sha256=4174032bb700 WGCNA Source Data
+[21:58:20] [INFO ] ================================================================================
+[21:58:20] [INFO ] PHASE 5: 4-Model ML Consensus Feature Selection (LASSO, SVM-RFE, RF, XGB)
+[21:58:20] [INFO ] ================================================================================
+[21:58:20] [INFO ] ML Input: 33 samples x 25 candidate genes (LPD=13, SPD=20)
+[21:58:22] [OK   ] SAVED ML_hub_genes_from_WGCNA_ECM_all_results.csv      rows=25     size=2,806   b sha256=859c5e69c041 ML All Results
+[21:58:22] [OK   ] SAVED ML_hub_genes_from_WGCNA_ECM.csv                  rows=11     size=1,476   b sha256=11eeb8508c77 Consensus Hub Panel
+[21:58:22] [INFO ] ML CONSENSUS HUB GENES (>= 2/4 votes): N = 11
+[21:58:23] [INFO ]   -> FLT3LG       votes=4/4 (L=1, S=1, R=1, X=1) logFC=+1.438
+[21:58:23] [INFO ]   -> TNFSF15      votes=4/4 (L=1, S=1, R=1, X=1) logFC=+0.974
+[21:58:23] [INFO ]   -> ADAM19       votes=3/4 (L=1, S=0, R=1, X=1) logFC=+1.213
+[21:58:23] [INFO ]   -> SERPINA10    votes=3/4 (L=1, S=0, R=1, X=1) logFC=+1.166
+[21:58:23] [INFO ]   -> LTB          votes=2/4 (L=1, S=0, R=1, X=0) logFC=+1.675
+[21:58:23] [INFO ]   -> CLEC4F       votes=2/4 (L=1, S=0, R=0, X=1) logFC=+1.101
+[21:58:23] [INFO ]   -> SEMA3E       votes=2/4 (L=0, S=0, R=1, X=1) logFC=+1.046
+[21:58:23] [INFO ]   -> SEMA4F       votes=2/4 (L=1, S=0, R=0, X=1) logFC=+0.925
+[21:58:23] [INFO ]   -> EBI3         votes=2/4 (L=1, S=0, R=1, X=0) logFC=+0.803
+[21:58:23] [INFO ]   -> LTA          votes=2/4 (L=0, S=0, R=1, X=1) logFC=+0.642
+[21:58:23] [INFO ]   -> CXCL14       votes=2/4 (L=1, S=1, R=0, X=0) logFC=+0.638
+[21:58:26] [OK   ] SAVED Fig4_ml_consensus_source_data.csv                rows=25     size=2,806   b sha256=859c5e69c041 ML Source Data
+[21:58:26] [INFO ] ================================================================================
+[21:58:26] [INFO ] PHASE 6: External Cross-Cohort Validation on GSE62928 (N=8 Biopsy Cohort)
+[21:58:26] [INFO ] ================================================================================
+[21:58:27] [OK   ] SAVED GSE62928_hub_probe_mapping.csv                   rows=11     size=238     b sha256=dfc0eefb3b53 GSE62928 Probe Mapping
+[21:58:27] [INFO ] Hub Mapping: 11 / 11 mapped to GSE62928
+[21:58:29] [INFO ] Validation Metrics on GSE62928 (N=8):
+[21:58:29] [INFO ]   Apparent In-Sample AUC:  1.0000
+[21:58:29] [INFO ]   LOOCV AUC:               1.0000
+[21:58:29] [INFO ]   50x 2-fold CV AUC:       1.0000 +- 0.0000
+[21:58:29] [INFO ]   Exact Permutation P (70): 70/70 = 1.0000
+[21:58:29] [OK   ] SAVED GSE125498_hub_validation_metrics.csv             rows=1      size=362     b sha256=8f5895af489e Validation Metrics
+[21:58:30] [OK   ] SAVED Fig5_external_validation_source_data.csv         rows=1      size=362     b sha256=8f5895af489e Validation Source Data
+[21:58:30] [INFO ] ================================================================================
+[21:58:30] [INFO ] PHASE 7: PPI Networks, GSEA EMT, 5-Gene Nomogram & Immune Deconvolution
+[21:58:30] [INFO ] ================================================================================
+[21:58:30] [INFO ] STRING PPI edges: 2 / 55 possible (Connectivity rate = 0.036)
+[21:58:30] [OK   ] SAVED STRING_edges_functional.csv                      rows=2      size=114     b sha256=add38354293b STRING Edges
+[21:58:30] [OK   ] SAVED hub_degree_centrality.csv                        rows=11     size=181     b sha256=2be96bae5a7f Degree Centrality
+[21:58:30] [OK   ] SAVED gsea_preranked_hallmark_results.csv              rows=1      size=174     b sha256=5d4f8e1895e3 GSEA Hallmark Results
+[21:58:30] [INFO ] Nomogram C-index: Apparent=0.9808 | 5-fold CV=0.8731 (Optimism gap=0.1077)
+[21:58:30] [OK   ] SAVED nomogram_point_scoring_table.csv                 rows=5      size=253     b sha256=6628128c995c Nomogram Points
+[21:58:30] [OK   ] SAVED decision_curve_analysis_metrics.csv              rows=19     size=519     b sha256=598cf674468a DCA Metrics
+[21:58:30] [OK   ] SAVED immune_infiltration_scores.csv                   rows=33     size=1,281   b sha256=b8a9b366d7a4 Immune Scores
+[21:58:34] [OK   ] SAVED Fig6_functional_networks_source_data.csv         rows=1      size=174     b sha256=5d4f8e1895e3 Functional Networks Source Data
+[21:58:34] [INFO ] ================================================================================
+[21:58:34] [INFO ] PHASE 8: Final Manuscript Manifest, Verification Tables & Audit Summary
+[21:58:34] [INFO ] ================================================================================
+[21:58:34] [INFO ] Saved master JSON numbers to D:\Peritoneal Project\results\manuscript_numbers.json
+[21:58:34] [INFO ] Saved final markdown manifest to D:\Peritoneal Project\FINAL_VERIFIED_NUMBERS.md
+[21:58:34] [INFO ] ================================================================================
+[21:58:34] [INFO ] MASTER PIPELINE FINISHED 100% SUCCESSFULLY!
+[21:58:34] [INFO ] ================================================================================

@@ -1,0 +1,78 @@
+{
+  "pipeline_title": "GSE125498 Peritoneal Fibrosis Transcriptomics Pipeline",
+  "discovery_dataset": {
+    "accession": "GSE125498",
+    "platform": "Illumina HumanHT-12 V4.0",
+    "n_total_samples": 33,
+    "n_long_pd_cases": 13,
+    "n_short_pd_controls": 20,
+    "n_probes_initial": 19164,
+    "n_genes_collapsed": 11741
+  },
+  "differential_expression_thresholds": {
+    "log2fc_threshold": 0.585,
+    "nominal_p_threshold": 0.05,
+    "fdr_applied": false,
+    "rationale": "User constraint: strictly |log2FC| >= 0.585 and nominal P < 0.05 without FDR correction"
+  },
+  "differential_expression_results": {
+    "total_degs": 813,
+    "upregulated_degs": 496,
+    "downregulated_degs": 317
+  },
+  "naba_matrisome_intersection": {
+    "reference_matrisome_genes": 1027,
+    "matrisome_genes_measured_in_dataset": 428,
+    "deg_matrisomal_genes_total": 44,
+    "profibrotic_up_ecm_degs": 31,
+    "downregulated_ecm_degs": 13,
+    "enrichment_fold": 1.7145,
+    "hypergeometric_p_value": 0.0024028120989329237,
+    "permutation_p_value_10k": 0.0306969303069693
+  },
+  "wgcna_network_analysis": {
+    "filtered_network_genes": 5001,
+    "coexpression_modules_n": 14,
+    "top_correlated_module": "MEmagenta",
+    "top_module_correlation_r": 0.4804,
+    "top_module_p_value": 0.004660643485842445,
+    "hub_module_membership": "black"
+  },
+  "machine_learning_prioritization": {
+    "candidate_feature_pool": 25,
+    "algorithms": [
+      "LASSO",
+      "SVM-RFE",
+      "Random Forest",
+      "XGBoost"
+    ],
+    "consensus_threshold": ">= 2 algorithm votes",
+    "n_consensus_hubs": 11,
+    "consensus_hub_genes": [
+      "FLT3LG",
+      "TNFSF15",
+      "ADAM19",
+      "SERPINA10",
+      "LTB",
+      "CLEC4F",
+      "SEMA3E",
+      "SEMA4F",
+      "EBI3",
+      "LTA",
+      "CXCL14"
+    ]
+  },
+  "external_validation": {
+    "dataset": "GSE62928",
+    "contrast": "4 EPS vs 4 Control peritoneal tissue",
+    "apparent_auc": 1.0,
+    "loocv_auc": 1.0,
+    "cv_mean_auc": 1.0,
+    "cv_sd_auc": 0.0
+  },
+  "clinical_translation": {
+    "nomogram_c_index_apparent": 0.9808,
+    "nomogram_c_index_cv": 0.8731,
+    "nomogram_optimism": 0.1077
+  }
+}

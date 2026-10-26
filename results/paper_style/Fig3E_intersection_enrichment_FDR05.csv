@@ -1,0 +1,3 @@
+"ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count","Database","category","subcategory","FDR"
+"GO:2001238","positive regulation of extrinsic apoptotic signaling pathway","2/6","45/10170",0.0444444444444444,75.3333333333333,12.1415678164938,0.000283958428956675,0.0496927250674182,0.0295914573333799,"LTB/TNFSF15",2,"GO_BP",,,0.0496927250674182
+"hsa04060","Cytokine-cytokine receptor interaction","2/4","146/5154",0.0136986301369863,17.6506849315068,5.68764947338899,0.00460625901702891,0.0414563311532602,0.0387895496170855,"4050/9966",2,"KEGG","Environmental Information Processing","Signaling molecules and interaction",0.0414563311532602

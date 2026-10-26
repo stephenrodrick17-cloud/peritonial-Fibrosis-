@@ -1,0 +1,12 @@
+Task: T03_enrichment
+Status: partial
+Seed: 2026
+
+Measured MatrisomeAnalyzeR universe: 455 unique expressed genes from saved source table.
+DEG threshold reproduced from source table: |log2FC| >= 0.585 and nominal P < 0.05; selected 46 genes.
+39-gene WGCNA intersection input: 39 ; represented in matrisome background: 39 ; Entrez-mapped: 38
+39-gene WGCNA intersection Reactome skipped: ReactomePA package is not installed.
+46 Matrisome DEGs input: 46 ; represented in matrisome background: 46 ; Entrez-mapped: 45
+46 Matrisome DEGs Reactome skipped: ReactomePA package is not installed.
+Completed supported enrichment objects: 10
+Significant terms with BH-adjusted q < 0.05: 0

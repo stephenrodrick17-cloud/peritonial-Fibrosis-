@@ -1,0 +1,23 @@
+-------------------------------------------------- 
+Starting DecontX 
+-------------------------------------------------- 
+Wed Oct 21 12:51:18 2026 .. Analyzing all cells 
+Wed Oct 21 12:51:18 2026 .... Converting to sparse matrix 
+Wed Oct 21 12:51:20 2026 .... Generating UMAP 
+Wed Oct 21 12:52:17 2026 .... Estimating contamination 
+Wed Oct 21 12:52:23 2026 ...... Completed iteration: 10 | converge: 0.03227 
+Wed Oct 21 12:52:28 2026 ...... Completed iteration: 20 | converge: 0.01641 
+Wed Oct 21 12:52:33 2026 ...... Completed iteration: 30 | converge: 0.009326 
+Wed Oct 21 12:52:38 2026 ...... Completed iteration: 40 | converge: 0.006051 
+Wed Oct 21 12:52:42 2026 ...... Completed iteration: 50 | converge: 0.004223 
+Wed Oct 21 12:52:47 2026 ...... Completed iteration: 60 | converge: 0.00299 
+Wed Oct 21 12:52:52 2026 ...... Completed iteration: 70 | converge: 0.002254 
+Wed Oct 21 12:52:57 2026 ...... Completed iteration: 80 | converge: 0.001797 
+Wed Oct 21 12:53:02 2026 ...... Completed iteration: 90 | converge: 0.001636 
+Wed Oct 21 12:53:07 2026 ...... Completed iteration: 100 | converge: 0.001681 
+Wed Oct 21 12:53:12 2026 ...... Completed iteration: 110 | converge: 0.001037 
+Wed Oct 21 12:53:14 2026 ...... Completed iteration: 111 | converge: 0.0009934 
+Wed Oct 21 12:53:14 2026 .. Calculating final decontaminated matrix 
+-------------------------------------------------- 
+Completed DecontX. Total time: 2.08935 mins 
+-------------------------------------------------- 

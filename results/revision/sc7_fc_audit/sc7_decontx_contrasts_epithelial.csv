@@ -1,0 +1,4 @@
+"gene","lineage","contrast","n_contrast_samples","n_SV_samples","before_log2FC","before_P","after_log2FC","after_P","after_status","before_BH_q","after_BH_q"
+"ECM1","epithelial","LV vs SV",10,6,6.60299329314642,0.0009859811495807,6.70058830512539,0.00116712283725627,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"
+"ECM1","epithelial","LV_UF vs SV",4,6,7.82097588299146,2.52712223246706e-05,7.91557788965334,4.09635151766376e-05,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"
+"ECM1","epithelial","LV_NOT_UF vs SV",6,6,3.23646872877368,0.0100030987580342,3.21691436599367,0.0137368020326773,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"

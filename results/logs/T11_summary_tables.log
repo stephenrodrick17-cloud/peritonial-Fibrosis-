@@ -1,0 +1,7 @@
+Task: T11_summary_tables
+Status: completed
+Seed: 2026
+
+Generated cohort characteristics and consensus-hub summary by joining saved selection, effect-size, meta-analysis, and ROC outputs.
+Discovery AUCs are apparent single-gene score AUCs; external cohorts are additional/exploratory, not formally independent.
+Table 2 records missing or unavailable comparisons as NA rather than imputing values.

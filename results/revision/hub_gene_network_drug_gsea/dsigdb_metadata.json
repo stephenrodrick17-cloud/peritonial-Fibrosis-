@@ -1,0 +1,29 @@
+{
+  "query_date": "2026-10-13",
+  "database": "DSigDB",
+  "library": "DSigDB",
+  "library_version": "DSigDB v1.0 as listed by Enrichr",
+  "library_statistics": {
+    "geneCoverage": 19513,
+    "genesPerTerm": 117,
+    "libraryName": "DSigDB",
+    "link": "http://tanlab.ucdenver.edu/DSigDB/DSigDBv1.0/",
+    "numTerms": 4026,
+    "appyter": "287476538ab98337dbe727b3985a436feb6d192a",
+    "categoryId": 4
+  },
+  "query_genes": [
+    "FLT3LG",
+    "TNFSF15",
+    "LTB",
+    "ADAM19",
+    "SERPINA10",
+    "EBI3",
+    "CXCL14"
+  ],
+  "enrichr_user_list_id": 139881375,
+  "fdr_cutoff": 0.05,
+  "number_of_terms_returned": 191,
+  "number_significant_fdr_lt_0_05": 1,
+  "hub_genes_without_drug_annotation": []
+}

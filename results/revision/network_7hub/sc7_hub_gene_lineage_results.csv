@@ -1,0 +1,50 @@
+gene,lineage,status,not_testable_reason,n_LV_samples_with_ge_20_cells,n_SV_samples_with_ge_20_cells,n_LV_samples_with_ge_10_umis,n_SV_samples_with_ge_10_umis,log2FC_LV_vs_SV,P_value,BH_FDR_7hub_family,nominal_P_lt_0_05,FDR_lt_0_05_7hub_family,direction,mean_raw_library_CPM_LV,mean_raw_library_CPM_SV,n_LV_cells_in_eligible_samples,n_SV_cells_in_eligible_samples,cell_count_context_flag
+TNFSF15,lymphoid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,1,2,,,,False,False,not estimated,0.317448879709442,0.2838065621951417,37678,23939,
+FLT3LG,lymphoid,testable,,10,6,10,6,0.205898876950243,0.585300667882191,0.7478841867383552,False,False,higher in LV,30.311391810233825,23.806031668449734,37678,23939,
+EBI3,lymphoid,testable,,10,6,10,6,1.45543085082006,0.0224587289526643,0.0860917943185464,True,False,higher in LV,10.355152450664574,3.249646417286954,37678,23939,
+LTB,lymphoid,testable,,10,6,10,6,-0.0629552779970215,0.865087335658691,0.866690180437652,False,False,higher in SV,518.7836579731008,483.0220289250312,37678,23939,
+ADAM19,lymphoid,testable,,10,6,10,6,0.423400608204097,0.132805713538556,0.2776846737624353,False,False,higher in LV,55.372707955670094,38.04524392837575,37678,23939,
+ECM1,lymphoid,testable,,10,6,9,6,2.16387626540722,0.051233466383812,0.1585919977622089,False,False,higher in LV,5.605173134292154,1.0064811782434784,37678,23939,
+CST7,lymphoid,testable,,10,6,10,6,0.0518956732996389,0.866690180437652,0.866690180437652,False,False,higher in LV,439.5864618649039,392.8999706663548,37678,23939,
+TNFSF15,myeloid,testable,,10,6,7,4,1.96310332575269,0.0123416529605596,0.0709645045232177,True,False,higher in LV,2.021241780827709,0.5372113988489214,19470,20860,
+FLT3LG,myeloid,testable,,10,6,9,6,0.179038591900018,0.653188834466376,0.7511671596363324,False,False,higher in LV,3.028349242763121,2.432870685008234,19470,20860,
+EBI3,myeloid,testable,,10,6,9,6,1.41123739720539,0.0186121752291994,0.0856160060543172,True,False,higher in LV,4.516396379695796,1.453773634701256,19470,20860,
+LTB,myeloid,testable,,10,6,10,6,0.448681004878598,0.335996871928504,0.5151952036237062,False,False,higher in LV,63.504735205925,42.35875744935327,19470,20860,
+ADAM19,myeloid,testable,,10,6,10,6,0.773322744002986,0.127230996986854,0.2776846737624353,False,False,higher in LV,19.403427471237883,10.916511826232144,19470,20860,
+ECM1,myeloid,testable,,10,6,10,6,6.12396276741692,0.0042269275581539,0.0324064446125132,True,True,higher in LV,589.1820017350127,8.497860022059934,19470,20860,
+CST7,myeloid,testable,,10,6,10,6,0.808531807198954,0.0551624340042466,0.1585919977622089,False,False,higher in LV,101.2803918577674,53.43979209971948,19470,20860,
+TNFSF15,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,0,0,,,,False,False,not estimated,2.658062811978363,0.198105826115402,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+FLT3LG,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,1,,,,False,False,not estimated,0.7576662166998128,2.215985051173736,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+EBI3,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,0,0,,,,False,False,not estimated,0.1068392961769053,0.6323253138476266,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+LTB,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,2,,,,False,False,not estimated,0.7177014986579664,9.675857364707044,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ADAM19,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,2,1,,,,False,False,not estimated,6.674868521554301,4.17867230792624,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ECM1,fibroblast/stromal,testable,,4,5,4,4,0.425749374810844,0.469186553588551,0.6347818077962749,False,False,higher in LV,213.20568131089183,143.9863328562075,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+CST7,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,2,,,,False,False,not estimated,2.1841373338524206,15.835514107167494,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+TNFSF15,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,0,2,,,,False,False,not estimated,0.2079549942280149,0.5515327139543713,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+FLT3LG,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,1,2,,,,False,False,not estimated,0.8394244467951628,1.0298085986622316,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+EBI3,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,0,0,,,,False,False,not estimated,0.1743578858171803,0.1818968499374563,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+LTB,mesothelial,testable,,8,6,6,4,-0.325713042234092,0.618176624711976,0.7483190720197604,False,False,higher in SV,4.445927999980132,5.798862144296475,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ADAM19,mesothelial,testable,,8,6,3,2,0.553122658422024,0.36560206278334,0.5255529652510513,False,False,higher in LV,1.9515202016681128,1.5205223743310352,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ECM1,mesothelial,testable,,8,6,8,6,8.30766876410162,0.0009508834036293,0.011338783220178,True,True,higher in LV,1164.797713707367,4.707188096796792,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+CST7,mesothelial,testable,,8,6,6,6,-0.167502934335438,0.776002680085578,0.8499076972365855,False,False,higher in SV,5.634914037403026,7.309213428791925,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+TNFSF15,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+FLT3LG,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+EBI3,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+LTB,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+ADAM19,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+ECM1,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+CST7,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,,,,False,False,not estimated,,,0,0,NO_ELIGIBLE_CELLS
+TNFSF15,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,3,0,,,,False,False,not estimated,1.1488844251328925,0.4644946614842733,2244,1621,
+FLT3LG,epithelial,testable,,10,6,3,3,0.558949253205415,0.314265969546757,0.5151952036237062,False,False,higher in LV,1.933842854864377,1.1624827399340436,2244,1621,
+EBI3,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,1,0,,,,False,False,not estimated,0.3972244954557341,0.4437618103805592,2244,1621,
+LTB,epithelial,testable,,10,6,8,6,0.929866091070417,0.224616785286632,0.4305155051327113,False,False,higher in LV,17.613302929280888,9.503692174837315,2244,1621,
+ADAM19,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,5,1,,,,False,False,not estimated,2.899941925482688,1.1441650482604615,2244,1621,
+ECM1,epithelial,testable,,10,6,10,6,6.60299329314642,0.0009859811495807,0.011338783220178,True,True,higher in LV,528.0346864443851,6.313418254329311,2244,1621,
+CST7,epithelial,testable,,10,6,6,6,0.598216815496681,0.286118595285273,0.5062098224277908,False,False,higher in LV,8.306780868792611,5.94719110861626,2244,1621,
+TNFSF15,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0,,,,False,False,not estimated,0.0,0.0,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+FLT3LG,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,1,,,,False,False,not estimated,27.060879251032564,43.2405394379749,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+EBI3,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0,,,,False,False,not estimated,0.0,1.2498281486295637,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+LTB,other/unresolved,testable,,8,5,6,4,-0.785684419142078,0.100337754026835,0.256418704735245,False,False,higher in SV,408.0225505256778,835.3819619785894,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ADAM19,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,2,,,,False,False,not estimated,41.06774634968944,72.22052207492428,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ECM1,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,1,0,,,,False,False,not estimated,41.613895687450686,1.4614327887060474,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+CST7,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,1,3,,,,False,False,not estimated,65.15675830610374,116.69240647575762,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)

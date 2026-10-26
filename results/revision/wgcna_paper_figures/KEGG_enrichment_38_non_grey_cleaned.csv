@@ -1,0 +1,4 @@
+"category","subcategory","ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"Environmental Information Processing","Signaling molecules and interaction","hsa04060","Cytokine-cytokine receptor interaction","9/21","99/2105",0.0909090909090909,9.11255411255411,8.29838151368595,1.44233948387547e-07,7.3559313677649e-06,5.31388230901489e-06,"655/6352/6372/10148/4049/4050/9966/7292/944",9
+"Human Diseases","Infectious disease: bacterial","hsa05133","Pertussis","3/21","21/2105",0.142857142857143,14.3197278911565,6.15658387574167,0.00101478439576305,0.0258770020919579,0.0186933967640563,"712/713/6372",3
+"Organismal Systems","Development and regeneration","hsa04360","Axon guidance","4/21","62/2105",0.0645161290322581,6.46697388632873,4.38522941580535,0.00280485553969169,0.0476825441747587,0.0344455943470909,"655/55558/9723/10505",4

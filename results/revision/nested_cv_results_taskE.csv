@@ -1,0 +1,5 @@
+Evaluation_Paradigm,Leakage_Status,Metric,Estimate,CI_95_Lower,CI_95_Upper,SD,Notes
+Non-Nested (Apparent In-Sample),Full Feature Selection on Entire Dataset,ROC AUC,1.0,1.0,1.0,0.0,Overly optimistic; complete training set leakage
+Non-Nested (5-Fold CV Nomogram),Features pre-selected prior to CV,C-index,0.8731,0.7654,0.9808,0.1077,Pre-selected feature leakage retains selection bias
+"Nested CV (Repeated 5-Fold, 10 Repeats)",DEG filter + Matrisome + ML selection inside folds; WGCNA not recomputed,ROC AUC,0.77,0.7408,0.7946,0.0453,Mean of repeat-level OOF AUCs; percentile bootstrap resamples the 10 repeats
+"Nested CV (Repeated 5-Fold, 10 Repeats)",DEG filter + Matrisome + ML selection inside folds; WGCNA not recomputed,C-index,0.77,0.7415,0.7942,0.0453,Binary-model C-index equals AUC; percentile bootstrap resamples the 10 repeats

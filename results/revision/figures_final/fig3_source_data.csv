@@ -1,0 +1,16 @@
+intersection,membership_code,gene_count,plot,record_type
+DEG,100,183.0,a,intersection_count
+Measured matrisome,010,142.0,a,intersection_count
+DEG & Measured matrisome,110,6.0,a,intersection_count
+Non-grey WGCNA,001,3683.0,a,intersection_count
+DEG & Non-grey WGCNA,101,586.0,a,intersection_count
+Measured matrisome & Non-grey WGCNA,011,242.0,a,intersection_count
+DEG & Measured matrisome & Non-grey WGCNA,111,38.0,a,intersection_count
+DEG set size,,813.0,a,set_size
+Measured matrisome set size,,428.0,a,set_size
+Non-grey WGCNA set size,,4549.0,a,set_size
+Observed up-matrisome overlap,,31.0,b,enrichment_statistic
+Expected overlap,,18.080913039775147,b,enrichment_statistic
+Fold enrichment,,1.714515186915888,b,enrichment_statistic
+Hypergeometric P,,0.0024028120989329237,b,enrichment_statistic
+Permutation empirical P,,0.0306969303069693,b,enrichment_statistic

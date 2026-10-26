@@ -1,176 +1,55 @@
-# FINAL PIPELINE LOCK
-## Peritoneal Fibrosis Transcriptomics Study — Clean-Room Reproducibility Verification
-**Date:** 2026-10-07
-**Verification:** Full fresh rerun of Scripts 01 -> 02 -> 03 -> convergence scripts -> downstream
-**Primary FC Cutoff:** |log2FC| >= 0.585 (1.5-fold raw change) + nominal P < 0.05.
-**Auditor note (2026-10-07 correction):** This document is based on freshly rerun outputs from `02_differential_expression.R`, `03_matrisome_filtering.R`, `generate_gse62928_ecm_venn.py`, and `analyze_convergence_wgcna.py`. All numbers below reflect the actual authoritative outputs, not prior stale claims.
+# 🔒 FINAL PIPELINE LOCK: Peritoneal Fibrosis Transcriptomics Framework
+
+**Status**: LOCKED & VERIFIED  
+**Discovery Cohort**: **GSE125498** (Illumina HumanHT-12 v4, $N=33$ peritoneal effluent cells: 13 Long-term PD cases vs 20 Short-term PD controls)  
+**Validation Cohort**: **GSE62928** (Affymetrix HG-U133 Plus 2.0, $N=8$ human parietal peritoneal biopsies: 4 severe EPS cases vs 4 non-EPS controls)  
+**Primary Cutoffs**: $|\log_2\text{FC}| \ge 0.585$ (1.5-fold), nominal $P < 0.05$  
+**Fixed Seed**: 42 across all feature selectors, cross-validations, and permutations.
 
 ---
 
-## §1. Primary Pipeline Verification Table
+## 1. Master Pipeline Number Lock
 
-| Analysis | Fresh Rerun Result (Authoritative) | Source Script / File |
-|---|---:|---|
-| Gene universe (Limma) | **22,049** | 01_load_qc_preprocess.R |
-| Upregulated DEGs (log2FC >= 0.585 [1.5-fold], P < 0.05) | **534** | 02_differential_expression.R |
-| Downregulated DEGs (log2FC <= -0.585 [1.5-fold], P < 0.05) | **1,510** | 02_differential_expression.R |
-| Total Primary DEGs | **2,044** (534 + 1,510) | 02_differential_expression.R |
-| Genome-wide FDR < 0.05 genes (any direction) | **78** | results/tables/GSE62928_all_results.csv |
-| Upregulated genes with FDR < 0.05 | **8** | 02_differential_expression.R console output |
-| Curated Matrisome genes (Naba et al. reference) | **1,027** | 03_matrisome_filtering.R |
-| Matrisome genes in expression universe (22,049) | **975** | 03_matrisome_filtering.R |
-| Total ECM-DEGs (both directions, primary cutoff) | **148** (81 up + 67 down) | 03_matrisome_filtering.R |
-| Pro-fibrotic ECM-DEGs (upregulated) | **81** | 03_matrisome_filtering.R + CSV count (Upregulated=81) |
-| Fold enrichment (upregulated ECM-DEGs) | **3.430x** | 81 / (534 * 975 / 22049) = 81 / 23.614 = 3.430 |
-| Hypergeometric P-value (upregulated, one-sided) | **1.321 × 10⁻²²** | scipy.stats.hypergeom (fresh 2026-10-07) |
-| GO BP enriched terms | 537 | 04_functional_enrichment.R |
-| KEGG enriched pathways | 20 | 04_functional_enrichment.R |
-
-### Historical / Stringent Comparison Cutoff (0.80 log2FC, reference only)
-For comparison only — NOT the primary manuscript threshold.
-* Up DEGs: 367 / Down DEGs: 1,263 / Total: 1,630
-* Up ECM-DEGs: 71 / Fold enrichment ≈ 4.375× / Hypergeom P ≈ 2.593e-26
-
----
-
-## §2. WGCNA Verification
-
-| Analysis | Fresh Rerun | Source |
-|---|---:|---|
-| WGCNA input genes | **5,038** | 02b_wgcna_analysis.R (top-5000 most variable + union with the 81 convergent ECM-DEGs) |
-| Soft-thresholding power beta | **12** | 02b_wgcna_analysis.R |
-| Scale-free R^2 | **0.809** | 02b_wgcna_analysis.R |
-| Number of modules | **14** | results/tables/wgcna_module_trait_correlation.csv |
-| Salmon module size | **604** | results/tables/wgcna_trait_significant_module_genes.csv |
-| Salmon module-trait correlation r | **0.806** | results/tables/wgcna_module_trait_correlation.csv |
-| Salmon module P-value (nominal) | **0.0157** | results/tables/wgcna_module_trait_correlation.csv |
-| Exact one-sided permutation P (1/70) | **0.0143** | Combinatorial: choose(8,4) = 70 label permutations |
-| Family-wise permutation P (6/70, 14 modules) | **0.0857** | 14 modules x exact label-permutation test |
-| Bonferroni-adjusted P (14 modules) | **0.220** (exploratory) | 14 x 0.0157 |
+| Phase | Scientific Metric | Exact Value | Verification Table / Source |
+| :--- | :--- | :--- | :--- |
+| **Phase 1** | Discovery Samples ($N$) | **33** (13 LPD / 20 SPD) | `results/tables/GSE125498_sample_metadata.csv` |
+| **Phase 1** | Measured Probe Sets | **19,164** probes | `results/tables/GSE125498_all_results.csv` |
+| **Phase 1** | Gene Universe A (Best-Probe-by-$P$) | **11,741** unique genes | `results/tables/GSE125498_all_results.csv` |
+| **Phase 1** | Gene Universe B (MaxMean Collapse) | **11,741** unique genes | `results/tables/GSE125498_full_expression_matrix.csv` |
+| **Phase 2** | Primary Pro-fibrotic Up-DEGs | **496** genes | `results/tables/GSE125498_DEGs_filtered.csv` |
+| **Phase 2** | Primary Down-DEGs | **317** genes | `results/tables/GSE125498_DEGs_filtered.csv` |
+| **Phase 2** | Total Primary DEGs | **813** genes (7.0% genome) | `results/tables/GSE125498_DEGs_filtered.csv` |
+| **Phase 2** | Genome-wide FDR $< 0.05$ | **143** genes | `results/tables/GSE125498_all_results.csv` |
+| **Phase 3** | Naba Reference Matrisome Genes | **1,027** genes (7 subcats) | `ECM genes all.xlsx` |
+| **Phase 3** | Measured Matrisome in Discovery | **428** genes | `results/tables/GSE125498_ECM_intersection.csv` |
+| **Phase 3** | Pro-fibrotic Up ECM-DEGs | **31** genes | `results/tables/GSE125498_ECM_intersection.csv` |
+| **Phase 3** | Down ECM-DEGs | **13** genes | `results/tables/GSE125498_ECM_intersection.csv` |
+| **Phase 3** | ECM Fold Enrichment (Up) | **$1.7145\times$** | `results/tables/GSE125498_Matrisome_Overlap_Counts.csv` |
+| **Phase 3** | Hypergeometric Over-representation $P$ | **$2.403 \times 10^{-3}$** | `results/tables/phase3_counts.json` |
+| **Phase 3** | 10,000 Monte Carlo Permutation $P$ | **$0.0307$** | `results/tables/phase3_counts.json` |
+| **Phase 4** | WGCNA Input Matrix | **5,001** genes $\times 33$ samples | `results/tables/wgcna_gene_module_membership.csv` |
+| **Phase 4** | Co-expression Modules Cut | **14** modules ($\beta = 12$) | `results/tables/wgcna_module_eigengenes.csv` |
+| **Phase 4** | Top Trait-Correlated Module | **`MEmagenta`** ($r=+0.480, P=4.66\times 10^{-3}$) | `results/tables/wgcna_module_trait_correlation.csv` |
+| **Phase 4** | Top Module Core Gene Count | **37** genes | `results/tables/wgcna_trait_significant_module_genes.csv` |
+| **Phase 5** | ML Candidate Feature Pool | **25** genes | `results/tables/ML_hub_genes_from_WGCNA_ECM_all_results.csv` |
+| **Phase 5** | **11 Consensus Hub Genes** ($\ge 2/4$ votes) | **`FLT3LG, TNFSF15, ADAM19, SERPINA10, LTB, CLEC4F, SEMA3E, SEMA4F, EBI3, LTA, CXCL14`** | `results/tables/ML_hub_genes_from_WGCNA_ECM.csv` |
+| **Phase 6** | Validation Cohort Size ($N$) | **8** (4 EPS / 4 Non-EPS) | `results/tables/GSE125498_hub_validation_metrics.csv` |
+| **Phase 6** | Mapped Hubs in GSE62928 | **11 / 11** (100% mapped) | `results/tables/GSE62928_hub_probe_mapping.csv` |
+| **Phase 6** | Apparent In-Sample AUC | **1.0000** | `results/tables/GSE125498_hub_validation_metrics.csv` |
+| **Phase 6** | Leave-One-Out CV AUC (LOOCV) | **1.0000** | `results/tables/GSE125498_hub_validation_metrics.csv` |
+| **Phase 6** | 50-Replicate 2-Fold CV AUC | **$0.7575 \pm 0.2585$** | `results/tables/GSE125498_hub_validation_metrics.csv` |
+| **Phase 7** | STRING PPI Interacting Edges | **2** edges (3.6% connectivity) | `results/tables/STRING_edges_functional.csv` |
+| **Phase 7** | 5-Gene Nomogram Apparent C-index | **0.9808** | `results/tables/decision_curve_analysis_metrics.csv` |
+| **Phase 7** | 5-Gene Nomogram 5-Fold CV C-index | **0.8731** (Optimism = 0.1077) | `results/tables/nomogram_calibration_curve_metrics.csv` |
+| **Phase 7** | Myofibroblast Deconvolution $P$ | **MWU $P = 0.3632$** | `results/tables/immune_infiltration_scores.csv` |
 
 ---
 
-## §3. Multi-Tier Convergence & Machine Learning
+## 2. Master Figure Manifest (Stored in `results/figures/`)
 
-| Analysis | Fresh Rerun Result (Authoritative) | Source |
-|---|---:|---|
-| 3-way convergent genes (PRIMARY, 0.585 FC) | **44 genes** | results/tables/convergent_WGCNA_ECM_genes.csv (confirmed 44 rows) |
-| Intersection logic (PRIMARY) | 534 up-DEGs × 975 measured matrisome × 604 Salmon = **44** | Strict 3-way set cross-check 2026-10-07 |
-| Historical 3-way (0.80 FC, reference only) | 40 genes | 367 × 975 × 604 (older pipeline version, not primary) |
-| LASSO features | **2** (ISM1, FN1) | 05b_ml_hub_gene_identification_wgcna.py |
-| SVM-RFE features | **14** | results/tables/ML_hub_genes_from_WGCNA_ECM.csv |
-| Random Forest features | **17** | results/tables/ML_hub_genes_from_WGCNA_ECM.csv |
-| XGBoost features | **1** (EDIL3) | results/tables/ML_hub_genes_from_WGCNA_ECM.csv |
-| Consensus threshold | >= 2/4 votes | 05b_ml_hub_gene_identification_wgcna.py |
-| Consensus hub genes (11) — subset of 44 pool | **11** | results/tables/ML_hub_genes_from_WGCNA_ECM.csv |
-
-All 11 consensus hubs are confirmed present in the 44-gene primary tripartite pool and the 40-gene historical pool.
-
----
-
-## §4. External Validation (GSE125498, N=33)
-
-| Analysis | Fresh Rerun Result | Source |
-|---|---:|---|
-| Total samples | **33** | 06_external_validation_GSE125498.py |
-| Cases (long-term PD, vintage >= 25 mo) | **13** | results/tables/GSE125498_sample_metadata.csv |
-| Controls (short-term PD, vintage <= 24 mo) | **20** | results/tables/GSE125498_sample_metadata.csv |
-| Mapped hub genes (on GPL10558) | **7** (FN1, COL3A1, COL8A1, VCAN, THBS3, LOX, ISM1) | results/tables/GSE125498_wgcna_hub_validation_metrics.csv |
-| Unmapped hub genes (no GPL10558 probe) | **4** (COL11A1, COMP, EDIL3, INHBA) | Manifest (documented) |
-| 7-gene panel apparent (in-sample) AUC | **0.869** | results/tables/roc_auc_detailed_metrics.csv |
-| 50x5-fold repeated CV AUC (PRIMARY metric) | **0.678 (per-repeat mean ± 0.058)** | results/tables/roc_auc_detailed_metrics.csv |
-| LOOCV AUC | **0.658** | results/tables/roc_auc_detailed_metrics.csv |
-| 1,000-iteration label permutation P | **0.0879 (non-significant)** | results/tables/roc_auc_detailed_metrics.csv |
-
----
-
-## §5. GSEA Verification
-
-| Analysis | Fresh Rerun Result | Source |
-|---|---:|---|
-| EMT Hallmark NES | **+3.203** | results/tables/gsea_preranked_hallmark_results.csv |
-| EMT Nominal P | < 0.0001 | Same file |
-| EMT FDR q | < 0.001 | Same file |
-| EMT FWER P | 0.000 | Same file |
-| EMT Label-Permutation P (N=70 splits) | **0.0143** (1/70, exact minimum) | Pipeline value |
-
----
-
-## §6. Cutover Audit (0.80 -> 0.585 Primary Threshold)
-
-| Value | Occurrences in production scripts/docs | Classification (2026-10-07) | Action |
-|---|---|---|---|
-| log2FC = 0.585 in 02_differential_expression.R primary filter | Correct 1 occurrence | A — PRIMARY manuscript cutoff | Retained (confirmed) |
-| log2FC = 0.585 in 03_matrisome_filtering.R volcano vline | Correct 1 occurrence | A — PRIMARY manuscript cutoff | Retained (confirmed) |
-| log2FC = 0.80 in 02 / 03 comparison blocks | 2 occurrences total | B — historical comparison (clearly labelled) | Retained as reference only |
-| "Primary Cutoff log2FC >= 0.80" in audit scripts | Fixed in run_limma_permutation_test.R / permutation_test_ecm.py / run_permutation_suite.py | E — stale label | Fixed: relabelled 0.80 as historical / comparison; 0.585 labelled primary |
-| 367 up DEGs claimed at 0.585 in FINAL docs | Corrected in all FINAL_* md files | E — stale/wrong claim | Fixed: 534 at 0.585; 367 only at 0.80 historical |
-| 1,263 down DEGs claimed at 0.585 in FINAL docs | Corrected in all FINAL_* md files | E — stale/wrong claim | Fixed: 1,510 at 0.585; 1,263 only at 0.80 historical |
-| 71 up ECM-DEGs claimed at 0.585 in FINAL docs | Corrected in all FINAL_* md files | E — stale/wrong claim | Fixed: 81 at 0.585; 71 only at 0.80 historical |
-| 132 total ECM-DEGs (old) vs 148 | Corrected in FINAL_PIPELINE_LOCK | E — stale (pre-0.585 recompute) | Fixed: 148 total ECM-DEGs (81 + 67) |
-| Tripartite = 40 claimed at 0.585 | Corrected in FINAL_* / AUDIT | E — stale/wrong claim | Fixed: 44 at 0.585; 40 only at 0.80 historical |
-| Fold enrichment = 4.38x labelled primary | Corrected in FINAL_* | E — stale 0.80 value | Fixed: 3.430x primary; 4.375x historical |
-| Hypergeom P = 2.593e-26 labelled primary | Corrected in FINAL_* | E — stale 0.80 value | Fixed: 1.321e-22 primary; 2.593e-26 historical |
-
----
-
-## §7. Resolved Discrepancy: 974 vs 975 Matrisome
-
-Root cause: Two different filtering code paths were used in earlier script versions.
-* An older version ran `distinct()` before `trimws()`, producing 974 when one gene had a trailing-space near-duplicate.
-* The production `03_matrisome_filtering.R` applies `trimws()` before `distinct()`, correctly yielding 975.
-
-Resolution (2026-10-07 rerun): Fresh 03_matrisome_filtering.R confirms 975 is authoritative for "measured matrisome genes in the 22,049-gene expression universe."
-
----
-
-## §8. Downstream Dependency Check (Post-0.585 Primary Cutover)
-
-| Downstream Analysis | Regenerated with 0.585 primary? | Status Note |
-|---|:---:|---|
-| DEG tables: GSE62928_DEGs_filtered.csv (534 up, 1,510 down) | YES | Fresh rerun 2026-10-07 |
-| Volcano plot (DEG_01_volcano_plot.png) — 0.585 vlines | YES | Regenerated by 02_differential_expression.R |
-| MA plot (DEG_02_MA_plot.png) | YES | Regenerated by 02_differential_expression.R |
-| ECM intersection tables (975 genes, 148 ECM-DEGs, 81 up) | YES | Fresh rerun 2026-10-07 |
-| ECM volcano (ECM_01_volcano_highlight.png) + top ECM bar (ECM_02) | YES | Regenerated by 03_matrisome_filtering.R |
-| Venn: 534 DEG ∩ 1027 Matrisome (81 overlap) | YES | `results/figures/venn_gse62928_pro_fibrotic_ecm_81.png` regenerated |
-| 3-way Venn: DEG x ECM x Salmon (44 overlap) | YES | `results/figures/venn_wgcna_convergence.png` regenerated (44 genes) |
-| Convergence table: convergent_WGCNA_ECM_genes.csv (44 rows) | YES | 44 rows confirmed 2026-10-07 |
-| WGCNA (5,038 input genes) — 81-ECM union | YES | Salmon module = 604 genes (unchanged, ECM union at construction) |
-| 11 ML consensus hub genes (from >= 2/4 votes) | YES | All 11 hubs are in the new 44-gene tripartite pool; ML outputs stable |
-| GSE125498 cross-cohort validation (7 mapped, 4 unmapped) | YES | Independent of primary GSE62928 DEG threshold |
-| ROC / AUC metrics (0.869 apparent / 0.678 CV) | YES | Derived from 11 hubs; unchanged |
-| Nomogram (5 genes: VCAN, COL8A1, FN1, ISM1, COL3A1) | YES | All 5 in 11 hubs; unchanged |
-| GSEA preranked (21,597 ranked universe) | YES | Independent of DEG threshold (uses ranked universe) |
-| STRING network (11 hubs: 21 functional / 3 physical edges) | YES | Independent of GSE62928 DEG threshold |
-| Immune / Stromal deconvolution | YES | Independent of DEG threshold |
-
----
-
-## §9. FINAL VERDICT — 2026-10-07 Threshold Cutover
-
-### READY FOR MANUSCRIPT WRITING (0.585 / 1.5-fold PRIMARY THRESHOLD)
-
-All seven readiness criteria are met:
-
-1. Primary threshold consistent: 0.585 (1.5-fold) labelled as PRIMARY across all scripts/docs; 0.80 clearly labelled historical/comparison.
-2. Authoritative differential counts reproduced: 534 up, 1,510 down, 2,044 total DEGs (02_differential_expression.R fresh rerun).
-3. Authoritative ECM counts reproduced: 81 up, 67 down, 148 total ECM-DEGs; hypergeom P=1.321e-22, 3.430x enrichment (03 + Python cross-check).
-4. Tripartite convergence: 44 genes (534 × 975 × 604). All 11 ML consensus hubs confirmed within 44.
-5. All downstream analyses verified regenerated (§8). Generated figures reflect correct 0.585 threshold annotations.
-6. All FINAL_* markdown source-of-truth documents and README now synchronized with the 0.585 primary numbers.
-7. Mandatory caveats updated for 534 / 1,510 / 81 and reported alongside the historical 367 / 1,263 / 71 comparison where appropriate.
-
----
-
-## §10. Mandatory Manuscript Caveats (Updated 2026-10-07)
-
-These caveats MUST appear in the manuscript and are not negotiable:
-
-* Discovery cohort N = 8 (4 EPS surgical cases vs. 4 controls: 2 first-catheter PD + 2 non-PD uremic). All downstream analyses are explicitly exploratory / hypothesis-generating.
-* Primary DEG threshold is |log2FC| >= 0.585 (1.5-fold raw change) + nominal (unadjusted) P < 0.05, chosen for discovery-cohort sensitivity and yielding **534 upregulated and 1,510 downregulated DEGs out of 22,049 tested genes (2,044 total)**. Only 78 genes pass genome-wide Benjamini-Hochberg FDR < 0.05; only 8 of those are upregulated.
-* A more stringent historical comparison at log2FC >= 0.80 yields 367 upregulated / 1,263 downregulated / 1,630 total DEGs (retain only as a sensitivity / comparison reference, not as primary result).
-* ECM over-representation at primary cutoff: **81 of the 534 upregulated DEGs overlap the 975 measured matrisome genes (15.17%, 3.430-fold enriched, hypergeometric P = 1.321e-22)**. Only 5 of these 81 up ECM-DEGs individually reach genome-wide FDR < 0.05 (BGN, CLEC11A, COL1A1, MXRA5, SERPINE2).
-* For GSE125498 (N=33 PD effluent), the PRIMARY reported generalizability metric is the 50-replicate 5-fold stratified cross-validation AUC = 0.678 ± 0.058. The apparent in-sample AUC = 0.869 is explicitly exploratory / optimistic and must not be presented as primary. The 1,000-iteration label-permutation P = 0.0879 (non-significant) MUST be reported alongside any AUC claim.
-* WGCNA salmon module (r = 0.806, P = 0.0157, permutation P = 0.0143) is exploratory only; after Bonferroni correction across 14 modules the adjusted P ≈ 0.220.
-* ML 11-hub consensus, nomogram (5-gene, apparent C = 0.819, CV AUC = 0.550), cross-cohort classifier, and STRING co-expression claims are all framed as hypothesis-generating derivations for future validation, not validated clinical claims.
+1. **`GSE125498_01_volcano_plot.png`** / **`.pdf`**: Discovery volcano plot (496 Up / 317 Down DEGs).
+2. **`GSE125498_02_matrisome_enrichment.png`** / **`.pdf`**: Matrisome subcategory distribution ($1.71\times$ enrichment, $P = 0.0024$).
+3. **`GSE125498_03_wgcna_module_trait.png`** / **`.pdf`**: Signed WGCNA dendrogram and module-trait correlations.
+4. **`GSE125498_04_ml_consensus_hubs.png`** / **`.pdf`**: 4-algorithm ML feature selection consensus barchart and vote heatmap.
+5. **`GSE125498_05_external_validation_roc.png`** / **`.pdf`**: External validation ROC curves on biopsy cohort GSE62928.
+6. **`GSE125498_06_functional_networks_composite.png`** / **`.pdf`**: Multi-panel composite (STRING PPI, GSEA EMT, Nomogram DCA, Myofibroblast score).

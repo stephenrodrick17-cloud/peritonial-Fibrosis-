@@ -1,0 +1,64 @@
+gene,lineage,status,not_testable_reason,n_LV_samples_with_ge_20_cells,n_SV_samples_with_ge_20_cells,n_LV_samples_with_ge_10_umis,n_SV_samples_with_ge_10_umis
+TNFSF15,lymphoid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,1,2
+FLT3LG,lymphoid,testable,,10,6,10,6
+EBI3,lymphoid,testable,,10,6,10,6
+LTB,lymphoid,testable,,10,6,10,6
+ADAM19,lymphoid,testable,,10,6,10,6
+NAT6,lymphoid,not_testable,gene symbol absent from feature matrix,10,6,0,0
+ECM1,lymphoid,testable,,10,6,9,6
+CST7,lymphoid,testable,,10,6,10,6
+CCBE1,lymphoid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,0,1
+TNFSF15,myeloid,testable,,10,6,7,4
+FLT3LG,myeloid,testable,,10,6,9,6
+EBI3,myeloid,testable,,10,6,9,6
+LTB,myeloid,testable,,10,6,10,6
+ADAM19,myeloid,testable,,10,6,10,6
+NAT6,myeloid,not_testable,gene symbol absent from feature matrix,10,6,0,0
+ECM1,myeloid,testable,,10,6,10,6
+CST7,myeloid,testable,,10,6,10,6
+CCBE1,myeloid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,0,2
+TNFSF15,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,0,0
+FLT3LG,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,1
+EBI3,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,0,0
+LTB,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,2
+ADAM19,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,2,1
+NAT6,fibroblast/stromal,not_testable,gene symbol absent from feature matrix,4,5,0,0
+ECM1,fibroblast/stromal,testable,,4,5,4,4
+CST7,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,2
+CCBE1,fibroblast/stromal,testable,,4,5,2,4
+TNFSF15,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,0,2
+FLT3LG,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,1,2
+EBI3,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,0,0
+LTB,mesothelial,testable,,8,6,6,4
+ADAM19,mesothelial,testable,,8,6,3,2
+NAT6,mesothelial,not_testable,gene symbol absent from feature matrix,8,6,0,0
+ECM1,mesothelial,testable,,8,6,8,6
+CST7,mesothelial,testable,,8,6,6,6
+CCBE1,mesothelial,testable,,8,6,3,6
+TNFSF15,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+FLT3LG,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+EBI3,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+LTB,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+ADAM19,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+NAT6,endothelial,not_testable,gene symbol absent from feature matrix,0,0,0,0
+ECM1,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+CST7,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+CCBE1,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0
+TNFSF15,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,3,0
+FLT3LG,epithelial,testable,,10,6,3,3
+EBI3,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,1,0
+LTB,epithelial,testable,,10,6,8,6
+ADAM19,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,5,1
+NAT6,epithelial,not_testable,gene symbol absent from feature matrix,10,6,0,0
+ECM1,epithelial,testable,,10,6,10,6
+CST7,epithelial,testable,,10,6,6,6
+CCBE1,epithelial,testable,,10,6,5,6
+TNFSF15,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0
+FLT3LG,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,1
+EBI3,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0
+LTB,other/unresolved,testable,,8,5,6,4
+ADAM19,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,2
+NAT6,other/unresolved,not_testable,gene symbol absent from feature matrix,8,5,0,0
+ECM1,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,1,0
+CST7,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,1,3
+CCBE1,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0

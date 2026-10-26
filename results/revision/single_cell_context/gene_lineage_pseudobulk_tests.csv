@@ -1,0 +1,64 @@
+gene,feature_ids,lineage,status,not_testable_reason,n_LV_samples_with_ge_10_umis,n_SV_samples_with_ge_10_umis,n_LV_samples_with_ge_20_cells,n_SV_samples_with_ge_20_cells,n_LV_cells_in_eligible_samples,n_SV_cells_in_eligible_samples,log2FC_LV_vs_SV,P_value,BH_FDR_global,nominal_P_lt_0_05,global_FDR_lt_0_05
+TNFSF15,ENSG00000181634,lymphoid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,2,10,6,37678,23939,,,,False,False
+FLT3LG,ENSG00000090554,lymphoid,testable,,10,6,10,6,37678,23939,0.205898876950243,0.585300667882191,0.7246579697589032,False,False
+EBI3,ENSG00000105246,lymphoid,testable,,10,6,10,6,37678,23939,1.45543085082006,0.0224587289526643,0.07299086909615897,True,False
+LTB,ENSG00000227507,lymphoid,testable,,10,6,10,6,37678,23939,-0.0629552779970215,0.865087335658691,0.866690180437652,False,False
+ADAM19,ENSG00000135074,lymphoid,testable,,10,6,10,6,37678,23939,0.423400608204097,0.132805713538556,0.2466391822858897,False,False
+NAT6,,lymphoid,not_testable,gene symbol absent from feature matrix,0,0,10,6,37678,23939,,,,False,False
+ECM1,ENSG00000143369,lymphoid,testable,,9,6,10,6,37678,23939,2.16387626540722,0.051233466383812,0.13038393491912834,False,False
+CST7,ENSG00000077984,lymphoid,testable,,10,6,10,6,37678,23939,0.0518956732996389,0.866690180437652,0.866690180437652,False,False
+CCBE1,ENSG00000183287,lymphoid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,1,10,6,37678,23939,,,,False,False
+TNFSF15,ENSG00000181634,myeloid,testable,,7,4,10,6,19470,20860,1.96310332575269,0.0123416529605596,0.06417659539490991,True,False
+FLT3LG,ENSG00000090554,myeloid,testable,,9,6,10,6,19470,20860,0.179038591900018,0.653188834466376,0.738387378092425,False,False
+EBI3,ENSG00000105246,myeloid,testable,,9,6,10,6,19470,20860,1.41123739720539,0.0186121752291994,0.06913093656559778,True,False
+LTB,ENSG00000227507,myeloid,testable,,10,6,10,6,19470,20860,0.448681004878598,0.335996871928504,0.48532881500783914,False,False
+ADAM19,ENSG00000135074,myeloid,testable,,10,6,10,6,19470,20860,0.773322744002986,0.127230996986854,0.2466391822858897,False,False
+NAT6,,myeloid,not_testable,gene symbol absent from feature matrix,0,0,10,6,19470,20860,,,,False,False
+ECM1,ENSG00000143369,myeloid,testable,,10,6,10,6,19470,20860,6.12396276741692,0.0042269275581539,0.027475029128000348,True,True
+CST7,ENSG00000077984,myeloid,testable,,10,6,10,6,19470,20860,0.808531807198954,0.0551624340042466,0.13038393491912834,False,False
+CCBE1,ENSG00000183287,myeloid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,2,10,6,19470,20860,,,,False,False
+TNFSF15,ENSG00000181634,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,0,4,5,943,212,,,,False,False
+FLT3LG,ENSG00000090554,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,1,4,5,943,212,,,,False,False
+EBI3,ENSG00000105246,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,0,4,5,943,212,,,,False,False
+LTB,ENSG00000227507,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,2,4,5,943,212,,,,False,False
+ADAM19,ENSG00000135074,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,2,1,4,5,943,212,,,,False,False
+NAT6,,fibroblast/stromal,not_testable,gene symbol absent from feature matrix,0,0,4,5,943,212,,,,False,False
+ECM1,ENSG00000143369,fibroblast/stromal,testable,,4,4,4,5,943,212,0.425749374810844,0.469186553588551,0.6099425196651163,False,False
+CST7,ENSG00000077984,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,2,4,5,943,212,,,,False,False
+CCBE1,ENSG00000183287,fibroblast/stromal,testable,,2,4,4,5,943,212,-2.10229384874009,0.0362131165597479,0.10461567006149393,True,False
+TNFSF15,ENSG00000181634,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,2,8,6,902,1805,,,,False,False
+FLT3LG,ENSG00000090554,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,2,8,6,902,1805,,,,False,False
+EBI3,ENSG00000105246,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,0,8,6,902,1805,,,,False,False
+LTB,ENSG00000227507,mesothelial,testable,,6,4,8,6,902,1805,-0.325713042234092,0.618176624711976,0.730572374659608,False,False
+ADAM19,ENSG00000135074,mesothelial,testable,,3,2,8,6,902,1805,0.553122658422024,0.36560206278334,0.5002975595982547,False,False
+NAT6,,mesothelial,not_testable,gene symbol absent from feature matrix,0,0,8,6,902,1805,,,,False,False
+ECM1,ENSG00000143369,mesothelial,testable,,8,6,8,6,902,1805,8.30766876410162,0.0009508834036293,0.009515137967385266,True,True
+CST7,ENSG00000077984,mesothelial,testable,,6,6,8,6,902,1805,-0.167502934335438,0.776002680085578,0.8406695700927095,False,False
+CCBE1,ENSG00000183287,mesothelial,testable,,3,6,8,6,902,1805,-1.62129857933992,0.0155361649174394,0.06732338130890407,True,False
+TNFSF15,ENSG00000181634,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+FLT3LG,ENSG00000090554,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+EBI3,ENSG00000105246,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+LTB,ENSG00000227507,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+ADAM19,ENSG00000135074,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+NAT6,,endothelial,not_testable,gene symbol absent from feature matrix,0,0,0,0,0,0,,,,False,False
+ECM1,ENSG00000143369,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+CST7,ENSG00000077984,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+CCBE1,ENSG00000183287,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,,,,False,False
+TNFSF15,ENSG00000181634,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,3,0,10,6,2244,1621,,,,False,False
+FLT3LG,ENSG00000090554,epithelial,testable,,3,3,10,6,2244,1621,0.558949253205415,0.314265969546757,0.4806420710715107,False,False
+EBI3,ENSG00000105246,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,0,10,6,2244,1621,,,,False,False
+LTB,ENSG00000227507,epithelial,testable,,8,6,10,6,2244,1621,0.929866091070417,0.224616785286632,0.3893357611634955,False,False
+ADAM19,ENSG00000135074,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,5,1,10,6,2244,1621,,,,False,False
+NAT6,,epithelial,not_testable,gene symbol absent from feature matrix,0,0,10,6,2244,1621,,,,False,False
+ECM1,ENSG00000143369,epithelial,testable,,10,6,10,6,2244,1621,6.60299329314642,0.0009859811495807,0.009515137967385266,True,True
+CST7,ENSG00000077984,epithelial,testable,,6,6,10,6,2244,1621,0.598216815496681,0.286118595285273,0.4649427173385686,False,False
+CCBE1,ENSG00000183287,epithelial,testable,,5,6,10,6,2244,1621,-2.25940369536781,0.0010979005346983,0.009515137967385266,True,True
+TNFSF15,ENSG00000181634,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,0,8,5,324,243,,,,False,False
+FLT3LG,ENSG00000090554,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,1,8,5,324,243,,,,False,False
+EBI3,ENSG00000105246,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,0,8,5,324,243,,,,False,False
+LTB,ENSG00000227507,other/unresolved,testable,,6,4,8,5,324,243,-0.785684419142078,0.100337754026835,0.21739846705814247,False,False
+ADAM19,ENSG00000135074,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,2,8,5,324,243,,,,False,False
+NAT6,,other/unresolved,not_testable,gene symbol absent from feature matrix,0,0,8,5,324,243,,,,False,False
+ECM1,ENSG00000143369,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,0,8,5,324,243,,,,False,False
+CST7,ENSG00000077984,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,1,3,8,5,324,243,,,,False,False
+CCBE1,ENSG00000183287,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,0,0,8,5,324,243,,,,False,False

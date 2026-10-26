@@ -1,0 +1,21 @@
+hub_gene,pathway,NES,FDR,running_ES,gene_set_size,ranking_source
+TNFSF15,Oxidative phosphorylation - Homo sapiens (human),-2.58054453403805,0.0009990009990009,-0.5836860147871454,85,validated7_kegg_spearman_ranking_TNFSF15.csv
+TNFSF15,Primary immunodeficiency - Homo sapiens (human),2.4602924946040616,0.0009990009990009,0.7309676364014531,30,validated7_kegg_spearman_ranking_TNFSF15.csv
+TNFSF15,Ribosome - Homo sapiens (human),-2.33194750731302,0.0009990009990009,-0.4686921778274474,168,validated7_kegg_spearman_ranking_TNFSF15.csv
+FLT3LG,Primary immunodeficiency - Homo sapiens (human),2.3132521068463423,0.0009990009990009,0.6456041520135382,30,validated7_kegg_spearman_ranking_FLT3LG.csv
+FLT3LG,T cell receptor signaling pathway - Homo sapiens (human),2.059984558983849,0.0042701142635318,0.45695636283461233,100,validated7_kegg_spearman_ranking_FLT3LG.csv
+FLT3LG,Hematopoietic cell lineage - Homo sapiens (human),1.979377908400504,0.0085402285270637,0.4595242599244742,72,validated7_kegg_spearman_ranking_FLT3LG.csv
+EBI3,Biosynthesis of various nucleotide sugars - Homo sapiens (human),-2.042381731923791,0.0142164839684555,-0.628498254803227,18,validated7_kegg_spearman_ranking_EBI3.csv
+EBI3,Hippo signaling pathway - Homo sapiens (human),-2.007055029172676,0.0099515387779188,-0.40428018548374856,95,validated7_kegg_spearman_ranking_EBI3.csv
+LTB,Primary immunodeficiency - Homo sapiens (human),2.481350733402958,0.0009990009990009,0.7314647196128048,30,validated7_kegg_spearman_ranking_LTB.csv
+LTB,Hematopoietic cell lineage - Homo sapiens (human),2.457223242485531,0.0009990009990009,0.6080397016184045,72,validated7_kegg_spearman_ranking_LTB.csv
+LTB,Peroxisome - Homo sapiens (human),-2.281748616122719,0.0009990009990009,-0.5391844752202755,61,validated7_kegg_spearman_ranking_LTB.csv
+ADAM19,Ribosome - Homo sapiens (human),-2.576014099188512,0.0009990009990009,-0.5065492386305943,168,validated7_kegg_spearman_ranking_ADAM19.csv
+ADAM19,Primary immunodeficiency - Homo sapiens (human),2.3512693039491124,0.0009990009990009,0.6709110320429877,30,validated7_kegg_spearman_ranking_ADAM19.csv
+ADAM19,Oxidative phosphorylation - Homo sapiens (human),-2.3189510908801965,0.0009990009990009,-0.5170758872154149,85,validated7_kegg_spearman_ranking_ADAM19.csv
+ECM1,Cytoskeleton in muscle cells - Homo sapiens (human),2.273553502070978,0.0009990009990009,0.4646674177012883,125,validated7_kegg_spearman_ranking_ECM1.csv
+ECM1,ECM-receptor interaction - Homo sapiens (human),2.1218634422176,0.0038805397900558,0.5116806451601468,50,validated7_kegg_spearman_ranking_ECM1.csv
+ECM1,Motor proteins - Homo sapiens (human),1.966770570336445,0.0142286458968713,0.4075236295773949,102,validated7_kegg_spearman_ranking_ECM1.csv
+CST7,Primary immunodeficiency - Homo sapiens (human),2.230624584080933,0.0009990009990009,0.6341290512956123,30,validated7_kegg_spearman_ranking_CST7.csv
+CST7,T cell receptor signaling pathway - Homo sapiens (human),2.11797285458556,0.0028819915242217,0.45369090828762204,100,validated7_kegg_spearman_ranking_CST7.csv
+CST7,Th1 and Th2 cell differentiation - Homo sapiens (human),2.012482879330059,0.003842655365629,0.4745115985940797,67,validated7_kegg_spearman_ranking_CST7.csv

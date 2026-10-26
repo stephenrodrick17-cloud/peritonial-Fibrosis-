@@ -1,0 +1,26 @@
+step,title_text,box_text,order
+Discovery,Discovery,"LPD n=13 | SPD n=20
+11,741 genes",1
+DEG screen,DEG screen,"|log2FC| >= 0.585; P < 0.05
+813 DEGs
+496 up; 317 down",2
+Matrisome overlap,Matrisome intersection,"428 measured
+44 ECM DEGs
+31 up; 13 down",3
+WGCNA + 3-model ML,WGCNA + 3-model ML,"4,549 non-grey
+624 broad; 38 ECM
+LASSO / SVM-RFE / RF",4
+Original fixed panel,Original fixed panel,8-gene fixed panel,5
+External cohorts,External cohorts,"GSE62928 n=8; GSE248762 n=16
+GSE130888 n=13",6
+Detectability rules,Detectability rules,"8 genes / 3 cohorts
+>=2 detected; direction concordant
+BH q = flag only",7
+Frozen panel v2,Panel v2 freeze,"Frozen 2026-10-11
+FLT3LG, EBI3, LTB
+ADAM19, CST7",8
+GSE92455 test,GSE92455 test,"Epithelioid n=9; non-epithelioid n=8
+Not a vintage test",9
+Exploratory context,Exploratory context,"GSE125498 n=33
+Same data as discovery
+Not validation",10

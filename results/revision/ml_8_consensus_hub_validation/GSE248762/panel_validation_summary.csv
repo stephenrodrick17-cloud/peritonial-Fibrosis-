@@ -1,0 +1,2 @@
+"Dataset","Contrast","LV_Patients","SV_Patients","Panel_Genes","Detected_Genes","Direction_Concordant_Detected_Genes","Direction_Concordance_Fraction","One_Sided_Sign_Test_P","Full_Panel_Composite_Estimable","Composite_AUC","Composite_AUC_CI95_Lower","Composite_AUC_CI95_Upper","Composite_Wilcoxon_P","Composite_Mean_Score_Difference_LV_minus_SV"
+"GSE248762","LV (LV_UF + LV_NOT_UF) vs SV",10,6,8,7,6,0.857142857142857,0.0625,FALSE,,,,,

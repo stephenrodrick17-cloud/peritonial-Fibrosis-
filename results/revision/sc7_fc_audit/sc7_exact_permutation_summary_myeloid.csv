@@ -1,0 +1,2 @@
+"gene","lineage","n_LV","n_SV","n_allocations","n_fits_succeeded","observed_log2FC","observed_edgeR_P","n_abs_permuted_log2FC_ge_observed","exact_two_sided_permutation_P","statistic","elapsed_seconds","n_workers","R_version","edgeR_version"
+"ECM1","myeloid",10,6,8008,8008,6.12396276741692,0.00422692755815394,1373,0.171453546453546,"absolute edgeR robust quasi-likelihood log2FC; refit each allocation",11913.6348099709,8,"4.4.2","4.4.2"

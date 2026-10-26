@@ -1,0 +1,8 @@
+hub_gene,validated_rows,positive_validated_rows,negative_rows_excluded,predicted_rows,distinct_validated_miRNAs,distinct_predicted_miRNAs
+TNFSF15,188,141,47,110,115,86
+FLT3LG,9,0,9,86,9,31
+EBI3,50,34,16,51,33,32
+LTB,14,9,5,245,6,37
+ADAM19,157,43,114,461,136,237
+ECM1,63,2,61,31,63,21
+CST7,1,0,1,16,1,11

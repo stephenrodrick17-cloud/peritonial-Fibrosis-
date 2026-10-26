@@ -1,0 +1,456 @@
+"Gene","Matrisome_Division","Matrisome_Category","logFC","P.Value","adj.P.Val","DEG_Status","NegLog10P"
+"A2M","Matrisome-associated","ECM Regulators",-0.1730312,0.482,0.82885,"Not significant",0.31695296176115
+"ABI3BP","Core matrisome","ECM Glycoproteins",0.0902062,0.808,0.95144,"Not significant",0.0925886392254138
+"ADAM10","Matrisome-associated","ECM Regulators",-1.136341,0.0107,0.21401,"Downregulated",1.97061622231479
+"ADAM15","Matrisome-associated","ECM Regulators",-0.3991621,0.00875,0.19828,"Not significant",2.05799194697769
+"ADAM17","Matrisome-associated","ECM Regulators",-0.3265307,0.184,0.62123,"Not significant",0.735182176990464
+"ADAM19","Matrisome-associated","ECM Regulators",1.2130888,0.000133,0.02544,"Upregulated",3.87614835903291
+"ADAM28","Matrisome-associated","ECM Regulators",0.5549327,0.0757,0.4599,"Not significant",1.12090412049993
+"ADAM8","Matrisome-associated","ECM Regulators",0.4628605,0.019,0.27608,"Not significant",1.72124639904717
+"ADAM9","Matrisome-associated","ECM Regulators",-0.0672796,0.795,0.94621,"Not significant",0.0996328713435297
+"ADAMDEC1","Matrisome-associated","ECM Regulators",-0.0221166,0.948,0.98644,"Not significant",0.0231916626619338
+"ADAMTS1","Matrisome-associated","ECM Regulators",-0.1646136,0.624,0.89151,"Not significant",0.204815410317576
+"ADAMTSL4","Matrisome-associated","ECM Regulators",-0.3217203,0.174,0.61021,"Not significant",0.7594507517174
+"ADAMTSL5","Matrisome-associated","ECM Regulators",0.1237424,0.595,0.87813,"Not significant",0.22548303427145
+"AEBP1","Core matrisome","ECM Glycoproteins",-0.0350789,0.931,0.98175,"Not significant",0.0310503190186574
+"AGRN","Core matrisome","ECM Glycoproteins",0.030485,0.895,0.97433,"Not significant",0.048176964684088
+"ANGPT1","Matrisome-associated","Secreted Factors",-0.3939437,0.037,0.35918,"Not significant",1.43179827593301
+"ANGPTL2","Matrisome-associated","Secreted Factors",-0.328169,0.406,0.78993,"Not significant",0.391473966422806
+"ANGPTL4","Matrisome-associated","Secreted Factors",1.4017457,0.00725,0.18065,"Upregulated",2.13966199342901
+"ANXA1","Matrisome-associated","ECM-affiliated Proteins",0.2138315,0.159,0.59514,"Not significant",0.798602875679548
+"ANXA10","Matrisome-associated","ECM-affiliated Proteins",-0.3279402,0.199,0.63432,"Not significant",0.701146923590293
+"ANXA11","Matrisome-associated","ECM-affiliated Proteins",0.4210276,0.171,0.60779,"Not significant",0.767003889607846
+"ANXA2","Matrisome-associated","ECM-affiliated Proteins",-0.2451442,0.0459,0.39263,"Not significant",1.33818731446274
+"ANXA3","Matrisome-associated","ECM-affiliated Proteins",-0.328685,0.407,0.79057,"Not significant",0.39040559077478
+"ANXA4","Matrisome-associated","ECM-affiliated Proteins",-0.1068393,0.687,0.91265,"Not significant",0.16304326294045
+"ANXA5","Matrisome-associated","ECM-affiliated Proteins",0.0176503,0.903,0.97555,"Not significant",0.0443122496864942
+"ANXA6","Matrisome-associated","ECM-affiliated Proteins",0.2436544,0.23,0.66422,"Not significant",0.638272163982407
+"ANXA7","Matrisome-associated","ECM-affiliated Proteins",-0.0749755,0.605,0.8823,"Not significant",0.218244625347531
+"ANXA8","Matrisome-associated","ECM-affiliated Proteins",-0.2019187,0.661,0.90437,"Not significant",0.17979854051436
+"ANXA8L1","Matrisome-associated","ECM-affiliated Proteins",-0.0666861,0.837,0.95856,"Not significant",0.07727454200674
+"ATF1","Matrisome-associated","Secreted Factors",-0.5765533,0.0433,0.38083,"Not significant",1.36351210364663
+"ATF2","Matrisome-associated","Secreted Factors",-0.2928145,0.241,0.67562,"Not significant",0.617982957425132
+"BGN","Core matrisome","Proteoglycans",-0.0084809,0.982,0.99557,"Not significant",0.00788851221305034
+"BMP1","Matrisome-associated","ECM Regulators",0.1584045,0.52,0.84682,"Not significant",0.283996656365201
+"BMP2","Matrisome-associated","Secreted Factors",-0.4209568,0.255,0.68442,"Not significant",0.593459819566045
+"BMP6","Matrisome-associated","Secreted Factors",0.3401642,0.495,0.83362,"Not significant",0.305394801066431
+"BMP7","Matrisome-associated","Secreted Factors",-0.8373055,0.0128,0.23574,"Downregulated",1.89279003035213
+"BMP8B","Matrisome-associated","Secreted Factors",0.2476167,0.333,0.74709,"Not significant",0.47755576649368
+"BRINP2","Matrisome-associated","Secreted Factors",-0.276202,0.178,0.61429,"Not significant",0.749579997691106
+"BSPH1","Core matrisome","ECM Glycoproteins",0.068502,0.743,0.9316,"Not significant",0.129011186239425
+"C17orf58","Matrisome-associated","ECM Regulators",0.0909962,0.506,0.83827,"Not significant",0.295849483160201
+"C1QA","Matrisome-associated","ECM-affiliated Proteins",0.6564472,0.0184,0.27341,"Upregulated",1.73518217699046
+"C1QB","Matrisome-associated","ECM-affiliated Proteins",0.9225589,0.00282,0.11089,"Upregulated",2.54975089168064
+"C1QC","Matrisome-associated","ECM-affiliated Proteins",0.5002956,0.0701,0.44936,"Not significant",1.15428198203334
+"C1QL1","Matrisome-associated","ECM-affiliated Proteins",-0.2377824,0.52,0.84689,"Not significant",0.283996656365201
+"C1QL2","Matrisome-associated","ECM-affiliated Proteins",-0.0124286,0.954,0.98732,"Not significant",0.0204516252959049
+"C1QTNF1","Matrisome-associated","ECM-affiliated Proteins",0.4419619,0.395,0.78402,"Not significant",0.40340290437354
+"C1QTNF6","Matrisome-associated","ECM-affiliated Proteins",0.3317124,0.398,0.78614,"Not significant",0.400116927926312
+"CAP2","Matrisome-associated","ECM Regulators",-0.5921333,0.142,0.57354,"Not significant",0.847711655616944
+"CBLN3","Matrisome-associated","Secreted Factors",0.3244057,0.222,0.65715,"Not significant",0.653647025549361
+"CCBE1","Matrisome-associated","Secreted Factors",0.6050057,0.00594,0.16381,"Upregulated",2.22621355501881
+"CCL13","Matrisome-associated","Secreted Factors",-0.1205621,0.664,0.90506,"Not significant",0.177831920631982
+"CCL2","Matrisome-associated","Secreted Factors",-0.0941493,0.795,0.9457,"Not significant",0.0996328713435297
+"CCL20","Matrisome-associated","Secreted Factors",0.2487182,0.568,0.86789,"Not significant",0.245651664288981
+"CCL22","Matrisome-associated","Secreted Factors",0.5280103,0.238,0.67196,"Not significant",0.623423042943488
+"CCL23","Matrisome-associated","Secreted Factors",0.0929816,0.75,0.93444,"Not significant",0.1249387366083
+"CCL24","Matrisome-associated","Secreted Factors",-0.110027,0.788,0.9451,"Not significant",0.103473782510445
+"CCL3","Matrisome-associated","Secreted Factors",-0.1344463,0.689,0.91344,"Not significant",0.161780778092374
+"CCL3L1","Matrisome-associated","Secreted Factors",-0.49403,0.232,0.6668,"Not significant",0.6345120151091
+"CCL3L3","Matrisome-associated","Secreted Factors",-0.3531185,0.34,0.75281,"Not significant",0.468521082957745
+"CCL4L1","Matrisome-associated","Secreted Factors",0.2716683,0.231,0.66493,"Not significant",0.636388020107856
+"CCL5","Matrisome-associated","Secreted Factors",0.6887753,0.0396,0.36842,"Upregulated",1.40230481407449
+"CCL7","Matrisome-associated","Secreted Factors",0.3241803,0.618,0.88886,"Not significant",0.209011524911184
+"CCL8","Matrisome-associated","Secreted Factors",-0.0649246,0.882,0.97149,"Not significant",0.0545314148681803
+"CD209","Matrisome-associated","ECM-affiliated Proteins",-0.4023951,0.11,0.51808,"Not significant",0.958607314841775
+"CLC","Matrisome-associated","ECM-affiliated Proteins",0.3590207,0.577,0.87139,"Not significant",0.238824186844269
+"CLCF1","Matrisome-associated","Secreted Factors",0.3960905,0.0687,0.44782,"Not significant",1.16304326294045
+"CLEC10A","Matrisome-associated","ECM-affiliated Proteins",-0.3679581,0.152,0.58479,"Not significant",0.818156412055227
+"CLEC11A","Matrisome-associated","ECM-affiliated Proteins",0.0400168,0.904,0.97555,"Not significant",0.0438315695246367
+"CLEC12A","Matrisome-associated","ECM-affiliated Proteins",-0.7555409,0.00284,0.11143,"Downregulated",2.54668165995296
+"CLEC1A","Matrisome-associated","ECM-affiliated Proteins",-0.254741,0.296,0.71914,"Not significant",0.528708288941061
+"CLEC2B","Matrisome-associated","ECM-affiliated Proteins",-0.0120713,0.968,0.99199,"Not significant",0.0141246426916063
+"CLEC2D","Matrisome-associated","ECM-affiliated Proteins",0.709219,0.0265,0.31607,"Upregulated",1.57675412606319
+"CLEC3B","Matrisome-associated","ECM-affiliated Proteins",0.2606088,0.416,0.79362,"Not significant",0.380906669373257
+"CLEC4A","Matrisome-associated","ECM-affiliated Proteins",-0.281377,0.078,0.46585,"Not significant",1.10790539730952
+"CLEC4D","Matrisome-associated","ECM-affiliated Proteins",0.1815272,0.542,0.85827,"Not significant",0.266000713461613
+"CLEC4E","Matrisome-associated","ECM-affiliated Proteins",-0.228655,0.23,0.66403,"Not significant",0.638272163982407
+"CLEC4F","Matrisome-associated","ECM-affiliated Proteins",1.1013954,0.0143,0.24507,"Upregulated",1.84466396253494
+"CLEC4G","Matrisome-associated","ECM-affiliated Proteins",-0.1022201,0.717,0.92312,"Not significant",0.1444808443322
+"CLEC5A","Matrisome-associated","ECM-affiliated Proteins",-0.4578315,0.0487,0.40217,"Not significant",1.31247103878537
+"CLEC7A","Matrisome-associated","ECM-affiliated Proteins",-0.4124965,0.193,0.62867,"Not significant",0.714442690992226
+"CLK1","Matrisome-associated","ECM-affiliated Proteins",0.2835342,0.115,0.52579,"Not significant",0.939302159646388
+"CLP1","Matrisome-associated","ECM-affiliated Proteins",-0.2047637,0.1,0.50392,"Not significant",1
+"COL11A2","Core matrisome","Collagens",-0.2034488,0.271,0.69912,"Not significant",0.567030709125594
+"COL12A1","Core matrisome","Collagens",-0.2025345,0.601,0.88083,"Not significant",0.22112552799726
+"COL16A1","Core matrisome","Collagens",-0.3782473,0.115,0.52644,"Not significant",0.939302159646388
+"COL17A1","Core matrisome","Collagens",0.0335496,0.921,0.97999,"Not significant",0.0357403698031511
+"COL18A1","Core matrisome","Collagens",-0.335837,0.425,0.79983,"Not significant",0.371611069949688
+"COL1A1","Core matrisome","Collagens",0.4076124,0.363,0.76683,"Not significant",0.440093374963888
+"COL1A2","Core matrisome","Collagens",0.5947656,0.153,0.5859,"Not significant",0.815308569182401
+"COL20A1","Core matrisome","Collagens",-0.0722434,0.762,0.93695,"Not significant",0.118045028660399
+"COL23A1","Core matrisome","Collagens",-0.1235741,0.529,0.85192,"Not significant",0.276544327964814
+"COL3A1","Core matrisome","Collagens",0.1868787,0.616,0.88772,"Not significant",0.210419287835575
+"COL4A1","Core matrisome","Collagens",0.1529841,0.721,0.92376,"Not significant",0.142064735280571
+"COL4A2","Core matrisome","Collagens",0.2238668,0.458,0.81787,"Not significant",0.339134521996131
+"COL4A5","Core matrisome","Collagens",-0.5168442,0.341,0.75355,"Not significant",0.467245621007502
+"COL5A1","Core matrisome","Collagens",0.1126335,0.758,0.93625,"Not significant",0.120330794367946
+"COL5A2","Core matrisome","Collagens",0.3955121,0.357,0.76225,"Not significant",0.447331783887807
+"COL6A1","Core matrisome","Collagens",0.5773216,0.196,0.63054,"Not significant",0.707743928643524
+"COL6A2","Core matrisome","Collagens",0.6467693,0.192,0.62748,"Not significant",0.71669877129645
+"COL6A3","Core matrisome","Collagens",0.5024527,0.231,0.66493,"Not significant",0.636388020107856
+"COL7A1","Core matrisome","Collagens",0.3713767,0.312,0.73007,"Not significant",0.505845405981557
+"COL8A1","Core matrisome","Collagens",0.7492698,0.0488,0.40217,"Upregulated",1.31158017799729
+"COL8A2","Core matrisome","Collagens",-0.2110723,0.268,0.69652,"Not significant",0.571865205971211
+"COL9A2","Core matrisome","Collagens",0.9039562,0.0304,0.33341,"Upregulated",1.51712641639125
+"COLEC12","Matrisome-associated","ECM-affiliated Proteins",-0.0994417,0.738,0.92947,"Not significant",0.131943638176958
+"COLQ","Core matrisome","ECM Glycoproteins",0.4670887,0.0649,0.43907,"Not significant",1.18775530319963
+"CRELD1","Core matrisome","ECM Glycoproteins",0.141189,0.451,0.81589,"Not significant",0.345823458122039
+"CRELD2","Core matrisome","ECM Glycoproteins",0.120542,0.449,0.81439,"Not significant",0.347753658996677
+"CRIM1","Core matrisome","ECM Glycoproteins",-0.4584261,0.107,0.5157,"Not significant",0.97061622231479
+"CRISPLD2","Core matrisome","ECM Glycoproteins",-0.0717452,0.819,0.955,"Not significant",0.0867160982395816
+"CRLF1","Matrisome-associated","Secreted Factors",0.0623649,0.79,0.9451,"Not significant",0.102372908709559
+"CRLF3","Matrisome-associated","Secreted Factors",-0.2562976,0.291,0.71605,"Not significant",0.536107011014093
+"CSHL1","Matrisome-associated","Secreted Factors",-0.176189,0.405,0.78954,"Not significant",0.392544976785331
+"CSPG4","Matrisome-associated","ECM-affiliated Proteins",0.1009817,0.789,0.9451,"Not significant",0.10292299679058
+"CST3","Matrisome-associated","ECM Regulators",0.2409794,0.154,0.58687,"Not significant",0.812479279163537
+"CST6","Matrisome-associated","ECM Regulators",-0.6441871,0.0382,0.36377,"Downregulated",1.41793663708829
+"CST7","Matrisome-associated","ECM Regulators",1.012271,5e-04,0.0465,"Upregulated",3.30102999566398
+"CSTA","Matrisome-associated","ECM Regulators",-0.3466056,0.155,0.58885,"Not significant",0.809668301829709
+"CSTB","Matrisome-associated","ECM Regulators",0.2042963,0.169,0.60578,"Not significant",0.772113295386326
+"CTGF","Core matrisome","ECM Glycoproteins",0.1786738,0.638,0.8968,"Not significant",0.195179321278838
+"CTHRC1","Core matrisome","ECM Glycoproteins",0.3564952,0.23,0.66422,"Not significant",0.638272163982407
+"CTSA","Matrisome-associated","ECM Regulators",0.2516435,0.205,0.6406,"Not significant",0.688246138944246
+"CTSB","Matrisome-associated","ECM Regulators",0.1983824,0.239,0.67316,"Not significant",0.621602099051862
+"CTSC","Matrisome-associated","ECM Regulators",-0.2360841,0.0692,0.44841,"Not significant",1.15989390554324
+"CTSD","Matrisome-associated","ECM Regulators",0.1925471,0.446,0.81342,"Not significant",0.350665141287858
+"CTSF","Matrisome-associated","ECM Regulators",0.3364273,0.194,0.62928,"Not significant",0.712198270069774
+"CTSH","Matrisome-associated","ECM Regulators",0.0136337,0.936,0.98308,"Not significant",0.0287241512618947
+"CTSK","Matrisome-associated","ECM Regulators",0.1830335,0.392,0.78344,"Not significant",0.406713932979543
+"CTSL","Matrisome-associated","ECM Regulators",0.2638685,0.24,0.6742,"Not significant",0.619788758288394
+"CTSO","Matrisome-associated","ECM Regulators",-0.1306285,0.551,0.86125,"Not significant",0.258848401148215
+"CTSS","Matrisome-associated","ECM Regulators",-0.2577078,0.103,0.5079,"Not significant",0.987162775294828
+"CTSV","Matrisome-associated","ECM Regulators",-0.1410639,0.636,0.89604,"Not significant",0.196542884351586
+"CTSW","Matrisome-associated","ECM Regulators",0.3653014,0.434,0.80442,"Not significant",0.362510270487489
+"CTSZ","Matrisome-associated","ECM Regulators",0.1738858,0.449,0.81439,"Not significant",0.347753658996677
+"CXCL1","Matrisome-associated","Secreted Factors",0.1920931,0.659,0.90377,"Not significant",0.18111458540599
+"CXCL10","Matrisome-associated","Secreted Factors",0.377716,0.394,0.78344,"Not significant",0.404503778174426
+"CXCL11","Matrisome-associated","Secreted Factors",0.3161086,0.4,0.78661,"Not significant",0.397940008672038
+"CXCL12","Matrisome-associated","Secreted Factors",-0.0148211,0.943,0.98511,"Not significant",0.0254883072626717
+"CXCL14","Matrisome-associated","Secreted Factors",0.6376862,0.00503,0.1522,"Upregulated",2.29843201494407
+"CXCL2","Matrisome-associated","Secreted Factors",-0.0147636,0.962,0.98987,"Not significant",0.0168249279621871
+"CXCL6","Matrisome-associated","Secreted Factors",-0.8702222,0.0397,0.36894,"Downregulated",1.40120949323689
+"CXCL8","Matrisome-associated","Secreted Factors",0.5148151,0.326,0.74159,"Not significant",0.486782399932061
+"CXCL9","Matrisome-associated","Secreted Factors",0.4857606,0.397,0.78604,"Not significant",0.401209493236885
+"CYR61","Core matrisome","ECM Glycoproteins",0.4864369,0.233,0.66757,"Not significant",0.632644078973981
+"DCN","Core matrisome","Proteoglycans",-0.6800512,0.0621,0.43402,"Not significant",1.20690839982342
+"DSP","Core matrisome","ECM Glycoproteins",0.0238226,0.946,0.98615,"Not significant",0.0241088635982073
+"EBI3","Matrisome-associated","Secreted Factors",0.8034234,0.00244,0.10282,"Upregulated",2.61261017366127
+"ECM1","Core matrisome","ECM Glycoproteins",1.0340512,0.00701,0.17828,"Upregulated",2.15428198203334
+"ECM2","Core matrisome","ECM Glycoproteins",-0.6031042,0.128,0.55016,"Not significant",0.892790030352132
+"EFEMP1","Core matrisome","ECM Glycoproteins",0.1819365,0.612,0.88617,"Not significant",0.213248577854439
+"EFEMP2","Core matrisome","ECM Glycoproteins",-0.0721299,0.844,0.9603,"Not significant",0.073657553374345
+"EGFLAM","Core matrisome","ECM Glycoproteins",-0.0888281,0.751,0.93466,"Not significant",0.124360062995832
+"EGLN1","Matrisome-associated","ECM Regulators",-0.1413687,0.311,0.72978,"Not significant",0.507239610973163
+"EGLN2","Matrisome-associated","ECM Regulators",0.3903941,0.0299,0.33149,"Not significant",1.52432881167557
+"ELANE","Matrisome-associated","ECM Regulators",-0.473178,0.217,0.65115,"Not significant",0.663540266151471
+"EMILIN2","Core matrisome","ECM Glycoproteins",-0.4214592,0.0433,0.38083,"Not significant",1.36351210364663
+"EREG","Matrisome-associated","Secreted Factors",-0.0318141,0.912,0.97831,"Not significant",0.0400051616715838
+"EYS","Core matrisome","ECM Glycoproteins",0.2384033,0.189,0.62624,"Not significant",0.723538195826756
+"F12","Matrisome-associated","ECM Regulators",-0.3507968,0.139,0.56666,"Not significant",0.856985199745905
+"F13A1","Matrisome-associated","ECM Regulators",-0.3095902,0.358,0.76358,"Not significant",0.446116973356126
+"FAM20A","Matrisome-associated","ECM Regulators",0.2541422,0.432,0.80354,"Not significant",0.364516253185088
+"FAM20B","Matrisome-associated","ECM Regulators",-0.0780501,0.54,0.85675,"Not significant",0.267606240177031
+"FAM20C","Matrisome-associated","ECM Regulators",0.2402599,0.318,0.73532,"Not significant",0.497572880015567
+"FBLN1","Core matrisome","ECM Glycoproteins",-0.365654,0.281,0.70607,"Not significant",0.55129368009492
+"FBLN2","Core matrisome","ECM Glycoproteins",0.3491094,0.373,0.77259,"Not significant",0.428291168191312
+"FBLN5","Core matrisome","ECM Glycoproteins",0.0971719,0.729,0.92626,"Not significant",0.137272471682025
+"FBLN7","Core matrisome","ECM Glycoproteins",0.4100236,0.111,0.52022,"Not significant",0.954677021213343
+"FBN2","Core matrisome","ECM Glycoproteins",-0.201935,0.501,0.83748,"Not significant",0.300162274132754
+"FCN1","Matrisome-associated","ECM-affiliated Proteins",-0.1811336,0.128,0.5513,"Not significant",0.892790030352132
+"FGF1","Matrisome-associated","Secreted Factors",-0.1841771,0.449,0.81439,"Not significant",0.347753658996677
+"FGF18","Matrisome-associated","Secreted Factors",0.3065563,0.137,0.56356,"Not significant",0.863279432843593
+"FGF2","Matrisome-associated","Secreted Factors",-0.3553139,0.246,0.67831,"Not significant",0.609064892896621
+"FGF23","Matrisome-associated","Secreted Factors",0.0982291,0.644,0.89953,"Not significant",0.191114132640188
+"FGF9","Matrisome-associated","Secreted Factors",0.3427728,0.318,0.73512,"Not significant",0.497572880015567
+"FGFBP1","Matrisome-associated","Secreted Factors",0.8724444,0.079,0.46889,"Not significant",1.10237290870956
+"FGFBP3","Matrisome-associated","Secreted Factors",-0.0518523,0.833,0.95779,"Not significant",0.0793549985932124
+"FGL1","Core matrisome","ECM Glycoproteins",0.1968216,0.193,0.62867,"Not significant",0.714442690992226
+"FGL2","Core matrisome","ECM Glycoproteins",-0.1764588,0.233,0.66757,"Not significant",0.632644078973981
+"FLT3LG","Matrisome-associated","Secreted Factors",1.4377149,2.35e-05,0.01324,"Upregulated",4.62893213772826
+"FMOD","Core matrisome","Proteoglycans",-0.0444484,0.883,0.97155,"Not significant",0.0540392964224314
+"FN1","Core matrisome","ECM Glycoproteins",0.4067817,0.269,0.69747,"Not significant",0.570247719997592
+"FRAS1","Core matrisome","ECM Glycoproteins",-0.3552451,0.432,0.80354,"Not significant",0.364516253185088
+"FST","Matrisome-associated","Secreted Factors",1.080407,0.0922,0.49398,"Not significant",1.03526907894637
+"FSTL1","Matrisome-associated","Secreted Factors",0.4188586,0.389,0.78278,"Not significant",0.410050398674292
+"FSTL3","Matrisome-associated","Secreted Factors",0.6750644,0.1,0.50392,"Not significant",1
+"GAS6","Core matrisome","ECM Glycoproteins",0.2839759,0.217,0.65198,"Not significant",0.663540266151471
+"GDF11","Matrisome-associated","Secreted Factors",0.4137145,0.119,0.53275,"Not significant",0.924453038607469
+"GDF15","Matrisome-associated","Secreted Factors",0.5199692,0.131,0.55462,"Not significant",0.882728704344236
+"GLDN","Core matrisome","ECM Glycoproteins",-0.4301819,0.389,0.78278,"Not significant",0.410050398674292
+"GPC1","Matrisome-associated","ECM-affiliated Proteins",0.3928129,0.3,0.72183,"Not significant",0.522878745280338
+"GPC2","Matrisome-associated","ECM-affiliated Proteins",0.1585793,0.338,0.75062,"Not significant",0.471083299722345
+"GPC4","Matrisome-associated","ECM-affiliated Proteins",-0.2467524,0.39,0.78305,"Not significant",0.408935392973501
+"GPC5","Matrisome-associated","ECM-affiliated Proteins",-0.2931189,0.279,0.70527,"Not significant",0.554395796726402
+"GPC6","Matrisome-associated","ECM-affiliated Proteins",0.2954402,0.0407,0.37068,"Not significant",1.39040559077478
+"GREM1","Matrisome-associated","ECM-affiliated Proteins",-0.0352794,0.841,0.95971,"Not significant",0.0752040042020878
+"HAPLN3","Core matrisome","Proteoglycans",0.9817703,0.00673,0.17422,"Upregulated",2.17198493577602
+"HBEGF","Matrisome-associated","Secreted Factors",0.4372094,0.0451,0.38919,"Not significant",1.34582345812204
+"HCFC1","Matrisome-associated","Secreted Factors",-0.2433352,0.247,0.67902,"Not significant",0.607303046740334
+"HCFC2","Matrisome-associated","Secreted Factors",-0.4687855,0.0172,0.26806,"Not significant",1.76447155309245
+"HPSE","Matrisome-associated","ECM Regulators",-0.3986126,0.0981,0.50015,"Not significant",1.00833099262005
+"HTRA1","Matrisome-associated","ECM Regulators",-0.2749248,0.318,0.73512,"Not significant",0.497572880015567
+"HTRA4","Matrisome-associated","ECM Regulators",0.3387094,0.202,0.63795,"Not significant",0.694648630553376
+"HYAL1","Matrisome-associated","ECM Regulators",-0.0964963,0.839,0.95903,"Not significant",0.0762380391712997
+"HYAL2","Matrisome-associated","ECM Regulators",-0.0763032,0.764,0.93784,"Not significant",0.11690664142431
+"HYAL3","Matrisome-associated","ECM Regulators",-0.2650466,0.425,0.7994,"Not significant",0.371611069949688
+"IBSP","Core matrisome","ECM Glycoproteins",0.1318365,0.572,0.86922,"Not significant",0.242603971206976
+"IGFBP2","Core matrisome","ECM Glycoproteins",0.0790302,0.845,0.9608,"Not significant",0.0731432910503077
+"IGFBP3","Core matrisome","ECM Glycoproteins",0.5075416,0.13,0.55311,"Not significant",0.886056647693163
+"IGFBP4","Core matrisome","ECM Glycoproteins",0.3855908,0.383,0.77934,"Not significant",0.416801226031377
+"IGFBP5","Core matrisome","ECM Glycoproteins",0.3637485,0.412,0.7922,"Not significant",0.385102783966865
+"IGFBP6","Core matrisome","ECM Glycoproteins",0.7390944,0.0627,0.43526,"Not significant",1.20273245916928
+"IGFBP7","Core matrisome","ECM Glycoproteins",0.0798595,0.744,0.93183,"Not significant",0.128427064454121
+"IGFBPL1","Core matrisome","ECM Glycoproteins",0.0454457,0.865,0.96581,"Not significant",0.0629838925351858
+"IL10","Matrisome-associated","Secreted Factors",-0.2147816,0.4,0.78661,"Not significant",0.397940008672038
+"IL15","Matrisome-associated","Secreted Factors",-0.1206638,0.62,0.88941,"Not significant",0.207608310501746
+"IL16","Matrisome-associated","Secreted Factors",0.161163,0.319,0.73617,"Not significant",0.496209316942819
+"IL17C","Matrisome-associated","Secreted Factors",-0.0204831,0.942,0.98464,"Not significant",0.0259490972071227
+"IL18","Matrisome-associated","Secreted Factors",0.1040129,0.453,0.81709,"Not significant",0.343901797987168
+"IL1B","Matrisome-associated","Secreted Factors",0.0309633,0.919,0.97999,"Not significant",0.0366844886138887
+"IL1RN","Matrisome-associated","Secreted Factors",0.3859496,0.129,0.55276,"Not significant",0.889410289700751
+"IL24","Matrisome-associated","Secreted Factors",0.1384087,0.775,0.94184,"Not significant",0.11069829749369
+"IL25","Matrisome-associated","Secreted Factors",0.1126567,0.407,0.79001,"Not significant",0.39040559077478
+"IL6","Matrisome-associated","Secreted Factors",0.2805369,0.389,0.78278,"Not significant",0.410050398674292
+"ISM1","Matrisome-associated","Secreted Factors",0.0282412,0.904,0.97555,"Not significant",0.0438315695246367
+"ITIH5","Matrisome-associated","ECM Regulators",0.0916819,0.298,0.72062,"Not significant",0.525783735923745
+"ITLN1","Matrisome-associated","ECM-affiliated Proteins",-1.2037175,0.0139,0.24349,"Downregulated",1.85698519974591
+"ITLN2","Matrisome-associated","ECM-affiliated Proteins",-0.9578152,0.0303,0.33329,"Downregulated",1.51855737149769
+"KITLG","Matrisome-associated","Secreted Factors",-0.301723,0.321,0.73722,"Not significant",0.493494967595128
+"LAMA4","Core matrisome","ECM Glycoproteins",-0.9159311,0.0582,0.42586,"Not significant",1.23507701535011
+"LAMA5","Core matrisome","ECM Glycoproteins",0.0828217,0.865,0.96615,"Not significant",0.0629838925351858
+"LAMB1","Core matrisome","ECM Glycoproteins",-0.6053662,0.0431,0.38046,"Downregulated",1.36552272983927
+"LAMB2","Core matrisome","ECM Glycoproteins",0.097336,0.817,0.95456,"Not significant",0.0877779434675845
+"LAMB3","Core matrisome","ECM Glycoproteins",0.5341109,0.197,0.63203,"Not significant",0.705533773838407
+"LAMC1","Core matrisome","ECM Glycoproteins",0.0352285,0.911,0.97816,"Not significant",0.0404816230270017
+"LAMC2","Core matrisome","ECM Glycoproteins",-0.0710171,0.885,0.97173,"Not significant",0.0530567293021746
+"LEP","Matrisome-associated","Secreted Factors",0.470928,0.0515,0.41,"Not significant",1.28819277095881
+"LGALS1","Matrisome-associated","ECM-affiliated Proteins",-0.1218572,0.36,0.76517,"Not significant",0.443697499232713
+"LGALS12","Matrisome-associated","ECM-affiliated Proteins",0.0994228,0.692,0.91435,"Not significant",0.159893905543242
+"LGALS2","Matrisome-associated","ECM-affiliated Proteins",0.3175088,0.464,0.82008,"Not significant",0.333482019445119
+"LGALS3","Matrisome-associated","ECM-affiliated Proteins",-0.1632884,0.538,0.85549,"Not significant",0.269217724333611
+"LGALS8","Matrisome-associated","ECM-affiliated Proteins",-0.1851801,0.211,0.64322,"Not significant",0.675717544702307
+"LGALS9","Matrisome-associated","ECM-affiliated Proteins",0.2115505,0.487,0.83129,"Not significant",0.312471038785366
+"LGALS9B","Matrisome-associated","ECM-affiliated Proteins",-0.411318,0.189,0.62583,"Not significant",0.723538195826756
+"LGALS9C","Matrisome-associated","ECM-affiliated Proteins",-0.2194844,0.438,0.80737,"Not significant",0.3585258894959
+"LGI2","Core matrisome","ECM Glycoproteins",-0.2480972,0.351,0.75986,"Not significant",0.454692883534176
+"LIF","Matrisome-associated","Secreted Factors",-0.0285386,0.897,0.97465,"Not significant",0.0472075569559079
+"LMAN1","Matrisome-associated","ECM-affiliated Proteins",-0.0189851,0.887,0.97222,"Not significant",0.0520763801682736
+"LOX","Matrisome-associated","ECM Regulators",0.0164936,0.976,0.99388,"Not significant",0.0105501823333082
+"LOXL3","Matrisome-associated","ECM Regulators",-0.0029673,0.989,0.99689,"Not significant",0.0048037084028206
+"LOXL4","Matrisome-associated","ECM Regulators",0.0058173,0.987,0.99638,"Not significant",0.00568284733036327
+"LRG1","Core matrisome","ECM Glycoproteins",0.0691853,0.817,0.95468,"Not significant",0.0877779434675845
+"LTA","Matrisome-associated","Secreted Factors",0.6419332,0.0146,0.24639,"Upregulated",1.83564714421556
+"LTB","Matrisome-associated","Secreted Factors",1.6747234,3.33e-06,0.00709,"Upregulated",5.47755576649368
+"LTBP1","Core matrisome","ECM Glycoproteins",0.2410394,0.466,0.82122,"Not significant",0.33161408331
+"LTBP2","Core matrisome","ECM Glycoproteins",0.2491637,0.324,0.74027,"Not significant",0.489454989793388
+"LTBP3","Core matrisome","ECM Glycoproteins",0.1795477,0.394,0.78344,"Not significant",0.404503778174426
+"LTBP4","Core matrisome","ECM Glycoproteins",0.645662,0.0783,0.46674,"Not significant",1.10623823794206
+"LUM","Core matrisome","Proteoglycans",0.064864,0.902,0.97538,"Not significant",0.0447934624580583
+"MATN2","Core matrisome","ECM Glycoproteins",-0.2368296,0.481,0.82885,"Not significant",0.317854923626168
+"MBP","Matrisome-associated","ECM-affiliated Proteins",1.143061,0.0148,0.24781,"Upregulated",1.82973828460504
+"MDK","Matrisome-associated","Secreted Factors",0.2894586,0.389,0.78278,"Not significant",0.410050398674292
+"MEGF10","Matrisome-associated","Secreted Factors",-0.1685708,0.354,0.76167,"Not significant",0.450996737974212
+"MEGF6","Matrisome-associated","Secreted Factors",0.4416168,0.248,0.67914,"Not significant",0.605548319173784
+"MEGF8","Matrisome-associated","Secreted Factors",0.2271599,0.322,0.73836,"Not significant",0.492144128304169
+"MEGF9","Matrisome-associated","Secreted Factors",-0.1535869,0.453,0.81709,"Not significant",0.343901797987168
+"MFAP1","Core matrisome","ECM Glycoproteins",-0.2270132,0.303,0.72355,"Not significant",0.518557371497695
+"MFAP2","Core matrisome","ECM Glycoproteins",-0.0734361,0.85,0.96256,"Not significant",0.0705810742857073
+"MFAP3","Core matrisome","ECM Glycoproteins",-0.2685926,0.213,0.64556,"Not significant",0.671620396561262
+"MFAP4","Core matrisome","ECM Glycoproteins",-0.0172645,0.949,0.98644,"Not significant",0.0227337875727074
+"MFAP5","Core matrisome","ECM Glycoproteins",0.9112951,0.106,0.51431,"Not significant",0.97469413473523
+"MFGE8","Core matrisome","ECM Glycoproteins",0.3379397,0.355,0.7621,"Not significant",0.449771646944906
+"MGP","Core matrisome","ECM Glycoproteins",-0.0583521,0.885,0.97173,"Not significant",0.0530567293021746
+"MIF","Matrisome-associated","Secreted Factors",-0.0667242,0.657,0.90277,"Not significant",0.182434630440219
+"MME","Matrisome-associated","ECM Regulators",1.0189344,0.0522,0.41186,"Not significant",1.28232949699774
+"MMP23B","Matrisome-associated","ECM Regulators",-0.083999,0.742,0.93128,"Not significant",0.129596094720973
+"MMP24","Matrisome-associated","ECM Regulators",-0.4286392,0.168,0.60578,"Not significant",0.774690718274137
+"MMP25","Matrisome-associated","ECM Regulators",0.5343629,0.0856,0.48146,"Not significant",1.06752623532285
+"MMP9","Matrisome-associated","ECM Regulators",0.6744379,0.0721,0.4543,"Not significant",1.14206473528057
+"MPI","Matrisome-associated","ECM Regulators",-0.1025103,0.666,0.90573,"Not significant",0.176525770829699
+"MST1","Matrisome-associated","Secreted Factors",-0.3367988,0.19,0.62655,"Not significant",0.721246399047171
+"MUC1","Matrisome-associated","ECM-affiliated Proteins",0.8998365,0.115,0.52579,"Not significant",0.939302159646388
+"MUC16","Matrisome-associated","ECM-affiliated Proteins",-0.1530524,0.724,0.92496,"Not significant",0.140261433802853
+"MUC4","Matrisome-associated","ECM-affiliated Proteins",0.0180617,0.915,0.97899,"Not significant",0.0385789059335517
+"MUC6","Matrisome-associated","ECM-affiliated Proteins",0.5930439,0.0525,0.41328,"Not significant",1.27984069659404
+"MXRA5","Core matrisome","ECM Glycoproteins",0.3459762,0.406,0.78977,"Not significant",0.391473966422806
+"NAT6","Matrisome-associated","ECM Regulators",0.9859558,0.00261,0.10547,"Upregulated",2.58335949266172
+"NBN","Matrisome-associated","Secreted Factors",-0.2633613,0.285,0.70985,"Not significant",0.54515513999149
+"NCAN","Core matrisome","Proteoglycans",0.0012966,0.995,0.99841,"Not significant",0.00217691925427455
+"NELL1","Core matrisome","ECM Glycoproteins",-0.4360132,0.27,0.69854,"Not significant",0.568636235841013
+"NELL2","Core matrisome","ECM Glycoproteins",0.2331411,0.31,0.72866,"Not significant",0.508638306165727
+"NGLY1","Matrisome-associated","ECM Regulators",0.1716486,0.158,0.59391,"Not significant",0.801342913045577
+"NOV","Matrisome-associated","ECM-affiliated Proteins",0.3269926,0.346,0.75676,"Not significant",0.460923901207223
+"NRG1","Matrisome-associated","Secreted Factors",-0.9186869,0.0534,0.41364,"Not significant",1.27245874297144
+"NRG3","Matrisome-associated","Secreted Factors",0.1651062,0.49,0.8323,"Not significant",0.309803919971486
+"NRG4","Matrisome-associated","Secreted Factors",-0.5503652,0.131,0.55462,"Not significant",0.882728704344236
+"NRP1","Core matrisome","ECM Glycoproteins",0.2786473,0.202,0.63795,"Not significant",0.694648630553376
+"NRP2","Core matrisome","ECM Glycoproteins",0.403771,0.0755,0.45987,"Not significant",1.12205304837081
+"NTNG1","Core matrisome","ECM Glycoproteins",-0.5549473,0.215,0.64907,"Not significant",0.667561540084395
+"OGFOD1","Matrisome-associated","ECM Regulators",0.2097449,0.203,0.63831,"Not significant",0.692503962086787
+"OGN","Core matrisome","Proteoglycans",-0.736326,0.0328,0.34462,"Downregulated",1.48412615628832
+"OSM","Matrisome-associated","Secreted Factors",-0.0192485,0.949,0.98644,"Not significant",0.0227337875727074
+"OVGP1","Matrisome-associated","ECM-affiliated Proteins",0.0484468,0.825,0.95609,"Not significant",0.0835460514500749
+"P3H1","Matrisome-associated","ECM Regulators",0.0360947,0.83,0.95687,"Not significant",0.0809219076239261
+"P3H2","Matrisome-associated","ECM Regulators",0.2404456,0.418,0.79427,"Not significant",0.378823718224965
+"P4HA1","Matrisome-associated","ECM Regulators",-0.1563723,0.424,0.79844,"Not significant",0.372634143407267
+"P4HA2","Matrisome-associated","ECM Regulators",0.1738238,0.574,0.86967,"Not significant",0.241088107602027
+"P4HTM","Matrisome-associated","ECM Regulators",0.194097,0.328,0.74304,"Not significant",0.484126156288321
+"PAMR1","Matrisome-associated","ECM Regulators",-0.3333198,0.555,0.86292,"Not significant",0.255707016877324
+"PAPPA","Matrisome-associated","ECM Regulators",0.2663677,0.457,0.81761,"Not significant",0.34008379993015
+"PARM1","Matrisome-associated","ECM-affiliated Proteins",0.07883,0.845,0.96088,"Not significant",0.0731432910503077
+"PCOLCE","Core matrisome","ECM Glycoproteins",0.0479352,0.881,0.97149,"Not significant",0.0550240915879521
+"PCOLCE2","Core matrisome","ECM Glycoproteins",-0.349877,0.27,0.6979,"Not significant",0.568636235841013
+"PCSK5","Matrisome-associated","ECM Regulators",-0.0059025,0.982,0.99574,"Not significant",0.00788851221305034
+"PDGFB","Matrisome-associated","Secreted Factors",0.3529953,0.226,0.65979,"Not significant",0.645891560852599
+"PDGFC","Matrisome-associated","Secreted Factors",-0.549344,0.0276,0.32149,"Not significant",1.55909091793478
+"PDGFD","Matrisome-associated","Secreted Factors",-0.2545774,0.229,0.6637,"Not significant",0.640164517660112
+"PEMT","Matrisome-associated","ECM-affiliated Proteins",-0.2549175,0.477,0.82694,"Not significant",0.321481620959886
+"PI3","Matrisome-associated","ECM Regulators",1.7059701,0.00722,0.18065,"Upregulated",2.14146280243036
+"PIK3IP1","Matrisome-associated","Secreted Factors",0.9959731,0.000595,0.05111,"Upregulated",3.22548303427145
+"PLAC8","Matrisome-associated","ECM-affiliated Proteins",0.0776763,0.822,0.9557,"Not significant",0.0851281824599496
+"PLAT","Matrisome-associated","ECM Regulators",0.8029823,0.124,0.54297,"Not significant",0.906578314837765
+"PLAU","Matrisome-associated","ECM Regulators",0.5434393,0.0109,0.21619,"Not significant",1.96257350205938
+"PLOD1","Matrisome-associated","ECM Regulators",-0.3628446,0.0145,0.24597,"Not significant",1.83863199776503
+"PLOD2","Matrisome-associated","ECM Regulators",0.3170509,0.393,0.78344,"Not significant",0.405607449624573
+"PLOD3","Matrisome-associated","ECM Regulators",0.2286184,0.177,0.61356,"Not significant",0.752026733638193
+"PLXDC2","Matrisome-associated","ECM-affiliated Proteins",0.2548143,0.48,0.82885,"Not significant",0.318758762624413
+"PLXNA1","Matrisome-associated","ECM-affiliated Proteins",0.4253316,0.05,0.40424,"Not significant",1.30102999566398
+"PLXNA2","Matrisome-associated","ECM-affiliated Proteins",-0.1393616,0.694,0.91501,"Not significant",0.158640529545145
+"PLXNA3","Matrisome-associated","ECM-affiliated Proteins",1.0165542,0.000728,0.05659,"Upregulated",3.13786862068696
+"PLXNA4","Matrisome-associated","ECM-affiliated Proteins",0.5153754,0.0208,0.28892,"Not significant",1.68193666503724
+"PLXNB1","Matrisome-associated","ECM-affiliated Proteins",0.0570355,0.9,0.97485,"Not significant",0.0457574905606751
+"PLXNB2","Matrisome-associated","ECM-affiliated Proteins",0.0234001,0.892,0.97411,"Not significant",0.0496351456238769
+"PLXNC1","Matrisome-associated","ECM-affiliated Proteins",-0.3671607,0.333,0.74709,"Not significant",0.47755576649368
+"PLXND1","Matrisome-associated","ECM-affiliated Proteins",-0.3760498,0.142,0.57257,"Not significant",0.847711655616944
+"PMF1","Core matrisome","ECM Glycoproteins",0.2122175,0.266,0.69453,"Not significant",0.575118363368933
+"PODN","Core matrisome","Proteoglycans",-0.1225203,0.726,0.92601,"Not significant",0.139063379299906
+"POMZP3","Core matrisome","ECM Glycoproteins",-0.3766902,0.504,0.83824,"Not significant",0.297569463554475
+"POSTN","Core matrisome","ECM Glycoproteins",-0.1589155,0.736,0.92929,"Not significant",0.133122185662501
+"PPBP","Matrisome-associated","Secreted Factors",0.3079063,0.105,0.5107,"Not significant",0.978810700930062
+"PRG2","Core matrisome","ECM Glycoproteins",0.3090558,0.193,0.62792,"Not significant",0.714442690992226
+"PRG4","Core matrisome","Proteoglycans",0.0763779,0.822,0.9558,"Not significant",0.0851281824599496
+"PXDN","Core matrisome","ECM Glycoproteins",-0.0240794,0.946,0.98615,"Not significant",0.0241088635982073
+"PXN","Core matrisome","ECM Glycoproteins",-0.0980427,0.472,0.82412,"Not significant",0.326058001365912
+"RIF1","Matrisome-associated","Secreted Factors",-0.5502693,0.0522,0.41212,"Not significant",1.28232949699774
+"RLF","Matrisome-associated","Secreted Factors",0.1862723,0.286,0.71176,"Not significant",0.543633966870957
+"RSPO2","Core matrisome","ECM Glycoproteins",0.0802715,0.694,0.91501,"Not significant",0.158640529545145
+"S100A1","Matrisome-associated","Secreted Factors",0.3470984,0.276,0.70407,"Not significant",0.559090917934782
+"S100A10","Matrisome-associated","Secreted Factors",0.1405495,0.245,0.6781,"Not significant",0.610833915635468
+"S100A11","Matrisome-associated","Secreted Factors",0.0423193,0.742,0.93125,"Not significant",0.129596094720973
+"S100A12","Matrisome-associated","Secreted Factors",-0.2731326,0.469,0.82239,"Not significant",0.328827157284917
+"S100A13","Matrisome-associated","Secreted Factors",-0.1483534,0.685,0.91179,"Not significant",0.164309428507574
+"S100A16","Matrisome-associated","Secreted Factors",0.2788554,0.411,0.79152,"Not significant",0.386158178123931
+"S100A3","Matrisome-associated","Secreted Factors",-0.0651359,0.9,0.97485,"Not significant",0.0457574905606751
+"S100A4","Matrisome-associated","Secreted Factors",-0.1616811,0.153,0.58624,"Not significant",0.815308569182401
+"S100A6","Matrisome-associated","Secreted Factors",0.0733797,0.662,0.90446,"Not significant",0.1791420105603
+"S100A8","Matrisome-associated","Secreted Factors",-0.1968383,0.266,0.69453,"Not significant",0.575118363368933
+"S100A9","Matrisome-associated","Secreted Factors",0.0164835,0.917,0.97978,"Not significant",0.0376306643299789
+"S100P","Matrisome-associated","Secreted Factors",0.2942033,0.653,0.90172,"Not significant",0.185086818724926
+"S100Z","Matrisome-associated","Secreted Factors",-0.7235572,0.00629,0.17057,"Downregulated",2.20134935455473
+"SBSPON","Core matrisome","ECM Glycoproteins",-1.0219018,0.00934,0.20193,"Downregulated",2.02965312376991
+"SCD","Matrisome-associated","Secreted Factors",-0.2968524,0.298,0.72054,"Not significant",0.525783735923745
+"SCYL1","Matrisome-associated","Secreted Factors",-0.3643857,0.0634,0.43554,"Not significant",1.19791074211827
+"SDC1","Matrisome-associated","ECM-affiliated Proteins",0.2904142,0.131,0.55462,"Not significant",0.882728704344236
+"SDC2","Matrisome-associated","ECM-affiliated Proteins",0.3133261,0.126,0.54824,"Not significant",0.899629454882437
+"SDC4","Matrisome-associated","ECM-affiliated Proteins",0.2103885,0.39,0.78278,"Not significant",0.408935392973501
+"SEMA3B","Matrisome-associated","ECM-affiliated Proteins",0.0537105,0.918,0.97999,"Not significant",0.0371573187987575
+"SEMA3C","Matrisome-associated","ECM-affiliated Proteins",-0.3276699,0.21,0.64322,"Not significant",0.677780705266081
+"SEMA3E","Matrisome-associated","ECM-affiliated Proteins",1.0456073,0.000281,0.03472,"Upregulated",3.55129368009492
+"SEMA4A","Matrisome-associated","ECM-affiliated Proteins",0.3301785,0.0717,0.45356,"Not significant",1.1444808443322
+"SEMA4B","Matrisome-associated","ECM-affiliated Proteins",0.2218123,0.316,0.73375,"Not significant",0.500312917381596
+"SEMA4C","Matrisome-associated","ECM-affiliated Proteins",0.4667566,0.0283,0.32438,"Not significant",1.54821356447571
+"SEMA4D","Matrisome-associated","ECM-affiliated Proteins",-0.1347085,0.546,0.85952,"Not significant",0.262807357295263
+"SEMA4F","Matrisome-associated","ECM-affiliated Proteins",0.9250611,0.00147,0.08126,"Upregulated",2.83268266525182
+"SEMA4G","Matrisome-associated","ECM-affiliated Proteins",0.0007912,0.998,0.9994,"Not significant",0.000869458712628891
+"SEMA6B","Matrisome-associated","ECM-affiliated Proteins",0.1452334,0.628,0.89301,"Not significant",0.202040356262804
+"SEMA6D","Matrisome-associated","ECM-affiliated Proteins",0.1812818,0.616,0.88792,"Not significant",0.210419287835575
+"SERPINA1","Matrisome-associated","ECM Regulators",-0.3823252,0.142,0.57338,"Not significant",0.847711655616944
+"SERPINA10","Matrisome-associated","ECM Regulators",1.1658519,0.000653,0.05433,"Upregulated",3.18508681872493
+"SERPINB1","Matrisome-associated","ECM Regulators",-0.0069819,0.957,0.98822,"Not significant",0.0190880622231565
+"SERPINB2","Matrisome-associated","ECM Regulators",0.1562533,0.667,0.90614,"Not significant",0.175874166083451
+"SERPINB6","Matrisome-associated","ECM Regulators",-0.6471137,0.00712,0.17912,"Downregulated",2.14752000636314
+"SERPINB7","Matrisome-associated","ECM Regulators",-0.1705364,0.603,0.88179,"Not significant",0.219682687859849
+"SERPINB8","Matrisome-associated","ECM Regulators",-0.3440044,0.0978,0.49964,"Not significant",1.0096611452124
+"SERPINB9","Matrisome-associated","ECM Regulators",-0.142211,0.617,0.88835,"Not significant",0.209714835966758
+"SERPINE1","Matrisome-associated","ECM Regulators",0.419911,0.267,0.69518,"Not significant",0.573488738635425
+"SERPINE2","Matrisome-associated","ECM Regulators",0.5276478,0.195,0.62968,"Not significant",0.709965388637482
+"SERPINF1","Matrisome-associated","ECM Regulators",0.0193299,0.949,0.98649,"Not significant",0.0227337875727074
+"SERPINF2","Matrisome-associated","ECM Regulators",0.4056077,0.164,0.60187,"Not significant",0.785156151952302
+"SERPING1","Matrisome-associated","ECM Regulators",0.0875092,0.745,0.9319,"Not significant",0.127843727251707
+"SERPINH1","Matrisome-associated","ECM Regulators",-0.0112094,0.97,0.99253,"Not significant",0.0132282657337552
+"SERPINI1","Matrisome-associated","ECM Regulators",0.0408845,0.822,0.95557,"Not significant",0.0851281824599496
+"SFRP4","Matrisome-associated","Secreted Factors",1.4577884,0.0335,0.34641,"Upregulated",1.47495519296315
+"SFTPD","Matrisome-associated","ECM-affiliated Proteins",-0.169351,0.544,0.85889,"Not significant",0.26440110030182
+"SLIT2","Core matrisome","ECM Glycoproteins",0.0656435,0.837,0.95856,"Not significant",0.07727454200674
+"SLIT3","Core matrisome","ECM Glycoproteins",0.4027832,0.329,0.7445,"Not significant",0.482804102050026
+"SLPI","Matrisome-associated","ECM Regulators",0.0815549,0.856,0.96427,"Not significant",0.0675262353228468
+"SMAP2","Core matrisome","ECM Glycoproteins",0.2943643,0.132,0.55462,"Not significant",0.87942606879415
+"SMOC2","Core matrisome","ECM Glycoproteins",-0.6873714,0.0613,0.43255,"Not significant",1.21253952548158
+"SPARC","Core matrisome","ECM Glycoproteins",0.5489858,0.182,0.61742,"Not significant",0.739928612014925
+"SPARCL1","Core matrisome","ECM Glycoproteins",-0.4874891,0.204,0.64036,"Not significant",0.690369832574101
+"SPOCK1","Core matrisome","Proteoglycans",-0.2985045,0.335,0.74874,"Not significant",0.474955192963155
+"SPOCK2","Core matrisome","Proteoglycans",0.7654976,0.00281,0.11063,"Upregulated",2.55129368009492
+"SPON1","Core matrisome","ECM Glycoproteins",-0.2541005,0.264,0.69336,"Not significant",0.578396073130169
+"SPP1","Core matrisome","ECM Glycoproteins",0.8497021,0.0307,0.33386,"Upregulated",1.51286162452281
+"SRGN","Core matrisome","Proteoglycans",-0.0390024,0.756,0.93605,"Not significant",0.121478204498793
+"SSPO","Core matrisome","ECM Glycoproteins",0.069266,0.822,0.95554,"Not significant",0.0851281824599496
+"ST14","Matrisome-associated","ECM Regulators",0.1009196,0.683,0.91069,"Not significant",0.165579296318467
+"SULF1","Matrisome-associated","ECM Regulators",0.063243,0.863,0.96539,"Not significant",0.0639892042847904
+"SULF2","Matrisome-associated","ECM Regulators",-0.1396285,0.597,0.87966,"Not significant",0.224025668870631
+"SVEP1","Core matrisome","ECM Glycoproteins",-0.5739168,0.243,0.67676,"Not significant",0.614393726401688
+"TCHH","Matrisome-associated","Secreted Factors",0.1979705,0.335,0.7484,"Not significant",0.474955192963155
+"TGFA","Matrisome-associated","Secreted Factors",0.4758904,0.0667,0.44163,"Not significant",1.17587416608345
+"TGFB3","Matrisome-associated","Secreted Factors",-0.1458981,0.626,0.89205,"Not significant",0.20342566678957
+"TGFBI","Core matrisome","ECM Glycoproteins",0.0365699,0.778,0.94245,"Not significant",0.109020403010311
+"TGM1","Matrisome-associated","ECM Regulators",-0.439597,0.206,0.64134,"Not significant",0.686132779630847
+"TGM2","Matrisome-associated","ECM Regulators",0.408264,0.107,0.51532,"Not significant",0.97061622231479
+"TGM3","Matrisome-associated","ECM Regulators",0.6649874,0.0244,0.30568,"Upregulated",1.61261017366127
+"TGM6","Matrisome-associated","ECM Regulators",0.3347794,0.179,0.61518,"Not significant",0.747146969020107
+"THBS1","Core matrisome","ECM Glycoproteins",0.3808494,0.321,0.73741,"Not significant",0.493494967595128
+"THBS2","Core matrisome","ECM Glycoproteins",-0.2737526,0.47,0.82263,"Not significant",0.327902142064283
+"THBS3","Core matrisome","ECM Glycoproteins",-0.2007551,0.418,0.79401,"Not significant",0.378823718224965
+"TIMP1","Matrisome-associated","ECM Regulators",0.1793053,0.305,0.72458,"Not significant",0.515700160653214
+"TIMP2","Matrisome-associated","ECM Regulators",-0.0612747,0.68,0.91013,"Not significant",0.167491087293764
+"TIMP3","Matrisome-associated","ECM Regulators",0.6914868,0.116,0.52668,"Not significant",0.935542010773082
+"TIMP4","Matrisome-associated","ECM Regulators",-0.2636583,0.399,0.78629,"Not significant",0.399027104313252
+"TMPRSS15","Matrisome-associated","ECM Regulators",-0.2145627,0.263,0.69273,"Not significant",0.580044251510242
+"TNC","Core matrisome","ECM Glycoproteins",-0.3887404,0.152,0.58522,"Not significant",0.818156412055227
+"TNF","Matrisome-associated","Secreted Factors",-0.2768801,0.192,0.62745,"Not significant",0.71669877129645
+"TNFAIP6","Core matrisome","ECM Glycoproteins",0.800449,0.0393,0.36779,"Upregulated",1.40560744962457
+"TNFSF10","Matrisome-associated","Secreted Factors",-0.11907,0.695,0.91553,"Not significant",0.158015195409886
+"TNFSF12","Matrisome-associated","Secreted Factors",0.2350913,0.149,0.5834,"Not significant",0.826813731587726
+"TNFSF13","Matrisome-associated","Secreted Factors",-0.4722627,0.0553,0.41921,"Not significant",1.2572748686953
+"TNFSF13B","Matrisome-associated","Secreted Factors",0.0737475,0.644,0.89953,"Not significant",0.191114132640188
+"TNFSF14","Matrisome-associated","Secreted Factors",0.119386,0.585,0.87423,"Not significant",0.23284413391782
+"TNFSF15","Matrisome-associated","Secreted Factors",0.9743104,2.73e-05,0.01352,"Upregulated",4.56383735295924
+"TNFSF18","Matrisome-associated","Secreted Factors",-0.5668528,0.205,0.6406,"Not significant",0.688246138944246
+"TNFSF4","Matrisome-associated","Secreted Factors",0.7496608,0.00356,0.12814,"Upregulated",2.44855000202712
+"TNFSF8","Matrisome-associated","Secreted Factors",-0.6394039,0.0272,0.31931,"Downregulated",1.5654310959658
+"TNFSF9","Matrisome-associated","Secreted Factors",0.0013359,0.994,0.99816,"Not significant",0.00261361560268669
+"TSKU","Core matrisome","ECM Glycoproteins",0.304467,0.591,0.87711,"Not significant",0.228412519118745
+"VCAN","Core matrisome","Proteoglycans",-0.5224164,0.0244,0.30568,"Not significant",1.61261017366127
+"VEGFA","Matrisome-associated","Secreted Factors",0.1993875,0.462,0.81898,"Not significant",0.335358024443874
+"VEGFB","Matrisome-associated","Secreted Factors",-0.3073693,0.139,0.56773,"Not significant",0.856985199745905
+"VEGFC","Matrisome-associated","Secreted Factors",-0.0958144,0.774,0.94158,"Not significant",0.111259039317107
+"VTN","Core matrisome","ECM Glycoproteins",0.4645717,0.353,0.76071,"Not significant",0.452225294612177
+"VWA3A","Core matrisome","ECM Glycoproteins",0.0291634,0.839,0.95903,"Not significant",0.0762380391712997
+"VWA5A","Core matrisome","ECM Glycoproteins",0.3295129,0.0524,0.41328,"Not significant",1.28066871301627
+"VWA7","Core matrisome","ECM Glycoproteins",0.2671032,0.311,0.72978,"Not significant",0.507239610973163
+"VWF","Core matrisome","ECM Glycoproteins",-0.0780812,0.818,0.95478,"Not significant",0.087246696328677
+"WNT2","Matrisome-associated","Secreted Factors",0.4831783,0.157,0.59202,"Not significant",0.804100347590766
+"WNT2B","Matrisome-associated","Secreted Factors",-0.3361562,0.256,0.68538,"Not significant",0.59176003468815
+"WNT5A","Matrisome-associated","Secreted Factors",-0.0086581,0.979,0.99473,"Not significant",0.00921730819686218
+"WNT5B","Matrisome-associated","Secreted Factors",-0.0218649,0.927,0.98106,"Not significant",0.0329202658555029
+"ZFP91","Matrisome-associated","Secreted Factors",-0.0972378,0.368,0.76976,"Not significant",0.434152181326482
+"ZP3","Core matrisome","ECM Glycoproteins",-0.5619517,0.0175,0.26989,"Not significant",1.75696195131371

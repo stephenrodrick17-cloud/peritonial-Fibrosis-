@@ -1,0 +1,4 @@
+"gene","lineage","contrast","n_contrast_samples","n_SV_samples","before_log2FC","before_P","after_log2FC","after_P","after_status","before_BH_q","after_BH_q"
+"ECM1","myeloid","LV vs SV",10,6,6.12396276741692,0.0042269275581539,6.41815997021304,0.00526072022849483,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"
+"ECM1","myeloid","LV_UF vs SV",4,6,7.41426811704329,1.33919851694114e-05,7.71092733503743,1.36487019336685e-05,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"
+"ECM1","myeloid","LV_NOT_UF vs SV",6,6,0.567911631417205,0.549912550349527,0.510323103251369,0.601779289133838,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"

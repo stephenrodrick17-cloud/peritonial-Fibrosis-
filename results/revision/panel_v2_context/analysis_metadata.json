@@ -1,0 +1,35 @@
+{
+  "label": "exploratory, post hoc, same data as discovery, not validation",
+  "run_date": "2026-10-11",
+  "discovery_cohort": "GSE125498",
+  "samples": 33,
+  "group_counts": {
+    "SPD": 20,
+    "LPD": 13
+  },
+  "panel_v2_genes": [
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "CST7"
+  ],
+  "original_panel_genes": [
+    "TNFSF15",
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "ECM1",
+    "SERPINA10",
+    "CST7"
+  ],
+  "gene_expression_input": "results\\tables\\GSE125498_full_expression_matrix.csv",
+  "sample_metadata_input": "results\\tables\\GSE125498_sample_metadata.csv",
+  "full_limma_ranking_input": "results\\tables\\GSE125498_all_results.csv",
+  "gseapy_version": "1.3.1",
+  "seed": 125498,
+  "roc_bootstrap_resamples": 5000,
+  "bh_adjustment": "Benjamini-Hochberg",
+  "gsea_rank": "all 11,741 limma t statistics, descending"
+}

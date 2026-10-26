@@ -23,5 +23,6 @@
     "LTB",
     "SERPINA10"
   ],
-  "interpretation": "Leukocyte score is significantly elevated in LPD dialysate effluent (P = 0.0010), demonstrating substantial inflammatory cellular influx. After adjusting for leukocyte score as a covariate: TNFSF15 (P = 0.0036), CXCL14 (P = 0.0130), FLT3LG (P = 0.0167), and ADAM19 (P = 0.0400) remain robustly significant, proving that their pro-fibrotic upregulation is not merely an artifact of leukocyte infiltration. In contrast, EBI3 (P = 0.0532) becomes borderline, while SERPINA10 (P = 0.216) and LTB (P = 0.337) attenuate substantially, indicating that their apparent elevation in effluent is partially confounded by the leukocyte compartment."
+  "method": "Marker-based signature scores are the mean of per-gene z-scores across samples; this is not xCell, CIBERSORT, MCP-counter, or a validated cell deconvolution estimate.",
+  "interpretation": "The marker-based total-leukocyte score is higher in LPD dialysate effluent (P = 0.0010); this is an expression-signature association, not a direct cell-count or validated deconvolution estimate. After adjusting for leukocyte score as a covariate: TNFSF15 (P = 0.0036), CXCL14 (P = 0.0130), FLT3LG (P = 0.0167), and ADAM19 (P = 0.0400) retain nominal stage associations in these small-sample OLS models; this does not prove cell-intrinsic expression or causality. In contrast, EBI3 (P = 0.0532) becomes borderline, while SERPINA10 (P = 0.216) and LTB (P = 0.337) attenuate substantially, indicating that their associations are sensitive to adjustment for the marker-based score."
 }

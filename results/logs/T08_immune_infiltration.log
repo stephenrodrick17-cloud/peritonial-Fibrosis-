@@ -1,0 +1,5 @@
+Task: T08_immune_infiltration
+Status: skipped
+Seed: 2026
+
+A myofibroblast score was available, but neither CIBERSORT-compatible references nor a second deconvolution method were available.

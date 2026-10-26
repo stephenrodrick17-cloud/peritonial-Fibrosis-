@@ -1,0 +1,13 @@
+Task: T10_external_resources
+Status: skipped
+Seed: 2026
+
+TNFSF15 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=TNFSF15&format=json'
+FLT3LG HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=FLT3LG&format=json'
+EBI3 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=EBI3&format=json'
+LTB HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=LTB&format=json'
+ADAM19 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=ADAM19&format=json'
+NAT6 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=NAT6&format=json'
+ECM1 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=ECM1&format=json'
+CST7 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=CST7&format=json'
+CCBE1 HPA request failed: cannot open URL 'https://www.proteinatlas.org/api/search_download.php?search=CCBE1&format=json'

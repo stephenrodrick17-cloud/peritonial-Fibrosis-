@@ -1,0 +1,14 @@
+{
+  "n_probe_level": 19164,
+  "n_samples": 33,
+  "n_lpd_cases": 13,
+  "n_spd_controls": 20,
+  "universe_bestp_n": 11741,
+  "universe_maxmean_n": 11741,
+  "degs_primary_up": 496,
+  "degs_primary_down": 317,
+  "degs_primary_total": 813,
+  "fdr_sig_total": 143,
+  "logfc_cutoff": 0.585,
+  "p_cutoff": 0.05
+}

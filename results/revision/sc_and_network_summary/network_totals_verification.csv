@@ -1,0 +1,15 @@
+quantity,value,verification
+validated hub genes in requested analysis universe,7,Verified from validated7_kegg_gsea_summary.csv
+hub genes with regulatory evidence,NOT VERIFIED,No interaction evidence files
+putative lncRNA-miRNA-mRNA axes,NOT VERIFIED,No axis table
+axes with miRNA detection,NOT VERIFIED,No definition or sample-level detection data
+low-interaction axes,NOT VERIFIED,No operational definition or table
+high-confidence axes,NOT VERIFIED,No evidence-tier table
+unique miRNAs,NOT VERIFIED,No interaction table
+unique lncRNAs total,NOT VERIFIED,No interaction table
+high-confidence lncRNAs,NOT VERIFIED,No evidence-tier table
+low-confidence lncRNAs,NOT VERIFIED,No evidence-tier table
+"axes retained with lncRNA, miRNA and mRNA evidence",NOT VERIFIED,No three-component supporting-evidence table
+arithmetic reconciliation,NOT VERIFIED,Subcounts and total not available for comparison
+draft single-cell lncRNA-mRNA nominal positive pairs (~75),NOT VERIFIED,No underlying correlation table; draft claim not reused as a result
+draft single-cell pairs after donor-cell-number adjustment (~40),NOT VERIFIED,No underlying correlation/model table; draft claim not reused as a result

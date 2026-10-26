@@ -1,0 +1,170 @@
+Cell_type_1,Cell_type_2,Spearman_rho
+CD4 T cell,CD4 T cell,1.0
+CD4 T cell,CD8 T cell,0.9522058823529411
+CD4 T cell,NKT cell,0.8943850267379679
+CD4 T cell,NK cell,0.9338235294117647
+CD4 T cell,T cell (other),0.9752673796791443
+CD4 T cell,B cell,0.6600935828877005
+CD4 T cell,Plasma cell,0.5735294117647058
+CD4 T cell,Monocyte,0.09692513368983957
+CD4 T cell,Macrophage,0.24598930481283424
+CD4 T cell,Dendritic cell,0.48830213903743314
+CD4 T cell,Neutrophil,0.39906417112299464
+CD4 T cell,Eosinophil,0.3091577540106952
+CD4 T cell,Mast cell,-0.12065508021390374
+CD8 T cell,CD4 T cell,0.9522058823529411
+CD8 T cell,CD8 T cell,1.0
+CD8 T cell,NKT cell,0.8846925133689839
+CD8 T cell,NK cell,0.9438502673796791
+CD8 T cell,T cell (other),0.9629010695187166
+CD8 T cell,B cell,0.6580882352941176
+CD8 T cell,Plasma cell,0.5641711229946524
+CD8 T cell,Monocyte,0.11196524064171123
+CD8 T cell,Macrophage,0.294451871657754
+CD8 T cell,Dendritic cell,0.49030748663101603
+CD8 T cell,Neutrophil,0.39338235294117646
+CD8 T cell,Eosinophil,0.2429812834224599
+CD8 T cell,Mast cell,-0.08121657754010696
+NKT cell,CD4 T cell,0.8943850267379679
+NKT cell,CD8 T cell,0.8846925133689839
+NKT cell,NKT cell,1.0
+NKT cell,NK cell,0.9565508021390374
+NKT cell,T cell (other),0.9261363636363636
+NKT cell,B cell,0.6062834224598931
+NKT cell,Plasma cell,0.5227272727272727
+NKT cell,Monocyte,-0.0518048128342246
+NKT cell,Macrophage,0.1981951871657754
+NKT cell,Dendritic cell,0.31483957219251335
+NKT cell,Neutrophil,0.20588235294117646
+NKT cell,Eosinophil,0.18816844919786097
+NKT cell,Mast cell,-0.16243315508021391
+NK cell,CD4 T cell,0.9338235294117647
+NK cell,CD8 T cell,0.9438502673796791
+NK cell,NKT cell,0.9565508021390374
+NK cell,NK cell,1.0
+NK cell,T cell (other),0.9649064171122995
+NK cell,B cell,0.678475935828877
+NK cell,Plasma cell,0.6039438502673797
+NK cell,Monocyte,-0.02339572192513369
+NK cell,Macrophage,0.1854946524064171
+NK cell,Dendritic cell,0.3967245989304813
+NK cell,Neutrophil,0.24899732620320855
+NK cell,Eosinophil,0.22593582887700533
+NK cell,Mast cell,-0.06350267379679145
+T cell (other),CD4 T cell,0.9752673796791443
+T cell (other),CD8 T cell,0.9629010695187166
+T cell (other),NKT cell,0.9261363636363636
+T cell (other),NK cell,0.9649064171122995
+T cell (other),T cell (other),1.0
+T cell (other),B cell,0.7065508021390374
+T cell (other),Plasma cell,0.6370320855614974
+T cell (other),Monocyte,0.047459893048128345
+T cell (other),Macrophage,0.2479946524064171
+T cell (other),Dendritic cell,0.45387700534759357
+T cell (other),Neutrophil,0.35561497326203206
+T cell (other),Eosinophil,0.31517379679144386
+T cell (other),Mast cell,-0.10561497326203209
+B cell,CD4 T cell,0.6600935828877005
+B cell,CD8 T cell,0.6580882352941176
+B cell,NKT cell,0.6062834224598931
+B cell,NK cell,0.678475935828877
+B cell,T cell (other),0.7065508021390374
+B cell,B cell,1.0
+B cell,Plasma cell,0.7018716577540107
+B cell,Monocyte,-0.1036096256684492
+B cell,Macrophage,0.015040106951871657
+B cell,Dendritic cell,0.4966577540106952
+B cell,Neutrophil,0.19886363636363635
+B cell,Eosinophil,0.2576871657754011
+B cell,Mast cell,0.19351604278074866
+Plasma cell,CD4 T cell,0.5735294117647058
+Plasma cell,CD8 T cell,0.5641711229946524
+Plasma cell,NKT cell,0.5227272727272727
+Plasma cell,NK cell,0.6039438502673797
+Plasma cell,T cell (other),0.6370320855614974
+Plasma cell,B cell,0.7018716577540107
+Plasma cell,Plasma cell,1.0
+Plasma cell,Monocyte,-0.052807486631016046
+Plasma cell,Macrophage,0.019719251336898395
+Plasma cell,Dendritic cell,0.4164438502673797
+Plasma cell,Neutrophil,0.13368983957219252
+Plasma cell,Eosinophil,0.4054144385026738
+Plasma cell,Mast cell,0.1607620320855615
+Monocyte,CD4 T cell,0.09692513368983957
+Monocyte,CD8 T cell,0.11196524064171123
+Monocyte,NKT cell,-0.0518048128342246
+Monocyte,NK cell,-0.02339572192513369
+Monocyte,T cell (other),0.047459893048128345
+Monocyte,B cell,-0.1036096256684492
+Monocyte,Plasma cell,-0.052807486631016046
+Monocyte,Monocyte,1.0
+Monocyte,Macrophage,0.7797459893048129
+Monocyte,Dendritic cell,0.6353609625668449
+Monocyte,Neutrophil,0.7934491978609626
+Monocyte,Eosinophil,0.2887700534759358
+Monocyte,Mast cell,-0.004344919786096257
+Macrophage,CD4 T cell,0.24598930481283424
+Macrophage,CD8 T cell,0.294451871657754
+Macrophage,NKT cell,0.1981951871657754
+Macrophage,NK cell,0.1854946524064171
+Macrophage,T cell (other),0.2479946524064171
+Macrophage,B cell,0.015040106951871657
+Macrophage,Plasma cell,0.019719251336898395
+Macrophage,Monocyte,0.7797459893048129
+Macrophage,Macrophage,1.0
+Macrophage,Dendritic cell,0.5698529411764706
+Macrophage,Neutrophil,0.6597593582887701
+Macrophage,Eosinophil,0.31517379679144386
+Macrophage,Mast cell,-0.027406417112299464
+Dendritic cell,CD4 T cell,0.48830213903743314
+Dendritic cell,CD8 T cell,0.49030748663101603
+Dendritic cell,NKT cell,0.31483957219251335
+Dendritic cell,NK cell,0.3967245989304813
+Dendritic cell,T cell (other),0.45387700534759357
+Dendritic cell,B cell,0.4966577540106952
+Dendritic cell,Plasma cell,0.4164438502673797
+Dendritic cell,Monocyte,0.6353609625668449
+Dendritic cell,Macrophage,0.5698529411764706
+Dendritic cell,Dendritic cell,1.0
+Dendritic cell,Neutrophil,0.6590909090909091
+Dendritic cell,Eosinophil,0.3719919786096257
+Dendritic cell,Mast cell,0.13435828877005349
+Neutrophil,CD4 T cell,0.39906417112299464
+Neutrophil,CD8 T cell,0.39338235294117646
+Neutrophil,NKT cell,0.20588235294117646
+Neutrophil,NK cell,0.24899732620320855
+Neutrophil,T cell (other),0.35561497326203206
+Neutrophil,B cell,0.19886363636363635
+Neutrophil,Plasma cell,0.13368983957219252
+Neutrophil,Monocyte,0.7934491978609626
+Neutrophil,Macrophage,0.6597593582887701
+Neutrophil,Dendritic cell,0.6590909090909091
+Neutrophil,Neutrophil,1.0
+Neutrophil,Eosinophil,0.5391042780748663
+Neutrophil,Mast cell,-0.16176470588235295
+Eosinophil,CD4 T cell,0.3091577540106952
+Eosinophil,CD8 T cell,0.2429812834224599
+Eosinophil,NKT cell,0.18816844919786097
+Eosinophil,NK cell,0.22593582887700533
+Eosinophil,T cell (other),0.31517379679144386
+Eosinophil,B cell,0.2576871657754011
+Eosinophil,Plasma cell,0.4054144385026738
+Eosinophil,Monocyte,0.2887700534759358
+Eosinophil,Macrophage,0.31517379679144386
+Eosinophil,Dendritic cell,0.3719919786096257
+Eosinophil,Neutrophil,0.5391042780748663
+Eosinophil,Eosinophil,1.0
+Eosinophil,Mast cell,-0.1607620320855615
+Mast cell,CD4 T cell,-0.12065508021390374
+Mast cell,CD8 T cell,-0.08121657754010696
+Mast cell,NKT cell,-0.16243315508021391
+Mast cell,NK cell,-0.06350267379679145
+Mast cell,T cell (other),-0.10561497326203209
+Mast cell,B cell,0.19351604278074866
+Mast cell,Plasma cell,0.1607620320855615
+Mast cell,Monocyte,-0.004344919786096257
+Mast cell,Macrophage,-0.027406417112299464
+Mast cell,Dendritic cell,0.13435828877005349
+Mast cell,Neutrophil,-0.16176470588235295
+Mast cell,Eosinophil,-0.1607620320855615
+Mast cell,Mast cell,1.0

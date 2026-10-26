@@ -1,0 +1,17 @@
+sample_id,title,source_name,group_from_metadata,cells_after_qc,cells_before_qc,cells_after_qc_recomputed,primary_contrast_group,difference_vs_saved_qc_cells
+GSM7919583,LV_UF-1,peritoneal dialysis overnight effluent,LV_UF,2210,2559,2210,LV,0
+GSM7919584,LV_UF-2,peritoneal dialysis overnight effluent,LV_UF,5732,6769,5732,LV,0
+GSM7919585,LV_UF-3,peritoneal dialysis overnight effluent,LV_UF,5230,5679,5230,LV,0
+GSM7919586,LV_UF-4,peritoneal dialysis overnight effluent,LV_UF,7447,8559,7447,LV,0
+GSM7919587,LV_NOT_UF-1,peritoneal dialysis overnight effluent,LV_NOT_UF,6930,7922,6928,LV,-2
+GSM7919588,LV_NOT_UF-2,peritoneal dialysis overnight effluent,LV_NOT_UF,4802,5049,4802,LV,0
+GSM7919589,LV_NOT_UF-3,peritoneal dialysis overnight effluent,LV_NOT_UF,7857,8278,7856,LV,-1
+GSM7919590,LV_NOT_UF-4,peritoneal dialysis overnight effluent,LV_NOT_UF,7979,8224,7979,LV,0
+GSM7919591,LV_NOT_UF-5,peritoneal dialysis overnight effluent,LV_NOT_UF,7357,7799,7357,LV,0
+GSM7919592,LV_NOT_UF-6,peritoneal dialysis overnight effluent,LV_NOT_UF,6117,6711,6117,LV,0
+GSM7919593,SV-1,peritoneal dialysis overnight effluent,SV,8169,8699,8169,SV,0
+GSM7919594,SV-2,peritoneal dialysis overnight effluent,SV,6552,7061,6552,SV,0
+GSM7919595,SV-3,peritoneal dialysis overnight effluent,SV,9532,10153,9532,SV,0
+GSM7919596,SV-4,peritoneal dialysis overnight effluent,SV,8036,8415,8036,SV,0
+GSM7919597,SV-5,peritoneal dialysis overnight effluent,SV,8700,9006,8700,SV,0
+GSM7919598,SV-6,peritoneal dialysis overnight effluent,SV,7706,8012,7706,SV,0

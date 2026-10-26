@@ -1,0 +1,4 @@
+"GSE","Platform_or_assay","Control_group","Case_group","n_control","n_case","n_total","Analysis_scale"
+"GSE125498","Illumina microarray, RMA log2 expression","Short-term PD (SPD)","Long-term PD (LPD)",20,13,33,"RMA log2 microarray"
+"GSE248762","Effluent single-cell RNA-seq, patient pseudobulk","Short-vintage/short-term PD (SV)","Long-vintage/long-term PD (LV)",6,10,16,"edgeR TMM log2-CPM"
+"GSE130888","Effluent single-cell RNA-seq, patient pseudobulk","Short-vintage/short-term PD (SV)","Long-vintage/long-term PD (LV)",6,4,10,"edgeR TMM log2-CPM"

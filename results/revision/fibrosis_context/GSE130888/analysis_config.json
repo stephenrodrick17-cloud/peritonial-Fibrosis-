@@ -1,0 +1,35 @@
+{
+  "accession": "GSE130888",
+  "input": "GSE130888_RAW.tar",
+  "input_bytes": 519403520,
+  "scanpy_version": "1.12.4",
+  "anndata_version": "0.13.4",
+  "python_version": "3.13.1",
+  "qc": {
+    "minimum_detected_genes": 200,
+    "maximum_mitochondrial_percent": 20.0,
+    "patient_minimum_cells_for_pseudobulk": 20,
+    "celltype_minimum_cells_for_pseudobulk": 20
+  },
+  "analysis_features": {
+    "candidate_genes": [
+      "TNFSF15",
+      "FLT3LG",
+      "EBI3",
+      "LTB",
+      "ADAM19",
+      "ECM1",
+      "SERPINA10",
+      "CST7"
+    ],
+    "strict_genes": [
+      "TNFSF15",
+      "FLT3LG"
+    ],
+    "cell_type_method": "fixed preregistered marker-score rules",
+    "umap_hvg_selection": "top 2000 features most often selected as per-sample HVGs; group-blind, ties by feature ID",
+    "all_cell_pseudobulk_patients": 13,
+    "umap_cells": 95297,
+    "seed": 42
+  }
+}

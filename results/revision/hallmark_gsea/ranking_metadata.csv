@@ -1,0 +1,13 @@
+item,value
+source_limma_table,Validation/GSE125498.top.table.tsv
+cohort,GSE125498
+samples,33
+LPD_samples,13
+SPD_samples,20
+contrast,LPD versus SPD; LPD numerator
+covariates,none
+probe_rows_with_gene_and_finite_t,15469
+unique_genes_ranked,11741
+duplicate_gene_collapse,largest absolute moderated t-statistic per gene
+ranking_statistic,"limma empirical Bayes moderated t-statistic, descending"
+direction,positive t-statistic indicates higher expression in LPD

@@ -1,0 +1,11 @@
+metric,value,definition,arithmetic_check
+total_axes,323461,Unique hub-miRNA-lncRNA triplets in network_axes.csv,PASS
+high_confidence_axes,1260,Tier A/B mRNA and ENCORI lncRNA clipExpNum >= 2,PASS
+low_confidence_axes,322201,All other retrieved candidate axes,PASS
+high_plus_low_axes,323461,Must equal total_axes,PASS
+unique_hubs,7,Unique hub symbols in candidate axes,PASS
+unique_miRNAs,172,Unique mature miRNA accessions in candidate axes,PASS
+unique_lncRNAs,14950,Unique lncRNA Ensembl gene IDs in candidate axes,PASS
+lncRNAs_assigned_high_class,291,Unique lncRNA assigned high if any axis is high,PASS
+lncRNAs_assigned_low_class,14659,Unique lncRNA assigned low only if no high axis exists,PASS
+high_plus_low_lncRNAs,14950,Must equal unique_lncRNAs,PASS

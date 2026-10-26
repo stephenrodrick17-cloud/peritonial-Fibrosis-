@@ -1,0 +1,5 @@
+accession,n,proxy_definition,rho,rho_ci95_low,rho_ci95_high,p_value,inference_status,q_value_BH_across_cohorts
+GSE125498,13,mean of 9 non-T-cell immune ssGSEA marker-enrichment scores,0.32967032967032966,-0.2697910366998759,0.7841214047252181,0.27133505450523593,reported,0.27133505450523593
+GSE130888,10,mean of 9 non-T-cell immune ssGSEA marker-enrichment scores,0.6121212121212121,-0.038461538461538464,0.9740301633850019,0.05997214247725527,reported,0.1799164274317658
+GSE248762,16,mean of 9 non-T-cell immune ssGSEA marker-enrichment scores,0.31764705882352945,-0.2615844544095665,0.8336369785544784,0.2305734636218452,reported,0.27133505450523593
+GSE57070,3,mean of 9 non-T-cell immune ssGSEA marker-enrichment scores,1.0,,,,descriptive_only_n_lt_6,

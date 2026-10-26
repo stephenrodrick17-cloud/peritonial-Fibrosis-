@@ -1,0 +1,264 @@
+{
+  "run_timestamp_utc": "2026-10-16T19:40:57.604733+00:00",
+  "seed": 20261023,
+  "bootstrap_resamples": 2000,
+  "panel_genes": [
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "CST7"
+  ],
+  "signature_count": 13,
+  "signature_names": [
+    "T cells",
+    "B cells",
+    "NK cells",
+    "Monocytes",
+    "M1 macrophages",
+    "M2 macrophages",
+    "Neutrophils",
+    "Mast cells",
+    "Immature dendritic cells",
+    "Mature dendritic cells",
+    "Fibroblasts",
+    "Myofibroblasts",
+    "Mesothelial cells"
+  ],
+  "ssgsea_min_signature_size": 3,
+  "cluster_analysis": "not run",
+  "ltb_removed_sensitivity": {
+    "signature": "T cells",
+    "removed_gene": "LTB",
+    "panel_unchanged": [
+      "FLT3LG",
+      "EBI3",
+      "LTB",
+      "ADAM19",
+      "CST7"
+    ],
+    "results_file": "ltb_removed_t_cell_sensitivity.csv"
+  },
+  "panel_leukocyte_proxy_check": {
+    "results_file": "panel_vs_leukocyte_proxy.csv",
+    "proxy": "mean of 9 non-T-cell immune ssGSEA marker-enrichment scores"
+  },
+  "cohorts": {
+    "GSE125498": {
+      "n_samples_analyzed": 13,
+      "sample_ids": [
+        "GSM3575609",
+        "GSM3575613",
+        "GSM3575614",
+        "GSM3575615",
+        "GSM3575617",
+        "GSM3575620",
+        "GSM3575621",
+        "GSM3575622",
+        "GSM3575623",
+        "GSM3575624",
+        "GSM3575629",
+        "GSM3575635",
+        "GSM3575639"
+      ],
+      "expression_method": "log2 + quantile normalized array, GPL10558 mapped; duplicate symbol highest mean"
+    },
+    "GSE130888": {
+      "n_samples_analyzed": 10,
+      "sample_ids": [
+        "GSM3755687",
+        "GSM3755688",
+        "GSM3755689",
+        "GSM3755690",
+        "GSM3755691",
+        "GSM3755692",
+        "GSM3755696",
+        "GSM3755697",
+        "GSM3755698",
+        "GSM3755699"
+      ],
+      "expression_method": "raw scRNA-seq patient pseudobulk, log2(CPM+1)"
+    },
+    "GSE248762": {
+      "n_samples_analyzed": 16,
+      "sample_ids": [
+        "GSM7919583",
+        "GSM7919584",
+        "GSM7919585",
+        "GSM7919586",
+        "GSM7919587",
+        "GSM7919588",
+        "GSM7919589",
+        "GSM7919590",
+        "GSM7919591",
+        "GSM7919592",
+        "GSM7919593",
+        "GSM7919594",
+        "GSM7919595",
+        "GSM7919596",
+        "GSM7919597",
+        "GSM7919598"
+      ],
+      "expression_method": "raw scRNA-seq patient pseudobulk, log2(CPM+1)"
+    },
+    "GSE57070": {
+      "n_samples_analyzed": 3,
+      "sample_ids": [
+        "patient_18",
+        "patient_20",
+        "patient_6"
+      ],
+      "expression_method": "GEO processed log2 array matrix used as deposited; paired conditions averaged within patient"
+    }
+  },
+  "package_versions": {
+    "python": "3.13.1",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "gseapy": "1.3.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "statsmodels": "0.15.0"
+  },
+  "source_files": [
+    {
+      "file": "data\\raw\\fig7_real_data\\GPL10558.annot.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL10nnn/GPL10558/annot/GPL10558.annot.gz",
+      "sha256": "c914fdbe1130906ce3b9c97f5a75280591c89c617c168fb687c641f683e76b45",
+      "size_bytes": 7290886,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GPL11209.annot.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL11nnn/GPL11209/annot/GPL11209.annot.gz",
+      "sha256": "9e540b3ebe074a0007737e17c676da31f1fa52ebb2729701b69472066bd45827",
+      "size_bytes": 3581501,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE121372_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE121nnn/GSE121372/matrix/GSE121372_series_matrix.txt.gz",
+      "sha256": "30be042776dc924ccc7f9dc504fca98a5144a3fd436f547878c8728c1dec1f08",
+      "size_bytes": 430558,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE125498_non-normalized_data.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE125nnn/GSE125498/suppl/GSE125498_non-normalized_data.txt.gz",
+      "sha256": "0cb23c1e34d038d9d6ab31ab94a6e738bdf127e2596a80ae61b11e98b5b5c77d",
+      "size_bytes": 6108392,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE125498_RAW.tar",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE125nnn/GSE125498/suppl/GSE125498_RAW.tar",
+      "sha256": "19dbc61b4da9ac807799a96081f4eae405079dad108b82a9d2bdb74678cdb948",
+      "size_bytes": 27443200,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE125498_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE125nnn/GSE125498/matrix/GSE125498_series_matrix.txt.gz",
+      "sha256": "6994dbbd3334cf585da33b454bcf78661fe8578e536567f32afee516cfe34441",
+      "size_bytes": 4922801,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE130888_RAW.tar",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/suppl/GSE130888_RAW.tar",
+      "sha256": "9acc01d742e787ff1ba2d45f9cd058f35b81ee98b91e9a6f87b0ef62184c6819",
+      "size_bytes": 519403520,
+      "download_date_utc": "unknown_preexisting_local_download; copied and checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE130888_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130888/matrix/GSE130888_series_matrix.txt.gz",
+      "sha256": "d326b4bc3feabe409a5d37407dad998f1fe81af5130accd78331bacc4e9c4441",
+      "size_bytes": 3873,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE248762_RAW.tar",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE248nnn/GSE248762/suppl/GSE248762_RAW.tar",
+      "sha256": "6615ea930cdaa72ea2691cbf0c51f570e7006fdb09c2fbf8045f06317e8b6de4",
+      "size_bytes": 1014528000,
+      "download_date_utc": "unknown_preexisting_local_download; copied and checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE248762_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE248nnn/GSE248762/matrix/GSE248762_series_matrix.txt.gz",
+      "sha256": "29c63c196ecf1ab38ef6e9b6fde1a251147c665e93d2d72c31ff85716312d82d",
+      "size_bytes": 5105,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE57070_RAW.tar",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE57nnn/GSE57070/suppl/GSE57070_RAW.tar",
+      "sha256": "bab19811ca28024f81901bd65b0d519dcc5ff7ee2a0375d11479d9e78722ba66",
+      "size_bytes": 37068800,
+      "download_date_utc": "2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE57070_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE57nnn/GSE57070/matrix/GSE57070_series_matrix.txt.gz",
+      "sha256": "dc20348c27355ed1338876b14dbfd65069d19808b3614ab808d5663d126ddf5a",
+      "size_bytes": 1161763,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE62928_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE62nnn/GSE62928/matrix/GSE62928_series_matrix.txt.gz",
+      "sha256": "37f2378e37d06126f4c3f63ed300e90231f38f66ccba2e1412d1a9d837db7aa5",
+      "size_bytes": 1794513,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    },
+    {
+      "file": "data\\raw\\fig7_real_data\\GSE92453_series_matrix.txt.gz",
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92453/matrix/GSE92453_series_matrix.txt.gz",
+      "sha256": "1ff178246e5468ac81e7a26236075404481302bd7fbc8950306c4a62e035e88e",
+      "size_bytes": 4928138,
+      "download_date_utc": "unknown_preexisting_local_download; checksum-verified 2026-10-16",
+      "verification_timestamp_utc": "2026-10-16T19:40:55.163584+00:00"
+    }
+  ],
+  "frozen_reference_files": {
+    "panel_definition": {
+      "file": "results\\revision\\panel_v2\\panel_v2.json",
+      "sha256": "10c4e444ca21cddf7511cad2ace286c36003c2ca983f3743ee3b911862f99549"
+    },
+    "cellmarker_signatures": {
+      "file": "results\\revision\\microenvironment_deconvolution\\final_signature_table_both_variants.csv",
+      "sha256": "fb5a73d315fab5adba9d3d537ae125afe4f2e1d9546dd9e68394bcc7d18140d9"
+    }
+  },
+  "search_scope": {
+    "GEO": "Human peritoneal dialysis, effluent, fibrosis, EPS, UF failure, and mesothelial expression records; relevant candidates audited in dataset_audit.csv",
+    "ArrayExpress_BioStudies": "Peritoneal dialysis and peritoneal effluent search results screened; relevant candidates audited in dataset_audit.csv",
+    "SRA": "NCBI E-utilities human peritoneal dialysis/effluent/fibrosis search; 95 run records grouped to nine BioProjects in sra_project_audit.csv"
+  },
+  "input_restriction": "Read only the frozen panel definition, frozen CellMarker signature table, and public GEO source files; no previous Figure 7 output was used.",
+  "limitations": [
+    "Small exploratory cohorts; no clinical validation.",
+    "GSE297829 is one patient and cannot support association testing.",
+    "GSE57070 has three independent patients after averaging paired treatment/control arrays; its rho values are descriptive only.",
+    "GSE57070 is omitted from validation/concordance figures and is not cited as validation.",
+    "GSE57070 was scored from the GEO processed log2 matrix; its downloaded raw CEL archive was not reprocessed.",
+    "E-MTAB-5439 contains sorted immune-cell populations, not bulk effluent, and no processed expression matrix.",
+    "E-MTAB-5462 has no processed gene-level matrix in BioStudies; raw-read alignment was not performed.",
+    "Exact patient-level clinical covariates were unavailable for most cohorts."
+  ]
+}

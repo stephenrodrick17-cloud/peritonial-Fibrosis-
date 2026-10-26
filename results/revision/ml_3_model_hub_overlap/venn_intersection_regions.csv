@@ -1,0 +1,8 @@
+"Region","Gene_Count","Genes"
+"LASSO_only",2,"ECM1, SEMA4F"
+"SVM_RFE_only",4,"ANGPTL4, CCBE1, CLEC2D, COL8A1"
+"Random_Forest_only",6,"CST7, HAPLN3, LTA, LTB, SEMA3E, SERPINA10"
+"LASSO_SVM_RFE_only",4,"CLEC4F, CXCL14, PI3, TGM3"
+"LASSO_RF_only",2,"ADAM19, FLT3LG"
+"SVM_RFE_RF_only",0,""
+"All_three",2,"EBI3, TNFSF15"

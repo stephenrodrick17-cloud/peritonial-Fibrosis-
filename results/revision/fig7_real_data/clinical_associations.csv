@@ -1,0 +1,6 @@
+accession,covariate,n,effect,ci95_low,ci95_high,p_value,adjustment,model,q_value_BH_within_dataset
+GSE130888,long_vintage_vs_short,10,0.6653092384380773,-0.05578544307146338,1.3864039199476181,0.06547696553371139,leukocyte_proxy,OLS panel_score ~ covariate + leukocyte_proxy,0.06547696553371139
+GSE248762,age_years,16,0.001110292454477163,-0.02916639476188033,0.03138697967083466,0.9380609748469997,leukocyte_proxy,OLS panel_score ~ covariate + leukocyte_proxy,0.9380609748469997
+GSE248762,sex_M_vs_F,16,-0.06309398489487406,-1.1093711526425212,0.983183182852773,0.8983412793532496,leukocyte_proxy,OLS panel_score ~ covariate + leukocyte_proxy,0.9380609748469997
+GSE248762,long_vintage_vs_short,16,0.6438044835301039,-0.2488856385358139,1.5364946055960216,0.14322486211438779,leukocyte_proxy,OLS panel_score ~ covariate + leukocyte_proxy,0.5728994484575511
+GSE248762,UF_failure_vs_no_UF_in_long_vintage,10,0.5144461802213838,-1.2059281562402744,2.234820516683042,0.5023596025089293,leukocyte_proxy,OLS panel_score ~ covariate + leukocyte_proxy,0.9380609748469997

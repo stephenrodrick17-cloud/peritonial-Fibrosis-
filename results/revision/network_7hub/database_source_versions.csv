@@ -1,0 +1,18 @@
+source,version,source_date,query_date_utc,query_via,source_url,retrieval_status
+DIANA-microT,5,"Sept, 2013",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://diana.imis.athena-innovation.gr/DianaTools/index.php?r=microT_CDS/index,QUERIED_IN_THIS_ANALYSIS
+EIMMo,5,"Jan, 2011",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://www.mirz.unibas.ch/miRNAtargetPredictionBulk.php,QUERIED_IN_THIS_ANALYSIS
+MicroCosm,5,"Sept, 2009",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://www.ebi.ac.uk/enright-srv/microcosm/cgi-bin/targets/v5/download.pl,QUERIED_IN_THIS_ANALYSIS
+miR2Disease,NOT STATED,"Mar 14, 2011",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://www.mir2disease.org,SOURCE_VERSION_LISTED_NOT_QUERIED
+miRanda,NOT STATED,"Aug, 2010",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://www.microrna.org/microrna/getDownloads.do,QUERIED_IN_THIS_ANALYSIS
+miRDB,6,"June, 2019",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://mirdb.org,QUERIED_IN_THIS_ANALYSIS
+miRecords,4,"Apr 27, 2013",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://mirecords.biolead.org/download.php,QUERIED_IN_THIS_ANALYSIS
+miRTarBase,9,Sept 2021,2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://mirtarbase.mbc.nctu.edu.tw/php/download.php,QUERIED_IN_THIS_ANALYSIS
+Pharmaco-miR (Verified Sets),NOT STATED,NOT STATED,2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://www.pharmaco-mir.org/home/download_VERSE_db,SOURCE_VERSION_LISTED_NOT_QUERIED
+PhenomiR,2,"Feb 15, 2011",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://mips.helmholtz-muenchen.de/phenomir/,SOURCE_VERSION_LISTED_NOT_QUERIED
+PicTar,2,"Dec 21, 2012",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://dorina.mdc-berlin.de,QUERIED_IN_THIS_ANALYSIS
+PITA,6,"Aug 31, 2008",2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,http://genie.weizmann.ac.il/pubs/mir07/mir07_data.html,QUERIED_IN_THIS_ANALYSIS
+TarBase,9,2023,2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,https://dianalab.e-ce.uth.gr/tarbasev9,QUERIED_IN_THIS_ANALYSIS
+TargetScan,8,Sept 2021,2026-10-18T19:57:44.744079+00:00,multiMiR 1.28.0,https://www.targetscan.org/cgi-bin/targetscan/data_download.vert80.cgi,QUERIED_IN_THIS_ANALYSIS
+miRTarBase current release,11.0,NOT STATED in saved source metadata,2026-10-19T05:27:01.194274+00:00,direct current-release attempt,https://awi.cuhk.edu.cn/miRTarBase/,NOT RETRIEVED
+ENCORI/starBase,NOT STATED separately; response cites 2026 Nature Methods paper,NOT STATED,2026-10-18T20:00:41.639488+00:00,ENCORI API and hg38 archive,https://rnasysu.com/encori/tutorialAPI.php,RETRIEVED
+ENCORI ceRNA network,NOT STATED separately; response cites 2026 Nature Methods paper,NOT STATED,2026-10-18T20:46:40.711964+00:00,ENCORI ceRNA API,https://rnasysu.com/encori/tutorialAPI.php,PARTIAL; see per-hub query status

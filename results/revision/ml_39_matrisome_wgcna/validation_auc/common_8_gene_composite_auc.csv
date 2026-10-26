@@ -1,0 +1,3 @@
+Cohort,Score,Genes,N_genes,N_case,N_control,AUC_higher_score_predicts_LV,Bootstrap_CI95_low,Bootstrap_CI95_high
+GSE248762,mean_of_8_common_gene_z_scores,FLT3LG;EBI3;LTB;ADAM19;NAT6;ECM1;CST7;CCBE1,8,10,6,0.6666666666666667,0.38333333333333336,0.9166666666666666
+GSE130888,mean_of_8_common_gene_z_scores,FLT3LG;EBI3;LTB;ADAM19;NAT6;ECM1;CST7;CCBE1,8,4,6,0.6666666666666667,0.25,1.0

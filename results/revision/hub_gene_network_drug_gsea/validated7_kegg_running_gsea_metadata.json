@@ -1,0 +1,23 @@
+{
+  "analysis": "Hub-specific preranked KEGG running-enrichment visualization",
+  "cohort": "GSE125498",
+  "sample_count": 33,
+  "rank_metric": "Spearman correlation of each gene with the given hub across all samples",
+  "pathway_set_source": "results\\revision\\hub_gene_network_drug_gsea\\kegg_human_gene_sets.csv",
+  "gsea_results_source": "validated7_kegg_gsea_<HUB>.csv",
+  "ranked_gene_sources": "validated7_kegg_spearman_ranking_<HUB>.csv",
+  "pathways_displayed_per_hub": 3,
+  "selection": "Three pathways with largest absolute NES among those passing within-hub BH-FDR < 0.05 (all significant pathways shown when fewer than three)",
+  "permutations": 1000,
+  "fdr_cutoff": 0.05,
+  "hub_genes": [
+    "TNFSF15",
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "ECM1",
+    "CST7"
+  ],
+  "interpretation": "Each plot shows pathway enrichment along that hub's gene-correlation ranking, not an LPD-versus-SPD pathway effect."
+}

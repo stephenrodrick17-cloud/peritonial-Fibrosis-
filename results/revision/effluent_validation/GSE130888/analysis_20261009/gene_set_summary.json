@@ -1,0 +1,33 @@
+{
+  "accession": "GSE130888",
+  "primary_contrast": "Long-term PD vs short-term PD",
+  "n_LV_pseudobulk_patients": 4,
+  "n_SV_pseudobulk_patients": 6,
+  "panel_genes_concordant": 5,
+  "panel_genes_detected": 6,
+  "panel_sign_test_one_sided_P": 0.109375,
+  "strict_hubs_concordant": 1,
+  "strict_hubs_detected": 1,
+  "strict_hub_sign_test_one_sided_P": 0.5,
+  "panel_composite": {
+    "estimable": false,
+    "n_genes": 6
+  },
+  "panel_null_empirical_P_mean_gene_log2FC": NaN,
+  "panel_null_empirical_P_composite_AUC": NaN,
+  "strict_hub_composite": {
+    "estimable": false,
+    "n_genes": 1
+  },
+  "strict_hub_null_empirical_P_mean_gene_log2FC": NaN,
+  "strict_hub_null_empirical_P_composite_AUC": NaN,
+  "matched_null_details": {},
+  "strict_matched_null_details": {},
+  "composition_adjustment": {
+    "available": false,
+    "status": "not feasible: n_LV=4, n_SV=6, rank=4/4"
+  },
+  "preregistered_verdict": "Partially supportive",
+  "verdict_rule_note": "The matched-null criterion is applied to the preregistered composite-AUC null; mean-log2FC null P is also reported.",
+  "seed": 42
+}

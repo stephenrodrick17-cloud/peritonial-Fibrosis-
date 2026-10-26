@@ -46,9 +46,18 @@ primary analysis estimates.
 
 ## Preregistered verdict interpretation
 
-The exact tier definitions and composite estimability rule are quoted in the
-task response from `../PREREGISTRATION.md`. No success criterion, gene, group,
-contrast, or verdict was changed after examining the results. The verdict
-remains **Not supported** because the fixed full-panel composite and its
-matched-null test cannot be calculated when SERPINA10 is not detected, and the
-literal “Not supported: otherwise” tier applies.
+No success criterion, gene, group, contrast, or verdict was changed after
+examining the results. The direction component of the supportive tier is met
+(7/7 detected genes concordant), but the required full-panel composite AUC and
+its matched-null P-value cannot be calculated when SERPINA10 is not detected.
+The partial-support branches are exactly five concordant genes, or an
+estimable AUC from 0.65 through 0.80 without null significance; neither branch
+applies here. The literal fallback therefore remains **Not supported**. This
+decision rule is non-monotonic: 7/7 concordant can receive a lower label than
+exactly 5 concordant when the composite is unavailable. The frozen criteria
+were not changed post hoc.
+
+The verdict implementation now checks the exact-five partial-support branch
+before returning a verdict for an unestimable composite. This fixes the code
+path for other possible data states; it does not change this cohort's verdict
+or any statistical result.

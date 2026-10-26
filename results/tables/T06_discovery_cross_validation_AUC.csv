@@ -1,0 +1,3 @@
+"Method","AUC"
+"LOO ridge",0.907692307692308
+"Repeated stratified 5-fold ridge (50 repeats)",0.913923076923077

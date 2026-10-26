@@ -1,0 +1,38 @@
+{
+  "analysis_label": "post hoc / exploratory metadata audit",
+  "accessions": [
+    {
+      "analysis_label": "post hoc / exploratory metadata audit",
+      "accession": "GSE248762",
+      "sample_count": 16,
+      "reported_patient_or_donor_crosswalk_available": false,
+      "sample_titles_encode_within_cohort_group_or_replicate_labels": true,
+      "sample_metadata_table_supplementary_field_populated": false,
+      "family_soft_sample_count": 16,
+      "family_soft_sample_level_supplementary_file_count": 48,
+      "family_soft_supplementary_files_are_sample_accession_keyed": true,
+      "family_soft_supplementary_files_contain_cross_cohort_donor_ids": false,
+      "characteristics_include_demographics": true,
+      "cross_cohort_independence": "unknown",
+      "reason": "No shared patient/donor identifier or crosswalk is exposed in GEO characteristics, sample titles, or GSM-keyed 10x supplementary-file names."
+    },
+    {
+      "analysis_label": "post hoc / exploratory metadata audit",
+      "accession": "GSE130888",
+      "sample_count": 13,
+      "reported_patient_or_donor_crosswalk_available": false,
+      "sample_titles_encode_within_cohort_group_or_replicate_labels": true,
+      "sample_metadata_table_supplementary_field_populated": false,
+      "family_soft_sample_count": 13,
+      "family_soft_sample_level_supplementary_file_count": 39,
+      "family_soft_supplementary_files_are_sample_accession_keyed": true,
+      "family_soft_supplementary_files_contain_cross_cohort_donor_ids": false,
+      "characteristics_include_demographics": false,
+      "cross_cohort_independence": "unknown",
+      "reason": "No shared patient/donor identifier or crosswalk is exposed in GEO characteristics, sample titles, or GSM-keyed 10x supplementary-file names."
+    }
+  ],
+  "conclusion": "Independence remains unknown.",
+  "information_needed": "A de-identified participant crosswalk, explicit author confirmation/disclosure of overlap, or a reliable linking identifier present in both cohorts.",
+  "GSE92455_analyzed": false
+}

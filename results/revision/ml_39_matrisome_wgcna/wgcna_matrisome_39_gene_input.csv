@@ -1,0 +1,40 @@
+Gene,Matrisome_Division,Matrisome_Category,logFC,P.Value,adj.P.Val,DEG_Status,NegLog10P
+ADAM10,Matrisome-associated,ECM Regulators,-1.136341,0.0107,0.21401,Downregulated,1.97061622231479
+ADAM19,Matrisome-associated,ECM Regulators,1.2130888,0.000133,0.02544,Upregulated,3.87614835903291
+ANGPTL4,Matrisome-associated,Secreted Factors,1.4017457,0.00725,0.18065,Upregulated,2.13966199342901
+BMP7,Matrisome-associated,Secreted Factors,-0.8373055,0.0128,0.23574,Downregulated,1.89279003035213
+C1QA,Matrisome-associated,ECM-affiliated Proteins,0.6564472,0.0184,0.27341,Upregulated,1.73518217699046
+C1QB,Matrisome-associated,ECM-affiliated Proteins,0.9225589,0.00282,0.11089,Upregulated,2.54975089168064
+CCBE1,Matrisome-associated,Secreted Factors,0.6050057,0.00594,0.16381,Upregulated,2.22621355501881
+CCL5,Matrisome-associated,Secreted Factors,0.6887753,0.0396,0.36842,Upregulated,1.40230481407449
+CLEC2D,Matrisome-associated,ECM-affiliated Proteins,0.709219,0.0265,0.31607,Upregulated,1.57675412606319
+CLEC4F,Matrisome-associated,ECM-affiliated Proteins,1.1013954,0.0143,0.24507,Upregulated,1.84466396253494
+COL8A1,Core matrisome,Collagens,0.7492698,0.0488,0.40217,Upregulated,1.31158017799729
+COL9A2,Core matrisome,Collagens,0.9039562,0.0304,0.33341,Upregulated,1.51712641639125
+CST6,Matrisome-associated,ECM Regulators,-0.6441871,0.0382,0.36377,Downregulated,1.41793663708829
+CST7,Matrisome-associated,ECM Regulators,1.012271,0.0005,0.0465,Upregulated,3.30102999566398
+CXCL6,Matrisome-associated,Secreted Factors,-0.8702222,0.0397,0.36894,Downregulated,1.40120949323689
+EBI3,Matrisome-associated,Secreted Factors,0.8034234,0.00244,0.10282,Upregulated,2.61261017366127
+ECM1,Core matrisome,ECM Glycoproteins,1.0340512,0.00701,0.17828,Upregulated,2.15428198203334
+FLT3LG,Matrisome-associated,Secreted Factors,1.4377149,2.35e-05,0.01324,Upregulated,4.62893213772826
+HAPLN3,Core matrisome,Proteoglycans,0.9817703,0.00673,0.17422,Upregulated,2.17198493577602
+ITLN1,Matrisome-associated,ECM-affiliated Proteins,-1.2037175,0.0139,0.24349,Downregulated,1.85698519974591
+ITLN2,Matrisome-associated,ECM-affiliated Proteins,-0.9578152,0.0303,0.33329,Downregulated,1.51855737149769
+LAMB1,Core matrisome,ECM Glycoproteins,-0.6053662,0.0431,0.38046,Downregulated,1.36552272983927
+LTA,Matrisome-associated,Secreted Factors,0.6419332,0.0146,0.24639,Upregulated,1.83564714421556
+LTB,Matrisome-associated,Secreted Factors,1.6747234,3.33e-06,0.00709,Upregulated,5.47755576649368
+NAT6,Matrisome-associated,ECM Regulators,0.9859558,0.00261,0.10547,Upregulated,2.58335949266172
+OGN,Core matrisome,Proteoglycans,-0.736326,0.0328,0.34462,Downregulated,1.48412615628832
+PIK3IP1,Matrisome-associated,Secreted Factors,0.9959731,0.000595,0.05111,Upregulated,3.22548303427145
+PLXNA3,Matrisome-associated,ECM-affiliated Proteins,1.0165542,0.000728,0.05659,Upregulated,3.13786862068696
+S100Z,Matrisome-associated,Secreted Factors,-0.7235572,0.00629,0.17057,Downregulated,2.20134935455473
+SBSPON,Core matrisome,ECM Glycoproteins,-1.0219018,0.00934,0.20193,Downregulated,2.02965312376991
+SEMA3E,Matrisome-associated,ECM-affiliated Proteins,1.0456073,0.000281,0.03472,Upregulated,3.55129368009492
+SEMA4F,Matrisome-associated,ECM-affiliated Proteins,0.9250611,0.00147,0.08126,Upregulated,2.83268266525182
+SERPINA10,Matrisome-associated,ECM Regulators,1.1658519,0.000653,0.05433,Upregulated,3.18508681872493
+SFRP4,Matrisome-associated,Secreted Factors,1.4577884,0.0335,0.34641,Upregulated,1.47495519296315
+SPOCK2,Core matrisome,Proteoglycans,0.7654976,0.00281,0.11063,Upregulated,2.55129368009492
+TNFAIP6,Core matrisome,ECM Glycoproteins,0.800449,0.0393,0.36779,Upregulated,1.40560744962457
+TNFSF15,Matrisome-associated,Secreted Factors,0.9743104,2.73e-05,0.01352,Upregulated,4.56383735295924
+TNFSF4,Matrisome-associated,Secreted Factors,0.7496608,0.00356,0.12814,Upregulated,2.44855000202712
+TNFSF8,Matrisome-associated,Secreted Factors,-0.6394039,0.0272,0.31931,Downregulated,1.5654310959658

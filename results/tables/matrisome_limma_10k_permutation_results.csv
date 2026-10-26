@@ -1,0 +1,4 @@
+"Test","Observed_Count","Permutations_ge_Observed","Total_Permutations","Empirical_Permutation_P","Random_Seed"
+"All Matrisome DEGs",37,934,10000,0.0934906509349065,42
+"Upregulated Matrisome DEGs",27,568,10000,0.0568943105689431,42
+"Downregulated Matrisome DEGs",10,2403,10000,0.24037596240376,42

@@ -1,0 +1,14 @@
+signature,overlap_genes,overlap_count
+T cells,LTB,1
+B cells,,0
+NK cells,,0
+Monocytes,,0
+M1 macrophages,,0
+M2 macrophages,,0
+Neutrophils,,0
+Mast cells,,0
+Immature dendritic cells,,0
+Mature dendritic cells,,0
+Fibroblasts,,0
+Myofibroblasts,,0
+Mesothelial cells,,0

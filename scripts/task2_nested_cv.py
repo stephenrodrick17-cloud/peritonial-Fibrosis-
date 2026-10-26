@@ -85,11 +85,10 @@ for fold_idx, (train_idx, test_idx) in enumerate(rskf.split(X_all.T, y)):
     cand_genes = genes[cand_indices].tolist()
     
     if len(cand_genes) < 2:
-        # Fallback if too few pass: relax to top Up ECM genes
-        up_ecm_idx = np.where(is_ecm & (logfc > 0))[0]
-        sort_order = np.argsort(p_vals[up_ecm_idx])
-        cand_indices = up_ecm_idx[sort_order[:max(5, len(sort_order))]]
-        cand_genes = genes[cand_indices].tolist()
+        raise RuntimeError(
+            f"Repeat {rep_idx + 1}, fold {fold_in_rep + 1} produced fewer than two "
+            "upregulated Matrisome DEGs under the prespecified thresholds."
+        )
     
     # Extract candidate feature matrix for train and test
     X_cand_tr = X_train[cand_indices, :].T
@@ -103,23 +102,17 @@ for fold_idx, (train_idx, test_idx) in enumerate(rskf.split(X_all.T, y)):
     
     # --- STEP B: INSIDE-FOLD 3-MODEL ML SELECTION (LASSO, SVM-RFE, RF) ---
     # 1. LASSO
-    try:
-        lasso = LogisticRegressionCV(Cs=[0.01, 0.1, 1.0, 10.0], cv=3, penalty='l1',
-                                     solver='liblinear', max_iter=2000, random_state=RANDOM_STATE)
-        lasso.fit(X_sc_tr, y_train)
-        lasso_coefs = np.abs(lasso.coef_[0])
-        lasso_sel = set([cand_genes[i] for i in np.where(lasso_coefs > 1e-4)[0]])
-    except Exception:
-        lasso_sel = set(cand_genes[:min(5, n_cand)])
+    lasso = LogisticRegressionCV(Cs=[0.01, 0.1, 1.0, 10.0], cv=3, penalty='l1',
+                                 solver='liblinear', max_iter=2000, random_state=RANDOM_STATE)
+    lasso.fit(X_sc_tr, y_train)
+    lasso_coefs = np.abs(lasso.coef_[0])
+    lasso_sel = set([cand_genes[i] for i in np.where(lasso_coefs > 1e-4)[0]])
     
     # 2. SVM-RFE
     n_rfe = max(2, min(7, int(np.ceil(n_cand * 0.35))))
-    try:
-        svm = RFE(estimator=SVC(kernel='linear', random_state=RANDOM_STATE), n_features_to_select=n_rfe, step=1)
-        svm.fit(X_sc_tr, y_train)
-        svm_sel = set([cand_genes[i] for i in range(n_cand) if svm.support_[i]])
-    except Exception:
-        svm_sel = set(cand_genes[:n_rfe])
+    svm = RFE(estimator=SVC(kernel='linear', random_state=RANDOM_STATE), n_features_to_select=n_rfe, step=1)
+    svm.fit(X_sc_tr, y_train)
+    svm_sel = set([cand_genes[i] for i in range(n_cand) if svm.support_[i]])
         
     # 3. Random Forest
     rf = RandomForestClassifier(n_estimators=100, random_state=RANDOM_STATE, class_weight='balanced')
@@ -170,87 +163,86 @@ for fold_idx, (train_idx, test_idx) in enumerate(rskf.split(X_all.T, y)):
 # 3. Compute Summary Statistics across 10 Repeats
 mean_auc = float(np.mean(repeat_aucs))
 std_auc = float(np.std(repeat_aucs, ddof=1))
-se_auc = std_auc / np.sqrt(N_REPEATS)
-ci_lower_auc = float(mean_auc - 1.96 * se_auc)
-ci_upper_auc = float(mean_auc + 1.96 * se_auc)
-
 mean_c = float(np.mean(repeat_c_indices))
 std_c = float(np.std(repeat_c_indices, ddof=1))
-se_c = std_c / np.sqrt(N_REPEATS)
-ci_lower_c = float(mean_c - 1.96 * se_c)
-ci_upper_c = float(mean_c + 1.96 * se_c)
+
+bootstrap_rng = np.random.default_rng(RANDOM_STATE)
+bootstrap_auc_means = np.array([
+    bootstrap_rng.choice(repeat_aucs, size=N_REPEATS, replace=True).mean()
+    for _ in range(10_000)
+])
+ci_lower_auc, ci_upper_auc = np.percentile(bootstrap_auc_means, [2.5, 97.5])
+ci_lower_c, ci_upper_c = ci_lower_auc, ci_upper_auc
 
 print("\n" + "=" * 70)
 print("NESTED CROSS-VALIDATION SUMMARY (10 Repeats x 5-Fold CV):")
 print("=" * 70)
-print(f"Mean Nested AUC:     {mean_auc:.4f} (95% CI: [{ci_lower_auc:.4f}, {ci_upper_auc:.4f}], SD: {std_auc:.4f})")
-print(f"Mean Nested C-index: {mean_c:.4f} (95% CI: [{ci_lower_c:.4f}, {ci_upper_c:.4f}], SD: {std_c:.4f})")
+print(
+    f"Mean Nested AUC:     {mean_auc:.4f} (SD across repeats: {std_auc:.4f}; "
+    f"bootstrap 95% CI: [{ci_lower_auc:.4f}, {ci_upper_auc:.4f}])"
+)
+print(
+    f"Mean Nested C-index: {mean_c:.4f} (SD across repeats: {std_c:.4f}; "
+    f"bootstrap 95% CI: [{ci_lower_c:.4f}, {ci_upper_c:.4f}])"
+)
 
 # 4. Save Results
-comparison_rows = [
+legacy_results_path = "results/revision/nested_cv_results.csv"
+if not os.path.isfile(legacy_results_path):
+    raise FileNotFoundError(
+        f"Historical comparison table is required to retain non-nested values: {legacy_results_path}"
+    )
+legacy_rows = pd.read_csv(legacy_results_path).iloc[:2].to_dict(orient="records")
+comparison_rows = legacy_rows + [
     {
-        "Evaluation_Paradigm": "Non-Nested (Apparent In-Sample)",
-        "Leakage_Status": "Full Feature Selection on Entire Dataset",
-        "Metric": "ROC AUC",
-        "Estimate": 1.0000,
-        "CI_95_Lower": 1.0000,
-        "CI_95_Upper": 1.0000,
-        "SD": 0.0000,
-        "Notes": "Overly optimistic; complete training set leakage"
-    },
-    {
-        "Evaluation_Paradigm": "Non-Nested (5-Fold CV Nomogram)",
-        "Leakage_Status": "Features pre-selected prior to CV",
-        "Metric": "C-index",
-        "Estimate": 0.8731,
-        "CI_95_Lower": 0.7654,
-        "CI_95_Upper": 0.9808,
-        "SD": 0.1077,
-        "Notes": "Pre-selected feature leakage retains selection bias"
-    },
-    {
-        "Evaluation_Paradigm": "Strict Nested CV (Repeated 5-Fold, 10 Repeats)",
-        "Leakage_Status": "Zero Leakage (DEG filter + Matrisome + ML selection inside each fold)",
+        "Evaluation_Paradigm": "Nested CV (Repeated 5-Fold, 10 Repeats)",
+        "Leakage_Status": "DEG filter + Matrisome + ML selection inside folds; WGCNA not recomputed",
         "Metric": "ROC AUC",
         "Estimate": round(mean_auc, 4),
         "CI_95_Lower": round(ci_lower_auc, 4),
         "CI_95_Upper": round(ci_upper_auc, 4),
         "SD": round(std_auc, 4),
-        "Notes": "True out-of-fold generalization performance"
+        "Notes": "Mean of repeat-level OOF AUCs; percentile bootstrap resamples the 10 repeats"
     },
     {
-        "Evaluation_Paradigm": "Strict Nested CV (Repeated 5-Fold, 10 Repeats)",
-        "Leakage_Status": "Zero Leakage (DEG filter + Matrisome + ML selection inside each fold)",
+        "Evaluation_Paradigm": "Nested CV (Repeated 5-Fold, 10 Repeats)",
+        "Leakage_Status": "DEG filter + Matrisome + ML selection inside folds; WGCNA not recomputed",
         "Metric": "C-index",
         "Estimate": round(mean_c, 4),
         "CI_95_Lower": round(ci_lower_c, 4),
         "CI_95_Upper": round(ci_upper_c, 4),
         "SD": round(std_c, 4),
-        "Notes": "True out-of-fold generalization performance"
+        "Notes": "Binary-model C-index equals AUC; percentile bootstrap resamples the 10 repeats"
     }
 ]
 
 res_df = pd.DataFrame(comparison_rows)
-res_df.to_csv("results/revision/nested_cv_results.csv", index=False)
+res_df.to_csv("results/revision/nested_cv_results_taskE_v2.csv", index=False)
 
 # Also save per-fold detailed log
 folds_df = pd.DataFrame(fold_records)
-folds_df.to_csv("results/revision/nested_cv_fold_log.csv", index=False)
+folds_df.to_csv("results/revision/nested_cv_fold_log_taskE_v2.csv", index=False)
 
 summary_json = {
     "cv_protocol": "Repeated Stratified 5-Fold CV (10 repeats, 50 total splits)",
     "seed": RANDOM_STATE,
-    "non_nested_apparent_auc": 1.0000,
-    "non_nested_cv_c_index": 0.8731,
+    "fold_feature_selection": "Unmoderated two-sample t filter with Welch variance estimate, Naba Matrisome intersection, LASSO, SVM-RFE, RF",
+    "wgcna_recomputed_within_folds": False,
+    "ci_method": "Percentile bootstrap over 10 repeat-level out-of-fold AUC estimates; repeats are the bootstrap units",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": RANDOM_STATE,
+    "non_nested_apparent_auc": float(legacy_rows[0]["Estimate"]),
+    "non_nested_cv_c_index": float(legacy_rows[1]["Estimate"]),
     "nested_cv_auc_mean": round(mean_auc, 4),
     "nested_cv_auc_sd": round(std_auc, 4),
     "nested_cv_auc_ci95": [round(ci_lower_auc, 4), round(ci_upper_auc, 4)],
     "nested_cv_c_index_mean": round(mean_c, 4),
     "nested_cv_c_index_sd": round(std_c, 4),
     "nested_cv_c_index_ci95": [round(ci_lower_c, 4), round(ci_upper_c, 4)],
-    "repeat_aucs": [round(x, 4) for x in repeat_aucs]
+    "repeat_aucs": [round(x, 4) for x in repeat_aucs],
+    "repeat_c_indices": [round(x, 4) for x in repeat_c_indices]
 }
-with open("results/revision/nested_cv_summary.json", "w") as f:
+with open("results/revision/nested_cv_summary_taskE_v2.json", "w") as f:
     json.dump(summary_json, f, indent=2)
 
-print("Saved results/revision/nested_cv_results.csv and summary JSON successfully!")
+print("Saved Task E nested CV outputs under results/revision with the taskE_v2 suffix.")

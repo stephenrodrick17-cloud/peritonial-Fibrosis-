@@ -1,0 +1,31 @@
+{
+  "dataset": "GSE125498",
+  "total_samples": 33,
+  "input_features": 43,
+  "algorithms": [
+    "LASSO (L1)",
+    "SVM-RFE",
+    "Random Forest"
+  ],
+  "counts_selected": {
+    "LASSO": 17,
+    "SVM_RFE": 10,
+    "Random_Forest": 10
+  },
+  "majority_consensus_count": 10,
+  "majority_consensus_genes": [
+    "TNFSF15",
+    "LTB",
+    "CCBE1",
+    "NAT6",
+    "EBI3",
+    "CLEC2D",
+    "TGM3",
+    "BMP7",
+    "SFRP4",
+    "COL8A1"
+  ],
+  "strict_consensus_count": 0,
+  "strict_consensus_genes": [],
+  "output_file": "results/revision/ml_43_matrisome_wgcna\\ml_43_matrisome_results.csv"
+}

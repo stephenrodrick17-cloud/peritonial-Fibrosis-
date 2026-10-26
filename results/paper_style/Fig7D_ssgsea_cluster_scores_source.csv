@@ -1,0 +1,170 @@
+"sample_id","analysis_label","title","stage_binary","stage_label","group_binary_trait","binary_numeric","group","cluster","cell_type","ssgsea_score"
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.436031229052962
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.43196128529818
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.145428215891625
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.293777823656478
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.421580639751012
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.318326537292381
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.644701340694331
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.764111479780135
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.722396914414682
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.482352914116249
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.547526115067185
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.494494781895259
+"GSM3575609","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 2",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.199515137251725
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.524924110507774
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.535257425725951
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.670687920658872
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.494687244565872
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.521619819196778
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.302653791238346
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.619347631993884
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.730279219436205
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.691604271756569
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.458086946045134
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.483012376141913
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.470630934611456
+"GSM3575613","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 6",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.161545300316437
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.472483283290684
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.443041066349249
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.423308594220713
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.387173078566788
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.437251978203189
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.300069676223104
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.5898754160283
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.719687261705916
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.686981960991437
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.448612252666912
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.443031787956106
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.442813458173674
+"GSM3575614","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 7",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.1867338921958
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.497441534896915
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.471797899425743
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.3169186319612
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.351207616769901
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.457462271161792
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.305850982783114
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.576855235429447
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.779085537180769
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.739917171023331
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.469724440057138
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.58048862597363
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.419203381368532
+"GSM3575615","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 8",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.142568395281046
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.379370101189538
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.365716103536568
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.11606682556851
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.261189220465102
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.341999035766004
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.312808185166167
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.629179641560392
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.678593248539028
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.637565318970838
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.429299666066009
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.363971977127773
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.412552515954896
+"GSM3575617","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 10",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.221747895432125
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.478579277932313
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.444379989755095
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.129031988463583
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.308341075744503
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.433585705070773
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.316729617923062
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.626270659977975
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.755545074606872
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.676807021848425
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.476427148923268
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.562538677209034
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.503753375381732
+"GSM3575620","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 13",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.189676886424516
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD4 T cell",0.410244633257848
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD8 T cell",0.411593258049422
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NKT cell",0.134994186983016
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NK cell",0.280713381308029
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"T cell (other)",0.363690989269039
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"B cell",0.276756599078786
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Plasma cell",0.557576540494224
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Monocyte",0.787884783175558
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Macrophage",0.713862167570714
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Dendritic cell",0.477374798444029
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Neutrophil",0.543974119692505
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Eosinophil",0.459950709572085
+"GSM3575621","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 14",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Mast cell",0.211362612011947
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"CD4 T cell",0.520400603772542
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"CD8 T cell",0.517651840731875
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"NKT cell",0.536439830610634
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"NK cell",0.407544823902198
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"T cell (other)",0.494423009583377
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"B cell",0.315392828628427
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Plasma cell",0.632250792530737
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Monocyte",0.765481763611158
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Macrophage",0.714318307879182
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Dendritic cell",0.501229027898304
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Neutrophil",0.446018264972047
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Eosinophil",0.428556072032315
+"GSM3575622","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 15",1,"Late_Stage_LPD","case_LPD",1,"LPD",3,"Mast cell",0.222261112419069
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD4 T cell",0.442667580727313
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD8 T cell",0.410429781046603
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NKT cell",0.206199130321393
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NK cell",0.304640643512209
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"T cell (other)",0.3953568764566
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"B cell",0.30476640426805
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Plasma cell",0.606357767319074
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Monocyte",0.716943582767873
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Macrophage",0.68817209310431
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Dendritic cell",0.465319705738411
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Neutrophil",0.449197329718319
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Eosinophil",0.488618698802325
+"GSM3575623","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 16",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Mast cell",0.212014219159709
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD4 T cell",0.450958925087979
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD8 T cell",0.433161380696033
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NKT cell",0.235414825819961
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NK cell",0.327160547493886
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"T cell (other)",0.428111069943744
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"B cell",0.36685560427872
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Plasma cell",0.607869023826333
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Monocyte",0.719999400204745
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Macrophage",0.690790571797138
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Dendritic cell",0.475303886022387
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Neutrophil",0.396516995294414
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Eosinophil",0.462713436017207
+"GSM3575624","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 17",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Mast cell",0.195309324349932
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.479933140032414
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.460498202528617
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.349734339606316
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.398337649312745
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.482653603425193
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.355491552800899
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.6635870587157
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.722019569833075
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.690972848763382
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.468797005014884
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.493157573754378
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.534560284521064
+"GSM3575629","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 22",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.196508763616651
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD4 T cell",0.445422123335917
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"CD8 T cell",0.44055215133175
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NKT cell",0.154442260885614
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"NK cell",0.353245114008413
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"T cell (other)",0.409226877450329
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"B cell",0.355203669952218
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Plasma cell",0.639884736838425
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Monocyte",0.732171172422378
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Macrophage",0.681203332113391
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Dendritic cell",0.491488030464524
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Neutrophil",0.434675906938192
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Eosinophil",0.40223554207556
+"GSM3575635","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 28",1,"Late_Stage_LPD","case_LPD",1,"LPD",1,"Mast cell",0.201596319267871
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD4 T cell",0.38982851318963
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"CD8 T cell",0.383037464862739
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NKT cell",0.0110671936723744
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"NK cell",0.215917524570474
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"T cell (other)",0.338399517157638
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"B cell",0.27355594352885
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Plasma cell",0.584974253127841
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Monocyte",0.766299573293122
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Macrophage",0.720563602610201
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Dendritic cell",0.466479765647445
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Neutrophil",0.46958492229947
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Eosinophil",0.415107212452492
+"GSM3575639","exploratory, post hoc, same data as discovery, not validation","Long-term PD_Peritoneal cells from patient 32",1,"Late_Stage_LPD","case_LPD",1,"LPD",2,"Mast cell",0.192025436099067

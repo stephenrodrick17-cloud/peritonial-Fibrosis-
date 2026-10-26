@@ -1,0 +1,8 @@
+interaction_type,included_in_result,weight
+Co-expression,True,0.5461468839222297
+Physical interaction,False,0.0
+Co-localization,False,0.0
+Pathway,False,0.0
+Genetic interaction,False,0.0
+Shared protein domains,True,0.4538531160777703
+Predicted,False,0.0

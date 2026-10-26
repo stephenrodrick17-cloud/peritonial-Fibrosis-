@@ -26,10 +26,11 @@
     "mann_whitney_two_sided_p": 0.8857
   },
   "random_gene_set_null_1000": {
+    "n_null_sets_at_least_hub_auc": 604,
     "null_auc_mean": 0.4798,
     "null_auc_sd": 0.2291,
     "null_auc_median": 0.5,
     "empirical_p_value": 0.604
   },
-  "scientific_interpretation": "In true tissue biopsy data from GSE62928, the 7 consensus hub genes exhibit modest directional concordance (2/7 concordant; LTB and ADAM19 positive; binomial P = 0.4531). The composite hub score yields an AUC of 0.4375 (Mann-Whitney P = 0.6571), performing identically to the random-gene-set null (empirical P = 0.6040). This divergence highlights a critical biological reality: dialysate effluent cellular fractions (GSE125498) reflect leukocyte-driven immune-matrisome crosstalk, whereas surgical biopsies (GSE62928) capture dense, end-stage collagenous fibrotic scar tissue with hypocellularity. Previous reports of AUC = 1.0 were driven by in-sample overfitting and artificial simulation."
+  "scientific_interpretation": "In true tissue biopsy data from GSE62928, the 7 consensus hub genes exhibit modest directional concordance (2/7 concordant; LTB and ADAM19 positive; binomial P = 0.4531). The composite hub score yields an AUC of 0.4375 (one-sided Mann-Whitney P = 0.6571; two-sided P = 0.8857); the 1,000 random 7-gene-set null has mean AUC 0.4798 and empirical P = 0.6040. The discovery effluent and validation biopsy cohorts differ in tissue and phenotype, limiting transportability. The previous AUC = 1.0 resulted from synthetic shifted data and in-sample model fitting in the legacy pipeline."
 }

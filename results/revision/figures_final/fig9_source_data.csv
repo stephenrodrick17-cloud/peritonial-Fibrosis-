@@ -1,0 +1,15 @@
+network,gene_a,gene_b,score,score_cutoff,record_type,gene
+Physical,LTA,LTB,0.998,0.5,edge,
+Functional,LTA,FLT3LG,0.575,0.5,edge,
+Functional,LTA,LTB,0.999,0.5,edge,
+,,,,,node,ADAM19
+,,,,,node,CLEC4F
+,,,,,node,CXCL14
+,,,,,node,EBI3
+,,,,,node,FLT3LG
+,,,,,node,LTA
+,,,,,node,LTB
+,,,,,node,SEMA3E
+,,,,,node,SEMA4F
+,,,,,node,SERPINA10
+,,,,,node,TNFSF15

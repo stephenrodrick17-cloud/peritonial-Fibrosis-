@@ -1,0 +1,34 @@
+{
+  "query_date": "2026-10-13",
+  "database": "GeneMANIA",
+  "organism": "Homo sapiens",
+  "organism_id": 4,
+  "query_genes": [
+    "FLT3LG",
+    "TNFSF15",
+    "LTB",
+    "ADAM19",
+    "SERPINA10",
+    "EBI3",
+    "CXCL14"
+  ],
+  "recognized_query_genes": [
+    "ADAM19",
+    "CXCL14",
+    "EBI3",
+    "FLT3LG",
+    "LTB",
+    "SERPINA10",
+    "TNFSF15"
+  ],
+  "unrecognized_query_genes": [],
+  "max_result_genes": 20,
+  "weighting": "AUTOMATIC_SELECT",
+  "result_gene_count_including_queries": 27,
+  "result_interactor_count": 20,
+  "interaction_types_and_weights": {
+    "Co-expression": 0.5461468839222297,
+    "Shared protein domains": 0.4538531160777703
+  },
+  "query_url": "https://genemania.org/json/search_results"
+}

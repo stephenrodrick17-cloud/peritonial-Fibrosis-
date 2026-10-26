@@ -1,0 +1,41 @@
+{
+  "dataset": "GSE125498",
+  "samples": 33,
+  "long_term_samples": 13,
+  "short_term_samples": 20,
+  "matrisome_deg_count": 46,
+  "input_feature_count": 39,
+  "input_direction_counts": {
+    "upregulated": 28,
+    "downregulated": 11
+  },
+  "feature_pool_definition": "Intersection of the 46 MatrisomeAnalyzeR DEGs (|log2FC| >= 0.585 and nominal P < 0.05) with genes assigned to non-grey modules in the current dynamic WGCNA result",
+  "random_seed": 42,
+  "selection_method": {
+    "LASSO": "LogisticRegressionCV; L1; liblinear; 5-fold CV; accuracy scoring; Cs=[0.01,0.05,0.1,0.5,1,5,10]; selected |coefficient| > 1e-4; if none pass, retain the top max(2, floor(20% of input)) coefficients",
+    "SVM_RFE": "Linear SVC recursive elimination; top 10 features; step=1; no separate RFE cross-validation",
+    "Random_Forest": "500 trees; balanced class weights; top 10 importance threshold (ties included)"
+  },
+  "selected_counts": {
+    "LASSO": 11,
+    "SVM_RFE": 10,
+    "Random_Forest": 10,
+    "union_at_least_1_of_3": 20,
+    "consensus_at_least_2_of_3": 9,
+    "strict_consensus_3_of_3": 2
+  },
+  "consensus_genes": [
+    "TNFSF15",
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "NAT6",
+    "ECM1",
+    "CST7",
+    "CCBE1"
+  ],
+  "performance_note": "Feature selection used the full discovery cohort. These results do not estimate out-of-sample performance and do not constitute independent validation.",
+  "input_csv": "results\\revision\\ml_39_matrisome_wgcna\\wgcna_matrisome_39_gene_input.csv",
+  "results_csv": "results\\revision\\ml_39_matrisome_wgcna\\ml_39_gene_results.csv"
+}

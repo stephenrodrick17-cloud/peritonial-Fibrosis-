@@ -1,0 +1,32 @@
+{
+  "query_date": "2026-10-13",
+  "expression_cohort": "GSE125498",
+  "sample_count": 33,
+  "LPD_sample_count": 13,
+  "SPD_sample_count": 20,
+  "expression_matrix": "results\\tables\\GSE125498_full_expression_matrix.csv",
+  "rank_metric": "Spearman correlation of each hub gene against every gene across 33 samples; tied values are retained",
+  "pathway_database": "KEGG human pathways via KEGG REST",
+  "KEGG_pathway_database_updated": "2026/10/09",
+  "KEGG_gene_database_updated": "2026/10/12",
+  "pathway_count_downloaded": 372,
+  "pathway_count_with_genes": 372,
+  "gsea_software": "GSEApy",
+  "gseapy_version": "1.3.1",
+  "method_note": "GSEApy prerank used because fgsea/clusterProfiler are unavailable in this Python-only environment. Many genes have tied Spearman values; GSEApy notes tie ordering may affect results.",
+  "empirical_p_fdr_zero_handling": "GSEApy zero P/FDR estimates are floored to 1/(permutations + 1); empirical_floor_applied marks affected rows.",
+  "permutations": 1000,
+  "min_gene_set_size": 15,
+  "max_gene_set_size": 500,
+  "fdr_cutoff": 0.05,
+  "seed": 20261013,
+  "query_genes": [
+    "FLT3LG",
+    "TNFSF15",
+    "LTB",
+    "ADAM19",
+    "SERPINA10",
+    "EBI3",
+    "CXCL14"
+  ]
+}

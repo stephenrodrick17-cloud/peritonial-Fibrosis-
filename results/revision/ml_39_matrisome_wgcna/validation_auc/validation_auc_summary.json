@@ -1,0 +1,61 @@
+{
+  "analysis_type": "Exploratory external-cohort, expression-score ROC analysis",
+  "panel_genes": [
+    "TNFSF15",
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "NAT6",
+    "ECM1",
+    "CST7",
+    "CCBE1"
+  ],
+  "cohort_contrasts": {
+    "GSE248762": {
+      "contrast": "LV (n=10) vs SV (n=6)",
+      "n_case": 10,
+      "n_control": 6,
+      "detected_panel_genes": [
+        "ADAM19",
+        "CCBE1",
+        "CST7",
+        "EBI3",
+        "ECM1",
+        "FLT3LG",
+        "LTB",
+        "NAT6",
+        "TNFSF15"
+      ],
+      "not_detected_panel_genes": []
+    },
+    "GSE130888": {
+      "contrast": "Long-term PD (n=4) vs short-term PD (n=6)",
+      "n_case": 4,
+      "n_control": 6,
+      "detected_panel_genes": [
+        "ADAM19",
+        "CCBE1",
+        "CST7",
+        "EBI3",
+        "ECM1",
+        "FLT3LG",
+        "LTB",
+        "NAT6"
+      ],
+      "not_detected_panel_genes": [
+        "TNFSF15"
+      ]
+    }
+  },
+  "per_gene_auc_definition": "ROC AUC of the gene's validation logCPM, with higher expression scored as predicting LV; directions are not flipped to maximize AUC.",
+  "composite_definition": "Equal-weight mean of within-cohort z-scores for the same eight genes detected in both cohorts; no classifier was fitted. Standardization did not use phenotype labels.",
+  "ci_method": "Stratified percentile bootstrap, 5000 resamples per score; seed 42.",
+  "limitations": [
+    "Small validation sample sizes make AUC estimates imprecise.",
+    "These are exploratory score evaluations, not fitted logistic-regression performance estimates.",
+    "Panel discovery used GSE125498; these plots use additional effluent cohorts.",
+    "Independence of GSE248762 and GSE130888 patient samples is not formally established.",
+    "The shared eight-gene composite omits TNFSF15, which was not detected in GSE130888."
+  ]
+}

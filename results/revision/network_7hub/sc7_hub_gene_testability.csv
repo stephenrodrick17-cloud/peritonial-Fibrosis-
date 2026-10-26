@@ -1,0 +1,50 @@
+gene,lineage,status,not_testable_reason,n_LV_samples_with_ge_20_cells,n_SV_samples_with_ge_20_cells,n_LV_samples_with_ge_10_umis,n_SV_samples_with_ge_10_umis,n_LV_cells_in_eligible_samples,n_SV_cells_in_eligible_samples,cell_count_context_flag
+TNFSF15,lymphoid,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,1,2,37678,23939,
+FLT3LG,lymphoid,testable,,10,6,10,6,37678,23939,
+EBI3,lymphoid,testable,,10,6,10,6,37678,23939,
+LTB,lymphoid,testable,,10,6,10,6,37678,23939,
+ADAM19,lymphoid,testable,,10,6,10,6,37678,23939,
+ECM1,lymphoid,testable,,10,6,9,6,37678,23939,
+CST7,lymphoid,testable,,10,6,10,6,37678,23939,
+TNFSF15,myeloid,testable,,10,6,7,4,19470,20860,
+FLT3LG,myeloid,testable,,10,6,9,6,19470,20860,
+EBI3,myeloid,testable,,10,6,9,6,19470,20860,
+LTB,myeloid,testable,,10,6,10,6,19470,20860,
+ADAM19,myeloid,testable,,10,6,10,6,19470,20860,
+ECM1,myeloid,testable,,10,6,10,6,19470,20860,
+CST7,myeloid,testable,,10,6,10,6,19470,20860,
+TNFSF15,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,0,0,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+FLT3LG,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,1,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+EBI3,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,0,0,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+LTB,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,2,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ADAM19,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,2,1,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ECM1,fibroblast/stromal,testable,,4,5,4,4,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+CST7,fibroblast/stromal,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,4,5,1,2,943,212,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+TNFSF15,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,0,2,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+FLT3LG,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,1,2,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+EBI3,mesothelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,6,0,0,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+LTB,mesothelial,testable,,8,6,6,4,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ADAM19,mesothelial,testable,,8,6,3,2,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ECM1,mesothelial,testable,,8,6,8,6,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+CST7,mesothelial,testable,,8,6,6,6,902,1805,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+TNFSF15,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+FLT3LG,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+EBI3,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+LTB,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+ADAM19,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+ECM1,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+CST7,endothelial,not_testable,fewer than 2 eligible samples in one or both groups,0,0,0,0,0,0,NO_ELIGIBLE_CELLS
+TNFSF15,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,3,0,2244,1621,
+FLT3LG,epithelial,testable,,10,6,3,3,2244,1621,
+EBI3,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,1,0,2244,1621,
+LTB,epithelial,testable,,10,6,8,6,2244,1621,
+ADAM19,epithelial,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,10,6,5,1,2244,1621,
+ECM1,epithelial,testable,,10,6,10,6,2244,1621,
+CST7,epithelial,testable,,10,6,6,6,2244,1621,
+TNFSF15,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+FLT3LG,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,1,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+EBI3,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,0,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+LTB,other/unresolved,testable,,8,5,6,4,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ADAM19,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,0,2,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+ECM1,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,1,0,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)
+CST7,other/unresolved,not_testable,fewer than 2 samples per group had >=10 pseudobulk UMIs,8,5,1,3,324,243,LOWER_CELL_ABUNDANCE_LINEAGE (relative bottom three nonzero lineages)

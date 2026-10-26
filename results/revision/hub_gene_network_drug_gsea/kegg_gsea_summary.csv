@@ -1,0 +1,8 @@
+gene,samples,ranked_genes,KEGG_pathways_tested,significant_pathways_FDR_lt_0_05,min_gene_set_size,max_gene_set_size,permutations,seed,status
+FLT3LG,33,11741,320,18,15,500,1000,20261013,significant pathways found
+TNFSF15,33,11741,320,44,15,500,1000,20261013,significant pathways found
+LTB,33,11741,320,51,15,500,1000,20261013,significant pathways found
+ADAM19,33,11741,320,15,15,500,1000,20261013,significant pathways found
+SERPINA10,33,11741,320,26,15,500,1000,20261013,significant pathways found
+EBI3,33,11741,320,2,15,500,1000,20261013,significant pathways found
+CXCL14,33,11741,320,3,15,500,1000,20261013,significant pathways found

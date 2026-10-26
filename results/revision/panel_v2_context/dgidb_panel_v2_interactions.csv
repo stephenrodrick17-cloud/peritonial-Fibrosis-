@@ -1,0 +1,8 @@
+analysis_label,gene,drug,interaction_types,directionality,sources,publications,DGIdb_interaction_returned
+"exploratory, post hoc, same data as discovery, not validation",FLT3LG,,,,,,False
+"exploratory, post hoc, same data as discovery, not validation",EBI3,,,,,,False
+"exploratory, post hoc, same data as discovery, not validation",LTB,BAMINERCEPT,inhibitor,INHIBITORY,ChEMBL,,True
+"exploratory, post hoc, same data as discovery, not validation",LTB,ABACAVIR,,,PharmGKB,16998491,True
+"exploratory, post hoc, same data as discovery, not validation",LTB,BAMINERCEPT ALFA,,,TdgClinicalTrial,,True
+"exploratory, post hoc, same data as discovery, not validation",ADAM19,,,,,,False
+"exploratory, post hoc, same data as discovery, not validation",CST7,,,,,,False

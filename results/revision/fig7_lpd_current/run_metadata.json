@@ -1,0 +1,64 @@
+{
+  "analysis_label": "exploratory, n=13, not validated",
+  "current_panel_definition": "results\\revision\\panel_v2\\panel_v2.json",
+  "genes": [
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "CST7"
+  ],
+  "sample_ids": [
+    "GSM3575609",
+    "GSM3575613",
+    "GSM3575614",
+    "GSM3575615",
+    "GSM3575617",
+    "GSM3575620",
+    "GSM3575621",
+    "GSM3575622",
+    "GSM3575623",
+    "GSM3575624",
+    "GSM3575629",
+    "GSM3575635",
+    "GSM3575639"
+  ],
+  "seed": 20261016,
+  "resamples": 1000,
+  "pItem": 0.8,
+  "k_values": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "resampling_algorithm": "Ward agglomerative hierarchical clustering, Euclidean distance",
+  "consensus_final_algorithm": "complete-linkage hierarchical clustering, distance 1-consensus",
+  "selection_rule": "maximum silhouette on Euclidean distances of gene-wise z-scored expression; ties to smaller k",
+  "null_sets_per_universe": 1000,
+  "null_universes": {
+    "43_gene_pool": "43-gene model input pool, excluding the five observed genes",
+    "all_expressed_genes": "11741 expressed genes, excluding the five observed genes"
+  },
+  "selected_k": 2,
+  "cluster_sizes": {
+    "1": 12,
+    "2": 1
+  },
+  "cluster_size_lt_4": true,
+  "seed_stability_repeats": 20,
+  "seed_selected_k_counts": {
+    "2": 20,
+    "3": 0,
+    "4": 0,
+    "5": 0
+  },
+  "input_files": [
+    "results\\tables\\GSE125498_full_expression_matrix.csv",
+    "results\\tables\\GSE125498_sample_metadata.csv",
+    "results\\revision\\panel_v2\\panel_v2.json",
+    "results\\revision\\ml_43_matrisome_wgcna\\ml_43_matrisome_results.csv",
+    "results\\revision\\microenvironment_deconvolution\\cellmarker_2024_library_snapshot.txt"
+  ],
+  "historical_fig7_outputs_read": false
+}

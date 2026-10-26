@@ -1,0 +1,15 @@
+Task: T09_drug_prediction
+Status: skipped
+Seed: 2026
+
+Query failed: Up DSigDB object 'rows' not found
+Down DSigDB queried for 0 genes
+Query failed: Up LINCS_L1000_Chem_Pert_down object 'rows' not found
+Down LINCS_L1000_Chem_Pert_down queried for 0 genes
+Query failed: Up LINCS_L1000_Chem_Pert_up object 'rows' not found
+Down LINCS_L1000_Chem_Pert_up queried for 0 genes
+Up DrugMatrix queried for 9 genes
+Down DrugMatrix queried for 0 genes
+Discovery-up consensus hubs: TNFSF15, FLT3LG, EBI3, LTB, ADAM19, NAT6, ECM1, CST7, CCBE1
+Discovery-down consensus hubs: none; down-list queries skipped.
+Enrichr results are exploratory signatures, not evidence of drug efficacy; drug approval or anti-fibrotic status was not asserted without curation.

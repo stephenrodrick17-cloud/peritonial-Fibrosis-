@@ -1,0 +1,15 @@
+lineage,primary_group,n_all_samples,n_eligible_samples_ge_20_cells,total_cells_in_eligible_samples,minimum_cells_per_eligible_sample,median_cells_per_eligible_sample
+endothelial,LV,10,0,0,,
+endothelial,SV,6,0,0,,
+epithelial,LV,10,10,2244,38,134.5
+epithelial,SV,6,6,1621,87,311.5
+fibroblast/stromal,LV,10,4,943,28,54.5
+fibroblast/stromal,SV,6,5,212,22,26.0
+lymphoid,LV,10,10,37678,229,4096.5
+lymphoid,SV,6,6,23939,2465,3229.5
+mesothelial,LV,10,8,902,25,74.0
+mesothelial,SV,6,6,1805,99,159.0
+myeloid,LV,10,10,19470,170,1396.0
+myeloid,SV,6,6,20860,1572,3417.0
+other/unresolved,LV,10,8,324,26,32.0
+other/unresolved,SV,6,5,243,22,33.0

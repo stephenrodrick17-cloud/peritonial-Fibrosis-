@@ -1,0 +1,5 @@
+gene,feature_ids,lineage,status,not_testable_reason,n_LV_samples_with_ge_10_umis,n_SV_samples_with_ge_10_umis,n_LV_samples_with_ge_20_cells,n_SV_samples_with_ge_20_cells,n_LV_cells_in_eligible_samples,n_SV_cells_in_eligible_samples,log2FC_LV_vs_SV,P_value,BH_FDR_global,nominal_P_lt_0_05,global_FDR_lt_0_05
+ECM1,ENSG00000143369,myeloid,testable,,10,6,10,6,19470,20860,6.12396276741692,0.0042269275581539,0.027475029128000348,True,True
+ECM1,ENSG00000143369,mesothelial,testable,,8,6,8,6,902,1805,8.30766876410162,0.0009508834036293,0.009515137967385266,True,True
+ECM1,ENSG00000143369,epithelial,testable,,10,6,10,6,2244,1621,6.60299329314642,0.0009859811495807,0.009515137967385266,True,True
+CCBE1,ENSG00000183287,epithelial,testable,,5,6,10,6,2244,1621,-2.25940369536781,0.0010979005346983,0.009515137967385266,True,True

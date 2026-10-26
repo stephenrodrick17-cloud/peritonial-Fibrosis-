@@ -1,0 +1,31 @@
+pool,pattern,gene_count,record_type,gene,vote_count,three_of_three
+38-gene ECM/WGCNA pool,000,17.0,intersection_count,,,
+38-gene ECM/WGCNA pool,001,4.0,intersection_count,,,
+38-gene ECM/WGCNA pool,010,5.0,intersection_count,,,
+38-gene ECM/WGCNA pool,011,1.0,intersection_count,,,
+38-gene ECM/WGCNA pool,100,4.0,intersection_count,,,
+38-gene ECM/WGCNA pool,101,3.0,intersection_count,,,
+38-gene ECM/WGCNA pool,110,2.0,intersection_count,,,
+38-gene ECM/WGCNA pool,111,2.0,intersection_count,,,
+624-gene pool,000,588.0,intersection_count,,,
+624-gene pool,001,9.0,intersection_count,,,
+624-gene pool,010,3.0,intersection_count,,,
+624-gene pool,100,16.0,intersection_count,,,
+624-gene pool,101,1.0,intersection_count,,,
+624-gene pool,110,7.0,intersection_count,,,
+624-gene pool,110,,majority_gene,CHMP3,2.0,False
+624-gene pool,110,,majority_gene,ZNF626,2.0,False
+624-gene pool,110,,majority_gene,TMEM168,2.0,False
+624-gene pool,101,,majority_gene,HABP4,2.0,False
+624-gene pool,110,,majority_gene,RGS11,2.0,False
+624-gene pool,110,,majority_gene,SARM1,2.0,False
+624-gene pool,110,,majority_gene,HAMP,2.0,False
+624-gene pool,110,,majority_gene,NIPAL3,2.0,False
+38-gene ECM/WGCNA pool,111,,majority_gene,TNFSF15,3.0,True
+38-gene ECM/WGCNA pool,111,,majority_gene,FLT3LG,3.0,True
+38-gene ECM/WGCNA pool,110,,majority_gene,EBI3,2.0,False
+38-gene ECM/WGCNA pool,101,,majority_gene,LTB,2.0,False
+38-gene ECM/WGCNA pool,101,,majority_gene,ADAM19,2.0,False
+38-gene ECM/WGCNA pool,110,,majority_gene,ECM1,2.0,False
+38-gene ECM/WGCNA pool,101,,majority_gene,SERPINA10,2.0,False
+38-gene ECM/WGCNA pool,011,,majority_gene,CST7,2.0,False

@@ -1,0 +1,115 @@
+Metric,Value,Source_File,Description
+GSE125498_total_samples,33.0,results/tables/GSE125498_sample_metadata.csv,33 samples
+GSE125498_LPD_samples,13.0,results/tables/GSE125498_sample_metadata.csv,13 LPD cases
+GSE125498_SPD_samples,20.0,results/tables/GSE125498_sample_metadata.csv,20 SPD controls
+GSE248762_total_pseudobulk,16.0,data/processed/pseudobulk/pb_primary_stromal_mesothelial-lineage_unresolved_metadata.csv,16 patient pseudobulks
+GSE248762_LV_samples,10.0,data/processed/pseudobulk/pb_primary_stromal_mesothelial-lineage_unresolved_metadata.csv,10 Long-vintage cases
+GSE248762_SV_samples,6.0,data/processed/pseudobulk/pb_primary_stromal_mesothelial-lineage_unresolved_metadata.csv,6 Short-vintage controls
+candidate_matrisome_WGCNA_genes,43.0,results/revision/wgcna_paper_figures/matrisome_deg_module_intersection.csv,43 module-assigned matrisome DEGs
+LASSO_selected_features,17.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,LASSO selected count
+SVM_RFE_selected_features,10.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,SVM-RFE selected count
+Random_Forest_selected_features,10.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,RF selected count
+Venn_only_LASSO,7.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,17 - 8 - 2 = 7
+Venn_only_SVM,2.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,10 - 8 = 2
+Venn_only_RF,8.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,10 - 2 = 8
+Venn_LASSO_intersect_SVM,8.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,"BMP7, CCBE1, CLEC2D, COL8A1, EBI3, NAT6, SFRP4, TGM3"
+Venn_LASSO_intersect_RF,2.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,"LTB, TNFSF15"
+Venn_SVM_intersect_RF,0.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,No overlap
+Venn_three_way_intersection,0.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,Strict 3-way consensus is 0
+Consensus_hub_genes_count,10.0,results/revision/ml_43_matrisome_wgcna/ml_43_matrisome_results.csv,Majority vote >= 2 models (8 + 2 = 10)
+TNFSF15_discovery_log2FC,0.9743,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 mean difference LPD-SPD
+TNFSF15_discovery_Wilcoxon_P,0.000118,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 Mann-Whitney p in GSE125498
+TNFSF15_discovery_FDR_q,0.001179,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 BH FDR q in GSE125498
+TNFSF15_discovery_Apparent_AUC,0.904,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 in-sample discovery AUC
+TNFSF15_discovery_AUC_CI95_low,0.782,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 bootstrap CI low
+TNFSF15_discovery_AUC_CI95_high,0.987,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 bootstrap CI high
+TNFSF15_validation_log2FC,-0.0737,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 mesothelial pseudobulk LV-SV
+TNFSF15_validation_Wilcoxon_P,0.234483,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 Mann-Whitney p in GSE248762
+TNFSF15_validation_FDR_q,0.468965,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 BH FDR q in GSE248762
+TNFSF15_validation_Consistent_AUC,0.317,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TNFSF15 direction-consistent AUC in GSE248762
+LTB_discovery_log2FC,0.9403,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB mean difference LPD-SPD
+LTB_discovery_Wilcoxon_P,0.003825,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB Mann-Whitney p in GSE125498
+LTB_discovery_FDR_q,0.012107,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB BH FDR q in GSE125498
+LTB_discovery_Apparent_AUC,0.804,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB in-sample discovery AUC
+LTB_discovery_AUC_CI95_low,0.613,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB bootstrap CI low
+LTB_discovery_AUC_CI95_high,0.963,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB bootstrap CI high
+LTB_validation_log2FC,1.2769,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB mesothelial pseudobulk LV-SV
+LTB_validation_Wilcoxon_P,0.367632,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB Mann-Whitney p in GSE248762
+LTB_validation_FDR_q,0.57043,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB BH FDR q in GSE248762
+LTB_validation_Consistent_AUC,0.65,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,LTB direction-consistent AUC in GSE248762
+CCBE1_discovery_log2FC,0.605,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 mean difference LPD-SPD
+CCBE1_discovery_Wilcoxon_P,0.006054,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 Mann-Whitney p in GSE125498
+CCBE1_discovery_FDR_q,0.012107,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 BH FDR q in GSE125498
+CCBE1_discovery_Apparent_AUC,0.788,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 in-sample discovery AUC
+CCBE1_discovery_AUC_CI95_low,0.621,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 bootstrap CI low
+CCBE1_discovery_AUC_CI95_high,0.93,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 bootstrap CI high
+CCBE1_validation_log2FC,-3.6672,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 mesothelial pseudobulk LV-SV
+CCBE1_validation_Wilcoxon_P,0.001251,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 Mann-Whitney p in GSE248762
+CCBE1_validation_FDR_q,0.010008,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 BH FDR q in GSE248762
+CCBE1_validation_Consistent_AUC,0.017,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CCBE1 direction-consistent AUC in GSE248762
+NAT6_discovery_log2FC,0.986,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,NAT6 mean difference LPD-SPD
+NAT6_discovery_Wilcoxon_P,0.006054,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,NAT6 Mann-Whitney p in GSE125498
+NAT6_discovery_FDR_q,0.012107,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,NAT6 BH FDR q in GSE125498
+NAT6_discovery_Apparent_AUC,0.788,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,NAT6 in-sample discovery AUC
+NAT6_discovery_AUC_CI95_low,0.599,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,NAT6 bootstrap CI low
+NAT6_discovery_AUC_CI95_high,0.94,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,NAT6 bootstrap CI high
+EBI3_discovery_log2FC,0.8034,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 mean difference LPD-SPD
+EBI3_discovery_Wilcoxon_P,0.005407,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 Mann-Whitney p in GSE125498
+EBI3_discovery_FDR_q,0.012107,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 BH FDR q in GSE125498
+EBI3_discovery_Apparent_AUC,0.792,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 in-sample discovery AUC
+EBI3_discovery_AUC_CI95_low,0.623,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 bootstrap CI low
+EBI3_discovery_AUC_CI95_high,0.938,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 bootstrap CI high
+EBI3_validation_log2FC,0.3016,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 mesothelial pseudobulk LV-SV
+EBI3_validation_Wilcoxon_P,0.777124,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 Mann-Whitney p in GSE248762
+EBI3_validation_FDR_q,0.786112,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 BH FDR q in GSE248762
+EBI3_validation_Consistent_AUC,0.45,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,EBI3 direction-consistent AUC in GSE248762
+CLEC2D_discovery_log2FC,0.0129,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D mean difference LPD-SPD
+CLEC2D_discovery_Wilcoxon_P,0.75411,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D Mann-Whitney p in GSE125498
+CLEC2D_discovery_FDR_q,0.75411,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D BH FDR q in GSE125498
+CLEC2D_discovery_Apparent_AUC,0.465,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D in-sample discovery AUC
+CLEC2D_discovery_AUC_CI95_low,0.277,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D bootstrap CI low
+CLEC2D_discovery_AUC_CI95_high,0.672,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D bootstrap CI high
+CLEC2D_validation_log2FC,1.2392,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D mesothelial pseudobulk LV-SV
+CLEC2D_validation_Wilcoxon_P,0.427822,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D Mann-Whitney p in GSE248762
+CLEC2D_validation_FDR_q,0.57043,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D BH FDR q in GSE248762
+CLEC2D_validation_Consistent_AUC,0.633,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,CLEC2D direction-consistent AUC in GSE248762
+TGM3_discovery_log2FC,0.665,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 mean difference LPD-SPD
+TGM3_discovery_Wilcoxon_P,0.101099,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 Mann-Whitney p in GSE125498
+TGM3_discovery_FDR_q,0.126374,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 BH FDR q in GSE125498
+TGM3_discovery_Apparent_AUC,0.673,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 in-sample discovery AUC
+TGM3_discovery_AUC_CI95_low,0.454,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 bootstrap CI low
+TGM3_discovery_AUC_CI95_high,0.853,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 bootstrap CI high
+TGM3_validation_log2FC,0.0,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 mesothelial pseudobulk LV-SV
+TGM3_validation_Wilcoxon_P,,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 Mann-Whitney p in GSE248762
+TGM3_validation_FDR_q,,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 BH FDR q in GSE248762
+TGM3_validation_Consistent_AUC,0.5,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,TGM3 direction-consistent AUC in GSE248762
+BMP7_discovery_log2FC,-0.8373,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 mean difference LPD-SPD
+BMP7_discovery_Wilcoxon_P,0.031133,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 Mann-Whitney p in GSE125498
+BMP7_discovery_FDR_q,0.051889,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 BH FDR q in GSE125498
+BMP7_discovery_Apparent_AUC,0.727,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 in-sample discovery AUC
+BMP7_discovery_AUC_CI95_low,0.545,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 bootstrap CI low
+BMP7_discovery_AUC_CI95_high,0.891,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 bootstrap CI high
+BMP7_validation_log2FC,-2.461,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 mesothelial pseudobulk LV-SV
+BMP7_validation_Wilcoxon_P,0.006361,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 Mann-Whitney p in GSE248762
+BMP7_validation_FDR_q,0.025446,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 BH FDR q in GSE248762
+BMP7_validation_Consistent_AUC,0.917,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,BMP7 direction-consistent AUC in GSE248762
+SFRP4_discovery_log2FC,1.4578,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 mean difference LPD-SPD
+SFRP4_discovery_Wilcoxon_P,0.057768,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 Mann-Whitney p in GSE125498
+SFRP4_discovery_FDR_q,0.082525,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 BH FDR q in GSE125498
+SFRP4_discovery_Apparent_AUC,0.7,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 in-sample discovery AUC
+SFRP4_discovery_AUC_CI95_low,0.511,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 bootstrap CI low
+SFRP4_discovery_AUC_CI95_high,0.878,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 bootstrap CI high
+SFRP4_validation_log2FC,-0.0889,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 mesothelial pseudobulk LV-SV
+SFRP4_validation_Wilcoxon_P,0.786112,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 Mann-Whitney p in GSE248762
+SFRP4_validation_FDR_q,0.786112,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 BH FDR q in GSE248762
+SFRP4_validation_Consistent_AUC,0.45,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,SFRP4 direction-consistent AUC in GSE248762
+COL8A1_discovery_log2FC,0.3689,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 mean difference LPD-SPD
+COL8A1_discovery_Wilcoxon_P,0.45007,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 Mann-Whitney p in GSE125498
+COL8A1_discovery_FDR_q,0.500078,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 BH FDR q in GSE125498
+COL8A1_discovery_Apparent_AUC,0.581,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 in-sample discovery AUC
+COL8A1_discovery_AUC_CI95_low,0.371,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 bootstrap CI low
+COL8A1_discovery_AUC_CI95_high,0.774,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 bootstrap CI high
+COL8A1_validation_log2FC,-1.2398,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 mesothelial pseudobulk LV-SV
+COL8A1_validation_Wilcoxon_P,0.147103,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 Mann-Whitney p in GSE248762
+COL8A1_validation_FDR_q,0.392274,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 BH FDR q in GSE248762
+COL8A1_validation_Consistent_AUC,0.267,results/tables/Table_10_hub_genes_discovery_validation_stats.csv,COL8A1 direction-consistent AUC in GSE248762

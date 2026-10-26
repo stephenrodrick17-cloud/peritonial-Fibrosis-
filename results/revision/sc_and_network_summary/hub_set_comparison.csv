@@ -1,0 +1,4 @@
+set,source_file,n_unique_genes,overlap_with_validated_seven
+validated seven,results/revision/hub_gene_network_drug_gsea/validated7_kegg_gsea_summary.csv,7,7
+historical STRING PPI nodes,scripts/create_legacy_11_hub_ppi.py; results/revision/legacy_11_hub_ppi/network_nodes.csv,11,5
+intersection,calculated from the two source files,5,5

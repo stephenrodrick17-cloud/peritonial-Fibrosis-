@@ -1,0 +1,33 @@
+record_type,cohort,cohort_sample_n,gene,log2FC_or_saved_scale_effect,CI_lower,CI_upper,detected_by_saved_rule,raw_counts_sum_SERPINA10,frozen_verdict
+gene_cohort,GSE248762,LV 10 / SV 6,TNFSF15,1.3234540510612,-0.624306466535089,3.27121456865749,True,,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,FLT3LG,1.10484599970192,-0.478582915383247,2.68827491478709,True,,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,EBI3,1.37070669067421,0.235600737105744,2.50581264424269,True,,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,LTB,0.820745042342153,-0.705167451838138,2.34665753652244,True,,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,ADAM19,1.06774162883591,-0.0593807925721233,2.19486405024394,True,,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,ECM1,5.88930480921725,2.29769471704987,9.48091490138464,True,,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,SERPINA10,,,,False,2.0,Not supported
+gene_cohort,GSE248762,LV 10 / SV 6,CST7,0.452212511249147,-0.405105544159116,1.30953056665741,True,,Not supported
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,TNFSF15,,,,False,,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,FLT3LG,0.825211703493845,-1.70111331209599,3.35153671908368,True,,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,EBI3,0.838215750135198,-1.07155942645569,2.74799092672609,True,,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,LTB,0.196322794440222,-2.7174331973353,3.11007878621574,True,,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,ADAM19,0.923061238458685,-1.22313726520747,3.06925974212484,True,,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,ECM1,-0.630148371837476,-2.73247230997387,1.47217556629892,True,,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,SERPINA10,,,,False,0.0,Partially supportive
+gene_cohort,GSE130888,LV 4 / SV 6; 3 NORMAL excluded,CST7,0.158321516991908,-2.03750032234611,2.35414335632993,True,,Partially supportive
+gene_cohort,GSE62928,n=8,TNFSF15,-0.0518809999999998,-0.516542043863662,0.412780043863663,False,,Not supported
+gene_cohort,GSE62928,n=8,FLT3LG,-0.2663255,-0.949360567929376,0.416709567929376,False,,Not supported
+gene_cohort,GSE62928,n=8,EBI3,-0.0251737500000004,-0.568968796066994,0.518621296066993,False,,Not supported
+gene_cohort,GSE62928,n=8,LTB,0.529352500000001,-0.0124729328069252,1.07117793280693,False,,Not supported
+gene_cohort,GSE62928,n=8,ADAM19,1.0483725,0.24568411928735,1.85106088071265,False,,Not supported
+gene_cohort,GSE62928,n=8,ECM1,1.189195,-0.377176912117243,2.75556691211724,False,,Not supported
+gene_cohort,GSE62928,n=8,SERPINA10,-0.0455277499999998,-0.751287651151503,0.660232151151503,False,,Not supported
+gene_cohort,GSE62928,n=8,CST7,1.42872675,0.0693666090060427,2.78808689099396,False,,Not supported
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,TNFSF15,,,,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,FLT3LG,0.0758406944444444,-0.181022529491804,0.332703918380693,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,EBI3,-0.306794180555556,-0.530646895025175,-0.0829414660859355,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,LTB,0.133933486111111,-0.211555102110179,0.479422074332401,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,ADAM19,-0.978543291666666,-1.63101307359274,-0.326073509740593,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,ECM1,,,,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,SERPINA10,,,,,,Not a vintage test
+gene_cohort,GSE92455,epithelioid 9 / non-epithelioid 8,CST7,0.0364134166666666,-0.187359186782073,0.260186020115406,,,Not a vintage test

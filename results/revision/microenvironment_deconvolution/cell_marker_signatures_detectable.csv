@@ -1,0 +1,290 @@
+population,gene,source
+T cells,BTLA,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CCR2,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CCR5,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CCR6,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CCR7,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD2,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD247,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD27,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD28,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD3D,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD3E,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD3G,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD4,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD40LG,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD5,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD6,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD69,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD7,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD8A,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CD8B,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CTLA4,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CXCR3,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CXCR5,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,CXCR6,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,DPP4,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,ENTPD1,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,FCGR3A,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,GZMA,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,HAVCR2,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,IL2RA,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,IL7R,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,ITGAE,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,KLRB1,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,LAG3,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,LEF1,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,LTB,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,PDCD1,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,PTPRC,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,SELL,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,TIGIT,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,TNFRSF4,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,TNFRSF9,CellMarker_2024: T Cell Peripheral Blood Human
+T cells,ZBTB16,CellMarker_2024: T Cell Peripheral Blood Human
+B cells,AIM2,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,BACH2,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,BCL11A,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CALR,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD19,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD22,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD24,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD27,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD37,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD38,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD40,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD5,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD70,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD72,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD74,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD79A,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD79B,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD80,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD81,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,CD86,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,FAS,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,FCER2,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,FCGR2A,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,FCRLA,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,HLA-A,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,HLA-DPA1,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,IL2RA,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,IL4R,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,IL7R,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,ITGB1,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,JCHAIN,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,LILRA4,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,MME,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,MS4A1,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,MZB1,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,NFKBIA,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,PLPP5,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,PPP1R9B,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,PTPRC,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,SPIB,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,SWAP70,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,TBX21,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,TCL1A,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,XBP1,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,YBX3,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,ZAP70,CellMarker_2024: B Cell Peripheral Blood Human
+B cells,ZCCHC7,CellMarker_2024: B Cell Peripheral Blood Human
+NK cells,IL7R,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human
+NK cells,KIR2DL1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human
+NK cells,KLRC1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human
+NK cells,KLRD1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human
+NK cells,NCAM1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human
+Monocytes,B3GAT1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,C5AR1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CCL3,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CCR2,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CCR7,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD14,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD163,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD19,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD2,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD22,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD27,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD36,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD38,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD4,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD40,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD68,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD80,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD86,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CD8A,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CEBPA,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CREG1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CSF3R,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CST3,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,CXCR6,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,FCGR1A,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,FCGR2A,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,FCGR3A,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,FCN1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,FGL2,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,IL17RA,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,IL1B,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,IL6,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,IL6R,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,ITGAM,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,KIT,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,KLRB1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,KLRC1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,KLRD1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,LYZ,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,MNDA,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,MS4A1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,MS4A4A,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,NCAM1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,OAZ1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,PDCD1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,PECAM1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,PSAP,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,PTPRC,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,S100A12,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,S100A6,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,S100A8,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,S100A9,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,SDC1,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,SELL,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,SOD2,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,TNF,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,TNFRSF1B,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,TYROBP,CellMarker_2024: Monocyte Peripheral Blood Human
+Monocytes,VCAN,CellMarker_2024: Monocyte Peripheral Blood Human
+M1 macrophages,CCR7,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,CD80,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,CD86,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,CXCL10,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,FCGR1A,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,FCGR2A,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,FCGR3A,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,IL7R,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,TLR2,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M1 macrophages,TLR4,CellMarker_2024: M1 Macrophage Peripheral Blood Human
+M2 macrophages,CD163,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,CD209,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,CD36,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,CHI3L1,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,CLEC4A,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,CXCR4,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,FCER2,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,IL1B,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,RETNLB,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+M2 macrophages,TNFSF10,CellMarker_2024: M2 Macrophage Peripheral Blood Human
+Neutrophils,CD14,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CD33,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CD55,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CD68,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CD80,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CD86,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CSF3R,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CXCR1,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,CXCR2,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,ELANE,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,FCGR3A,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,FCGR3B,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,FPR1,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,FUT4,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,IL3RA,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,ITGAL,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,ITGAM,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,LYZ,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,MME,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,MPO,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,PTPRC,CellMarker_2024: Neutrophil Peripheral Blood Human
+Neutrophils,SELL,CellMarker_2024: Neutrophil Peripheral Blood Human
+Mast cells,ALCAM,CellMarker_2024: Mast Cell Lung Human
+Mast cells,ALOX5,CellMarker_2024: Mast Cell Lung Human
+Mast cells,BST2,CellMarker_2024: Mast Cell Lung Human
+Mast cells,BTN3A2,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CD164,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CD34,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CD36,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CD74,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CLEC12A,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CPA3,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CSF1R,CellMarker_2024: Mast Cell Lung Human
+Mast cells,CSF2RB,CellMarker_2024: Mast Cell Lung Human
+Mast cells,FCER1A,CellMarker_2024: Mast Cell Lung Human
+Mast cells,FCER1G,CellMarker_2024: Mast Cell Lung Human
+Mast cells,KIT,CellMarker_2024: Mast Cell Lung Human
+Mast cells,LTC4S,CellMarker_2024: Mast Cell Lung Human
+Mast cells,LY75,CellMarker_2024: Mast Cell Lung Human
+Mast cells,NECTIN1,CellMarker_2024: Mast Cell Lung Human
+Mast cells,PTPRJ,CellMarker_2024: Mast Cell Lung Human
+Mast cells,SUSD2,CellMarker_2024: Mast Cell Lung Human
+Mast cells,TNFRSF14,CellMarker_2024: Mast Cell Lung Human
+Mast cells,TPSAB1,CellMarker_2024: Mast Cell Lung Human
+Immature dendritic cells,BLVRB,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CD1A,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CD1B,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CD1C,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CD1E,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CH25H,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CLEC10A,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CSF1R,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,CTNS,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,DCSTAMP,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,F13A1,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,FABP4,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,FZD2,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,LMAN2L,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,MS4A6A,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,NUDT9,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,PITRM1,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,PPARG,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,RAP1GAP,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,SLC7A8,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,TACSTD2,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Immature dendritic cells,VASH1,CellMarker_2024: Immature Dendritic Cell Stomach Human
+Mature dendritic cells,CCR7,CellMarker_2024: Mature Dendritic Cell Liver Human
+Mature dendritic cells,CD80,CellMarker_2024: Mature Dendritic Cell Liver Human
+Mature dendritic cells,CD83,CellMarker_2024: Mature Dendritic Cell Liver Human
+Mature dendritic cells,LAMP3,CellMarker_2024: Mature Dendritic Cell Liver Human
+Fibroblasts,BMP2,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,CD24,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,CENPF,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,CLEC2B,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,CXCL10,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,FABP5,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,FBLN1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,GINS2,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,GPX3,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,GREM1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,HAND1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,IFIT3,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,LXN,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,MAPRE3,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,NPY,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,NR2F1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,PDGFRA,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,PDLIM3,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,POSTN,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,PRRX1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,PTGDS,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,RAMP1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,TFPI2,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,THY1,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,TOP2A,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,TYMS,CellMarker_2024: Fibroblast Epithelium Human
+Fibroblasts,WNT5B,CellMarker_2024: Fibroblast Epithelium Human
+Myofibroblasts,ADAM28,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,ADAMDEC1,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,CENPF,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,GINS2,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,IL18,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,MFAP4,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,STX2,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,TOP2A,CellMarker_2024: Myofibroblast Epithelium Human
+Myofibroblasts,TYMS,CellMarker_2024: Myofibroblast Epithelium Human
+Mesothelial cells,ADAM28,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,ADAMDEC1,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,CENPF,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,GINS2,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,IL18,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,MFAP4,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,STX2,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,TOP2A,CellMarker_2024: Mesothelial Cell Epithelium Human
+Mesothelial cells,TYMS,CellMarker_2024: Mesothelial Cell Epithelium Human

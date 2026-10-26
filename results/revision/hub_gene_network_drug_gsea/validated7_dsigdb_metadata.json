@@ -1,0 +1,18 @@
+{
+  "query_date": "2026-10-16",
+  "database": "DSigDB (via Enrichr)",
+  "library_version": "DSigDB v1.0 as listed by Enrichr",
+  "query_genes": [
+    "TNFSF15",
+    "FLT3LG",
+    "EBI3",
+    "LTB",
+    "ADAM19",
+    "ECM1",
+    "CST7"
+  ],
+  "enrichr_user_list_id": 140055448,
+  "fdr_cutoff": 0.05,
+  "number_of_terms_returned": 183,
+  "number_significant_fdr_lt_0_05": 0
+}

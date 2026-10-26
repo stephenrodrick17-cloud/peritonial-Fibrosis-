@@ -1,0 +1,71 @@
+{
+  "source_dataset": "GSE125498",
+  "source_table": "results\\revision\\matrisome_volcano\\GSE125498_matrisome_volcano_source_data.csv",
+  "query_date": "2026-10-12",
+  "string_api": "https://string-db.org/api",
+  "species": "Homo sapiens",
+  "taxon_id": 9606,
+  "network_type": "physical",
+  "minimum_string_combined_score": 400,
+  "minimum_string_combined_score_scaled": 0.4,
+  "input_gene_count": 46,
+  "input_direction_counts": {
+    "upregulated": 33,
+    "downregulated": 13
+  },
+  "resolved_gene_count": 46,
+  "unresolved_genes": [],
+  "STRING_symbol_overrides": {
+    "NAT6": {
+      "query_symbol": "NAA80",
+      "basis": "GSE248762 Ensembl mapping: ENSG00000243477 maps to NAA80"
+    }
+  },
+  "network_node_count_including_isolates": 46,
+  "network_edge_count": 8,
+  "connected_node_count": 13,
+  "isolated_genes": [
+    "ADAM10",
+    "ADAM19",
+    "ANGPTL4",
+    "CCBE1",
+    "CLEC12A",
+    "CLEC2D",
+    "CLEC4F",
+    "CST6",
+    "CST7",
+    "EBI3",
+    "ECM1",
+    "FLT3LG",
+    "HAPLN3",
+    "LAMB1",
+    "MBP",
+    "NAT6",
+    "OGN",
+    "PI3",
+    "PIK3IP1",
+    "PLXNA3",
+    "S100Z",
+    "SBSPON",
+    "SEMA3E",
+    "SEMA4F",
+    "SERPINA10",
+    "SERPINB6",
+    "SFRP4",
+    "SPOCK2",
+    "SPP1",
+    "TGM3",
+    "TNFSF15",
+    "TNFSF4",
+    "TNFSF8"
+  ],
+  "edge_definition_note": "Direct/physical interactions only.",
+  "confidence_note": "The STRING combined score represents confidence in an interaction, not interaction strength or direction.",
+  "outputs": {
+    "png": "results\\revision\\matrisome_string_ppi\\physical\\GSE125498_46_matrisome_STRING_physical.png",
+    "pdf": "results\\revision\\matrisome_string_ppi\\physical\\GSE125498_46_matrisome_STRING_physical.pdf",
+    "edges": "results\\revision\\matrisome_string_ppi\\physical\\string_physical_interactions.tsv",
+    "nodes": "results\\revision\\matrisome_string_ppi\\string_network_nodes.csv",
+    "mapping": "results\\revision\\matrisome_string_ppi\\physical\\string_gene_mapping.csv"
+  }
+}

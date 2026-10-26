@@ -1,0 +1,17 @@
+Task: T07_single_gene_gsea
+Status: partial
+Seed: 2026
+
+TNFSF15 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+FLT3LG ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+EBI3 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+LTB ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+ADAM19 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+NAT6 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+ECM1 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+CST7 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+CCBE1 ranked all expressed discovery genes by limma t-statistic for above- vs below-median hub expression.
+GO and KEGG GSEA were omitted: GO preranked analysis exceeded the execution budget and KEGG requires repeated online annotation retrieval. The cached, focused Hallmark subset was analyzed instead.
+Used cached, project-local Hallmark gene sets for these themes: Epithelial Mesenchymal Transition; TGF-beta Signaling; Inflammatory Response; IL-6/JAK/STAT3 Signaling; TNF-alpha Signaling via NF-kB; Angiogenesis; Hypoxia
+High/low is an exploratory median split in the same discovery cohort; results are not independent validation.
+A fresh msigdbr download was not performed; msigdbr is not installed. Signature scores are mean within-cohort z-scores, not GSVA/ssGSEA.

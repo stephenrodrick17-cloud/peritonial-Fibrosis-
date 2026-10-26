@@ -119,6 +119,15 @@ The patient-level score is the mean of the eight marker-gene z-scores within eac
 | mesothelial | LV_NOT_UF |            6 |  0.01425 | -0.02097  |  0.1676 |              0.1353 |
 | mesothelial | SV        |            6 |  0.1287  |  0.005915 |  0.2053 |              0.1353 |
 
+## Interpretation
+
+No candidate gene met the frozen support rule. With only 16 independent
+patients overall (and 4 versus 6 in the LV_UF versus LV_NOT_UF contrast), power
+is low and uncertainty is substantial. These patient-level associations,
+expression contrasts, pathway enrichments, inferred communications, and the
+study-specific MMT proxy are correlative and inconclusive; they do not establish
+causation or validate a mechanism.
+
 ## Reproducibility files
 
 The analysis driver is [run_fibrosis_context.py](run_fibrosis_context.py); compartment-level edgeR ranking code is [compartment_edger_gsea_input.R](compartment_edger_gsea_input.R). The pseudobulk input matrices and metadata used for this analysis are included in this folder as [all_cell_pseudobulk_counts.csv](all_cell_pseudobulk_counts.csv), [celltype_pseudobulk_counts.csv](celltype_pseudobulk_counts.csv), [all_cell_pseudobulk_metadata.csv](all_cell_pseudobulk_metadata.csv), [celltype_pseudobulk_metadata.csv](celltype_pseudobulk_metadata.csv), and [patient_celltype_composition.csv](patient_celltype_composition.csv). Exact GSEA gene-set memberships are in [gsea_gene_set_membership.csv](gsea_gene_set_membership.csv). The original edgeR pipeline and source data remain in their existing locations and were not edited by this analysis.

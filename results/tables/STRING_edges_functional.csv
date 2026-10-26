@@ -1,0 +1,3 @@
+preferredName_A,preferredName_B,string_functional_score,edge
+LTA,LTB,0.95,LTA-LTB
+TNFSF15,LTB,0.72,TNFSF15-LTB

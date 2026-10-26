@@ -1,0 +1,14 @@
+population,database,source_signature_terms,marker_count_in_source,marker_count_in_expression_matrix,source_markers_not_detected,run_date
+T cells,Enrichr CellMarker_2024,T Cell Peripheral Blood Human,48,43,5,2026-10-13
+B cells,Enrichr CellMarker_2024,B Cell Peripheral Blood Human,53,47,6,2026-10-13
+NK cells,Enrichr CellMarker_2024,Natural Killer Cell Peritoneal Fluid Human,5,5,0,2026-10-13
+Monocytes,Enrichr CellMarker_2024,Monocyte Peripheral Blood Human,68,59,9,2026-10-13
+M1 macrophages,Enrichr CellMarker_2024,M1 Macrophage Peripheral Blood Human,11,10,1,2026-10-13
+M2 macrophages,Enrichr CellMarker_2024,M2 Macrophage Peripheral Blood Human,11,10,1,2026-10-13
+Neutrophils,Enrichr CellMarker_2024,Neutrophil Peripheral Blood Human,26,22,4,2026-10-13
+Mast cells,Enrichr CellMarker_2024,Mast Cell Lung Human,31,22,9,2026-10-13
+Immature dendritic cells,Enrichr CellMarker_2024,Immature Dendritic Cell Stomach Human,26,22,4,2026-10-13
+Mature dendritic cells,Enrichr CellMarker_2024,Mature Dendritic Cell Liver Human,5,4,1,2026-10-13
+Fibroblasts,Enrichr CellMarker_2024,Fibroblast Epithelium Human,50,27,23,2026-10-13
+Myofibroblasts,Enrichr CellMarker_2024,Myofibroblast Epithelium Human,17,9,8,2026-10-13
+Mesothelial cells,Enrichr CellMarker_2024,Mesothelial Cell Epithelium Human,17,9,8,2026-10-13

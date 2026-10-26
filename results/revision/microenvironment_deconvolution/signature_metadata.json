@@ -1,0 +1,86 @@
+{
+  "run_date": "2026-10-13",
+  "source_database": "CellMarker_2024",
+  "source_url": "https://maayanlab.cloud/Enrichr/geneSetLibrary",
+  "species": "Homo sapiens",
+  "expression_matrix": "results/tables/GSE125498_full_expression_matrix.csv",
+  "expressed_gene_symbols": 11741,
+  "minimum_detectable_markers": 3,
+  "score_method": "mean row-wise z-score across samples for each signature",
+  "signature_terms": {
+    "T cells": [
+      "T Cell Peripheral Blood Human"
+    ],
+    "B cells": [
+      "B Cell Peripheral Blood Human"
+    ],
+    "NK cells": [
+      "Natural Killer Cell Peritoneal Fluid Human"
+    ],
+    "Monocytes": [
+      "Monocyte Peripheral Blood Human"
+    ],
+    "M1 macrophages": [
+      "M1 Macrophage Peripheral Blood Human"
+    ],
+    "M2 macrophages": [
+      "M2 Macrophage Peripheral Blood Human"
+    ],
+    "Neutrophils": [
+      "Neutrophil Peripheral Blood Human"
+    ],
+    "Mast cells": [
+      "Mast Cell Lung Human"
+    ],
+    "Immature dendritic cells": [
+      "Immature Dendritic Cell Stomach Human"
+    ],
+    "Mature dendritic cells": [
+      "Mature Dendritic Cell Liver Human"
+    ],
+    "Fibroblasts": [
+      "Fibroblast Epithelium Human"
+    ],
+    "Myofibroblasts": [
+      "Myofibroblast Epithelium Human"
+    ],
+    "Mesothelial cells": [
+      "Mesothelial Cell Epithelium Human"
+    ]
+  },
+  "panels_checked": {
+    "five_gene_nomogram": [
+      "ADAM19",
+      "ECM1",
+      "FLT3LG",
+      "NAT6",
+      "TNFSF15"
+    ],
+    "seven_gene_consensus": [
+      "ADAM19",
+      "CXCL14",
+      "EBI3",
+      "FLT3LG",
+      "LTB",
+      "SERPINA10",
+      "TNFSF15"
+    ]
+  },
+  "overlap_genes_by_panel": {
+    "five_gene_nomogram": [],
+    "seven_gene_consensus": [
+      "LTB"
+    ]
+  },
+  "overlap_population_gene_pairs_by_panel": {
+    "five_gene_nomogram": [],
+    "seven_gene_consensus": [
+      {
+        "population": "T cells",
+        "gene": "LTB",
+        "panel": "seven_gene_consensus"
+      }
+    ]
+  },
+  "overlapping_genes_excluded": false
+}

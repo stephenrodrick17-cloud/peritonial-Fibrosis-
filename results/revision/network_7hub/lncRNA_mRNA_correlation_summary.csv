@@ -1,0 +1,8 @@
+lineage,n_tested,n_untestable,n_nominal_unadjusted_P_lt_0_05,n_BH_unadjusted_q_lt_0_05_global_family,n_nominal_adjusted_P_lt_0_05,n_BH_adjusted_q_lt_0_05_global_family,BH_family
+epithelial,6657,0,714,14,497,1,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately
+fibroblast/stromal,6633,24,515,14,448,2,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately
+lymphoid,6657,0,1169,100,728,3,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately
+mesothelial,6651,6,690,14,606,0,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately
+myeloid,6657,0,673,20,558,0,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately
+other/unresolved,5191,1466,311,13,271,8,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately
+ALL,38446,1496,4072,175,3108,14,all testable lncRNA-hub-lineage pairs; unadjusted and adjusted families separately

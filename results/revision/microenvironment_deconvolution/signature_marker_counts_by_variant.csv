@@ -1,0 +1,27 @@
+population,signature_variant,detectable_markers_x,included,drop_reason,source_markers,detectable_markers_y,below_3_detectable_markers
+T cells,full_signature,43,True,,48,43,False
+T cells,overlap_excluded_7gene,42,True,,48,43,False
+B cells,full_signature,47,True,,53,47,False
+B cells,overlap_excluded_7gene,47,True,,53,47,False
+NK cells,full_signature,5,True,,5,5,False
+NK cells,overlap_excluded_7gene,5,True,,5,5,False
+Monocytes,full_signature,59,True,,68,59,False
+Monocytes,overlap_excluded_7gene,59,True,,68,59,False
+M1 macrophages,full_signature,10,True,,11,10,False
+M1 macrophages,overlap_excluded_7gene,10,True,,11,10,False
+M2 macrophages,full_signature,10,True,,11,10,False
+M2 macrophages,overlap_excluded_7gene,10,True,,11,10,False
+Neutrophils,full_signature,22,True,,26,22,False
+Neutrophils,overlap_excluded_7gene,22,True,,26,22,False
+Mast cells,full_signature,22,True,,31,22,False
+Mast cells,overlap_excluded_7gene,22,True,,31,22,False
+Immature dendritic cells,full_signature,22,True,,26,22,False
+Immature dendritic cells,overlap_excluded_7gene,22,True,,26,22,False
+Mature dendritic cells,full_signature,4,True,,5,4,False
+Mature dendritic cells,overlap_excluded_7gene,4,True,,5,4,False
+Fibroblasts,full_signature,27,True,,50,27,False
+Fibroblasts,overlap_excluded_7gene,27,True,,50,27,False
+Myofibroblasts,full_signature,9,True,,17,9,False
+Myofibroblasts,overlap_excluded_7gene,9,True,,17,9,False
+Mesothelial cells,full_signature,9,True,,17,9,False
+Mesothelial cells,overlap_excluded_7gene,9,True,,17,9,False

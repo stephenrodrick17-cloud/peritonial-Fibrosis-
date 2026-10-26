@@ -1,0 +1,2 @@
+"gene","lineage","n_LV","n_SV","n_allocations","n_fits_succeeded","observed_log2FC","observed_edgeR_P","n_abs_permuted_log2FC_ge_observed","exact_two_sided_permutation_P","statistic","elapsed_seconds","n_workers","R_version","edgeR_version"
+"ECM1","mesothelial",8,6,3003,3003,8.30766876410162,0.000950883403629369,3,0.000999000999000999,"absolute edgeR robust quasi-likelihood log2FC; refit each allocation",23002.2184951305,8,"4.4.2","4.4.2"

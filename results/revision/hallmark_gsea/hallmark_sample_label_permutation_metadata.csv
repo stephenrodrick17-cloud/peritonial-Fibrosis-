@@ -1,0 +1,14 @@
+item,value
+run_date,2026-10-13
+R_version,4.4.2
+limma_version,3.62.2
+fgsea_version,1.32.4
+random_label_permutations,1000
+GSEA_simple_permutations_per_label,500
+seed,20261014
+group_sizes_preserved,yes: 13 LPD and 20 SPD in every permutation
+limma_model,limma lmFit followed by eBayes for each random label assignment
+contrast,LPD versus SPD; positive moderated t-statistics indicate LPD
+covariates,none
+empirical_P_definition,(count of permuted |NES| >= observed |NES| + 1) / (random label permutations + 1)
+top_set_rank_definition,1 + number of permuted maximum-|NES| values at least as large as observed maximum |NES|

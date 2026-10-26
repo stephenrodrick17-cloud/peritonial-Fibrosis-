@@ -1,0 +1,7 @@
+"gene","lineage","n_samples","Pearson_r_group_vs_lineage_cell_count","Pearson_r_group_vs_library_size"
+"EBI3","lymphoid",16,-0.0504644759501069,0.0775997138783502
+"TNFSF15","myeloid",16,-0.450953237544813,-0.539282108737204
+"EBI3","myeloid",16,-0.450953237544813,-0.539282108737204
+"ECM1","myeloid",16,-0.450953237544813,-0.539282108737204
+"ECM1","mesothelial",14,-0.473070662051255,-0.440112782627942
+"ECM1","epithelial",16,-0.112265505894836,-0.117005014047236

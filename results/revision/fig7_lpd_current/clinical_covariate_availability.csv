@@ -1,0 +1,6 @@
+variable,available,test,reason
+dialysis_duration,False,not estimable,"GEO provides only a short-term/long-term category, not per-patient duration."
+age,False,not estimable,No per-patient age is provided in the GEO series matrix or sample table.
+sex,False,not estimable,No per-patient sex is provided in the GEO series matrix or sample table.
+ultrafiltration_failure,False,not estimable,No per-patient UF-failure status is provided in the GEO series matrix or sample table.
+batch,False,not estimable,GEO sample descriptions PRAGUE_1 through PRAGUE_33 do not define a varying batch factor.

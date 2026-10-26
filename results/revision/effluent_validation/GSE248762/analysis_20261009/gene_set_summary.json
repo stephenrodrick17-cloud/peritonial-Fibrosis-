@@ -48,6 +48,6 @@
     "status": "feasible: both groups have at least five patients; design full rank"
   },
   "preregistered_verdict": "Not supported",
-  "verdict_rule_note": "The matched-null criterion is applied to the preregistered composite-AUC null; mean-log2FC null P is also reported.",
+  "verdict_rule_note": "The direction criterion is met (7/7 detected genes concordant), but the full-panel composite and its AUC null are not estimable because SERPINA10 is not detected. The exact-five concordance partial tier is not met; the 0.65-0.80 AUC partial tier cannot be evaluated. The literal preregistered fallback is Not supported. This label is not a claim that directional evidence was absent.",
   "seed": 42
 }

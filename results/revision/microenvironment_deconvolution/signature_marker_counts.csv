@@ -1,0 +1,14 @@
+population,source_markers,detectable_markers,below_3_detectable_markers
+T cells,48,43,False
+B cells,53,47,False
+NK cells,5,5,False
+Monocytes,68,59,False
+M1 macrophages,11,10,False
+M2 macrophages,11,10,False
+Neutrophils,26,22,False
+Mast cells,31,22,False
+Immature dendritic cells,26,22,False
+Mature dendritic cells,5,4,False
+Fibroblasts,50,27,False
+Myofibroblasts,17,9,False
+Mesothelial cells,17,9,False

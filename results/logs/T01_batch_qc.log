@@ -1,0 +1,7 @@
+Task: T01_batch_qc
+Status: completed
+Seed: 2026
+
+GSE125498: 33 samples; 11741 genes; expression source RMA log2 microarray; no cohorts were merged, so no batch correction was performed.
+GSE248762: 16 samples; 37460 genes; expression source edgeR TMM log2-CPM; no cohorts were merged, so no batch correction was performed.
+GSE130888: 10 samples; 33660 genes; expression source edgeR TMM log2-CPM; no cohorts were merged, so no batch correction was performed.

@@ -1,0 +1,579 @@
+population,gene,source,signature_variant,included
+T cells,BTLA,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,BTLA,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CCR2,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CCR2,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CCR5,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CCR5,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CCR6,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CCR6,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CCR7,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CCR7,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD2,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD2,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD247,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD247,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD27,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD27,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD28,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD28,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD3D,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD3D,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD3E,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD3E,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD3G,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD3G,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD4,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD4,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD40LG,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD40LG,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD5,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD5,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD6,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD6,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD69,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD69,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD7,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD7,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD8A,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD8A,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CD8B,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CD8B,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CTLA4,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CTLA4,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CXCR3,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CXCR3,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CXCR5,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CXCR5,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,CXCR6,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,CXCR6,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,DPP4,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,DPP4,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,ENTPD1,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,ENTPD1,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,FCGR3A,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,FCGR3A,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,GZMA,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,GZMA,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,HAVCR2,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,HAVCR2,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,IL2RA,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,IL2RA,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,IL7R,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,IL7R,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,ITGAE,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,ITGAE,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,KLRB1,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,KLRB1,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,LAG3,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,LAG3,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,LEF1,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,LEF1,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,LTB,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,LTB,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,False
+T cells,PDCD1,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,PDCD1,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,PTPRC,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,PTPRC,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,SELL,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,SELL,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,TIGIT,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,TIGIT,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,TNFRSF4,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,TNFRSF4,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,TNFRSF9,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,TNFRSF9,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+T cells,ZBTB16,CellMarker_2024: T Cell Peripheral Blood Human,full_signature,True
+T cells,ZBTB16,CellMarker_2024: T Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,AIM2,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,AIM2,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,BACH2,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,BACH2,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,BCL11A,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,BCL11A,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CALR,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CALR,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD19,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD19,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD22,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD22,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD24,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD24,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD27,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD27,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD37,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD37,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD38,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD38,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD40,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD40,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD5,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD5,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD70,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD70,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD72,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD72,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD74,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD74,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD79A,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD79A,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD79B,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD79B,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD80,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD80,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD81,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD81,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,CD86,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,CD86,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,FAS,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,FAS,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,FCER2,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,FCER2,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,FCGR2A,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,FCGR2A,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,FCRLA,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,FCRLA,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,HLA-A,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,HLA-A,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,HLA-DPA1,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,HLA-DPA1,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,IL2RA,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,IL2RA,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,IL4R,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,IL4R,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,IL7R,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,IL7R,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,ITGB1,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,ITGB1,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,JCHAIN,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,JCHAIN,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,LILRA4,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,LILRA4,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,MME,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,MME,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,MS4A1,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,MS4A1,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,MZB1,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,MZB1,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,NFKBIA,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,NFKBIA,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,PLPP5,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,PLPP5,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,PPP1R9B,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,PPP1R9B,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,PTPRC,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,PTPRC,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,SPIB,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,SPIB,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,SWAP70,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,SWAP70,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,TBX21,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,TBX21,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,TCL1A,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,TCL1A,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,XBP1,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,XBP1,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,YBX3,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,YBX3,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,ZAP70,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,ZAP70,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+B cells,ZCCHC7,CellMarker_2024: B Cell Peripheral Blood Human,full_signature,True
+B cells,ZCCHC7,CellMarker_2024: B Cell Peripheral Blood Human,overlap_excluded_7gene,True
+NK cells,IL7R,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,full_signature,True
+NK cells,IL7R,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,overlap_excluded_7gene,True
+NK cells,KIR2DL1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,full_signature,True
+NK cells,KIR2DL1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,overlap_excluded_7gene,True
+NK cells,KLRC1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,full_signature,True
+NK cells,KLRC1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,overlap_excluded_7gene,True
+NK cells,KLRD1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,full_signature,True
+NK cells,KLRD1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,overlap_excluded_7gene,True
+NK cells,NCAM1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,full_signature,True
+NK cells,NCAM1,CellMarker_2024: Natural Killer Cell Peritoneal Fluid Human,overlap_excluded_7gene,True
+Monocytes,B3GAT1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,B3GAT1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,C5AR1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,C5AR1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CCL3,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CCL3,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CCR2,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CCR2,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CCR7,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CCR7,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD14,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD14,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD163,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD163,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD19,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD19,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD2,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD2,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD22,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD22,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD27,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD27,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD36,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD36,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD38,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD38,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD4,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD4,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD40,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD40,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD68,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD68,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD80,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD80,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD86,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD86,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CD8A,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CD8A,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CEBPA,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CEBPA,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CREG1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CREG1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CSF3R,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CSF3R,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CST3,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CST3,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,CXCR6,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,CXCR6,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,FCGR1A,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,FCGR1A,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,FCGR2A,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,FCGR2A,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,FCGR3A,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,FCGR3A,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,FCN1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,FCN1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,FGL2,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,FGL2,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,IL17RA,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,IL17RA,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,IL1B,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,IL1B,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,IL6,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,IL6,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,IL6R,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,IL6R,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,ITGAM,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,ITGAM,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,KIT,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,KIT,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,KLRB1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,KLRB1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,KLRC1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,KLRC1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,KLRD1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,KLRD1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,LYZ,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,LYZ,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,MNDA,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,MNDA,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,MS4A1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,MS4A1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,MS4A4A,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,MS4A4A,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,NCAM1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,NCAM1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,OAZ1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,OAZ1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,PDCD1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,PDCD1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,PECAM1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,PECAM1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,PSAP,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,PSAP,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,PTPRC,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,PTPRC,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,S100A12,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,S100A12,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,S100A6,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,S100A6,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,S100A8,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,S100A8,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,S100A9,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,S100A9,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,SDC1,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,SDC1,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,SELL,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,SELL,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,SOD2,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,SOD2,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,TNF,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,TNF,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,TNFRSF1B,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,TNFRSF1B,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,TYROBP,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,TYROBP,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+Monocytes,VCAN,CellMarker_2024: Monocyte Peripheral Blood Human,full_signature,True
+Monocytes,VCAN,CellMarker_2024: Monocyte Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,CCR7,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,CCR7,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,CD80,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,CD80,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,CD86,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,CD86,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,CXCL10,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,CXCL10,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,FCGR1A,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,FCGR1A,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,FCGR2A,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,FCGR2A,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,FCGR3A,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,FCGR3A,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,IL7R,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,IL7R,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,TLR2,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,TLR2,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M1 macrophages,TLR4,CellMarker_2024: M1 Macrophage Peripheral Blood Human,full_signature,True
+M1 macrophages,TLR4,CellMarker_2024: M1 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,CD163,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,CD163,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,CD209,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,CD209,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,CD36,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,CD36,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,CHI3L1,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,CHI3L1,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,CLEC4A,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,CLEC4A,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,CXCR4,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,CXCR4,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,FCER2,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,FCER2,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,IL1B,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,IL1B,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,RETNLB,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,RETNLB,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+M2 macrophages,TNFSF10,CellMarker_2024: M2 Macrophage Peripheral Blood Human,full_signature,True
+M2 macrophages,TNFSF10,CellMarker_2024: M2 Macrophage Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CD14,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CD14,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CD33,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CD33,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CD55,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CD55,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CD68,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CD68,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CD80,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CD80,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CD86,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CD86,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CSF3R,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CSF3R,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CXCR1,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CXCR1,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,CXCR2,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,CXCR2,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,ELANE,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,ELANE,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,FCGR3A,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,FCGR3A,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,FCGR3B,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,FCGR3B,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,FPR1,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,FPR1,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,FUT4,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,FUT4,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,IL3RA,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,IL3RA,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,ITGAL,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,ITGAL,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,ITGAM,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,ITGAM,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,LYZ,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,LYZ,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,MME,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,MME,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,MPO,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,MPO,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,PTPRC,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,PTPRC,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Neutrophils,SELL,CellMarker_2024: Neutrophil Peripheral Blood Human,full_signature,True
+Neutrophils,SELL,CellMarker_2024: Neutrophil Peripheral Blood Human,overlap_excluded_7gene,True
+Mast cells,ALCAM,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,ALCAM,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,ALOX5,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,ALOX5,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,BST2,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,BST2,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,BTN3A2,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,BTN3A2,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CD164,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CD164,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CD34,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CD34,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CD36,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CD36,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CD74,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CD74,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CLEC12A,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CLEC12A,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CPA3,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CPA3,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CSF1R,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CSF1R,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,CSF2RB,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,CSF2RB,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,FCER1A,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,FCER1A,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,FCER1G,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,FCER1G,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,KIT,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,KIT,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,LTC4S,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,LTC4S,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,LY75,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,LY75,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,NECTIN1,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,NECTIN1,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,PTPRJ,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,PTPRJ,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,SUSD2,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,SUSD2,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,TNFRSF14,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,TNFRSF14,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Mast cells,TPSAB1,CellMarker_2024: Mast Cell Lung Human,full_signature,True
+Mast cells,TPSAB1,CellMarker_2024: Mast Cell Lung Human,overlap_excluded_7gene,True
+Immature dendritic cells,BLVRB,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,BLVRB,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CD1A,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CD1A,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CD1B,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CD1B,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CD1C,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CD1C,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CD1E,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CD1E,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CH25H,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CH25H,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CLEC10A,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CLEC10A,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CSF1R,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CSF1R,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,CTNS,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,CTNS,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,DCSTAMP,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,DCSTAMP,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,F13A1,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,F13A1,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,FABP4,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,FABP4,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,FZD2,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,FZD2,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,LMAN2L,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,LMAN2L,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,MS4A6A,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,MS4A6A,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,NUDT9,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,NUDT9,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,PITRM1,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,PITRM1,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,PPARG,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,PPARG,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,RAP1GAP,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,RAP1GAP,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,SLC7A8,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,SLC7A8,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,TACSTD2,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,TACSTD2,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Immature dendritic cells,VASH1,CellMarker_2024: Immature Dendritic Cell Stomach Human,full_signature,True
+Immature dendritic cells,VASH1,CellMarker_2024: Immature Dendritic Cell Stomach Human,overlap_excluded_7gene,True
+Mature dendritic cells,CCR7,CellMarker_2024: Mature Dendritic Cell Liver Human,full_signature,True
+Mature dendritic cells,CCR7,CellMarker_2024: Mature Dendritic Cell Liver Human,overlap_excluded_7gene,True
+Mature dendritic cells,CD80,CellMarker_2024: Mature Dendritic Cell Liver Human,full_signature,True
+Mature dendritic cells,CD80,CellMarker_2024: Mature Dendritic Cell Liver Human,overlap_excluded_7gene,True
+Mature dendritic cells,CD83,CellMarker_2024: Mature Dendritic Cell Liver Human,full_signature,True
+Mature dendritic cells,CD83,CellMarker_2024: Mature Dendritic Cell Liver Human,overlap_excluded_7gene,True
+Mature dendritic cells,LAMP3,CellMarker_2024: Mature Dendritic Cell Liver Human,full_signature,True
+Mature dendritic cells,LAMP3,CellMarker_2024: Mature Dendritic Cell Liver Human,overlap_excluded_7gene,True
+Fibroblasts,BMP2,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,BMP2,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,CD24,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,CD24,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,CENPF,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,CENPF,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,CLEC2B,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,CLEC2B,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,CXCL10,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,CXCL10,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,FABP5,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,FABP5,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,FBLN1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,FBLN1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,GINS2,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,GINS2,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,GPX3,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,GPX3,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,GREM1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,GREM1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,HAND1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,HAND1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,IFIT3,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,IFIT3,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,LXN,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,LXN,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,MAPRE3,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,MAPRE3,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,NPY,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,NPY,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,NR2F1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,NR2F1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,PDGFRA,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,PDGFRA,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,PDLIM3,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,PDLIM3,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,POSTN,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,POSTN,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,PRRX1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,PRRX1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,PTGDS,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,PTGDS,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,RAMP1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,RAMP1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,TFPI2,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,TFPI2,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,THY1,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,THY1,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,TOP2A,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,TOP2A,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,TYMS,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,TYMS,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Fibroblasts,WNT5B,CellMarker_2024: Fibroblast Epithelium Human,full_signature,True
+Fibroblasts,WNT5B,CellMarker_2024: Fibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,ADAM28,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,ADAM28,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,ADAMDEC1,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,ADAMDEC1,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,CENPF,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,CENPF,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,GINS2,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,GINS2,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,IL18,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,IL18,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,MFAP4,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,MFAP4,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,STX2,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,STX2,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,TOP2A,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,TOP2A,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Myofibroblasts,TYMS,CellMarker_2024: Myofibroblast Epithelium Human,full_signature,True
+Myofibroblasts,TYMS,CellMarker_2024: Myofibroblast Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,ADAM28,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,ADAM28,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,ADAMDEC1,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,ADAMDEC1,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,CENPF,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,CENPF,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,GINS2,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,GINS2,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,IL18,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,IL18,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,MFAP4,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,MFAP4,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,STX2,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,STX2,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,TOP2A,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,TOP2A,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True
+Mesothelial cells,TYMS,CellMarker_2024: Mesothelial Cell Epithelium Human,full_signature,True
+Mesothelial cells,TYMS,CellMarker_2024: Mesothelial Cell Epithelium Human,overlap_excluded_7gene,True

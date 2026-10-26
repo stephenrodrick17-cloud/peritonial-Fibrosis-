@@ -1,0 +1,3 @@
+"Model","AUC","Bootstrap_low","Bootstrap_high","DeLong_low","DeLong_high","n_case","n_control","Genes_used","Refit_subset_due_to_missing_genes","Youden_cutoff","Sensitivity_at_Youden","Specificity_at_Youden"
+"GSE248762 additional-cohort ridge",0.783333333333333,0.533333333333333,1,0.536657337513756,1,10,6,"TNFSF15;FLT3LG;EBI3;LTB;ADAM19;ECM1;CST7;CCBE1",TRUE,0.277729147205844,0.8,0.833333333333333
+"GSE130888 additional-cohort ridge",0.583333333333333,0.166666666666667,1,0.123285831760177,1,4,6,"TNFSF15;FLT3LG;EBI3;LTB;ADAM19;NAT6;ECM1;CST7;CCBE1",FALSE,0.340449159514935,0.75,0.666666666666667

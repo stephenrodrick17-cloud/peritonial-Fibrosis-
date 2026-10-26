@@ -1,0 +1,8 @@
+queried_hub,status,parsed_data_rows,error,raw_response_file,parameters
+TNFSF15,RETRIEVED,2,,data\raw\network_7hub\encori_ceRNA_TNFSF15.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0
+FLT3LG,NOT RETRIEVED,0,"The ""ceRNA"" parameter haven't been set correctly! Or the input of ""ceRNA"" parameter is not available!",data\raw\network_7hub\encori_ceRNA_FLT3LG.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0
+EBI3,RETRIEVED,1,,data\raw\network_7hub\encori_ceRNA_EBI3.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0
+LTB,NOT RETRIEVED,0,"The ""ceRNA"" parameter haven't been set correctly! Or the input of ""ceRNA"" parameter is not available!",data\raw\network_7hub\encori_ceRNA_LTB.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0
+ADAM19,RETRIEVED,1244,,data\raw\network_7hub\encori_ceRNA_ADAM19.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0
+ECM1,NOT RETRIEVED,0,"The ""ceRNA"" parameter haven't been set correctly! Or the input of ""ceRNA"" parameter is not available!",data\raw\network_7hub\encori_ceRNA_ECM1.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0
+CST7,NOT RETRIEVED,0,"The ""ceRNA"" parameter haven't been set correctly! Or the input of ""ceRNA"" parameter is not available!",data\raw\network_7hub\encori_ceRNA_CST7.tsv,geneType=mRNA; miRNAnum=2; family=all; pval<=0.01; fdr<=0.01; pancancerNum=0

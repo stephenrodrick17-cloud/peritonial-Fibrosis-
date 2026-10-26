@@ -1,0 +1,2 @@
+gene,lineages,n_samples_in_any_lineage,n_samples_expressing_all_three_lineages,n_samples_expressing_at_least_one_lineage,sample_ids_expressing_all_three,basis
+ECM1,myeloid;mesothelial;epithelial,16,16,16,GSM7919583;GSM7919584;GSM7919585;GSM7919586;GSM7919587;GSM7919588;GSM7919589;GSM7919590;GSM7919591;GSM7919592;GSM7919593;GSM7919594;GSM7919595;GSM7919596;GSM7919597;GSM7919598,raw pseudobulk count > 0; all samples including <20-cell samples shown

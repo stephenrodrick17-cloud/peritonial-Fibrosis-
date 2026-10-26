@@ -1,0 +1,57 @@
+{
+  "source_dataset": "GSE125498",
+  "source_table": "results\\revision\\matrisome_volcano\\GSE125498_matrisome_volcano_source_data.csv",
+  "query_date": "2026-10-14",
+  "string_api": "https://string-db.org/api",
+  "species": "Homo sapiens",
+  "taxon_id": 9606,
+  "network_type": "functional",
+  "minimum_string_combined_score": 400,
+  "minimum_string_combined_score_scaled": 0.4,
+  "input_gene_count": 46,
+  "input_direction_counts": {
+    "upregulated": 33,
+    "downregulated": 13
+  },
+  "resolved_gene_count": 46,
+  "unresolved_genes": [],
+  "STRING_symbol_overrides": {
+    "NAT6": {
+      "query_symbol": "NAA80",
+      "basis": "GSE248762 Ensembl mapping: ENSG00000243477 maps to NAA80"
+    }
+  },
+  "network_node_count_including_isolates": 46,
+  "network_edge_count": 35,
+  "connected_node_count": 27,
+  "isolated_genes": [
+    "ADAM10",
+    "ADAM19",
+    "ANGPTL4",
+    "CCBE1",
+    "CLEC12A",
+    "CLEC2D",
+    "CLEC4F",
+    "EBI3",
+    "ECM1",
+    "HAPLN3",
+    "LAMB1",
+    "MBP",
+    "NAT6",
+    "PIK3IP1",
+    "S100Z",
+    "SBSPON",
+    "SEMA4F",
+    "SERPINA10",
+    "SPOCK2"
+  ],
+  "edge_definition_note": "STRING functional associations combine physical and other evidence; they do not necessarily represent direct physical binding.",
+  "confidence_note": "The STRING combined score represents confidence in an interaction, not interaction strength or direction.",
+  "outputs": {
+    "png": "results\\revision\\matrisome_string_ppi\\functional\\GSE125498_46_matrisome_STRING_functional.png",
+    "pdf": "results\\revision\\matrisome_string_ppi\\functional\\GSE125498_46_matrisome_STRING_functional.pdf",
+    "edges": "results\\revision\\matrisome_string_ppi\\functional\\string_functional_interactions.tsv",
+    "nodes": "results\\revision\\matrisome_string_ppi\\string_network_nodes.csv",
+    "mapping": "results\\revision\\matrisome_string_ppi\\functional\\string_gene_mapping.csv"
+  }
+}

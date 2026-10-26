@@ -1,0 +1,7 @@
+Task: T02_ml_selection
+Status: completed
+Seed: 2026
+
+Loaded saved results; did not repeat feature selection. LASSO=11; SVM_RFE=10; Random_Forest=10
+Selection union: 20 ; consensus >=2 methods: 9 ; strict 3/3: 2
+LASSO coefficient path/CV diagnostics and SVM-RFE error curve were not present in saved files and were not fabricated.

@@ -1,0 +1,4 @@
+"gene","lineage","contrast","n_contrast_samples","n_SV_samples","before_log2FC","before_P","after_log2FC","after_P","after_status","before_BH_q","after_BH_q"
+"ECM1","mesothelial","LV vs SV",8,6,8.30766876410162,0.0009508834036293,8.75942678739964,0.00129433892654634,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"
+"ECM1","mesothelial","LV_UF vs SV",3,6,9.70705812554607,1.40041211245151e-07,10.180494275514,3.83984341290685e-07,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"
+"ECM1","mesothelial","LV_NOT_UF vs SV",5,6,1.72820955885682,0.0538903876870179,1.68479141263729,0.0672314294568829,"tested after DecontX","NOT VERIFIED","NOT VERIFIED"

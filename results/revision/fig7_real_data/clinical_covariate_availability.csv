@@ -1,0 +1,41 @@
+accession,covariate,available_in_GEO_sample_metadata,nonmissing_n,metadata_source
+GSE125498,age,False,0,GEO series matrix sample characteristics
+GSE125498,sex,False,0,GEO series matrix sample characteristics
+GSE125498,dialysis_vintage_group,True,13,GEO series-matrix study group
+GSE125498,dialysis_vintage_months,False,0,GEO series matrix sample characteristics
+GSE125498,dialysis_duration_months,False,0,GEO series matrix sample characteristics
+GSE125498,transport_status,False,0,GEO series matrix sample characteristics
+GSE125498,ultrafiltration_failure,False,0,GEO series matrix sample characteristics
+GSE125498,peritonitis,False,0,GEO series matrix sample characteristics
+GSE125498,previous_peritonitis,False,0,GEO series matrix sample characteristics
+GSE125498,batch,False,0,GEO series matrix sample characteristics
+GSE130888,age,False,0,GEO series matrix sample characteristics
+GSE130888,sex,False,0,GEO series matrix sample characteristics
+GSE130888,dialysis_vintage_group,True,10,GEO series-matrix study group
+GSE130888,dialysis_vintage_months,False,0,GEO series matrix sample characteristics
+GSE130888,dialysis_duration_months,False,0,GEO series matrix sample characteristics
+GSE130888,transport_status,False,0,GEO series matrix sample characteristics
+GSE130888,ultrafiltration_failure,False,0,GEO series matrix sample characteristics
+GSE130888,peritonitis,False,0,GEO series matrix sample characteristics
+GSE130888,previous_peritonitis,False,0,GEO series matrix sample characteristics
+GSE130888,batch,False,0,GEO series matrix sample characteristics
+GSE248762,age,True,16,GEO series matrix sample characteristics
+GSE248762,sex,True,16,GEO series matrix sample characteristics
+GSE248762,dialysis_vintage_group,True,16,GEO series-matrix study group
+GSE248762,dialysis_vintage_months,False,0,GEO series matrix sample characteristics
+GSE248762,dialysis_duration_months,False,0,GEO series matrix sample characteristics
+GSE248762,transport_status,False,0,GEO series matrix sample characteristics
+GSE248762,ultrafiltration_failure,True,16,GEO series-matrix study group
+GSE248762,peritonitis,False,0,GEO series matrix sample characteristics
+GSE248762,previous_peritonitis,False,0,GEO series matrix sample characteristics
+GSE248762,batch,False,0,GEO series matrix sample characteristics
+GSE57070,age,False,0,GEO series matrix sample characteristics
+GSE57070,sex,False,0,GEO series matrix sample characteristics
+GSE57070,dialysis_vintage_group,False,0,GEO series matrix sample characteristics
+GSE57070,dialysis_vintage_months,False,0,GEO series matrix sample characteristics
+GSE57070,dialysis_duration_months,False,0,GEO series matrix sample characteristics
+GSE57070,transport_status,False,0,GEO series matrix sample characteristics
+GSE57070,ultrafiltration_failure,False,0,GEO series matrix sample characteristics
+GSE57070,peritonitis,True,3,GEO series matrix previous_peritonitis characteristic
+GSE57070,previous_peritonitis,True,3,GEO series matrix sample characteristics
+GSE57070,batch,False,0,GEO series matrix sample characteristics

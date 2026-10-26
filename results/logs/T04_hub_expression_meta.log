@@ -1,0 +1,8 @@
+Task: T04_hub_expression_meta
+Status: completed
+Seed: 2026
+
+Wilcoxon group comparisons: 26 ; BH adjustment applied within each cohort across measured hubs.
+Effect-size tables include raw P and BH adjustment across the hub tests within cohort; meta-analysis used inverse-variance DerSimonian-Laird random effects.
+Standard errors came from discovery t-statistics and external edgeR confidence intervals; undetected genes were excluded from pooling.
+External cohorts were described as additional; independence is unverified. The meta-analysis is exploratory.

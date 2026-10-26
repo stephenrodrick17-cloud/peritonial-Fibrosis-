@@ -1,0 +1,127 @@
+{
+  "n_samples": 16,
+  "original_group_counts": {
+    "LV_NOT_UF": 6,
+    "SV": 6,
+    "LV_UF": 4
+  },
+  "primary_contrast_sample_counts": {
+    "LV": 10,
+    "SV": 6
+  },
+  "cells_before_qc": 118895,
+  "cells_after_qc": 110353,
+  "hub_panel_size": 9,
+  "hub_genes_testable_in_any_lineage": [
+    "ADAM19",
+    "CCBE1",
+    "CST7",
+    "EBI3",
+    "ECM1",
+    "FLT3LG",
+    "LTB",
+    "TNFSF15"
+  ],
+  "hub_genes_not_testable_in_any_lineage": [
+    "NAT6"
+  ],
+  "n_tested_gene_lineage_contrasts": 26,
+  "n_nominal_p_lt_0_05": 9,
+  "n_global_fdr_lt_0_05": 4,
+  "minimum_global_fdr": 0.009515137967385266,
+  "nominal_trends": [
+    {
+      "gene": "EBI3",
+      "lineage": "lymphoid",
+      "log2FC_LV_vs_SV": 1.45543085082006,
+      "P_value": 0.0224587289526643,
+      "BH_FDR_global": 0.07299086909615897
+    },
+    {
+      "gene": "TNFSF15",
+      "lineage": "myeloid",
+      "log2FC_LV_vs_SV": 1.96310332575269,
+      "P_value": 0.0123416529605596,
+      "BH_FDR_global": 0.06417659539490991
+    },
+    {
+      "gene": "EBI3",
+      "lineage": "myeloid",
+      "log2FC_LV_vs_SV": 1.41123739720539,
+      "P_value": 0.0186121752291994,
+      "BH_FDR_global": 0.06913093656559778
+    },
+    {
+      "gene": "ECM1",
+      "lineage": "myeloid",
+      "log2FC_LV_vs_SV": 6.12396276741692,
+      "P_value": 0.0042269275581539,
+      "BH_FDR_global": 0.027475029128000348
+    },
+    {
+      "gene": "CCBE1",
+      "lineage": "fibroblast/stromal",
+      "log2FC_LV_vs_SV": -2.10229384874009,
+      "P_value": 0.0362131165597479,
+      "BH_FDR_global": 0.10461567006149393
+    },
+    {
+      "gene": "ECM1",
+      "lineage": "mesothelial",
+      "log2FC_LV_vs_SV": 8.30766876410162,
+      "P_value": 0.0009508834036293,
+      "BH_FDR_global": 0.009515137967385266
+    },
+    {
+      "gene": "CCBE1",
+      "lineage": "mesothelial",
+      "log2FC_LV_vs_SV": -1.62129857933992,
+      "P_value": 0.0155361649174394,
+      "BH_FDR_global": 0.06732338130890407
+    },
+    {
+      "gene": "ECM1",
+      "lineage": "epithelial",
+      "log2FC_LV_vs_SV": 6.60299329314642,
+      "P_value": 0.0009859811495807,
+      "BH_FDR_global": 0.009515137967385266
+    },
+    {
+      "gene": "CCBE1",
+      "lineage": "epithelial",
+      "log2FC_LV_vs_SV": -2.25940369536781,
+      "P_value": 0.0010979005346983,
+      "BH_FDR_global": 0.009515137967385266
+    }
+  ],
+  "fdr_hits": [
+    {
+      "gene": "ECM1",
+      "lineage": "myeloid",
+      "log2FC_LV_vs_SV": 6.12396276741692,
+      "P_value": 0.0042269275581539,
+      "BH_FDR_global": 0.027475029128000348
+    },
+    {
+      "gene": "ECM1",
+      "lineage": "mesothelial",
+      "log2FC_LV_vs_SV": 8.30766876410162,
+      "P_value": 0.0009508834036293,
+      "BH_FDR_global": 0.009515137967385266
+    },
+    {
+      "gene": "ECM1",
+      "lineage": "epithelial",
+      "log2FC_LV_vs_SV": 6.60299329314642,
+      "P_value": 0.0009859811495807,
+      "BH_FDR_global": 0.009515137967385266
+    },
+    {
+      "gene": "CCBE1",
+      "lineage": "epithelial",
+      "log2FC_LV_vs_SV": -2.25940369536781,
+      "P_value": 0.0010979005346983,
+      "BH_FDR_global": 0.009515137967385266
+    }
+  ]
+}

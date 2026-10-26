@@ -1,0 +1,2 @@
+accession,assay_samples,independent_patients,mapped_gene_symbols,normalization,duplicate_symbol_policy,paired_sample_policy
+GSE57070,6,3,17328,GEO processed log2 series matrix used as deposited; no second quantile normalization,retain highest mean-expression Ensembl feature,average the two treatment-condition arrays per patient

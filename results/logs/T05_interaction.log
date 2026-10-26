@@ -1,0 +1,7 @@
+Task: T05_interaction
+Status: partial
+Seed: 2026
+
+Used the saved STRING functional-association edges for the 46-DEG network; applied score >= 0.4 and retained at most 30 connected nodes.
+No new first-shell expansion was available from saved sources. Functional associations are not necessarily direct physical binding.
+Retained network: 9 nodes, 9 edges; hub-hub correlations generated in three cohorts.

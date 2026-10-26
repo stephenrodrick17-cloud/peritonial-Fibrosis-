@@ -1,0 +1,10 @@
+gene,testable_in_any_lineage,testable_lineage_count,feature_absent_everywhere
+TNFSF15,True,1,False
+FLT3LG,True,3,False
+EBI3,True,2,False
+LTB,True,5,False
+ADAM19,True,3,False
+NAT6,False,0,True
+ECM1,True,5,False
+CST7,True,4,False
+CCBE1,True,3,False

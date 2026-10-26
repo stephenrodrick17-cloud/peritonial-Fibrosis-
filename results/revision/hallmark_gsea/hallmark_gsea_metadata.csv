@@ -1,0 +1,26 @@
+item,value
+run_date,2026-10-13
+cohort,GSE125498
+MSigDB_collection_identifier,MSigDB_Hallmark_2020
+gene_set_source,Project-cached Enrichr MSigDB_Hallmark_2020 human gene sets; retrieved 2026-10-11
+total_cached_Hallmark_sets,50
+sets_tested,50
+sets_excluded_by_size,0
+ranked_gene_count,11741
+limma_source,Existing Validation/GSE125498.top.table.tsv
+contrast,LPD versus SPD; LPD numerator
+covariates,none
+GSEA_software,fgseaSimple
+R_version,4.4.2
+limma_version,3.62.2
+fgsea_version,1.32.4
+data_table_version,1.18.2.1
+jsonlite_version,2.0.0
+gene_set_permutations,10000
+min_gene_set_size,15
+max_gene_set_size,500
+scoring_exponent,1
+FDR_cutoff,0.05
+seed,20261013
+NES_direction,positive NES = LPD; negative NES = SPD
+non_significant_large_NES_rule,abs(NES) >= 1.5 and FDR >= 0.05

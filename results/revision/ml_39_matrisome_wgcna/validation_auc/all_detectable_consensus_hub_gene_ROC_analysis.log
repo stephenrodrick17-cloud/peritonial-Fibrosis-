@@ -1,0 +1,35 @@
+ROC score provenance:
+  Input values are the existing edger_logCPM.csv matrices.
+  The edgeR scripts create these as cpm(calcNormFactors(DGEList(counts)), log=TRUE, prior.count=2).
+  calcNormFactors uses edgeR's default TMM method; therefore the ROC scores are TMM-normalized log2-CPM.
+  Positive class: LV (GSE248762) or long-term PD (GSE130888); scores were not direction-flipped.
+  Discovery directions come from Discovery_log2FC in ml_39_gene_results.csv.
+  Concordance compares the sign of the validation edgeR LV_vs_SV logFC with discovery.
+  CIs: percentile intervals from 2,000 stratified bootstrap resamples; seed 42.
+  DeLong CIs: single-marker DeLong placement variance with normal 95% Wald limits, clipped to [0, 1].
+  Ties: number of positive-negative sample pairs with exactly equal log2-CPM; sklearn AUC gives each tie half credit.
+  CSV also reports unique score values occurring more than once and the number of observations with tied scores.
+GSE248762: 16 samples; n_pos=10; n_neg=6; score matrix=results\revision\effluent_validation\GSE248762\analysis_20261009\edger_logCPM.csv
+  TMM log2-CPM values used; observed panel range -5.1663 to 10.9401
+GSE130888: 10 samples; n_pos=4; n_neg=6; score matrix=results\revision\effluent_validation\GSE130888\analysis_20261009\edger_logCPM.csv
+  TMM log2-CPM values used; observed panel range -2.4565 to 9.5510
+  TNFSF15: not detected; no ROC/AUC calculated
+Per-gene results:
+  GSE248762 TNFSF15: AUC=0.650000, 95% CI=[0.350000, 0.900000], DeLong 95% CI=[0.360020, 0.939980], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 EBI3: AUC=0.800000, 95% CI=[0.550000, 1.000000], DeLong 95% CI=[0.570971, 1.000000], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 FLT3LG: AUC=0.616667, 95% CI=[0.333333, 0.900000], DeLong 95% CI=[0.321821, 0.911512], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 LTB: AUC=0.650000, 95% CI=[0.366667, 0.900000], DeLong 95% CI=[0.356444, 0.943556], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 ADAM19: AUC=0.716667, 95% CI=[0.433333, 0.950000], DeLong 95% CI=[0.453435, 0.979899], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 ECM1: AUC=0.633333, 95% CI=[0.350000, 0.883333], DeLong 95% CI=[0.348053, 0.918614], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 CST7: AUC=0.600000, 95% CI=[0.300000, 0.900000], DeLong 95% CI=[0.279933, 0.920067], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 NAT6: AUC=0.500000, 95% CI=[0.200000, 0.800000], DeLong 95% CI=[0.194956, 0.805044], concordant=False, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE248762 CCBE1: AUC=0.066667, 95% CI=[0.000000, 0.200000], DeLong 95% CI=[0.000000, 0.203711], concordant=False, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 TNFSF15: not detected
+  GSE130888 EBI3: AUC=0.791667, 95% CI=[0.458333, 1.000000], DeLong 95% CI=[0.483202, 1.000000], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 FLT3LG: AUC=0.583333, 95% CI=[0.166667, 1.000000], DeLong 95% CI=[0.121357, 1.000000], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 LTB: AUC=0.416667, 95% CI=[0.000000, 0.833333], DeLong 95% CI=[0.000000, 0.915658], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 ADAM19: AUC=0.750000, 95% CI=[0.333333, 1.000000], DeLong 95% CI=[0.392155, 1.000000], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 ECM1: AUC=0.583333, 95% CI=[0.166667, 1.000000], DeLong 95% CI=[0.176637, 0.990030], concordant=False, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 CST7: AUC=0.583333, 95% CI=[0.166667, 0.916667], DeLong 95% CI=[0.170129, 0.996538], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 NAT6: AUC=0.666667, 95% CI=[0.250000, 1.000000], DeLong 95% CI=[0.234527, 1.000000], concordant=True, cross-class ties=0, tied score values=0, observations in tied score values=0
+  GSE130888 CCBE1: AUC=0.291667, 95% CI=[0.000000, 0.666667], DeLong 95% CI=[0.000000, 0.705946], concordant=False, cross-class ties=0, tied score values=0, observations in tied score values=0

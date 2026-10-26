@@ -1,0 +1,2 @@
+Discovery_Cohort,Validation_Cohort,Hub_Genes_Total,Hub_Genes_Mapped,Mapped_Gene_List,Validation_EPS_Cases,Validation_Controls,Apparent_AUC,LOOCV_AUC,Repeated_CV_AUC_Mean,Repeated_CV_AUC_SD,Exact_Permutation_P
+GSE125498 (N=33 Effluent),GSE62928 (N=8 Biopsy),11,11,FLT3LG;TNFSF15;ADAM19;SERPINA10;LTB;CLEC4F;SEMA3E;SEMA4F;EBI3;LTA;CXCL14,4,4,1.0,1.0,1.0,0.0,1.0

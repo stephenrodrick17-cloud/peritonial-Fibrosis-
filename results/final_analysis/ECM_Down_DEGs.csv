@@ -1,0 +1,14 @@
+ID,Gene,Gene.symbol,Gene.title,logFC,AveExpr,t,P.Value,adj.P.Val,B,DEG_Status,Matrisome Division,Matrisome Category
+ILMN_2148360,ADAM10,ADAM10,ADAM metallopeptidase domain 10,-1.136341,5.749512503890294,-2.6933662,0.0107,0.21401,-2.84127,Downregulated,Matrisome-associated,ECM Regulators
+ILMN_1741566,BMP7,BMP7,bone morphogenetic protein 7,-0.8373055,3.154353904619099,-2.6212889,0.0128,0.23574,-2.99423,Downregulated,Matrisome-associated,Secreted Factors
+ILMN_2292178,CLEC12A,CLEC12A,C-type lectin domain family 12 member A,-0.7555409,9.074952930818371,-3.2073829,0.00284,0.11143,-1.67961,Downregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_1698666,CST6,CST6,cystatin E/M,-0.6441871,6.967897694089809,-2.1524129,0.0382,0.36377,-3.9186,Downregulated,Matrisome-associated,ECM Regulators
+ILMN_2161577,CXCL6,CXCL6,C-X-C motif chemokine ligand 6,-0.8702222,4.224385731771953,-2.1357197,0.0397,0.36894,-3.94906,Downregulated,Matrisome-associated,Secreted Factors
+ILMN_2165993,ITLN1,ITLN1,intelectin 1,-1.2037175,10.31918357475802,-2.5894873,0.0139,0.24349,-3.06085,Downregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_2118129,ITLN2,ITLN2,intelectin 2,-0.9578152,4.036396324856074,-2.2561385,0.0303,0.33329,-3.72535,Downregulated,Matrisome-associated,ECM-affiliated Proteins
+ILMN_1658709,LAMB1,LAMB1,laminin subunit beta 1,-0.6053662,6.098956634864427,-2.0981536,0.0431,0.38046,-4.01696,Downregulated,Core matrisome,ECM Glycoproteins
+ILMN_2387105,OGN,OGN,osteoglycin,-0.736326,6.781411606775031,-2.2211388,0.0328,0.34462,-3.79131,Downregulated,Core matrisome,Proteoglycans
+ILMN_1795139,S100Z,S100Z,S100 calcium binding protein Z,-0.7235572,4.992834462361216,-2.9045399,0.00629,0.17057,-2.37832,Downregulated,Matrisome-associated,Secreted Factors
+ILMN_1808245,SBSPON,SBSPON,somatomedin B and thrombospondin type 1 domain containing,-1.0219018,4.359939317760504,-2.7492533,0.00934,0.20193,-2.72085,Downregulated,Core matrisome,ECM Glycoproteins
+ILMN_1712400,SERPINB6,SERPINB6,serpin family B member 6,-0.6471137,11.304518729129914,-2.8565147,0.00712,0.17912,-2.48546,Downregulated,Matrisome-associated,ECM Regulators
+ILMN_1761778,TNFSF8,TNFSF8,tumor necrosis factor superfamily member 8,-0.6394039,6.852401324955424,-2.3040273,0.0272,0.31931,-3.63388,Downregulated,Matrisome-associated,Secreted Factors

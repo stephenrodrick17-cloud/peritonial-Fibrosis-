@@ -1,0 +1,11 @@
+claim_id,claim,status,verified_value_or_reason,source_file
+A1,Cell QC,TRUE,118895 before; 110353 after; >=200 genes and <=20% mitochondrial.,results/revision/single_cell_context/dataset_audit.json; 01_audit_dataset.py
+A2,Hub-blind lineage labels,TRUE,Zero of seven validated hubs occur in the annotation marker dictionary.,results/revision/single_cell_context/02_annotate_lineages.py; sc7_lineage_marker_overlap_audit.csv
+A3,Seven validated hubs and five-gene panel subset,TRUE,Seven-gene source loaded from validated7_kegg_gsea_summary.csv; frozen panel is subset.,validated7_kegg_gsea_summary.csv; panel_v2.json
+A4,Genes testable at least once,TRUE,All seven validated hubs testable in >=1 lineage.,sc7_hub_gene_testability.csv
+A5,Possible and tested pairs,TRUE,49 possible; 23 testable; 26 not testable across seven lineages.,sc7_hub_gene_lineage_results.csv
+A6,Nominal and BH results,TRUE,6 nominal; 3 BH-significant; BH family is 23 testable validated-seven pairs.,sc7_hub_gene_lineage_results.csv
+A7,Positive fold-change direction,TRUE,Contrast is LV minus SV; positive means higher in LV.,results/revision/single_cell_context/04_pseudobulk_edger.R
+A8,Directions from validated-seven results,TRUE,"All tested directions, nominal and nonsignificant pairs are in the 49-row results table.",sc7_hub_gene_lineage_results.csv
+A9,Most consistent FDR signal,SUPPORTED WITHIN THIS TEST,"Only one hub has BH-significant results, in three lineages.",sc7_hub_gene_lineage_results.csv
+A10,Dispersion warnings,NOT VERIFIED,No warning/dispersion diagnostic log found.,results/revision/single_cell_context/04_pseudobulk_edger.R; pseudobulk_software_versions.csv

@@ -1,0 +1,2 @@
+sheet,columns,n_columns,sample_accession_columns,has_sample_level_expression_columns,interpretation
+Sheet1,Item;Description,2,,False,annotation/sequence table; no sample-level abundance columns

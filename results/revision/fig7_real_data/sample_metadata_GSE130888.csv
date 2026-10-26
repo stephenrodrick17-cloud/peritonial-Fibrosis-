@@ -1,0 +1,11 @@
+accession,sample_id,title,source_name,platform,sample_type,characteristics,group,cells_in_source_matrix
+GSE130888,GSM3755687,Short-term PD rep1,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of short-term PD patients,sample type: Peritoneal cells from effluent of short-term PD patients,Short-term PD,7640
+GSE130888,GSM3755688,Short-term PD rep2,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of short-term PD patients,sample type: Peritoneal cells from effluent of short-term PD patients,Short-term PD,8847
+GSE130888,GSM3755689,Short-term PD rep3,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of short-term PD patients,sample type: Peritoneal cells from effluent of short-term PD patients,Short-term PD,9141
+GSE130888,GSM3755690,Short-term PD rep4,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of short-term PD patients,sample type: Peritoneal cells from effluent of short-term PD patients,Short-term PD,7880
+GSE130888,GSM3755691,Short-term PD rep5,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of short-term PD patients,sample type: Peritoneal cells from effluent of short-term PD patients,Short-term PD,9457
+GSE130888,GSM3755692,Short-term PD rep6,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of short-term PD patients,sample type: Peritoneal cells from effluent of short-term PD patients,Short-term PD,9000
+GSE130888,GSM3755696,Long-term PD rep1,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of long-term PD patients,sample type: Peritoneal cells from effluent of long-term PD patients,Long-term PD,4100
+GSE130888,GSM3755697,Long-term PD rep2,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of long-term PD patients,sample type: Peritoneal cells from effluent of long-term PD patients,Long-term PD,9160
+GSE130888,GSM3755698,Long-term PD rep3,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of long-term PD patients,sample type: Peritoneal cells from effluent of long-term PD patients,Long-term PD,4000
+GSE130888,GSM3755699,Long-term PD rep4,Peritoneal dialysis fluid,GPL20301,Peritoneal cells from effluent of long-term PD patients,sample type: Peritoneal cells from effluent of long-term PD patients,Long-term PD,7992

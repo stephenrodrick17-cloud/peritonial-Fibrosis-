@@ -1,0 +1,14 @@
+cell_type,source,source_signature,n_genes_in_expression,merge_rule
+T cells,local CellMarker_2024 human library snapshot,T Cell Peripheral Blood Human,43,exact frozen CellMarker_2024 source term
+B cells,local CellMarker_2024 human library snapshot,B Cell Peripheral Blood Human,47,exact frozen CellMarker_2024 source term
+NK cells,local CellMarker_2024 human library snapshot,Natural Killer Cell Peritoneal Fluid Human,5,exact frozen CellMarker_2024 source term
+Monocytes,local CellMarker_2024 human library snapshot,Monocyte Peripheral Blood Human,59,exact frozen CellMarker_2024 source term
+M1 macrophages,local CellMarker_2024 human library snapshot,M1 Macrophage Peripheral Blood Human,10,exact frozen CellMarker_2024 source term
+M2 macrophages,local CellMarker_2024 human library snapshot,M2 Macrophage Peripheral Blood Human,10,exact frozen CellMarker_2024 source term
+Neutrophils,local CellMarker_2024 human library snapshot,Neutrophil Peripheral Blood Human,22,exact frozen CellMarker_2024 source term
+Mast cells,local CellMarker_2024 human library snapshot,Mast Cell Lung Human,22,exact frozen CellMarker_2024 source term
+Immature dendritic cells,local CellMarker_2024 human library snapshot,Immature Dendritic Cell Stomach Human,22,exact frozen CellMarker_2024 source term
+Mature dendritic cells,local CellMarker_2024 human library snapshot,Mature Dendritic Cell Liver Human,4,exact frozen CellMarker_2024 source term
+Fibroblasts,local CellMarker_2024 human library snapshot,Fibroblast Epithelium Human,27,exact frozen CellMarker_2024 source term
+Myofibroblasts,local CellMarker_2024 human library snapshot,Myofibroblast Epithelium Human,9,exact frozen CellMarker_2024 source term
+Mesothelial cells,local CellMarker_2024 human library snapshot,Mesothelial Cell Epithelium Human,9,exact frozen CellMarker_2024 source term

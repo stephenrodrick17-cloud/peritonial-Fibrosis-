@@ -1,0 +1,80 @@
+{
+  "analysis_label": "exploratory, post hoc, same data as discovery, not validation",
+  "query": "query { genes(names: [\"FLT3LG\", \"EBI3\", \"LTB\", \"ADAM19\", \"CST7\"]) { nodes { name interactions { drug { name } interactionTypes { type directionality } sources { sourceDbName } publications { pmid } } } } }",
+  "retrieved_utc": "2026-10-11T08:52:52.250305+00:00",
+  "http_status": 200,
+  "response": {
+    "data": {
+      "genes": {
+        "nodes": [
+          {
+            "name": "ADAM19",
+            "interactions": []
+          },
+          {
+            "name": "EBI3",
+            "interactions": []
+          },
+          {
+            "name": "FLT3LG",
+            "interactions": []
+          },
+          {
+            "name": "LTB",
+            "interactions": [
+              {
+                "drug": {
+                  "name": "BAMINERCEPT"
+                },
+                "interactionTypes": [
+                  {
+                    "type": "inhibitor",
+                    "directionality": "INHIBITORY"
+                  }
+                ],
+                "sources": [
+                  {
+                    "sourceDbName": "ChEMBL"
+                  }
+                ],
+                "publications": []
+              },
+              {
+                "drug": {
+                  "name": "ABACAVIR"
+                },
+                "interactionTypes": [],
+                "sources": [
+                  {
+                    "sourceDbName": "PharmGKB"
+                  }
+                ],
+                "publications": [
+                  {
+                    "pmid": 16998491
+                  }
+                ]
+              },
+              {
+                "drug": {
+                  "name": "BAMINERCEPT ALFA"
+                },
+                "interactionTypes": [],
+                "sources": [
+                  {
+                    "sourceDbName": "TdgClinicalTrial"
+                  }
+                ],
+                "publications": []
+              }
+            ]
+          },
+          {
+            "name": "CST7",
+            "interactions": []
+          }
+        ]
+      }
+    }
+  }
+}

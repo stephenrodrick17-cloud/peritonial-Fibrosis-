@@ -1,0 +1,10 @@
+{
+  "gene_set": "43 module-assigned matrisome DEGs",
+  "background_genes": 5001,
+  "significant_terms_FDR05": {
+    "GO BP": 10,
+    "GO CC": 3,
+    "GO MF": 10,
+    "KEGG": 9
+  }
+}

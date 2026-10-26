@@ -1,0 +1,11 @@
+Task: T06_diagnostic_models
+Status: partial
+Seed: 2026
+
+TMM log2-CPM applied to external cohorts; missing-gene model refit on the measurable subset in discovery data.
+The 9-gene discovery model is apparent; bootstrap optimism estimated with 1000 resamples, conditional on the preselected panel.
+The consensus genes were selected on GSE125498; panel-selection optimism was not included in the bootstrap correction or fold-based estimates.
+A point-based visualization was generated from the fitted five-gene ridge model; it is not an rms nomogram.
+Calibration is apparent, grouped into five equal-count bins with exact binomial intervals; it is not bootstrap-corrected.
+Decision-curve net benefit is apparent and compared with treat-all and treat-none strategies; it is not externally validated.
+R warnings (first entries): Warning messages: 1: In lognet(x, is.sparse, y, weights, offset, alpha, nobs,  ... :   one multinomial or binomial class has fewer than 8  observations; dangerous ground 2: In lognet(x, is.sparse, y, weights, offset, alpha, nobs,  ... :   one multinomial or binomial class has fewer than 8  observations; dangerous ground 3: In lognet(x, is.sparse, y, weights, offset, alpha, nobs,  ... :   one multinomial or binomial class has fewer than 8  observations; dangerous ground 4: In lognet(x, is.sparse, y, weights, offset, alpha, nobs,  ... :

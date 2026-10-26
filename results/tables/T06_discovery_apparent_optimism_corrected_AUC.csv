@@ -1,0 +1,2 @@
+"Model","AUC","Bootstrap_low","Bootstrap_high","DeLong_low","DeLong_high","n_case","n_control","Optimism_corrected_AUC","Mean_bootstrap_optimism","Correction_scope"
+"GSE125498 apparent nine-gene ridge",0.965384615384615,0.896153846153846,1,0.913993709323461,1,13,20,0.935707698996216,0.0296769163883993,"Model-fitting/tuning conditional on the preselected nine-gene panel; panel-selection optimism was not corrected"

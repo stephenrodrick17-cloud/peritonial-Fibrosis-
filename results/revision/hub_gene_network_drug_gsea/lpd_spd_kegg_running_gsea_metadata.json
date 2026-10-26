@@ -1,0 +1,31 @@
+{
+  "analysis": "Preranked KEGG GSEA, LPD versus SPD",
+  "cohort": "GSE125498",
+  "groups": {
+    "LPD": 13,
+    "SPD": 20
+  },
+  "ranked_metric": "limma moderated t-statistic, positive means higher in LPD",
+  "ranking_source": "results\\paper_style\\Fig2_limma_gene_results_unique_symbols.csv",
+  "pathway_sets_source": "results\\revision\\hub_gene_network_drug_gsea\\kegg_human_gene_sets.csv",
+  "pathway_set_source_release": "KEGG human, cached in project on 2026-10-16",
+  "software": "GSEApy 1.3.1",
+  "permutations": 1000,
+  "seed": 20261016,
+  "gene_set_size": [
+    15,
+    500
+  ],
+  "pathways_tested": 320,
+  "positive_fdr_significant_pathways": 8,
+  "displayed_pathways": [
+    "Primary immunodeficiency - Homo sapiens (human)",
+    "Hematopoietic cell lineage - Homo sapiens (human)",
+    "Intestinal immune network for IgA production - Homo sapiens (human)",
+    "Cytokine-cytokine receptor interaction - Homo sapiens (human)",
+    "NF-kappa B signaling pathway - Homo sapiens (human)",
+    "Cell adhesion molecule (CAM) interaction - Homo sapiens (human)"
+  ],
+  "query_date": "2026-10-16",
+  "interpretation": "Discovery-cohort pathway association; exploratory, not external validation."
+}

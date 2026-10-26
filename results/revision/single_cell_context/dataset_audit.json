@@ -1,0 +1,31 @@
+{
+  "accession": "GSE248762",
+  "data_type": "10x Genomics single-cell RNA-seq",
+  "tissue": "overnight peritoneal dialysis effluent",
+  "geo_sample_records": 16,
+  "original_group_counts": {
+    "LV_NOT_UF": 6,
+    "SV": 6,
+    "LV_UF": 4
+  },
+  "original_group_counts_sum_matches_total": true,
+  "primary_contrast": "LV (LV_UF + LV_NOT_UF) versus SV",
+  "primary_contrast_sample_counts": {
+    "LV": 10,
+    "SV": 6
+  },
+  "primary_contrast_counts_sum_matches_total": true,
+  "cells_before_qc": 118895,
+  "cells_after_recomputed_qc": 110353,
+  "qc": {
+    "minimum_detected_genes": 200,
+    "maximum_mitochondrial_percent_inclusive": 20.0
+  },
+  "previous_saved_qc_cells_after": 110356,
+  "recomputed_minus_previous_qc_cells": -3,
+  "umap_only_cells_excluded": 3,
+  "umap_only_cells_exclusion_reason": "pct_counts_mt > 20% in the current count object",
+  "cached_geo_archive": "results\\revision\\effluent_validation\\GSE248762\\GSE248762_RAW.tar",
+  "cached_geo_archive_local_timestamp": "2026-10-09T17:09:46.939116",
+  "original_geo_download_date_independently_logged": false
+}

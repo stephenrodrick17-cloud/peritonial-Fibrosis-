@@ -1,0 +1,36 @@
+{
+  "validation_cohort": "GSE62928 (Affymetrix HG-U133 Plus 2.0 / GPL13158)",
+  "n_samples": 8,
+  "n_cases_eps": 4,
+  "n_controls": 4,
+  "mapped_genes_universe": 20277,
+  "hub_genes_evaluated": [
+    "FLT3LG",
+    "TNFSF15",
+    "LTB",
+    "ADAM19",
+    "SERPINA10",
+    "EBI3",
+    "CXCL14"
+  ],
+  "per_gene_concordance": {
+    "n_concordant": 2,
+    "n_total": 7,
+    "concordance_rate": 0.2857,
+    "binomial_sign_test_p": 0.4531
+  },
+  "composite_hub_signature": {
+    "hub_signature_auc": 0.4375,
+    "mann_whitney_u_statistic": 7.0,
+    "mann_whitney_one_sided_p": 0.6571,
+    "mann_whitney_two_sided_p": 0.8857
+  },
+  "random_gene_set_null_1000": {
+    "n_null_sets_at_least_hub_auc": 604,
+    "null_auc_mean": 0.4798,
+    "null_auc_sd": 0.2291,
+    "null_auc_median": 0.5,
+    "empirical_p_value": 0.604
+  },
+  "scientific_interpretation": "In GSE62928 biopsy data, 2/7 hub genes have concordant direction (binomial P = 0.4531). The fixed composite score has AUC = 0.4375 (one-sided Mann-Whitney P = 0.6571; two-sided P = 0.8857); the 1,000 random 7-gene-set null has mean AUC = 0.4798 and empirical P = 0.6040. The discovery effluent and validation biopsy cohorts differ in tissue and phenotype, limiting transportability. Historical synthetic validation outputs from the legacy pipeline are withdrawn."
+}

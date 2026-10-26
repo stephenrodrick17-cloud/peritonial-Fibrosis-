@@ -1,0 +1,2 @@
+dataset,study_accession,sample_level_expression_available_locally,sample_level_expression_status,run_count_from_saved_ENA_metadata,ENA_metadata_query_date_utc,available_local_workbook,workbook_role,workbook_column_audit,raw_reads_quantified,use_for_axis_filtering,reason
+GSE182736,PRJNA757643,False,NOT VERIFIED,6,2026-10-18T20:08:04.229487+00:00,data/raw/GSE182736_All_Expressed_miRNA.xlsx,annotation/sequence table; not sample-level abundance,Item;Description,False,False,"Public SRA/ENA runs are listed, but sample-level miRNA abundance was not processed or verified."

@@ -1,0 +1,2 @@
+"Measure","n_control","n_case","P","FDR","Interpretation"
+"Myofibroblast_Score",20,13,0.726326569962165,0.726326569962165,"stromal score, not immune deconvolution"
